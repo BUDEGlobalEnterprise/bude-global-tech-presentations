@@ -1,0 +1,1400 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Git vs GitHub",
+            "subtitle": "Complete Version Control Mastery<br>From Zero to Collaboration Pro"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Version Control Basics</strong> - Why it matters"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Git Fundamentals</strong> - Core concepts & commands"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>GitHub Platform</strong> - Collaboration & features"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Git vs GitHub</strong> - Key differences explained"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Installation & Setup</strong> - Getting started"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Daily Workflow</strong> - Add, commit, push, pull"
+                },
+                {
+                  "emoji": "🌿",
+                  "text": "<strong>Branching & Merging</strong> - Team collaboration"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Pull Requests</strong> - Code review process"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Advanced Features</strong> - CI/CD, Actions, Pages"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Best Practices</strong> - Safe collaboration"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Real-World Workflows</strong> - Corporate & open source"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Troubleshooting</strong> - Common issues & solutions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "version-control",
+        "title": "Version Control",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "What is Version Control?"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Why Version Control?",
+            "box": {
+              "content": "<strong>Time machine for your code</strong> - Track changes and collaborate safely",
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Track Changes</strong> - Every modification recorded"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Team Collaboration</strong> - Multiple developers work together"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Backup & Recovery</strong> - Never lose work again"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Parallel Development</strong> - Work on features simultaneously"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Code History</strong> - See who changed what and why"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Without version control: project_final_v2_really_final_updated.zip"
+            }
+          }
+        ]
+      },
+      {
+        "id": "vcs-types",
+        "title": "VCS Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Centralized vs Distributed VCS"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Centralized VCS (SVN, CVS)",
+            "box": {
+              "content": "<strong>Single central server</strong>",
+              "list": [
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Single Source</strong> - One central repository"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Network Required</strong> - Need connection to commit"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast Operations</strong> - Server handles heavy work"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Linear History</strong> - Simple version timeline"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Distributed VCS (Git, Mercurial)",
+            "box": {
+              "content": "<strong>Every clone is a full backup</strong>",
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Full Copies</strong> - Every user has complete history"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Offline Work</strong> - Commit without internet"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>No Single Point</strong> - No central server failure"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Flexible Workflows</strong> - Multiple collaboration models"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🎯</span> Git is distributed - this is its superpower!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-git",
+        "title": "What is Git?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Git"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "What is Git?",
+            "box": {
+              "content": "<span class=\"highlight\">Distributed version control system</span> for tracking code changes",
+              "list": [
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Created by</strong> - Linus Torvalds (Linux creator)"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Released</strong> - 2005"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Extremely fast and efficient"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Integrity</strong> - Cryptographically secure"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Open Source</strong> - Free to use and modify"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Git means \"unpleasant person\" in British slang. Linus Torvalds named it after himself!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "git-concepts",
+        "title": "Git Concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Core Git Concepts"
+          },
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Key Terminology",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Repository</strong> - Project folder with version history"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Commit</strong> - Snapshot of changes at a point in time"
+                },
+                {
+                  "emoji": "🌿",
+                  "text": "<strong>Branch</strong> - Parallel line of development"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>HEAD</strong> - Pointer to current branch/commit"
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>Staging Area</strong> - Prepare changes for commit"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Merge</strong> - Combine changes from different branches"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Git Workflow",
+            "box": {
+              "content": "<strong>Three-stage architecture</strong>",
+              "code": "Working Directory  →  Staging Area  →  Repository\n      (Files)            (Index)          (History)\n        ↓                   ↓                 ↓\n   Modify files        git add          git commit\n   Untracked/          Staged changes   Permanent snapshot\n   Modified files"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Think: Working Directory = Draft, Staging = Review, Repository = Published"
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-github",
+        "title": "What is GitHub?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding GitHub"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "What is GitHub?",
+            "box": {
+              "content": "<span class=\"highlight\">Cloud-based hosting platform</span> for Git repositories",
+              "list": [
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Company</strong> - GitHub Inc. (Microsoft)"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Launched</strong> - 2008"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Users</strong> - 100+ million developers"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Repositories</strong> - 400+ million projects"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Purpose</strong> - Collaboration and code sharing"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Key insight:</strong> Git is the tool, GitHub is the social network for code"
+            }
+          }
+        ]
+      },
+      {
+        "id": "git-vs-github",
+        "title": "Git vs GitHub",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Key Differences"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Git vs GitHub Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Git</strong> - Version control system (software)"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>GitHub</strong> - Hosting service (website)"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Git</strong> - Installed locally on your machine"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>GitHub</strong> - Cloud-based platform"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Git</strong> - Completely free and open source"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>GitHub</strong> - Free for public, paid for private"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Git</strong> - Manages version history"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>GitHub</strong> - Enables collaboration"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Analogy",
+            "box": {
+              "content": "<strong>Git is like Microsoft Word<br>GitHub is like Google Docs</strong>",
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Word/Git</strong> - Create and edit documents locally"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Google Docs/GitHub</strong> - Share and collaborate online"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Both</strong> - Can work independently or together"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "alternatives",
+        "title": "Git Hosting Platforms",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GitHub Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🏪",
+            "title": "Other Git Hosting Services",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🦊",
+                  "text": "<strong>GitLab</strong> - CI/CD focused, self-hostable"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Bitbucket</strong> - Jira integration, Atlassian ecosystem"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub</strong> - Largest community, Microsoft ecosystem"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Codeberg</strong> - Open source, non-profit"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Azure DevOps</strong> - Enterprise Microsoft stack"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Self-hosted</strong> - Gitea, GitLab CE, Bonobo"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installing Git",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - git-scm.com/download/win"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - brew install git"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - sudo apt install git"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Git Configuration",
+            "box": {
+              "content": "<strong>Essential setup commands</strong>",
+              "code": "# Set your identity\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your.email@example.com\"\n\n# Set default branch name\ngit config --global init.defaultBranch main\n\n# Set default editor\ngit config --global core.editor \"code --wait\"\n\n# View your configuration\ngit config --list"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> These settings are stored in ~/.gitconfig (Linux/Mac) or C:\\Users\\You\\.gitconfig (Windows)"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "SSH Key Setup",
+            "box": {
+              "content": "<strong>Password-less authentication</strong>",
+              "code": "# Generate SSH key\nssh-keygen -t ed25519 -C \"your.email@example.com\"\n\n# Start SSH agent\neval \"$(ssh-agent -s)\"\n\n# Add private key to agent\nssh-add ~/.ssh/id_ed25519\n\n# Copy public key to clipboard\ncat ~/.ssh/id_ed25519.pub\n\n# Add to GitHub: Settings → SSH and GPG keys"
+            }
+          }
+        ]
+      },
+      {
+        "id": "basic-commands",
+        "title": "Basic Git Commands",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential Git Workflow"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Starting a Repository",
+            "box": {
+              "content": "<strong>Two ways to begin</strong>",
+              "code": "# Initialize new repository\ngit init\n\n# Clone existing repository\ngit clone https://github.com/user/repo.git\n\n# Clone with SSH\ngit clone git@github.com:user/repo.git"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Daily Workflow Commands",
+            "box": {
+              "content": "<strong>Add, commit, push cycle</strong>",
+              "code": "# Check status\ngit status\n\n# Add files to staging\ngit add filename.txt          # Specific file\ngit add .                     # All files\ngit add *.js                  # All JS files\n\n# Commit changes\ngit commit -m \"Descriptive message\"\n\n# Push to remote\ngit push origin main\n\n# Pull latest changes\ngit pull origin main"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Viewing History",
+            "box": {
+              "content": "<strong>Inspecting your repository</strong>",
+              "code": "# View commit history\ngit log\n\n# Compact log view\ngit log --oneline\n\n# View changes in files\ngit diff\n\n# Show staged changes\ngit diff --staged\n\n# View specific commit\ngit show commit_hash"
+            }
+          }
+        ]
+      },
+      {
+        "id": "git-folder",
+        "title": ".git Folder",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Inside .git Directory"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": ".git Folder Structure",
+            "box": {
+              "content": "<strong>Where Git stores everything</strong>",
+              "code": ".git/\n├── HEAD                  # Points to current branch\n├── config               # Repository configuration\n├── description          # Repository description\n├── hooks/               # Scripts for Git events\n├── info/                # Global exclude patterns\n├── objects/             # All repository content\n│   ├── pack/           # Compressed objects\n│   └── [hashes]        # File content by SHA-1\n├── refs/               # Pointers to commits\n│   ├── heads/          # Branch pointers\n│   └── tags/           # Tag pointers\n└── index               # Staging area binary"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">⚠️</span> Never manually modify .git folder contents!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "branching",
+        "title": "Branching & Merging",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Branch Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🌿",
+            "title": "Branch Operations",
+            "box": {
+              "content": "<strong>Working with branches</strong>",
+              "code": "# List branches\ngit branch\n\n# Create new branch\ngit branch feature-branch\n\n# Switch to branch\ngit checkout feature-branch\n\n# Create and switch (shortcut)\ngit checkout -b feature-branch\n\n# Delete branch\ngit branch -d feature-branch\n\n# Force delete (unmerged changes)\ngit branch -D feature-branch"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Merging Strategies",
+            "box": {
+              "content": "<strong>Combining branch changes</strong>",
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast-Forward Merge</strong> - Linear history, no merge commit"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>3-Way Merge</strong> - Creates merge commit, preserves history"
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Rebase</strong> - Rewrites history, linear timeline"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Merge Commands",
+            "box": {
+              "content": "<strong>Merging branches</strong>",
+              "code": "# Switch to target branch\ngit checkout main\n\n# Merge feature branch\ngit merge feature-branch\n\n# Rebase current branch\ngit rebase main\n\n# Abort a merge in conflict\ngit merge --abort\n\n# Abort a rebase\ngit rebase --abort"
+            }
+          }
+        ]
+      },
+      {
+        "id": "github-basics",
+        "title": "GitHub Basics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GitHub Platform Features"
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "GitHub Repositories",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Public</strong> - Visible to everyone, free"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Private</strong> - Only collaborators can see"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Internal</strong> - Organization members only"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📥",
+            "title": "Remote Operations",
+            "box": {
+              "content": "<strong>Working with remote repositories</strong>",
+              "code": "# Add remote repository\ngit remote add origin https://github.com/user/repo.git\n\n# View remote URLs\ngit remote -v\n\n# Push to remote\ngit push -u origin main\n\n# Pull changes\ngit pull origin main\n\n# Fetch changes (without merging)\ngit fetch origin\n\n# View remote branches\ngit branch -r"
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication",
+        "title": "Authentication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "SSH vs HTTPS"
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "Authentication Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>SSH</strong> - Key-based, more secure, no passwords"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>HTTPS</strong> - Password/token-based, works everywhere"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>Personal Access Token</strong> - More secure than passwords"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "pull-requests",
+        "title": "Pull Requests",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Collaboration Workflow"
+          },
+          {
+            "type": "content",
+            "emoji": "🤝",
+            "title": "Pull Request Process",
+            "box": {
+              "content": "<strong>Code review and collaboration</strong>",
+              "code": "# Fork repository (on GitHub UI)\n# Click \"Fork\" button\n\n# Clone your fork\ngit clone https://github.com/yourname/repo.git\n\n# Add upstream remote\ngit remote add upstream https://github.com/original/repo.git\n\n# Create feature branch\ngit checkout -b my-feature\n\n# Make changes and commit\ngit add .\ngit commit -m \"Add new feature\"\n\n# Push to your fork\ngit push origin my-feature\n\n# Create PR on GitHub UI\n# Click \"Compare & pull request\""
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Keeping Fork Updated",
+            "box": {
+              "content": "<strong>Sync with original repository</strong>",
+              "code": "# Fetch upstream changes\ngit fetch upstream\n\n# Merge into your branch\ngit checkout main\ngit merge upstream/main\n\n# Push to your fork\ngit push origin main\n\n# Or rebase your feature branch\ngit checkout my-feature\ngit rebase upstream/main"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fork-vs-clone",
+        "title": "Fork vs Clone",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Forking vs Cloning"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Key Differences",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Clone</strong> - Local copy of repository"
+                },
+                {
+                  "emoji": "🍴",
+                  "text": "<strong>Fork</strong> - Server-side copy on GitHub"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Clone</strong> - For contributing to your own repos"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Fork</strong> - For contributing to others' repos"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Clone</strong> - Direct connection to original"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Fork</strong> - Independent copy, can sync updates"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "github-features",
+        "title": "GitHub Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GitHub Platform Tools"
+          },
+          {
+            "type": "content",
+            "emoji": "🎫",
+            "title": "Issues & Project Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐛",
+                  "text": "<strong>Issues</strong> - Bug reports and feature requests"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Labels</strong> - Categorize and filter issues"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Project Boards</strong> - Kanban-style task management"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Milestones</strong> - Group issues for releases"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "GitHub Actions (CI/CD)",
+            "box": {
+              "content": "<strong>Automated workflows</strong>",
+              "code": "# .github/workflows/ci.yml\nname: CI Pipeline\non: [push, pull_request]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v3\n    - name: Setup Node.js\n      uses: actions/setup-node@v3\n      with:\n        node-version: '18'\n    - name: Install dependencies\n      run: npm install\n    - name: Run tests\n      run: npm test"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Automate testing, building, and deployment on every code change"
+            }
+          }
+        ]
+      },
+      {
+        "id": "gitignore",
+        "title": ".gitignore",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ignoring Files"
+          },
+          {
+            "type": "content",
+            "emoji": "🙈",
+            "title": ".gitignore Patterns",
+            "box": {
+              "content": "<strong>Exclude files from version control</strong>",
+              "code": "# Dependency directories\nnode_modules/\nvendor/\n\n# Build outputs\ndist/\nbuild/\n*.exe\n\n# Environment files\n.env\n.env.local\n\n# OS files\n.DS_Store\nThumbs.db\n\n# IDE files\n.vscode/\n.idea/\n*.swp\n\n# Logs\n*.log\nlogs/"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Create .gitignore before your first commit for best results"
+            }
+          }
+        ]
+      },
+      {
+        "id": "undo-changes",
+        "title": "Undoing Changes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Recovery & Undo Operations"
+          },
+          {
+            "type": "content",
+            "emoji": "↩️",
+            "title": "Undo Commands",
+            "box": {
+              "content": "<strong>Correcting mistakes</strong>",
+              "code": "# Undo unstaged changes\ngit restore filename.txt\n\n# Unstage file (keep changes)\ngit restore --staged filename.txt\n\n# Reset to previous commit (soft - keep changes staged)\ngit reset --soft HEAD~1\n\n# Reset to previous commit (hard - discard changes)\ngit reset --hard HEAD~1\n\n# Revert a commit (creates new commit)\ngit revert commit_hash\n\n# Clean untracked files\ngit clean -fd"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Git Stash",
+            "box": {
+              "content": "<strong>Temporary storage for changes</strong>",
+              "code": "# Stash current changes\ngit stash\n\n# Stash with message\ngit stash push -m \"Work in progress\"\n\n# List stashes\ngit stash list\n\n# Apply latest stash\ngit stash apply\n\n# Apply specific stash\ngit stash apply stash@{1}\n\n# Pop stash (apply and remove)\ngit stash pop\n\n# Clear all stashes\ngit stash clear"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tags-releases",
+        "title": "Tags & Releases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Version Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🏷️",
+            "title": "Git Tags",
+            "box": {
+              "content": "<strong>Mark specific points in history</strong>",
+              "code": "# Create lightweight tag\ngit tag v1.0.0\n\n# Create annotated tag\ngit tag -a v1.0.0 -m \"Release version 1.0.0\"\n\n# List tags\ngit tag\n\n# Push tags to remote\ngit push origin --tags\n\n# Delete local tag\ngit tag -d v1.0.0\n\n# Delete remote tag\ngit push origin --delete v1.0.0"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "GitHub Releases",
+            "box": {
+              "content": "<strong>Packaged versions with binaries</strong>",
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Source Code</strong> - Automatic from tag"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Binaries</strong> - Attach compiled files"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Release Notes</strong> - Changelog and documentation"
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Notifications</strong> - Followers get notified"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "gui-tools",
+        "title": "GUI Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Graphical Interfaces"
+          },
+          {
+            "type": "content",
+            "emoji": "🖥️",
+            "title": "Git GUI Applications",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>GitHub Desktop</strong> - Official, beginner-friendly"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>GitKraken</strong> - Cross-platform, powerful"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>SourceTree</strong> - Free from Atlassian"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>VS Code GitLens</strong> - IDE integration"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>Tower</strong> - macOS focused, premium"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "team-workflows",
+        "title": "Team Workflows",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Collaboration Strategies"
+          },
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "Git Workflow Models",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌿",
+                  "text": "<strong>Feature Branch</strong> - Each feature in separate branch"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Gitflow</strong> - Strict branching model for releases"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Trunk-Based</strong> - Small frequent commits to main"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Forking</strong> - Each developer has their own fork"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "merge-conflicts",
+        "title": "Merge Conflicts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Conflict Resolution"
+          },
+          {
+            "type": "content",
+            "emoji": "⚔️",
+            "title": "Understanding Merge Conflicts",
+            "box": {
+              "content": "<strong>When automatic merging fails</strong>",
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Same File</strong> - Different changes to same lines"
+                },
+                {
+                  "emoji": "✂️",
+                  "text": "<strong>Deleted File</strong> - One branch deletes, other modifies"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Structural Changes</strong> - Renames and moves"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Resolving Conflicts",
+            "box": {
+              "content": "<strong>Step-by-step resolution</strong>",
+              "code": "# When conflict occurs during merge/pull/rebase\n<<<<<<< HEAD\n// Your changes\nconsole.log(\"Hello from main\");\n=======\n// Their changes\nconsole.log(\"Hello from feature\");\n>>>>>>> feature-branch\n\n# Choose one option:\n# 1. Keep your changes (delete theirs)\n# 2. Keep their changes (delete yours)\n# 3. Keep both (manual merge)\n# 4. Write completely new code\n\n# After editing conflicted files:\ngit add .\ngit commit -m \"Resolve merge conflict\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Git & GitHub Guidelines"
+          },
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Commit Message Standards",
+            "box": {
+              "content": "<strong>Conventional Commits</strong>",
+              "code": "feat: add new user authentication system\nfix: resolve login page crash on mobile\ndocs: update API documentation\nstyle: format code according to prettier\nrefactor: simplify user validation logic\ntest: add unit tests for payment service\nchore: update dependencies to latest versions"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Format: type(scope): description - in imperative mood"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Essential Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Small Commits</strong> - One logical change per commit"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Descriptive Messages</strong> - Explain WHY not just what"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Review Before Commit</strong> - git diff --staged"
+                },
+                {
+                  "emoji": "🌿",
+                  "text": "<strong>Feature Branches</strong> - Isolate work in progress"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>No Secrets</strong> - Never commit passwords/keys"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>.gitignore</strong> - Exclude build files and dependencies"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "github-advanced",
+        "title": "Advanced GitHub",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GitHub Power Features"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "GitHub Pages",
+            "box": {
+              "content": "<strong>Free static site hosting</strong>",
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Automatic</strong> - From docs/ folder or gh-pages branch"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Custom Domain</strong> - Use your own domain name"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>HTTPS</strong> - Automatic SSL certificates"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Jekyll</strong> - Built-in static site generator"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "text": "Security Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Branch Protection</strong> - Require reviews, status checks"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Secrets</strong> - Encrypted environment variables"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>2FA</strong> - Two-factor authentication"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Security Advisories</strong> - Private vulnerability reporting"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world",
+        "title": "Real World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Scenarios"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Corporate Development Workflow",
+            "box": {
+              "content": "<strong>Enterprise Git workflow</strong>",
+              "code": "1. Create feature branch from main\n   git checkout -b feature/authentication\n\n2. Develop and commit regularly\n   git add .\n   git commit -m \"feat: add user login\"\n\n3. Push to remote\n   git push origin feature/authentication\n\n4. Create Pull Request\n   # On GitHub: Compare & pull request\n\n5. Code review and discussions\n   # Team members review and comment\n\n6. Address review feedback\n   git commit -m \"fix: address review comments\"\n   git push\n\n7. Merge after approval\n   # Squash and merge or rebase merge\n\n8. Delete feature branch\n   git branch -d feature/authentication"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔓",
+            "title": "Open Source Contribution",
+            "box": {
+              "content": "<strong>Contributing to public projects</strong>",
+              "code": "1. Fork the repository\n   # Click \"Fork\" on GitHub\n\n2. Clone your fork\n   git clone https://github.com/yourname/project.git\n\n3. Add upstream remote\n   git remote add upstream https://github.com/original/project.git\n\n4. Create feature branch\n   git checkout -b fix-issue-123\n\n5. Make changes and test\n   # Write code and tests\n\n6. Commit with descriptive message\n   git commit -m \"fix: resolve issue with login timeout\"\n\n7. Push to your fork\n   git push origin fix-issue-123\n\n8. Create Pull Request\n   # On your fork: \"Compare & pull request\"\n\n9. Participate in discussion\n   # Respond to review comments\n\n10. Keep PR updated\n    git fetch upstream\n    git rebase upstream/main"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Git Command Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential commands quick reference</strong>",
+              "code": "# Basics\ngit init                    # Initialize repository\ngit clone <url>            # Clone repository\ngit status                  # Check status\ngit add <file>             # Stage files\ngit commit -m \"msg\"        # Commit changes\ngit log                     # View history\n\n# Branching\ngit branch                  # List branches\ngit branch <name>          # Create branch\ngit checkout <branch>      # Switch branch\ngit merge <branch>         # Merge branch\ngit branch -d <branch>     # Delete branch\n\n# Remote\ngit push origin main       # Push to remote\ngit pull origin main       # Pull from remote\ngit fetch origin           # Fetch from remote\ngit remote -v              # View remotes\n\n# Undo\ngit restore <file>         # Discard changes\ngit restore --staged <file> # Unstage file\ngit reset --soft HEAD~1    # Undo commit (keep changes)\ngit reset --hard HEAD~1    # Undo commit (discard changes)\ngit revert <commit>        # Create undo commit"
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Common Issues & Solutions"
+          },
+          {
+            "type": "content",
+            "emoji": "🚨",
+            "title": "Frequent Problems",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Permission denied</strong> - Check SSH keys or use PAT"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Wrong commit message</strong> - git commit --amend"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Merge conflicts</strong> - Edit files, then git add"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Accidental commit</strong> - git reset --soft HEAD~1"
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>Push rejected</strong> - git pull then git push"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Pro Git Book</strong> - Free online (git-scm.com/book)"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>GitHub Skills</strong> - Interactive learning"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Git Documentation</strong> - Official docs"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Visual learning"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Git Immersion</strong> - Hands-on tutorial"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Git Katas</strong> - Practice exercises"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Create & Push Repository",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Create new folder and initialize Git"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create README.md with project description"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Add .gitignore for your programming language"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Make several commits with good messages"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Create GitHub repository"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Push local repository to GitHub"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Create a feature branch and make changes"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Open Pull Request and merge it"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between git fetch and git pull?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you undo the last commit while keeping changes?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the purpose of .gitignore file?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "When would you use git stash?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the difference between fork and clone?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "Git = Version control tool (local)"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "GitHub = Collaboration platform (cloud)"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Three areas: Working → Staging → Repository"
+                },
+                {
+                  "emoji": "🌿",
+                  "text": "Branching enables parallel development"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "Pull Requests facilitate code review"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Used by 95% of developers worldwide"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Git workflows, GitHub features, or specific version control challenges!<br><span class=\"gradient-accent\">All version control questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔧</span> Ready to master version control?<br><span class=\"gradient-accent\">Start collaborating on GitHub today!</span>",
+              "note": "Version Control • Collaboration • Open Source"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
