@@ -1,0 +1,1062 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Python",
+            "subtitle": "From Zero to Hero <br> Building Real-World Applications"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "what-is-python",
+        "title": "What is Python?",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What is Python?",
+            "box": {
+              "content": "A <span class=\"highlight\">high-level, interpreted</span> programming language designed for:",
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Readability</strong> - Clean, English-like syntax"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Rapid Development</strong> - Write less, do more"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Versatility</strong> - From web to AI to automation"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Created by:</strong> Guido van Rossum in 1991<br><strong>Named after:</strong> Monty Python's Flying Circus"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-python",
+        "title": "Why Python is Popular",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why Python Dominates",
+            "box": {
+              "content": "Python is the #1 language for beginners and the most in-demand for professionals"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">📊</span> <strong>Fact:</strong> Used by Google, Netflix, NASA, Instagram, and Spotify"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Use Cases Everywhere",
+            "box": {
+              "title": "Where Python Shines",
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Development</strong> - Django, Flask, FastAPI"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Science</strong> - Pandas, NumPy, Matplotlib"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>AI & ML</strong> - TensorFlow, PyTorch, scikit-learn"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Automation</strong> - Selenium, scripting, bots"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>IoT</strong> - Raspberry Pi, MicroPython, sensors"
+                },
+                {
+                  "emoji": "🎮",
+                  "text": "<strong>Game Dev</strong> - Pygame, Unity scripting"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Getting Started",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Setting Up Python"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installing Python",
+            "box": {
+              "title": "Step-by-Step",
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Visit <strong>python.org</strong>"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Download Python 3.x (latest version)"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Run installer - <strong>CHECK 'Add to PATH'</strong>"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Verify: <code>python --version</code>"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">⚠️</span> Python 2 is deprecated. Always use Python 3.x"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Development Tools",
+            "box": {
+              "title": "Recommended IDEs & Editors",
+              "list": [
+                {
+                  "emoji": "💙",
+                  "text": "<strong>VS Code</strong> - Lightweight, extensions"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>PyCharm</strong> - Full-featured Python IDE"
+                },
+                {
+                  "emoji": "📓",
+                  "text": "<strong>Jupyter Notebook</strong> - Data science favorite"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>IDLE</strong> - Built-in, simple for beginners"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "👋",
+            "title": "Hello World",
+            "box": {
+              "content": "<strong>Your First Python Program</strong>",
+              "code": "print(\"Hello, World!\")"
+            },
+            "list": [
+              {
+                "emoji": "▶️",
+                "text": "Run in terminal: <code>python hello.py</code>"
+              },
+              {
+                "emoji": "🎯",
+                "text": "Or interactive: <code>python</code> then type code"
+              }
+            ],
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> That's it! No compilation, no boilerplate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "syntax-basics",
+        "title": "Python Syntax",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Python Syntax Basics",
+            "box": {
+              "content": "Simple, readable, and strict about indentation"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📏",
+            "title": "Indentation Matters!",
+            "box": {
+              "content": "<strong>Python uses indentation to define code blocks</strong>",
+              "code": "if True:\n    print(\"Correct\")\nprint(\"Also correct\")"
+            },
+            "list": [
+              {
+                "emoji": "✅",
+                "text": "Use 4 spaces (standard)"
+              },
+              {
+                "emoji": "❌",
+                "text": "Don't mix tabs and spaces"
+              },
+              {
+                "emoji": "⚠️",
+                "text": "Indentation errors break code"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Variables & Types",
+            "box": {
+              "content": "<strong>Dynamic typing - no declaration needed</strong>",
+              "code": "age = 25          # int\nname = 'John'     # str\nprice = 19.99     # float\nis_active = True  # bool"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🔄</span> Variables can change type anytime"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-types",
+        "title": "Data Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Core Data Types"
+          },
+          {
+            "type": "content",
+            "emoji": "🔢",
+            "title": "Numbers",
+            "box": {
+              "title": "int, float, complex",
+              "code": "x = 10           # int\ny = 3.14         # float\nz = 2 + 3j       # complex"
+            },
+            "list": [
+              {
+                "emoji": "➕",
+                "text": "Arithmetic: +, -, *, /, //, %, **"
+              },
+              {
+                "emoji": "🔄",
+                "text": "Convert: int(), float(), str()"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Strings",
+            "box": {
+              "title": "Text handling",
+              "code": "name = 'Python'\nquote = \"It's awesome\"\nmulti = '''Multiple\nlines'''\nformatted = f\"Hello {name}\""
+            },
+            "list": [
+              {
+                "emoji": "✂️",
+                "text": "Slicing: <code>name[0:3]</code>"
+              },
+              {
+                "emoji": "🔧",
+                "text": "Methods: .upper(), .lower(), .strip()"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Lists",
+            "box": {
+              "title": "Ordered, mutable collections",
+              "code": "fruits = ['apple', 'banana', 'cherry']\nfruits.append('orange')\nfruits[0] = 'mango'\nprint(fruits[1:3])"
+            },
+            "list": [
+              {
+                "emoji": "➕",
+                "text": "Add: .append(), .insert()"
+              },
+              {
+                "emoji": "➖",
+                "text": "Remove: .pop(), .remove()"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Tuples",
+            "box": {
+              "title": "Ordered, immutable",
+              "code": "coords = (10, 20)\nx, y = coords  # unpacking\n# coords[0] = 5  # Error!"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🔒</span> Use tuples when data shouldn't change"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗂️",
+            "title": "Dictionaries",
+            "box": {
+              "title": "Key-value pairs",
+              "code": "person = {\n    'name': 'John',\n    'age': 30,\n    'city': 'NYC'\n}\nprint(person['name'])\nperson['job'] = 'Developer'"
+            },
+            "list": [
+              {
+                "emoji": "🔑",
+                "text": "Access: dict['key']"
+              },
+              {
+                "emoji": "🔄",
+                "text": "Methods: .keys(), .values(), .items()"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🎲",
+            "title": "Sets",
+            "box": {
+              "title": "Unordered, unique items",
+              "code": "numbers = {1, 2, 3, 3, 2}\nprint(numbers)  # {1, 2, 3}\nnumbers.add(4)"
+            },
+            "list": [
+              {
+                "emoji": "➕",
+                "text": "Union: set1 | set2"
+              },
+              {
+                "emoji": "∩",
+                "text": "Intersection: set1 & set2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "control-flow",
+        "title": "Control Flow",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Decision Making & Loops"
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Conditional Statements",
+            "box": {
+              "code": "age = 18\nif age >= 18:\n    print(\"Adult\")\nelif age >= 13:\n    print(\"Teen\")\nelse:\n    print(\"Child\")"
+            },
+            "list": [
+              {
+                "emoji": "⚖️",
+                "text": "Comparisons: ==, !=, <, >, <=, >="
+              },
+              {
+                "emoji": "🔗",
+                "text": "Logical: and, or, not"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔁",
+            "title": "For Loop",
+            "box": {
+              "title": "Iterate over sequences",
+              "code": "for i in range(5):\n    print(i)\n\nfor fruit in ['apple', 'banana']:\n    print(fruit)"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🎯</span> range(5) generates 0, 1, 2, 3, 4"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "While Loop",
+            "box": {
+              "title": "Loop until condition is false",
+              "code": "count = 0\nwhile count < 5:\n    print(count)\n    count += 1"
+            },
+            "list": [
+              {
+                "emoji": "⛔",
+                "text": "<strong>break</strong> - Exit loop"
+              },
+              {
+                "emoji": "⏭️",
+                "text": "<strong>continue</strong> - Skip iteration"
+              },
+              {
+                "emoji": "➡️",
+                "text": "<strong>pass</strong> - Do nothing placeholder"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "functions",
+        "title": "Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reusable Code Blocks"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Defining Functions",
+            "box": {
+              "code": "def greet(name):\n    return f\"Hello, {name}!\"\n\nresult = greet(\"Python\")\nprint(result)"
+            },
+            "list": [
+              {
+                "emoji": "📥",
+                "text": "Parameters: def func(param1, param2)"
+              },
+              {
+                "emoji": "📤",
+                "text": "Return values: return value"
+              },
+              {
+                "emoji": "🎯",
+                "text": "Default args: def func(x=10)"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🎛️",
+            "title": "Advanced Arguments",
+            "box": {
+              "code": "def info(name, age=25, *hobbies, **details):\n    print(f\"{name}, {age}\")\n    print(hobbies)\n    print(details)\n\ninfo(\"John\", 30, \"coding\", \"gaming\", city=\"NYC\")"
+            },
+            "list": [
+              {
+                "emoji": "📦",
+                "text": "<strong>*args</strong> - Variable positional"
+              },
+              {
+                "emoji": "🗂️",
+                "text": "<strong>**kwargs</strong> - Variable keyword"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Lambda Functions",
+            "box": {
+              "title": "Anonymous one-liners",
+              "code": "square = lambda x: x ** 2\nprint(square(5))  # 25\n\nnumbers = [1, 2, 3, 4]\nsquared = list(map(lambda x: x**2, numbers))"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Use for simple operations only"
+            }
+          }
+        ]
+      },
+      {
+        "id": "modules",
+        "title": "Modules & Packages",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Code Organization"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Importing Modules",
+            "box": {
+              "code": "import math\nprint(math.pi)\n\nfrom datetime import datetime\nprint(datetime.now())\n\nimport random as rnd\nprint(rnd.randint(1, 10))"
+            },
+            "list": [
+              {
+                "emoji": "📚",
+                "text": "Built-in: math, random, os, sys, json"
+              },
+              {
+                "emoji": "🔧",
+                "text": "Your own: create .py file, import it"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "pip - Package Manager",
+            "box": {
+              "code": "# Install packages\npip install requests\npip install pandas numpy\n\n# List installed\npip list\n\n# Uninstall\npip uninstall package_name"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🌐</span> PyPI has 500,000+ packages available"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Virtual Environments",
+            "box": {
+              "title": "Isolate project dependencies",
+              "code": "# Create\npython -m venv myenv\n\n# Activate (Windows)\nmyenv\\Scripts\\activate\n\n# Activate (Mac/Linux)\nsource myenv/bin/activate\n\n# Deactivate\ndeactivate"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">⚠️</span> Always use venv for projects"
+            }
+          }
+        ]
+      },
+      {
+        "id": "error-handling",
+        "title": "Error Handling",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Try-Except",
+            "box": {
+              "code": "try:\n    num = int(input(\"Enter number: \"))\n    result = 10 / num\nexcept ValueError:\n    print(\"Invalid number\")\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")\nfinally:\n    print(\"Done\")"
+            },
+            "list": [
+              {
+                "emoji": "🎯",
+                "text": "Catch specific exceptions"
+              },
+              {
+                "emoji": "🔄",
+                "text": "finally: always executes"
+              },
+              {
+                "emoji": "🚨",
+                "text": "raise: create custom errors"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "file-handling",
+        "title": "File Handling",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Reading & Writing Files",
+            "box": {
+              "code": "# Write\nwith open('data.txt', 'w') as f:\n    f.write(\"Hello, File!\")\n\n# Read\nwith open('data.txt', 'r') as f:\n    content = f.read()\n    print(content)"
+            },
+            "list": [
+              {
+                "emoji": "✍️",
+                "text": "'w' - Write (overwrite)"
+              },
+              {
+                "emoji": "📖",
+                "text": "'r' - Read"
+              },
+              {
+                "emoji": "➕",
+                "text": "'a' - Append"
+              }
+            ],
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> 'with' auto-closes file"
+            }
+          }
+        ]
+      },
+      {
+        "id": "oop",
+        "title": "Object-Oriented Programming",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "OOP in Python"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Classes & Objects",
+            "box": {
+              "code": "class Car:\n    def __init__(self, brand, model):\n        self.brand = brand\n        self.model = model\n    \n    def drive(self):\n        print(f\"{self.brand} {self.model} is driving\")\n\nmy_car = Car(\"Tesla\", \"Model 3\")\nmy_car.drive()"
+            },
+            "list": [
+              {
+                "emoji": "🎯",
+                "text": "__init__: Constructor"
+              },
+              {
+                "emoji": "📌",
+                "text": "self: Instance reference"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Inheritance",
+            "box": {
+              "code": "class ElectricCar(Car):\n    def __init__(self, brand, model, battery):\n        super().__init__(brand, model)\n        self.battery = battery\n    \n    def charge(self):\n        print(\"Charging...\")\n\ntesla = ElectricCar(\"Tesla\", \"S\", \"100kWh\")"
+            }
+          }
+        ]
+      },
+      {
+        "id": "popular-libraries",
+        "title": "Popular Libraries",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Python Ecosystem"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Web Development",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Django</strong> - Full-featured web framework"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Flask</strong> - Lightweight, flexible"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>FastAPI</strong> - Modern, fast APIs"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Data Science",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐼",
+                  "text": "<strong>Pandas</strong> - Data manipulation"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>NumPy</strong> - Numerical computing"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Matplotlib</strong> - Visualization"
+                },
+                {
+                  "emoji": "📓",
+                  "text": "<strong>Jupyter</strong> - Interactive notebooks"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🤖",
+            "title": "AI & Machine Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>TensorFlow</strong> - Deep learning by Google"
+                },
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>PyTorch</strong> - Deep learning by Meta"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>scikit-learn</strong> - ML algorithms"
+                },
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Transformers</strong> - NLP models"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Automation & Testing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Selenium</strong> - Browser automation"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>pytest</strong> - Testing framework"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Requests</strong> - HTTP library"
+                },
+                {
+                  "emoji": "🕷️",
+                  "text": "<strong>BeautifulSoup</strong> - Web scraping"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Writing Clean Python Code"
+          },
+          {
+            "type": "content",
+            "emoji": "📖",
+            "title": "PEP 8 Style Guide",
+            "box": {
+              "content": "<strong>Python's official style guide</strong>",
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "4 spaces for indentation"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "snake_case for variables/functions"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "PascalCase for classes"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Max line length: 79 characters"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Use docstrings for documentation"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Debugging Tips",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🖨️",
+                  "text": "print() debugging - simple & effective"
+                },
+                {
+                  "emoji": "🐛",
+                  "text": "pdb module - Python debugger"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "IDE debugger - breakpoints, step through"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "Logging - better than print for production"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world",
+        "title": "Real-World Python",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Python in Industry"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Career Paths",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Backend Developer</strong> - APIs, databases"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Analyst</strong> - Business insights"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>ML Engineer</strong> - AI model deployment"
+                },
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>Data Scientist</strong> - Predictive analytics"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>DevOps Engineer</strong> - Automation, CI/CD"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security Analyst</strong> - Penetration testing"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Companies Using Python",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Google</strong> - Core infrastructure"
+                },
+                {
+                  "emoji": "📺",
+                  "text": "<strong>Netflix</strong> - Data analysis"
+                },
+                {
+                  "emoji": "📷",
+                  "text": "<strong>Instagram</strong> - Backend (Django)"
+                },
+                {
+                  "emoji": "🎵",
+                  "text": "<strong>Spotify</strong> - Recommendations"
+                },
+                {
+                  "emoji": "🚗",
+                  "text": "<strong>Tesla</strong> - Autopilot systems"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "project-ideas",
+        "title": "Mini Projects",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Beginner Projects",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Todo CLI</strong> - Task manager in terminal"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Calculator</strong> - GUI with tkinter"
+                },
+                {
+                  "emoji": "🎲",
+                  "text": "<strong>Number Guessing Game</strong> - Basic logic"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Password Generator</strong> - Random + secure"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Intermediate Projects",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🕷️",
+                  "text": "<strong>Web Scraper</strong> - Extract data from websites"
+                },
+                {
+                  "emoji": "🌤️",
+                  "text": "<strong>Weather App</strong> - API integration"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Expense Tracker</strong> - SQLite database"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Automation Bot</strong> - Email/file automation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Where to Learn",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Official Docs</strong> - docs.python.org"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube</strong> - Corey Schafer, Tech With Tim"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Interactive</strong> - Codecademy, DataCamp"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Practice</strong> - LeetCode, HackerRank"
+                },
+                {
+                  "emoji": "📕",
+                  "text": "<strong>Books</strong> - \"Automate the Boring Stuff\""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the output of: <code>print(type([]))</code>"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Difference between list and tuple?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What does 'self' represent in classes?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How to install external packages?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's PEP 8?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐍",
+                  "text": "Python: readable, versatile, beginner-friendly"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Rich ecosystem: libraries for everything"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Practical: web, data, AI, automation"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "Career-ready: high demand globally"
+                },
+                {
+                  "emoji": "🌱",
+                  "text": "Start small: practice daily, build projects"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Python, projects, or career paths!<br><span class=\"gradient-accent\">No question is too basic!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐍</span> Ready to code in Python?<br><span class=\"gradient-accent\">Start building something today!</span>",
+              "note": "Practice • Build Projects • Join Community"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

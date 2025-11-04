@@ -1,0 +1,848 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Bude Global OSS",
+            "subtitle": "Introduction to <br> Open Source Software"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Founder of BUDE",
+            "experience": "Software Developer for 3 years",
+            "oss_experience": "Open Source maintainer since 2024",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "what-is-oss",
+        "title": "What is Open Source Software (OSS)?",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What is Open Source Software (OSS)?",
+            "box": {
+              "content": "Software with <span class=\"highlight\">source code</span> that anyone can:",
+              "list": [
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Inspect</strong> - See how it works"
+                },
+                {
+                  "emoji": "✏️",
+                  "text": "<strong>Modify</strong> - Change and improve it"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Distribute</strong> - Share with others"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Note:</strong> OSS ≠ FOSS (Free and Open Source Software)<br>OSS focuses on <em>open development</em>, FOSS emphasizes <em>user freedom</em>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "you-already-use-oss",
+        "title": "You Already Use OSS!",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "You Already Use OSS!",
+            "box": {
+              "content": "Open source is everywhere! Let's look at some examples you probably use daily..."
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> <strong>Fun Fact:</strong> Over 90% of modern applications contain OSS components!"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐧",
+            "title": "Linux",
+            "box": {
+              "title": "What is it?",
+              "content": "The most popular open source operating system kernel"
+            },
+            "list": [
+              {
+                "emoji": "🌍",
+                "text": "Powers most web servers worldwide"
+              },
+              {
+                "emoji": "📱",
+                "text": "Foundation of Android OS"
+              },
+              {
+                "emoji": "☁️",
+                "text": "Runs on 90% of cloud infrastructure"
+              },
+              {
+                "emoji": "💻",
+                "text": "Free alternative to Windows/macOS"
+              }
+            ],
+            "note": {
+              "text": "Created by Linus Torvalds in 1991, now maintained by thousands of developers globally"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🦊",
+            "title": "Firefox",
+            "box": {
+              "title": "What is it?",
+              "content": "Privacy-focused open source web browser"
+            },
+            "list": [
+              {
+                "emoji": "🔒",
+                "text": "Built with privacy as a core principle"
+              },
+              {
+                "emoji": "🛠️",
+                "text": "Highly customizable with extensions"
+              },
+              {
+                "emoji": "🌐",
+                "text": "Champions open web standards"
+              },
+              {
+                "emoji": "👥",
+                "text": "Community-driven development"
+              }
+            ],
+            "note": {
+              "text": "Developed by Mozilla Foundation, first released in 2004"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "WordPress",
+            "box": {
+              "title": "What is it?",
+              "content": "The world's most popular website builder and CMS"
+            },
+            "list": [
+              {
+                "emoji": "🌍",
+                "text": "Powers 43% of all websites on the internet"
+              },
+              {
+                "emoji": "🎨",
+                "text": "Thousands of free themes and plugins"
+              },
+              {
+                "emoji": "💼",
+                "text": "Powers everything from blogs to e-commerce"
+              },
+              {
+                "emoji": "👥",
+                "text": "Massive global community"
+              }
+            ],
+            "note": {
+              "text": "Started as a blogging platform in 2003, now a full CMS"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Visual Studio Code",
+            "box": {
+              "title": "What is it?",
+              "content": "Popular open source code editor by Microsoft"
+            },
+            "list": [
+              {
+                "emoji": "🚀",
+                "text": "Most popular code editor among developers"
+              },
+              {
+                "emoji": "🔌",
+                "text": "Thousands of extensions available"
+              },
+              {
+                "emoji": "🎯",
+                "text": "Supports almost every programming language"
+              },
+              {
+                "emoji": "⚡",
+                "text": "Fast, lightweight, and free"
+              }
+            ],
+            "note": {
+              "text": "Released by Microsoft in 2015, built on Electron (also OSS!)"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Git",
+            "box": {
+              "title": "What is it?",
+              "content": "The most popular version control system"
+            },
+            "list": [
+              {
+                "emoji": "📝",
+                "text": "Track changes in your code over time"
+              },
+              {
+                "emoji": "👥",
+                "text": "Collaborate with multiple developers"
+              },
+              {
+                "emoji": "🌿",
+                "text": "Work on features in separate branches"
+              },
+              {
+                "emoji": "⏪",
+                "text": "Roll back to previous versions anytime"
+              }
+            ],
+            "note": {
+              "text": "Created by Linus Torvalds in 2005, now the industry standard"
+            }
+          }
+        ]
+      },
+      {
+        "id": "getting-started-with-oss",
+        "title": "Getting Started with OSS",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started with OSS",
+            "box": {
+              "content": "Contributing to open source can be rewarding. Here's how you can start."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Finding a Project",
+            "box": {
+              "title": "Where to look?",
+              "list": [
+                {
+                  "emoji": "⭐",
+                  "text": "Explore projects on GitHub, GitLab, or Bitbucket."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "Look for projects you already use and want to improve."
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "Search for issues with labels like \"good first issue\" or \"help wanted\"."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🤔",
+            "title": "What to Contribute?",
+            "box": {
+              "title": "It's not just about code!",
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "Improve documentation."
+                },
+                {
+                  "emoji": "🐛",
+                  "text": "Report or fix bugs."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "Suggest new features."
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Help with design."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "oss-in-2025-and-beyond",
+        "title": "OSS in 2025 and Beyond",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "OSS in 2025 and Beyond",
+            "box": {
+              "content": "The future of open source is bright and full of opportunities."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Companies Developing and Using OSS",
+            "box": {
+              "title": "Who is leading the charge?",
+              "list": [
+                {
+                  "emoji": "⭐",
+                  "text": "<strong>Google:</strong> Kubernetes, TensorFlow, Android"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "<strong>Microsoft:</strong> VS Code, .NET, TypeScript"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "<strong>Meta:</strong> React, PyTorch, GraphQL"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "<strong>Amazon:</strong> OpenSearch, AWS SDKs, Firecracker"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "The Future of OSS",
+            "box": {
+              "title": "What to expect?",
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "AI and Machine Learning will be dominated by OSS."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "Security and sustainability will be key focus areas."
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "More diversity and inclusion in the community."
+                },
+                {
+                  "emoji": "💼",
+                  "text": "Open source will become the default for new software."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-oss-matters",
+        "title": "Why Open Source Matters",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why Open Source Matters"
+          },
+          {
+            "type": "content",
+            "title": "1. Innovation Through Collaboration",
+            "box": {
+              "content": "<span class=\"emoji\">🚀</span> <strong>Faster Development</strong>",
+              "list": [
+                "Thousands of developers working together worldwide",
+                "Problems get solved faster with diverse perspectives",
+                "Innovations happen at incredible speed",
+                "No need to reinvent the wheel - build on existing solutions"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Example: Linux kernel has 15,000+ contributors from 1,500+ companies"
+            }
+          },
+          {
+            "type": "content",
+            "title": "2. Enhanced Security",
+            "box": {
+              "content": "<span class=\"emoji\">🔒</span> <strong>\"Many Eyes Make Bugs Shallow\"</strong> - Linus's Law",
+              "list": [
+                "Anyone can review and audit the code",
+                "Vulnerabilities are found and fixed faster",
+                "No hidden backdoors or malicious code",
+                "Security researchers can proactively find issues"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">⚡</span> OSS projects often patch vulnerabilities faster than proprietary software"
+            }
+          },
+          {
+            "type": "content",
+            "title": "3. Cost-Effective & Accessible",
+            "box": {
+              "content": "<span class=\"emoji\">💰</span> <strong>Open Source = Open Access</strong>",
+              "list": [
+                "No licensing fees - source code is publicly available",
+                "Customize to fit your specific requirements",
+                "Avoid vendor lock-in with transparent codebases",
+                "Lower barriers to entry for individuals and organizations"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">📊</span> Organizations save significantly by using and contributing to OSS projects"
+            }
+          },
+          {
+            "type": "content",
+            "title": "4. Global Community & Learning",
+            "box": {
+              "content": "<span class=\"emoji\">🌍</span> <strong>Collaborate Across Borders</strong>",
+              "list": [
+                "Learn from experts worldwide",
+                "Join supportive communities of like-minded developers",
+                "Share knowledge and best practices",
+                "Contribute to projects that impact millions"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🤝</span> GitHub alone has 100+ million developers collaborating on OSS"
+            }
+          },
+          {
+            "type": "content",
+            "title": "5. Transparency & Trust",
+            "box": {
+              "content": "<span class=\"emoji\">🎯</span> <strong>No Hidden Code, No Surprises</strong>",
+              "list": [
+                "See exactly what the software does",
+                "Verify privacy and data handling practices",
+                "No vendor lock-in or forced upgrades",
+                "Build trust through openness"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🔍</span> Transparency builds trust - you know exactly what's running on your system"
+            }
+          }
+        ]
+      },
+      {
+        "id": "oss-licenses",
+        "title": "Understanding OSS Licenses",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding OSS Licenses",
+            "box": {
+              "content": "How to identify open source software and what different licenses mean"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "How to Tell if Software is Open Source",
+            "box": {
+              "content": "<span class=\"emoji\">✅</span> <strong>Look for These Signs</strong>",
+              "list": [
+                "LICENSE or LICENSE.txt file in the repository",
+                "Source code publicly available (GitHub, GitLab, etc.)",
+                "Clear license information in README or documentation",
+                "OSI (Open Source Initiative) approved license"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> If there's no license, the code is NOT open source - it's copyrighted by default"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "MIT License",
+            "box": {
+              "title": "Simple and Permissive",
+              "content": "The most popular open source license",
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "Use commercially without restrictions"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Modify and distribute freely"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "No requirement to share modifications"
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "No warranty - use at your own risk"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🌟</span> Used by: React, jQuery, Node.js, Rails"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Apache License 2.0",
+            "box": {
+              "title": "Permissive with Patent Protection",
+              "content": "Popular for large projects and enterprise use",
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "Similar freedoms to MIT"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "Includes patent protection grants"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "Requires attribution and change documentation"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "More detailed legal terms"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🌟</span> Used by: Android, Kubernetes, Apache HTTP Server"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "GNU GPL (General Public License)",
+            "box": {
+              "title": "Copyleft License",
+              "content": "Ensures derivative works remain open source",
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "Use and modify freely"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "Derivative works must use GPL too (copyleft)"
+                },
+                {
+                  "emoji": "📤",
+                  "text": "Must share source code of modifications"
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "Can complicate commercial use"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🌟</span> Used by: Linux kernel, Git, WordPress"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎓",
+            "title": "BSD License (Berkeley Software Distribution)",
+            "box": {
+              "title": "Very Permissive",
+              "content": "Minimal restrictions, similar to MIT",
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "Use, modify, distribute freely"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Commercial use allowed"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "Must include copyright notice"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "No copyleft - can relicense"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🌟</span> Used by: FreeBSD, OpenBSD, many networking tools"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Choosing a License",
+            "box": {
+              "content": "<span class=\"emoji\">🤔</span> <strong>Quick Guide</strong>",
+              "list": [
+                "Want simple and permissive? → MIT or BSD",
+                "Need patent protection? → Apache 2.0",
+                "Want derivatives to stay open? → GPL",
+                "Not sure? → MIT is a safe default choice"
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🔗</span> Visit choosealicense.com for an interactive guide"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-exercise",
+        "title": "Hands-On Exercise: Making Your First Contribution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Hands-On Exercise",
+            "box": {
+              "content": "Let's practice creating and reviewing pull requests together!"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "Contribution Workflow",
+            "box": {
+              "content": "<span class=\"emoji\">📊</span> <strong>From Idea to Merged Code</strong>"
+            },
+            "list": [
+              {
+                "emoji": "1️⃣",
+                "text": "Find a project & issue → <em>Choose what to work on</em>"
+              },
+              {
+                "emoji": "2️⃣",
+                "text": "Fork the repository → <em>Create your own copy</em>"
+              },
+              {
+                "emoji": "3️⃣",
+                "text": "Clone to local machine → <em>Download to your computer</em>"
+              },
+              {
+                "emoji": "4️⃣",
+                "text": "Create a new branch → <em>Work in isolation</em>"
+              },
+              {
+                "emoji": "5️⃣",
+                "text": "Make your changes → <em>Code, document, test</em>"
+              },
+              {
+                "emoji": "6️⃣",
+                "text": "Commit & push → <em>Save and upload changes</em>"
+              },
+              {
+                "emoji": "7️⃣",
+                "text": "Create Pull Request → <em>Propose your changes</em>"
+              },
+              {
+                "emoji": "8️⃣",
+                "text": "Review & iterate → <em>Respond to feedback</em>"
+              },
+              {
+                "emoji": "9️⃣",
+                "text": "Merged! → <em>Your code is now part of the project!</em>"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Creating a Pull Request (PR)",
+            "box": {
+              "title": "Step-by-Step Guide",
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>Fork & Clone</strong> - Get the code locally"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>Create branch</strong> - <code>git checkout -b fix-typo</code>"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>Make changes</strong> - Edit files, add tests"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>Commit</strong> - <code>git commit -m \"Fix typo in README\"</code>"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>Push</strong> - <code>git push origin fix-typo</code>"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>Open PR</strong> - Go to GitHub, click 'New Pull Request'"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "<strong>Describe changes</strong> - Clear title & description"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> <strong>Tip:</strong> Reference issue numbers in PR description (e.g., 'Fixes #123')"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Writing a Good PR Description",
+            "box": {
+              "content": "<span class=\"emoji\">✍️</span> <strong>Make it Easy to Review</strong>",
+              "list": [
+                {
+                  "emoji": "📌",
+                  "text": "<strong>Clear title</strong> - Summarize the change in one line"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>What & Why</strong> - Explain what you changed and why"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>How to test</strong> - Steps to verify your changes work"
+                },
+                {
+                  "emoji": "📸",
+                  "text": "<strong>Screenshots</strong> - If UI changes, show before/after"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Related issues</strong> - Link to issue being fixed"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🎯</span> Good PR descriptions help reviewers understand your work faster"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "👀",
+            "title": "Reviewing a Pull Request",
+            "box": {
+              "title": "How to Be a Helpful Reviewer",
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Read the description</strong> - Understand the goal"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Check the code</strong> - Look for bugs, style issues"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Test it</strong> - Pull the branch and try it locally"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Leave comments</strong> - Be specific and constructive"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Approve or request changes</strong> - Clear feedback"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> <strong>Remember:</strong> Be kind, be specific, and focus on the code, not the person"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💬",
+            "title": "PR Review Best Practices",
+            "box": {
+              "content": "<span class=\"emoji\">🤝</span> <strong>Constructive Communication</strong>",
+              "list": [
+                "✅ \"Consider using a map here for better performance\"",
+                "✅ \"This might break on edge case X, let's add a test\"",
+                "✅ \"Nice solution! Could we add a comment explaining why?\"",
+                "❌ \"This is wrong\"",
+                "❌ \"Why would you do it this way?\"",
+                "❌ \"This code is terrible\""
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🌟</span> <strong>Golden Rule:</strong> Review code as you'd want yours reviewed - with respect and helpfulness"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎓",
+            "title": "Practice Time!",
+            "box": {
+              "content": "<span class=\"emoji\">🚀</span> <strong>Let's Try It Together</strong>",
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "Visit: <strong>github.com/budeglobalenterprise/bude-first-contribution</strong>"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "Follow the tutorial to make your first PR"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "Practice the full workflow in a safe environment"
+                },
+                {
+                  "emoji": "🎉",
+                  "text": "Get your first contribution merged!"
+                }
+              ]
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> This is a beginner-friendly repository designed for practicing!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Let's Chat! 💬",
+            "content": "Got questions? Confused about something?<br><span class=\"gradient-accent\">No question is too basic!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thanks for hanging out! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🚀</span> Ready to make your first contribution?<br><span class=\"gradient-accent\">We'll be cheering you on!</span>",
+              "note": "Find us online • Join the community • Ship some code"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Your friendly neighborhood OSS community"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

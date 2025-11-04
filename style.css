@@ -1,0 +1,320 @@
+@font-face {
+            font-family: 'Molot';
+            src: url('assets/fonts/Molot.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --bude-primary: #0060a0;
+            --bude-purple: #6f42c1;
+            --bude-pink: #cb6ce6;
+            --bude-dark: #2c3e50;
+            --bude-light: #ffffff;
+            --bude-bg-light: #f8f9fa;
+            --r-background-color: #ffffff;
+            --r-main-color: #2c3e50;
+            --r-heading-color: #0060a0;
+            --r-link-color: #0060a0;
+            --r-selection-background-color: #0060a0;
+            --r-heading-font: 'Molot', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-image: url('assets/images/budeglobal_logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .reveal {
+            position: relative;
+            z-index: 1;
+            color: var(--bude-text-dark);
+            font-size: 28px;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3 {
+            text-transform: none;
+            font-weight: 700;
+            font-family: 'Molot', sans-serif;
+        }
+
+        .reveal h1 {
+            background: linear-gradient(135deg, var(--bude-primary) 0%, var(--bude-purple) 50%, var(--bude-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5em;
+        }
+
+        .reveal h2 {
+            color: var(--bude-primary);
+            font-size: 2em;
+        }
+
+        .reveal h3 {
+            color: var(--bude-purple);
+            font-size: 1.5em;
+        }
+
+        .reveal p {
+            font-size: 0.9em;
+        }
+
+        .reveal .slides section {
+            text-align: left;
+            padding-bottom: 100px !important;
+        }
+
+        .reveal .slides section.center {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body.hide-watermark::before {
+            display: none;
+        }
+
+        .reveal .slides section.present {
+            overflow-y: auto !important;
+            max-height: 720px !important;
+        }
+
+        .reveal .slides {
+            overflow: visible !important;
+        }
+
+        .reveal ul {
+            margin-left: 0;
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+            font-size: 0.85em;
+        }
+
+        .highlight {
+            color: var(--bude-primary);
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-style: normal;
+        }
+
+        .box {
+            background: linear-gradient(135deg, rgba(0, 96, 160, 0.08) 0%, rgba(111, 66, 193, 0.05) 100%);
+            border-left: 4px solid var(--bude-primary);
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .small-text {
+            font-size: 0.7em;
+        }
+
+        code {
+            background: rgba(0, 96, 160, 0.1);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            color: var(--bude-purple);
+        }
+
+        .bude-logo {
+            width: 200px;
+            height: auto;
+            margin: 0 auto 1.5em auto;
+            display: block;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+        }
+
+        .gradient-accent {
+            background: linear-gradient(135deg, var(--bude-purple) 0%, var(--bude-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        /* Presentation Selector Modal */
+        #presentation-selector {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(10px);
+        }
+
+        #presentation-selector.hidden {
+            display: none;
+        }
+
+        .selector-content {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 3em;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .selector-content h2 {
+            color: var(--bude-primary);
+            font-family: 'Molot', sans-serif;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 1.5em;
+        }
+
+        #topic-search {
+            width: 100%;
+            padding: 1em 1.5em;
+            font-size: 1.1em;
+            border: 2px solid var(--bude-primary);
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        #topic-search:focus {
+            border-color: var(--bude-purple);
+            box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
+        }
+
+        .suggestions {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 2px solid var(--bude-primary);
+            border-radius: 10px;
+            background: white;
+            margin-top: 0.5em;
+        }
+
+        .suggestion-item {
+            padding: 1em 1.5em;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background: linear-gradient(135deg, rgba(0, 96, 160, 0.1) 0%, rgba(111, 66, 193, 0.1) 100%);
+        }
+
+        .suggestion-item .title {
+            font-weight: bold;
+            color: var(--bude-primary);
+            margin-bottom: 0.3em;
+        }
+
+        .suggestion-item .description {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .error-message {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            color: #856404;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--bude-purple);
+            font-size: 1.2em;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(115, 105, 255, 0.7);
+            backdrop-filter: blur(8px);
+            color: white;
+            padding: 18px 10px;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+            z-index: 1000;
+        }
+
+        footer .social-links {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 8px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            vertical-align: middle;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #90caf9;
+            transform: scale(1.1);
+        }
+
+        footer .brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-avatar {
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 2px solid #90caf9;
+            object-fit: cover;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #cfd8dc;
+            margin-top: 5px;
+        }

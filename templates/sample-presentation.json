@@ -1,0 +1,55 @@
+{
+    "presentation": {
+        "topics": {
+            "slides": [
+                {
+                    "title": "Welcome to Web Development",
+                    "content": [
+                        "This is an introduction to web technologies",
+                        "We'll cover HTML, CSS, and JavaScript basics",
+                        {
+                            "list": [
+                                "HTML for structure",
+                                "CSS for styling", 
+                                "JavaScript for interactivity"
+                            ],
+                            "ordered": false
+                        }
+                    ]
+                },
+                {
+                    "title": "HTML Basics",
+                    "content": [
+                        "HTML stands for HyperText Markup Language",
+                        "It provides the structure of web pages",
+                        {
+                            "list": [
+                                "Use tags to define elements",
+                                "Elements can be nested",
+                                "Attributes provide additional information"
+                            ],
+                            "ordered": false
+                        }
+                    ]
+                },
+                {
+                    "title": "CSS Fundamentals",
+                    "content": [
+                        "CSS stands for Cascading Style Sheets",
+                        "It controls the presentation and layout",
+                        "Key concepts include:",
+                        {
+                            "list": [
+                                "Selectors",
+                                "Properties and values",
+                                "Box model",
+                                "Flexbox and Grid"
+                            ],
+                            "ordered": false
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
