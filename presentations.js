@@ -57,5 +57,12 @@ const PRESENTATIONS_CONFIG = [
       "dashboards",
     ],
   },
+  {
+    file: "presentations/intro-oss.json",
+    title: "Introduction to Open Source",
+    description:
+      "Learn the fundamentals of open source software, from licensing to contributing",
+    keywords: ["oss", "open source", "git", "github", "contribution"],
+  },
   // Add more presentations here as you create them
 ];
