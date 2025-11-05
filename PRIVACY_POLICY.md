@@ -77,5 +77,5 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 If you have any questions about this Privacy Policy, please contact us:
 
-*   By email: [contact@budeglobal.in](mailto:contact@budeglobal.in)
+*   By email: [budeglobalerp@gmail.com](mailto:budeglobalerp@gmail.com)
 *   By visiting this page on our website: [https://budeglobal.in/contact](https://budeglobal.in/contact)
