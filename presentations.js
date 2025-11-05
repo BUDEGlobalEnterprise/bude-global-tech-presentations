@@ -247,9 +247,9 @@ const PRESENTATIONS_CONFIG = [
     file: "presentations/intro-mysql.json",
     title: "Introduction to MySQL",
     description: "Complete database management guide from beginner to production ready",
-    keywords: ["mysql", "database", "sql", "rdbms", "innodb", "replication", "backup"]
-  },{
-    file: "presentations/intro-mongodb.json",
+        keywords: ["mysql", "database", "sql", "rdbms", "innodb", "replication", "backup"]
+      }, {
+        file: "presentations/intro-mongodb.json",
     title: "Introduction to MongoDB",
     description: "Complete NoSQL database guide from beginner to production ready",
     keywords: ["mongodb", "nosql", "document", "database", "bson", "aggregation", "atlas"]
