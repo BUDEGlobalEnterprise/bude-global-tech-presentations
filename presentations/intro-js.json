@@ -206,12 +206,7 @@
             "emoji": "🔧",
             "title": "Defining and Calling Functions",
             "box": {
-              "code": "// Function declaration\nfunction greet(name) {\n  return 'Hello, ' + name + '!';\n}\n
-// Function expression\nconst greet2 = function(name) {\n  return 'Hello, ' + name + '!';\n};
-
-// Arrow function\nconst greet3 = (name) => {\n  return 'Hello, ' + name + '!';\n};
-
-// Calling a function\nlet message = greet('John'); // 'Hello, John!'\n"
+              "code": "// Function declaration\nfunction greet(name) {\n  return 'Hello, ' + name + '!';\n}\n\n// Function expression\nconst greet2 = function(name) {\n  return 'Hello, ' + name + '!';\n};\n\n// Arrow function\nconst greet3 = (name) => {\n  return 'Hello, ' + name + '!';\n};\n\n// Calling a function\nlet message = greet('John'); // 'Hello, John!'\n"
             }
           }
         ]
@@ -229,12 +224,7 @@
             "emoji": "🧩",
             "title": "Objects and Arrays",
             "box": {
-              "code": "// Object literal\nconst person = {\n  name: 'John',\n  age: 30,\n  isStudent: false\n};
-
-// Accessing object properties\nconsole.log(person.name); // 'John'\n
-// Array literal\nconst colors = ['red', 'green', 'blue'];
-
-// Accessing array elements\nconsole.log(colors[0]); // 'red'"
+              "code": "// Object literal\nconst person = {\n  name: 'John',\n  age: 30,\n  isStudent: false\n};\n\n// Accessing object properties\nconsole.log(person.name); // 'John'\n\n// Array literal\nconst colors = ['red', 'green', 'blue'];\n\n// Accessing array elements\nconsole.log(colors[0]); // 'red'"
             }
           }
         ]
@@ -252,14 +242,7 @@
             "emoji": "🌐",
             "title": "The Document Object Model",
             "box": {
-              "code": "// Selecting an element by ID\nconst heading = document.getElementById('my-heading');
-
-// Changing the content of an element\nheading.textContent = 'New Heading';
-
-// Creating a new element\nconst newParagraph = document.createElement('p');
-newParagraph.textContent = 'This is a new paragraph.';
-
-// Adding the new element to the page\ndocument.body.appendChild(newParagraph);"
+              "code": "// Selecting an element by ID\nconst heading = document.getElementById('my-heading');\n\n// Changing the content of an element\nheading.textContent = 'New Heading';\n\n// Creating a new element\nconst newParagraph = document.createElement('p');\nnewParagraph.textContent = 'This is a new paragraph.';\n\n// Adding the new element to the page\ndocument.body.appendChild(newParagraph);"
             }
           }
         ]
@@ -277,11 +260,7 @@ newParagraph.textContent = 'This is a new paragraph.';
             "emoji": "🖱️",
             "title": "Event Handling",
             "box": {
-              "code": "// Selecting a button\nconst myButton = document.getElementById('my-button');
-
-// Adding an event listener\nmyButton.addEventListener('click', () => {
-  alert('Button clicked!');
-});"
+              "code": "// Selecting a button\nconst myButton = document.getElementById('my-button');\n\n// Adding an event listener\nmyButton.addEventListener('click', () => {\n  alert('Button clicked!');\n});"
             }
           }
         ]
