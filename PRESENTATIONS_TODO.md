@@ -73,38 +73,38 @@
 - [ ] #35 Vue.js
 - [ ] #36 Angular
 - [ ] #37 Svelte
-- [ ] [#41 Go (Golang)](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/41) - Introduction to Go programming
-- [ ] [#42 Rust](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/42) - Systems programming with Rust
-- [ ] [#43 PHP](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/43) - Modern PHP development
-- [ ] [#44 Ruby](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/44) - Ruby language fundamentals
-- [ ] [#45 Swift](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/45) - iOS development with Swift
-- [ ] [#46 Kotlin](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/46) - Android development with Kotlin
-- [ ] [#47 Dart & Flutter](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/47) - Cross-platform mobile development
-- [ ] [#48 Bash Scripting](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/48) - Shell scripting mastery
-- [ ] [#49 Regex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/49) - Regular expressions guide
+- [ ] [#1 Go (Golang)](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/1) - Introduction to Go programming
+- [ ] [#2 Rust](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/2) - Systems programming with Rust
+- [ ] [#3 PHP](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/3) - Modern PHP development
+- [ ] [#4 Ruby](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/4) - Ruby language fundamentals
+- [ ] [#5 Swift](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/5) - iOS development with Swift
+- [ ] [#6 Kotlin](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/6) - Android development with Kotlin
+- [ ] [#7 Dart & Flutter](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/7) - Cross-platform mobile development
+- [ ] [#8 Bash Scripting](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/8) - Shell scripting mastery
+- [ ] [#9 Regex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/9) - Regular expressions guide
 
 ### 🟣 Backend Frameworks (10)
 - [ ] #33 GraphQL
 - [ ] #34 REST & Swagger
-- [ ] [#50 Django](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/50) - Python web framework
-- [ ] [#51 Flask](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/51) - Lightweight Python web framework
-- [ ] [#52 FastAPI](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/52) - Modern Python API framework
-- [ ] [#53 Laravel](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/53) - PHP web application framework
-- [ ] [#54 Spring Boot](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/54) - Java/Kotlin framework
-- [ ] [#55 ASP.NET Core](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/55) - Modern .NET web framework
-- [ ] [#56 Express.js Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/56) - Node.js web framework
-- [ ] [#57 Bun / Hono](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/57) - Next-gen JavaScript runtime
+- [ ] [#10 Django](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/10) - Python web framework
+- [ ] [#11 Flask](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/11) - Lightweight Python web framework
+- [ ] [#12 FastAPI](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/12) - Modern Python API framework
+- [ ] [#13 Laravel](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/13) - PHP web application framework
+- [ ] [#14 Spring Boot](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/14) - Java/Kotlin framework
+- [ ] [#15 ASP.NET Core](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/15) - Modern .NET web framework
+- [ ] [#16 Express.js Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/16) - Node.js web framework
+- [ ] [#17 Bun / Hono](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/17) - Next-gen JavaScript runtime
 
 ### 🔴 Databases & Storage (9)
 - [ ] #30 SQL & Databases
-- [ ] [#58 Redis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/58) - In-memory data structure store
-- [ ] [#59 SQLite](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/59) - Embedded database engine
-- [ ] [#60 Cassandra](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/60) - Distributed NoSQL database
-- [ ] [#61 Neo4j](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/61) - Graph database platform
-- [ ] [#62 Supabase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/62) - Open-source Firebase alternative
-- [ ] [#63 Firebase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/63) - Google's mobile platform
-- [ ] [#64 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/64) - Next-generation ORM
-- [ ] [#65 Elasticsearch](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/65) - Search and analytics engine
+- [ ] [#18 Redis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/18) - In-memory data structure store
+- [ ] [#19 SQLite](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/19) - Embedded database engine
+- [ ] [#20 Cassandra](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/20) - Distributed NoSQL database
+- [ ] [#21 Neo4j](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/21) - Graph database platform
+- [ ] [#22 Supabase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/22) - Open-source Firebase alternative
+- [ ] [#23 Firebase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/23) - Google's mobile platform
+- [ ] [#24 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/24) - Next-generation ORM
+- [ ] [#25 Elasticsearch](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/25) - Search and analytics engine
 
 ### 🟠 DevOps, Infrastructure & Cloud (15)
 - [ ] #22 WSL
@@ -112,35 +112,35 @@
 - [ ] #32 Kubernetes
 - [ ] #38 System Design
 - [ ] #39 DevOps – CI/CD
-- [ ] [#66 Terraform](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66) - Infrastructure as Code
-- [ ] [#67 Ansible](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/67) - Configuration management tool
-- [ ] [#68 Helm](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/68) - Kubernetes package manager
-- [ ] [#69 ArgoCD / GitOps](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/69) - Continuous delivery for Kubernetes
-- [ ] [#70 Prometheus & Grafana](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/70) - Monitoring and visualization
-- [ ] [#71 HashiCorp Vault](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/71) - Secrets management
-- [ ] [#72 Nginx Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/72) - Web server and reverse proxy
-- [ ] [#73 Cloudflare](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/73) - CDN and security platform
-- [ ] [#74 GitHub Actions CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/74) - Automation workflows
-- [ ] [#75 OpenTofu](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75) - Open-source Terraform alternative
+- [ ] [#26 Terraform](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/26) - Infrastructure as Code
+- [ ] [#27 Ansible](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/27) - Configuration management tool
+- [ ] [#28 Helm](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/28) - Kubernetes package manager
+- [ ] [#29 ArgoCD / GitOps](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/29) - Continuous delivery for Kubernetes
+- [ ] [#30 Prometheus & Grafana](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/30) - Monitoring and visualization
+- [ ] [#31 HashiCorp Vault](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/31) - Secrets management
+- [ ] [#32 Nginx Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/32) - Web server and reverse proxy
+- [ ] [#33 Cloudflare](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/33) - CDN and security platform
+- [ ] [#34 GitHub Actions CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/34) - Automation workflows
+- [ ] [#35 OpenTofu](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/35) - Open-source Terraform alternative
 
 ### 🟡 Security & Authentication (7)
-- [ ] [#76 OAuth2 & OIDC](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/76) - Modern authentication protocols
-- [ ] [#77 JWT Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/77) - JSON Web Tokens explained
-- [ ] [#78 OWASP Top 10](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/78) - Web application security risks
-- [ ] [#79 Zero Trust Architecture](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/79) - Modern security model
-- [ ] [#80 API Security](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/80) - Securing REST & GraphQL APIs
-- [ ] [#81 Linux Hardening](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/81) - Server security best practices
-- [ ] [#82 Secret Management](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/82) - Managing credentials securely
+- [ ] [#36 OAuth2 & OIDC](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/36) - Modern authentication protocols
+- [ ] [#37 JWT Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/37) - JSON Web Tokens explained
+- [ ] [#38 OWASP Top 10](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/38) - Web application security risks
+- [ ] [#39 Zero Trust Architecture](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/39) - Modern security model
+- [ ] [#40 API Security](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/40) - Securing REST & GraphQL APIs
+- [ ] [#41 Linux Hardening](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/41) - Server security best practices
+- [ ] [#42 Secret Management](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/42) - Managing credentials securely
 
 ### 🟢 AI, Data & Automation (8)
 - [ ] #40 Machine Learning with Python
-- [ ] [#83 LangChain](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/83) - Building LLM applications
-- [ ] [#84 LLMs + Vector DBs](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/84) - AI-powered search
-- [ ] [#85 Pandas Data Analysis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/85) - Python data manipulation
-- [ ] [#86 Apache Kafka](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/86) - Distributed streaming platform
-- [ ] [#87 Airflow](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/87) - Workflow orchestration
-- [ ] [#88 RPA Automation](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/88) - Robotic Process Automation
-- [ ] [#89 Computer Vision Basics](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/89) - Image processing with OpenCV
+- [ ] [#43 LangChain](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/43) - Building LLM applications
+- [ ] [#44 LLMs + Vector DBs](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/44) - AI-powered search
+- [ ] [#45 Pandas Data Analysis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/45) - Python data manipulation
+- [ ] [#46 Apache Kafka](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/46) - Distributed streaming platform
+- [ ] [#47 Airflow](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/47) - Workflow orchestration
+- [ ] [#48 RPA Automation](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/48) - Robotic Process Automation
+- [ ] [#49 Computer Vision Basics](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/49) - Image processing with OpenCV
 
 ### 🟤 Tools & Productivity (13)
 - [ ] #19 Microsoft PowerToys
@@ -150,21 +150,21 @@
 - [ ] #24 AdminLTE
 - [ ] #25 Grocy
 - [ ] #26 Ghost Blogging Platform
-- [ ] [#90 Obsidian PKM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/90) - Personal knowledge management
-- [ ] [#91 Zettelkasten](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/91) - Note-taking methodology
-- [ ] [#92 Notion for Docs](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/92) - Collaborative documentation
-- [ ] [#93 VS Code Deep Workflow](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/93) - Advanced editor techniques
-- [ ] [#94 Raycast / Alfred](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/94) - Productivity launchers
-- [ ] [#95 AI Coding Assistants](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/95) - GitHub Copilot, Cursor, etc.
+- [ ] [#50 Obsidian PKM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/50) - Personal knowledge management
+- [ ] [#51 Zettelkasten](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/51) - Note-taking methodology
+- [ ] [#52 Notion for Docs](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/52) - Collaborative documentation
+- [ ] [#53 VS Code Deep Workflow](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/53) - Advanced editor techniques
+- [ ] [#54 Raycast / Alfred](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/54) - Productivity launchers
+- [ ] [#55 AI Coding Assistants](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/55) - GitHub Copilot, Cursor, etc.
 
 ### 🟣 Business Applications (7)
-- [ ] [#96 Odoo ERP](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/96) - Open-source ERP suite
-- [ ] [#97 Dolibarr](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/97) - ERP & CRM software
-- [ ] [#98 OpenProject](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/98) - Project management platform
-- [ ] [#99 Apache Superset](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/99) - Business intelligence platform
-- [ ] [#100 Redash](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/100) - Data visualization tool
-- [ ] [#101 Appsmith / ToolJet](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/101) - Low-code app builders
-- [ ] [#102 Retool](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/102) - Internal tool builder
+- [ ] [#56 Odoo ERP](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/56) - Open-source ERP suite
+- [ ] [#57 Dolibarr](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/57) - ERP & CRM software
+- [ ] [#58 OpenProject](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/58) - Project management platform
+- [ ] [#59 Apache Superset](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/59) - Business intelligence platform
+- [ ] [#60 Redash](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/60) - Data visualization tool
+- [ ] [#61 Appsmith / ToolJet](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/61) - Low-code app builders
+- [ ] [#62 Retool](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/62) - Internal tool builder
 
 ---
 
