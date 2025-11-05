@@ -606,7 +606,7 @@ By accessing and using this service, you agree to be bound by our [Terms and Con
 ## 🙏 Acknowledgments
 
 Special thanks to:
-
+- **[OSSPhilippines/oss-101](https://github.com/OSSPhilippines/oss-101)** - For inspiration and attribution
 - **[Reveal.js](https://revealjs.com/)** - Hakim El Hattab for the amazing presentation framework
 - **[Remixicon](https://remixicon.com/)** - For the beautiful icon system
 - **Bude Global Community** - For contributing presentations and feedback
@@ -630,7 +630,7 @@ Special thanks to:
 
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/discussions)
-- 📧 **Email**: contact@budeglobal.in
+- 📧 **Email**: budeglobalerp@gmail.com
 
 ---
 
