@@ -1,0 +1,314 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "JavaScript Fundamentals",
+            "subtitle": "An Introduction to the Language of the Web"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & Modern JavaScript Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>What is JavaScript?</strong> - A brief overview"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Variables & Data Types</strong> - Storing and using data"
+                },
+                {
+                  "emoji": "🧮",
+                  "text": "<strong>Operators</strong> - Performing operations on data"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Control Flow</strong> - Making decisions in your code"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Functions</strong> - Reusable blocks of code"
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Objects & Arrays</strong> - Grouping data together"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>DOM Manipulation</strong> - Interacting with web pages"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "<strong>Events</strong> - Responding to user actions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-js",
+        "title": "What is JavaScript?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding JavaScript"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "What is JavaScript?",
+            "box": {
+              "content": "<span class=\"highlight\">High-level, interpreted programming language</span>",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>The language of the web</strong> - Runs in all modern browsers"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Versatile</strong> - Used for frontend, backend, mobile, and more"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Dynamic</strong> - No need to specify data types"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "variables-data-types",
+        "title": "Variables & Data Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Storing and Using Data"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Variables",
+            "box": {
+              "content": "<strong>Containers for storing data values</strong>",
+              "code": "// Using var (avoid in modern JS)\nvar name = 'John';\n\n// Using let (for variables that can be reassigned)\nlet age = 30;\nage = 31;\n\n// Using const (for variables that cannot be reassigned)\nconst PI = 3.14;"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>String</strong> - Textual data (e.g., 'Hello, world!')"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Number</strong> - Numeric data (e.g., 123, 3.14)"
+                },
+                {
+                  "emoji": "👍",
+                  "text": "<strong>Boolean</strong> - True or false"
+                },
+                {
+                  "emoji": "❓",
+                  "text": "<strong>Null & Undefined</strong> - Absence of a value"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Object</strong> - Collections of key-value pairs"
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Symbol</strong> - Unique identifiers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "operators",
+        "title": "Operators",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performing Operations"
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Common Operators",
+            "box": {
+              "code": "// Arithmetic Operators\nlet sum = 10 + 5; // 15\nlet difference = 10 - 5; // 5\nlet product = 10 * 5; // 50\nlet quotient = 10 / 5; // 2\n\n// Comparison Operators\nlet isEqual = (10 == '10'); // true (loose equality)\nlet isStrictlyEqual = (10 === '10'); // false (strict equality)\nlet isGreaterThan = (10 > 5); // true\n\n// Logical Operators\nlet andOperator = (true && false); // false\nlet orOperator = (true || false); // true\nlet notOperator = !true; // false"
+            }
+          }
+        ]
+      },
+      {
+        "id": "control-flow",
+        "title": "Control Flow",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Making Decisions"
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Conditional Statements",
+            "box": {
+              "code": "// if...else statement\nlet age = 18;\nif (age >= 18) {\n  console.log('You are an adult.');\n} else {\n  console.log('You are a minor.');\n}\n\n// for loop\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// while loop\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "functions",
+        "title": "Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reusable Blocks of Code"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Defining and Calling Functions",
+            "box": {
+              "code": "// Function declaration\nfunction greet(name) {\n  return 'Hello, ' + name + '!';\n}\n
+// Function expression\nconst greet2 = function(name) {\n  return 'Hello, ' + name + '!';\n};
+
+// Arrow function\nconst greet3 = (name) => {\n  return 'Hello, ' + name + '!';\n};
+
+// Calling a function\nlet message = greet('John'); // 'Hello, John!'\n"
+            }
+          }
+        ]
+      },
+      {
+        "id": "objects-arrays",
+        "title": "Objects & Arrays",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Grouping Data"
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Objects and Arrays",
+            "box": {
+              "code": "// Object literal\nconst person = {\n  name: 'John',\n  age: 30,\n  isStudent: false\n};
+
+// Accessing object properties\nconsole.log(person.name); // 'John'\n
+// Array literal\nconst colors = ['red', 'green', 'blue'];
+
+// Accessing array elements\nconsole.log(colors[0]); // 'red'"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dom-manipulation",
+        "title": "DOM Manipulation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Interacting with Web Pages"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "The Document Object Model",
+            "box": {
+              "code": "// Selecting an element by ID\nconst heading = document.getElementById('my-heading');
+
+// Changing the content of an element\nheading.textContent = 'New Heading';
+
+// Creating a new element\nconst newParagraph = document.createElement('p');
+newParagraph.textContent = 'This is a new paragraph.';
+
+// Adding the new element to the page\ndocument.body.appendChild(newParagraph);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "events",
+        "title": "Events",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Responding to User Actions"
+          },
+          {
+            "type": "content",
+            "emoji": "🖱️",
+            "title": "Event Handling",
+            "box": {
+              "code": "// Selecting a button\nconst myButton = document.getElementById('my-button');
+
+// Adding an event listener\nmyButton.addEventListener('click', () => {
+  alert('Button clicked!');
+});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss JavaScript concepts or specific use cases!<br><span class=\"gradient-accent\">All web development questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">📜</span> Ready to build amazing web experiences?<br><span class=\"gradient-accent\">Start your JavaScript journey today!</span>",
+              "note": "The Language of the Web"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

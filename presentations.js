@@ -253,6 +253,12 @@ const PRESENTATIONS_CONFIG = [
     title: "Introduction to MongoDB",
     description: "Complete NoSQL database guide from beginner to production ready",
     keywords: ["mongodb", "nosql", "document", "database", "bson", "aggregation", "atlas"]
+  },
+  {
+    file: "presentations/intro-js.json",
+    title: "Introduction to JavaScript",
+    description: "An introduction to the fundamentals of JavaScript.",
+    keywords: ["javascript", "web", "programming", "frontend"]
   }
 
   // Add more presentations here as you create them
