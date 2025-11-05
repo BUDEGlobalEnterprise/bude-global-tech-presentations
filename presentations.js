@@ -95,7 +95,7 @@ const PRESENTATIONS_CONFIG = [
     ],
   },
   {
-    file: "presentations/into-csharp.json",
+    file: "presentations/intro-csharp.json",
     title: "Introduction to C# Programming",
     description:
       "Modern, powerful, versatile language from basics to advanced concepts",
