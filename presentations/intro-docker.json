@@ -1,0 +1,983 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Docker",
+            "subtitle": "Complete Containerization Guide<br>From Beginner to Production Ready"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Containerization Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>What is Docker?</strong> - Containerization Basics"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Docker vs Virtual Machines</strong> - Architecture Comparison"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Docker Architecture</strong> - Client, Daemon, Registry"
+                },
+                {
+                  "emoji": "📥",
+                  "text": "<strong>Installation</strong> - Windows, Linux, macOS"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Images & Containers</strong> - Core Concepts"
+                },
+                {
+                  "emoji": "🔨",
+                  "text": "<strong>Dockerfile Basics</strong> - Building Custom Images"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Docker CLI</strong> - Essential Commands"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Volumes & Storage</strong> - Persistent Data"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Docker Networking</strong> - Container Communication"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Docker Compose</strong> - Multi-container Apps"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Docker Hub & Registries</strong> - Image Management"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Best Practices</strong> - Production Ready"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CI/CD Integration</strong> - DevOps Pipelines"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Docker Alternatives</strong> - Podman, LXC"
+                },
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Orchestration</strong> - Kubernetes & Swarm"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Real-world Use Cases</strong> - Microservices & More"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-docker",
+        "title": "What is Docker?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Docker"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "What is Docker?",
+            "box": {
+              "content": "<span class=\"highlight\">Containerization platform</span> for developing, shipping, and running applications",
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Created by</strong> - Solomon Hykes (2013)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - Open source (Apache 2.0)"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Usage</strong> - 65% of companies use Docker in production"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Platforms</strong> - Windows, Linux, macOS, Cloud"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Benefit</strong> - Consistent environments across development and production"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Docker gets its name from shipping containers - it packages applications like cargo containers!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Containerization History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>2000s</strong> - cgroups & namespaces in Linux"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2013</strong> - Docker released as open source"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2014</strong> - Docker 1.0 released"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2015</strong> - Docker Compose & Swarm introduced"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2017</strong> - Moby Project & Enterprise Edition"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>Today</strong> - Industry standard for containerization"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "vm-vs-container",
+        "title": "Docker vs VMs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Containers vs Virtual Machines"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Architecture Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Containers</strong> - Share host OS kernel, lightweight"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Virtual Machines</strong> - Full OS isolation, heavier"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Containers</strong> - Faster startup (seconds)"
+                },
+                {
+                  "emoji": "🐢",
+                  "text": "<strong>VMs</strong> - Slower startup (minutes)"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Containers</strong> - MBs in size"
+                },
+                {
+                  "emoji": "💽",
+                  "text": "<strong>VMs</strong> - GBs in size"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Docker Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Docker Architecture Components"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Core Components",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Docker Client</strong> - CLI for user interaction"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Docker Daemon</strong> - Background service managing containers"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Docker Registry</strong> - Stores Docker images (Docker Hub)"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Docker Images</strong> - Read-only templates"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Docker Containers</strong> - Running instances of images"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Installing Docker"
+          },
+          {
+            "type": "content",
+            "emoji": "📥",
+            "title": "Installation Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - Docker Desktop"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - Docker Desktop"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - Docker Engine"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - Pre-installed on cloud instances"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐧",
+            "title": "Linux Installation",
+            "box": {
+              "content": "<strong>Install Docker on Ubuntu</strong>",
+              "code": "# Update package index\nsudo apt update\n\n# Install prerequisites\nsudo apt install apt-transport-https ca-certificates curl software-properties-common\n\n# Add Docker's official GPG key\ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg\n\n# Add Docker repository\necho \"deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null\n\n# Install Docker Engine\nsudo apt update\nsudo apt install docker-ce docker-ce-cli containerd.io\n\n# Add user to docker group\nsudo usermod -aG docker $USER\n\n# Verify installation\ndocker --version"
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "title": "Core Concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Docker Core Concepts"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Images vs Containers",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📸",
+                  "text": "<strong>Image</strong> - Read-only template with application and dependencies"
+                },
+                {
+                  "emoji": "🎬",
+                  "text": "<strong>Container</strong> - Running instance of an image"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Registry</strong> - Storage and distribution system for images"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Dockerfile</strong> - Script to build images"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Volume</strong> - Persistent data storage"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Network</strong> - Communication between containers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "docker-cli",
+        "title": "Docker CLI Basics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential Docker Commands"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Basic Container Management",
+            "box": {
+              "content": "<strong>Fundamental Docker commands</strong>",
+              "code": "# Run a container\ndocker run hello-world\ndocker run -it ubuntu bash\ndocker run -d -p 80:80 nginx\n\n# Container management\ndocker ps                      # List running containers\ndocker ps -a                   # List all containers\ndocker stop container_name     # Stop container\ndocker start container_name    # Start container\ndocker restart container_name  # Restart container\ndocker rm container_name       # Remove container\n\n# Image management\ndocker images                  # List images\ndocker pull image_name         # Download image\ndocker rmi image_name          # Remove image\n\n# Information\ndocker logs container_name     # View container logs\ndocker inspect container_name  # Detailed container info"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dockerfile",
+        "title": "Dockerfile Basics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Building Images with Dockerfile"
+          },
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Dockerfile Instructions",
+            "box": {
+              "content": "<strong>Common Dockerfile commands</strong>",
+              "code": "# Sample Dockerfile\nFROM node:18-alpine          # Base image\nWORKDIR /app                 # Working directory\nCOPY package*.json ./        # Copy files\nRUN npm install              # Run command during build\nCOPY . .                     # Copy application code\nEXPOSE 3000                  # Expose port\nCMD [\"npm\", \"start\"]         # Default command\n\n# Build the image\ndocker build -t my-app .\n\n# Run the container\ndocker run -p 3000:3000 my-app"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Dockerfile Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Use .dockerignore</strong> - Exclude unnecessary files"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Multi-stage builds</strong> - Reduce image size"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Minimal base images</strong> - Use alpine variants"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Layer caching</strong> - Optimize build times"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Non-root users</strong> - Security best practice"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "volumes",
+        "title": "Volumes & Storage",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Persistent Data Storage"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Docker Volumes",
+            "box": {
+              "content": "<strong>Managing persistent data</strong>",
+              "code": "# Volume management\ndocker volume create my_volume     # Create volume\ndocker volume ls                   # List volumes\ndocker volume inspect my_volume    # Volume details\ndocker volume rm my_volume         # Remove volume\n\n# Using volumes\ndocker run -v my_volume:/data ubuntu  # Mount volume\ndocker run -v $(pwd):/app ubuntu     # Bind mount\n\n# Volume examples\ndocker run -v db_data:/var/lib/mysql mysql\ndocker run -v /host/path:/container/path nginx\n\n# Clean up unused volumes\ndocker volume prune"
+            }
+          }
+        ]
+      },
+      {
+        "id": "networking",
+        "title": "Docker Networking",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Container Networking"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Network Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Bridge</strong> - Default network for standalone containers"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Host</strong> - Remove network isolation with host"
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Overlay</strong> - Connect multiple Docker daemons"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Macvlan</strong> - Assign MAC addresses to containers"
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>None</strong> - Disable all networking"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Networking Commands",
+            "box": {
+              "content": "<strong>Network management</strong>",
+              "code": "# Network management\ndocker network ls                  # List networks\ndocker network create my_network   # Create network\ndocker network inspect my_network  # Network details\ndocker network rm my_network       # Remove network\n\n# Using networks\ndocker run --network my_network nginx\ndocker run -p 8080:80 nginx        # Port mapping\n\n# Container communication\ndocker run --name web --network app_network nginx\ndocker run --name app --network app_network my-app\n\n# DNS resolution\n# Containers can communicate using container names"
+            }
+          }
+        ]
+      },
+      {
+        "id": "docker-compose",
+        "title": "Docker Compose",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Multi-container Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Docker Compose Basics",
+            "box": {
+              "content": "<strong>Sample docker-compose.yml</strong>",
+              "code": "version: '3.8'\n\nservices:\n  web:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n    volumes:\n      - ./html:/usr/share/nginx/html\n    depends_on:\n      - app\n\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://user:pass@db:5432/mydb\n    depends_on:\n      - db\n\n  db:\n    image: postgres:13\n    environment:\n      - POSTGRES_DB=mydb\n      - POSTGRES_USER=user\n      - POSTGRES_PASSWORD=pass\n    volumes:\n      - db_data:/var/lib/postgresql/data\n\nvolumes:\n  db_data:"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Compose Commands",
+            "box": {
+              "content": "<strong>Essential Compose commands</strong>",
+              "code": "# Start services\ndocker-compose up              # Start in foreground\ndocker-compose up -d           # Start in background\ndocker-compose up --build      # Rebuild images\n\n# Manage services\ndocker-compose ps              # Show running services\ndocker-compose logs            # View logs\ndocker-compose logs service_name  # Specific service logs\n\n# Stop and cleanup\ndocker-compose stop            # Stop services\ndocker-compose down            # Stop and remove\ndocker-compose down -v         # Remove with volumes\n\n# Other commands\ndocker-compose exec service_name command  # Execute command\ndocker-compose pull            # Pull latest images\ndocker-compose build           # Build images"
+            }
+          }
+        ]
+      },
+      {
+        "id": "docker-hub",
+        "title": "Docker Hub & Registries",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Image Distribution"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Working with Registries",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Hub</strong> - Public registry by Docker"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Private Registry</strong> - Self-hosted or cloud"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud Registries</strong> - ECR, GCR, ACR"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Tagging</strong> - Versioning for images"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏷️",
+            "title": "Tagging & Pushing Images",
+            "box": {
+              "content": "<strong>Image tagging and distribution</strong>",
+              "code": "# Tag images\ndocker tag my-app:latest myusername/my-app:latest\ndocker tag my-app:latest my-app:v1.0\ndocker tag my-app:latest registry.example.com/my-app:latest\n\n# Push to registry\ndocker push myusername/my-app:latest\ndocker push registry.example.com/my-app:latest\n\n# Pull from registry\ndocker pull myusername/my-app:latest\ndocker pull nginx:alpine\n\n# Login to registry\ndocker login                    # Docker Hub\ndocker login registry.example.com  # Private registry\n\n# Save and load images\ndocker save my-app > my-app.tar\ndocker load < my-app.tar"
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security & Optimization",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Non-root users</strong> - Run containers as non-root"
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Minimal images</strong> - Use multi-stage builds"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Health checks</strong> - Monitor container health"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Secrets management</strong> - Use Docker secrets or environment files"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Resource limits</strong> - Set CPU and memory constraints"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Image scanning</strong> - Scan for vulnerabilities"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ci-cd",
+        "title": "CI/CD Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Docker in DevOps"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "CI/CD Pipeline Example",
+            "box": {
+              "content": "<strong>GitHub Actions example</strong>",
+              "code": "name: Build and Push Docker Image\n\non:\n  push:\n    branches: [ main ]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    \n    steps:\n    - name: Checkout code\n      uses: actions/checkout@v3\n      \n    - name: Build Docker image\n      run: |\n        docker build -t my-app:${{ github.sha }} .\n        docker build -t my-app:latest .\n        \n    - name: Push to Docker Hub\n      run: |\n        echo \"${{ secrets.DOCKER_PASSWORD }}\" | docker login -u \"${{ secrets.DOCKER_USERNAME }}\" --password-stdin\n        docker push my-app:${{ github.sha }}\n        docker push my-app:latest\n        \n    - name: Deploy to server\n      run: |\n        ssh deploy@server \"docker pull my-app:latest && docker-compose up -d\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "alternatives",
+        "title": "Docker Alternatives",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Containerization Ecosystem"
+          },
+          {
+            "type": "content",
+            "emoji": "⚖️",
+            "title": "Docker vs Alternatives",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Podman</strong> - Daemonless, rootless containers"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>LXC/LXD</strong> - System containers"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Containerd</strong> - Industry-standard container runtime"
+                },
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Kubernetes</strong> - Container orchestration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "orchestration",
+        "title": "Container Orchestration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Scaling with Orchestration"
+          },
+          {
+            "type": "content",
+            "emoji": "☸️",
+            "title": "Docker & Kubernetes",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Swarm</strong> - Native Docker orchestration"
+                },
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Kubernetes</strong> - Industry standard orchestration"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Amazon ECS</strong> - AWS container service"
+                },
+                {
+                  "emoji": "🔵",
+                  "text": "<strong>Azure ACI</strong> - Azure container instances"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Real-world Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Common Docker Use Cases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Microservices</strong> - Isolated service deployment"
+                },
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>Development Environments</strong> - Consistent dev setup"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>CI/CD Pipelines</strong> - Build and test isolation"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Application Deployment</strong> - Portable app packaging"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Database Management</strong> - Easy database setup"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Testing</strong> - Isolated test environments"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Multi-container App",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Create a Node.js web application"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Write Dockerfile for the application"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Set up PostgreSQL database container"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Create docker-compose.yml"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Configure environment variables"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Set up volume for database persistence"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Add nginx reverse proxy"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Deploy and test the full stack"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Common Issues & Solutions"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Debugging Docker Issues",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Port conflicts</strong> - Check if port is already in use"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Disk space</strong> - Clean up unused images and containers"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Network issues</strong> - Verify network configuration"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Image build failures</strong> - Check Dockerfile syntax"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Permission denied</strong> - Check user permissions and volume mounts"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Docker Command Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential commands quick reference</strong>",
+              "code": "# Container Management\ndocker run, docker ps, docker stop, docker start, docker rm\n\n# Image Management\ndocker build, docker images, docker rmi, docker pull, docker push\n\n# Network & Volumes\ndocker network, docker volume, docker-compose\n\n# Information & Logs\ndocker logs, docker inspect, docker stats, docker exec\n\n# System Management\ndocker system df, docker system prune, docker info\n\n# Common Patterns\ndocker run -d -p 80:80 --name web nginx\ndocker exec -it container_name bash\ndocker-compose up -d\ndocker logs -f container_name\n\n# Cleanup\ndocker system prune -a    # Remove all unused data\ndocker volume prune       # Remove unused volumes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Documentation</strong> - Official docs"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Docker Labs</strong> - Interactive tutorials"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Docker Deep Dive</strong> - Book by Nigel Poulton"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - TechWorld with Nana, Bret Fisher"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Play with Docker</strong> - Online Docker environment"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Docker Hub</strong> - Explore public images"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between an image and a container?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you persist data between container restarts?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the purpose of a Dockerfile?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do containers communicate with each other?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the advantage of using Docker Compose?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "Docker = Containerization platform"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Containers are lightweight and portable"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Dockerfile defines how to build images"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Docker Compose for multi-container apps"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "Volumes for persistent data storage"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Essential skill for modern development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Docker concepts, commands, or specific use cases!<br><span class=\"gradient-accent\">All containerization questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐳</span> Ready to containerize your applications?<br><span class=\"gradient-accent\">Start your Docker journey today!</span>",
+              "note": "Portable • Scalable • Efficient"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

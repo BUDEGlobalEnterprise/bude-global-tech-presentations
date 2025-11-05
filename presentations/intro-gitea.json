@@ -7,7 +7,7 @@
         "slides": [
           {
             "type": "title",
-            "title": "Mastering Gitea",
+            "title": "Introduction to Gitea",
             "subtitle": "Lightweight, Self-Hosted Git Service<br>Complete Control, Zero Vendor Lock-in"
           }
         ]

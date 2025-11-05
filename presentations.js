@@ -130,7 +130,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-git-github.json",
-    title: "Mastering Git & GitHub",
+    title: "Introduction to Git & GitHub",
     description:
       "Complete version control mastery from zero to collaboration pro",
     keywords: [
@@ -144,17 +144,23 @@ const PRESENTATIONS_CONFIG = [
       "open source",
     ],
   },
-    {
-        file: 'gitea-presentation.json',
-        title: 'Mastering Gitea',
-        description: 'Lightweight, self-hosted Git service with complete control',
-        keywords: ['gitea', 'self-hosted', 'git', 'devops', 'ci/cd', 'docker', 'kubernetes']
-    },
-    {
-        file: 'linux-presentation.json',
-        title: 'Mastering Linux',
-        description: 'Complete operating system guide from beginner to power user',
-        keywords: ['linux', 'ubuntu', 'debian', 'command-line', 'bash', 'sysadmin', 'devops']
-    }
+  {
+    file: 'presentations/intro-gitea.json',
+    title: 'Introduction to Gitea',
+    description: 'Lightweight, self-hosted Git service with complete control',
+    keywords: ['gitea', 'self-hosted', 'git', 'devops', 'ci/cd', 'docker', 'kubernetes']
+  },
+  {
+    file: 'presentations/intro-linux.json',
+    title: 'Introduction to Linux',
+    description: 'Complete operating system guide from beginner to power user',
+    keywords: ['linux', 'ubuntu', 'debian', 'command-line', 'bash', 'sysadmin', 'devops']
+  },
+  {
+    "file": "presentations/intro-docker.json",
+    "title": "Introduction to Docker & Containerization",
+    "description": "Complete containerization guide from beginner to production deployment",
+    "keywords": ["docker", "containers", "containerization", "devops", "microservices", "docker-compose", "kubernetes", "ci-cd"]
+  }
   // Add more presentations here as you create them
 ];
