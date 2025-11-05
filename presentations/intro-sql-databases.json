@@ -1,0 +1,1358 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "SQL & Databases",
+            "subtitle": "Fundamentals of Relational Database Management<br>From Basics to Advanced Concepts"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Database Architect",
+            "title": "SQL & Database Specialist",
+            "experience": "6+ years in Database Design & Optimization",
+            "oss_experience": "Enterprise Systems & Data Analytics",
+            "github": "https://github.com/sql-expert",
+            "website": "https://sql-expert.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Database Fundamentals</strong> - RDBMS Concepts & ACID"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>SQL vs NoSQL</strong> - Choosing the Right Tool"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>SQL Basics</strong> - CRUD Operations & Queries"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Relationships & Joins</strong> - Connecting Data"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Database Design</strong> - Normalization & ER Diagrams"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Indexes & Query Optimization"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Advanced SQL</strong> - Aggregations & Transactions"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Users, Permissions & SQL Injection"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Real-World Design</strong> - Practical Schema Examples"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Analytics</strong> - SQL in Business Intelligence"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tools & Best Practices</strong> - Development Workflow"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Career Path</strong> - Learning & Next Steps"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-database",
+        "title": "What is a Database?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Fundamentals"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is a Database?",
+            "box": {
+              "content": "<span class=\"highlight\">Organized collection of structured information stored electronically</span>",
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Purpose</strong> - Store, manage, and retrieve data efficiently"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Structure</strong> - Tables, rows, columns with relationships"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Controlled access and data integrity"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Fast data retrieval and manipulation"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Concurrency</strong> - Multiple users access simultaneously"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> The first computerized databases appeared in the 1960s, but humans have been keeping databases (ledgers, records) for thousands of years!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "relational-vs-nosql",
+        "title": "Relational vs NoSQL",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Types"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Relational vs NoSQL Databases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Relational (SQL)</strong> - Structured data, fixed schema, ACID"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Document (NoSQL)</strong> - JSON documents, flexible schema"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Key-Value (NoSQL)</strong> - Simple key-value pairs, fast"
+                },
+                {
+                  "emoji": "🌀",
+                  "text": "<strong>Column-Family (NoSQL)</strong> - Columns grouped by families"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Graph (NoSQL)</strong> - Nodes and relationships"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "When to Use Which?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💳",
+                  "text": "<strong>SQL Use Cases</strong> - Banking, e-commerce, reporting"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>NoSQL Use Cases</strong> - Real-time apps, big data, IoT"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>SQL Strengths</strong> - Data integrity, complex queries"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>NoSQL Strengths</strong> - Scalability, flexibility"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Hybrid Approach</strong> - Many systems use both"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-sql",
+        "title": "What is SQL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Structured Query Language"
+          },
+          {
+            "type": "content",
+            "emoji": "🗣️",
+            "title": "What is SQL?",
+            "box": {
+              "content": "<span class=\"highlight\">Standard language for managing and manipulating relational databases</span>",
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>History</strong> - Developed by IBM in 1970s, ANSI standard"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Universal</strong> - Works across all major database systems"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Powerful</strong> - Data definition, manipulation, control"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Declarative</strong> - Specify WHAT you want, not HOW"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Versatile</strong> - Queries, reports, analytics, administration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "popular-databases",
+        "title": "Popular SQL Databases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Management Systems"
+          },
+          {
+            "type": "content",
+            "emoji": "🏆",
+            "title": "Major SQL Databases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Most popular open-source, web applications"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Advanced features, SQL compliance"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>SQL Server</strong> - Microsoft ecosystem, enterprise"
+                },
+                {
+                  "emoji": "🏺",
+                  "text": "<strong>Oracle</strong> - Enterprise-grade, high performance"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>SQLite</strong> - Embedded, zero-configuration"
+                },
+                {
+                  "emoji": "🌀",
+                  "text": "<strong>MariaDB</strong> - MySQL fork, community-driven"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "acid-properties",
+        "title": "ACID Properties",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Transaction Guarantees"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "ACID Properties",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🅰️",
+                  "text": "<strong>Atomicity</strong> - All or nothing: transactions complete fully or not at all"
+                },
+                {
+                  "emoji": "©️",
+                  "text": "<strong>Consistency</strong> - Database rules preserved: valid state before and after"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Isolation</strong> - Concurrent transactions don't interfere: appear serialized"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Durability</strong> - Committed changes persist: survive system failures"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💳",
+            "title": "ACID in Practice",
+            "box": {
+              "content": "<strong>Bank Transfer Example</strong>",
+              "code": "BEGIN TRANSACTION;\n\n-- Deduct from account A\nUPDATE accounts SET balance = balance - 100 \nWHERE account_id = 1;\n\n-- Add to account B  \nUPDATE accounts SET balance = balance + 100 \nWHERE account_id = 2;\n\n-- If both succeed, commit\nCOMMIT;\n\n-- If any fails, rollback\n-- ROLLBACK;\n\nACID ensures:\n• Atomic: Both updates happen or neither\n• Consistent: Balances remain valid\n• Isolated: Other users see consistent state\n• Durable: Changes survive crashes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tables-rows-columns",
+        "title": "Tables, Rows, Columns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Structure"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Database Components",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Table</strong> - Collection of related data (like spreadsheet)"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Row/Record</strong> - Single data item in a table"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Column/Field</strong> - Specific data attribute"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Primary Key</strong> - Unique identifier for each row"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Foreign Key</strong> - Reference to another table's primary key"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Example: Users Table",
+            "box": {
+              "content": "<strong>Sample Table Structure</strong>",
+              "code": "users Table:\n\n┌─────────┬───────────┬─────────┬────────────┬─────────────────────┐\n│ user_id │ username  │ email   │ birth_date │ created_at          │\n├─────────┼───────────┼─────────┼────────────┼─────────────────────┤\n│ 1       │ john_doe  │ j@d.com │ 1990-05-15 │ 2023-01-10 09:30:00 │\n│ 2       │ jane_smith│ j@s.com │ 1985-08-22 │ 2023-01-11 14:15:00 │\n│ 3       │ bob_wilson│ b@w.com │ 1992-12-03 │ 2023-01-12 11:45:00 │\n└─────────┴───────────┴─────────┴────────────┴─────────────────────┘\n\nComponents:\n• Table: users\n• Rows: 3 user records  \n• Columns: user_id, username, email, birth_date, created_at\n• Primary Key: user_id\n• Foreign Keys: (none in this simple table)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-types",
+        "title": "Data Types in SQL",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "SQL Data Types"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Common SQL Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Integer</strong> - INT, BIGINT, SMALLINT (whole numbers)"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Decimal</strong> - DECIMAL, NUMERIC, FLOAT (decimal numbers)"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Text</strong> - VARCHAR, TEXT, CHAR (character data)"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date/Time</strong> - DATE, TIME, TIMESTAMP, DATETIME"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Boolean</strong> - BOOLEAN, BOOL (true/false)"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Binary</strong> - BLOB, BYTEA (binary data)"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Special</strong> - JSON, XML, UUID, ENUM"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "creating-databases",
+        "title": "Creating Databases & Tables",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Creation"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Creating Databases",
+            "box": {
+              "content": "<strong>Database Management Commands</strong>",
+              "code": "-- Create a new database\nCREATE DATABASE company;\n\n-- Switch to the database\nUSE company;  -- MySQL\n\\c company    -- PostgreSQL\n\n-- Show all databases\nSHOW DATABASES;  -- MySQL\n\\l              -- PostgreSQL\n\n-- Drop database (careful!)\nDROP DATABASE company;\n\n-- Create database with options\nCREATE DATABASE ecommerce\nCHARACTER SET utf8mb4\nCOLLATE utf8mb4_unicode_ci;"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Creating Tables",
+            "box": {
+              "content": "<strong>Table Creation with Constraints</strong>",
+              "code": "CREATE TABLE employees (\n    employee_id INT PRIMARY KEY AUTO_INCREMENT,\n    first_name VARCHAR(50) NOT NULL,\n    last_name VARCHAR(50) NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    hire_date DATE NOT NULL,\n    salary DECIMAL(10,2) CHECK (salary > 0),\n    department_id INT,\n    FOREIGN KEY (department_id) REFERENCES departments(department_id)\n);\n\n-- Show table structure\nDESCRIBE employees;  -- MySQL\n\\d employees        -- PostgreSQL\n\n-- Create table from existing table\nCREATE TABLE employees_backup AS \nSELECT * FROM employees;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "crud-operations",
+        "title": "CRUD Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Create, Read, Update, Delete"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Basic CRUD Operations",
+            "box": {
+              "content": "<strong>Create, Read, Update, Delete</strong>",
+              "code": "-- CREATE: Insert data\nINSERT INTO employees (first_name, last_name, email, hire_date, salary)\nVALUES ('John', 'Doe', 'john.doe@company.com', '2023-01-15', 75000.00);\n\n-- READ: Query data\nSELECT * FROM employees;\nSELECT first_name, last_name, salary FROM employees WHERE salary > 50000;\n\n-- UPDATE: Modify data\nUPDATE employees \nSET salary = 80000.00 \nWHERE email = 'john.doe@company.com';\n\n-- DELETE: Remove data\nDELETE FROM employees \nWHERE first_name = 'John' AND last_name = 'Doe';\n\n-- Multiple inserts\nINSERT INTO employees (first_name, last_name, email, hire_date, salary)\nVALUES \n    ('Jane', 'Smith', 'jane.smith@company.com', '2023-02-01', 65000.00),\n    ('Bob', 'Johnson', 'bob.johnson@company.com', '2023-02-15', 72000.00);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "where-order-limit",
+        "title": "WHERE, ORDER BY, LIMIT",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Query Filtering & Sorting"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Filtering with WHERE",
+            "box": {
+              "content": "<strong>Conditional Filtering</strong>",
+              "code": "-- Basic comparisons\nSELECT * FROM employees WHERE salary > 70000;\nSELECT * FROM employees WHERE hire_date >= '2023-01-01';\n\n-- Multiple conditions\nSELECT * FROM employees \nWHERE salary BETWEEN 50000 AND 80000 \nAND department_id = 3;\n\n-- Text matching\nSELECT * FROM employees \nWHERE last_name LIKE 'S%';  -- Starts with S\n\nSELECT * FROM employees \nWHERE email LIKE '%@company.com';\n\n-- IN operator\nSELECT * FROM employees \nWHERE department_id IN (1, 3, 5);\n\n-- NULL checking\nSELECT * FROM employees \nWHERE manager_id IS NULL;"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Sorting & Limiting",
+            "box": {
+              "content": "<strong>ORDER BY and LIMIT</strong>",
+              "code": "-- Sort by single column\nSELECT * FROM employees \nORDER BY last_name ASC;\n\n-- Sort by multiple columns\nSELECT * FROM employees \nORDER BY department_id ASC, salary DESC;\n\n-- Limit results\nSELECT * FROM employees \nORDER BY hire_date DESC \nLIMIT 10;\n\n-- Pagination (different syntax by database)\n-- MySQL\nSELECT * FROM employees \nORDER BY employee_id \nLIMIT 10 OFFSET 20;  -- Skip 20, take 10\n\n-- PostgreSQL  \nSELECT * FROM employees \nORDER BY employee_id \nLIMIT 10 OFFSET 20;\n\n-- SQL Server\nSELECT * FROM employees \nORDER BY employee_id \nOFFSET 20 ROWS FETCH NEXT 10 ROWS ONLY;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "joins",
+        "title": "SQL Joins",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Table Relationships"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Join Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>INNER JOIN</strong> - Only matching records from both tables"
+                },
+                {
+                  "emoji": "⬅️",
+                  "text": "<strong>LEFT JOIN</strong> - All records from left, matching from right"
+                },
+                {
+                  "emoji": "➡️",
+                  "text": "<strong>RIGHT JOIN</strong> - All records from right, matching from left"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>FULL JOIN</strong> - All records from both tables"
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>CROSS JOIN</strong> - Cartesian product of both tables"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Join Examples",
+            "box": {
+              "content": "<strong>Practical Join Scenarios</strong>",
+              "code": "-- INNER JOIN: Employees with departments\nSELECT e.first_name, e.last_name, d.department_name\nFROM employees e\nINNER JOIN departments d ON e.department_id = d.department_id;\n\n-- LEFT JOIN: All employees, with department if exists\nSELECT e.first_name, e.last_name, d.department_name\nFROM employees e\nLEFT JOIN departments d ON e.department_id = d.department_id;\n\n-- Multiple joins\nSELECT \n    e.first_name, \n    e.last_name, \n    d.department_name,\n    m.first_name as manager_name\nFROM employees e\nLEFT JOIN departments d ON e.department_id = d.department_id\nLEFT JOIN employees m ON e.manager_id = m.employee_id;\n\n-- Self join: Employees and their managers\nSELECT \n    emp.first_name as employee_name,\n    mgr.first_name as manager_name\nFROM employees emp\nLEFT JOIN employees mgr ON emp.manager_id = mgr.employee_id;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "primary-foreign-keys",
+        "title": "Primary & Foreign Keys",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Keys"
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "Primary Keys",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Uniqueness</strong> - Each value must be unique"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Not Null</strong> - Cannot contain NULL values"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Identification</strong> - Uniquely identifies each row"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Automatically indexed for fast lookups"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Stability</strong> - Should rarely change once assigned"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Foreign Keys",
+            "box": {
+              "content": "<strong>Referential Integrity</strong>",
+              "code": "-- Tables with primary and foreign keys\nCREATE TABLE departments (\n    department_id INT PRIMARY KEY AUTO_INCREMENT,\n    department_name VARCHAR(100) NOT NULL,\n    manager_id INT\n);\n\nCREATE TABLE employees (\n    employee_id INT PRIMARY KEY AUTO_INCREMENT,\n    first_name VARCHAR(50) NOT NULL,\n    last_name VARCHAR(50) NOT NULL,\n    department_id INT,\n    manager_id INT,\n    -- Foreign key constraints\n    FOREIGN KEY (department_id) \n        REFERENCES departments(department_id),\n    FOREIGN KEY (manager_id) \n        REFERENCES employees(employee_id)\n);\n\n-- Foreign key actions\nFOREIGN KEY (department_id) \nREFERENCES departments(department_id)\nON DELETE CASCADE    -- Delete employees when department deleted\nON UPDATE SET NULL;  -- Set NULL if department_id changes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "normalization",
+        "title": "Database Normalization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Organization"
+          },
+          {
+            "type": "content",
+            "emoji": "1️⃣",
+            "title": "First Normal Form (1NF)",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Atomic Values</strong> - Each cell contains single value"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Unique Column Names</strong> - No duplicate column names"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Single Data Type</strong> - Each column same data type"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Order Doesn't Matter</strong> - No ordering dependence"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "2️⃣",
+            "title": "Second Normal Form (2NF)",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Meet 1NF</strong> - Already in first normal form"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Single Purpose Columns</strong> - All non-key columns depend on full primary key"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>No Partial Dependencies</strong> - Remove columns that depend on part of key"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "3️⃣",
+            "title": "Third Normal Form (3NF)",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Meet 2NF</strong> - Already in second normal form"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>No Transitive Dependencies</strong> - Remove columns that depend on other non-key columns"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Eliminate Redundancy</strong> - Each fact stored once"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "indexes-performance",
+        "title": "Indexes & Performance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Query Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Database Indexes",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Like Book Index</strong> - Fast lookup without scanning everything"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Search Optimization</strong> - Speed up WHERE clauses"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Sort Optimization</strong> - Speed up ORDER BY"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Join Optimization</strong> - Speed up JOIN operations"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Storage Cost</strong> - Indexes take disk space"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Write Cost</strong> - Slows down INSERT/UPDATE/DELETE"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Creating Indexes",
+            "box": {
+              "content": "<strong>Index Management</strong>",
+              "code": "-- Single column index\nCREATE INDEX idx_employees_last_name \nON employees(last_name);\n\n-- Composite index (multiple columns)\nCREATE INDEX idx_employees_dept_salary \nON employees(department_id, salary);\n\n-- Unique index\nCREATE UNIQUE INDEX idx_employees_email \nON employees(email);\n\n-- Partial index (PostgreSQL)\nCREATE INDEX idx_high_salary_employees \nON employees(salary) \nWHERE salary > 100000;\n\n-- Show indexes\nSHOW INDEX FROM employees;  -- MySQL\n\\di employees               -- PostgreSQL\n\n-- Drop index\nDROP INDEX idx_employees_last_name;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aggregate-functions",
+        "title": "Aggregate Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Summarization"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Common Aggregate Functions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>COUNT()</strong> - Number of rows"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>SUM()</strong> - Total of numeric values"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>AVG()</strong> - Average of numeric values"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>MAX()</strong> - Highest value"
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>MIN()</strong> - Lowest value"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>GROUP_CONCAT()</strong> - Concatenate values (MySQL)"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>STRING_AGG()</strong> - Concatenate values (PostgreSQL)"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "group-by-having",
+        "title": "GROUP BY & HAVING",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Grouping Data"
+          },
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "GROUP BY Basics",
+            "box": {
+              "content": "<strong>Grouping and Aggregation</strong>",
+              "code": "-- Count employees per department\nSELECT \n    department_id,\n    COUNT(*) as employee_count\nFROM employees\nGROUP BY department_id;\n\n-- Average salary by department\nSELECT \n    department_id,\n    AVG(salary) as avg_salary,\n    MAX(salary) as max_salary,\n    MIN(salary) as min_salary\nFROM employees\nGROUP BY department_id;\n\n-- Multiple grouping columns\nSELECT \n    department_id,\n    EXTRACT(YEAR FROM hire_date) as hire_year,\n    COUNT(*) as hired_count\nFROM employees\nGROUP BY department_id, EXTRACT(YEAR FROM hire_date)\nORDER BY department_id, hire_year;"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "HAVING Clause",
+            "box": {
+              "content": "<strong>Filtering Grouped Results</strong>",
+              "code": "-- Departments with more than 10 employees\nSELECT \n    department_id,\n    COUNT(*) as employee_count\nFROM employees\nGROUP BY department_id\nHAVING COUNT(*) > 10;\n\n-- Departments with average salary > 70000\nSELECT \n    department_id,\n    AVG(salary) as avg_salary\nFROM employees\nGROUP BY department_id\nHAVING AVG(salary) > 70000;\n\n-- Multiple HAVING conditions\nSELECT \n    department_id,\n    COUNT(*) as employee_count,\n    AVG(salary) as avg_salary\nFROM employees\nGROUP BY department_id\nHAVING \n    COUNT(*) > 5 \n    AND AVG(salary) BETWEEN 50000 AND 100000\nORDER BY avg_salary DESC;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "views",
+        "title": "Views & Materialized Views",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Virtual Tables"
+          },
+          {
+            "type": "content",
+            "emoji": "👁️",
+            "title": "Database Views",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Virtual Table</strong> - Stored query, not actual data"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Hide sensitive columns or complex logic"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Simplification</strong> - Complex queries become simple selects"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Consistency</strong> - Standardized data access"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>No Storage</strong> - Data not duplicated, always current"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Creating Views",
+            "box": {
+              "content": "<strong>View Examples</strong>",
+              "code": "-- Simple view\nCREATE VIEW employee_directory AS\nSELECT \n    employee_id,\n    first_name,\n    last_name,\n    email,\n    department_name\nFROM employees e\nJOIN departments d ON e.department_id = d.department_id;\n\n-- Use the view\nSELECT * FROM employee_directory \nWHERE department_name = 'Engineering';\n\n-- Updatable view (simple case)\nCREATE VIEW active_employees AS\nSELECT * FROM employees \nWHERE status = 'active';\n\n-- Complex view with aggregation\nCREATE VIEW department_stats AS\nSELECT \n    d.department_name,\n    COUNT(e.employee_id) as employee_count,\n    AVG(e.salary) as avg_salary\nFROM departments d\nLEFT JOIN employees e ON d.department_id = e.department_id\nGROUP BY d.department_id, d.department_name;\n\n-- Materialized view (PostgreSQL)\nCREATE MATERIALIZED VIEW sales_summary AS\nSELECT \n    product_id,\n    SUM(quantity) as total_sold,\n    SUM(amount) as total_revenue\nFROM sales\nGROUP BY product_id;\n\n-- Refresh materialized view\nREFRESH MATERIALIZED VIEW sales_summary;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "stored-procedures",
+        "title": "Stored Procedures & Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Server-side Logic"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Stored Procedures",
+            "box": {
+              "content": "<strong>Reusable Database Logic</strong>",
+              "code": "-- MySQL stored procedure\nDELIMITER //\nCREATE PROCEDURE GetEmployeeCountByDepartment(IN dept_id INT)\nBEGIN\n    SELECT COUNT(*) as employee_count\n    FROM employees\n    WHERE department_id = dept_id;\nEND //\nDELIMITER ;\n\n-- Call procedure\nCALL GetEmployeeCountByDepartment(3);\n\n-- PostgreSQL function\nCREATE OR REPLACE FUNCTION get_department_employees(dept_id INT)\nRETURNS TABLE(\n    employee_id INT,\n    first_name VARCHAR,\n    last_name VARCHAR\n) AS $$\nBEGIN\n    RETURN QUERY\n    SELECT e.employee_id, e.first_name, e.last_name\n    FROM employees e\n    WHERE e.department_id = dept_id;\nEND;\n$$ LANGUAGE plpgsql;\n\n-- Call function\nSELECT * FROM get_department_employees(3);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "transactions",
+        "title": "Transactions & Rollback",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Transaction Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Transaction Control",
+            "box": {
+              "content": "<strong>ACID Transaction Example</strong>",
+              "code": "BEGIN TRANSACTION;  -- Or START TRANSACTION\n\n-- Transfer money between accounts\nUPDATE accounts SET balance = balance - 100 WHERE account_id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE account_id = 2;\n\n-- Check if everything is okay\n-- If yes, commit changes\nCOMMIT;\n\n-- If something went wrong, rollback\n-- ROLLBACK;\n\n-- Transaction with error handling\nBEGIN;\n\nUPDATE inventory SET quantity = quantity - 5 WHERE product_id = 101;\n\n-- Check if we have enough inventory\nIF (SELECT quantity FROM inventory WHERE product_id = 101) < 0 THEN\n    ROLLBACK;\n    RAISE NOTICE 'Insufficient inventory';\nELSE\n    INSERT INTO orders (product_id, quantity) VALUES (101, 5);\n    COMMIT;\nEND IF;\n\n-- Savepoints for partial rollback\nBEGIN;\nUPDATE accounts SET balance = balance - 50 WHERE account_id = 1;\nSAVEPOINT point1;\nUPDATE accounts SET balance = balance + 50 WHERE account_id = 2;\n-- If second update fails\nROLLBACK TO point1;\nCOMMIT;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "constraints",
+        "title": "Constraints & Validation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Integrity"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "SQL Constraints",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>PRIMARY KEY</strong> - Unique identifier, not null"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>FOREIGN KEY</strong> - References primary key in another table"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>NOT NULL</strong> - Column cannot contain null values"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>UNIQUE</strong> - All values in column must be unique"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>CHECK</strong> - Validates condition on column values"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>DEFAULT</strong> - Default value when not specified"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "er-diagrams",
+        "title": "ER Diagrams & Schema Design",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Entity Relationship Modeling"
+          },
+          {
+            "type": "content",
+            "emoji": "📐",
+            "title": "ER Diagram Components",
+            "box": {
+              "content": "<strong>Entity-Relationship Model</strong>",
+              "code": "E-Commerce ER Diagram:\n\n┌─────────────┐      ┌─────────────┐      ┌─────────────┐\n│   Customers │      │    Orders   │      │   Products  │\n├─────────────┤      ├─────────────┤      ├─────────────┤\n│ customer_id │1    N│ order_id    │N    M│ product_id  │\n│ first_name  │──────│ customer_id │──────│ product_name│\n│ last_name   │      │ order_date  │      │ price       │\n│ email       │      │ total_amount│      │ category_id │\n└─────────────┘      └─────────────┘      └─────────────┘\n                           │                      │\n                           │ N                    │ 1\n                           │                      │\n                           ▼                      ▼\n                    ┌─────────────┐      ┌─────────────┐\n                    │ Order_Items │      │  Categories │\n                    ├─────────────┤      ├─────────────┤\n                    │ order_id    │      │ category_id │\n                    │ product_id  │      │ name        │\n                    │ quantity    │      │ description │\n                    │ price       │      └─────────────┘\n                    └─────────────┘\n\nRelationship Types:\n• 1:1 - One-to-One\n• 1:N - One-to-Many  \n• N:M - Many-to-Many (requires junction table)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "query-optimization",
+        "title": "Query Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance Tuning"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "EXPLAIN Command",
+            "box": {
+              "content": "<strong>Query Analysis Tools</strong>",
+              "code": "-- MySQL EXPLAIN\nEXPLAIN SELECT * FROM employees WHERE last_name = 'Smith';\n\n-- PostgreSQL EXPLAIN\nEXPLAIN ANALYZE SELECT * FROM employees WHERE last_name = 'Smith';\n\n-- Sample EXPLAIN output interpretation:\n• type: ALL = Full table scan (bad)\n• type: ref = Using index (good)\n• rows: Estimated rows examined\n• key: Index used\n• Extra: Additional operations\n\n-- Common optimization tips:\n1. Use indexes on WHERE, JOIN, ORDER BY columns\n2. Avoid SELECT * - specify only needed columns\n3. Use LIMIT to restrict result sets\n4. Avoid functions on indexed columns in WHERE\n5. Use EXISTS instead of IN for large subqueries\n6. Normalize tables to reduce redundancy\n7. Use appropriate data types\n\n-- Bad: Function on indexed column\nSELECT * FROM employees WHERE YEAR(hire_date) = 2023;\n\n-- Good: Use range on raw column  \nSELECT * FROM employees \nWHERE hire_date BETWEEN '2023-01-01' AND '2023-12-31';"
+            }
+          }
+        ]
+      },
+      {
+        "id": "backup-restore",
+        "title": "Backup & Restore",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Protection"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup Strategies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Full Backup</strong> - Complete database copy"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Incremental</strong> - Only changes since last backup"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Hot Backup</strong> - While database is running"
+                },
+                {
+                  "emoji": "🛑",
+                  "text": "<strong>Cold Backup</strong> - Database stopped"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Logical Backup</strong> - SQL statements (mysqldump, pg_dump)"
+                },
+                {
+                  "emoji": "💽",
+                  "text": "<strong>Physical Backup</strong> - Raw file copies"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "sql-injection",
+        "title": "SQL Injection & Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🚫",
+            "title": "SQL Injection Vulnerabilities",
+            "box": {
+              "content": "<strong>Common Security Risks</strong>",
+              "code": "-- VULNERABLE: Direct string concatenation\nconst query = `SELECT * FROM users WHERE username = '${username}'`;\n-- If username = \"' OR '1'='1\" becomes:\n-- SELECT * FROM users WHERE username = '' OR '1'='1'\n-- This returns ALL users!\n\n-- SAFE: Parameterized queries\n-- Using placeholders instead of string concatenation\n\n-- Node.js with mysql2\nconst [users] = await connection.execute(\n    'SELECT * FROM users WHERE username = ?',\n    [username]\n);\n\n-- Python with psycopg2\ncursor.execute(\n    \"SELECT * FROM users WHERE username = %s\",\n    (username,)\n);\n\n-- PHP with PDO\n$stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username');\n$stmt->execute(['username' => $username]);\n\n-- Additional security measures:\n• Use principle of least privilege\n• Validate and sanitize all inputs\n• Use stored procedures\n• Implement proper error handling\n• Regular security audits"
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-permissions",
+        "title": "Users, Roles & Permissions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Access Control"
+          },
+          {
+            "type": "content",
+            "emoji": "👤",
+            "title": "User Management",
+            "box": {
+              "content": "<strong>Database Security Model</strong>",
+              "code": "-- Create user\nCREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';\n\n-- Create role (PostgreSQL)\nCREATE ROLE read_only;\nGRANT CONNECT ON DATABASE company TO read_only;\nGRANT USAGE ON SCHEMA public TO read_only;\nGRANT SELECT ON ALL TABLES IN SCHEMA public TO read_only;\n\n-- Grant privileges\nGRANT SELECT, INSERT, UPDATE ON employees TO 'app_user'@'localhost';\nGRANT ALL PRIVILEGES ON company.* TO 'admin_user'@'localhost';\n\n-- Grant role to user\nGRANT read_only TO 'app_user';\n\n-- View privileges\nSHOW GRANTS FOR 'app_user'@'localhost';  -- MySQL\n\\du                                    -- PostgreSQL\n\n-- Revoke privileges\nREVOKE DELETE ON employees FROM 'app_user'@'localhost';\n\n-- Remove user\nDROP USER 'app_user'@'localhost';"
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-schema",
+        "title": "Real-World Schema Example",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Database Design"
+          },
+          {
+            "type": "content",
+            "emoji": "🏪",
+            "title": "E-Commerce Database Schema",
+            "box": {
+              "content": "<strong>Complete Online Store Design</strong>",
+              "code": "-- E-commerce database schema\nCREATE TABLE customers (\n    customer_id INT PRIMARY KEY AUTO_INCREMENT,\n    first_name VARCHAR(50) NOT NULL,\n    last_name VARCHAR(50) NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    password_hash VARCHAR(255) NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE products (\n    product_id INT PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(200) NOT NULL,\n    description TEXT,\n    price DECIMAL(10,2) NOT NULL,\n    stock_quantity INT DEFAULT 0,\n    category_id INT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (category_id) REFERENCES categories(category_id)\n);\n\nCREATE TABLE categories (\n    category_id INT PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(100) NOT NULL,\n    parent_category_id INT,\n    FOREIGN KEY (parent_category_id) REFERENCES categories(category_id)\n);\n\nCREATE TABLE orders (\n    order_id INT PRIMARY KEY AUTO_INCREMENT,\n    customer_id INT NOT NULL,\n    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    total_amount DECIMAL(10,2) NOT NULL,\n    status ENUM('pending', 'confirmed', 'shipped', 'delivered', 'cancelled'),\n    shipping_address TEXT,\n    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)\n);\n\nCREATE TABLE order_items (\n    order_id INT,\n    product_id INT,\n    quantity INT NOT NULL,\n    unit_price DECIMAL(10,2) NOT NULL,\n    PRIMARY KEY (order_id, product_id),\n    FOREIGN KEY (order_id) REFERENCES orders(order_id),\n    FOREIGN KEY (product_id) REFERENCES products(product_id)\n);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sql-in-data-engineering",
+        "title": "SQL in Data Engineering",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Engineering Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "SQL in Data Pipelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>ETL Processes</strong> - Extract, Transform, Load data"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Data Warehousing</strong> - Build analytical databases"
+                },
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>Data Cleaning</strong> - Standardize and validate data"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Data Integration</strong> - Combine multiple data sources"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Aggregation</strong> - Summarize large datasets"
+                },
+                {
+                  "emoji": "🕒",
+                  "text": "<strong>Scheduled Jobs</strong> - Automated data processing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "sql-in-bi-analytics",
+        "title": "SQL in BI & Analytics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Business Intelligence"
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Analytical SQL",
+            "box": {
+              "content": "<strong>Business Reporting Queries</strong>",
+              "code": "-- Monthly sales trends\nSELECT \n    EXTRACT(YEAR_MONTH FROM order_date) as year_month,\n    COUNT(*) as order_count,\n    SUM(total_amount) as total_revenue,\n    AVG(total_amount) as avg_order_value\nFROM orders\nGROUP BY EXTRACT(YEAR_MONTH FROM order_date)\nORDER BY year_month;\n\n-- Customer lifetime value\nSELECT \n    customer_id,\n    COUNT(*) as total_orders,\n    SUM(total_amount) as total_spent,\n    AVG(total_amount) as avg_order_value,\n    MAX(order_date) as last_order_date\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(*) > 1\nORDER BY total_spent DESC;\n\n-- Product performance\nSELECT \n    p.name as product_name,\n    c.name as category_name,\n    SUM(oi.quantity) as total_sold,\n    SUM(oi.quantity * oi.unit_price) as total_revenue\nFROM order_items oi\nJOIN products p ON oi.product_id = p.product_id\nJOIN categories c ON p.category_id = c.category_id\nGROUP BY p.product_id, p.name, c.name\nORDER BY total_revenue DESC\nLIMIT 10;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sql-cheat-sheet",
+        "title": "SQL Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "SQL Command Reference",
+            "box": {
+              "content": "<strong>Essential SQL Commands</strong>",
+              "code": "-- Database Operations\nCREATE DATABASE dbname;\nDROP DATABASE dbname;\nUSE dbname;\n\n-- Table Operations\nCREATE TABLE table_name (...);\nALTER TABLE table_name ...;\nDROP TABLE table_name;\nTRUNCATE TABLE table_name;\n\n-- Data Manipulation\nINSERT INTO table VALUES (...);\nSELECT * FROM table WHERE ...;\nUPDATE table SET column = value WHERE ...;\nDELETE FROM table WHERE ...;\n\n-- Query Clauses\nSELECT column1, column2\nFROM table\nWHERE condition\nGROUP BY column\nHAVING condition\nORDER BY column\nLIMIT count;\n\n-- Joins\nINNER JOIN table ON condition\nLEFT JOIN table ON condition\nRIGHT JOIN table ON condition\nFULL JOIN table ON condition\n\n-- Aggregation\nCOUNT(), SUM(), AVG(), MAX(), MIN()\nGROUP BY column\nHAVING condition\n\n-- Constraints\nPRIMARY KEY, FOREIGN KEY, NOT NULL\nUNIQUE, CHECK, DEFAULT\n\n-- Transactions\nBEGIN TRANSACTION;\nCOMMIT;\nROLLBACK;\n\n-- Indexes\nCREATE INDEX index_name ON table(column);\nDROP INDEX index_name;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "SQL Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Development Tools"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Popular SQL Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>DBeaver</strong> - Universal database tool, free"
+                },
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL Workbench</strong> - Official MySQL GUI"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>pgAdmin</strong> - PostgreSQL administration"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>DataGrip</strong> - JetBrains IDE for databases"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>VS Code</strong> - With SQL extensions"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>phpMyAdmin</strong> - Web-based MySQL admin"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-path",
+        "title": "Learning Path",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "SQL Learning Journey"
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "SQL Learning Roadmap",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>Beginner</strong> - Basic SELECT, WHERE, ORDER BY"
+                },
+                {
+                  "emoji": "🟡",
+                  "text": "<strong>Intermediate</strong> - JOINs, GROUP BY, subqueries"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>Advanced</strong> - Window functions, CTEs, optimization"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Professional</strong> - Database design, security, administration"
+                },
+                {
+                  "emoji": "🏆",
+                  "text": "<strong>Expert</strong> - Performance tuning, replication, scaling"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Learning Resources",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>SQLZoo</strong> - Interactive SQL tutorials"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>LeetCode</strong> - SQL coding challenges"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Mode Analytics</strong> - SQL tutorial with real datasets"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Khan Academy</strong> - Free SQL course"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Official Documentation</strong> - MySQL, PostgreSQL docs"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>HackerRank</strong> - SQL practice problems"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Mini Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your SQL Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between WHERE and HAVING?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "When would you use a LEFT JOIN vs INNER JOIN?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What are the ACID properties and why are they important?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you prevent SQL injection attacks?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the purpose of database normalization?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💪",
+                  "text": "SQL is essential for data management and analysis"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "ACID properties ensure data integrity and reliability"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "JOINs connect related data across multiple tables"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "Normalization reduces redundancy and improves integrity"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Indexes dramatically improve query performance"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "SQL skills are valuable across many tech roles"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss SQL concepts, database design, or career questions!<br><span class=\"gradient-accent\">All database questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">💾</span> Ready to master SQL?<br><span class=\"gradient-accent\">Start building data-driven applications today!</span>",
+              "note": "Powerful • Universal • Essential"
+            },
+            "footer": {
+              "org": "Data Professionals Community",
+              "tagline": "Empowering developers with database expertise"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

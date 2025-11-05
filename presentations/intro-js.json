@@ -67,6 +67,22 @@
                 {
                   "emoji": "🖱️",
                   "text": "<strong>Events</strong> - Responding to user actions"
+                },
+                {
+                  "emoji": "✨",
+                  "text": "<strong>ES6+ Features</strong> - Modern JavaScript"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Error Handling</strong> - Dealing with errors gracefully"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>JSON</strong> - Working with JSON data"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Web APIs</strong> - Interacting with browser features"
                 }
               ]
             }
@@ -102,6 +118,31 @@
                 }
               ]
             }
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "History of JavaScript",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>1995</strong> - Created by Brendan Eich at Netscape"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>1997</strong> - ECMAScript standard created"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2009</strong> - Node.js allows JavaScript to run on servers"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2015</strong> - ES6 (ECMAScript 2015) adds major new features"
+                }
+              ]
+            }
           }
         ]
       },
@@ -116,10 +157,9 @@
           {
             "type": "content",
             "emoji": "📦",
-            "title": "Variables",
+            "title": "Variables: var, let, const",
             "box": {
-              "content": "<strong>Containers for storing data values</strong>",
-              "code": "// Using var (avoid in modern JS)\nvar name = 'John';\n\n// Using let (for variables that can be reassigned)\nlet age = 30;\nage = 31;\n\n// Using const (for variables that cannot be reassigned)\nconst PI = 3.14;"
+              "code": "// var (function-scoped, avoid in modern JS)\nfunction myFunction() {\n  var myVar = \"Hello\";\n  if (true) {\n    var myVar = \"Hi\"; // myVar is redeclared\n    console.log(myVar); // Hi\n  }\n  console.log(myVar); // Hi\n}\n\n// let (block-scoped)\nfunction myFunction2() {\n  let myLet = \"Hello\";\n  if (true) {\n    let myLet = \"Hi\"; // myLet is a new variable\n    console.log(myLet); // Hi\n  }\n  console.log(myLet); // Hello\n}\n\n// const (block-scoped, cannot be reassigned)\nconst myConst = \"Hello\";\n// myConst = \"Hi\"; // This will cause an error"
             }
           },
           {
@@ -130,27 +170,31 @@
               "list": [
                 {
                   "emoji": "📝",
-                  "text": "<strong>String</strong> - Textual data (e.g., 'Hello, world!')"
+                  "text": "<strong>String</strong>: \"Hello, world!\""
                 },
                 {
                   "emoji": "🔢",
-                  "text": "<strong>Number</strong> - Numeric data (e.g., 123, 3.14)"
+                  "text": "<strong>Number</strong>: 123, 3.14"
                 },
                 {
                   "emoji": "👍",
-                  "text": "<strong>Boolean</strong> - True or false"
+                  "text": "<strong>Boolean</strong>: true, false"
                 },
                 {
                   "emoji": "❓",
-                  "text": "<strong>Null & Undefined</strong> - Absence of a value"
+                  "text": "<strong>Null & Undefined</strong>: typeof null is object, typeof undefined is undefined"
                 },
                 {
                   "emoji": "🏢",
-                  "text": "<strong>Object</strong> - Collections of key-value pairs"
+                  "text": "<strong>Object</strong>: { name: 'John', age: 30 }"
                 },
                 {
                   "emoji": "📜",
-                  "text": "<strong>Symbol</strong> - Unique identifiers"
+                  "text": "<strong>Symbol</strong>: Symbol('id')"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>BigInt</strong>: 123n"
                 }
               ]
             }
@@ -168,9 +212,17 @@
           {
             "type": "content",
             "emoji": "🧮",
-            "title": "Common Operators",
+            "title": "Arithmetic Operators",
             "box": {
-              "code": "// Arithmetic Operators\nlet sum = 10 + 5; // 15\nlet difference = 10 - 5; // 5\nlet product = 10 * 5; // 50\nlet quotient = 10 / 5; // 2\n\n// Comparison Operators\nlet isEqual = (10 == '10'); // true (loose equality)\nlet isStrictlyEqual = (10 === '10'); // false (strict equality)\nlet isGreaterThan = (10 > 5); // true\n\n// Logical Operators\nlet andOperator = (true && false); // false\nlet orOperator = (true || false); // true\nlet notOperator = !true; // false"
+              "code": "let x = 10;\nlet y = 5;\n\nconsole.log(x + y); // 15\nconsole.log(x - y); // 5\nconsole.log(x * y); // 50\nconsole.log(x / y); // 2\nconsole.log(x % y); // 0\nconsole.log(x ** y); // 100000"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Comparison & Logical Operators",
+            "box": {
+              "code": "// Comparison\nconsole.log(10 == \"10\"); // true (loose equality)\nconsole.log(10 === \"10\"); // false (strict equality)\nconsole.log(10 != \"10\"); // false\nconsole.log(10 !== \"10\"); // true\nconsole.log(10 > 5); // true\n\n// Logical\nconsole.log(true && false); // false\nconsole.log(true || false); // true\nconsole.log(!true); // false"
             }
           }
         ]
@@ -188,7 +240,15 @@
             "emoji": "🔀",
             "title": "Conditional Statements",
             "box": {
-              "code": "// if...else statement\nlet age = 18;\nif (age >= 18) {\n  console.log('You are an adult.');\n} else {\n  console.log('You are a minor.');\n}\n\n// for loop\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// while loop\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}"
+              "code": "let age = 18;\n\nif (age >= 18) {\n  console.log(\"You are an adult.\");\n} else if (age >= 13) {\n  console.log(\"You are a teenager.\");\n} else {\n  console.log(\"You are a child.\");\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Loops",
+            "box": {
+              "code": "// for loop\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// while loop\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}\n\n// do...while loop\nlet j = 0;\ndo {\n  console.log(j);\n  j++;\n} while (j < 5);"
             }
           }
         ]
@@ -206,7 +266,22 @@
             "emoji": "🔧",
             "title": "Defining and Calling Functions",
             "box": {
-              "code": "// Function declaration\nfunction greet(name) {\n  return 'Hello, ' + name + '!';\n}\n\n// Function expression\nconst greet2 = function(name) {\n  return 'Hello, ' + name + '!';\n};\n\n// Arrow function\nconst greet3 = (name) => {\n  return 'Hello, ' + name + '!';\n};\n\n// Calling a function\nlet message = greet('John'); // 'Hello, John!'"
+              "code": "// Function declaration\nfunction greet(name) {\n  return \"Hello, \" + name + \"!\";\n}\n\n// Function expression\nconst greet2 = function(name) {\n  return \"Hello, \" + name + \"!\";\n};
+
+// Arrow function\nconst greet3 = (name) => {\n  return \"Hello, \" + name + \"!\";\n};
+
+console.log(greet(\"John\")); // Hello, John!"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Function Parameters & Arguments",
+            "box": {
+              "code": "// Default parameters\nfunction greet(name = \"Guest\") {\n  return \"Hello, \" + name + \"!\";\n}\n
+console.log(greet()); // Hello, Guest!\nconsole.log(greet(\"John\")); // Hello, John!\n
+// Rest parameters\nfunction sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n
+console.log(sum(1, 2, 3)); // 6"
             }
           }
         ]
@@ -222,9 +297,22 @@
           {
             "type": "content",
             "emoji": "🧩",
-            "title": "Objects and Arrays",
+            "title": "Objects",
             "box": {
-              "code": "// Object literal\nconst person = {\n  name: 'John',\n  age: 30,\n  isStudent: false\n};\n\n// Accessing object properties\nconsole.log(person.name); // 'John'\n\n// Array literal\nconst colors = ['red', 'green', 'blue'];\n\n// Accessing array elements\nconsole.log(colors[0]); // 'red'"
+              "code": "const person = {\n  name: \"John\",\n  age: 30,\n  greet: function() {\n    return \"Hello, my name is \" + this.name;\n  }\n};
+
+console.log(person.name); // John\nconsole.log(person.greet()); // Hello, my name is John"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Arrays and Array Methods",
+            "box": {
+              "code": "const colors = [\"red\", \"green\", \"blue\"];\n
+// map\nconst upperColors = colors.map(color => color.toUpperCase());\n// [\"RED\", \"GREEN\", \"BLUE\"]\n
+// filter\nconst longColors = colors.filter(color => color.length > 3);\n// [\"green\", \"blue\"]\n
+// reduce\nconst numbers = [1, 2, 3, 4, 5];\nconst sum = numbers.reduce((total, num) => total + num, 0); // 15"
             }
           }
         ]
@@ -240,9 +328,29 @@
           {
             "type": "content",
             "emoji": "🌐",
-            "title": "The Document Object Model",
+            "title": "Selecting Elements",
             "box": {
-              "code": "// Selecting an element by ID\nconst heading = document.getElementById('my-heading');\n\n// Changing the content of an element\nheading.textContent = 'New Heading';\n\n// Creating a new element\nconst newParagraph = document.createElement('p');\nnewParagraph.textContent = 'This is a new paragraph.';\n\n// Adding the new element to the page\ndocument.body.appendChild(newParagraph);"
+              "code": "// by ID\nconst heading = document.getElementById(\"my-heading\");\n
+// by class name\nconst items = document.getElementsByClassName(\"my-item\");
+
+// by tag name\nconst paragraphs = document.getElementsByTagName(\"p\");
+
+// using querySelector\nconst firstItem = document.querySelector(\".my-item\");
+
+// using querySelectorAll\nconst allItems = document.querySelectorAll(\".my-item\");"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Modifying Elements",
+            "box": {
+              "code": "const heading = document.getElementById(\"my-heading\");\n
+// Changing content\nheading.textContent = \"New Heading\";\nheading.innerHTML = \"<em>New Heading</em>\";
+
+// Changing styles\nheading.style.color = \"red\";\nheading.style.fontSize = \"2rem\";
+
+// Adding and removing classes\nheading.classList.add(\"highlight\");\nheading.classList.remove(\"main\");"
             }
           }
         ]
@@ -260,7 +368,100 @@
             "emoji": "🖱️",
             "title": "Event Handling",
             "box": {
-              "code": "// Selecting a button\nconst myButton = document.getElementById('my-button');\n\n// Adding an event listener\nmyButton.addEventListener('click', () => {\n  alert('Button clicked!');\n});"
+              "code": "const myButton = document.getElementById(\"my-button\");\n
+myButton.addEventListener(\"click\", () => {\n  alert(\"Button clicked!\");\n});
+
+myButton.addEventListener(\"mouseover\", () => {\n  myButton.style.backgroundColor = \"red\";\n});
+
+myButton.addEventListener(\"mouseout\", () => {\n  myButton.style.backgroundColor = \"\";\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "es6-features",
+        "title": "ES6+ Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Modern JavaScript"
+          },
+          {
+            "type": "content",
+            "emoji": "✨",
+            "title": "Arrow Functions & Classes",
+            "box": {
+              "code": "// Arrow Functions\nconst add = (a, b) => a + b;\n
+// Classes\nclass Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n
+  greet() {\n    return `Hello, my name is ${this.name}`\n  }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "✨",
+            "title": "Promises & Async/Await",
+            "box": {
+              "code": "// Promises\nconst myPromise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve(\"Success!\");\n  }, 1000);\n});
+
+myPromise.then(result => console.log(result)); // Success!\n
+// Async/Await\nasync function myAsyncFunction() {\n  const result = await myPromise;\n  console.log(result);\n}
+
+myAsyncFunction(); // Success!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "error-handling",
+        "title": "Error Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Dealing with Errors"
+          },
+          {
+            "type": "content",
+            "emoji": "🚨",
+            "title": "try...catch",
+            "box": {
+              "code": "try {\n  // Code that may throw an error\n  const result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.error(error);\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "json",
+        "title": "JSON",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Working with JSON"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "JSON.parse() & JSON.stringify()",
+            "box": {
+              "code": "const jsonString = '{\"name\":\"John\",\"age\":30}';\nconst person = JSON.parse(jsonString);\nconsole.log(person.name); // John\n
+const personObject = { name: \"John\", age: 30 };\nconst json = JSON.stringify(personObject);\nconsole.log(json); // {\"name\":\"John\",\"age\":30}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "web-apis",
+        "title": "Web APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Browser Features"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Fetch API",
+            "box": {
+              "code": "fetch(\"https://api.example.com/data\")\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));"
             }
           }
         ]
