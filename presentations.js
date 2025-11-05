@@ -144,5 +144,17 @@ const PRESENTATIONS_CONFIG = [
       "open source",
     ],
   },
+    {
+        file: 'gitea-presentation.json',
+        title: 'Mastering Gitea',
+        description: 'Lightweight, self-hosted Git service with complete control',
+        keywords: ['gitea', 'self-hosted', 'git', 'devops', 'ci/cd', 'docker', 'kubernetes']
+    },
+    {
+        file: 'linux-presentation.json',
+        title: 'Mastering Linux',
+        description: 'Complete operating system guide from beginner to power user',
+        keywords: ['linux', 'ubuntu', 'debian', 'command-line', 'bash', 'sysadmin', 'devops']
+    }
   // Add more presentations here as you create them
 ];

@@ -1,0 +1,757 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Mastering Gitea",
+            "subtitle": "Lightweight, Self-Hosted Git Service<br>Complete Control, Zero Vendor Lock-in"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Gitea?</strong> - History & Background"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Gitea vs Alternatives</strong> - GitHub, GitLab, Gogs"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Installation & Setup</strong> - Multiple Deployment Methods"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Configuration</strong> - app.ini & Server Setup"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>User Management</strong> - Roles, Permissions, Organizations"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Repository Features</strong> - Full Git Hosting"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Collaboration</strong> - PRs, Issues, Code Review"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Authentication</strong> - OAuth, LDAP, SSO Integration"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>CI/CD</strong> - Gitea Actions & External Integrations"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>API & Automation</strong> - REST API & Webhooks"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Backup</strong> - Enterprise Features"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise Use</strong> - Scaling & Best Practices"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-gitea",
+        "title": "What is Gitea?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Gitea"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Gitea?",
+            "box": {
+              "content": "<span class=\"highlight\">Lightweight, self-hosted Git service</span> written in Go",
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Open Source</strong> - MIT License"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast & Lightweight</strong> - Low resource usage"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Git Repository Hosting</strong> - Full collaboration tools"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Cross-Platform</strong> - Linux, Windows, macOS, ARM, Docker"
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>Database Support</strong> - SQLite, MySQL, PostgreSQL"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>GitHub-like UI</strong> - Familiar interface"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>First release:</strong> 2016<br><strong>Written in:</strong> Go<br><strong>Community:</strong> 500+ contributors"
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Gitea vs Alternatives",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Platform Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Gitea vs GitHub vs GitLab",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Gitea</strong> - Self-hosted, lightweight, minimal resources"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>GitHub</strong> - Cloud, massive ecosystem, Microsoft-owned"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>GitLab</strong> - Self-hosted/cloud, feature-rich, heavier"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Gitea</strong> - No vendor lock-in, full control"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Gitea</strong> - Completely free, no enterprise pricing"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Gitea</strong> - Faster startup, lower memory footprint"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Gitea vs Gogs",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Gitea</strong> - Community-driven fork"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Gogs</strong> - Single maintainer original"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Gitea</strong> - More active development"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Gitea</strong> - More features and integrations"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Both</strong> - Similar architecture and goals"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started with Gitea"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Installation Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Binary File</strong> - Direct download and run"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Container</strong> - Containerized deployment"
+                },
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Kubernetes Helm</strong> - Cloud-native deployment"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Package Managers</strong> - apt, yum, brew"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Source Build</strong> - From Go source code"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Docker Installation",
+            "box": {
+              "content": "<strong>Quick start with Docker</strong>",
+              "code": "# Create volume for data\ndocker volume create gitea-data\n\n# Run Gitea container\ndocker run -d \\\n  --name gitea \\\n  -p 3000:3000 \\\n  -p 222:22 \\\n  -v gitea-data:/data \\\n  -v /etc/timezone:/etc/timezone:ro \\\n  -v /etc/localtime:/etc/localtime:ro \\\n  gitea/gitea:latest\n\n# Access at http://localhost:3000"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Binary Installation",
+            "box": {
+              "content": "<strong>Direct binary execution</strong>",
+              "code": "# Download latest binary\nwget -O gitea https://dl.gitea.com/gitea/1.20.0/gitea-1.20.0-linux-amd64\nchmod +x gitea\n\n# Create user and directories\nsudo useradd \\\n  --system \\\n  --shell /bin/bash \\\n  --comment 'Gitea' \\\n  --create-home \\\n  --home-dir /home/gitea \\\n  gitea\n\n# Run Gitea\n./gitea web"
+            }
+          }
+        ]
+      },
+      {
+        "id": "configuration",
+        "title": "Configuration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Server Configuration"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "app.ini Configuration",
+            "box": {
+              "content": "<strong>Main configuration file</strong>",
+              "code": "[server]\nDOMAIN = gitea.example.com\nROOT_URL = https://gitea.example.com/\nHTTP_PORT = 3000\nSSH_DOMAIN = gitea.example.com\nSSH_PORT = 22\n\n[database]\nDB_TYPE = sqlite3\nPATH = /data/gitea/gitea.db\n\n[repository]\nROOT = /data/git/repositories\n\n[session]\nPROVIDER = file\n\n[log]\nMODE = console\nLEVEL = Info"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Configuration can be done via file, environment variables, or command line"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Reverse Proxy Setup",
+            "box": {
+              "content": "<strong>Nginx configuration example</strong>",
+              "code": "server {\n    listen 80;\n    server_name gitea.example.com;\n\n    location / {\n        proxy_pass http://localhost:3000;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}\n\n# Caddyfile (even simpler)\ngitea.example.com {\n    reverse_proxy localhost:3000\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "user-management",
+        "title": "User Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Users & Organizations"
+          },
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "User Roles & Permissions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👑",
+                  "text": "<strong>Site Admin</strong> - Full system access"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Repository Admin</strong> - Full repo control"
+                },
+                {
+                  "emoji": "✍️",
+                  "text": "<strong>Write Access</strong> - Push and manage content"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Read Access</strong> - Clone and view only"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Organizations & Teams",
+            "box": {
+              "content": "<strong>Structured team management</strong>",
+              "list": [
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Organizations</strong> - Group users and repositories"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Teams</strong> - Define permissions within organizations"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Fine-grained Access</strong> - Per-team repository permissions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication",
+        "title": "Authentication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Authentication Methods"
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "Authentication Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Built-in</strong> - Gitea user accounts"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>LDAP/Active Directory</strong> - Enterprise directory"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>OAuth2</strong> - Google, GitHub, GitLab, Keycloak"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>SMTP</strong> - Email-based authentication"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>OpenID Connect</strong> - Enterprise SSO"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>PAM</strong> - Pluggable Authentication Modules"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "SSH & HTTPS Authentication",
+            "box": {
+              "content": "<strong>Repository access methods</strong>",
+              "code": "# SSH Access (recommended)\ngit clone git@gitea.example.com:username/repo.git\n\n# HTTPS Access\ngit clone https://gitea.example.com/username/repo.git\n\n# With personal access token\ngit clone https://username:token@gitea.example.com/username/repo.git"
+            }
+          }
+        ]
+      },
+      {
+        "id": "repository-features",
+        "title": "Repository Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Full Git Hosting"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Repository Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "➕",
+                  "text": "<strong>Create Repositories</strong> - Web UI or API"
+                },
+                {
+                  "emoji": "🌿",
+                  "text": "<strong>Branch Management</strong> - Protected branches, rules"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Tags & Releases</strong> - Version management"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Webhooks</strong> - External integrations"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Mirroring</strong> - Sync with external repos"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>LFS Support</strong> - Large file storage"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🤝",
+            "title": "Collaboration Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Pull Requests</strong> - Code review and discussion"
+                },
+                {
+                  "emoji": "🐛",
+                  "text": "<strong>Issues</strong> - Bug tracking and feature requests"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Labels & Milestones</strong> - Issue organization"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Project Boards</strong> - Kanban-style management"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Wiki</strong> - Documentation and knowledge base"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cicd",
+        "title": "CI/CD Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Continuous Integration & Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Gitea Actions",
+            "box": {
+              "content": "<strong>Built-in CI/CD system</strong>",
+              "code": "# .gitea/workflows/ci.yml\nname: CI Pipeline\non: [push, pull_request]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v3\n    - name: Setup Node.js\n      uses: actions/setup-node@v3\n      with:\n        node-version: '18'\n    - name: Install dependencies\n      run: npm install\n    - name: Run tests\n      run: npm test\n    - name: Build project\n      run: npm run build"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Compatible with GitHub Actions syntax and marketplace"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "External CI/CD Integration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✈️",
+                  "text": "<strong>Drone CI</strong> - Native Gitea integration"
+                },
+                {
+                  "emoji": "🐦",
+                  "text": "<strong>Woodpecker CI</strong> - Community fork of Drone"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Jenkins</strong> - Webhook integration"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>GitHub Actions</strong> - Via webhook triggers"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "✈️",
+            "title": "Gitea + Drone CI Example",
+            "box": {
+              "content": "<strong>Native CI/CD pipeline</strong>",
+              "code": "# .drone.yml\nkind: pipeline\nname: default\n\nsteps:\n- name: build\n  image: mcr.microsoft.com/dotnet/sdk:8.0\n  commands:\n  - dotnet restore\n  - dotnet build\n  - dotnet test\n\n- name: publish\n  image: plugins/docker\n  settings:\n    repo: myregistry/app\n    tags: latest\n    username:\n      from_secret: docker_username\n    password:\n      from_secret: docker_password"
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-automation",
+        "title": "API & Automation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "REST API & Webhooks"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "REST API",
+            "box": {
+              "content": "<strong>Complete API for automation</strong>",
+              "code": "# Get repository issues\nGET /api/v1/repos/{owner}/{repo}/issues\n\n# Create new issue\nPOST /api/v1/repos/{owner}/{repo}/issues\n{\n  \"title\": \"Bug report\",\n  \"body\": \"Description of the issue\"\n}\n\n# List user repositories\nGET /api/v1/user/repos\n\n# Create personal access token\nPOST /api/v1/users/{username}/tokens\n{\n  \"name\": \"my-token\"\n}\n\n# Using with curl\ncurl -H \"Authorization: token {token}\" \\\n  https://gitea.example.com/api/v1/user/repos"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Webhooks",
+            "box": {
+              "content": "<strong>Event-driven integrations</strong>",
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Push Events</strong> - Code changes"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Pull Request Events</strong> - PR created/merged"
+                },
+                {
+                  "emoji": "🐛",
+                  "text": "<strong>Issue Events</strong> - Issue created/closed"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Release Events</strong> - New versions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "enterprise",
+        "title": "Enterprise Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Scaling & Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>SSH Key Enforcement</strong> - Require SSH keys"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>HTTPS Only</strong> - Encrypted connections"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Audit Logging</strong> - Track all actions"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>SSO Integration</strong> - Keycloak, Auth0, etc."
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Verification</strong> - Confirm user identities"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup & Restore",
+            "box": {
+              "content": "<strong>Data protection strategy</strong>",
+              "code": "# Create backup\ngitea dump -c /etc/gitea/app.ini\n\n# Output: gitea-dump-1640995200.zip\n\n# Restore from backup\nunzip gitea-dump-1640995200.zip\ncd gitea-dump-1640995200\ngitea restore -c /etc/gitea/app.ini\n\n# Automated backup script\n#!/bin/bash\ngitea dump -c /etc/gitea/app.ini -f /backups/gitea-$(date +%Y%m%d).zip"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Scaling & Performance",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Use PostgreSQL</strong> - For large installations"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Reverse Proxy</strong> - Nginx/Caddy for SSL termination"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Enable Caching</strong> - Redis for session storage"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Object Storage</strong> - For LFS and attachments"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Monitoring</strong> - Prometheus metrics endpoint"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - docs.gitea.com"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/go-gitea/gitea"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community Forum</strong> - discourse.gitea.io"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Guide</strong> - Container deployment"
+                },
+                {
+                  "emoji": "✈️",
+                  "text": "<strong>Drone CI Docs</strong> - CI/CD integration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "Gitea = Lightweight, self-hosted Git service"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "MIT licensed, community-driven project"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "Full control, no vendor lock-in"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Built-in CI/CD with Gitea Actions"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "Enterprise features: LDAP, OAuth, SSO"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "Perfect for teams wanting self-hosted solution"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Gitea setup, self-hosting, or specific feature implementations!<br><span class=\"gradient-accent\">All self-hosted Git questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">⚡</span> Ready to self-host your Git?<br><span class=\"gradient-accent\">Start with Gitea today!</span>",
+              "note": "Self-Hosted • Lightweight • Full Control"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
