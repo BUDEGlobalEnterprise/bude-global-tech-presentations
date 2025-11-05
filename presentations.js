@@ -222,6 +222,11 @@ const PRESENTATIONS_CONFIG = [
     title: 'Introduction to Next.js',
     description: 'Complete full-stack React framework guide from basics to advanced App Router and deployment',
     keywords: ['nextjs', 'react', 'fullstack', 'ssr', 'ssg', 'vercel', 'app-router', 'server-components']
+},{
+    file: 'presentations/nodejs-presentation.json',
+    title: 'Introduction to Node.js',
+    description: 'Complete server-side JavaScript runtime guide from basics to production deployment',
+    keywords: ['nodejs', 'javascript', 'backend', 'server', 'express', 'npm', 'mongodb', 'authentication', 'api']
 }
 
   // Add more presentations here as you create them

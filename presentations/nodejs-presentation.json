@@ -1,0 +1,770 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Mastering Node.js",
+            "subtitle": "Complete Server-Side JavaScript Guide<br>From Basics to Production Deployment"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & Backend Systems Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>What is Node.js?</strong> - Runtime Overview & Architecture"
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>History & Evolution</strong> - Event-Driven Architecture"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Node.js vs Browser JS</strong> - Runtime Comparison"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Installation & Setup</strong> - npm, Core Modules"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Event Loop</strong> - Non-blocking I/O & Performance"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Modules System</strong> - CommonJS vs ES Modules"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>HTTP Server</strong> - Creating Web Servers"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Express.js</strong> - Web Framework Basics"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>REST APIs</strong> - Building Backend Services"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Database Integration</strong> - MongoDB, MySQL, PostgreSQL"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Authentication</strong> - JWT, Sessions, Security"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Async Programming</strong> - Promises, Async/Await"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Real-time Apps</strong> - WebSockets, Socket.io"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tools & Deployment</strong> - Nodemon, PM2, Docker"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Production Ready</strong> - Best Practices & Optimization"
+                },
+                {
+                  "emoji": "🔮",
+                  "text": "<strong>Future & Alternatives</strong> - Deno, Bun, Trends"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-nodejs",
+        "title": "What is Node.js?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Node.js"
+          },
+          {
+            "type": "content",
+            "emoji": "🟢",
+            "title": "What is Node.js?",
+            "box": {
+              "content": "<span class=\"highlight\">JavaScript runtime</span> built on Chrome's V8 JavaScript engine",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Created by</strong> - Ryan Dahl in 2009"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - MIT (Open source)"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Usage</strong> - Used by 98% of Fortune 500 companies, 30M+ downloads/week"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Philosophy</strong> - Non-blocking, event-driven I/O"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Benefit</strong> - JavaScript on both client and server"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Node.js was created because Ryan Dahl was frustrated with the limited possibilities of the most popular web server in 2009 (Apache HTTP Server)!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Node.js Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Event-Driven Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Node.js Runtime Architecture",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>V8 Engine</strong> - JavaScript execution (from Chrome)"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Libuv</strong> - Event loop and async I/O (C library)"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Core Modules</strong> - Built-in modules (fs, http, path)"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Bindings</strong> - Connect JavaScript to C++ libraries"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Single Threaded</strong> - But non-blocking with event loop"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Event-Driven</strong> - Callbacks, promises, async/await"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nodejs-vs-browser",
+        "title": "Node.js vs Browser",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Runtime Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Node.js vs Browser JavaScript",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>Node.js</strong> - Server-side runtime"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Browser JS</strong> - Client-side execution"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Node.js</strong> - File system access"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Browser</strong> - No file system access (sandboxed)"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Node.js</strong> - Global object, process, Buffer"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Browser</strong> - Window, document, DOM"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Node.js</strong> - CommonJS modules"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Browser</strong> - ES6 modules"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started with Node.js"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Installing Node.js",
+            "box": {
+              "content": "<strong>Installation methods</strong>",
+              "code": "# Download from official website\n# https://nodejs.org/\n\n# Using Node Version Manager (nvm) - Recommended\n# Install nvm\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash\n# or\nwget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash\n\n# Install latest LTS version\nnvm install --lts\nnvm use --lts\n\n# Install specific version\nnvm install 18.17.0\nnvm use 18.17.0\n\n# Verify installation\nnode --version\n# v18.17.0\n\nnpm --version\n# 9.6.7\n\n# Using package managers\n# macOS with Homebrew\nbrew install node\n\n# Ubuntu/Debian\ncurl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -\nsudo apt-get install -y nodejs\n\n# Windows\n# Download installer from nodejs.org\n# Or use Chocolatey\nchoco install nodejs-lts"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "First Node.js Script",
+            "box": {
+              "content": "<strong>Creating and running your first script</strong>",
+              "code": "// Create app.js\nconsole.log('Hello, Node.js!');\n\n// Run the script\nnode app.js\n\n// More complex example\nconst message = 'Hello, World!';\nconst timestamp = new Date().toISOString();\n\nconsole.log(`[${timestamp}] ${message}`);\n\n// Using process object\nconsole.log('Node.js version:', process.version);\nconsole.log('Platform:', process.platform);\nconsole.log('Current directory:', process.cwd());\n\n// Command line arguments\nconsole.log('Arguments:', process.argv);\n\n// Run with arguments\n// node app.js arg1 arg2\n\n// Exit codes\nif (someError) {\n  process.exit(1); // Exit with error\n}\nprocess.exit(0); // Exit successfully\n\n// Environment variables\nconsole.log('NODE_ENV:', process.env.NODE_ENV);\nconsole.log('PORT:', process.env.PORT);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "event-loop",
+        "title": "Event Loop",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding the Event Loop"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Event Loop Architecture",
+            "box": {
+              "content": "<strong>How Node.js handles concurrency</strong>",
+              "code": "// Blocking vs Non-blocking code\n\n// Blocking (synchronous)\nconsole.log('Start');\nconst data = fs.readFileSync('file.txt'); // Blocks here\nconsole.log('File content:', data);\nconsole.log('End');\n\n// Non-blocking (asynchronous)\nconsole.log('Start');\nfs.readFile('file.txt', (err, data) => {\n  // This callback runs later\n  console.log('File content:', data);\n});\nconsole.log('End');\n\n// Output order:\n// Start\n// End\n// File content: ...\n\n// Event Loop Phases:\n// 1. Timers - setTimeout, setInterval\n// 2. Pending callbacks - I/O callbacks\n// 3. Idle, prepare - internal use\n// 4. Poll - retrieve new I/O events\n// 5. Check - setImmediate callbacks\n// 6. Close callbacks - close events\n\n// Microtasks (run between phases):\n// - process.nextTick\n// - Promise callbacks"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Event Loop Examples",
+            "box": {
+              "content": "<strong>Execution order demonstration</strong>",
+              "code": "// Understanding execution order\nconsole.log('1. Start');\n\nsetTimeout(() => {\n  console.log('2. Timeout');\n}, 0);\n\nsetImmediate(() => {\n  console.log('3. Immediate');\n});\n\nprocess.nextTick(() => {\n  console.log('4. Next Tick');\n});\n\nPromise.resolve().then(() => {\n  console.log('5. Promise');\n});\n\nconsole.log('6. End');\n\n// Output order:\n// 1. Start\n// 6. End\n// 4. Next Tick\n// 5. Promise\n// 3. Immediate\n// 2. Timeout\n\n// Why this order?\n// 1. Synchronous code runs first\n// 2. process.nextTick runs before event loop phases\n// 3. Promise callbacks (microtasks) run next\n// 4. setImmediate runs in check phase\n// 5. setTimeout runs in timers phase\n\n// Practical implications:\n// - Don't block the event loop\n// - Use async operations for I/O\n// - Be careful with CPU-intensive tasks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "modules",
+        "title": "Modules System",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "CommonJS vs ES Modules"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "CommonJS Modules",
+            "box": {
+              "content": "<strong>Traditional Node.js modules</strong>",
+              "code": "// math.js - Exporting module\nconst add = (a, b) => a + b;\nconst subtract = (a, b) => a - b;\nconst PI = 3.14159;\n\n// Export as object\nmodule.exports = {\n  add,\n  subtract,\n  PI\n};\n\n// Or export individually\nmodule.exports.add = add;\nmodule.exports.subtract = subtract;\n\n// Alternative syntax\nexports.multiply = (a, b) => a * b;\n\n// app.js - Importing module\nconst math = require('./math');\n\nconsole.log(math.add(5, 3)); // 8\nconsole.log(math.PI); // 3.14159\n\n// Destructuring imports\nconst { add, subtract } = require('./math');\n\n// Built-in modules\nconst fs = require('fs');\nconst path = require('path');\nconst http = require('http');\n\n// Node modules (from node_modules)\nconst express = require('express');\nconst mongoose = require('mongoose');\n\n// JSON files\nconst config = require('./config.json');\n\n// Module caching\n// Modules are cached after first require\n// Subsequent requires return the same instance"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "ES Modules",
+            "box": {
+              "content": "<strong>Modern ES6 module syntax</strong>",
+              "code": "// package.json - Enable ES modules\n{\n  \"type\": \"module\",\n  \"name\": \"my-app\",\n  \"version\": \"1.0.0\"\n}\n\n// Or use .mjs extension for individual files\n\n// math.mjs - Exporting ES module\nexport const add = (a, b) => a + b;\nexport const subtract = (a, b) => a - b;\nexport const PI = 3.14159;\n\n// Default export\nexport default function multiply(a, b) {\n  return a * b;\n}\n\n// app.mjs - Importing ES modules\nimport { add, subtract, PI } from './math.mjs';\nimport multiply from './math.mjs'; // default import\n\n// Import everything\nimport * as math from './math.mjs';\n\n// Dynamic imports\nconst loadModule = async () => {\n  const module = await import('./math.mjs');\n  console.log(module.add(2, 3));\n};\n\n// Built-in modules with ES modules\nimport { readFile } from 'fs/promises';\nimport { fileURLToPath } from 'url';\n\n// __dirname equivalent in ES modules\nimport { dirname } from 'path';\nimport { fileURLToPath } from 'url';\n\nconst __filename = fileURLToPath(import.meta.url);\nconst __dirname = dirname(__filename);\n\n// Mixed usage (CommonJS in ES modules)\nimport { createRequire } from 'module';\nconst require = createRequire(import.meta.url);\nconst oldModule = require('./old-module.cjs');"
+            }
+          }
+        ]
+      },
+      {
+        "id": "npm",
+        "title": "npm Package Manager",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Node Package Manager"
+          },
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "npm Basics",
+            "box": {
+              "content": "<strong>Package management commands</strong>",
+              "code": "# Initialize new project\nnpm init\nnpm init -y  # Skip questions\n\n# Install packages\nnpm install express          # Install locally\nnpm install -g nodemon       # Install globally\nnpm install express mongoose cors  # Multiple packages\n\n# Install specific versions\nnpm install express@4.18.0\nnpm install express@latest\n\n# Development dependencies\nnpm install --save-dev jest nodemon\n\n# package.json scripts\n{\n  \"scripts\": {\n    \"start\": \"node app.js\",\n    \"dev\": \"nodemon app.js\",\n    \"test\": \"jest\",\n    \"build\": \"npm run build:css && npm run build:js\"\n  }\n}\n\n# Run scripts\nnpm start\nnpm run dev\nnpm test\n\n# Package management\nnpm list                     # List installed packages\nnpm outdated                 # Check for outdated packages\nnpm update                   # Update packages\nnpm uninstall express        # Remove package\n\n# Audit and security\nnpm audit                    # Check for vulnerabilities\nnpm audit fix                # Fix vulnerabilities\nnpm fund                     # View funding info\n\n# Publishing packages\nnpm login\nnpm publish\nnpm version patch            # Bump version\nnpm unpublish --force        # Remove published package"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "package.json Explained",
+            "box": {
+              "content": "<strong>Project configuration file</strong>",
+              "code": "{\n  \"name\": \"my-node-app\",\n  \"version\": \"1.0.0\",\n  \"description\": \"A sample Node.js application\",\n  \"main\": \"app.js\",\n  \"type\": \"module\", // or \"commonjs\"\n  \n  \"scripts\": {\n    \"start\": \"node app.js\",\n    \"dev\": \"nodemon app.js\",\n    \"test\": \"jest\",\n    \"build\": \"npm run build:css && npm run build:js\"\n  },\n  \n  \"keywords\": [\"node\", \"express\", \"api\"],\n  \"author\": \"Your Name\",\n  \"license\": \"MIT\",\n  \n  \"dependencies\": {\n    \"express\": \"^4.18.0\",\n    \"mongoose\": \"^7.0.0\",\n    \"cors\": \"^2.8.5\"\n  },\n  \n  \"devDependencies\": {\n    \"nodemon\": \"^2.0.0\",\n    \"jest\": \"^29.0.0\",\n    \"eslint\": \"^8.0.0\"\n  },\n  \n  \"engines\": {\n    \"node\": \">=18.0.0\",\n    \"npm\": \">=8.0.0\"\n  },\n  \n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/username/repo.git\"\n  },\n  \n  \"bugs\": {\n    \"url\": \"https://github.com/username/repo/issues\"\n  },\n  \n  \"homepage\": \"https://github.com/username/repo#readme\"\n}\n\n// Version ranges:\n// \"express\": \"4.18.0\"     - Exact version\n// \"express\": \"~4.18.0\"    - Patch updates (4.18.x)\n// \"express\": \"^4.18.0\"    - Minor updates (4.x.x)\n// \"express\": \"*\"          - Any version\n// \"express\": \">=4.0.0 <5.0.0\" - Range\n\n// package-lock.json:\n// - Locks dependency versions\n// - Ensures consistent installs\n// - Should be committed to version control"
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-modules",
+        "title": "Core Modules",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Built-in Node.js Modules"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "File System Module",
+            "box": {
+              "content": "<strong>Working with files and directories</strong>",
+              "code": "const fs = require('fs');\nconst fsPromises = require('fs/promises');\n\n// Synchronous file operations\nconst data = fs.readFileSync('file.txt', 'utf8');\nfs.writeFileSync('output.txt', 'Hello World');\n\n// Asynchronous with callbacks\nfs.readFile('file.txt', 'utf8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});\n\n// With promises (modern approach)\nasync function readFiles() {\n  try {\n    const data = await fsPromises.readFile('file.txt', 'utf8');\n    console.log(data);\n    \n    await fsPromises.writeFile('output.txt', 'Hello World');\n    \n    // File operations\n    await fsPromises.appendFile('log.txt', 'New log entry\\n');\n    await fsPromises.copyFile('source.txt', 'dest.txt');\n    await fsPromises.unlink('file-to-delete.txt');\n    \n    // Directory operations\n    await fsPromises.mkdir('new-folder', { recursive: true });\n    const files = await fsPromises.readdir('./');\n    console.log('Files:', files);\n    \n    // File stats\n    const stats = await fsPromises.stat('file.txt');\n    console.log('Is file:', stats.isFile());\n    console.log('Size:', stats.size);\n    \n  } catch (error) {\n    console.error('Error:', error);\n  }\n}\n\n// Watch file changes\nfs.watch('file.txt', (eventType, filename) => {\n  console.log(`File ${filename} changed: ${eventType}`);\n});\n\n// Streams for large files\nconst readStream = fs.createReadStream('large-file.txt', 'utf8');\nconst writeStream = fs.createWriteStream('copy.txt');\n\nreadStream.pipe(writeStream);"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛣️",
+            "title": "Path, OS & HTTP Modules",
+            "box": {
+              "content": "<strong>Essential utility modules</strong>",
+              "code": "// Path module\nconst path = require('path');\n\nconsole.log(path.join('/users', 'documents', 'file.txt'));\n// /users/documents/file.txt\n\nconsole.log(path.resolve('src', 'app.js'));\n// /absolute/path/to/src/app.js\n\nconsole.log(path.dirname('/users/docs/file.txt')); // /users/docs\nconsole.log(path.basename('/users/docs/file.txt')); // file.txt\nconsole.log(path.extname('image.jpg')); // .jpg\n\n// Cross-platform paths\nconsole.log(path.sep); // / (or \\ on Windows)\n\n// OS module\nconst os = require('os');\n\nconsole.log('Platform:', os.platform());\nconsole.log('Architecture:', os.arch());\nconsole.log('CPU Cores:', os.cpus().length);\nconsole.log('Total Memory:', os.totalmem());\nconsole.log('Free Memory:', os.freemem());\nconsole.log('Home Directory:', os.homedir());\nconsole.log('Hostname:', os.hostname());\n\n// Events module\nconst EventEmitter = require('events');\n\nclass MyEmitter extends EventEmitter {}\n\nconst myEmitter = new MyEmitter();\n\nmyEmitter.on('event', (data) => {\n  console.log('Event received:', data);\n});\n\nmyEmitter.emit('event', { message: 'Hello' });\n\n// HTTP module (basic server)\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello World!');\n});\n\nserver.listen(3000, () => {\n  console.log('Server running on port 3000');\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "http-server",
+        "title": "HTTP Server",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Creating Web Servers"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Basic HTTP Server",
+            "box": {
+              "content": "<strong>Creating servers without frameworks</strong>",
+              "code": "const http = require('http');\nconst url = require('url');\n\nconst server = http.createServer((req, res) => {\n  // Parse URL\n  const parsedUrl = url.parse(req.url, true);\n  const pathname = parsedUrl.pathname;\n  \n  // Set CORS headers\n  res.setHeader('Access-Control-Allow-Origin', '*');\n  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');\n  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');\n  \n  // Handle different routes\n  if (pathname === '/' && req.method === 'GET') {\n    res.writeHead(200, { 'Content-Type': 'text/plain' });\n    res.end('Home Page');\n  } \n  else if (pathname === '/api/users' && req.method === 'GET') {\n    res.writeHead(200, { 'Content-Type': 'application/json' });\n    res.end(JSON.stringify([{ id: 1, name: 'John' }]));\n  }\n  else if (pathname === '/api/users' && req.method === 'POST') {\n    let body = '';\n    \n    req.on('data', chunk => {\n      body += chunk.toString();\n    });\n    \n    req.on('end', () => {\n      const user = JSON.parse(body);\n      res.writeHead(201, { 'Content-Type': 'application/json' });\n      res.end(JSON.stringify({ id: Date.now(), ...user }));\n    });\n  }\n  else {\n    res.writeHead(404, { 'Content-Type': 'text/plain' });\n    res.end('Not Found');\n  }\n});\n\nconst PORT = process.env.PORT || 3000;\nserver.listen(PORT, () => {\n  console.log(`Server running on port ${PORT}`);\n});\n\n// Handle graceful shutdown\nprocess.on('SIGTERM', () => {\n  console.log('SIGTERM received, shutting down gracefully');\n  server.close(() => {\n    console.log('Process terminated');\n  });\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "express",
+        "title": "Express.js Framework",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Web Application Framework"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Express.js Basics",
+            "box": {
+              "content": "<strong>Creating web apps with Express</strong>",
+              "code": "const express = require('express');\nconst app = express();\nconst PORT = process.env.PORT || 3000;\n\n// Middleware\napp.use(express.json()); // Parse JSON bodies\napp.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies\n\n// Static files\napp.use(express.static('public'));\n\n// Basic routes\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.get('/api/users', (req, res) => {\n  res.json([{ id: 1, name: 'John' }]);\n});\n\napp.post('/api/users', (req, res) => {\n  const { name, email } = req.body;\n  // Save to database\n  res.status(201).json({ id: Date.now(), name, email });\n});\n\n// Route parameters\napp.get('/api/users/:id', (req, res) => {\n  const userId = req.params.id;\n  res.json({ id: userId, name: 'User ' + userId });\n});\n\n// Query parameters\napp.get('/api/search', (req, res) => {\n  const { q, page = 1 } = req.query;\n  res.json({ query: q, page, results: [] });\n});\n\n// Error handling\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).json({ error: 'Something went wrong!' });\n});\n\n// 404 handler\napp.use((req, res) => {\n  res.status(404).json({ error: 'Route not found' });\n});\n\napp.listen(PORT, () => {\n  console.log(`Express server running on port ${PORT}`);\n});"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Express Middleware",
+            "box": {
+              "content": "<strong>Custom middleware examples</strong>",
+              "code": "// Custom middleware - Logger\nconst logger = (req, res, next) => {\n  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);\n  next();\n};\n\n// Custom middleware - Authentication\nconst authenticate = (req, res, next) => {\n  const token = req.headers.authorization?.replace('Bearer ', '');\n  \n  if (!token) {\n    return res.status(401).json({ error: 'No token provided' });\n  }\n  \n  // Verify token (in real app, use JWT verification)\n  try {\n    req.user = { id: 1, name: 'John Doe' }; // Decoded token\n    next();\n  } catch (error) {\n    res.status(401).json({ error: 'Invalid token' });\n  }\n};\n\n// Error handling middleware\nconst errorHandler = (err, req, res, next) => {\n  console.error('Error:', err);\n  \n  if (err.name === 'ValidationError') {\n    return res.status(400).json({\n      error: 'Validation Error',\n      details: err.details\n    });\n  }\n  \n  res.status(500).json({\n    error: 'Internal Server Error',\n    message: process.env.NODE_ENV === 'development' ? err.message : 'Something went wrong'\n  });\n};\n\n// Using middleware\napp.use(logger);\napp.use('/api/protected', authenticate);\n\n// Route-specific middleware\napp.get('/api/admin', authenticate, (req, res) => {\n  res.json({ message: 'Admin access granted', user: req.user });\n});\n\n// Third-party middleware\nconst cors = require('cors');\nconst helmet = require('helmet');\nconst rateLimit = require('express-rate-limit');\n\napp.use(helmet()); // Security headers\napp.use(cors()); // CORS\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100 // limit each IP to 100 requests per windowMs\n});\napp.use(limiter);\n\napp.use(errorHandler);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "rest-api",
+        "title": "REST API",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Building RESTful APIs"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Complete REST API Example",
+            "box": {
+              "content": "<strong>CRUD operations with Express</strong>",
+              "code": "const express = require('express');\nconst app = express();\n\n// In-memory database (use real database in production)\nlet users = [\n  { id: 1, name: 'John Doe', email: 'john@example.com' },\n  { id: 2, name: 'Jane Smith', email: 'jane@example.com' }\n];\n\napp.use(express.json());\n\n// GET /api/users - Get all users\napp.get('/api/users', (req, res) => {\n  const { search, page = 1, limit = 10 } = req.query;\n  \n  let filteredUsers = users;\n  \n  // Filter by search query\n  if (search) {\n    filteredUsers = users.filter(user =>\n      user.name.toLowerCase().includes(search.toLowerCase())\n    );\n  }\n  \n  // Pagination\n  const startIndex = (page - 1) * limit;\n  const endIndex = page * limit;\n  const paginatedUsers = filteredUsers.slice(startIndex, endIndex);\n  \n  res.json({\n    data: paginatedUsers,\n    pagination: {\n      page: parseInt(page),\n      limit: parseInt(limit),\n      total: filteredUsers.length,\n      totalPages: Math.ceil(filteredUsers.length / limit)\n    }\n  });\n});\n\n// GET /api/users/:id - Get user by ID\napp.get('/api/users/:id', (req, res) => {\n  const user = users.find(u => u.id === parseInt(req.params.id));\n  \n  if (!user) {\n    return res.status(404).json({ error: 'User not found' });\n  }\n  \n  res.json(user);\n});\n\n// POST /api/users - Create new user\napp.post('/api/users', (req, res) => {\n  const { name, email } = req.body;\n  \n  // Validation\n  if (!name || !email) {\n    return res.status(400).json({ error: 'Name and email are required' });\n  }\n  \n  const newUser = {\n    id: users.length + 1,\n    name,\n    email\n  };\n  \n  users.push(newUser);\n  res.status(201).json(newUser);\n});\n\n// PUT /api/users/:id - Update user\napp.put('/api/users/:id', (req, res) => {\n  const userIndex = users.findIndex(u => u.id === parseInt(req.params.id));\n  \n  if (userIndex === -1) {\n    return res.status(404).json({ error: 'User not found' });\n  }\n  \n  const { name, email } = req.body;\n  users[userIndex] = { ...users[userIndex], name, email };\n  \n  res.json(users[userIndex]);\n});\n\n// DELETE /api/users/:id - Delete user\napp.delete('/api/users/:id', (req, res) => {\n  const userIndex = users.findIndex(u => u.id === parseInt(req.params.id));\n  \n  if (userIndex === -1) {\n    return res.status(404).json({ error: 'User not found' });\n  }\n  \n  users.splice(userIndex, 1);\n  res.status(204).send();\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n  console.log(`REST API server running on port ${PORT}`);\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "title": "Database Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Working with Databases"
+          },
+          {
+            "type": "content",
+            "emoji": "🗄️",
+            "title": "MongoDB with Mongoose",
+            "box": {
+              "content": "<strong>NoSQL database integration</strong>",
+              "code": "const mongoose = require('mongoose');\n\n// Connect to MongoDB\nmongoose.connect('mongodb://localhost:27017/mydatabase', {\n  useNewUrlParser: true,\n  useUnifiedTopology: true,\n});\n\n// Define schemas\nconst userSchema = new mongoose.Schema({\n  name: {\n    type: String,\n    required: true,\n    trim: true,\n  },\n  email: {\n    type: String,\n    required: true,\n    unique: true,\n    lowercase: true,\n  },\n  age: {\n    type: Number,\n    min: 0,\n  },\n  createdAt: {\n    type: Date,\n    default: Date.now,\n  },\n});\n\n// Add methods to schema\nuserSchema.methods.getInfo = function() {\n  return `${this.name} <${this.email}>`;\n};\n\n// Static methods\nuserSchema.statics.findByEmail = function(email) {\n  return this.findOne({ email: email.toLowerCase() });\n};\n\n// Create model\nconst User = mongoose.model('User', userSchema);\n\n// Using the model\nasync function userOperations() {\n  try {\n    // Create user\n    const user = new User({\n      name: 'John Doe',\n      email: 'john@example.com',\n      age: 30\n    });\n    \n    await user.save();\n    \n    // Find users\n    const users = await User.find({ age: { $gte: 25 } });\n    const userByEmail = await User.findByEmail('john@example.com');\n    \n    // Update user\n    await User.findByIdAndUpdate(user._id, { age: 31 });\n    \n    // Delete user\n    await User.findByIdAndDelete(user._id);\n    \n  } catch (error) {\n    console.error('Database error:', error);\n  }\n}\n\n// Express route with Mongoose\napp.get('/api/users', async (req, res) => {\n  try {\n    const users = await User.find();\n    res.json(users);\n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\napp.post('/api/users', async (req, res) => {\n  try {\n    const user = new User(req.body);\n    await user.save();\n    res.status(201).json(user);\n  } catch (error) {\n    res.status(400).json({ error: error.message });\n  }\n});"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐬",
+            "title": "SQL Databases",
+            "box": {
+              "content": "<strong>MySQL/PostgreSQL with Sequelize</strong>",
+              "code": "const { Sequelize, DataTypes } = require('sequelize');\n\n// Connect to database\nconst sequelize = new Sequelize('database', 'username', 'password', {\n  host: 'localhost',\n  dialect: 'mysql', // or 'postgres'\n  logging: false,\n});\n\n// Define models\nconst User = sequelize.define('User', {\n  id: {\n    type: DataTypes.INTEGER,\n    primaryKey: true,\n    autoIncrement: true,\n  },\n  name: {\n    type: DataTypes.STRING,\n    allowNull: false,\n  },\n  email: {\n    type: DataTypes.STRING,\n    allowNull: false,\n    unique: true,\n  },\n  age: {\n    type: DataTypes.INTEGER,\n    validate: {\n      min: 0,\n    },\n  },\n}, {\n  tableName: 'users',\n  timestamps: true,\n});\n\n// Sync database\nasync function syncDatabase() {\n  try {\n    await sequelize.authenticate();\n    console.log('Database connection established');\n    \n    await sequelize.sync({ force: false }); // Don't force in production\n    console.log('Database synced');\n    \n  } catch (error) {\n    console.error('Database error:', error);\n  }\n}\n\n// CRUD operations\nasync function userOperations() {\n  // Create\n  const user = await User.create({\n    name: 'John Doe',\n    email: 'john@example.com',\n    age: 30\n  });\n  \n  // Read\n  const users = await User.findAll();\n  const userById = await User.findByPk(1);\n  const userByEmail = await User.findOne({ where: { email: 'john@example.com' } });\n  \n  // Update\n  await User.update(\n    { age: 31 },\n    { where: { id: 1 } }\n  );\n  \n  // Delete\n  await User.destroy({ where: { id: 1 } });\n}\n\n// Express routes\napp.get('/api/users', async (req, res) => {\n  try {\n    const users = await User.findAll();\n    res.json(users);\n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\nsyncDatabase();"
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication",
+        "title": "Authentication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Authentication & Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "JWT Authentication",
+            "box": {
+              "content": "<strong>JSON Web Token implementation</strong>",
+              "code": "const jwt = require('jsonwebtoken');\nconst bcrypt = require('bcryptjs');\n\nconst JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';\nconst JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';\n\n// User model (simplified)\nconst users = [];\n\n// Authentication middleware\nconst authenticateToken = (req, res, next) => {\n  const authHeader = req.headers['authorization'];\n  const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN\n  \n  if (!token) {\n    return res.status(401).json({ error: 'Access token required' });\n  }\n  \n  jwt.verify(token, JWT_SECRET, (err, user) => {\n    if (err) {\n      return res.status(403).json({ error: 'Invalid or expired token' });\n    }\n    \n    req.user = user;\n    next();\n  });\n};\n\n// Routes\napp.post('/api/register', async (req, res) => {\n  try {\n    const { name, email, password } = req.body;\n    \n    // Validation\n    if (!name || !email || !password) {\n      return res.status(400).json({ error: 'All fields are required' });\n    }\n    \n    // Check if user exists\n    const existingUser = users.find(u => u.email === email);\n    if (existingUser) {\n      return res.status(400).json({ error: 'User already exists' });\n    }\n    \n    // Hash password\n    const hashedPassword = await bcrypt.hash(password, 12);\n    \n    // Create user\n    const user = {\n      id: users.length + 1,\n      name,\n      email,\n      password: hashedPassword\n    };\n    \n    users.push(user);\n    \n    // Generate token\n    const token = jwt.sign(\n      { userId: user.id, email: user.email },\n      JWT_SECRET,\n      { expiresIn: JWT_EXPIRES_IN }\n    );\n    \n    res.status(201).json({\n      message: 'User registered successfully',\n      token,\n      user: { id: user.id, name: user.name, email: user.email }\n    });\n    \n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\napp.post('/api/login', async (req, res) => {\n  try {\n    const { email, password } = req.body;\n    \n    // Find user\n    const user = users.find(u => u.email === email);\n    if (!user) {\n      return res.status(401).json({ error: 'Invalid credentials' });\n    }\n    \n    // Check password\n    const isPasswordValid = await bcrypt.compare(password, user.password);\n    if (!isPasswordValid) {\n      return res.status(401).json({ error: 'Invalid credentials' });\n    }\n    \n    // Generate token\n    const token = jwt.sign(\n      { userId: user.id, email: user.email },\n      JWT_SECRET,\n      { expiresIn: JWT_EXPIRES_IN }\n    );\n    \n    res.json({\n      message: 'Login successful',\n      token,\n      user: { id: user.id, name: user.name, email: user.email }\n    });\n    \n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\n// Protected route\napp.get('/api/profile', authenticateToken, (req, res) => {\n  const user = users.find(u => u.id === req.user.userId);\n  res.json({ user: { id: user.id, name: user.name, email: user.email } });\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "async",
+        "title": "Async Programming",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Asynchronous JavaScript"
+          },
+          {
+            "type": "content",
+            "emoji": "⏳",
+            "title": "Callbacks, Promises, Async/Await",
+            "box": {
+              "content": "<strong>Evolution of async patterns</strong>",
+              "code": "// Callbacks (traditional)\nfunction fetchDataCallback(callback) {\n  setTimeout(() => {\n    callback(null, 'Data received');\n  }, 1000);\n}\n\nfetchDataCallback((err, data) => {\n  if (err) console.error(err);\n  else console.log(data);\n});\n\n// Promises\nfunction fetchDataPromise() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve('Data received');\n      // or reject(new Error('Failed'));\n    }, 1000);\n  });\n}\n\nfetchDataPromise()\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n\n// Async/Await (modern)\nasync function fetchDataAsync() {\n  try {\n    const data = await fetchDataPromise();\n    console.log(data);\n    return data;\n  } catch (error) {\n    console.error(error);\n    throw error;\n  }\n}\n\n// Multiple async operations\nasync function fetchMultiple() {\n  try {\n    // Sequential\n    const user = await fetchUser();\n    const posts = await fetchUserPosts(user.id);\n    \n    // Parallel\n    const [userData, postsData, settingsData] = await Promise.all([\n      fetchUser(),\n      fetchPosts(),\n      fetchSettings()\n    ]);\n    \n    return { user: userData, posts: postsData, settings: settingsData };\n    \n  } catch (error) {\n    console.error('Failed to fetch data:', error);\n  }\n}\n\n// Error handling patterns\n// 1. Try-catch with async/await\nasync function safeOperation() {\n  try {\n    const result = await riskyOperation();\n    return result;\n  } catch (error) {\n    console.error('Operation failed:', error);\n    return null;\n  }\n}\n\n// 2. Promise error handling\nriskyOperation()\n  .then(result => console.log(result))\n  .catch(error => console.error('Failed:', error))\n  .finally(() => console.log('Operation completed'));\n\n// 3. Using utility functions\nfunction asyncHandler(fn) {\n  return (req, res, next) => {\n    Promise.resolve(fn(req, res, next)).catch(next);\n  };\n}\n\n// Usage in Express\napp.get('/api/data', asyncHandler(async (req, res) => {\n  const data = await fetchData();\n  res.json(data);\n}));"
+            }
+          }
+        ]
+      },
+      {
+        "id": "realtime",
+        "title": "Real-time Applications",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WebSockets & Real-time Features"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Socket.io Implementation",
+            "box": {
+              "content": "<strong>Real-time bidirectional communication</strong>",
+              "code": "const express = require('express');\nconst http = require('http');\nconst socketIo = require('socket.io');\n\nconst app = express();\nconst server = http.createServer(app);\nconst io = socketIo(server, {\n  cors: {\n    origin: \"http://localhost:3000\",\n    methods: [\"GET\", \"POST\"]\n  }\n});\n\n// Store connected users\nconst users = new Map();\n\nio.on('connection', (socket) => {\n  console.log('User connected:', socket.id);\n  \n  // User joins\n  socket.on('user_join', (userData) => {\n    users.set(socket.id, {\n      id: socket.id,\n      username: userData.username,\n      room: userData.room\n    });\n    \n    socket.join(userData.room);\n    \n    // Notify room about new user\n    socket.to(userData.room).emit('user_joined', {\n      username: userData.username,\n      users: Array.from(users.values()).filter(u => u.room === userData.room)\n    });\n    \n    // Send current users to the new user\n    socket.emit('current_users', {\n      users: Array.from(users.values()).filter(u => u.room === userData.room)\n    });\n  });\n  \n  // Handle chat messages\n  socket.on('send_message', (messageData) => {\n    const user = users.get(socket.id);\n    if (user) {\n      const message = {\n        id: Date.now(),\n        username: user.username,\n        text: messageData.text,\n        timestamp: new Date().toISOString(),\n        room: user.room\n      };\n      \n      // Broadcast to room\n      io.to(user.room).emit('new_message', message);\n    }\n  });\n  \n  // Handle typing indicators\n  socket.on('typing_start', () => {\n    const user = users.get(socket.id);\n    if (user) {\n      socket.to(user.room).emit('user_typing', { username: user.username });\n    }\n  });\n  \n  socket.on('typing_stop', () => {\n    const user = users.get(socket.id);\n    if (user) {\n      socket.to(user.room).emit('user_stop_typing', { username: user.username });\n    }\n  });\n  \n  // Handle disconnection\n  socket.on('disconnect', () => {\n    const user = users.get(socket.id);\n    if (user) {\n      users.delete(socket.id);\n      \n      // Notify room about user leaving\n      socket.to(user.room).emit('user_left', {\n        username: user.username,\n        users: Array.from(users.values()).filter(u => u.room === user.room)\n      });\n    }\n    \n    console.log('User disconnected:', socket.id);\n  });\n});\n\n// REST endpoint to get online users\napp.get('/api/online-users/:room', (req, res) => {\n  const roomUsers = Array.from(users.values())\n    .filter(user => user.room === req.params.room)\n    .map(user => ({ username: user.username }));\n  \n  res.json({ users: roomUsers });\n});\n\nconst PORT = process.env.PORT || 3001;\nserver.listen(PORT, () => {\n  console.log(`Socket.io server running on port ${PORT}`);\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment",
+        "title": "Deployment & Production",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "PM2 Process Manager",
+            "box": {
+              "content": "<strong>Production process management</strong>",
+              "code": "# Install PM2 globally\nnpm install -g pm2\n\n# Basic usage\npm2 start app.js              # Start application\npm2 start app.js -i max       # Start with cluster mode\npm2 restart app               # Restart application\npm2 stop app                  # Stop application\npm2 delete app                # Remove from PM2\npm2 logs                      # Show logs\npm2 monit                     # Monitor dashboard\n\n# Ecosystem file (ecosystem.config.js)\nmodule.exports = {\n  apps: [{\n    name: 'my-app',\n    script: './app.js',\n    instances: 'max',         // Use all CPU cores\n    exec_mode: 'cluster',     // Cluster mode\n    env: {\n      NODE_ENV: 'development',\n      PORT: 3000\n    },\n    env_production: {\n      NODE_ENV: 'production',\n      PORT: 80\n    },\n    error_file: './logs/err.log',\n    out_file: './logs/out.log',\n    log_file: './logs/combined.log',\n    time: true\n  }]\n};\n\n# Start with ecosystem file\npm2 start ecosystem.config.js\npm2 start ecosystem.config.js --env production\n\n# PM2 commands for production\npm2 startup                  # Generate startup script\npm2 save                     # Save current process list\npm2 resurrect                # Restore saved processes\n\n# Monitoring\npm2 status                   # Show status\npm2 show app                 # Show details\npm2 logs app --lines 100     # Show last 100 lines\npm2 flush                    # Clear logs\n\n# Zero-downtime reload\npm2 reload app               # Zero-downtime reload\n\n# Configuration management\npm2 init                     # Generate sample config\n\n# Docker with Node.js\n# Dockerfile\nFROM node:18-alpine\n\nWORKDIR /app\n\nCOPY package*.json ./\nRUN npm ci --only=production\n\nCOPY . .\n\nEXPOSE 3000\n\nUSER node\n\nCMD [\"node\", \"app.js\"]\n\n# Build and run\n# docker build -t my-node-app .\n# docker run -p 3000:3000 -d my-node-app\n\n# Environment variables in production\n# Use .env file or system environment variables\n# Never commit secrets to version control"
+            }
+          }
+        ]
+      },
+      {
+        "id": "project-demo",
+        "title": "Project Demo",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Complete Node.js Application"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Task Manager API",
+            "box": {
+              "content": "<strong>Complete REST API with authentication</strong>",
+              "code": "const express = require('express');\nconst mongoose = require('mongoose');\nconst bcrypt = require('bcryptjs');\nconst jwt = require('jsonwebtoken');\n\nconst app = express();\n\n// Middleware\napp.use(express.json());\n\n// Connect to MongoDB\nmongoose.connect('mongodb://localhost:27017/taskmanager', {\n  useNewUrlParser: true,\n  useUnifiedTopology: true,\n});\n\n// User Schema\nconst userSchema = new mongoose.Schema({\n  username: { type: String, required: true, unique: true },\n  email: { type: String, required: true, unique: true },\n  password: { type: String, required: true },\n}, { timestamps: true });\n\n// Task Schema\nconst taskSchema = new mongoose.Schema({\n  title: { type: String, required: true },\n  description: String,\n  status: { \n    type: String, \n    enum: ['pending', 'in-progress', 'completed'], \n    default: 'pending' \n  },\n  priority: {\n    type: String,\n    enum: ['low', 'medium', 'high'],\n    default: 'medium'\n  },\n  dueDate: Date,\n  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },\n}, { timestamps: true });\n\nconst User = mongoose.model('User', userSchema);\nconst Task = mongoose.model('Task', taskSchema);\n\n// Auth middleware\nconst auth = async (req, res, next) => {\n  try {\n    const token = req.header('Authorization')?.replace('Bearer ', '');\n    if (!token) {\n      return res.status(401).json({ error: 'No token provided' });\n    }\n    \n    const decoded = jwt.verify(token, 'your-jwt-secret');\n    const user = await User.findById(decoded.userId);\n    \n    if (!user) {\n      return res.status(401).json({ error: 'Invalid token' });\n    }\n    \n    req.user = user;\n    next();\n  } catch (error) {\n    res.status(401).json({ error: 'Invalid token' });\n  }\n};\n\n// Auth routes\napp.post('/api/register', async (req, res) => {\n  try {\n    const { username, email, password } = req.body;\n    \n    const hashedPassword = await bcrypt.hash(password, 12);\n    const user = new User({ username, email, password: hashedPassword });\n    \n    await user.save();\n    \n    const token = jwt.sign({ userId: user._id }, 'your-jwt-secret');\n    \n    res.status(201).json({\n      message: 'User registered successfully',\n      token,\n      user: { id: user._id, username: user.username, email: user.email }\n    });\n    \n  } catch (error) {\n    res.status(400).json({ error: error.message });\n  }\n});\n\napp.post('/api/login', async (req, res) => {\n  try {\n    const { email, password } = req.body;\n    \n    const user = await User.findOne({ email });\n    if (!user) {\n      return res.status(401).json({ error: 'Invalid credentials' });\n    }\n    \n    const isMatch = await bcrypt.compare(password, user.password);\n    if (!isMatch) {\n      return res.status(401).json({ error: 'Invalid credentials' });\n    }\n    \n    const token = jwt.sign({ userId: user._id }, 'your-jwt-secret');\n    \n    res.json({\n      message: 'Login successful',\n      token,\n      user: { id: user._id, username: user.username, email: user.email }\n    });\n    \n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\n// Task routes\napp.get('/api/tasks', auth, async (req, res) => {\n  try {\n    const { status, priority, page = 1, limit = 10 } = req.query;\n    \n    const filter = { userId: req.user._id };\n    if (status) filter.status = status;\n    if (priority) filter.priority = priority;\n    \n    const tasks = await Task.find(filter)\n      .limit(limit * 1)\n      .skip((page - 1) * limit)\n      .sort({ createdAt: -1 });\n    \n    const total = await Task.countDocuments(filter);\n    \n    res.json({\n      tasks,\n      totalPages: Math.ceil(total / limit),\n      currentPage: page,\n      total\n    });\n    \n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\napp.post('/api/tasks', auth, async (req, res) => {\n  try {\n    const task = new Task({\n      ...req.body,\n      userId: req.user._id\n    });\n    \n    await task.save();\n    res.status(201).json(task);\n    \n  } catch (error) {\n    res.status(400).json({ error: error.message });\n  }\n});\n\napp.put('/api/tasks/:id', auth, async (req, res) => {\n  try {\n    const task = await Task.findOneAndUpdate(\n      { _id: req.params.id, userId: req.user._id },\n      req.body,\n      { new: true, runValidators: true }\n    );\n    \n    if (!task) {\n      return res.status(404).json({ error: 'Task not found' });\n    }\n    \n    res.json(task);\n    \n  } catch (error) {\n    res.status(400).json({ error: error.message });\n  }\n});\n\napp.delete('/api/tasks/:id', auth, async (req, res) => {\n  try {\n    const task = await Task.findOneAndDelete({\n      _id: req.params.id,\n      userId: req.user._id\n    });\n    \n    if (!task) {\n      return res.status(404).json({ error: 'Task not found' });\n    }\n    \n    res.json({ message: 'Task deleted successfully' });\n    \n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n  console.log(`Task Manager API running on port ${PORT}`);\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Node.js Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Environment variables</strong> - Never hardcode secrets"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Use async/await</strong> - Avoid callback hell"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Error handling</strong> - Always handle errors properly"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Don't block event loop</strong> - Use worker threads for CPU tasks"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Logging</strong> - Use structured logging"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Process manager</strong> - Use PM2 in production"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Node.js Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential Node.js concepts quick reference</strong>",
+              "code": "/* CORE MODULES */\nconst fs = require('fs');\nconst path = require('path');\nconst http = require('http');\nconst os = require('os');\nconst events = require('events');\n\n/* FILE SYSTEM */\nfs.readFileSync('file.txt') // Synchronous\nfs.readFile('file.txt', callback) // Asynchronous\nfsPromises.readFile('file.txt') // Promise-based\n\n/* PATH MANIPULATION */\npath.join('dir', 'file.txt') // Platform-specific join\npath.resolve('file.txt') // Absolute path\npath.basename('/path/file.txt') // 'file.txt'\n\n/* HTTP SERVER */\nhttp.createServer((req, res) => {\n  res.writeHead(200);\n  res.end('Hello');\n}).listen(3000);\n\n/* EVENTS */\nemitter.on('event', callback)\nemitter.emit('event', data)\n\n/* MODULES */\nmodule.exports = { function } // CommonJS export\nconst module = require('./module') // CommonJS import\n\nexport function name() {} // ES module export\nimport { name } from './module' // ES module import\n\n/* PACKAGE.JSON SCRIPTS */\n\"start\": \"node app.js\"\n\"dev\": \"nodemon app.js\"\n\"test\": \"jest\"\n\n/* NPM COMMANDS */\nnpm init // Initialize project\nnpm install package // Install package\nnpm run script // Run script\n\n/* ERROR HANDLING */\ntry { /* code */ } catch (err) { /* handle */ }\nPromise.catch(error => { /* handle */ })\n\n/* ASYNC PATTERNS */\n// Callback\nfunction(callback) { callback(null, data) }\n\n// Promise\nfunction() { return new Promise((resolve, reject)) }\n\n// Async/Await\nasync function() { await promise }\n\n/* EXPRESS.JS */\napp.get('/', (req, res) => {})\napp.post('/', (req, res) => {})\napp.use(middleware)\napp.listen(3000)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Node.js Documentation</strong> - Official docs (nodejs.org)"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Express.js Guide</strong> - Official Express documentation"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>npm Documentation</strong> - Package manager docs"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube</strong> - Traversy Media, The Net Ninja, Academind"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>GitHub</strong> - Node.js source code and examples"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Community</strong> - Node.js Foundation, Discord, Stack Overflow"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between require() and import?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How does the Node.js event loop work?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the purpose of middleware in Express.js?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you handle environment variables in Node.js?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What are the advantages of using async/await over callbacks?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🟢",
+                  "text": "Node.js = JavaScript runtime for server-side"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Event-driven, non-blocking I/O architecture"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Rich ecosystem with npm packages"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Express.js for building web applications"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "Easy database integration"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential for modern full-stack development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Node.js concepts, backend development, or specific use cases!<br><span class=\"gradient-accent\">All server-side JavaScript questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🟢</span> Ready to build server-side applications?<br><span class=\"gradient-accent\">Start your Node.js journey today!</span>",
+              "note": "Server-Side • Event-Driven • Scalable"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
