@@ -135,7 +135,14 @@ We heartily welcome contributions of all kinds! Whether you're fixing a bug, imp
 
 ## 📸 Screenshots
 
-*(Placeholder for future screenshots of the presentation selector and an example presentation slide.)*
+### Home Page
+![Home Page](assets/images/Readme/home.png)
+
+### Author Page
+![Author Page](assets/images/Readme/author.png)
+
+### React Presentation Example
+![React Presentation Example](assets/images/Readme/intro-react.png)
 
 ---
 
