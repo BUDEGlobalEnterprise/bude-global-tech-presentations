@@ -217,17 +217,43 @@ const PRESENTATIONS_CONFIG = [
     title: "Introduction to React",
     description: "Complete React.js guide from fundamentals to advanced hooks and state management",
     keywords: ["react", "reactjs", "javascript", "frontend", "hooks", "components", "jsx", "state", "props"]
-  },{
+  }, {
     file: 'presentations/nextjs-presentation.json',
     title: 'Introduction to Next.js',
     description: 'Complete full-stack React framework guide from basics to advanced App Router and deployment',
     keywords: ['nextjs', 'react', 'fullstack', 'ssr', 'ssg', 'vercel', 'app-router', 'server-components']
-},{
+  }, {
     file: 'presentations/nodejs-presentation.json',
     title: 'Introduction to Node.js',
     description: 'Complete server-side JavaScript runtime guide from basics to production deployment',
     keywords: ['nodejs', 'javascript', 'backend', 'server', 'express', 'npm', 'mongodb', 'authentication', 'api']
-}
+  }, {
+    file: "presentations/intro-postgresql.json",
+    title: "Introduction to PostgreSQL",
+    description: "Complete database management guide from beginner to advanced user",
+    keywords: [
+      "postgresql",
+      "database",
+      "sql",
+      "rdbms",
+      "jsonb",
+      "acid",
+      "backup",
+      "performance",
+      "indexing",
+      "transactions"
+    ]
+  }, {
+    file: "presentations/intro-mysql.json",
+    title: "Introduction to MySQL",
+    description: "Complete database management guide from beginner to production ready",
+    keywords: ["mysql", "database", "sql", "rdbms", "innodb", "replication", "backup"]
+  },{
+    file: "presentations/intro-mongodb.json",
+    title: "Introduction to MongoDB",
+    description: "Complete NoSQL database guide from beginner to production ready",
+    keywords: ["mongodb", "nosql", "document", "database", "bson", "aggregation", "atlas"]
+  }
 
   // Add more presentations here as you create them
 ];

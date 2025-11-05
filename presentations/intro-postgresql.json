@@ -1,0 +1,1021 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to PostgreSQL",
+            "subtitle": "Complete Database Management Guide<br>From Beginner to Advanced User"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Database Expert",
+            "title": "Senior Database Administrator",
+            "experience": "5 years in Database Management & Backend Development",
+            "oss_experience": "PostgreSQL, MySQL, Database Optimization Specialist",
+            "github": "https://github.com/database-expert",
+            "website": "https://database-expert.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is PostgreSQL?</strong> - History & Features"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>PostgreSQL vs Other Databases</strong> - Comparison"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Installation & Setup</strong> - Multiple Platforms"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tools & Clients</strong> - psql, pgAdmin, DBeaver"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Architecture</strong> - System Overview"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Basic SQL Operations</strong> - CRUD Operations"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Joins & Relationships</strong> - Table Relationships"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance & Indexes</strong> - Optimization"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Transactions & ACID</strong> - Data Integrity"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Advanced Features</strong> - JSON, Arrays, Window Functions"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Permissions</strong> - User Management"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud & Deployment</strong> - Production Ready"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-postgresql",
+        "title": "What is PostgreSQL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding PostgreSQL"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is PostgreSQL?",
+            "box": {
+              "content": "<span class=\"highlight\">Advanced open-source object-relational database system</span>",
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Created by</strong> - Michael Stonebraker (1986)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - PostgreSQL License (Open Source)"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Features</strong> - ACID compliance, extensible, SQL standard"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Usage</strong> - Enterprise applications, web apps, geospatial"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performance</strong> - High concurrency, advanced indexing"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> PostgreSQL's name comes from POSTGRES, the original name, and SQL was added later to reflect its SQL support!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PostgreSQL History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>1986</strong> - POSTGRES project started at UC Berkeley"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>1995</strong> - POSTGRES95 with SQL support"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>1996</strong> - Renamed to PostgreSQL"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2000</strong> - Version 7.0 with major enhancements"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2010</strong> - Version 9.0 with built-in replication"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>2020+</strong> - JSON support, partitioning, performance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Database Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PostgreSQL vs Other Databases"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Database System Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Full SQL compliance, extensible, ACID"
+                },
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Fast, web-focused, owned by Oracle"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>SQL Server</strong> - Microsoft ecosystem, enterprise features"
+                },
+                {
+                  "emoji": "🏺",
+                  "text": "<strong>Oracle</strong> - Enterprise-grade, expensive, feature-rich"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>SQLite</strong> - Embedded, file-based, zero-configuration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Installing PostgreSQL"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - EnterpriseDB installer, chocolatey"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - apt, yum, pacman package managers"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - Homebrew, Postgres.app"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Official PostgreSQL image"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - AWS RDS, Google Cloud SQL, Azure"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐧",
+            "title": "Ubuntu Installation Example",
+            "box": {
+              "content": "<strong>Installing on Ubuntu/Debian</strong>",
+              "code": "# Update package list\nsudo apt update\n\n# Install PostgreSQL\nsudo apt install postgresql postgresql-contrib\n\n# Start PostgreSQL service\nsudo systemctl start postgresql\nsudo systemctl enable postgresql\n\n# Connect to PostgreSQL\nsudo -u postgres psql\n\n# Create a new user and database\nCREATE USER myuser WITH PASSWORD 'mypassword';\nCREATE DATABASE mydatabase OWNER myuser;\n\n# Grant privileges\nGRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "PostgreSQL Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Tools & Clients"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Popular PostgreSQL Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>psql</strong> - Command-line interface"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>pgAdmin</strong> - Web-based administration tool"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>DBeaver</strong> - Universal database tool"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>TablePlus</strong> - Modern native client"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>DataGrip</strong> - JetBrains IDE for databases"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Postico</strong> - macOS PostgreSQL client"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "PostgreSQL Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "System Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "PostgreSQL Architecture Overview",
+            "box": {
+              "content": "<strong>Core Components</strong>",
+              "code": "PostgreSQL Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (psql, apps)   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Postmaster     │\n│   (Main Process)│\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Backend        │\n│   Processes     │\n├─────────────────┤\n│  Background     │\n│   Processes     │\n├─────────────────┤\n│  Shared Memory  │\n│   & Buffers     │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage System │\n│   (Data Files)  │\n└─────────────────┘"
+            }
+          }
+        ]
+      },
+      {
+        "id": "basic-sql",
+        "title": "Basic SQL Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential SQL Commands"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "CRUD Operations",
+            "box": {
+              "content": "<strong>Create, Read, Update, Delete</strong>",
+              "code": "-- Create a table\nCREATE TABLE users (\n    id SERIAL PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\n-- Insert data\nINSERT INTO users (username, email) \nVALUES ('john_doe', 'john@example.com');\n\n-- Read data\nSELECT * FROM users;\nSELECT username, email FROM users WHERE id = 1;\n\n-- Update data\nUPDATE users SET email = 'new_email@example.com' \nWHERE username = 'john_doe';\n\n-- Delete data\nDELETE FROM users WHERE id = 1;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-types",
+        "title": "Data Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PostgreSQL Data Types"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Common Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Numeric</strong> - INTEGER, BIGINT, DECIMAL, SERIAL"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Text</strong> - VARCHAR, TEXT, CHAR"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Boolean</strong> - BOOLEAN (true/false)"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date/Time</strong> - DATE, TIME, TIMESTAMP, INTERVAL"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>JSON</strong> - JSON, JSONB (binary JSON)"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>UUID</strong> - Universally Unique Identifier"
+                },
+                {
+                  "emoji": "🧮",
+                  "text": "<strong>Arrays</strong> - INTEGER[], TEXT[]"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "joins",
+        "title": "Joins & Relationships",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Table Relationships"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "SQL Join Types",
+            "box": {
+              "content": "<strong>Joining Multiple Tables</strong>",
+              "code": "-- Sample tables\nCREATE TABLE departments (\n    id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL\n);\n\nCREATE TABLE employees (\n    id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    department_id INTEGER REFERENCES departments(id)\n);\n\n-- INNER JOIN (only matching records)\nSELECT e.name, d.name as department\nFROM employees e\nINNER JOIN departments d ON e.department_id = d.id;\n\n-- LEFT JOIN (all employees, even without department)\nSELECT e.name, d.name as department\nFROM employees e\nLEFT JOIN departments d ON e.department_id = d.id;\n\n-- RIGHT JOIN (all departments, even without employees)\nSELECT e.name, d.name as department\nFROM employees e\nRIGHT JOIN departments d ON e.department_id = d.id;\n\n-- FULL JOIN (all records from both tables)\nSELECT e.name, d.name as department\nFROM employees e\nFULL JOIN departments d ON e.department_id = d.id;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "constraints",
+        "title": "Constraints",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Integrity Constraints"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Common Constraints",
+            "box": {
+              "content": "<strong>Ensuring Data Integrity</strong>",
+              "code": "CREATE TABLE products (\n    id SERIAL PRIMARY KEY,                    -- Primary Key\n    sku VARCHAR(50) UNIQUE NOT NULL,          -- Unique constraint\n    name VARCHAR(100) NOT NULL,               -- Not null constraint\n    price DECIMAL(10,2) CHECK (price > 0),    -- Check constraint\n    category_id INTEGER REFERENCES categories(id), -- Foreign Key\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Default value\n);\n\n-- Adding constraints later\nALTER TABLE products \nADD CONSTRAINT price_positive \nCHECK (price > 0);\n\n-- Foreign key with actions\nCREATE TABLE orders (\n    id SERIAL PRIMARY KEY,\n    product_id INTEGER REFERENCES products(id) \n        ON DELETE CASCADE \n        ON UPDATE CASCADE\n);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "indexes",
+        "title": "Indexes & Performance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Index Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>B-tree</strong> - Default, good for equality and range queries"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Hash</strong> - Fast equality comparisons"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>GIST</strong> - Geometric data, full-text search"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>GIN</strong> - Array, JSONB, full-text search"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>BRIN</strong> - Very large tables, time-series data"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Creating Indexes",
+            "box": {
+              "content": "<strong>Index Management</strong>",
+              "code": "-- Basic index\nCREATE INDEX idx_users_email ON users(email);\n\n-- Unique index\nCREATE UNIQUE INDEX idx_users_username ON users(username);\n\n-- Composite index\nCREATE INDEX idx_orders_user_date ON orders(user_id, order_date);\n\n-- Partial index (only on specific rows)\nCREATE INDEX idx_active_users ON users(email) \nWHERE active = true;\n\n-- View existing indexes\n\\di\n\n-- Explain query plan\nEXPLAIN ANALYZE SELECT * FROM users WHERE email = 'test@example.com';"
+            }
+          }
+        ]
+      },
+      {
+        "id": "transactions",
+        "title": "Transactions & ACID",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Transaction Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "ACID Properties",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🅰️",
+                  "text": "<strong>Atomicity</strong> - All or nothing execution"
+                },
+                {
+                  "emoji": "©️",
+                  "text": "<strong>Consistency</strong> - Database rules preserved"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Isolation</strong> - Concurrent transactions don't interfere"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Durability</strong> - Committed changes persist"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💳",
+            "title": "Transaction Examples",
+            "box": {
+              "content": "<strong>Bank Transfer Example</strong>",
+              "code": "BEGIN;  -- Start transaction\n\n-- Deduct from account 1\nUPDATE accounts SET balance = balance - 100 \nWHERE id = 1;\n\n-- Add to account 2\nUPDATE accounts SET balance = balance + 100 \nWHERE id = 2;\n\n-- Check if both operations succeeded\n-- If anything fails, we can rollback\nCOMMIT;  -- Save changes\n\n-- Or in case of error:\n-- ROLLBACK;  -- Undo all changes\n\n-- Transaction with savepoints\nBEGIN;\nUPDATE accounts SET balance = balance - 50 WHERE id = 1;\nSAVEPOINT point1;\nUPDATE accounts SET balance = balance + 50 WHERE id = 2;\n-- If second update fails:\nROLLBACK TO point1;\nCOMMIT;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "json-support",
+        "title": "JSON Support",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "JSON & JSONB Data Types"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "JSON vs JSONB",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>JSON</strong> - Stored as text, preserves whitespace"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>JSONB</strong> - Binary format, faster queries, smaller size"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>JSONB</strong> - Supports indexing, recommended for most cases"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "JSON Operations",
+            "box": {
+              "content": "<strong>Working with JSON Data</strong>",
+              "code": "CREATE TABLE products (\n    id SERIAL PRIMARY KEY,\n    name VARCHAR(100),\n    attributes JSONB\n);\n\n-- Insert JSON data\nINSERT INTO products (name, attributes) VALUES\n('Laptop', '{\"brand\": \"Dell\", \"ram\": 16, \"storage\": \"512GB SSD\"}'),\n('Phone', '{\"brand\": \"Samsung\", \"storage\": \"128GB\", \"color\": \"black\"}');\n\n-- Query JSON data\nSELECT name, attributes->>'brand' as brand\nFROM products;\n\n-- Filter by JSON property\nSELECT * FROM products \nWHERE attributes->>'brand' = 'Dell';\n\n-- Update JSON property\nUPDATE products \nSET attributes = jsonb_set(attributes, '{color}', '\"silver\"')\nWHERE name = 'Laptop';\n\n-- Create JSONB index\nCREATE INDEX idx_products_attributes ON products USING GIN (attributes);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "window-functions",
+        "title": "Window Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Analytics"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Window Function Examples",
+            "box": {
+              "content": "<strong>Analytical Queries</strong>",
+              "code": "-- Sample sales data\nCREATE TABLE sales (\n    id SERIAL PRIMARY KEY,\n    salesperson VARCHAR(100),\n    region VARCHAR(50),\n    amount DECIMAL(10,2),\n    sale_date DATE\n);\n\n-- Running total per salesperson\nSELECT \n    salesperson,\n    sale_date,\n    amount,\n    SUM(amount) OVER (\n        PARTITION BY salesperson \n        ORDER BY sale_date\n        ROWS UNBOUNDED PRECEDING\n    ) as running_total\nFROM sales;\n\n-- Rank salespeople within regions\nSELECT \n    salesperson,\n    region,\n    amount,\n    RANK() OVER (\n        PARTITION BY region \n        ORDER BY amount DESC\n    ) as region_rank\nFROM sales;\n\n-- Moving average (3-month)\nSELECT \n    sale_date,\n    amount,\n    AVG(amount) OVER (\n        ORDER BY sale_date\n        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW\n    ) as moving_avg\nFROM sales;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security & Permissions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Management & Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Role Management",
+            "box": {
+              "content": "<strong>Managing Users and Permissions</strong>",
+              "code": "-- Create a new role\nCREATE ROLE app_user WITH LOGIN PASSWORD 'secure_password';\n\n-- Create a role with specific privileges\nCREATE ROLE read_only;\nGRANT CONNECT ON DATABASE mydb TO read_only;\nGRANT USAGE ON SCHEMA public TO read_only;\nGRANT SELECT ON ALL TABLES IN SCHEMA public TO read_only;\n\n-- Grant specific table permissions\nGRANT SELECT, INSERT, UPDATE ON users TO app_user;\nGRANT USAGE, SELECT ON SEQUENCE users_id_seq TO app_user;\n\n-- Create a group role\nCREATE ROLE developers;\nGRANT developers TO user1, user2, user3;\n\n-- View roles and privileges\n\\du  -- List roles\n\\dp  -- List table privileges\n\n-- Revoke permissions\nREVOKE DELETE ON users FROM app_user;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "backup-recovery",
+        "title": "Backup & Recovery",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Protection"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>SQL Dump</strong> - pg_dump for logical backups"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Continuous Archiving</strong> - WAL files for PITR"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>File System Backup</strong> - Physical file copy"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Replication</strong> - Real-time data copying"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Backup Commands",
+            "box": {
+              "content": "<strong>Using pg_dump and pg_restore</strong>",
+              "code": "# Backup a single database\npg_dump -U username -d database_name -f backup.sql\n\n# Backup all databases\npg_dumpall -U username -f alldb_backup.sql\n\n# Backup with custom format (smaller, faster)\npg_dump -U username -d database_name -Fc -f backup.dump\n\n# Restore from SQL file\npsql -U username -d database_name -f backup.sql\n\n# Restore from custom format\npg_restore -U username -d database_name backup.dump\n\n# Backup with compression\npg_dump -U username -d database_name | gzip > backup.sql.gz\n\n# Restore from compressed backup\ngunzip -c backup.sql.gz | psql -U username -d database_name\n\n# Create backup with timestamp\npg_dump -U username -d database_name -f backup_$(date +%Y%m%d).sql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-tuning",
+        "title": "Performance Tuning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Query Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "EXPLAIN and ANALYZE",
+            "box": {
+              "content": "<strong>Query Performance Analysis</strong>",
+              "code": "-- Basic explain\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Explain with actual execution stats\nEXPLAIN ANALYZE SELECT * FROM orders WHERE order_date > '2023-01-01';\n\n-- Explain with buffers\nEXPLAIN (ANALYZE, BUFFERS) \nSELECT * FROM products WHERE price > 1000;\n\n-- Sample output interpretation:\n-- Seq Scan = Full table scan (may need index)\n-- Index Scan = Using index (good)\n-- Bitmap Heap Scan = Multiple index usage\n-- Nested Loop = Join method\n\n-- Common performance tips:\n-- 1. Use EXPLAIN ANALYZE to see actual performance\n-- 2. Look for sequential scans on large tables\n-- 3. Ensure statistics are up to date: ANALYZE table_name;\n-- 4. Check for missing indexes\n-- 5. Monitor slow queries in postgresql.conf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "extensions",
+        "title": "PostgreSQL Extensions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Extending PostgreSQL"
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "Popular Extensions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗺️",
+                  "text": "<strong>PostGIS</strong> - Geographic information systems"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>pgcrypto</strong> - Encryption functions"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Tablefunc</strong> - Crosstab functionality"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>pg_trgm</strong> - Text similarity search"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>uuid-ossp</strong> - UUID generation"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>TimescaleDB</strong> - Time-series data"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Using Extensions",
+            "box": {
+              "content": "<strong>Managing Extensions</strong>",
+              "code": "-- List available extensions\nSELECT * FROM pg_available_extensions;\n\n-- List installed extensions\nSELECT * FROM pg_extension;\n\n-- Install an extension\nCREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";\nCREATE EXTENSION IF NOT EXISTS \"pgcrypto\";\n\n-- Use uuid-ossp to generate UUIDs\nSELECT uuid_generate_v4();\n\n-- Use pgcrypto for encryption\nSELECT crypt('password', gen_salt('bf', 8));\n\n-- Verify password\nSELECT (crypt('password', stored_hash) = stored_hash) \nAS password_match FROM users WHERE id = 1;\n\n-- Remove an extension\nDROP EXTENSION \"uuid-ossp\";"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud-deployment",
+        "title": "Cloud & Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Cloud PostgreSQL Services",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🅰️",
+                  "text": "<strong>AWS RDS</strong> - Amazon Relational Database Service"
+                },
+                {
+                  "emoji": "🌀",
+                  "text": "<strong>Google Cloud SQL</strong> - Google's managed PostgreSQL"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>Azure Database</strong> - Microsoft Azure PostgreSQL"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Supabase</strong> - Open source Firebase alternative"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Neon</strong> - Serverless PostgreSQL with branching"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Render</strong> - Simple cloud deployment"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "programming-integration",
+        "title": "Programming Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Application Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Connecting from Applications",
+            "box": {
+              "content": "<strong>Connection Strings and Drivers</strong>",
+              "code": "# Python with psycopg2\nimport psycopg2\n\nconn = psycopg2.connect(\n    host=\"localhost\",\n    database=\"mydb\",\n    user=\"myuser\",\n    password=\"mypassword\"\n)\n\n# Node.js with pg\nconst { Client } = require('pg');\nconst client = new Client({\n    host: 'localhost',\n    database: 'mydb',\n    user: 'myuser',\n    password: 'mypassword',\n    port: 5432,\n});\n\n# Connection string format\npostgresql://username:password@hostname:port/database\n\n# Environment variables (recommended)\nDATABASE_URL=postgresql://user:pass@host:5432/db"
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PostgreSQL Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Development Guidelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Use connection pooling</strong> - PgBouncer for high traffic"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitor performance</strong> - Use pg_stat_statements"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure connections</strong> - Use SSL, strong passwords"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Regular maintenance</strong> - VACUUM, REINDEX, ANALYZE"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Use appropriate data types</strong> - Don't use TEXT for everything"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Index strategically</strong> - Not too many, not too few"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "PostgreSQL Command Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential commands quick reference</strong>",
+              "code": "# Connection & Info\npsql -U username -d database     # Connect to database\n\\l                                # List databases\n\\c database_name                 # Connect to database\n\\dt                              # List tables\n\\d table_name                    # Describe table\n\\du                              # List users\n\\dn                              # List schemas\n\n# Database Operations\nCREATE DATABASE dbname;          # Create database\nDROP DATABASE dbname;            # Remove database\n\\i filename.sql                  # Execute SQL file\n\\o filename.txt                  # Output to file\n\n# Table Operations\nCREATE TABLE table_name (...);   # Create table\nDROP TABLE table_name;           # Remove table\nALTER TABLE table_name ...       # Modify table\nTRUNCATE TABLE table_name;       # Empty table\n\n# Data Operations\nSELECT * FROM table;             # Query data\nINSERT INTO table VALUES (...);  # Insert data\nUPDATE table SET col=val;        # Update data\nDELETE FROM table WHERE ...;     # Delete data\n\n# Performance\nEXPLAIN ANALYZE query;           # Analyze query\nVACUUM ANALYZE table;            # Maintenance\nREINDEX TABLE table;             # Rebuild indexes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>PostgreSQL Official Documentation</strong> - postgresql.org/docs"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>PostgreSQL Tutorial</strong> - postgresqltutorial.com"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>PostgreSQL Exercises</strong> - pgexercises.com"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Interactive Tutorial</strong> - sqlbolt.com"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Corey Schafer, FreeCodeCamp"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>PostgreSQL Wiki</strong> - wiki.postgresql.org"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: E-commerce Database",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Design database schema for online store"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create tables: users, products, orders, order_items"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Implement relationships with foreign keys"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Insert sample data for testing"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Write queries for business analytics"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Create views for common reports"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Add indexes for performance"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Implement user roles and permissions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between JSON and JSONB?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you create a foreign key constraint?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What command analyzes query performance?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you backup a PostgreSQL database?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What are the ACID properties?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "PostgreSQL = Advanced open-source ORDBMS"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Free to use, enterprise-grade features"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "ACID compliant, highly extensible"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Rich data types including JSON and arrays"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Excellent performance with proper indexing"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential skill for backend developers and DBAs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss PostgreSQL concepts, SQL queries, or specific use cases!<br><span class=\"gradient-accent\">All database questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐘</span> Ready to master PostgreSQL?<br><span class=\"gradient-accent\">Start building powerful applications today!</span>",
+              "note": "Open Source • Powerful • Enterprise Ready"
+            },
+            "footer": {
+              "org": "Database Experts Community",
+              "tagline": "Empowering developers with database knowledge"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

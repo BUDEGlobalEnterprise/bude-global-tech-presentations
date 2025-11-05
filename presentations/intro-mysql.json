@@ -1,0 +1,1040 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to MySQL",
+            "subtitle": "Complete Database Management Guide<br>From Beginner to Production Ready"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Database Specialist",
+            "title": "MySQL Database Administrator",
+            "experience": "5+ years in MySQL Optimization & Scaling",
+            "oss_experience": "Web Applications & High Traffic Systems",
+            "github": "https://github.com/mysql-expert",
+            "website": "https://mysql-expert.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is MySQL?</strong> - History & Oracle Era"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>MySQL vs Other Databases</strong> - Feature Comparison"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Installation & Setup</strong> - Multiple Platforms"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tools & Workbench</strong> - Administration & Development"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Architecture</strong> - Storage Engines & Components"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>SQL Fundamentals</strong> - CRUD & Data Types"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Joins & Relationships</strong> - Table Connections"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance & Indexing</strong> - Query Optimization"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Transactions & ACID</strong> - Data Integrity"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Stored Procedures</strong> - Server-side Logic"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Users</strong> - Access Management"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud & Scaling</strong> - Production Deployment"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-mysql",
+        "title": "What is MySQL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding MySQL"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is MySQL?",
+            "box": {
+              "content": "<span class=\"highlight\">World's most popular open-source relational database</span>",
+              "list": [
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>Created by</strong> - MySQL AB (1995), now Oracle"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - GPLv2 (Community Edition)"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Features</strong> - ACID compliant, cross-platform"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Usage</strong> - LAMP stack, web applications, WordPress"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performance</strong> - Fast reads, web-optimized"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> MySQL powers websites like Facebook, Twitter, YouTube, and Wikipedia!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>1995</strong> - MySQL created by MySQL AB"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2000</strong> - GPL license, becomes open source"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2008</strong> - Acquired by Sun Microsystems"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2010</strong> - Oracle acquires Sun (MySQL)"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2013</strong> - MySQL 5.6 with performance improvements"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>2018</strong> - MySQL 8.0 with window functions, JSON"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Database Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL vs Other Databases"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Database System Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Fast, web-optimized, easy setup"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Advanced features, SQL compliance"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>SQL Server</strong> - Microsoft ecosystem, enterprise"
+                },
+                {
+                  "emoji": "🌀",
+                  "text": "<strong>MariaDB</strong> - MySQL fork, community-driven"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>SQLite</strong> - Embedded, zero-configuration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "editions",
+        "title": "MySQL Editions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL Editions & Forks"
+          },
+          {
+            "type": "content",
+            "emoji": "💎",
+            "title": "MySQL Variants",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>MySQL Community</strong> - Free, open source"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>MySQL Enterprise</strong> - Commercial, support, monitoring"
+                },
+                {
+                  "emoji": "🌀",
+                  "text": "<strong>MariaDB</strong> - Community fork, enhanced features"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Percona Server</strong> - Performance-optimized fork"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>MySQL Cluster</strong> - High availability edition"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Installing MySQL"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - MySQL Installer, XAMPP, WAMP"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - apt, yum, pacman packages"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - Homebrew, DMG installer"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Official MySQL image"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - AWS RDS, Google Cloud SQL, Azure"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐧",
+            "title": "Ubuntu Installation Example",
+            "box": {
+              "content": "<strong>Installing on Ubuntu/Debian</strong>",
+              "code": "# Update package list\nsudo apt update\n\n# Install MySQL server\nsudo apt install mysql-server\n\n# Secure installation\nsudo mysql_secure_installation\n\n# Start MySQL service\nsudo systemctl start mysql\nsudo systemctl enable mysql\n\n# Connect to MySQL\nsudo mysql -u root -p\n\n# Create a new user and database\nCREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';\nCREATE DATABASE mydatabase;\nGRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';\nFLUSH PRIVILEGES;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "MySQL Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Tools & Clients"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Popular MySQL Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>MySQL Shell</strong> - Advanced command-line interface"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>MySQL Workbench</strong> - Visual administration tool"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>phpMyAdmin</strong> - Web-based administration"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>DBeaver</strong> - Universal database tool"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>HeidiSQL</strong> - Windows MySQL client"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Sequel Pro</strong> - macOS MySQL client"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "MySQL Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "System Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "MySQL Architecture Overview",
+            "box": {
+              "content": "<strong>Core Components</strong>",
+              "code": "MySQL Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (Apps, Tools)  │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Connection     │\n│   Pool & Threads│\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  SQL Interface  │\n│  Parser & Cache │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Optimizer &    │\n│  Query Engine   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage Engine │\n│  (InnoDB, etc.) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  File System    │\n│   (Data Files)  │\n└─────────────────┘"
+            }
+          }
+        ]
+      },
+      {
+        "id": "basic-sql",
+        "title": "Basic SQL Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential SQL Commands"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "CRUD Operations",
+            "box": {
+              "content": "<strong>Create, Read, Update, Delete</strong>",
+              "code": "-- Create a table\nCREATE TABLE users (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\n-- Insert data\nINSERT INTO users (username, email) \nVALUES ('john_doe', 'john@example.com');\n\n-- Read data\nSELECT * FROM users;\nSELECT username, email FROM users WHERE id = 1;\n\n-- Update data\nUPDATE users SET email = 'new_email@example.com' \nWHERE username = 'john_doe';\n\n-- Delete data\nDELETE FROM users WHERE id = 1;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-types",
+        "title": "Data Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL Data Types"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Common Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Numeric</strong> - INT, BIGINT, DECIMAL, FLOAT"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Text</strong> - VARCHAR, TEXT, CHAR, LONGTEXT"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Boolean</strong> - BOOL, BOOLEAN (TINYINT(1))"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date/Time</strong> - DATE, TIME, DATETIME, TIMESTAMP"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>JSON</strong> - JSON type (MySQL 5.7+)"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>ENUM & SET</strong> - Predefined value lists"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>BLOB</strong> - Binary large objects"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "joins",
+        "title": "Joins & Relationships",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Table Relationships"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "SQL Join Types",
+            "box": {
+              "content": "<strong>Joining Multiple Tables</strong>",
+              "code": "-- Sample tables\nCREATE TABLE departments (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL\n);\n\nCREATE TABLE employees (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    department_id INT,\n    FOREIGN KEY (department_id) REFERENCES departments(id)\n);\n\n-- INNER JOIN (only matching records)\nSELECT e.name, d.name as department\nFROM employees e\nINNER JOIN departments d ON e.department_id = d.id;\n\n-- LEFT JOIN (all employees, even without department)\nSELECT e.name, d.name as department\nFROM employees e\nLEFT JOIN departments d ON e.department_id = d.id;\n\n-- RIGHT JOIN (all departments, even without employees)\nSELECT e.name, d.name as department\nFROM employees e\nRIGHT JOIN departments d ON e.department_id = d.id;\n\n-- CROSS JOIN (cartesian product)\nSELECT e.name, d.name as department\nFROM employees e\nCROSS JOIN departments d;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "indexes",
+        "title": "Indexes & Performance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Index Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>BTREE</strong> - Default, balanced tree index"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>FULLTEXT</strong> - Text search indexes"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>SPATIAL</strong> - Geographic data indexes"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Primary Key</strong> - Clustered index"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Unique Index</strong> - Ensures unique values"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Creating Indexes",
+            "box": {
+              "content": "<strong>Index Management</strong>",
+              "code": "-- Basic index\nCREATE INDEX idx_users_email ON users(email);\n\n-- Unique index\nCREATE UNIQUE INDEX idx_users_username ON users(username);\n\n-- Composite index\nCREATE INDEX idx_orders_user_date ON orders(user_id, order_date);\n\n-- Fulltext index\nCREATE FULLTEXT INDEX idx_products_description ON products(description);\n\n-- View existing indexes\nSHOW INDEX FROM users;\n\n-- Explain query plan\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Drop index\nDROP INDEX idx_users_email ON users;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "stored-procedures",
+        "title": "Stored Procedures",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Server-side Logic"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Stored Procedures & Functions",
+            "box": {
+              "content": "<strong>Creating Reusable Logic</strong>",
+              "code": "-- Simple stored procedure\nDELIMITER //\nCREATE PROCEDURE GetUserCount()\nBEGIN\n    SELECT COUNT(*) as total_users FROM users;\nEND //\nDELIMITER ;\n\n-- Call procedure\nCALL GetUserCount();\n\n-- Procedure with parameters\nDELIMITER //\nCREATE PROCEDURE GetUserByEmail(IN user_email VARCHAR(100))\nBEGIN\n    SELECT * FROM users WHERE email = user_email;\nEND //\nDELIMITER ;\n\n-- Call with parameter\nCALL GetUserByEmail('john@example.com');\n\n-- Function example\nDELIMITER //\nCREATE FUNCTION CalculateDiscount(price DECIMAL(10,2), discount_rate DECIMAL(3,2))\nRETURNS DECIMAL(10,2)\nDETERMINISTIC\nBEGIN\n    RETURN price * (1 - discount_rate);\nEND //\nDELIMITER ;\n\n-- Use function\nSELECT name, price, CalculateDiscount(price, 0.1) as discounted_price FROM products;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "transactions",
+        "title": "Transactions & ACID",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Transaction Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "ACID Properties in MySQL",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🅰️",
+                  "text": "<strong>Atomicity</strong> - All or nothing execution"
+                },
+                {
+                  "emoji": "©️",
+                  "text": "<strong>Consistency</strong> - Database rules preserved"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Isolation</strong> - Concurrent transactions don't interfere"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Durability</strong> - Committed changes persist"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💳",
+            "title": "Transaction Examples",
+            "box": {
+              "content": "<strong>Bank Transfer Example</strong>",
+              "code": "START TRANSACTION;\n\n-- Deduct from account 1\nUPDATE accounts SET balance = balance - 100 \nWHERE id = 1 AND balance >= 100;\n\n-- Check if deduction was successful\nIF ROW_COUNT() = 0 THEN\n    ROLLBACK;\n    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient funds';\nEND IF;\n\n-- Add to account 2\nUPDATE accounts SET balance = balance + 100 \nWHERE id = 2;\n\n-- Commit if both operations succeeded\nCOMMIT;\n\n-- Transaction isolation levels\nSET TRANSACTION ISOLATION LEVEL READ COMMITTED;\nSET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;\n\n-- Check current isolation level\nSELECT @@transaction_isolation;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "storage-engines",
+        "title": "Storage Engines",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL Storage Engines"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "InnoDB vs MyISAM",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>InnoDB</strong> - ACID compliant, row-level locking, foreign keys"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>MyISAM</strong> - Faster reads, table-level locking, full-text search"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Memory</strong> - In-memory tables, temporary data"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>CSV</strong> - CSV format storage"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Archive</strong> - Compressed storage for historical data"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Storage Engine Management",
+            "box": {
+              "content": "<strong>Working with Storage Engines</strong>",
+              "code": "-- Check available storage engines\nSHOW ENGINES;\n\n-- Create table with specific engine\nCREATE TABLE my_table (\n    id INT PRIMARY KEY,\n    data VARCHAR(100)\n) ENGINE=InnoDB;\n\n-- Change storage engine of existing table\nALTER TABLE my_table ENGINE=MyISAM;\n\n-- Check table engine\nSHOW TABLE STATUS LIKE 'my_table';\n\n-- Default storage engine\nSELECT @@default_storage_engine;\n\n-- Set default storage engine\nSET default_storage_engine = InnoDB;\n\n-- Important InnoDB settings\nSHOW VARIABLES LIKE 'innodb_buffer_pool_size';\nSHOW VARIABLES LIKE 'innodb_log_file_size';"
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security & Users",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Management & Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "User & Role Management",
+            "box": {
+              "content": "<strong>Managing Users and Permissions</strong>",
+              "code": "-- Create a new user\nCREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';\n\n-- Create user with specific host\nCREATE USER 'remote_user'@'192.168.1.%' IDENTIFIED BY 'password';\n\n-- Grant privileges\nGRANT SELECT, INSERT, UPDATE ON mydatabase.* TO 'app_user'@'localhost';\n\n-- Grant all privileges on specific database\nGRANT ALL PRIVILEGES ON mydatabase.* TO 'admin_user'@'localhost';\n\n-- Create role (MySQL 8.0+)\nCREATE ROLE 'read_only';\nGRANT SELECT ON mydatabase.* TO 'read_only';\nGRANT 'read_only' TO 'app_user'@'localhost';\n\n-- View users and privileges\nSELECT user, host FROM mysql.user;\nSHOW GRANTS FOR 'app_user'@'localhost';\n\n-- Revoke privileges\nREVOKE DELETE ON mydatabase.* FROM 'app_user'@'localhost';\n\n-- Remove user\nDROP USER 'app_user'@'localhost';"
+            }
+          }
+        ]
+      },
+      {
+        "id": "backup-recovery",
+        "title": "Backup & Recovery",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Protection"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>mysqldump</strong> - Logical backup, SQL format"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>mysqlpump</strong> - Parallel backup (MySQL 5.7+)"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Physical Backup</strong> - File system copy"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Binary Log Backup</strong> - Point-in-time recovery"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Enterprise Backup</strong> - MySQL Enterprise Backup"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Backup Commands",
+            "box": {
+              "content": "<strong>Using mysqldump</strong>",
+              "code": "# Backup a single database\nmysqldump -u username -p database_name > backup.sql\n\n# Backup all databases\nmysqldump -u username -p --all-databases > alldb_backup.sql\n\n# Backup with compression\nmysqldump -u username -p database_name | gzip > backup.sql.gz\n\n# Backup specific tables\nmysqldump -u username -p database_name table1 table2 > tables_backup.sql\n\n# Restore from backup\nmysql -u username -p database_name < backup.sql\n\n# Restore from compressed backup\ngunzip -c backup.sql.gz | mysql -u username -p database_name\n\n# Create backup with timestamp\nmysqldump -u username -p database_name > backup_$(date +%Y%m%d).sql\n\n# Backup with consistent data\nmysqldump -u username -p --single-transaction database_name > backup.sql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-tuning",
+        "title": "Performance Tuning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Query Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "EXPLAIN and Query Analysis",
+            "box": {
+              "content": "<strong>Query Performance Analysis</strong>",
+              "code": "-- Basic explain\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Explain with format options\nEXPLAIN FORMAT=JSON SELECT * FROM orders WHERE order_date > '2023-01-01';\n\n-- Analyze a query\nEXPLAIN ANALYZE SELECT * FROM products WHERE price > 1000;\n\n-- Sample output interpretation:\n-- type: ALL = Full table scan (may need index)\n-- type: ref = Using index (good)\n-- key: NULL = No index used\n-- rows: Estimated rows to examine\n\n-- Common performance tips:\n-- 1. Use EXPLAIN to analyze query plans\n-- 2. Look for full table scans on large tables\n-- 3. Ensure indexes are used for WHERE clauses\n-- 4. Monitor slow queries\n-- 5. Optimize database configuration\n\n-- Enable slow query log\nSET GLOBAL slow_query_log = 1;\nSET GLOBAL long_query_time = 2;\n\n-- Check performance schema\nSELECT * FROM performance_schema.events_statements_summary_by_digest\nORDER BY sum_timer_wait DESC LIMIT 10;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "replication",
+        "title": "Replication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL Replication"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Replication Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👑",
+                  "text": "<strong>Master-Slave</strong> - Traditional async replication"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>GTID Replication</strong> - Global Transaction ID based"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "<strong>Group Replication</strong> - MySQL InnoDB Cluster"
+                },
+                {
+                  "emoji": "🔁",
+                  "text": "<strong>Multi-Source</strong> - Multiple masters to one slave"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Semi-Sync</strong> - Enhanced data safety"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud-deployment",
+        "title": "Cloud & Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Cloud MySQL Services",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🅰️",
+                  "text": "<strong>AWS RDS</strong> - Amazon Relational Database Service"
+                },
+                {
+                  "emoji": "🌀",
+                  "text": "<strong>Google Cloud SQL</strong> - Google's managed MySQL"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>Azure Database</strong> - Microsoft Azure MySQL"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>PlanetScale</strong> - Serverless MySQL platform"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>DigitalOcean</strong> - Managed MySQL clusters"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Self-hosted</strong> - VPS, dedicated servers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "programming-integration",
+        "title": "Programming Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Application Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Connecting from Applications",
+            "box": {
+              "content": "<strong>Connection Strings and Drivers</strong>",
+              "code": "# Python with mysql-connector\nimport mysql.connector\n\nconn = mysql.connector.connect(\n    host=\"localhost\",\n    database=\"mydb\",\n    user=\"myuser\",\n    password=\"mypassword\"\n)\n\n# Node.js with mysql2\nconst mysql = require('mysql2');\nconst connection = mysql.createConnection({\n    host: 'localhost',\n    user: 'myuser',\n    password: 'mypassword',\n    database: 'mydb'\n});\n\n# PHP with PDO\n$pdo = new PDO('mysql:host=localhost;dbname=mydb', 'myuser', 'mypassword');\n\n# Connection string format\nmysql://username:password@hostname:port/database\n\n# Environment variables (recommended)\nDATABASE_URL=mysql://user:pass@host:3306/db"
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MySQL Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Development Guidelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Use InnoDB</strong> - Default and recommended storage engine"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Proper indexing</strong> - Index columns used in WHERE, JOIN, ORDER BY"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure connections</strong> - Use SSL, strong passwords"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Regular backups</strong> - Automated backup strategies"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Use appropriate data types</strong> - Don't use VARCHAR for everything"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Monitor performance</strong> - Use slow query log, performance schema"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "MySQL Command Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential commands quick reference</strong>",
+              "code": "# Connection & Info\nmysql -u username -p               # Connect to MySQL\nSHOW DATABASES;                    # List databases\nUSE database_name;                 # Switch database\nSHOW TABLES;                       # List tables\nDESCRIBE table_name;               # Describe table structure\nSHOW CREATE TABLE table_name;      # Show table creation SQL\n\n# User Management\nCREATE USER 'user'@'host';        # Create user\nGRANT privileges ON db.table TO user; # Grant privileges\nSHOW GRANTS FOR user;              # Show user privileges\n\n# Database Operations\nCREATE DATABASE dbname;            # Create database\nDROP DATABASE dbname;              # Remove database\nSOURCE filename.sql;               # Execute SQL file\n\n# Table Operations\nCREATE TABLE table_name (...);     # Create table\nALTER TABLE table_name ...         # Modify table\nDROP TABLE table_name;             # Remove table\nTRUNCATE TABLE table_name;         # Empty table\n\n# Data Operations\nSELECT * FROM table;               # Query data\nINSERT INTO table VALUES (...);    # Insert data\nUPDATE table SET col=val;          # Update data\nDELETE FROM table WHERE ...;       # Delete data\n\n# Performance & Maintenance\nEXPLAIN SELECT ...;                # Analyze query\nSHOW INDEX FROM table;             # Show indexes\nOPTIMIZE TABLE table;              # Optimize table\nANALYZE TABLE table;               # Update table statistics"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>MySQL Official Documentation</strong> - dev.mysql.com/doc"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>MySQL Tutorial</strong> - mysqltutorial.org"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>MySQL Exercises</strong> - sqlzoo.net"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Interactive Tutorial</strong> - w3schools.com/sql"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Programming with Mosh, FreeCodeCamp"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Percona Blog</strong> - Excellent performance tips"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Blog Database",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Design database schema for blog platform"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create tables: users, posts, categories, comments"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Implement relationships with foreign keys"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Insert sample blog data"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Write queries for blog features"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Create views for common reports"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Add indexes for performance"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Implement user authentication system"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the default storage engine in MySQL?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you create a foreign key constraint?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What command analyzes query performance?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you backup a MySQL database?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What are the ACID properties?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐬",
+                  "text": "MySQL = World's most popular open-source RDBMS"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Free community edition, enterprise options"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "ACID compliant, web-optimized performance"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Rich data types including JSON (5.7+)"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Excellent performance with proper indexing"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential for web developers and DBAs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss MySQL concepts, SQL queries, or specific use cases!<br><span class=\"gradient-accent\">All database questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐬</span> Ready to master MySQL?<br><span class=\"gradient-accent\">Start building powerful web applications today!</span>",
+              "note": "Popular • Reliable • Web-Optimized"
+            },
+            "footer": {
+              "org": "Web Developers Community",
+              "tagline": "Empowering developers with database knowledge"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
