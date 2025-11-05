@@ -127,12 +127,10 @@ const PRESENTATIONS_CONFIG = [
       "windows",
       "macos",
     ],
-  },
-  {
+  }, {
     file: "presentations/intro-git-github.json",
     title: "Introduction to Git & GitHub",
-    description:
-      "Complete version control mastery from zero to collaboration pro",
+    description: "Complete version control mastery from zero to collaboration pro",
     keywords: [
       "git",
       "github",
@@ -145,22 +143,51 @@ const PRESENTATIONS_CONFIG = [
     ],
   },
   {
-    file: 'presentations/intro-gitea.json',
-    title: 'Introduction to Gitea',
-    description: 'Lightweight, self-hosted Git service with complete control',
-    keywords: ['gitea', 'self-hosted', 'git', 'devops', 'ci/cd', 'docker', 'kubernetes']
+    file: "presentations/intro-gitea.json",
+    title: "Introduction to Gitea",
+    description: "Lightweight, self-hosted Git service with complete control",
+    keywords: ["gitea", "self-hosted", "git", "devops", "ci/cd", "docker", "kubernetes"],
   },
   {
-    file: 'presentations/intro-linux.json',
-    title: 'Introduction to Linux',
-    description: 'Complete operating system guide from beginner to power user',
-    keywords: ['linux', 'ubuntu', 'debian', 'command-line', 'bash', 'sysadmin', 'devops']
+    file: "presentations/intro-linux.json",
+    title: "Introduction to Linux",
+    description: "Complete operating system guide from beginner to power user",
+    keywords: ["linux", "ubuntu", "debian", "command-line", "bash", "sysadmin", "devops"],
   },
   {
-    "file": "presentations/intro-docker.json",
-    "title": "Introduction to Docker & Containerization",
-    "description": "Complete containerization guide from beginner to production deployment",
-    "keywords": ["docker", "containers", "containerization", "devops", "microservices", "docker-compose", "kubernetes", "ci-cd"]
+    file: "presentations/intro-docker.json",
+    title: "Introduction to Docker & Containerization",
+    description: "Complete containerization guide from beginner to production deployment",
+    keywords: [
+      "docker",
+      "containers",
+      "containerization",
+      "devops",
+      "microservices",
+      "docker-compose",
+      "kubernetes",
+      "ci-cd",
+    ],
+  },
+  {
+    file: "presentations/tailwind-css-presentation.json",
+    title: "Introduction to Tailwind CSS",
+    description:
+      "Complete utility-first CSS framework guide from basics to advanced component development",
+    keywords: [
+      "tailwind",
+      "tailwindcss",
+      "css",
+      "frontend",
+      "ui",
+      "design",
+      "responsive",
+      "utility-first",
+      "components",
+      "react",
+      "vue",
+    ],
   }
+
   // Add more presentations here as you create them
 ];

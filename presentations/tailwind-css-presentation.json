@@ -1,0 +1,830 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Mastering Tailwind CSS",
+            "subtitle": "Complete Utility-First CSS Framework<br>From Beginner to Production Ready"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & Modern CSS Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>What is Tailwind CSS?</strong> - Utility-First Philosophy"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Tailwind vs Bootstrap</strong> - Framework Comparison"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Installation & Setup</strong> - CLI, CDN, Framework Integration"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Core Utilities</strong> - Spacing, Colors, Typography"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Responsive Design</strong> - Mobile-First Approach"
+                },
+                {
+                  "emoji": "🎪",
+                  "text": "<strong>Variants</strong> - Hover, Focus, Dark Mode"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Layout Systems</strong> - Flexbox & Grid"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Configuration</strong> - Customizing Design System"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>@apply Directive</strong> - Extracting Components"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Framework Integration</strong> - React, Vue, Next.js"
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Plugins & Ecosystem</strong> - Forms, Typography, Animation"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Component Patterns</strong> - Building UI Components"
+                },
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Dark Mode</strong> - Theme Switching"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - PurgeCSS & Optimization"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Design Systems</strong> - Scalable CSS Architecture"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Real-world Projects</strong> - Production Best Practices"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-tailwind",
+        "title": "What is Tailwind CSS?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Tailwind CSS"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "What is Tailwind CSS?",
+            "box": {
+              "content": "<span class=\"highlight\">Utility-first CSS framework</span> for rapid UI development",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Created by</strong> - Adam Wathan, Steve Schoger, and team"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - MIT (Open source)"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Usage</strong> - Used by 500k+ projects, 4M+ downloads/month"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Philosophy</strong> - Utility-first, not component-based"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Benefit</strong> - Build custom designs without writing CSS"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Tailwind was created because the founders were tired of constantly naming CSS classes!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tailwind-vs-bootstrap",
+        "title": "Tailwind vs Bootstrap",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Framework Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Tailwind vs Traditional Frameworks",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Tailwind</strong> - Utility-first, unlimited customization"
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Bootstrap</strong> - Component-based, predefined look"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Tailwind</strong> - No overriding CSS, smaller bundle"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Bootstrap</strong> - Includes unused components"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Tailwind</strong> - Consistent spacing/color system"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Bootstrap</strong> - Theme variables require Sass"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "utility-first-philosophy",
+        "title": "Utility-First Philosophy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Utility-First Approach"
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Utility-First vs Semantic CSS",
+            "box": {
+              "content": "<strong>Traditional semantic CSS</strong>",
+              "code": "/* Semantic CSS */\n.btn-primary {\n  background: blue;\n  color: white;\n  padding: 12px 24px;\n  border-radius: 8px;\n  font-weight: bold;\n}\n\n/* HTML */\n<button class=\"btn-primary\">Click me</button>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Tailwind Utility Approach",
+            "box": {
+              "content": "<strong>Utility-first with Tailwind</strong>",
+              "code": "<!-- Tailwind Utility Classes -->\n<button class=\"bg-blue-500 text-white px-6 py-3 rounded-lg font-bold\">\n  Click me\n</button>\n\n<!-- More complex example -->\n<div class=\"max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl\">\n  <div class=\"md:flex\">\n    <div class=\"md:shrink-0\">\n      <img class=\"h-48 w-full object-cover md:h-full md:w-48\" src=\"/img.jpg\" alt=\"\">\n    </div>\n    <div class=\"p-8\">\n      <div class=\"uppercase tracking-wide text-sm text-indigo-500 font-semibold\">Case study</div>\n      <a href=\"#\" class=\"block mt-1 text-lg leading-tight font-medium text-black hover:underline\">Finding customers for your new business</a>\n      <p class=\"mt-2 text-slate-500\">Getting a new business off the ground is a lot of hard work.</p>\n    </div>\n  </div>\n</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started with Tailwind"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Installation Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>CDN</strong> - Quick start for prototyping"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>CLI</strong> - Standalone build process"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Framework Guides</strong> - React, Vue, Next.js, etc."
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Play CDN</strong> - Development and learning"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "CLI Installation",
+            "box": {
+              "content": "<strong>Install via npm</strong>",
+              "code": "# Initialize package.json\nnpm init -y\n\n# Install Tailwind CSS\nnpm install -D tailwindcss\n\n# Create tailwind.config.js\nnpx tailwindcss init\n\n# Create your CSS file\n/* src/input.css */\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n# Build your CSS\nnpx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "CDN Quick Start",
+            "box": {
+              "content": "<strong>Using Tailwind via CDN</strong>",
+              "code": "<!-- Development CDN (not for production) -->\n<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <script src=\"https://cdn.tailwindcss.com\"></script>\n</head>\n<body>\n  <h1 class=\"text-3xl font-bold text-blue-600\">\n    Hello Tailwind!\n  </h1>\n  <button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded\">\n    Click me\n  </button>\n</body>\n</html>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-utilities",
+        "title": "Core Utilities",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential Utility Classes"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Spacing Utilities",
+            "box": {
+              "content": "<strong>Margin and Padding</strong>",
+              "code": "<!-- Margin -->\n<div class=\"m-4\">All sides: 1rem</div>\n<div class=\"mx-4 my-2\">Horizontal & Vertical</div>\n<div class=\"mt-4 mr-2 mb-4 ml-2\">Each side</div>\n\n<!-- Padding -->\n<div class=\"p-4\">All sides: 1rem</div>\n<div class=\"px-4 py-2\">Horizontal & Vertical</div>\n<div class=\"pt-4 pr-2 pb-4 pl-2\">Each side</div>\n\n<!-- Spacing scale -->\n<p-0>0</p-0>\n<p-1>0.25rem</p-1>\n<p-2>0.5rem</p-2>\n<p-4>1rem</p-4>\n<p-8>2rem</p-8>\n<p-16>4rem</p-16>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Color Utilities",
+            "box": {
+              "content": "<strong>Text, Background, and Border Colors</strong>",
+              "code": "<!-- Text colors -->\n<p class=\"text-black\">Black text</p>\n<p class=\"text-white bg-black\">White text on black</p>\n<p class=\"text-gray-500\">Gray text</p>\n<p class=\"text-blue-600\">Blue text</p>\n<p class=\"text-red-400\">Light red text</p>\n\n<!-- Background colors -->\n<div class=\"bg-blue-500\">Blue background</div>\n<div class=\"bg-gradient-to-r from-blue-500 to-purple-600\">Gradient</div>\n\n<!-- Border colors -->\n<div class=\"border border-gray-300\">Gray border</div>\n<div class=\"border-2 border-green-500\">Green thick border</div>\n\n<!-- Color opacity -->\n<div class=\"bg-blue-500/50\">50% opacity blue</div>\n<div class=\"text-black/75\">75% opacity black</div>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Typography Utilities",
+            "box": {
+              "content": "<strong>Text Styling</strong>",
+              "code": "<!-- Font size -->\n<h1 class=\"text-4xl\">Heading 1</h1>\n<h2 class=\"text-2xl\">Heading 2</h2>\n<p class=\"text-base\">Base text</p>\n<p class=\"text-sm\">Small text</p>\n\n<!-- Font weight -->\n<p class=\"font-thin\">Thin (100)</p>\n<p class=\"font-normal\">Normal (400)</p>\n<p class=\"font-medium\">Medium (500)</p>\n<p class=\"font-semibold\">Semibold (600)</p>\n<p class=\"font-bold\">Bold (700)</p>\n\n<!-- Text alignment -->\n<p class=\"text-left\">Left aligned</p>\n<p class=\"text-center\">Center aligned</p>\n<p class=\"text-right\">Right aligned</p>\n\n<!-- Text transformation -->\n<p class=\"uppercase\">Uppercase</p>\n<p class=\"lowercase\">Lowercase</p>\n<p class=\"capitalize\">Capitalize</p>\n<p class=\"italic\">Italic text</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "responsive-design",
+        "title": "Responsive Design",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Mobile-First Responsive Design"
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Breakpoint Prefixes",
+            "box": {
+              "content": "<strong>Responsive utility classes</strong>",
+              "code": "<!-- Mobile-first responsive design -->\n<div class=\"text-sm md:text-base lg:text-lg xl:text-xl\">\n  Responsive text size\n</div>\n\n<div class=\"w-full md:w-1/2 lg:w-1/3 xl:w-1/4\">\n  Responsive width\n</div>\n\n<!-- Show/hide based on screen size -->\n<div class=\"block md:hidden\">Mobile only</div>\n<div class=\"hidden md:block\">Desktop only</div>\n\n<!-- Responsive grid -->\n<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4\">\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n</div>\n\n<!-- Breakpoints -->\nsm: 640px   md: 768px   lg: 1024px   xl: 1280px   2xl: 1536px"
+            }
+          }
+        ]
+      },
+      {
+        "id": "variants",
+        "title": "State Variants",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Interactive States & Dark Mode"
+          },
+          {
+            "type": "content",
+            "emoji": "🎪",
+            "title": "State Variants",
+            "box": {
+              "content": "<strong>Hover, focus, and active states</strong>",
+              "code": "<!-- Hover state -->\n<button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded\">\n  Hover me\n</button>\n\n<!-- Focus state -->\n<input class=\"border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded p-2\" placeholder=\"Focus me\">\n\n<!-- Active state -->\n<button class=\"bg-green-500 active:bg-green-700 text-white py-2 px-4 rounded\">\n  Click me\n</button>\n\n<!-- Group hover -->\n<div class=\"group border border-gray-300 rounded-lg p-4\">\n  <h3 class=\"text-lg font-semibold group-hover:text-blue-600\">Card Title</h3>\n  <p class=\"text-gray-600 group-hover:text-gray-800\">Card content</p>\n</div>\n\n<!-- Disabled state -->\n<button class=\"bg-gray-400 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed\" disabled>\n  Disabled button\n</button>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌙",
+            "title": "Dark Mode",
+            "box": {
+              "content": "<strong>Dark mode support</strong>",
+              "code": "<!-- Enable dark mode in config -->\n// tailwind.config.js\nmodule.exports = {\n  darkMode: 'class', // or 'media'\n  // ...\n}\n\n<!-- Using dark mode -->\n<div class=\"bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-6\">\n  <h1 class=\"text-2xl font-bold\">Light/Dark theme</h1>\n  <p class=\"text-gray-600 dark:text-gray-300\">This content adapts to theme.</p>\n</div>\n\n<!-- Toggle dark mode with JavaScript -->\n<button onclick=\"document.documentElement.classList.toggle('dark')\">\n  Toggle dark mode\n</button>\n\n<!-- System preference (media query) -->\n<!-- darkMode: 'media' in config -->"
+            }
+          }
+        ]
+      },
+      {
+        "id": "layout",
+        "title": "Layout Systems",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Flexbox & Grid Layouts"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Flexbox Utilities",
+            "box": {
+              "content": "<strong>Flexbox with Tailwind</strong>",
+              "code": "<!-- Flex container -->\n<div class=\"flex\">\n  <div class=\"flex-1\">Flex item 1</div>\n  <div class=\"flex-1\">Flex item 2</div>\n</div>\n\n<!-- Flex direction -->\n<div class=\"flex flex-col md:flex-row\">\n  <div>Column on mobile, row on desktop</div>\n  <div>Second item</div>\n</div>\n\n<!-- Flex alignment -->\n<div class=\"flex justify-center items-center h-64\">\n  Centered content\n</div>\n\n<!-- Flex wrap -->\n<div class=\"flex flex-wrap gap-4\">\n  <div class=\"w-32 h-32\">Item 1</div>\n  <div class=\"w-32 h-32\">Item 2</div>\n  <div class=\"w-32 h-32\">Item 3</div>\n</div>\n\n<!-- Common flex patterns -->\n<div class=\"flex justify-between items-center\">\n  <div>Left content</div>\n  <div>Right content</div>\n</div>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📐",
+            "title": "Grid Utilities",
+            "box": {
+              "content": "<strong>CSS Grid with Tailwind</strong>",
+              "code": "<!-- Basic grid -->\n<div class=\"grid grid-cols-3 gap-4\">\n  <div>1</div><div>2</div><div>3</div>\n  <div>4</div><div>5</div><div>6</div>\n</div>\n\n<!-- Responsive grid -->\n<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6\">\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n  <div>Item 4</div>\n</div>\n\n<!-- Grid template areas -->\n<div class=\"grid grid-cols-4 grid-rows-2 gap-4\">\n  <div class=\"col-span-4 bg-blue-200 p-4\">Header</div>\n  <div class=\"col-span-1 bg-gray-200 p-4\">Sidebar</div>\n  <div class=\"col-span-3 bg-white p-4\">Main content</div>\n</div>\n\n<!-- Grid auto flow -->\n<div class=\"grid grid-flow-col auto-cols-max gap-4\">\n  <div>Auto</div>\n  <div>Column</div>\n  <div>Width</div>\n</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "configuration",
+        "title": "Tailwind Configuration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Customizing Tailwind"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "tailwind.config.js",
+            "box": {
+              "content": "<strong>Custom configuration file</strong>",
+              "code": "// tailwind.config.js\nmodule.exports = {\n  content: [\n    \"./src/**/*.{html,js,ts,jsx,tsx,vue}\",\n    \"./public/index.html\"\n  ],\n  theme: {\n    extend: {\n      colors: {\n        'brand': {\n          50: '#f0f9ff',\n          500: '#3b82f6',\n          900: '#1e3a8a',\n        }\n      },\n      fontFamily: {\n        'custom': ['Inter', 'system-ui', 'sans-serif'],\n      },\n      spacing: {\n        '128': '32rem',\n      }\n    },\n  },\n  plugins: [\n    require('@tailwindcss/forms'),\n    require('@tailwindcss/typography'),\n  ],\n}\n\n<!-- Using custom configuration -->\n<div class=\"bg-brand-500 text-white p-4 font-custom\">\n  Using custom brand color and font\n</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "apply-directive",
+        "title": "@apply Directive",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Extracting Components"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Using @apply",
+            "box": {
+              "content": "<strong>Extracting repetitive utilities</strong>",
+              "code": "/* Before - repetitive utilities */\n<button class=\"px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-200 transition-colors\">\n  Button\n</button>\n\n/* After - using @apply */\n<button class=\"btn-primary\">\n  Button\n</button>\n\n/* CSS with @apply */\n@layer components {\n  .btn-primary {\n    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-200 transition-colors;\n  }\n  \n  .card {\n    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;\n  }\n  \n  .input-field {\n    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;\n  }\n}\n\n<!-- Using extracted components -->\n<div class=\"card\">\n  <input class=\"input-field\" placeholder=\"Enter text\">\n  <button class=\"btn-primary mt-4\">Submit</button>\n</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "framework-integration",
+        "title": "Framework Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Using Tailwind with Frameworks"
+          },
+          {
+            "type": "content",
+            "emoji": "⚛️",
+            "title": "React + Tailwind",
+            "box": {
+              "content": "<strong>Tailwind with React components</strong>",
+              "code": "// React component with Tailwind\nimport React from 'react';\n\nconst Button = ({ children, variant = 'primary' }) => {\n  const baseClasses = \"px-4 py-2 rounded font-semibold transition-colors\";\n  const variants = {\n    primary: \"bg-blue-500 text-white hover:bg-blue-600\",\n    secondary: \"bg-gray-500 text-white hover:bg-gray-600\",\n    outline: \"border border-blue-500 text-blue-500 hover:bg-blue-50\"\n  };\n  \n  return (\n    <button className={`${baseClasses} ${variants[variant]}`}>\n      {children}\n    </button>\n  );\n};\n\nconst Card = ({ title, children }) => (\n  <div className=\"max-w-sm rounded overflow-hidden shadow-lg bg-white\">\n    <div className=\"px-6 py-4\">\n      <div className=\"font-bold text-xl mb-2\">{title}</div>\n      <p className=\"text-gray-700 text-base\">\n        {children}\n      </p>\n    </div>\n  </div>\n);\n\nexport { Button, Card };"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🟢",
+            "title": "Vue + Tailwind",
+            "box": {
+              "content": "<strong>Tailwind with Vue components</strong>",
+              "code": "<template>\n  <div class=\"min-h-screen bg-gray-100\">\n    <nav class=\"bg-white shadow-sm\">\n      <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n        <div class=\"flex justify-between h-16\">\n          <div class=\"flex items-center\">\n            <h1 class=\"text-xl font-semibold\">My App</h1>\n          </div>\n          <div class=\"flex items-center space-x-4\">\n            <button \n              @click=\"toggleDarkMode\"\n              class=\"p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700\"\n            >\n              {{ darkMode ? '🌙' : '☀️' }}\n            </button>\n          </div>\n        </div>\n      </div>\n    </nav>\n    \n    <main class=\"max-w-7xl mx-auto py-6 sm:px-6 lg:px-8\">\n      <slot />\n    </main>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      darkMode: false\n    }\n  },\n  methods: {\n    toggleDarkMode() {\n      this.darkMode = !this.darkMode\n      document.documentElement.classList.toggle('dark')\n    }\n  }\n}\n</script>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "plugins",
+        "title": "Official Plugins",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Tailwind CSS Plugins"
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Useful Official Plugins",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>@tailwindcss/forms</strong> - Better form styles"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>@tailwindcss/typography</strong> - Beautiful text content"
+                },
+                {
+                  "emoji": "🎪",
+                  "text": "<strong>@tailwindcss/aspect-ratio</strong> - Aspect ratio utilities"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>@tailwindcss/line-clamp</strong> - Truncate multiline text"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>@tailwindcss/container-queries</strong> - Container query support"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📖",
+            "title": "Typography Plugin Example",
+            "box": {
+              "content": "<strong>Beautiful prose with typography plugin</strong>",
+              "code": "<!-- Install plugin -->\nnpm install @tailwindcss/typography\n\n<!-- Add to config -->\n// tailwind.config.js\nmodule.exports = {\n  plugins: [\n    require('@tailwindcss/typography'),\n  ],\n}\n\n<!-- Use prose classes -->\n<article class=\"prose prose-lg max-w-none\">\n  <h1>My Blog Post Title</h1>\n  <p>This is a paragraph of text in my blog post. The typography plugin will automatically style all the HTML elements beautifully.</p>\n  \n  <h2>Subheading</h2>\n  <p>Another paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>\n  \n  <ul>\n    <li>List item one</li>\n    <li>List item two</li>\n    <li>List item three</li>\n  </ul>\n  \n  <blockquote>\n    This is a blockquote that will be styled beautifully.\n  </blockquote>\n</article>\n\n<!-- Different prose styles -->\n<div class=\"prose prose-slate\">Slate theme</div>\n<div class=\"prose prose-gray\">Gray theme</div>\n<div class=\"prose prose-invert\">Inverted for dark mode</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "component-patterns",
+        "title": "Component Patterns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Building UI Components"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Card Component",
+            "box": {
+              "content": "<strong>Reusable card component</strong>",
+              "code": "<!-- Card component with Tailwind -->\n<div class=\"max-w-sm mx-auto bg-white rounded-xl shadow-lg overflow-hidden\">\n  <div class=\"p-6\">\n    <div class=\"flex items-center mb-4\">\n      <div class=\"w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center\">\n        <span class=\"text-blue-600 font-bold\">TL</span>\n      </div>\n      <div class=\"ml-4\">\n        <h3 class=\"text-lg font-semibold text-gray-900\">Tailwind Labs</h3>\n        <p class=\"text-gray-500 text-sm\">2 hours ago</p>\n      </div>\n    </div>\n    \n    <h2 class=\"text-xl font-bold text-gray-800 mb-2\">New features in Tailwind CSS v3.2</h2>\n    <p class=\"text-gray-600 mb-4\">We're excited to announce several new features including container queries, and much more!</p>\n    \n    <div class=\"flex justify-between items-center\">\n      <div class=\"flex space-x-2\">\n        <span class=\"bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded\">#css</span>\n        <span class=\"bg-green-100 text-green-800 text-xs px-2 py-1 rounded\">#frontend</span>\n      </div>\n      <button class=\"text-blue-600 hover:text-blue-800 font-medium\">\n        Read more →\n      </button>\n    </div>\n  </div>\n</div>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔘",
+            "title": "Button Variants",
+            "box": {
+              "content": "<strong>Button component variants</strong>",
+              "code": "<!-- Base button styles -->\n<button class=\"btn\">Base Button</button>\n\n<!-- Button variants -->\n<button class=\"btn btn-primary\">Primary</button>\n<button class=\"btn btn-secondary\">Secondary</button>\n<button class=\"btn btn-success\">Success</button>\n<button class=\"btn btn-danger\">Danger</button>\n<button class=\"btn btn-outline\">Outline</button>\n\n<!-- Button sizes -->\n<button class=\"btn btn-sm\">Small</button>\n<button class=\"btn\">Medium</button>\n<button class=\"btn btn-lg\">Large</button>\n\n<!-- CSS with @apply -->\n<style>\n@layer components {\n  .btn {\n    @apply inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;\n  }\n  \n  .btn-sm { @apply px-3 py-1.5 text-sm; }\n  .btn { @apply px-4 py-2 text-base; }\n  .btn-lg { @apply px-6 py-3 text-lg; }\n  \n  .btn-primary { @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500; }\n  .btn-secondary { @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500; }\n  .btn-success { @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500; }\n  .btn-danger { @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500; }\n  .btn-outline { @apply border border-gray-300 bg-transparent text-gray-700 hover:bg-gray-50 focus:ring-blue-500; }\n}\n</style>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Performance & Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "PurgeCSS & Tree Shaking",
+            "box": {
+              "content": "<strong>Reducing bundle size</strong>",
+              "code": "// tailwind.config.js\nmodule.exports = {\n  content: [\n    \"./src/**/*.{html,js,jsx,ts,tsx,vue}\",\n    \"./public/**/*.html\",\n    \"./components/**/*.{js,ts,jsx,tsx}\",\n    \"./pages/**/*.{js,ts,jsx,tsx}\",\n    // Add all file paths that use Tailwind classes\n  ],\n  // ...\n}\n\n<!-- Production build -->\n# Development (with all classes)\nnpx tailwindcss -o dist/dev.css\n\n# Production (purged unused classes)\nnpx tailwindcss -o dist/prod.css --minify\n\n<!-- Using JIT mode (Just-in-Time) -->\n// tailwind.config.js\nmodule.exports = {\n  mode: 'jit',\n  purge: [\n    './src/**/*.{html,js,jsx,ts,tsx,vue}',\n  ],\n  // ...\n}\n\n<!-- Bundle size comparison -->\nDevelopment: ~3-5MB (all classes)\nProduction: ~10-20KB (only used classes)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "component-libraries",
+        "title": "Component Libraries",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Tailwind Ecosystem"
+          },
+          {
+            "type": "content",
+            "emoji": "🎁",
+            "title": "Popular Tailwind Component Libraries",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌼",
+                  "text": "<strong>DaisyUI</strong> - Component library for Tailwind"
+                },
+                {
+                  "emoji": "💧",
+                  "text": "<strong>Flowbite</strong> - Open-source component library"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Headless UI</strong> - Unstyled, accessible components"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Tailwind UI</strong> - Official premium components"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Meraki UI</strong> - Beautiful Tailwind components"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Build a Dashboard",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Set up Tailwind CSS with a new project"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create a responsive navigation bar"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Build a statistics cards grid"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Implement a data table component"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Add a sidebar with navigation"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Create modal and form components"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Implement dark mode toggle"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Make it fully responsive"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Tailwind CSS Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Use responsive prefixes</strong> - Mobile-first approach"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Extract components wisely</strong> - Don't overuse @apply"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Test on all breakpoints</strong> - Ensure responsiveness"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Use semantic color names</strong> - brand-500 vs blue-500"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Enable JIT mode</strong> - Faster development"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Keep utilities in order</strong> - Layout > spacing > typography > colors"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Tailwind CSS Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential utilities quick reference</strong>",
+              "code": "/* SPACING */\nm-4 p-4 mx-auto my-4 px-4 py-2\nmt-4 mr-2 mb-4 ml-2 (top, right, bottom, left)\n\n/* FLEXBOX */\nflex flex-col md:flex-row justify-center items-center\nflex-1 flex-none flex-wrap gap-4\n\n/* GRID */\ngrid grid-cols-3 gap-4 grid-rows-2\ncol-span-2 row-span-1\n\n/* SIZING */\nw-full h-screen max-w-md min-h-0\nw-1/2 h-1/4 (fractions)\nw-32 h-16 (fixed sizes)\n\n/* TYPOGRAPHY */\ntext-xl font-bold text-center uppercase\ntext-gray-600 leading-relaxed tracking-wide\n\n/* COLORS */\ntext-blue-600 bg-white border-gray-300\nhover:bg-blue-50 focus:ring-2 focus:ring-blue-500\n\n/* BORDERS & EFFECTS */\nborder border-2 rounded-lg rounded-full\nshadow-lg shadow-sm ring-2 ring-blue-500\n\n/* RESPONSIVE */\nblock md:flex lg:hidden xl:block\ntext-sm md:text-base lg:text-lg\n\n/* DARK MODE */\ndark:bg-gray-800 dark:text-white\n\n/* TRANSITIONS */\ntransition-colors duration-300 ease-in-out\n\n/* LAYOUT */\ncontainer mx-auto relative absolute inset-0\noverflow-hidden overflow-auto"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Tailwind CSS Documentation</strong> - Official docs"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Tailwind UI</strong> - Official component examples"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Refactoring UI</strong> - Book by Tailwind creators"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Channels</strong> - Tailwind Labs, The Net Ninja"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Playground</strong> - Tailwind Play (online editor)"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Community</strong> - GitHub, Discord, Twitter"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between mb-4 and pb-4?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you make a flex container stack vertically on mobile?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the purpose of the @apply directive?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you enable dark mode in Tailwind?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the mobile-first breakpoint for tablets?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "Tailwind = Utility-first CSS framework"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Build custom designs without writing CSS"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Mobile-first responsive design"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "Consistent design system"
+                },
+                {
+                  "emoji": "🌙",
+                  "text": "Built-in dark mode support"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential for modern web development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Tailwind concepts, utilities, or specific use cases!<br><span class=\"gradient-accent\">All CSS and design questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🎨</span> Ready to build beautiful interfaces?<br><span class=\"gradient-accent\">Start your Tailwind journey today!</span>",
+              "note": "Utility-First • Responsive • Customizable"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
