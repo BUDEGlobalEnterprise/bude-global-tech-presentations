@@ -1,0 +1,1066 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "REST API & Swagger/OpenAPI",
+            "subtitle": "Complete Guide to API Design & Documentation<br>From Principles to Production"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is REST?</strong> - Architectural Style & Principles"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>REST Constraints</strong> - 6 Guiding Principles"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>HTTP Methods & Status Codes</strong> - API Communication"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>RESTful Design</strong> - Best Practices & Patterns"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Swagger/OpenAPI</strong> - API Documentation Standard"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>OpenAPI Specification</strong> - Structure & Components"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tools & Ecosystem</strong> - Swagger UI, Codegen"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Implementation Examples</strong> - Multiple Languages"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>API Security</strong> - Authentication & Authorization"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Testing & Validation</strong> - API Quality"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Versioning & Evolution</strong> - API Lifecycle"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Real-world Examples</strong> - Production APIs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-rest",
+        "title": "What is REST?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding REST"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is REST?",
+            "box": {
+              "content": "<span class=\"highlight\">Representational State Transfer</span> - Architectural style for web APIs",
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Created By</strong> - Roy Fielding (2000 PhD dissertation)"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Foundation</strong> - Built on HTTP standards"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Format</strong> - Typically JSON, XML, or both"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Purpose</strong> - Scalable, stateless web services"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Key Concept</strong> - Resources with uniform interface"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> REST was introduced in Roy Fielding's doctoral dissertation in 2000 and has become the standard for web API design!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "rest-constraints",
+        "title": "REST Constraints",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Six REST Architectural Constraints"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Core REST Principles",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>Client-Server</strong> - Separation of concerns"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>Stateless</strong> - No client context stored on server"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>Cacheable</strong> - Responses must define cacheability"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>Uniform Interface</strong> - Consistent API design"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>Layered System</strong> - Hierarchical architecture"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>Code-on-Demand</strong> - Optional client extensions"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Uniform Interface Principles",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Resource Identification</strong> - URLs identify resources"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Resource Manipulation</strong> - Representations"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Self-descriptive Messages</strong> - Metadata in requests"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>HATEOAS</strong> - Hypermedia as engine of application state"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "http-methods",
+        "title": "HTTP Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "HTTP Verbs in REST"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Common HTTP Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📥",
+                  "text": "<strong>GET</strong> - Retrieve resource representation"
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>POST</strong> - Create new resource"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>PUT</strong> - Update existing resource"
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>DELETE</strong> - Remove resource"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>PATCH</strong> - Partial update"
+                },
+                {
+                  "emoji": "ℹ️",
+                  "text": "<strong>HEAD</strong> - Get headers only"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "HTTP Method Examples",
+            "box": {
+              "content": "<strong>CRUD operations with HTTP methods</strong>",
+              "code": "GET    /api/users          # List all users\nPOST   /api/users          # Create new user\nGET    /api/users/123      # Get user with ID 123\nPUT    /api/users/123      # Update user 123 (full)\nPATCH  /api/users/123      # Update user 123 (partial)\nDELETE /api/users/123      # Delete user 123\n\nGET    /api/users/123/orders    # Get orders for user 123\nPOST   /api/users/123/orders    # Create order for user 123"
+            }
+          }
+        ]
+      },
+      {
+        "id": "status-codes",
+        "title": "HTTP Status Codes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API Response Status Codes"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Common Status Code Categories",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>2xx Success</strong> - Request processed successfully"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>3xx Redirection</strong> - Further action needed"
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>4xx Client Error</strong> - Invalid request"
+                },
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>5xx Server Error</strong> - Server-side failure"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Essential Status Codes",
+            "box": {
+              "content": "<strong>Most commonly used status codes</strong>",
+              "code": "200 OK                    # Successful GET, PUT, PATCH\n201 Created               # Resource created (POST)\n204 No Content            # Successful DELETE\n\n400 Bad Request           # Malformed request\n401 Unauthorized          # Authentication required\n403 Forbidden             # Authenticated but no permission\n404 Not Found             # Resource doesn't exist\n409 Conflict              # Resource conflict\n422 Unprocessable Entity  # Validation errors\n\n500 Internal Server Error # Generic server error\n503 Service Unavailable   # Server overloaded/maintenance"
+            }
+          }
+        ]
+      },
+      {
+        "id": "restful-design",
+        "title": "RESTful Design",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API Design Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "RESTful URL Design",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Use Nouns</strong> - /users not /getUsers"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Plural Nouns</strong> - /users not /user"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Hierarchical Relationships</strong> - /users/123/orders"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Query Parameters</strong> - /users?active=true&role=admin"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>No Verbs</strong> - Avoid /getUser, /createUser"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Versioning</strong> - /api/v1/users"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "API Design Examples",
+            "box": {
+              "content": "<strong>Good vs Bad URL design</strong>",
+              "code": "✅ GOOD DESIGN:\nGET    /api/v1/users\nPOST   /api/v1/users\nGET    /api/v1/users/123\nPUT    /api/v1/users/123\nDELETE /api/v1/users/123\nGET    /api/v1/users/123/orders\nPOST   /api/v1/users/123/orders\nGET    /api/v1/orders?status=shipped&limit=10\n\n❌ BAD DESIGN:\nGET    /api/v1/getAllUsers\nPOST   /api/v1/createUser\nGET    /api/v1/getUserById/123\nPOST   /api/v1/updateUser/123\nGET    /api/v1/deleteUser/123\nGET    /api/v1/getUserOrders/123"
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-swagger",
+        "title": "What is Swagger/OpenAPI?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Introduction to OpenAPI"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Swagger vs OpenAPI",
+            "box": {
+              "content": "<span class=\"highlight\">OpenAPI Specification</span> - Standard for REST API documentation",
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>OpenAPI</strong> - The specification standard"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Swagger</strong> - Tools that implement OpenAPI"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>History</strong> - Swagger donated to OpenAPI Initiative"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Purpose</strong> - Machine-readable API documentation"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Benefits</strong> - Interactive docs, code generation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "openapi-specification",
+        "title": "OpenAPI Specification",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "OpenAPI Structure"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "OpenAPI Document Structure",
+            "box": {
+              "list": [
+                {
+                  "emoji": "ℹ️",
+                  "text": "<strong>openapi</strong> - Specification version (3.0.0, 3.1.0)"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>info</strong> - API metadata (title, version, description)"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>servers</strong> - Base URLs for API"
+                },
+                {
+                  "emoji": "🛣️",
+                  "text": "<strong>paths</strong> - API endpoints and operations"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>components</strong> - Reusable schemas, parameters"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>security</strong> - Authentication schemes"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Basic OpenAPI Example",
+            "box": {
+              "content": "<strong>Minimal OpenAPI 3.0 specification</strong>",
+              "code": "openapi: 3.0.0\ninfo:\n  title: Sample API\n  description: A sample API to demonstrate OpenAPI\n  version: 1.0.0\n  contact:\n    name: API Support\n    email: support@example.com\n\nservers:\n  - url: https://api.example.com/v1\n    description: Production server\n\npaths:\n  /users:\n    get:\n      summary: Returns a list of users\n      description: Optional extended description\n      responses:\n        '200':\n          description: Successful response\n          content:\n            application/json:\n              schema:\n                type: array\n                items:\n                  $ref: '#/components/schemas/User'\n\ncomponents:\n  schemas:\n    User:\n      type: object\n      properties:\n        id:\n          type: integer\n        name:\n          type: string\n        email:\n          type: string\n      required:\n        - id\n        - name\n        - email"
+            }
+          }
+        ]
+      },
+      {
+        "id": "swagger-tools",
+        "title": "Swagger Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Swagger Ecosystem"
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Core Swagger Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Swagger UI</strong> - Interactive API documentation"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Swagger Editor</strong> - Web-based YAML editor"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Swagger Codegen</strong> - Generate client SDKs"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Swagger Validator</strong> - OpenAPI spec validation"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Swagger Parser</strong> - Parse and validate specs"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Swagger Hub</strong> - Collaborative API design"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "swagger-ui",
+        "title": "Swagger UI",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Interactive Documentation"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Swagger UI Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Interactive Documentation</strong> - Try API calls directly"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Schema Visualization</strong> - See request/response models"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Authentication Support</strong> - Test secured endpoints"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Response Examples</strong> - See example responses"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Responsive Design</strong> - Works on mobile devices"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Customizable</strong> - Branding and theming"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Integrating Swagger UI",
+            "box": {
+              "content": "<strong>Adding Swagger UI to your project</strong>",
+              "code": "// Node.js/Express example\nconst swaggerUi = require('swagger-ui-express');\nconst YAML = require('yamljs');\n\n// Load OpenAPI specification\nconst swaggerDocument = YAML.load('./api/openapi.yaml');\n\n// Serve Swagger UI at /api-docs\napp.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));\n\n// ASP.NET Core example\nservices.AddSwaggerGen(c =>\n{\n    c.SwaggerDoc(\"v1\", new OpenApiInfo { \n        Title = \"My API\", \n        Version = \"v1\" \n    });\n});\n\napp.UseSwagger();\napp.UseSwaggerUI(c => \n{\n    c.SwaggerEndpoint(\"/swagger/v1/swagger.json\", \"My API V1\");\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "code-generation",
+        "title": "Code Generation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Swagger Codegen"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Client SDK Generation",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Multiple Languages</strong> - 50+ language support"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Server Stubs</strong> - Generate server code"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Client SDKs</strong> - Generate client libraries"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Documentation</strong> - Auto-generated docs"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Configuration</strong> - Customizable templates"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Codegen Examples",
+            "box": {
+              "content": "<strong>Generating client SDKs</strong>",
+              "code": "# Using Swagger Codegen CLI\njava -jar swagger-codegen-cli.jar generate \\\n  -i https://api.example.com/openapi.json \\\n  -l python \\\n  -o ./client-sdk/python\n\n# Generate for different languages\n-l javascript    # JavaScript client\n-l java          # Java client\n-l csharp        # C# client\n-l go            # Go client\n-l php           # PHP client\n-l ruby          # Ruby client\n-l swift         # Swift client\n\n# Using OpenAPI Generator (alternative)\nopenapi-generator generate \\\n  -i openapi.yaml \\\n  -g typescript-axios \\\n  -o ./client-sdk/typescript"
+            }
+          }
+        ]
+      },
+      {
+        "id": "implementation-examples",
+        "title": "Implementation Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "REST API Implementations"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Popular Frameworks",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>ASP.NET Core Web API</strong> - Microsoft .NET"
+                },
+                {
+                  "emoji": "☕",
+                  "text": "<strong>Spring Boot REST</strong> - Java ecosystem"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Node.js Express</strong> - JavaScript runtime"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Laravel API</strong> - PHP framework"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Django REST Framework</strong> - Python"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>FastAPI</strong> - Modern Python API framework"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔷",
+            "title": "ASP.NET Core Example",
+            "box": {
+              "content": "<strong>REST API with Swagger in .NET</strong>",
+              "code": "// Program.cs\nvar builder = WebApplication.CreateBuilder(args);\n\n// Add services\nbuilder.Services.AddControllers();\nbuilder.Services.AddEndpointsApiExplorer();\nbuilder.Services.AddSwaggerGen(c =>\n{\n    c.SwaggerDoc(\"v1\", new OpenApiInfo \n    { \n        Title = \"User API\", \n        Version = \"v1\",\n        Description = \"A simple example ASP.NET Core Web API\"\n    });\n});\n\nvar app = builder.Build();\n\n// Configure pipeline\nif (app.Environment.IsDevelopment())\n{\n    app.UseSwagger();\n    app.UseSwaggerUI();\n}\n\napp.UseHttpsRedirection();\napp.UseAuthorization();\napp.MapControllers();\n\napp.Run();\n\n// UserController.cs\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class UsersController : ControllerBase\n{\n    [HttpGet]\n    public ActionResult<IEnumerable<User>> GetUsers() { ... }\n    \n    [HttpGet(\"{id}\")]\n    public ActionResult<User> GetUser(int id) { ... }\n    \n    [HttpPost]\n    public ActionResult<User> CreateUser(User user) { ... }\n    \n    [HttpPut(\"{id}\")]\n    public IActionResult UpdateUser(int id, User user) { ... }\n    \n    [HttpDelete(\"{id}\")]\n    public IActionResult DeleteUser(int id) { ... }\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-security",
+        "title": "API Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Securing REST APIs"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Common Security Mechanisms",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>API Keys</strong> - Simple token-based authentication"
+                },
+                {
+                  "emoji": "🪪",
+                  "text": "<strong>JWT Tokens</strong> - JSON Web Tokens"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>OAuth 2.0</strong> - Authorization framework"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>CORS</strong> - Cross-Origin Resource Sharing"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Rate Limiting</strong> - Prevent abuse"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Input Validation</strong> - Prevent injection attacks"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "JWT Authentication",
+            "box": {
+              "content": "<strong>JWT-based authentication flow</strong>",
+              "code": "// JWT Structure: Header.Payload.Signature\n// Example JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\n\n// OpenAPI security scheme definition\ncomponents:\n  securitySchemes:\n    bearerAuth:\n      type: http\n      scheme: bearer\n      bearerFormat: JWT\n\n// Applying security to endpoints\npaths:\n  /users:\n    get:\n      security:\n        - bearerAuth: []\n      responses:\n        '200':\n          description: Success\n\n// ASP.NET Core JWT configuration\nservices.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n    .AddJwtBearer(options =>\n    {\n        options.TokenValidationParameters = new TokenValidationParameters\n        {\n            ValidateIssuer = true,\n            ValidateAudience = true,\n            ValidateLifetime = true,\n            ValidateIssuerSigningKey = true,\n            ValidIssuer = \"your-issuer\",\n            ValidAudience = \"your-audience\",\n            IssuerSigningKey = new SymmetricSecurityKey(\n                Encoding.UTF8.GetBytes(\"your-secret-key\"))\n        };\n    });"
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing",
+        "title": "API Testing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Testing REST APIs"
+          },
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Testing Strategies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Unit Tests</strong> - Individual components"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Integration Tests</strong> - API endpoints"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>End-to-End Tests</strong> - Complete workflows"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Performance Tests</strong> - Load and stress testing"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security Tests</strong> - Vulnerability scanning"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Testing Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Postman</strong> - API testing and development"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Insomnia</strong> - Open-source API client"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Newman</strong> - Postman collections runner"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Jest/Supertest</strong> - JavaScript testing"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>xUnit/NUnit</strong> - .NET testing"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>k6</strong> - Performance testing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-versioning",
+        "title": "API Versioning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API Evolution & Versioning"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Versioning Strategies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🛣️",
+                  "text": "<strong>URL Versioning</strong> - /api/v1/users"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Query Parameter</strong> - /api/users?version=1"
+                },
+                {
+                  "emoji": "📰",
+                  "text": "<strong>Header Versioning</strong> - Accept: application/vnd.api.v1+json"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Media Type</strong> - Content negotiation"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Custom Header</strong> - API-Version: 1.0"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "REST API Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Design Guidelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Use HTTP Methods Correctly</strong> - GET for read, POST for create"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Use Nouns in URLs</strong> - /users not /getUsers"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Use Plural Nouns</strong> - /users not /user"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Return Proper Status Codes</strong> - 200, 201, 400, 404, etc."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Implement Filtering, Sorting, Pagination</strong>"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Use HTTPS</strong> - Always encrypt traffic"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Documentation Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Use OpenAPI Specification</strong> - Standard format"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Provide Examples</strong> - Request/response examples"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Document Errors</strong> - Error responses and codes"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Security Documentation</strong> - Authentication methods"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Keep Updated</strong> - Sync code and documentation"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Interactive Documentation</strong> - Swagger UI"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-examples",
+        "title": "Real World Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production REST APIs"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Well-Designed Public APIs",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub API</strong> - RESTful with great documentation"
+                },
+                {
+                  "emoji": "🐦",
+                  "text": "<strong>Twitter API</strong> - Comprehensive social media API"
+                },
+                {
+                  "emoji": "💳",
+                  "text": "<strong>Stripe API</strong> - Payment processing API"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Twilio API</strong> - Communication APIs"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Shopify API</strong> - E-commerce platform"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>AWS APIs</strong> - Cloud service APIs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Build REST API with Swagger",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Design API specification with OpenAPI"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Implement CRUD operations for a resource"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Add input validation and error handling"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Integrate Swagger UI for documentation"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Implement JWT authentication"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Add filtering, sorting, pagination"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Write unit and integration tests"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Deploy with proper security headers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What are the 6 constraints of REST architecture?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "What HTTP method should be used to update a resource?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the difference between Swagger and OpenAPI?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you document authentication in OpenAPI?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What status code should return for successful creation?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "REST = Architectural style for scalable web APIs"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "6 constraints guide RESTful design"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "HTTP methods and status codes are fundamental"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "OpenAPI = Standard for API documentation"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Swagger UI provides interactive documentation"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential skill for modern backend development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss REST API design, Swagger implementation, or specific use cases!<br><span class=\"gradient-accent\">All API questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔗</span> Ready to build great APIs?<br><span class=\"gradient-accent\">Start your REST API journey today!</span>",
+              "note": "Scalable • Documented • Professional"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

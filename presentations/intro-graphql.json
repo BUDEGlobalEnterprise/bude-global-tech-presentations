@@ -1,0 +1,918 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "GraphQL – API Query Language",
+            "subtitle": "Flexible and Efficient API Technology<br>Request Exactly What You Need"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is GraphQL?</strong> - API Query Language Overview"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Why GraphQL?</strong> - Benefits over REST"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Core Concepts</strong> - Schema, Queries, Mutations"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Operations</strong> - Query, Mutation, Subscription"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Type System</strong> - Scalars, Objects, Interfaces"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Tools & Frameworks</strong> - Apollo, Hasura, GraphiQL"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Client Usage</strong> - React, Vue, Mobile Apps"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performance</strong> - Caching, Batching, Optimization"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Authentication, Authorization"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Real-world Examples</strong> - GitHub API, Shopify"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>REST vs GraphQL</strong> - When to Use Which"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Best Practices</strong> - Schema Design, Naming"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-graphql",
+        "title": "What is GraphQL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding GraphQL"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is GraphQL?",
+            "box": {
+              "content": "<span class=\"highlight\">Open-source API query language</span> developed by Facebook",
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Created by</strong> - Facebook (2012), Open-sourced (2015)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - Open Specification (OSS)"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Purpose</strong> - Client-defined data requirements"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Adoption</strong> - GitHub, Shopify, Twitter, PayPal"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Runtime</strong> - Executes queries against your data"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> GraphQL was developed by Facebook to solve mobile news feed efficiency problems!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-graphql",
+        "title": "Why GraphQL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Benefits & Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Why Use GraphQL?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Precise Data Fetching</strong> - Get exactly what you need"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Single Endpoint</strong> - No more multiple REST endpoints"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Strongly Typed</strong> - Schema ensures type safety"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Efficient</strong> - Reduced payload size"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Self-documenting</strong> - Introspection and playground"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Real-time Data</strong> - Subscriptions for live updates"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "title": "Core Concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GraphQL Fundamentals"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Core GraphQL Concepts",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Schema</strong> - Defines all data types and relationships"
+                },
+                {
+                  "emoji": "❓",
+                  "text": "<strong>Query</strong> - Read-only fetch request"
+                },
+                {
+                  "emoji": "✏️",
+                  "text": "<strong>Mutation</strong> - Write/create/update/delete operations"
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Subscription</strong> - Real-time data via WebSockets"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Resolver</strong> - Maps schema fields to data sources"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Type System</strong> - Strong typing for all data"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "schema-definition",
+        "title": "Schema & Type System",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GraphQL Schema"
+          },
+          {
+            "type": "content",
+            "emoji": "📐",
+            "title": "Schema Definition Language (SDL)",
+            "box": {
+              "content": "<strong>Defining your data structure</strong>",
+              "code": "type User {\n  id: ID!\n  name: String!\n  email: String!\n  posts: [Post!]!\n  createdAt: String!\n}\n\ntype Post {\n  id: ID!\n  title: String!\n  content: String!\n  author: User!\n  comments: [Comment!]!\n}\n\ntype Comment {\n  id: ID!\n  text: String!\n  author: User!\n  post: Post!\n}\n\ntype Query {\n  users: [User!]!\n  user(id: ID!): User\n  posts: [Post!]!\n  post(id: ID!): Post\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Scalar Types & Directives",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Scalar Types</strong> - Int, Float, String, Boolean, ID"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Object Types</strong> - Custom types with fields"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Interfaces</strong> - Abstract types with shared fields"
+                },
+                {
+                  "emoji": "🎭",
+                  "text": "<strong>Unions</strong> - Types that can be one of several"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Enums</strong> - Predefined set of values"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Directives</strong> - @skip, @include, @deprecated"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "queries",
+        "title": "Queries",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reading Data with Queries"
+          },
+          {
+            "type": "content",
+            "emoji": "❓",
+            "title": "Basic Query Structure",
+            "box": {
+              "content": "<strong>Requesting specific data</strong>",
+              "code": "# Basic query\nquery {\n  users {\n    id\n    name\n    email\n  }\n}\n\n# Query with arguments\nquery {\n  user(id: \"123\") {\n    name\n    email\n    posts {\n      title\n      content\n    }\n  }\n}\n\n# Aliases\nquery {\n  firstUser: user(id: \"1\") {\n    name\n  }\n  secondUser: user(id: \"2\") {\n    name\n  }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Advanced Query Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Variables</strong> - Dynamic parameter values"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Fragments</strong> - Reusable field sets"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Directives</strong> - Conditional field inclusion"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Inline Fragments</strong> - Type-specific fields"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Introspection</strong> - Query schema information"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "mutations",
+        "title": "Mutations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Writing Data with Mutations"
+          },
+          {
+            "type": "content",
+            "emoji": "✏️",
+            "title": "Mutation Operations",
+            "box": {
+              "content": "<strong>Modifying data</strong>",
+              "code": "# Define mutations in schema\ntype Mutation {\n  createUser(input: UserInput!): User!\n  updateUser(id: ID!, input: UserInput!): User\n  deleteUser(id: ID!): Boolean!\n}\n\ninput UserInput {\n  name: String!\n  email: String!\n  password: String!\n}\n\n# Execute mutation\nmutation {\n  createUser(input: {\n    name: \"John Doe\"\n    email: \"john@example.com\"\n    password: \"secret\"\n  }) {\n    id\n    name\n    email\n  }\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "subscriptions",
+        "title": "Subscriptions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Real-time Data"
+          },
+          {
+            "type": "content",
+            "emoji": "📡",
+            "title": "Real-time Subscriptions",
+            "box": {
+              "content": "<strong>Live data updates</strong>",
+              "code": "# Define subscriptions in schema\ntype Subscription {\n  newPost: Post!\n  postUpdated(id: ID!): Post\n  userOnline: User!\n}\n\n# Subscribe to real-time data\nsubscription {\n  newPost {\n    id\n    title\n    author {\n      name\n    }\n  }\n}\n\n# Typically uses WebSockets\n# Perfect for:\n# - Live chats\n# - Notifications\n# - Real-time dashboards\n# - Collaborative editing"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resolvers",
+        "title": "Resolvers",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Fetching Logic"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Resolver Functions",
+            "box": {
+              "content": "<strong>Connecting schema to data sources</strong>",
+              "code": "// JavaScript resolver example\nconst resolvers = {\n  Query: {\n    users: () => db.users.findAll(),\n    user: (parent, { id }) => db.users.findById(id),\n    posts: () => db.posts.findAll()\n  },\n  Mutation: {\n    createUser: (parent, { input }) => db.users.create(input)\n  },\n  User: {\n    posts: (user) => db.posts.findByAuthor(user.id)\n  },\n  Post: {\n    author: (post) => db.users.findById(post.authorId),\n    comments: (post) => db.comments.findByPost(post.id)\n  }\n};\n\n// Resolver parameters:\n// parent - Parent object\n// args - Arguments provided\n// context - Shared context (auth, db connections)\n// info - AST information"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools-frameworks",
+        "title": "Tools & Frameworks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GraphQL Ecosystem"
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Popular GraphQL Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Apollo GraphQL</strong> - Full-stack GraphQL platform"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Hasura</strong> - Instant GraphQL on existing databases"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Graphene</strong> - Python GraphQL framework"
+                },
+                {
+                  "emoji": "🍫",
+                  "text": "<strong>Hot Chocolate</strong> - .NET GraphQL server"
+                },
+                {
+                  "emoji": "🧘",
+                  "text": "<strong>Yoga</strong> - Fast, modern GraphQL server"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>GraphiQL</strong> - Interactive query editor"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "client-usage",
+        "title": "Client Usage",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Using GraphQL in Clients"
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Client Libraries",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚛️",
+                  "text": "<strong>Apollo Client</strong> - React, Vue, Angular, Native"
+                },
+                {
+                  "emoji": "🔮",
+                  "text": "<strong>Relay</strong> - Facebook's GraphQL client"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>URQL</strong> - Lightweight GraphQL client"
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>GraphQL Request</strong> - Minimal GraphQL client"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Android/iOS</strong> - Apollo Kotlin, Apollo iOS"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Vue Apollo</strong> - Vue.js integration"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚛️",
+            "title": "React with Apollo Client",
+            "box": {
+              "content": "<strong>Modern React development</strong>",
+              "code": "import { useQuery, gql } from '@apollo/client';\n\nconst GET_USERS = gql`\n  query GetUsers {\n    users {\n      id\n      name\n      email\n      posts {\n        title\n      }\n    }\n  }\n`;\n\nfunction UserList() {\n  const { loading, error, data } = useQuery(GET_USERS);\n\n  if (loading) return <p>Loading...</p>;\n  if (error) return <p>Error: {error.message}</p>;\n\n  return (\n    <div>\n      {data.users.map(user => (\n        <div key={user.id}>\n          <h3>{user.name}</h3>\n          <p>{user.email}</p>\n          <p>Posts: {user.posts.length}</p>\n        </div>\n      ))}\n    </div>\n  );\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Performance & Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GraphQL Performance"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Optimization Techniques",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Caching</strong> - Client and server-side caching"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Batching</strong> - Combine multiple requests"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Dataloader</strong> - Batch and cache database calls"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Persisted Queries</strong> - Pre-approved queries"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Query Complexity</strong> - Prevent expensive queries"
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Depth Limiting</strong> - Control query depth"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GraphQL Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Considerations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Authentication</strong> - JWT, OAuth, API keys"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Authorization</strong> - Field-level permissions"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Rate Limiting</strong> - Prevent API abuse"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Query Limits</strong> - Depth, complexity, timeouts"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Introspection</strong> - Control schema exposure"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Validation</strong> - Input sanitization"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "rest-vs-graphql",
+        "title": "REST vs GraphQL",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API Architecture Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "⚖️",
+            "title": "REST vs GraphQL",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Endpoints</strong> - REST: Multiple vs GraphQL: Single"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Data Fetching</strong> - REST: Over/under-fetching vs GraphQL: Precise"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Versioning</strong> - REST: URL versioning vs GraphQL: Schema evolution"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Documentation</strong> - REST: Separate docs vs GraphQL: Self-documenting"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Caching</strong> - REST: HTTP caching vs GraphQL: Requires client caching"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Learning Curve</strong> - REST: Simple vs GraphQL: Steeper"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "When to Use Which?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Use GraphQL for:</strong> Complex data relationships, mobile apps, rapid iteration"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Use REST for:</strong> Simple CRUD, file uploads, HTTP caching benefits"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Hybrid Approach:</strong> Use both! GraphQL for complex queries, REST for simple operations"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-examples",
+        "title": "Real-world Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production GraphQL APIs"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Major GraphQL Adopters",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub API v4</strong> - Fully GraphQL, replaces REST v3"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Shopify</strong> - Storefront and admin APIs"
+                },
+                {
+                  "emoji": "🐦",
+                  "text": "<strong>Twitter</strong> - Public API and internal services"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>PayPal</strong> - Checkout and payment APIs"
+                },
+                {
+                  "emoji": "📹",
+                  "text": "<strong>Netflix</strong> - Internal microservices communication"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Yelp</strong> - Business search and reviews"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐙",
+            "title": "GitHub GraphQL Example",
+            "box": {
+              "content": "<strong>Querying GitHub data</strong>",
+              "code": "query {\n  viewer {\n    login\n    name\n    repositories(first: 10) {\n      nodes {\n        name\n        description\n        stargazerCount\n        forkCount\n        updatedAt\n        primaryLanguage {\n          name\n          color\n        }\n      }\n    }\n  }\n  rateLimit {\n    cost\n    remaining\n    resetAt\n  }\n}\n\n# Benefits:\n# - Single request for multiple data points\n# - No over-fetching of repository details\n# - Type-safe responses\n# - Real-time rate limit information"
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GraphQL Development Guidelines"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Schema Design Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Naming Conventions</strong> - Use PascalCase for types, camelCase for fields"
+                },
+                {
+                  "emoji": "❓",
+                  "text": "<strong>Nullability</strong> - Be explicit about what can be null"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Documentation</strong> - Use descriptions for all types and fields"
+                },
+                {
+                  "emoji": "🎭",
+                  "text": "<strong>Interfaces</strong> - Use for shared fields across types"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Input Objects</strong> - Use for mutation arguments"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Versioning</strong> - Evolve schema without breaking changes"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "GraphQL Quick Reference",
+            "box": {
+              "content": "<strong>Essential GraphQL syntax</strong>",
+              "code": "# Basic Query\nquery GetUser($id: ID!) {\n  user(id: $id) {\n    name\n    email\n  }\n}\n\n# Mutation\nmutation CreateUser($input: UserInput!) {\n  createUser(input: $input) {\n    id\n    name\n  }\n}\n\n# Subscription\nsubscription OnNewMessage {\n  newMessage {\n    id\n    content\n    author\n  }\n}\n\n# Fragment\nfragment UserDetails on User {\n  id\n  name\n  email\n  createdAt\n}\n\n# Common Scalar Types\nID, String, Int, Float, Boolean\n\n# Schema Definition\ntype TypeName {\n  fieldName: FieldType!\n  optionalField: FieldType\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-demo",
+        "title": "Hands-On Demo",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Live Demo Workflow",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Explore GraphiQL playground"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Write basic queries with fields"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Use arguments and variables"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Create nested queries"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Execute mutations to modify data"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Test real-time subscriptions"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Use fragments for reusable fields"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Explore schema introspection"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - graphql.org"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>GraphQL.org Tutorial</strong> - Interactive learning"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>HowToGraphQL</strong> - Full-stack tutorial"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Apollo Docs</strong> - Client and server guides"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>GraphQL Conf</strong> - Conference talks"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>GraphQL Playground</strong> - Online query testing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the main advantage of GraphQL over REST?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "What's the difference between Query and Mutation?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "How do you handle real-time data in GraphQL?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "What is a resolver function?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "When should you choose REST over GraphQL?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "GraphQL = Query language for APIs"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "Precise data fetching reduces over/under-fetching"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "Strongly typed schema ensures data consistency"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Three operations: Query, Mutation, Subscription"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Single endpoint simplifies API architecture"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Ideal for complex applications and mobile"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss GraphQL concepts, implementation, or specific use cases!<br><span class=\"gradient-accent\">All API development questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔷</span> Ready to build better APIs?<br><span class=\"gradient-accent\">Start your GraphQL journey today!</span>",
+              "note": "Flexible • Efficient • Type-Safe"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

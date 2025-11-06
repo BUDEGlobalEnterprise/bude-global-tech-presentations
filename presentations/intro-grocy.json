@@ -1,0 +1,1346 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Grocy",
+            "subtitle": "ERP for Home & Small Inventory Management<br>From Pantry Tracking to Automated Household"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Grocy?</strong> - ERP for Home & Small Business"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Grocy vs Alternatives</strong> - Spreadsheets vs Traditional ERP"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Use Cases</strong> - Home, Pantry, Office, Lab, Workshop"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Self-Hosting</strong> - Docker, Raspberry Pi, NAS Setup"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Stock Management</strong> - Products, Batches, Expiry Tracking"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Barcode Integration</strong> - Scanner, Mobile, WebCam"
+                },
+                {
+                  "emoji": "🍳",
+                  "text": "<strong>Recipes & Meal Planning</strong> - Cooking & Consumption"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Shopping Lists</strong> - Auto Replenishment"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Chores & Maintenance</strong> - Task Scheduling"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>API & Automation</strong> - Python, Home Assistant, IoT"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Workflows</strong> - Real-world Implementation"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Best Practices</strong> - Efficient Inventory Management"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-grocy",
+        "title": "What is Grocy?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Grocy"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Grocy?",
+            "box": {
+              "content": "<span class=\"highlight\">Open-source ERP system</span> for households and small businesses",
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - MIT License (Free and open source)"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Focus</strong> - Home inventory, pantry management, chores"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Platform</strong> - Web-based, self-hosted solution"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tech Stack</strong> - PHP, SQLite, Bootstrap, REST API"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Community</strong> - Active development and plugins"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Grocy stands for 'GROcery CYcler' but evolved into full ERP!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-grocy",
+        "title": "Why Grocy?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Key Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Why Choose Grocy?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Effective</strong> - Free vs expensive ERP systems"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Home Focused</strong> - Designed for household use"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Self-Hosted</strong> - Complete data control"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Friendly</strong> - Works on all devices"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>API Driven</strong> - Easy automation integration"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>All-in-One</strong> - Stock, recipes, chores, shopping"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Tool Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Grocy vs Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Inventory Management Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>Grocy</strong> - Free, self-hosted, all-in-one, open source"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Spreadsheets</strong> - Manual, error-prone, no automation"
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>Traditional ERP</strong> - Expensive, complex, business-focused"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Apps</strong> - Limited features, subscription fees"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud Services</strong> - Monthly costs, data privacy concerns"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Where to Use Grocy"
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Common Use Cases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Household Pantry</strong> - Food inventory, expiry tracking"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Workshop</strong> - Tools, materials, maintenance"
+                },
+                {
+                  "emoji": "⚗️",
+                  "text": "<strong>Laboratory</strong> - Chemical inventory, safety"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Small Office</strong> - Supplies, equipment tracking"
+                },
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>Makerspace</strong> - Shared resources, project materials"
+                },
+                {
+                  "emoji": "🏨",
+                  "text": "<strong>Small Business</strong> - Retail, cafeteria, shop inventory"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "self-hosting",
+        "title": "Self-Hosting Options",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Deployment Methods"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Easiest method, cross-platform"
+                },
+                {
+                  "emoji": "🍓",
+                  "text": "<strong>Raspberry Pi</strong> - Low power, always-on"
+                },
+                {
+                  "emoji": "💽",
+                  "text": "<strong>NAS</strong> - Synology, QNAP, TrueNAS"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - XAMPP, manual PHP setup"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - Native package, manual install"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - VPS, Railway, Render"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Docker Quick Setup",
+            "box": {
+              "content": "<strong>Fastest deployment method</strong>",
+              "code": "# Using Docker Compose\nversion: \"3.8\"\nservices:\n  grocy:\n    image: lscr.io/linuxserver/grocy:latest\n    container_name: grocy\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Europe/London\n    volumes:\n      - ./config:/config\n    ports:\n      - 9283:80\n    restart: unless-stopped\n\n# Run with:\ndocker-compose up -d\n\n# Access at: http://localhost:9283"
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Architecture & Tech Stack",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Technical Overview"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Technology Stack",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Backend</strong> - PHP 7.4+ with Slim Framework"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Database</strong> - SQLite (default) or MySQL/MariaDB"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Frontend</strong> - Bootstrap, jQuery, Vanilla JS"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>API</strong> - RESTful JSON API"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile</strong> - Progressive Web App (PWA)"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Deployment</strong> - Docker optimized"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ui-overview",
+        "title": "UI Overview",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Interface Tour"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Main Modules",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Stock Overview</strong> - Current inventory levels"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Shopping List</strong> - Purchase planning"
+                },
+                {
+                  "emoji": "🍳",
+                  "text": "<strong>Recipes</strong> - Meal planning and cooking"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Chores</strong> - Household task scheduling"
+                },
+                {
+                  "emoji": "🔋",
+                  "text": "<strong>Batteries</strong> - Rechargeable device tracking"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Equipment</strong> - Tools and appliances"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "stock-management",
+        "title": "Stock Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Inventory Tracking"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Product Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Products</strong> - Name, description, category"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Quantities</strong> - Stock levels, min/max amounts"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Batches</strong> - Lot numbers, expiry dates"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Locations</strong> - Storage places, shelves"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Suppliers</strong> - Vendor information"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Pricing</strong> - Cost tracking, price history"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Stock Operations",
+            "box": {
+              "content": "<strong>Common inventory actions</strong>",
+              "code": "Stock Operations:\n- Purchase: Add new stock\n- Consume: Use/remove items\n- Transfer: Move between locations\n- Inventory: Stock count adjustment\n- Open: Start using a product\n- Spoiled: Mark as wasted\n\nAuto Calculations:\n- Stock value\n- Average shelf life\n- Next expiry date\n- Due products (soon to expire)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "batch-tracking",
+        "title": "Batch & Expiry Tracking",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Inventory Features"
+          },
+          {
+            "type": "content",
+            "emoji": "📅",
+            "title": "Batch Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Batch Numbers</strong> - Track specific lots"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Best Before Dates</strong> - Expiry tracking"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>FIFO/LIFO</strong> - Automatic consumption order"
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>Due Soon Alerts</strong> - Products nearing expiry"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Stock Age</strong> - Average time in inventory"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Traceability</strong> - Full product history"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "barcode-support",
+        "title": "Barcode Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Barcode & QR Code Support"
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Barcode Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>USB Scanners</strong> - Plug and play integration"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Camera</strong> - Web app barcode scanning"
+                },
+                {
+                  "emoji": "📷",
+                  "text": "<strong>WebCam</strong> - Desktop camera scanning"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>QR Codes</strong> - Custom product codes"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Label Printing</strong> - Generate barcode labels"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Barcode Buddy</strong> - Advanced companion app"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-list",
+        "title": "Shopping List & Auto Refill",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Automated Purchasing"
+          },
+          {
+            "type": "content",
+            "emoji": "🛒",
+            "title": "Shopping List Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Auto Generation</strong> - Based on stock levels"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Min/Max Levels</strong> - Custom replenishment rules"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Price Tracking</strong> - Compare supplier prices"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Notes</strong> - Shopping reminders"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Check Off</strong> - Mark as purchased"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Sync</strong> - Mobile app integration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recipes-meal-planning",
+        "title": "Recipes & Meal Planning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Cooking & Consumption"
+          },
+          {
+            "type": "content",
+            "emoji": "🍳",
+            "title": "Recipe Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Recipe Creation</strong> - Ingredients and steps"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Portion Control</strong> - Scale recipes up/down"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Shopping List</strong> - Auto-generate from recipes"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Stock Deduction</strong> - Auto-consume ingredients"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Meal Planning</strong> - Weekly meal schedules"
+                },
+                {
+                  "emoji": "👨‍🍳",
+                  "text": "<strong>Nutrition</strong> - Calorie and nutrition tracking"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "chores-tasks",
+        "title": "Chores & Tasks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Household Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Chore Tracking",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Recurring Tasks</strong> - Daily, weekly, monthly"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Assignment</strong> - Assign to specific users"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Scheduling</strong> - Next due dates"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Completion</strong> - Track task history"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Habits</strong> - Regular routine tracking"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Statistics</strong> - Performance metrics"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "batteries-maintenance",
+        "title": "Batteries & Maintenance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Equipment Tracking"
+          },
+          {
+            "type": "content",
+            "emoji": "🔋",
+            "title": "Battery Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔋",
+                  "text": "<strong>Battery Tracking</strong> - Charge cycles, lifespan"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Equipment</strong> - Tools and appliances"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Maintenance</strong> - Service schedules"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Warranty</strong> - Warranty period tracking"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Reminders</strong> - Service due alerts"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>History</strong> - Maintenance logs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-automation",
+        "title": "API & Automation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "REST API & Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "API Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📡",
+                  "text": "<strong>REST API</strong> - Full CRUD operations"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>API Keys</strong> - Secure authentication"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Real-time Data</strong> - Live inventory updates"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Automation</strong> - Scripting and bots"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Home Assistant</strong> - Smart home integration"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Webhooks</strong> - Event-driven automation"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐍",
+            "title": "Python API Example",
+            "box": {
+              "content": "<strong>Automated stock management</strong>",
+              "code": "import requests\n\nclass GrocyAPI:\n    def __init__(self, base_url, api_key):\n        self.base_url = base_url\n        self.headers = {\n            'GROCY-API-KEY': api_key,\n            'Accept': 'application/json'\n        }\n    \n    def get_stock(self):\n        response = requests.get(\n            f\"{self.base_url}/stock\",\n            headers=self.headers\n        )\n        return response.json()\n    \n    def add_product(self, product_id, amount):\n        data = {\n            \"amount\": amount,\n            \"transaction_type\": \"purchase\"\n        }\n        response = requests.post(\n            f\"{self.base_url}/stock/products/{product_id}/add\",\n            json=data,\n            headers=self.headers\n        )\n        return response.json()\n\n# Usage\ngrocy = GrocyAPI('http://localhost:9283/api', 'your-api-key')\nstock = grocy.get_stock()\nprint(f\"Current stock levels: {stock}\")"
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-assistant",
+        "title": "Home Assistant Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Smart Home Automation"
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Home Assistant Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Dashboard</strong> - Stock levels on HA dashboard"
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Notifications</strong> - Low stock alerts"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Shopping List</strong> - Sync with HA shopping list"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Automations</strong> - Trigger actions based on stock"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Sensors</strong> - Real-time inventory sensors"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Voice Control</strong> - Alexa/Google Assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "mobile-apps",
+        "title": "Mobile Apps & Clients",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Mobile Experience"
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Mobile Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Progressive Web App</strong> - Mobile web interface"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Grocy Android</strong> - Native Android app"
+                },
+                {
+                  "emoji": "👨‍💻",
+                  "text": "<strong>Third-party Apps</strong> - Community clients"
+                },
+                {
+                  "emoji": "📷",
+                  "text": "<strong>Barcode Scanning</strong> - Mobile camera integration"
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Push Notifications</strong> - Mobile alerts"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Offline Support</strong> - Limited offline functionality"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "barcode-buddy",
+        "title": "Barcode Buddy Advanced",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Enhanced Barcode Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "text": "<strong>Barcode Buddy</strong> - Companion application for Grocy",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Product Recognition</strong> - Auto-product creation"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Workflow Automation</strong> - Streamlined scanning"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Database Lookup</strong> - External product databases"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Custom Actions</strong> - Programmable workflows"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Standalone Mode</strong> - Works without Grocy"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Optimized</strong> - Touch-friendly interface"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "reverse-proxy",
+        "title": "Reverse Proxy & Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Secure Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Reverse Proxy</strong> - Nginx, Caddy, Traefik"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>HTTPS</strong> - SSL/TLS encryption"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Authentication</strong> - Basic auth, OAuth"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Domain Access</strong> - Custom domain setup"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Notifications</strong> - Alert system"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Backups</strong> - Automated data backup"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Nginx Reverse Proxy Example",
+            "box": {
+              "content": "<strong>Secure proxy configuration</strong>",
+              "code": "server {\n    listen 80;\n    server_name grocy.yourdomain.com;\n    return 301 https://$server_name$request_uri;\n}\n\nserver {\n    listen 443 ssl http2;\n    server_name grocy.yourdomain.com;\n\n    ssl_certificate /path/to/cert.pem;\n    ssl_certificate_key /path/to/private.key;\n\n    location / {\n        proxy_pass http://localhost:9283;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n\n    # Basic authentication\n    auth_basic \"Grocy Access\";\n    auth_basic_user_file /etc/nginx/.htpasswd;\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "import-export",
+        "title": "Import/Export & Backup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Management"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Data Operations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📤",
+                  "text": "<strong>CSV Import</strong> - Bulk product import"
+                },
+                {
+                  "emoji": "📥",
+                  "text": "<strong>CSV Export</strong> - Data backup and analysis"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Database Backup</strong> - SQLite/MySQL backup"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Migration</strong> - Move between instances"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>API Export</strong> - Programmatic data access"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud Backup</strong> - Automated cloud storage"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "workflows",
+        "title": "Real-world Workflows",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Implementation"
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Household Pantry Workflow",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Setup products with barcodes"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Configure min/max stock levels"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Scan products when purchased"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Consume items when used"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Auto-generate shopping lists"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Track expiry dates and usage"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Small Business Workflow",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Setup product catalog with suppliers"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Track inventory levels and costs"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Manage batch numbers and expiry"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Generate purchase orders"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Track equipment maintenance"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Analyze consumption patterns"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "automation-tools",
+        "title": "Automation & Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Workflow Automation"
+          },
+          {
+            "type": "content",
+            "emoji": "🤖",
+            "title": "Integration Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>n8n</strong> - Visual workflow automation"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Make (Integromat)</strong> - Enterprise automation"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Zapier</strong> - App integration platform"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python Scripts</strong> - Custom automation"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Parsing</strong> - Auto-process receipts"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Chat Bots</strong> - Slack/Telegram integration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Implementation Guidelines"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Successful Grocy Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Start Small</strong> - Begin with essential products"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Use Barcodes</strong> - Scan rather than type"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Set Realistic Levels</strong> - Practical min/max values"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Regular Updates</strong> - Keep stock current"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Train Users</strong> - Ensure everyone participates"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Review Analytics</strong> - Use data for decisions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Grocy Quick Reference",
+            "box": {
+              "content": "<strong>Essential shortcuts and API endpoints</strong>",
+              "code": "# Keyboard Shortcuts\nq - Quick consume\ns - Search products\nn - Add new product\nb - Barcode scan\n\n# Common API Endpoints\nGET /api/stock - Current stock\nPOST /api/stock/products/{id}/add - Add stock\nPOST /api/stock/products/{id}/consume - Consume stock\nGET /api/objects/shopping_list - Shopping list\nPOST /api/objects/shopping_list - Add to shopping list\n\n# Docker Commands\ndocker-compose up -d - Start Grocy\ndocker-compose down - Stop Grocy\ndocker-compose logs -f - View logs\n\n# Backup Command\nsqlite3 /config/grocy.db \".backup backup.db\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-demo",
+        "title": "Hands-On Demo",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Live Demo Workflow",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Add new product with barcode"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Purchase and stock the product"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Consume product from inventory"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Check auto-generated shopping list"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Create and use a recipe"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Scan barcode for quick consume"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "View stock statistics and history"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Setup chore and track completion"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - grocy.info"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/grocy/grocy"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community Forum</strong> - Reddit /r/grocy"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Demo Instance</strong> - demo.grocy.info"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Setup and workflow videos"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Docker Hub</strong> - linuxserver/grocy image"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the main advantage of Grocy over spreadsheets?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How does Grocy handle product expiry tracking?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What are the three main barcode scanning methods?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How does auto-replenishment work in shopping lists?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What API method consumes a product from stock?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "Grocy = ERP for home and small business"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Free, open-source, self-hosted solution"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Comprehensive stock and inventory management"
+                },
+                {
+                  "emoji": "🍳",
+                  "text": "Recipe planning and consumption tracking"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Automated shopping lists and replenishment"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "Perfect for households and small organizations"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Grocy setup, features, or specific use cases!<br><span class=\"gradient-accent\">All inventory management questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔷</span> Ready to organize your inventory?<br><span class=\"gradient-accent\">Start your Grocy journey today!</span>",
+              "note": "Open Source • Self-Hosted • Powerful"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -334,6 +334,182 @@ const PRESENTATIONS_CONFIG = [
       "workflow-orchestration",
       "business-automation"
     ]
+  },
+  {
+    file: "presentations/intro-imhex.json",
+    title: "Introduction to ImHex - Advanced Hex Editor",
+    description: "Complete guide to ImHex hex editor for reverse engineering, firmware analysis, and binary forensics",
+    keywords: [
+      "imhex",
+      "hex-editor",
+      "reverse-engineering",
+      "binary-analysis",
+      "firmware",
+      "malware-analysis",
+      "forensics",
+      "pattern-language",
+      "security-research",
+      "embedded-systems",
+      "ghidra",
+      "ida-pro",
+      "radare2",
+      "binary-patching",
+      "memory-analysis",
+      "file-formats",
+      "elf",
+      "pe",
+      "png",
+      "checksum",
+      "hashing",
+      "entropy-analysis",
+      "data-visualization",
+      "plugins",
+      "scripting"
+    ]
+  },
+  {
+    file: "presentations/intro-adminlte.json",
+    title: "Introduction to AdminLTE",
+    description: "Complete admin dashboard template guide from setup to advanced customization",
+    keywords: [
+      "adminlte",
+      "bootstrap",
+      "dashboard",
+      "admin-template",
+      "web-development",
+      "ui-components",
+      "laravel",
+      "django",
+      "react",
+      "vue"
+    ]
+  },
+  {
+    file: "presentations/intro-wsl.json",
+    title: "Introduction to WSL (Windows Subsystem for Linux)",
+    description: "Complete guide to Windows Subsystem for Linux from installation to advanced development workflows",
+    keywords: [
+      "wsl",
+      "windows-subsystem-linux",
+      "linux-on-windows",
+      "development-environment",
+      "docker-wsl",
+      "wsl2",
+      "windows-linux",
+      "devops",
+      "bash-on-windows"
+    ],
+  },
+  {
+    file: "presentations/intro-ghost.json",
+    title: "Ghost - Just a Blogging Platform",
+    description: "Complete guide to modern publishing platform from setup to monetization",
+    keywords: [
+      "ghost",
+      "blogging",
+      "publishing",
+      "nodejs",
+      "cms",
+      "membership",
+      "newsletter",
+      "headless-cms",
+      "content-creation"
+    ]
+  },
+  {
+    file: "presentations/intro-grocy.json",
+    title: "Introduction to Grocy - ERP for Home & Small Inventory Management",
+    description: "Complete guide to Grocy open-source ERP system for household inventory, pantry management, and small business stock control",
+    keywords: [
+      "grocy",
+      "erp",
+      "inventory-management",
+      "pantry-tracking",
+      "self-hosted",
+      "home-automation",
+      "stock-management",
+      "barcode-scanning",
+      "meal-planning",
+      "shopping-list",
+      "chores",
+      "maintenance-tracking",
+      "docker",
+      "raspberry-pi",
+      "home-assistant",
+      "rest-api",
+      "automation",
+      "open-source",
+      "household-management",
+      "small-business",
+      "barcode-buddy",
+      "recipe-management",
+      "expiry-tracking",
+      "batch-management"
+    ]
+  }, {
+    file: "presentations/intro-rest-api-swagger.json",
+    title: "REST API & Swagger/OpenAPI",
+    description: "Complete guide to REST API design principles and OpenAPI documentation",
+    keywords: [
+      "rest",
+      "api",
+      "swagger",
+      "openapi",
+      "http",
+      "web-services",
+      "api-design",
+      "documentation",
+      "aspnet-core",
+      "nodejs",
+      "spring-boot"
+    ]
+  },
+  {
+    file: "presentations/intro-graphql.json",
+    title: "GraphQL – API Query Language",
+    description: "Complete guide to GraphQL API technology for efficient data fetching, real-time updates, and type-safe API development",
+    keywords: [
+      "graphql",
+      "api",
+      "query-language",
+      "rest-alternative",
+      "apollo",
+      "hasura",
+      "schema",
+      "resolvers",
+      "mutations",
+      "subscriptions",
+      "type-system",
+      "graphiql",
+      "react-graphql",
+      "nodejs-graphql",
+      "api-design",
+      "data-fetching",
+      "real-time",
+      "websockets",
+      "github-api",
+      "shopify",
+      "mobile-apis",
+      "over-fetching",
+      "under-fetching"
+    ]
+  },
+  {
+    file: "presentations/intro-kubernetes.json",
+    title: "Kubernetes – Container Orchestration",
+    description: "Production-grade platform for automating deployment, scaling, and management of containerized applications",
+    keywords: [
+      "kubernetes",
+      "k8s",
+      "container-orchestration",
+      "docker",
+      "cloud-native",
+      "microservices",
+      "devops",
+      "cncf",
+      "cka",
+      "ckad"
+    ]
   }
   // Add more presentations here as you create them
 ];

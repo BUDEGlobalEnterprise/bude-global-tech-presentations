@@ -1,0 +1,1732 @@
+{  
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "WSL Mastery",
+            "subtitle": "Complete Windows Subsystem for Linux Guide<br>From Installation to Advanced Development"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is WSL?</strong> - Windows Subsystem for Linux"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Key Benefits</strong> - Why Use WSL?"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>WSL1 vs WSL2</strong> - Architecture Differences"
+                },
+                {
+                  "emoji": "📥",
+                  "text": "<strong>Installation</strong> - Windows 10 & 11 Setup"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux Distributions</strong> - Ubuntu, Debian, Kali"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Terminal & Commands</strong> - WSL CLI Usage"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File System</strong> - Windows-Linux Integration"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>GUI Applications</strong> - WSLg Features"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Integration</strong> - Container Development"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Development Setup</strong> - VS Code, Python, Node.js"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise Usage</strong> - DevOps & Automation"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Advanced Topics</strong> - Performance, Security, GPU"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-wsl",
+        "title": "What is WSL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding WSL"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is WSL?",
+            "box": {
+              "content": "<span class=\"highlight\">Compatibility layer for running Linux binary executables natively on Windows</span>",
+              "list": [
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Developer</strong> - Microsoft"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Purpose</strong> - Run Linux tools on Windows"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Near-native Linux speed"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Integration</strong> - Seamless Windows-Linux workflow"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Platform</strong> - Windows 10 & 11"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Key advantage:</strong> Run Linux commands and tools without dual-booting or using virtual machines!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-wsl",
+        "title": "Why WSL?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Key Benefits & Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "💪",
+            "title": "Why Choose WSL?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Faster than virtual machines"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Integration</strong> - Access Windows files from Linux"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Resource Efficient</strong> - Lower memory usage"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Seamless</strong> - Run both Windows and Linux tools"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Developer Friendly</strong> - Best of both worlds"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Free</strong> - Included with Windows"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Technology Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSL vs Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "WSL vs Other Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>WSL</strong> - Integrated, performant, seamless"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Virtual Machine</strong> - Isolated, resource-heavy"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Dual Boot</strong> - Separate, requires restart"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Containerized, app-focused"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>WSL Advantage</strong> - Best integration and performance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "wsl1-vs-wsl2",
+        "title": "WSL1 vs WSL2",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Architecture Differences"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "WSL1 vs WSL2 Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>WSL1</strong> - Translation layer architecture"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>WSL2</strong> - Real Linux kernel in VM"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - WSL2 faster for file I/O"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Networking</strong> - WSL1 better for localhost"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Compatibility</strong> - WSL2 supports more apps"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Resources</strong> - WSL2 uses more RAM"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "How WSL Works",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Internal Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "WSL2 Architecture",
+            "box": {
+              "content": "<strong>Virtualized Linux kernel on Windows</strong>",
+              "code": "Windows 10/11 Host\n├── Windows Kernel\n├── WSL2 Virtual Machine\n│   ├── Real Linux Kernel\n│   ├── Systemd & Init\n│   └── Linux Distribution\n├── P9 File System Server\n└── WSLg (GUI Support)\n\nKey Components:\n• Lightweight Utility VM\n• Real Linux Kernel (Microsoft-built)\n• Seamless file system integration\n• Integrated networking stack"
+            }
+          }
+        ]
+      },
+      {
+        "id": "system-requirements",
+        "title": "System Requirements",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Compatibility & Requirements"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "WSL System Requirements",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows Version</strong> - Windows 10 2004+ or Windows 11"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>RAM</strong> - 4GB minimum, 8GB+ recommended"
+                },
+                {
+                  "emoji": "💽",
+                  "text": "<strong>Storage</strong> - 1GB+ for distro, SSD recommended"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Virtualization</strong> - Enabled in BIOS/UEFI"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Updates</strong> - Latest Windows updates"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installing WSL",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSL Installation Methods"
+          },
+          {
+            "type": "content",
+            "emoji": "📥",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Single Command</strong> - wsl --install"
+                },
+                {
+                  "emoji": "🎛️",
+                  "text": "<strong>Windows Features</strong> - Enable WSL feature"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise</strong> - Group Policy deployment"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Manual</strong> - Step-by-step setup"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Quick Installation Command",
+            "box": {
+              "content": "<strong>One-line WSL installation</strong>",
+              "code": "# Install WSL with default Ubuntu\ndism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart\n\n# Or use the new command (Windows 10 2004+)\nwsl --install\n\n# Install specific distribution\nwsl --install -d Ubuntu-22.04\nwsl --install -d Debian\nwsl --install -d Kali-Linux"
+            }
+          }
+        ]
+      },
+      {
+        "id": "linux-distros",
+        "title": "Linux Distributions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Available Linux Distributions"
+          },
+          {
+            "type": "content",
+            "emoji": "🐧",
+            "title": "Popular WSL Distributions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Ubuntu</strong> - Most popular, user-friendly"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Debian</strong> - Stable, lightweight"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Kali Linux</strong> - Security and penetration testing"
+                },
+                {
+                  "emoji": "⛰️",
+                  "text": "<strong>Alpine Linux</strong> - Minimal, security-focused"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Arch Linux</strong> - Rolling release, DIY"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>OpenSUSE</strong> - Enterprise-focused"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "wsl-commands",
+        "title": "WSL Commands",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential WSL Commands"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "WSL Command Line",
+            "box": {
+              "content": "<strong>Managing WSL distributions</strong>",
+              "code": "# List installed distributions\nwsl --list --verbose\n\n# Set default WSL version\nwsl --set-default-version 2\n\n# Set default distribution\nwsl --set-default Ubuntu-22.04\n\n# Run specific distribution\nwsl -d Ubuntu-22.04\n\n# Run command in WSL without entering shell\nwsl ls -la\n\n# Shutdown WSL\nwsl --shutdown\n\n# Terminate specific distribution\nwsl --terminate Ubuntu-22.04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "file-system",
+        "title": "File System Structure",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Windows-Linux File Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "File System Access",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux Access</strong> - /home/username/ for Linux files"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows Access</strong> - /mnt/c/ for Windows drives"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - WSL2 faster for Linux files"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Permissions</strong> - Maintained across systems"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Symlinks</strong> - Work across file systems"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-directory",
+        "title": "Home Directory",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux Home vs Windows Drives"
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Directory Mapping",
+            "box": {
+              "content": "<strong>File system paths</strong>",
+              "code": "# Linux home directory (WSL filesystem)\n/home/username/\n  ├── .bashrc\n  ├── .ssh/\n  ├── projects/\n  └── ...\n\n# Windows drives (mounted)\n/mnt/c/          # C: drive\n/mnt/d/          # D: drive\n/mnt/e/          # E: drive\n\n# Access Windows from Linux\ncd /mnt/c/Users/username/Desktop\n\n# Access Linux from Windows\n# Explorer path: \\\\wsl$\\Ubuntu-22.04\\home\\username"
+            }
+          }
+        ]
+      },
+      {
+        "id": "terminal-usage",
+        "title": "Terminal Usage",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Windows Terminal Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "⌨️",
+            "title": "Terminal Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows Terminal</strong> - Modern terminal app"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Tabs & Panes</strong> - Multiple sessions"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>GPU Acceleration</strong> - Smooth rendering"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Profiles</strong> - Different WSL distributions"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Customization</strong> - Themes and settings"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "package-management",
+        "title": "Package Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Installing Linux Packages"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Package Managers",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>APT</strong> - Ubuntu, Debian (deb packages)"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>YUM/DNF</strong> - Red Hat, Fedora (rpm packages)"
+                },
+                {
+                  "emoji": "⛰️",
+                  "text": "<strong>APK</strong> - Alpine Linux"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Pacman</strong> - Arch Linux"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Pip</strong> - Python packages"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>NPM</strong> - Node.js packages"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "APT Commands (Ubuntu/Debian)",
+            "box": {
+              "content": "<strong>Common package operations</strong>",
+              "code": "# Update package lists\nsudo apt update\n\n# Upgrade installed packages\nsudo apt upgrade\n\n# Install new package\nsudo apt install package-name\n\n# Remove package\nsudo apt remove package-name\n\n# Search for packages\napt search \"keyword\"\n\n# Clean up\nsudo apt autoremove\nsudo apt autoclean"
+            }
+          }
+        ]
+      },
+      {
+        "id": "git-ssh",
+        "title": "Git & SSH",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Version Control & Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "Git & SSH Setup",
+            "box": {
+              "content": "<strong>Development tools configuration</strong>",
+              "code": "# Install Git and SSH\nsudo apt install git openssh-client\n\n# Generate SSH key\nssh-keygen -t ed25519 -C \"your_email@example.com\"\n\n# Start SSH agent\neval \"$(ssh-agent -s)\"\n\n# Add SSH key to agent\nssh-add ~/.ssh/id_ed25519\n\n# Configure Git\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your_email@example.com\"\n\n# Copy SSH public key to clipboard\ncat ~/.ssh/id_ed25519.pub | clip.exe"
+            }
+          }
+        ]
+      },
+      {
+        "id": "gui-apps",
+        "title": "GUI Applications",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSLg - GUI Support"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Graphical Applications",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Browsers</strong> - Firefox, Chrome"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Editors</strong> - Gedit, VS Code (Linux version)"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Image Tools</strong> - GIMP, ImageMagick"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>IDEs</strong> - IntelliJ, PyCharm, Eclipse"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Office Tools</strong> - LibreOffice"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "networking",
+        "title": "Networking",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSL1 vs WSL2 Networking"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Network Configuration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>WSL1</strong> - Shares Windows IP address"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>WSL2</strong> - Virtualized network with own IP"
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Port Forwarding</strong> - Access WSL2 services"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Firewall</strong> - Windows firewall applies"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Localhost</strong> - localhost works in both"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "docker-integration",
+        "title": "Docker Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Docker with WSL2"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Docker Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Docker Desktop</strong> - WSL2 backend"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Performance</strong> - Much faster than Windows Docker"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Storage</strong> - Images stored in WSL2"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Integration</strong> - Seamless volume mounting"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Development</strong> - Ideal for container workflows"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "vscode-integration",
+        "title": "VS Code Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Remote Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "VS Code + WSL",
+            "box": {
+              "content": "<strong>Remote Development Extension</strong>",
+              "code": "# Install Remote Development extension in VS Code\n# Then connect to WSL:\n\n1. Open VS Code\n2. Press Ctrl+Shift+P\n3. Type \"Remote-WSL: New Window\"\n4. Select your WSL distribution\n\n# Features:\n• Edit files in WSL file system\n• Use WSL terminal in VS Code\n• Run and debug in WSL environment\n• Install extensions in WSL context\n• Seamless Git integration\n\n# From WSL terminal:\ncode .  # Opens current directory in VS Code"
+            }
+          }
+        ]
+      },
+      {
+        "id": "development-setup",
+        "title": "Development Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Programming Languages"
+          },
+          {
+            "type": "content",
+            "emoji": "🐍",
+            "title": "Development Environments",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python</strong> - Native Linux Python, pip, virtualenv"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Node.js</strong> - NVM, npm, yarn"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Go</strong> - Native Go compiler"
+                },
+                {
+                  "emoji": "☕",
+                  "text": "<strong>Java</strong> - OpenJDK, Maven, Gradle"
+                },
+                {
+                  "emoji": "🦀",
+                  "text": "<strong>Rust</strong> - Rustup, Cargo"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "database-setup",
+        "title": "Database Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Servers"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Database Installation",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - sudo apt install postgresql"
+                },
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - sudo apt install mysql-server"
+                },
+                {
+                  "emoji": "🍃",
+                  "text": "<strong>MongoDB</strong> - Official MongoDB packages"
+                },
+                {
+                  "emoji": "💎",
+                  "text": "<strong>Redis</strong> - sudo apt install redis-server"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>SQLite</strong> - Built-in, no installation needed"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "file-sharing",
+        "title": "File Sharing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Windows-WSL File Access"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Cross-Platform File Access",
+            "box": {
+              "content": "<strong>Access files from both systems</strong>",
+              "code": "# From WSL, access Windows files:\ncd /mnt/c/Users/YourName/Desktop\ncd /mnt/c/Projects/my-project\n\n# From Windows, access WSL files:\n# File Explorer: \\\\wsl$\\\n# Or: \\\\wsl$\\Ubuntu-22.04\\home\\username\n\n# Best practices:\n• Store project files in Windows for backup\n• Use WSL for development operations\n• Avoid editing Linux system files from Windows\n• Use /home/username for WSL-specific configs"
+            }
+          }
+        ]
+      },
+      {
+        "id": "external-drives",
+        "title": "External Drives",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Mounting External Storage"
+          },
+          {
+            "type": "content",
+            "emoji": "💽",
+            "title": "Drive Mounting",
+            "box": {
+              "content": "<strong>Mount external drives in WSL</strong>",
+              "code": "# List available drives\nwsl --mount --list\n\n# Mount a drive (replace X with drive letter)\nwsl --mount \\\\.\\X:\n\n# Mount with specific filesystem\nwsl --mount \\\\.\\X: -t ext4\n\n# Unmount a drive\nwsl --unmount \\\\.\\X:\n\n# Access mounted drive in WSL\ncd /mnt/x/\n\n# Mount USB drives, external HDDs, etc."
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-integration",
+        "title": "App Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Cross-Platform App Access"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Windows-Linux App Interaction",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows from WSL</strong> - Run .exe files directly"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>WSL from Windows</strong> - Run Linux commands"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Clipboard</strong> - Shared between systems"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Networking</strong> - Localhost access both ways"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>File Open</strong> - Open files in default apps"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "systemd-support",
+        "title": "Systemd Support",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "System Services"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Systemd in WSL",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Available</strong> - In latest WSL versions"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Configuration</strong> - Enable in wsl.conf"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Services</strong> - Docker, SSH, cron as services"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Boot</strong> - Automatic service startup"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Management</strong> - systemctl commands work"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "customization",
+        "title": "Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Shell & Environment"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "WSL Customization",
+            "box": {
+              "content": "<strong>Personalize your WSL environment</strong>",
+              "code": "# Install Zsh and Oh-My-Zsh\nsudo apt install zsh\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"\n\n# Popular plugins:\n• zsh-autosuggestions\n• zsh-syntax-highlighting\n• git plugin (built-in)\n\n# Configure WSL settings in /etc/wsl.conf\n[network]\nhostname = my-wsl\n\n[interop]\nappendWindowsPath = false\n\n# Windows Terminal settings:\n• Custom color schemes\n• Different profiles per distro\n• Background images\n• Key bindings"
+            }
+          }
+        ]
+      },
+      {
+        "id": "devops-automation",
+        "title": "DevOps Automation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Automation & Scripting"
+          },
+          {
+            "type": "content",
+            "emoji": "🤖",
+            "title": "DevOps with WSL",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Bash Scripting</strong> - Native Linux scripts"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python Automation</strong> - DevOps tools"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>CI/CD</strong> - Local pipeline testing"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud CLI</strong> - AWS, Azure, GCP tools"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Configuration Management</strong> - Ansible, Terraform"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "web-development",
+        "title": "Web Development",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Web Servers & Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Web Development Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Apache</strong> - sudo apt install apache2"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Nginx</strong> - sudo apt install nginx"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PHP</strong> - sudo apt install php"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Node.js</strong> - nvm install --lts"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python</strong> - Django, Flask development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "kubernetes",
+        "title": "Kubernetes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kubernetes Development"
+          },
+          {
+            "type": "content",
+            "emoji": "☸️",
+            "title": "Kubernetes with WSL",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🦊",
+                  "text": "<strong>Minikube</strong> - Local Kubernetes cluster"
+                },
+                {
+                  "emoji": "👶",
+                  "text": "<strong>Kind</strong> - Kubernetes in Docker"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>k3s</strong> - Lightweight Kubernetes"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>kubectl</strong> - Kubernetes command line"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Helm</strong> - Kubernetes package manager"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-tuning",
+        "title": "Performance Tuning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optimization & Resources"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Performance Optimization",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Memory Limits</strong> - Configure in .wslconfig"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>CPU Limits</strong> - Set processor count"
+                },
+                {
+                  "emoji": "💽",
+                  "text": "<strong>Storage</strong> - Use WSL2 for Linux files"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Swap File</strong> - Configure swap size"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring</strong> - Track resource usage"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "backup-export",
+        "title": "Backup & Export",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Distribution Management"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup and Migration",
+            "box": {
+              "content": "<strong>Export and import WSL distributions</strong>",
+              "code": "# Export distribution to tar file\nwsl --export Ubuntu-22.04 ubuntu-backup.tar\n\n# Import from tar file as new distribution\nwsl --import New-Ubuntu C:\\WSL\\New-Ubuntu ubuntu-backup.tar\n\n# List all distributions\nwsl --list --all\n\n# Unregister/delete distribution\nwsl --unregister Ubuntu-22.04\n\n# Backup entire WSL environment:\n1. Export each distribution\n2. Backup Windows Terminal settings\n3. Save wsl.conf configurations\n4. Export VS Code extensions list"
+            }
+          }
+        ]
+      },
+      {
+        "id": "upgrade-wsl1-to-wsl2",
+        "title": "Upgrade to WSL2",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSL1 to WSL2 Migration"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Upgrade Process",
+            "box": {
+              "content": "<strong>Convert WSL1 to WSL2</strong>",
+              "code": "# Check current WSL version\nwsl --list --verbose\n\n# Set WSL2 as default version\nwsl --set-default-version 2\n\n# Convert existing distribution\nwsl --set-version Ubuntu-22.04 2\n\n# Requirements for WSL2:\n• Windows 10 Version 2004 or later\n• Virtualization enabled in BIOS\n• Windows Subsystem for Linux feature\n• Virtual Machine Platform feature\n\n# Verify conversion\nwsl --list --verbose"
+            }
+          }
+        ]
+      },
+      {
+        "id": "enterprise-setup",
+        "title": "Enterprise Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Corporate Environment"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Enterprise Deployment",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Group Policy</strong> - Centralized configuration"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Package Management</strong> - Corporate distros"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Compliance and auditing"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Updates</strong> - Managed deployment"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring</strong> - Usage tracking"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security Model"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "WSL Security Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Isolation</strong> - WSL2 uses Hyper-V isolation"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Windows Defender</strong> - Protects WSL files"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>User Accounts</strong> - Separate Linux users"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Network Security</strong> - Windows firewall"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Audit</strong> - Logging and monitoring"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "common-errors",
+        "title": "Common Errors",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Troubleshooting"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Common Issues & Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Virtualization Disabled</strong> - Enable in BIOS"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>WSL Not Installed</strong> - Enable Windows feature"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Network Issues</strong> - Check WSL version"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File Permission</strong> - WSL2 vs Windows files"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Update Problems</strong> - Restart LxssManager"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "logs-diagnostics",
+        "title": "Logs & Diagnostics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Debugging WSL"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Diagnostic Tools",
+            "box": {
+              "content": "<strong>WSL troubleshooting commands</strong>",
+              "code": "# Check WSL status\nwsl --status\n\n# Generate diagnostic log\nwsl --system\n\n# Check distribution status\nwsl -l -v\n\n# Restart WSL service\nwsl --shutdown\n\n# Event logs in Windows:\nEvent Viewer → Windows Logs → System\n\n# WSL logs location:\n%USERPROFILE%\\AppData\\Local\\Temp\n\n# Enable verbose logging:\nAdd to %USERPROFILE%\\.wslconfig:\n[WSL2]\nkernelCommandLine = \"systemd.unit=multi-user.target debug\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "gpu-support",
+        "title": "GPU Support",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GPU Acceleration"
+          },
+          {
+            "type": "content",
+            "emoji": "🎮",
+            "title": "GPU in WSL",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>CUDA</strong> - NVIDIA GPU computing"
+                },
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>AI/ML</strong> - TensorFlow, PyTorch"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Graphics</strong> - OpenGL, Vulkan"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Near-native GPU access"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Setup</strong> - Install GPU drivers in WSL"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-use-cases",
+        "title": "Real-World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "WSL Use Cases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Development</strong> - Cross-platform coding"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Cybersecurity</strong> - Kali Linux for pentesting"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - AWS, Azure CLI tools"
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Scripting</strong> - Bash automation scripts"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Containers</strong> - Docker development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cicd-integration",
+        "title": "CI/CD Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "GitHub Actions & CI/CD"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Continuous Integration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Actions</strong> - WSL runners"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Local Testing</strong> - Test CI scripts locally"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Build Pipelines</strong> - Linux build environments"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Testing</strong> - Run tests in Linux environment"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Deployment</strong> - Script deployment processes"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ethical-hacking",
+        "title": "Ethical Hacking",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kali Linux WSL"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Penetration Testing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Kali Linux</strong> - Pre-installed security tools"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Network Scanning</strong> - Nmap, Wireshark"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Password Cracking</strong> - John the Ripper"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Testing</strong> - Burp Suite, sqlmap"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Forensics</strong> - Autopsy, Volatility"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "roadmap",
+        "title": "Roadmap",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Future Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "WSL Roadmap",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>New Features</strong> - Regular updates"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Performance</strong> - Ongoing optimization"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Distributions</strong> - More Linux options"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Integration</strong> - Better Windows-Linux workflow"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSL Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Recommended Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>File Storage</strong> - Store projects in Windows"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>WSL Version</strong> - Use WSL2 for performance"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Backup</strong> - Regularly export distributions"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Use .wslconfig for tuning"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Updates</strong> - Keep WSL and distros updated"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "WSL Cheat Sheet",
+            "box": {
+              "content": "<strong>Essential WSL Commands</strong>",
+              "code": "Installation & Management:\nwsl --install                    # Install WSL\nwsl --list --verbose            # List distributions\nwsl --set-default-version 2     # Set WSL2 as default\nwsl --shutdown                  # Shutdown WSL\nwsl --terminate <distro>        # Stop specific distro\n\nDistribution Management:\nwsl --export <distro> file.tar  # Export distribution\nwsl --import <name> path file.tar # Import distribution\nwsl --unregister <distro>       # Remove distribution\n\nFile System:\n/mnt/c/                         # Access C: drive\n/mnt/d/                         # Access D: drive\n\\\\wsl$\\<distro>                 # Access WSL from Windows\n\nCommon Operations:\nwsl <command>                   # Run Linux command\ncode .                          # Open VS Code in current dir\n explorer.exe .                 # Open Windows Explorer"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-demo",
+        "title": "Hands-On Demo",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Live Demonstration"
+          },
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Demo Workflow: Complete Development Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Install WSL and Ubuntu distribution"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Setup development environment (Git, Node.js, Python)"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Configure VS Code with WSL integration"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Run a sample web application"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Demonstrate file sharing between Windows and WSL"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Show Docker integration with WSL2"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Docs</strong> - docs.microsoft.com/wsl"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>Video Tutorials</strong> - Microsoft Learn"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community</strong> - WSL GitHub repository"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Blog</strong> - Dev blogs and tutorials"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Updates</strong> - WSL release notes"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "alternatives",
+        "title": "Alternatives",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "WSL Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Other Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Cygwin</strong> - POSIX compatibility layer"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Git Bash</strong> - Minimal bash environment"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Virtual Machine</strong> - Full Linux isolation"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Dual Boot</strong> - Separate Linux installation"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>WSL Advantage</strong> - Best integration and performance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the main difference between WSL1 and WSL2?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you access Windows C: drive from WSL?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What command installs WSL with default Ubuntu?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How can you run GUI applications in WSL?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the advantage of using Docker with WSL2?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "WSL = Run Linux on Windows seamlessly"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "WSL2 uses real Linux kernel for performance"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Perfect for development and DevOps"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "Excellent Docker and container support"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "GUI applications supported via WSLg"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Enterprise-ready with management features"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss WSL setup, development workflows, or specific use cases!<br><span class=\"gradient-accent\">All WSL questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐧</span> Ready to master Linux on Windows?<br><span class=\"gradient-accent\">Start using WSL today!</span>",
+              "note": "Seamless • Performant • Developer-Friendly"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

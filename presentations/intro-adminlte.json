@@ -1,0 +1,1054 @@
+{
+   "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to AdminLTE",
+            "subtitle": "Complete Dashboard Template Guide<br>From Setup to Customization"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Web Development Team",
+            "title": "Full-Stack Developer",
+            "experience": "5 years in Web Development & UI/UX",
+            "oss_experience": "Dashboard Templates & Admin Panel Specialist",
+            "github": "https://github.com/your-username",
+            "website": "https://your-portfolio.com"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is AdminLTE?</strong> - Overview & Benefits"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>History & Evolution</strong> - v1 → v3 → v4"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Why Use AdminLTE?</strong> - Key Advantages"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>AdminLTE vs Alternatives</strong> - Comparison"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Installation Methods</strong> - Download, npm, CDN"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Layout & Structure</strong> - Components Overview"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Themes & Customization</strong> - Skins & Colors"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Components Deep Dive</strong> - Cards, Forms, Tables"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Charts & Widgets</strong> - Data Visualization"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Framework Integration</strong> - Laravel, Django, React"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Real-world Examples</strong> - Dashboards & Admin Panels"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Best Practices</strong> - Production Ready"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-adminlte",
+        "title": "What is AdminLTE?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding AdminLTE"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is AdminLTE?",
+            "box": {
+              "content": "<span class=\"highlight\">Free, open-source admin dashboard template</span> built on Bootstrap",
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Purpose</strong> - Rapid admin panel development"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Built With</strong> - Bootstrap, jQuery, Sass"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Features</strong> - Responsive, customizable, components"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Compatibility</strong> - All modern browsers & devices"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Use Cases</strong> - Admin panels, dashboards, CRM, ERP"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> AdminLTE has over 40k GitHub stars and powers thousands of admin dashboards worldwide!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history-evolution",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "AdminLTE Evolution"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Version Timeline",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>v1.x (2014)</strong> - Initial release, Bootstrap 3"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>v2.x (2015)</strong> - Major improvements, more plugins"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>v3.x (2018)</strong> - Bootstrap 4, major redesign"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>v4.x (2022)</strong> - Bootstrap 5, jQuery optional"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>Latest</strong> - Active development, modern features"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-adminlte",
+        "title": "Why Use AdminLTE?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Key Benefits"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Advantages of AdminLTE",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Rapid Development</strong> - Pre-built components save time"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Professional Design</strong> - Clean, modern UI out of the box"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Fully Responsive</strong> - Works on all devices"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Open Source</strong> - Free to use and modify"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Great Documentation</strong> - Easy to learn and use"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Active Community</strong> - Regular updates and support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Template Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "AdminLTE vs Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Dashboard Template Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>AdminLTE</strong> - Free, Bootstrap-based, extensive components"
+                },
+                {
+                  "emoji": "💎",
+                  "text": "<strong>CoreUI</strong> - Premium features, framework-specific versions"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>SB Admin</strong> - Clean design, fewer dependencies"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Dashforge</strong> - Modern design, SaaS focused"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>AdminLTE</strong> - Completely free and open source"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>AdminLTE</strong> - Largest component library"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Download ZIP</strong> - Quick start for beginners"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>npm/yarn</strong> - Package manager for projects"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>CDN</strong> - Quick prototyping"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Clone</strong> - Latest development version"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Starter Template</strong> - Pre-configured setup"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "npm Installation",
+            "box": {
+              "content": "<strong>Using package manager</strong>",
+              "code": "# Using npm\nnpm install admin-lte@^3.2 --save\n\n# Using yarn\nyarn add admin-lte@^3.2\n\n# Using CDN in HTML\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js\"></script>\n\n# File structure after installation\nadmin-lte/\n├── dist/\n│   ├── css/\n│   ├── js/\n│   └── img/\n├── build/\n├── plugins/\n└── pages/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dependencies",
+        "title": "Dependencies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Required Dependencies"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Core Dependencies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Bootstrap 5</strong> - CSS framework foundation"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>jQuery</strong> - JavaScript library (optional in v4+)"
+                },
+                {
+                  "emoji": "👑",
+                  "text": "<strong>Popper.js</strong> - Tooltip and popover positioning"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Font Awesome</strong> - Icon library"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Chart.js</strong> - Data visualization"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Select2</strong> - Enhanced select boxes"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "layout-structure",
+        "title": "Layout & Structure",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "AdminLTE Layout"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Basic Layout Structure",
+            "box": {
+              "content": "<strong>Main layout components</strong>",
+              "code": "<body class=\"hold-transition sidebar-mini layout-fixed\">\n  <div class=\"wrapper\">\n    \n    <!-- Navbar -->\n    <nav class=\"main-header navbar navbar-expand navbar-white navbar-light\">\n      <!-- Left navbar links -->\n      <!-- Right navbar links -->\n    </nav>\n    \n    <!-- Main Sidebar -->\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\n      <!-- Brand logo -->\n      <!-- Sidebar menu -->\n    </aside>\n    \n    <!-- Content Wrapper -->\n    <div class=\"content-wrapper\">\n      <!-- Content Header -->\n      <!-- Main content -->\n    </div>\n    \n    <!-- Footer -->\n    <footer class=\"main-footer\">\n      <!-- Footer content -->\n    </footer>\n    \n  </div>\n</body>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "components",
+        "title": "Core Components",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "AdminLTE Components"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "UI Components Overview",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Cards</strong> - Flexible content containers"
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>Alerts</strong> - Notification messages"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Badges</strong> - Small count and status labels"
+                },
+                {
+                  "emoji": "🔘",
+                  "text": "<strong>Buttons</strong> - Various styles and sizes"
+                },
+                {
+                  "emoji": "📑",
+                  "text": "<strong>Tabs & Pills</strong> - Navigation components"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Modals</strong> - Dialog boxes and popups"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Card Component Example",
+            "box": {
+              "content": "<strong>Basic card with header and body</strong>",
+              "code": "<!-- Basic Card -->\n<div class=\"card\">\n  <div class=\"card-header\">\n    <h3 class=\"card-title\">Card Title</h3>\n    <div class=\"card-tools\">\n      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">\n        <i class=\"fas fa-minus\"></i>\n      </button>\n    </div>\n  </div>\n  <div class=\"card-body\">\n    Card content goes here\n  </div>\n  <div class=\"card-footer\">\n    Card footer\n  </div>\n</div>\n\n<!-- Solid Card -->\n<div class=\"card card-primary\">\n  <div class=\"card-header\">\n    <h3 class=\"card-title\">Primary Card</h3>\n  </div>\n  <div class=\"card-body\">\n    Solid primary card\n  </div>\n</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "forms",
+        "title": "Forms & Inputs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Form Components"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Enhanced Form Elements",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Input Groups</strong> - Icons and buttons with inputs"
+                },
+                {
+                  "emoji": "🎛️",
+                  "text": "<strong>Custom Select</strong> - Select2 integration"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date Pickers</strong> - Bootstrap datepicker"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Text Editors</strong> - Summernote WYSIWYG"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Input Masks</strong> - Formatted input fields"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Validation</strong> - Client-side form validation"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎛️",
+            "title": "Select2 Integration",
+            "box": {
+              "content": "<strong>Enhanced select boxes</strong>",
+              "code": "<!-- Basic Select2 -->\n<select class=\"form-control select2\" style=\"width: 100%;\">\n  <option selected=\"selected\">Option 1</option>\n  <option>Option 2</option>\n  <option>Option 3</option>\n</select>\n\n<!-- Select2 with AJAX -->\n<select class=\"form-control select2\" id=\"user-select\"></select>\n\n<script>\n// Initialize Select2\n$('.select2').select2();\n\n// AJAX example\n$('#user-select').select2({\n  ajax: {\n    url: '/api/users',\n    dataType: 'json',\n    delay: 250,\n    data: function (params) {\n      return { q: params.term };\n    },\n    processResults: function (data) {\n      return { results: data };\n    }\n  }\n});\n</script>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tables",
+        "title": "Tables & Data",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Table Components"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Table Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Basic Tables</strong> - Styled Bootstrap tables"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>DataTables</strong> - Advanced table with features"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Responsive Tables</strong> - Mobile-friendly tables"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Search & Filter</strong> - Table search functionality"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Pagination</strong> - Page navigation for large datasets"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Sorting</strong> - Column sorting capabilities"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "DataTables Example",
+            "box": {
+              "content": "<strong>Advanced table with DataTables</strong>",
+              "code": "<!-- HTML Table -->\n<table id=\"example1\" class=\"table table-bordered table-striped\">\n  <thead>\n    <tr>\n      <th>ID</th>\n      <th>Name</th>\n      <th>Email</th>\n      <th>Status</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>John Doe</td>\n      <td>john@example.com</td>\n      <td><span class=\"badge bg-success\">Active</span></td>\n    </tr>\n  </tbody>\n</table>\n\n<script>\n// Initialize DataTables\n$('#example1').DataTable({\n  \"paging\": true,\n  \"lengthChange\": false,\n  \"searching\": true,\n  \"ordering\": true,\n  \"info\": true,\n  \"autoWidth\": false,\n  \"responsive\": true\n});\n</script>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "charts-widgets",
+        "title": "Charts & Widgets",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Visualization"
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Chart Integration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Chart.js</strong> - Simple yet flexible charts"
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Sparkline</strong> - Small inline charts"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Flot Charts</strong> - Attractive JavaScript charts"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Progress Bars</strong> - Animated progress indicators"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Info Boxes</strong> - Statistical display widgets"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Live Updates</strong> - Real-time chart updates"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Chart.js Example",
+            "box": {
+              "content": "<strong>Creating charts with Chart.js</strong>",
+              "code": "<!-- Chart Container -->\n<canvas id=\"salesChart\" style=\"min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;\"></canvas>\n\n<script>\n// Sales Chart\nvar salesChartCanvas = document.getElementById('salesChart').getContext('2d');\nvar salesChartData = {\n  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n  datasets: [\n    {\n      label: 'Digital Goods',\n      backgroundColor: 'rgba(60,141,188,0.9)',\n      borderColor: 'rgba(60,141,188,0.8)',\n      data: [28, 48, 40, 19, 86, 27, 90]\n    },\n    {\n      label: 'Electronics',\n      backgroundColor: 'rgba(210, 214, 222, 1)',\n      borderColor: 'rgba(210, 214, 222, 1)',\n      data: [65, 59, 80, 81, 56, 55, 40]\n    }\n  ]\n};\n\nvar salesChartOptions = {\n  maintainAspectRatio: false,\n  responsive: true,\n  legend: {\n    display: false\n  }\n};\n\nvar salesChart = new Chart(salesChartCanvas, {\n  type: 'bar',\n  data: salesChartData,\n  options: salesChartOptions\n});\n</script>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "framework-integration",
+        "title": "Framework Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Backend Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Popular Framework Integrations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Laravel</strong> - Official starter kits available"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Django</strong> - Template integration"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>ASP.NET Core</strong> - Razor pages integration"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Node.js/Express</strong> - EJS template engine"
+                },
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>React/Vue/Angular</strong> - Component integration"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Flask/FastAPI</strong> - Python web frameworks"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐘",
+            "title": "Laravel Integration",
+            "box": {
+              "content": "<strong>AdminLTE with Laravel</strong>",
+              "code": "<!-- Blade Template Structure -->\n<!-- resources/views/layouts/app.blade.php -->\n<!DOCTYPE html>\n<html lang=\"{{ str_replace('_', '-', app()->getLocale()) }}\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>@yield('title', 'AdminLTE 3')</title>\n  \n  <!-- AdminLTE CSS -->\n  <link rel=\"stylesheet\" href=\"{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}\">\n  <!-- Font Awesome -->\n  <link rel=\"stylesheet\" href=\"{{ asset('vendor/fontawesome-free/css/all.min.css') }}\">\n</head>\n\n<body class=\"hold-transition sidebar-mini\">\n<div class=\"wrapper\">\n  \n  <!-- Navbar -->\n  @include('layouts.navbar')\n  \n  <!-- Sidebar -->\n  @include('layouts.sidebar')\n  \n  <!-- Content -->\n  <div class=\"content-wrapper\">\n    @yield('content')\n  </div>\n  \n  <!-- Footer -->\n  @include('layouts.footer')\n  \n</div>\n\n<!-- AdminLTE JS -->\n<script src=\"{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}\"></script>\n</body>\n</html>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "customization",
+        "title": "Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Theme Customization"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Customization Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Color Schemes</strong> - Primary, secondary colors"
+                },
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Dark Mode</strong> - Built-in dark theme support"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Layout Options</strong> - Fixed, boxed, sidebar variants"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>RTL Support</strong> - Right-to-left language support"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Responsive Breakpoints</strong> - Mobile optimization"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>SCSS Variables</strong> - Easy theme customization"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "SCSS Customization",
+            "box": {
+              "content": "<strong>Customizing with SCSS variables</strong>",
+              "code": "// _custom-variables.scss\n\n// Color system\n$primary: #007bff !default;\n$secondary: #6c757d !default;\n$success: #28a745 !default;\n$info: #17a2b8 !default;\n$warning: #ffc107 !default;\n$danger: #dc3545 !default;\n\n// Body\n$body-bg: #f4f6f9 !default;\n$body-color: #343a40 !default;\n\n// Sidebar\n$sidebar-width: 250px !default;\n$sidebar-bg: #343a40 !default;\n$sidebar-color: #c2c7d0 !default;\n\n// Navbar\n$navbar-height: 57px !default;\n$navbar-bg: #fff !default;\n$navbar-color: #333 !default;\n\n// Import AdminLTE\n@import \"admin-lte/build/scss/adminlte\";"
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-examples",
+        "title": "Real World Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Examples"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Common Use Cases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>SaaS Applications</strong> - User management dashboards"
+                },
+                {
+                  "emoji": "🏪",
+                  "text": "<strong>E-commerce</strong> - Product and order management"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Analytics Platforms</strong> - Data visualization dashboards"
+                },
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Healthcare Systems</strong> - Patient management"
+                },
+                {
+                  "emoji": "🏫",
+                  "text": "<strong>Education Platforms</strong> - Student and course management"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>ERP Systems</strong> - Enterprise resource planning"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-best-practices",
+        "title": "Security & Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Considerations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Authentication</strong> - Implement proper user auth"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Authorization</strong> - Role-based access control"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>CSP Headers</strong> - Content Security Policy"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CSRF Protection</strong> - Cross-site request forgery"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Dependency Management</strong> - Keep libraries updated"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Input Validation</strong> - Server-side validation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-optimization",
+        "title": "Performance Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optimization Tips"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Performance Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Bundle Optimization</strong> - Tree shaking, code splitting"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Asset Optimization</strong> - Image compression, minification"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Caching Strategies</strong> - Browser and server caching"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Lazy Loading</strong> - Load components on demand"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>CDN Usage</strong> - Content delivery networks"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile First</strong> - Optimize for mobile devices"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "common-issues",
+        "title": "Common Issues & Fixes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Troubleshooting"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Frequent Problems & Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "❌",
+                  "text": "<strong>JavaScript Errors</strong> - Check dependency order"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Styling Issues</strong> - Verify CSS load order"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Responsive Problems</strong> - Check viewport meta tag"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance Issues</strong> - Optimize asset loading"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Plugin Conflicts</strong> - Isolate conflicting scripts"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Build Problems</strong> - Clear cache and reinstall"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "AdminLTE Quick Reference",
+            "box": {
+              "content": "<strong>Essential classes and components</strong>",
+              "code": "<!-- Layout Classes -->\nsidebar-mini, layout-fixed, layout-navbar-fixed\nlayout-footer-fixed, layout-top-nav, text-sm\n\n<!-- Card Classes -->\ncard, card-primary, card-outline, card-success\ncard-header, card-body, card-footer, card-tools\n\n<!-- Button Classes -->\nbtn, btn-primary, btn-sm, btn-lg, btn-block\nbtn-app, btn-tool, btn-success, btn-warning\n\n<!-- Badge Classes -->\nbadge, badge-primary, badge-pill, bg-success\nbg-warning, bg-danger, bg-info, bg-secondary\n\n<!-- Table Classes -->\ntable, table-bordered, table-striped, table-hover\ntable-sm, table-responsive, dataTable\n\n<!-- Form Classes -->\nform-control, form-control-lg, form-control-sm\ncustom-control-input, custom-switch, input-group\n\n<!-- Utility Classes -->\nelevation-1 through elevation-25, bg-gradient-\ndirect-chat, info-box, small-box, products-list"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - adminlte.io/docs"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/ColorlibHQ/AdminLTE"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community Support</strong> - GitHub Discussions"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Video Tutorials</strong> - YouTube tutorials"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Bootstrap Documentation</strong> - getbootstrap.com"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Plugin Documentation</strong> - Individual plugin docs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Build Admin Dashboard",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Setup AdminLTE with npm"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create basic layout structure"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Implement sidebar navigation"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Add user management interface"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Create data tables with CRUD operations"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Integrate charts and analytics"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Add dark/light theme toggle"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Implement responsive design"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What are the main dependencies of AdminLTE?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you initialize a DataTable in AdminLTE?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the difference between card-primary and card-outline?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How can you customize AdminLTE colors using SCSS?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What are some common security considerations for AdminLTE?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "AdminLTE = Free, open-source admin template"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Built on Bootstrap for rapid development"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Extensive component library and plugins"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Fully responsive and mobile-friendly"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Easy customization with SCSS variables"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "Perfect for admin panels and dashboards"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss AdminLTE setup, customization, or specific use cases! <span class=\"gradient-accent\">All AdminLTE questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">📊</span> Ready to build amazing dashboards? <span class=\"gradient-accent\">Start your AdminLTE journey today!</span>",
+              "note": "Free • Open Source • Professional"
+            },
+            "footer": {
+              "org": "Web Development Community",
+              "tagline": "Empowering developers with beautiful admin interfaces"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
