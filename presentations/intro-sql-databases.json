@@ -18,12 +18,12 @@
         "slides": [
           {
             "type": "presenter",
-            "name": "Database Architect",
-            "title": "SQL & Database Specialist",
-            "experience": "6+ years in Database Design & Optimization",
-            "oss_experience": "Enterprise Systems & Data Analytics",
-            "github": "https://github.com/sql-expert",
-            "website": "https://sql-expert.github.io"
+            "name": "Aravind Govindhasamy",
+            "title": "Founder of BUDE",
+            "experience": "Software Developer for 3 years",
+            "oss_experience": "Open Source maintainer since 2024",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
           }
         ]
       },

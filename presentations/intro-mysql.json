@@ -18,12 +18,12 @@
         "slides": [
           {
             "type": "presenter",
-            "name": "Database Specialist",
-            "title": "MySQL Database Administrator",
-            "experience": "5+ years in MySQL Optimization & Scaling",
-            "oss_experience": "Web Applications & High Traffic Systems",
-            "github": "https://github.com/mysql-expert",
-            "website": "https://mysql-expert.github.io"
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & UI Framework Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
           }
         ]
       },

@@ -1,0 +1,820 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "TypeScript",
+            "subtitle": "Typed JavaScript for Scalable Applications<br>From JavaScript to Enterprise-Grade Code"
+          }
+        ]
+      },
+     {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Founder of BUDE",
+            "experience": "Software Developer for 3 years",
+            "oss_experience": "Open Source maintainer since 2024",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is TypeScript?</strong> - Superset of JavaScript"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Why TypeScript?</strong> - Solving JavaScript Problems"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Type System</strong> - Static Typing & Type Inference"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Advanced Types</strong> - Generics, Unions, Interfaces"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tooling & Setup</strong> - Compiler & Configuration"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Frameworks</strong> - React, Angular, Vue with TS"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Backend</strong> - Node.js, Express with TypeScript"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Advanced Patterns</strong> - Utility Types & Decorators"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise</strong> - Migration & Best Practices"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Performance</strong> - Optimization & Tooling"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Type Safety</strong> - Catching Errors Early"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Real World</strong> - Practical Applications"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-typescript",
+        "title": "What is TypeScript?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding TypeScript"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is TypeScript?",
+            "box": {
+              "content": "<span class=\"highlight\">Typed superset of JavaScript that compiles to plain JavaScript</span>",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Microsoft</strong> - Created and maintained by Microsoft"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Static Typing</strong> - Optional type system for JavaScript"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tooling</strong> - Better autocomplete, refactoring, and error detection"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>ESNext Features</strong> - Use latest JavaScript features today"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Gradual Adoption</strong> - Add types incrementally"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> TypeScript was first released in 2012 and has become one of the most loved languages according to Stack Overflow surveys!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-typescript",
+        "title": "Why TypeScript?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Problems with Plain JavaScript"
+          },
+          {
+            "type": "content",
+            "emoji": "🚨",
+            "title": "JavaScript Pain Points",
+            "box": {
+              "list": [
+                {
+                  "emoji": "❓",
+                  "text": "<strong>Runtime Errors</strong> - Type-related errors only at runtime"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Poor Tooling</strong> - Limited autocomplete and refactoring"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Documentation</strong> - Types serve as documentation"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Refactoring</strong> - Difficult to safely refactor large codebases"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Team Scale</strong> - Hard to maintain consistency in teams"
+                },
+                {
+                  "emoji": "🐛",
+                  "text": "<strong>Bugs</strong> - Catch errors during development, not production"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💪",
+            "title": "TypeScript Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Early Error Detection</strong> - Catch errors in IDE"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Enhanced Tooling</strong> - Better autocomplete and navigation"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Self-Documenting</strong> - Types provide documentation"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Safer Refactoring</strong> - Confident code changes"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Scalability</strong> - Better for large applications and teams"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Predictable Code</strong> - Clear contracts between components"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "typescript-vs-javascript",
+        "title": "TypeScript vs JavaScript",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Language Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Key Differences",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>TypeScript</strong> - Static typing, compile-time errors"
+                },
+                {
+                  "emoji": "🎭",
+                  "text": "<strong>JavaScript</strong> - Dynamic typing, runtime errors"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>TypeScript</strong> - Requires compilation step"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>JavaScript</strong> - Runs directly in browsers/Node.js"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>TypeScript</strong> - Better for large-scale applications"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>JavaScript</strong> - Faster prototyping"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Code Comparison",
+            "box": {
+              "content": "<strong>JavaScript vs TypeScript Example</strong>",
+              "code": "// JavaScript - No type safety\nfunction add(a, b) {\n  return a + b;\n}\n\nadd(2, 3); // 5\nadd(\"2\", 3); // \"23\" (unexpected!)\n\n// TypeScript - Type safety\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n\nadd(2, 3); // 5\nadd(\"2\", 3); // ❌ Compilation Error: Argument of type 'string' is not assignable to parameter of type 'number'\n\n// TypeScript with interface\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction createUser(user: User): User {\n  return user;\n}\n\n// ✅ Valid\ncreateUser({ id: 1, name: \"John\", email: \"john@example.com\" });\n\n// ❌ Error: Missing 'email' property\ncreateUser({ id: 1, name: \"John\" });"
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation-setup",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installing TypeScript",
+            "box": {
+              "content": "<strong>Installation Methods</strong>",
+              "code": "# Install TypeScript globally\nnpm install -g typescript\n\n# Install in a project\nnpm install --save-dev typescript\n\n# Check TypeScript version\ntsc --version\n\n# Compile a TypeScript file\ntsc app.ts\n\n# Initialize TypeScript configuration\ntsc --init\n\n# Using npx\nnpx tsc app.ts\n\n# Using yarn\nyarn add --dev typescript"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "File Extensions & Compilation",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>.ts</strong> - TypeScript files"
+                },
+                {
+                  "emoji": "⚛️",
+                  "text": "<strong>.tsx</strong> - TypeScript with JSX"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>.d.ts</strong> - Type declaration files"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>tsc</strong> - TypeScript compiler"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Watch Mode</strong> - tsc --watch"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "type-system",
+        "title": "Type System Overview",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Static vs Dynamic Typing"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Type Systems Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Static Typing</strong> - Types checked at compile time"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Dynamic Typing</strong> - Types checked at runtime"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Static Advantages</strong> - Early error detection, better tooling"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Dynamic Advantages</strong> - More flexible, faster prototyping"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>TypeScript</strong> - Optional static typing on JavaScript"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "primitive-types",
+        "title": "Primitive Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Basic Type Annotations"
+          },
+          {
+            "type": "content",
+            "emoji": "🔢",
+            "title": "Primitive Type Annotations",
+            "box": {
+              "content": "<strong>Basic Type Annotations</strong>",
+              "code": "// String\nlet username: string = \"John\";\n\n// Number\nlet age: number = 30;\nlet price: number = 19.99;\n\n// Boolean\nlet isActive: boolean = true;\n\n// Array\nlet numbers: number[] = [1, 2, 3];\nlet names: Array<string> = [\"John\", \"Jane\"];\n\n// Tuple\nlet person: [string, number] = [\"John\", 30];\n\n// Any (avoid when possible)\nlet anything: any = \"could be anything\";\nanything = 42;\n\n// Void (no return value)\nfunction logMessage(): void {\n  console.log(\"Hello\");\n}\n\n// Null and Undefined\nlet u: undefined = undefined;\nlet n: null = null;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "special-types",
+        "title": "Special Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "any, unknown, never"
+          },
+          {
+            "type": "content",
+            "emoji": "🎭",
+            "title": "Special Type Annotations",
+            "box": {
+              "content": "<strong>any, unknown, and never</strong>",
+              "code": "// any - Disables type checking (avoid when possible)\nlet flexible: any = \"hello\";\nflexible = 42;\nflexible = true;\n\n// unknown - Type-safe counterpart of any\nlet notSure: unknown = \"hello\";\nnotSure = 42;\nnotSure = true;\n\n// You need type checking with unknown\nif (typeof notSure === \"string\") {\n  console.log(notSure.toUpperCase()); // Safe!\n}\n\n// never - Represents values that never occur\nfunction throwError(message: string): never {\n  throw new Error(message);\n}\n\nfunction infiniteLoop(): never {\n  while (true) {\n    // do something\n  }\n}\n\n// Type narrowing with never\nfunction assertNever(x: never): never {\n  throw new Error(\"Unexpected object: \" + x);\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "type-inference",
+        "title": "Type Inference & Annotation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "How TypeScript Infers Types"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Type Inference",
+            "box": {
+              "content": "<strong>Automatic Type Detection</strong>",
+              "code": "// TypeScript infers the type\nlet message = \"Hello\"; // Type: string\nlet count = 42;        // Type: number\nlet isDone = false;    // Type: boolean\n\n// Arrays are inferred too\nlet numbers = [1, 2, 3]; // Type: number[]\n\n// Function return types are inferred\nfunction add(a: number, b: number) {\n  return a + b; // Return type inferred as number\n}\n\n// Object types are inferred\nconst user = {\n  name: \"John\",\n  age: 30\n};\n// Type: { name: string; age: number; }\n\n// When to use explicit annotations:\n// 1. Function return types for documentation\n// 2. Object literals for better error messages\n// 3. Variables initialized later\n\nlet score: number; // Explicit annotation\nscore = 100;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "objects-interfaces",
+        "title": "Objects & Interfaces",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Structuring Complex Data"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Interfaces",
+            "box": {
+              "content": "<strong>Defining Object Shapes</strong>",
+              "code": "// Basic interface\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  age?: number; // Optional property\n  readonly createdAt: Date; // Readonly property\n}\n\n// Using the interface\nconst user: User = {\n  id: 1,\n  name: \"John Doe\",\n  email: \"john@example.com\",\n  createdAt: new Date()\n};\n\n// user.createdAt = new Date(); // Error: readonly\n\n// Interface with methods\ninterface Calculator {\n  add(a: number, b: number): number;\n  subtract(a: number, b: number): number;\n}\n\n// Extending interfaces\ninterface Admin extends User {\n  permissions: string[];\n  manageUsers(): void;\n}\n\n// Implementing interface in class\nclass AdminUser implements Admin {\n  id: number;\n  name: string;\n  email: string;\n  createdAt: Date;\n  permissions: string[];\n  \n  manageUsers() {\n    console.log(\"Managing users...\");\n  }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Type Aliases",
+            "box": {
+              "content": "<strong>Type Aliases vs Interfaces</strong>",
+              "code": "// Type alias for primitive\ntype ID = number | string;\n\n// Type alias for object\ntype Point = {\n  x: number;\n  y: number;\n};\n\n// Type alias for function\ntype AddFunction = (a: number, b: number) => number;\n\n// Union types\ntype Status = \"pending\" | \"success\" | \"error\";\n\n// Intersection types\ninterface Named {\n  name: string;\n}\n\ninterface Aged {\n  age: number;\n}\n\ntype Person = Named & Aged;\n\n// Key differences:\n// - Interfaces can be extended (interface A extends B)\n// - Interfaces can be implemented (class C implements A)\n// - Type aliases can represent union/intersection types\n// - Type aliases can represent primitive types\n\n// Generally: Use interfaces for object shapes, type aliases for unions/tuples"
+            }
+          }
+        ]
+      },
+      {
+        "id": "functions",
+        "title": "Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Typed Functions"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Function Types",
+            "box": {
+              "content": "<strong>Typing Functions and Parameters</strong>",
+              "code": "// Function with typed parameters and return type\nfunction greet(name: string): string {\n  return `Hello, ${name}!`;\n}\n\n// Optional parameters\nfunction createUser(name: string, email?: string): void {\n  console.log(`User: ${name}, Email: ${email || 'No email'}`);\n}\n\n// Default parameters\nfunction multiply(a: number, b: number = 1): number {\n  return a * b;\n}\n\n// Rest parameters\nfunction sum(...numbers: number[]): number {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\n// Function type expressions\ntype MathOperation = (x: number, y: number) => number;\n\nconst add: MathOperation = (a, b) => a + b;\n\n// Function overloading\nfunction processInput(input: string): string;\nfunction processInput(input: number): number;\nfunction processInput(input: string | number): string | number {\n  if (typeof input === \"string\") {\n    return input.toUpperCase();\n  } else {\n    return input * 2;\n  }\n}\n\n// Arrow functions with types\nconst divide = (a: number, b: number): number => a / b;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "union-intersection",
+        "title": "Union & Intersection Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Combining Types"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Union Types",
+            "box": {
+              "content": "<strong>Values That Can Be Multiple Types</strong>",
+              "code": "// Union types\ntype ID = string | number;\n\nlet userId: ID = \"abc123\";\nuserId = 123; // Also valid\n\n// Union with literals\ntype Status = \"success\" | \"error\" | \"pending\";\n\nlet currentStatus: Status = \"success\";\n// currentStatus = \"invalid\"; // Error!\n\n// Union in function parameters\nfunction formatInput(input: string | number) {\n  if (typeof input === \"string\") {\n    return input.toUpperCase();\n  } else {\n    return input.toFixed(2);\n  }\n}\n\n// Discriminated unions\ninterface Square {\n  kind: \"square\";\n  size: number;\n}\n\ninterface Circle {\n  kind: \"circle\";\n  radius: number;\n}\n\ntype Shape = Square | Circle;\n\nfunction area(shape: Shape): number {\n  switch (shape.kind) {\n    case \"square\":\n      return shape.size * shape.size;\n    case \"circle\":\n      return Math.PI * shape.radius * shape.radius;\n  }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "➕",
+            "title": "Intersection Types",
+            "box": {
+              "content": "<strong>Combining Multiple Types</strong>",
+              "code": "// Intersection types\ninterface BusinessPartner {\n  name: string;\n  credit: number;\n}\n\ninterface Identity {\n  id: string;\n  email: string;\n}\n\n// Combined type has all properties\ntype Employee = BusinessPartner & Identity;\n\nconst employee: Employee = {\n  name: \"John Doe\",\n  credit: 1000,\n  id: \"emp123\",\n  email: \"john@company.com\"\n};\n\n// Intersection with type aliases\ntype Admin = Employee & {\n  permissions: string[];\n};\n\n// Function with intersection return type\nfunction createAdmin(user: Employee): Admin {\n  return {\n    ...user,\n    permissions: [\"read\", \"write\", \"delete\"]\n  };\n}\n\n// Merging existing types\ntype CombinedConfig = {\n  apiUrl: string;\n} & {\n  timeout: number;\n};"
+            }
+          }
+        ]
+      },
+      {
+        "id": "generics",
+        "title": "Generics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reusable Type-Safe Code"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Generic Functions",
+            "box": {
+              "content": "<strong>Type Parameters for Reusability</strong>",
+              "code": "// Generic function\nfunction identity<T>(value: T): T {\n  return value;\n}\n\n// Usage\nconst result1 = identity<string>(\"hello\");\nconst result2 = identity<number>(42);\nconst result3 = identity(\"hello\"); // Type inference\n\n// Multiple type parameters\nfunction merge<T, U>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\n\nconst merged = merge(\n  { name: \"John\" },\n  { age: 30 }\n);\n\n// Generic constraints\ninterface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(item: T): void {\n  console.log(item.length);\n}\n\nlogLength(\"hello\"); // 5\nlogLength([1, 2, 3]); // 3\n// logLength(42); // Error: number doesn't have length\n\n// Generic interfaces\ninterface ApiResponse<T> {\n  data: T;\n  status: number;\n  message: string;\n}\n\nconst userResponse: ApiResponse<User> = {\n  data: { id: 1, name: \"John\" },\n  status: 200,\n  message: \"Success\"\n};"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Generic Classes",
+            "box": {
+              "content": "<strong>Generic Classes and Methods</strong>",
+              "code": "// Generic class\nclass DataStore<T> {\n  private data: T[] = [];\n\n  add(item: T): void {\n    this.data.push(item);\n  }\n\n  get(index: number): T {\n    return this.data[index];\n  }\n\n  getAll(): T[] {\n    return this.data;\n  }\n}\n\n// Usage\nconst stringStore = new DataStore<string>();\nstringStore.add(\"hello\");\nstringStore.add(\"world\");\n\nconst numberStore = new DataStore<number>();\nnumberStore.add(1);\nnumberStore.add(2);\n\n// Generic constraints in classes\nclass KeyValuePair<K, V> {\n  constructor(public key: K, public value: V) {}\n}\n\nconst pair1 = new KeyValuePair(\"name\", \"John\");\nconst pair2 = new KeyValuePair(1, true);\n\n// Generic methods in non-generic classes\nclass ArrayUtils {\n  static getFirst<T>(array: T[]): T | undefined {\n    return array[0];\n  }\n\n  static createArray<T>(length: number, value: T): T[] {\n    return Array(length).fill(value);\n  }\n}\n\nconst first = ArrayUtils.getFirst([1, 2, 3]);\nconst zeros = ArrayUtils.createArray(5, 0);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "classes",
+        "title": "Classes & OOP",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Object-Oriented Programming"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Classes in TypeScript",
+            "box": {
+              "content": "<strong>Class Syntax with Type Annotations</strong>",
+              "code": "// Basic class\nclass Person {\n  // Properties with type annotations\n  name: string;\n  age: number;\n  private ssn: string; // Private field\n\n  // Constructor\n  constructor(name: string, age: number, ssn: string) {\n    this.name = name;\n    this.age = age;\n    this.ssn = ssn;\n  }\n\n  // Method\n  greet(): string {\n    return `Hello, my name is ${this.name}`;\n  }\n\n  // Getter\n  get formattedSSN(): string {\n    return `***-**-${this.ssn.slice(-4)}`;\n  }\n}\n\n// Parameter properties (shorthand)\nclass Employee {\n  constructor(\n    public name: string,\n    private salary: number,\n    protected department: string\n  ) {}\n\n  getSalaryInfo(): string {\n    return `${this.name} earns ${this.salary}`;\n  }\n}\n\n// Inheritance\nclass Manager extends Employee {\n  constructor(name: string, salary: number, department: string) {\n    super(name, salary, department);\n  }\n\n  manageTeam(): void {\n    console.log(`Managing team in ${this.department}`);\n    // this.salary; // Error: private\n  }\n}\n\n// Abstract classes\nabstract class Shape {\n  abstract getArea(): number;\n\n  display(): void {\n    console.log(`Area: ${this.getArea()}`);\n  }\n}\n\nclass Rectangle extends Shape {\n  constructor(private width: number, private height: number) {\n    super();\n  }\n\n  getArea(): number {\n    return this.width * this.height;\n  }\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tsconfig",
+        "title": "tsconfig.json",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "TypeScript Configuration"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "tsconfig.json Explained",
+            "box": {
+              "content": "<strong>Essential Configuration Options</strong>",
+              "code": "{\n  \"compilerOptions\": {\n    // Target and Module\n    \"target\": \"ES2020\",           // JavaScript version to target\n    \"module\": \"commonjs\",         // Module system\n    \"lib\": [\"ES2020\", \"DOM\"],     // Library files to include\n\n    // Module Resolution\n    \"moduleResolution\": \"node\",   // How to resolve modules\n    \"baseUrl\": \"./\",              // Base directory\n    \"paths\": {                    // Path mapping\n      \"@/*\": [\"src/*\"]\n    },\n\n    // Output Configuration\n    \"outDir\": \"./dist\",           // Output directory\n    \"rootDir\": \"./src\",           // Root input directory\n\n    // Strict Type Checking\n    \"strict\": true,               // Enable all strict options\n    \"noImplicitAny\": true,        // Error on implicit any\n    \"strictNullChecks\": true,     // Strict null checking\n    \"strictFunctionTypes\": true,  // Strict function types\n\n    // Additional Checks\n    \"noUnusedLocals\": true,       // Error on unused locals\n    \"noUnusedParameters\": true,   // Error on unused parameters\n    \"exactOptionalPropertyTypes\": true,\n\n    // Interop Constraints\n    \"esModuleInterop\": true,      // Better CommonJS/ES6 interop\n    \"allowSyntheticDefaultImports\": true,\n\n    // Source Maps\n    \"sourceMap\": true,            // Generate source maps\n    \"declaration\": true,          // Generate .d.ts files\n\n    // Experimental\n    \"experimentalDecorators\": true, // Enable decorators\n    \"emitDecoratorMetadata\": true\n  },\n  \n  \"include\": [\n    \"src/**/*\"                    // Files to include\n  ],\n  \n  \"exclude\": [\n    \"node_modules\",               // Files to exclude\n    \"dist\",\n    \"**/*.test.ts\"\n  ]\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "type-narrowing",
+        "title": "Type Narrowing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Type Guards & Narrowing"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Type Guards",
+            "box": {
+              "content": "<strong>Narrowing Types at Runtime</strong>",
+              "code": "// typeof type guards\nfunction processValue(value: string | number) {\n  if (typeof value === \"string\") {\n    // TypeScript knows value is string here\n    return value.toUpperCase();\n  } else {\n    // TypeScript knows value is number here\n    return value.toFixed(2);\n  }\n}\n\n// instanceof type guards\nclass Dog {\n  bark() {\n    console.log(\"Woof!\");\n  }\n}\n\nclass Cat {\n  meow() {\n    console.log(\"Meow!\");\n  }\n}\n\nfunction handlePet(pet: Dog | Cat) {\n  if (pet instanceof Dog) {\n    pet.bark();\n  } else {\n    pet.meow();\n  }\n}\n\n// in operator type guards\ninterface Fish {\n  swim(): void;\n}\n\ninterface Bird {\n  fly(): void;\n}\n\nfunction move(animal: Fish | Bird) {\n  if (\"swim\" in animal) {\n    animal.swim();\n  } else {\n    animal.fly();\n  }\n}\n\n// User-defined type guards\nfunction isString(value: any): value is string {\n  return typeof value === \"string\";\n}\n\nfunction processInput(input: unknown) {\n  if (isString(input)) {\n    // TypeScript knows input is string\n    console.log(input.length);\n  }\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "utility-types",
+        "title": "Utility Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Built-in Type Helpers"
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Common Utility Types",
+            "box": {
+              "content": "<strong>Built-in Type Transformations</strong>",
+              "code": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n}\n\n// Partial - all properties optional\ntype PartialUser = Partial<User>;\n// Equivalent to: { id?: number; name?: string; email?: string; age?: number; }\n\n// Required - all properties required\ntype RequiredUser = Required<User>;\n\n// Readonly - all properties readonly\ntype ReadonlyUser = Readonly<User>;\n\n// Pick - select specific properties\ntype UserPreview = Pick<User, \"id\" | \"name\">;\n// Equivalent to: { id: number; name: string; }\n\n// Omit - remove specific properties\ntype UserWithoutId = Omit<User, \"id\">;\n// Equivalent to: { name: string; email: string; age: number; }\n\n// Record - object with specific key and value types\ntype UserMap = Record<string, User>;\n// Equivalent to: { [key: string]: User; }\n\n// Extract - extract union members that are assignable to type\ntype T0 = Extract<\"a\" | \"b\" | \"c\", \"a\" | \"f\">; // \"a\"\n\n// Exclude - exclude union members that are assignable to type\ntype T1 = Exclude<\"a\" | \"b\" | \"c\", \"a\" | \"f\">; // \"b\" | \"c\"\n\n// NonNullable - exclude null and undefined\ntype T2 = NonNullable<string | number | null | undefined>; // string | number\n\n// ReturnType - get function return type\ntype T3 = ReturnType<() => string>; // string\n\n// Parameters - get function parameters as tuple\ntype T4 = Parameters<(a: number, b: string) => void>; // [number, string]"
+            }
+          }
+        ]
+      },
+      {
+        "id": "react-typescript",
+        "title": "TypeScript with React",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "React + TypeScript"
+          },
+          {
+            "type": "content",
+            "emoji": "⚛️",
+            "title": "React Components with TypeScript",
+            "box": {
+              "content": "<strong>Typed React Components</strong>",
+              "code": "// Functional component with props\ninterface UserCardProps {\n  user: {\n    id: number;\n    name: string;\n    email: string;\n  };\n  onEdit: (user: User) => void;\n  isAdmin?: boolean;\n}\n\nconst UserCard: React.FC<UserCardProps> = ({ \n  user, \n  onEdit, \n  isAdmin = false \n}) => {\n  return (\n    <div className=\"user-card\">\n      <h3>{user.name}</h3>\n      <p>{user.email}</p>\n      {isAdmin && (\n        <button onClick={() => onEdit(user)}>\n          Edit\n        </button>\n      )}\n    </div>\n  );\n};\n\n// useState with TypeScript\nconst [users, setUsers] = useState<User[]>([]);\nconst [loading, setLoading] = useState<boolean>(false);\nconst [error, setError] = useState<string | null>(null);\n\n// useEffect (no special types needed)\nuseEffect(() => {\n  fetchUsers();\n}, []);\n\n// Custom hooks with TypeScript\nfunction useApi<T>(url: string) {\n  const [data, setData] = useState<T | null>(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState<string | null>(null);\n\n  useEffect(() => {\n    fetch(url)\n      .then(res => res.json())\n      .then((data: T) => setData(data))\n      .catch(err => setError(err.message))\n      .finally(() => setLoading(false));\n  }, [url]);\n\n  return { data, loading, error };\n}\n\n// Using the hook\nconst { data: users, loading, error } = useApi<User[]>('/api/users');"
+            }
+          }
+        ]
+      },
+      {
+        "id": "nodejs-typescript",
+        "title": "TypeScript with Node.js",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Backend TypeScript"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Node.js with TypeScript",
+            "box": {
+              "content": "<strong>Server-Side TypeScript</strong>",
+              "code": "// Express.js with TypeScript\nimport express, { Request, Response, NextFunction } from 'express';\n\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nconst app = express();\n\n// Middleware with types\napp.use(express.json());\n\n// Route with typed request and response\napp.get('/users', (req: Request, res: Response) => {\n  const users: User[] = [\n    { id: 1, name: 'John', email: 'john@example.com' },\n    { id: 2, name: 'Jane', email: 'jane@example.com' }\n  ];\n  res.json(users);\n});\n\n// POST route with body type\napp.post<{}, {}, User>('/users', (req: Request, res: Response) => {\n  const newUser: User = {\n    id: Date.now(),\n    ...req.body\n  };\n  res.status(201).json(newUser);\n});\n\n// Error handling middleware\napp.use((err: Error, req: Request, res: Response, next: NextFunction) => {\n  console.error(err.stack);\n  res.status(500).json({ error: 'Something went wrong!' });\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n  console.log(`Server running on port ${PORT}`);\n});\n\n// Environment variables with types\ninterface ProcessEnv {\n  PORT: string;\n  DATABASE_URL: string;\n  JWT_SECRET: string;\n}\n\ndeclare global {\n  namespace NodeJS {\n    interface ProcessEnv extends ProcessEnv {}\n  }\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "TypeScript Guidelines"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "TypeScript Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Use strict mode</strong> - Enable all strict type checks"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Avoid any</strong> - Use unknown instead for dynamic values"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Prefer interfaces</strong> - For object shapes, use type aliases for unions"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Use type inference</strong> - Let TypeScript infer types when possible"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Leverage utility types</strong> - Use built-in type helpers"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Design for extensibility</strong> - Use generics and composition"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "TypeScript Quick Reference",
+            "box": {
+              "content": "<strong>Essential TypeScript Syntax</strong>",
+              "code": "// Type Annotations\nlet name: string = \"John\";\nlet age: number = 30;\nlet isActive: boolean = true;\nlet scores: number[] = [1, 2, 3];\n\n// Interfaces\ninterface User {\n  id: number;\n  name: string;\n  email?: string;\n}\n\n// Type Aliases\ntype Point = { x: number; y: number };\ntype ID = number | string;\n\n// Functions\nfunction greet(name: string): string {\n  return `Hello ${name}`;\n}\n\n// Arrow Functions\nconst add = (a: number, b: number): number => a + b;\n\n// Generics\nfunction identity<T>(value: T): T {\n  return value;\n}\n\n// Classes\nclass Person {\n  constructor(public name: string, private age: number) {}\n}\n\n// Utility Types\ntype PartialUser = Partial<User>;\ntype UserIds = Pick<User, 'id'>;\ntype UserWithoutId = Omit<User, 'id'>;\n\n// Type Guards\nfunction isString(value: any): value is string {\n  return typeof value === \"string\";\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-path",
+        "title": "Learning Path",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "TypeScript Learning Journey"
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "TypeScript Learning Roadmap",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>Beginner</strong> - Basic types, interfaces, functions"
+                },
+                {
+                  "emoji": "🟡",
+                  "text": "<strong>Intermediate</strong> - Generics, utility types, type guards"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>Advanced</strong> - Conditional types, template literals, decorators"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Professional</strong> - Framework integration, tooling, performance"
+                },
+                {
+                  "emoji": "🏆",
+                  "text": "<strong>Expert</strong> - Type system internals, compiler API, advanced patterns"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Mini Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your TypeScript Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between interface and type alias?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "When should you use unknown vs any?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "How do you create a type that makes all properties optional?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "What's the purpose of type guards?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "How do you type React component props?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💪",
+                  "text": "TypeScript adds static typing to JavaScript"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "Catch errors early with compile-time type checking"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Better tooling with autocomplete and refactoring"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "Scalable for large applications and teams"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Gradual adoption - add types incrementally"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Works with all major frameworks and libraries"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss TypeScript concepts, migration strategies, or specific use cases!<br><span class=\"gradient-accent\">All type safety questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔷</span> Ready to write type-safe JavaScript?<br><span class=\"gradient-accent\">Start your TypeScript journey today!</span>",
+              "note": "Scalable • Type-Safe • Enterprise Ready"
+            },
+            "footer": {
+              "org": "TypeScript Developers Community",
+              "tagline": "Empowering developers with type safety"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

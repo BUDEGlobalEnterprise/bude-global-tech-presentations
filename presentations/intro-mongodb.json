@@ -18,12 +18,12 @@
         "slides": [
           {
             "type": "presenter",
-            "name": "NoSQL Specialist",
-            "title": "MongoDB Developer & Architect",
-            "experience": "4+ years in Document Databases & Scalable Systems",
-            "oss_experience": "Full-Stack Applications & Real-time Systems",
-            "github": "https://github.com/mongodb-expert",
-            "website": "https://mongodb-expert.github.io"
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & UI Framework Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
           }
         ]
       },

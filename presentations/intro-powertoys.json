@@ -1,0 +1,1899 @@
+{
+  "file": "presentations/intro-powertoys.json",
+  "title": "Introduction to Microsoft PowerToys",
+  "description": "Complete Windows productivity toolkit guide from installation to advanced workflows",
+  "keywords": [
+    "microsoft",
+    "powertoys",
+    "windows",
+    "productivity",
+    "utilities",
+    "automation",
+    "keyboard-shortcuts",
+    "window-management"
+  ],
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Microsoft PowerToys Mastery",
+            "subtitle": "Complete Windows Productivity Toolkit<br>From Beginner to Power User"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is PowerToys?</strong> - History & Purpose"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Installation & Setup</strong> - MS Store, GitHub, Winget"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Window Management</strong> - FancyZones & Always On Top"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>PowerToys Run</strong> - Spotlight-style Launcher"
+                },
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Keyboard Manager</strong> - Remap Keys & Shortcuts"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File Explorer Tools</strong> - Preview, Rename, Resize"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Design & Media Tools</strong> - Color Picker, Text Extractor"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "<strong>Mouse Utilities</strong> - Find, Crosshair, Highlighter"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>System Tools</strong> - Awake, Hosts Editor, Registry Preview"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Advanced Workflows</strong> - Dev, IT Admin, Multi-monitor"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise Deployment</strong> - Intune, GPO, Security"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Real-world Use Cases</strong> - Developers, Designers, Support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-powertoys",
+        "title": "What is PowerToys?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Microsoft PowerToys"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is PowerToys?",
+            "box": {
+              "content": "<span class=\"highlight\">Open-source Windows utilities for power users</span>",
+              "list": [
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Developer</strong> - Microsoft (Open Source)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - MIT License (Free and open source)"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Purpose</strong> - Enhance Windows productivity and workflow"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Features</strong> - 25+ utilities for daily tasks"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Platform</strong> - Windows 10 & 11 (64-bit)"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> PowerToys originally debuted for Windows 95 and was revived for Windows 10!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Evolution Timeline",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>1995</strong> - Original PowerToys for Windows 95"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2002</strong> - PowerToys for Windows XP"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2019</strong> - Revival for Windows 10 (Open Source)"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2020</strong> - FancyZones, PowerToys Run added"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2021-2023</strong> - 20+ new utilities added"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>Today</strong> - Active development with monthly updates"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-use-powertoys",
+        "title": "Why Use PowerToys?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Benefits & Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "💪",
+            "title": "Key Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Completely Free</strong> - No cost, open source"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Lightweight and fast"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Official</strong> - Microsoft-developed and supported"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Regular Updates</strong> - Monthly feature releases"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Modular</strong> - Enable only what you need"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise Ready</strong> - Group Policy support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting PowerToys"
+          },
+          {
+            "type": "content",
+            "emoji": "📥",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏪",
+                  "text": "<strong>Microsoft Store</strong> - Automatic updates"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Releases</strong> - Latest features"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Winget</strong> - Command line installation"
+                },
+                {
+                  "emoji": " chocolatey",
+                  "text": "<strong>Chocolatey</strong> - Package manager"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Winget Installation",
+            "box": {
+              "content": "<strong>Command line installation</strong>",
+              "code": "# Install using Winget\nwinget install Microsoft.PowerToys\n\n# Or with specific version\nwinget install Microsoft.PowerToys --version 0.77.0\n\n# Update PowerToys\nwinget upgrade Microsoft.PowerToys"
+            }
+          }
+        ]
+      },
+      {
+        "id": "settings-overview",
+        "title": "Settings Overview",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys Settings"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Settings Interface",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎛️",
+                  "text": "<strong>General Settings</strong> - Startup, updates, admin mode"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Module Management</strong> - Enable/disable utilities"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Theme</strong> - System, light, or dark mode"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Import/Export</strong> - Backup your configuration"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Diagnostics</strong> - Logs and troubleshooting"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "always-on-top",
+        "title": "Always On Top",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Keep Windows on Top"
+          },
+          {
+            "type": "content",
+            "emoji": "📌",
+            "title": "Always On Top Feature",
+            "box": {
+              "content": "<strong>Pin windows above others</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Win + Ctrl + T"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Use Case</strong> - Reference materials, videos, chat windows"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Visual Feedback</strong> - Border indicates pinned state"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Pro tip:</strong> Great for keeping documentation visible while coding!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fancyzones",
+        "title": "FancyZones",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Window Manager"
+          },
+          {
+            "type": "content",
+            "emoji": "🪟",
+            "title": "FancyZones Overview",
+            "box": {
+              "content": "<strong>Advanced window snapping</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Activation</strong> - Hold Shift while dragging window"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Layouts</strong> - Grid, rows, columns, custom"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Multi-monitor</strong> - Different layouts per screen"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Custom Layouts</strong> - Create your own zones"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Custom Layout Creation",
+            "box": {
+              "content": "<strong>Create personalized zones</strong>",
+              "code": "1. Open PowerToys Settings\n2. Navigate to FancyZones\n3. Click \"Edit zones\"\n4. Choose \"Create new layout\"\n5. Select \"Custom\" layout type\n6. Drag to create zones\n7. Set spacing and number of zones\n8. Save with custom name"
+            }
+          }
+        ]
+      },
+      {
+        "id": "powertoys-run",
+        "title": "PowerToys Run",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Application Launcher"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "PowerToys Run Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Alt + Space (default)"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>App Launch</strong> - Type app name and enter"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File Search</strong> - Find files instantly"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Calculator</strong> - Quick calculations"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Search</strong> - Direct web queries"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Plugins</strong> - Window Walker, Shell, Registry"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "keyboard-manager",
+        "title": "Keyboard Manager",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Remap Keys & Shortcuts"
+          },
+          {
+            "type": "content",
+            "emoji": "⌨️",
+            "title": "Keyboard Remapping",
+            "box": {
+              "content": "<strong>Remap individual keys</strong>",
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Single Keys</strong> - Map any key to another"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Shortcuts</strong> - Remap complex shortcuts"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Profiles</strong> - Different setups for different apps"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Disable Keys</strong> - Turn off problematic keys"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Common Remapping Examples",
+            "box": {
+              "content": "<strong>Popular remappings</strong>",
+              "code": "# Disable Caps Lock\nCaps Lock → Disabled\n\n# Swap Ctrl and Caps Lock\nCaps Lock → Left Ctrl\nLeft Ctrl → Caps Lock\n\n# Media controls\nF9 → Volume Down\nF10 → Volume Up\nF11 → Mute\n\n# Navigation\nCaps Lock + H → Left Arrow\nCaps Lock + J → Down Arrow\nCaps Lock + K → Up Arrow\nCaps Lock + L → Right Arrow"
+            }
+          }
+        ]
+      },
+      {
+        "id": "file-explorer-addons",
+        "title": "File Explorer Add-ons",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Enhanced File Explorer"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Preview Pane & Thumbnails",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>SVG Preview</strong> - View SVG files in preview pane"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Markdown Preview</strong> - Render MD files"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>PDF Preview</strong> - View PDF thumbnails"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>GCode Thumbnails</strong> - 3D printing files"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>STL Thumbnails</strong> - 3D model previews"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "image-resizer",
+        "title": "Image Resizer",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Bulk Image Processing"
+          },
+          {
+            "type": "content",
+            "emoji": "🖼️",
+            "title": "Image Resizer Features",
+            "box": {
+              "content": "<strong>Right-click image resizing</strong>",
+              "list": [
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Preset Sizes</strong> - Small, medium, large, phone"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Custom Sizes</strong> - Create your own presets"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Bulk Processing</strong> - Multiple files at once"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Format Options</strong> - JPEG, PNG, TIFF, BMP"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "powerrename",
+        "title": "PowerRename",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Bulk File Renaming"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "PowerRename Features",
+            "box": {
+              "content": "<strong>Advanced search and replace</strong>",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Regex Support</strong> - Powerful pattern matching"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Preview</strong> - See changes before applying"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Case Options</strong> - Upper, lower, title case"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Numbering</strong> - Automatic sequential numbers"
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Date/Time</strong> - Add timestamps to filenames"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "PowerRename Examples",
+            "box": {
+              "content": "<strong>Common renaming patterns</strong>",
+              "code": "# Add prefix to all files\nSearch: ^\nReplace: Vacation_\nResult: file.jpg → Vacation_file.jpg\n\n# Change file extension\nSearch: \\.jpeg$\nReplace: .jpg\nResult: photo.jpeg → photo.jpg\n\n# Remove text from filenames\nSearch: -copy\nReplace: (empty)\nResult: document-copy.txt → document.txt\n\n# Sequential numbering\nSearch: ^\nReplace: Photo_<#>\nResult: file1.jpg → Photo_1.jpg, file2.jpg → Photo_2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "id": "color-picker",
+        "title": "Color Picker",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "System-wide Eyedropper"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Color Picker Features",
+            "box": {
+              "content": "<strong>Pick colors from anywhere on screen</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Win + Shift + C"
+                },
+                {
+                  "emoji": "🌈",
+                  "text": "<strong>Formats</strong> - HEX, RGB, HSL, CMYK, HSV"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Copy Options</strong> - Multiple format support"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>History</strong> - Recent colors memory"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Zoom</strong> - Pixel-level precision"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "text-extractor",
+        "title": "Text Extractor",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "OCR Tool"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "Text Extractor (OCR)",
+            "box": {
+              "content": "<strong>Extract text from images and videos</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Win + Shift + T"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Selection</strong> - Drag to select screen area"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Auto-copy</strong> - Text automatically copied to clipboard"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Multi-language</strong> - Support for 100+ languages"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>History</strong> - Keep track of extracted text"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "screen-ruler",
+        "title": "Screen Ruler",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Measure UI Elements"
+          },
+          {
+            "type": "content",
+            "emoji": "📏",
+            "title": "Screen Ruler Features",
+            "box": {
+              "content": "<strong>Measure on-screen distances</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Win + Shift + M"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Modes</strong> - Straight line, crosshair, ruler"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Units</strong> - Pixels, points, centimeters, inches"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Customization</strong> - Colors, thickness, opacity"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quick-accent",
+        "title": "Quick Accent",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Special Character Typing"
+          },
+          {
+            "type": "content",
+            "emoji": "🔤",
+            "title": "Quick Accent Features",
+            "box": {
+              "content": "<strong>Type accented characters easily</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Activation</strong> - Hold key and select from menu"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Languages</strong> - French, Spanish, German, etc."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Custom Characters</strong> - Add your own symbols"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Speed</strong> - Faster than Alt codes"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "mouse-utilities",
+        "title": "Mouse Utilities",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Mouse Enhancement Tools"
+          },
+          {
+            "type": "content",
+            "emoji": "🖱️",
+            "title": "Mouse Utilities Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Find My Mouse</strong> - Highlight cursor location"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Mouse Crosshairs</strong> - Precision alignment tool"
+                },
+                {
+                  "emoji": "🖊️",
+                  "text": "<strong>Mouse Highlighter</strong> - Visualize clicks"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Shortcuts</strong> - Double-click Ctrl for find, Win + Alt + P for crosshair"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "awake",
+        "title": "Awake",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Keep PC Awake"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Awake Features",
+            "box": {
+              "content": "<strong>Prevent sleep without changing settings</strong>",
+              "list": [
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Modes</strong> - Indefinite, timed, keep screen on"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Tray Control</strong> - Easy enable/disable from system tray"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Use Cases</strong> - Downloads, presentations, builds"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Automatic</strong> - No need to change power settings"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hosts-file-editor",
+        "title": "Hosts File Editor",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Hosts File Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Hosts File Editor",
+            "box": {
+              "content": "<strong>Safe and easy hosts file editing</strong>",
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Safety</strong> - Prevents syntax errors"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Preview</strong> - See changes before applying"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Backup</strong> - Automatic backup of original file"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Quick Toggle</strong> - Enable/disable entries easily"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "shortcut-guide",
+        "title": "Shortcut Guide",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Windows Key Overlay"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Shortcut Guide",
+            "box": {
+              "content": "<strong>Learn Windows shortcuts interactively</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Activation</strong> - Hold Windows key"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Visual Overlay</strong> - Shows available shortcuts"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Categories</strong> - Desktop, window management, system"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Learning Tool</strong> - Great for new Windows users"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "paste-plain-text",
+        "title": "Paste as Plain Text",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Clean Text Pasting"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Paste as Plain Text",
+            "box": {
+              "content": "<strong>Remove formatting when pasting</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Win + Ctrl + V"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Use Case</strong> - Email, documents, code editors"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Smart Paste</strong> - Detects when to remove formatting"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Customization</strong> - Choose target applications"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "registry-preview",
+        "title": "Registry Preview",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Safe Registry Viewing"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Registry Preview",
+            "box": {
+              "content": "<strong>View .reg files safely</strong>",
+              "list": [
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Preview</strong> - See registry changes before importing"
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>Safety</strong> - Prevents accidental registry modifications"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Visual Diff</strong> - Compare with current registry"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Export</strong> - Save as readable format"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "environment-variables",
+        "title": "Environment Variables",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Environment Variables Manager"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Environment Variables Editor",
+            "box": {
+              "content": "<strong>User-friendly environment variables management</strong>",
+              "list": [
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Visual Interface</strong> - Better than system properties"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Search</strong> - Find variables quickly"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Backup</strong> - Export/import configurations"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Real-time Preview</strong> - See changes immediately"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "file-locksmith",
+        "title": "File Locksmith",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "File Lock Detection"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "File Locksmith",
+            "box": {
+              "content": "<strong>Identify processes locking files</strong>",
+              "list": [
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Right-click Integration</strong> - Context menu option"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Process Details</strong> - PID, name, command line"
+                },
+                {
+                  "emoji": "🛑",
+                  "text": "<strong>End Process</strong> - Terminate locking processes"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Use Case</strong> - File deletion errors, access denied"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "peek",
+        "title": "Peek",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Quick File Preview"
+          },
+          {
+            "type": "content",
+            "emoji": "👀",
+            "title": "Peek File Viewer",
+            "box": {
+              "content": "<strong>Quick Look-style file preview</strong>",
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcut</strong> - Select file and press Ctrl + Space"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>File Types</strong> - Images, text, PDF, code files"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Instant</strong> - No need to open applications"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Customization</strong> - File type associations"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "command-not-found",
+        "title": "Command Not Found",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "CLI Helper"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Command Not Found",
+            "box": {
+              "content": "<strong>Suggest installations for missing commands</strong>",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Detection</strong> - Recognizes unknown commands"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Suggestions</strong> - Package names for installation"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Package Managers</strong> - Winget, Chocolatey support"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Quick Install</strong> - Copy-paste installation commands"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "custom-layouts",
+        "title": "Custom Layouts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced FancyZones"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Creating Custom Layouts",
+            "box": {
+              "content": "<strong>Design your perfect workspace</strong>",
+              "code": "1. Open PowerToys → FancyZones\n2. Click \"Edit zones\" → \"Create new layout\"\n3. Choose layout type:\n   - Grid: Equal-sized zones\n   - Canvas: Free-form zone creation\n   - Priority Grid: Focus on main workspace\n4. Customize zone count and spacing\n5. Drag to resize and position zones\n6. Save with descriptive name\n7. Apply to specific monitors\n8. Use Shift+drag to snap windows"
+            }
+          }
+        ]
+      },
+      {
+        "id": "automation-workflows",
+        "title": "Automation Workflows",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys Run Plugins"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Workflow Automation",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Window Walker</strong> - Switch between specific windows"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Shell Plugin</strong> - Run commands and scripts"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Registry Plugin</strong> - Quick registry navigation"
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Time Date Plugin</strong> - Insert current time/date"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Unit Converter</strong> - Quick unit conversions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev-workflows",
+        "title": "Developer Workflows",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys for Developers"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Developer Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>FancyZones</strong> - Code editor + terminal + browser"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>PowerToys Run</strong> - Quick app and file access"
+                },
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Keyboard Manager</strong> - IDE-specific shortcuts"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Color Picker</strong> - UI design and theming"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Text Extractor</strong> - Copy from documentation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "accessibility",
+        "title": "Accessibility Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys for Accessibility"
+          },
+          {
+            "type": "content",
+            "emoji": "♿",
+            "title": "Accessibility Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Mouse Highlighter</strong> - Visual click feedback"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Find My Mouse</strong> - Locate cursor easily"
+                },
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Keyboard Manager</strong> - Custom layouts for mobility"
+                },
+                {
+                  "emoji": "🔤",
+                  "text": "<strong>Quick Accent</strong> - Easy special character input"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Screen Ruler</strong> - Visual measurement aid"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Tool Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys vs Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Comparison with Third-Party Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>PowerToys</strong> - Free, official, integrated"
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>Commercial Tools</strong> - Paid, more features"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Open Source Alternatives</strong> - Fragmented, varying quality"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>PowerToys Advantage</strong> - Single package, Microsoft support"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Updates</strong> - Regular improvements and new features"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-configurations",
+        "title": "Best Configurations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optimal Productivity Setup"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Recommended Configuration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>FancyZones</strong> - Enable with Shift drag"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>PowerToys Run</strong> - Set to Alt+Space"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Color Picker</strong> - Enable with Win+Shift+C"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Text Extractor</strong> - Keep for quick OCR"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "<strong>Mouse Utilities</strong> - Enable Find My Mouse"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-use-cases",
+        "title": "Real-World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Professional Scenarios",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👨‍💻",
+                  "text": "<strong>Developers</strong> - Multi-window coding setup"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Designers</strong> - Color picking and measurement"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Analysts</strong> - Spreadsheet and visualization layout"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>Content Creators</strong> - Video editing workspace"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>IT Support</strong> - Quick file and system tools"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "multi-monitor",
+        "title": "Multi-Monitor Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Multiple Display Configuration"
+          },
+          {
+            "type": "content",
+            "emoji": "🖥️",
+            "title": "Multi-Monitor PowerToys",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>FancyZones</strong> - Different layouts per monitor"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>PowerToys Run</strong> - Works across all displays"
+                },
+                {
+                  "emoji": "📌",
+                  "text": "<strong>Always On Top</strong> - Keep windows visible on any screen"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Mouse Utilities</strong> - Cross-monitor cursor finding"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "gaming-streaming",
+        "title": "Gaming & Streaming",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys for Gamers"
+          },
+          {
+            "type": "content",
+            "emoji": "🎮",
+            "title": "Gaming Applications",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Keyboard Manager</strong> - Game-specific key mappings"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Mouse Crosshairs</strong> - Custom aiming reticles"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Awake</strong> - Prevent sleep during downloads"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "<strong>Mouse Highlighter</strong> - Show clicks for tutorials"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-privacy",
+        "title": "Security & Privacy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security Considerations"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Privacy</strong> - No data collection by default"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Transparency</strong> - Open source code review"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Admin Mode</strong> - Run without full admin rights"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Telemetry</strong> - Optional usage data sharing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "enterprise-deployment",
+        "title": "Enterprise Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Corporate Installation"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Enterprise Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Group Policy</strong> - Centralized management"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Intune Support</strong> - Mobile device management"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>MSI Package</strong> - Silent installation options"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Configuration</strong> - Deploy with pre-set settings"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Common Issues & Solutions"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Troubleshooting Guide",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Restart PowerToys</strong> - Fixes most issues"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Check Logs</strong> - Settings → General → Logs"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Update</strong> - Ensure latest version"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Admin Rights</strong> - Some features need elevation"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Reset Settings</strong> - Nuclear option for problems"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "roadmap-community",
+        "title": "Roadmap & Community",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Future Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "PowerToys Roadmap",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>New Utilities</strong> - Regular feature additions"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Performance</strong> - Ongoing optimization"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Localization</strong> - More language support"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Community Driven</strong> - GitHub issue tracking"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "top-shortcuts",
+        "title": "Top Shortcuts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential Keyboard Shortcuts"
+          },
+          {
+            "type": "content",
+            "emoji": "⌨️",
+            "title": "Must-Know Shortcuts",
+            "box": {
+              "content": "<strong>Daily use shortcuts</strong>",
+              "code": "PowerToys Run: Alt + Space\nColor Picker: Win + Shift + C\nText Extractor: Win + Shift + T\nAlways On Top: Win + Ctrl + T\nFancyZones: Hold Shift while dragging\nScreen Ruler: Win + Shift + M\nFind My Mouse: Double-click Ctrl\nMouse Crosshair: Win + Alt + P\nPaste as Plain Text: Win + Ctrl + V\nShortcut Guide: Hold Windows key"
+            }
+          }
+        ]
+      },
+      {
+        "id": "feature-requests",
+        "title": "Feature Requests",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Contributing to PowerToys"
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "GitHub Workflow",
+            "box": {
+              "content": "<strong>How to request features</strong>",
+              "code": "1. Visit github.com/microsoft/PowerToys\n2. Check existing issues for duplicates\n3. Create new issue with:\n   - Clear title and description\n   - Use case and benefits\n   - Screenshots or mockups if possible\n4. Follow issue template\n5. Engage with community discussion\n6. Upvote popular feature requests"
+            }
+          }
+        ]
+      },
+      {
+        "id": "demo-developer",
+        "title": "Demo: Developer Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Developer Workflow Demo"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Developer Setup Steps",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Create FancyZones layout for VS Code + terminal + browser"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Configure PowerToys Run for quick project access"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Set up Keyboard Manager for IDE shortcuts"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Enable Color Picker for UI design work"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Use Text Extractor for documentation"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Configure Awake for long builds"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "demo-content-creator",
+        "title": "Demo: Content Creator",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Content Creator Workflow"
+          },
+          {
+            "type": "content",
+            "emoji": "🎬",
+            "title": "Content Creator Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "FancyZones for video editor + assets + preview"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Image Resizer for quick social media formats"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Color Picker for brand consistency"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "PowerRename for batch file organization"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Screen Ruler for UI alignment"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Always On Top for reference materials"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "PowerToys Cheat Sheet",
+            "box": {
+              "content": "<strong>Quick reference guide</strong>",
+              "code": "Essential Shortcuts:\n• PowerToys Run: Alt + Space\n• Color Picker: Win + Shift + C\n• Always On Top: Win + Ctrl + T\n• FancyZones: Shift + Drag\n• Text Extractor: Win + Shift + T\n\nFile Management:\n• PowerRename: Right-click → PowerRename\n• Image Resizer: Right-click → Resize pictures\n• File Locksmith: Right-click → What's using this file?\n\nProductivity Tips:\n• Create custom FancyZones layouts\n• Use PowerToys Run for calculations\n• Enable Mouse Highlighter for presentations\n• Configure Keyboard Manager for app-specific shortcuts"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Docs</strong> - docs.microsoft.com/powertoys"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/microsoft/PowerToys"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>Video Tutorials</strong> - Microsoft YouTube channel"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community</strong> - GitHub Discussions"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Blog</strong> - Dev blogs and updates"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "alternatives",
+        "title": "Alternatives",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PowerToys Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Similar Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Window Management</strong> - DisplayFusion, AquaSnap"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Application Launchers</strong> - Wox, Keypirinha"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Color Pickers</strong> - Just Color Picker, ColorCop"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Renaming Tools</strong> - Bulk Rename Utility"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>All-in-One</strong> - PowerToys (recommended)"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What shortcut activates PowerToys Run?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you create custom window layouts?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Which tool helps extract text from images?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "What's the benefit of Always On Top?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "How can you remap keyboard keys?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "PowerToys = Free Windows productivity suite"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Open source with regular updates"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "25+ utilities for daily tasks"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "Enterprise deployment support"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "Community-driven development"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential for Windows power users"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss PowerToys features, configurations, or specific use cases!<br><span class=\"gradient-accent\">All PowerToys questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">⚡</span> Ready to boost your Windows productivity?<br><span class=\"gradient-accent\">Start using PowerToys today!</span>",
+              "note": "Free • Powerful • Official Microsoft Tools"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

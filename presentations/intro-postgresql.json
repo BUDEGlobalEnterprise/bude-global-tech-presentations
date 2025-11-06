@@ -18,12 +18,12 @@
         "slides": [
           {
             "type": "presenter",
-            "name": "Database Expert",
-            "title": "Senior Database Administrator",
-            "experience": "5 years in Database Management & Backend Development",
-            "oss_experience": "PostgreSQL, MySQL, Database Optimization Specialist",
-            "github": "https://github.com/database-expert",
-            "website": "https://database-expert.github.io"
+            "name": "Aravind Govindhasamy",
+            "title": "Founder of BUDE",
+            "experience": "Software Developer for 3 years",
+            "oss_experience": "Open Source maintainer since 2024",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
           }
         ]
       },

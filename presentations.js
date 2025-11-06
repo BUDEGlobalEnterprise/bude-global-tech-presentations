@@ -264,7 +264,31 @@ const PRESENTATIONS_CONFIG = [
     title: "Introduction to JavaScript",
     description: "An introduction to the fundamentals of JavaScript.",
     keywords: ["javascript", "web", "programming", "frontend"]
-  }
+  },{
+  file: "presentations/intro-typescript.json",
+  title: "TypeScript – Typed JavaScript for Scalable Applications",
+  description: "Complete guide to TypeScript from basics to advanced patterns",
+  keywords: ["typescript", "javascript", "types", "static-typing", "angular", "react", "nodejs"]
+},{
+  "file": "presentations/intro-powertoys.json",
+  "title": "Introduction to Microsoft PowerToys",
+  "description": "Complete Windows productivity toolkit guide from installation to advanced workflows",
+  "keywords": [
+    "microsoft",
+    "powertoys",
+    "windows",
+    "productivity",
+    "utilities",
+    "automation",
+    "keyboard-shortcuts",
+    "window-management",
+    "fancyzones",
+    "powertoys-run",
+    "windows-tools",
+    "power-user",
+    "workflow-optimization"
+  ]
+}
 
   // Add more presentations here as you create them
 ];
