@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Hello and welcome to the **Bude Global** community! 🎉 We're thrilled you opened your first issue. Our team will review it shortly."
+        pr-message: "Welcome, awesome contributor! ✨ Thank you for your first pull request to **Bude Global**. We appreciate your effort in making our collection even better. We'll be reviewing your changes soon.
