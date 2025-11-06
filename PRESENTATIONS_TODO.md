@@ -1,32 +1,32 @@
 # 📋 Presentations Progress Tracker
 
-> **Last Updated**: November 2025  
-> **Total Presentations**: 20 ✅ | 87 ⬜  
-> **Completion**: 18.7%
+> **Last Updated**: November 2025
+> **Total Presentations**: 28 ✅ | 79 ⬜
+> **Completion**: 26.2%
 
 ---
 
 ## 📊 Progress Overview
 
 ```
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 18.7% Complete
+████████░░░░░░░░░░░░░░░░░░░░░░░░ 26.2% Complete
 ```
 
 | Category | Completed | Pending | Total | Progress |
 |----------|-----------|---------|-------|----------|
-| 🟢 **Core Topics** | 20 | 21 | 41 | 48.8% |
+| 🟢 **Core Topics** | 28 | 13 | 41 | 68.3% |
 | 🔵 **Programming Languages** | 0 | 9 | 9 | 0% |
-| 🟣 **Backend Frameworks** | 0 | 8 | 8 | 0% |
+| 🟣 **Backend Frameworks** | 2 | 6 | 8 | 25% |
 | 🔴 **Databases & Storage** | 0 | 8 | 8 | 0% |
-| 🟠 **DevOps & Cloud** | 0 | 10 | 10 | 0% |
+| 🟠 **DevOps & Cloud** | 2 | 8 | 10 | 20% |
 | 🟡 **Security & Auth** | 0 | 7 | 7 | 0% |
 | 🟢 **AI & Automation** | 0 | 7 | 7 | 0% |
-| 🟤 **Tools & Productivity** | 0 | 6 | 6 | 0% |
+| 🟤 **Tools & Productivity** | 4 | 2 | 6 | 66.7% |
 | 🟣 **Business Applications** | 0 | 7 | 7 | 0% |
 
 ---
 
-## ✅ Completed Presentations (20/107)
+## ✅ Completed Presentations (28/107)
 
 <details open>
 <summary><strong>Core Topics Completed</strong></summary>
@@ -38,6 +38,8 @@
 - [x] #13 React - [View](presentations/react-presentation.json)
 - [x] #14 Next.js - [View](presentations/nextjs-presentation.json)
 - [x] #15 Node.js - [View](presentations/nodejs-presentation.json)
+- [x] #68 GraphQL – API Query Language - [View](presentations/intro-graphql.json)
+- [x] #69 REST API & Swagger/OpenAPI - [View](presentations/intro-rest-api-swagger.json)
 
 ### CSS Frameworks
 - [x] #11 Tailwind CSS - [View](presentations/tailwind-css-presentation.json)
@@ -52,6 +54,8 @@
 - [x] #9 Linux - [View](presentations/intro-linux.json)
 - [x] #10 Docker - [View](presentations/intro-docker.json)
 - [x] #27 Git vs GitHub - [View](presentations/intro-git-github.json)
+- [x] #71 WSL (Windows Subsystem for Linux) - [View](presentations/intro-wsl.json)
+- [x] #73 Kubernetes – Container Orchestration - [View](presentations/intro-kubernetes.json)
 
 ### Business & Tools
 - [x] #2 Keycloak - [View](presentations/intro-keycloak.json)
@@ -60,12 +64,16 @@
 - [x] #5 ERPNext - [View](presentations/erpnext-presentation.json)
 - [x] #8 Gitea - [View](presentations/intro-gitea.json)
 - [x] Introduction to OSS - [View](presentations/intro-oss.json)
+- [x] #80 Introduction to ImHex - Advanced Hex Editor - [View](presentations/intro-imhex.json)
+- [x] #81 Introduction to AdminLTE - [View](presentations/intro-adminlte.json)
+- [x] #82 Introduction to Grocy - ERP for Home & Small Inventory Management - [View](presentations/intro-grocy.json)
+- [x] #83 Ghost - Just a Blogging Platform - [View](presentations/intro-ghost.json)
 
 </details>
 
 ---
 
-## ⬜ Pending Presentations (87)
+## ⬜ Pending Presentations (79)
 
 ### 🔵 Programming Languages & Core Tech (14)
 - [ ] [#63 JavaScript Fundamentals](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/63)
@@ -83,9 +91,7 @@
 - [ ] [#8 Bash Scripting](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/8) - Shell scripting mastery
 - [ ] [#9 Regex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/9) - Regular expressions guide
 
-### 🟣 Backend Frameworks (10)
-- [ ] [#68 GraphQL](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/68)
-- [ ] [#69 REST & Swagger](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/69)
+### 🟣 Backend Frameworks (8)
 - [ ] [#10 Django](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/10) - Python web framework
 - [ ] [#11 Flask](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/11) - Lightweight Python web framework
 - [ ] [#12 FastAPI](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/12) - Modern Python API framework
@@ -106,10 +112,8 @@
 - [ ] [#24 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/24) - Next-generation ORM
 - [ ] [#25 Elasticsearch](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/25) - Search and analytics engine
 
-### 🟠 DevOps, Infrastructure & Cloud (15)
-- [ ] [#71 WSL](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/71)
+### 🟠 DevOps, Infrastructure & Cloud (13)
 - [ ] [#72 AWS Cloud](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/72)
-- [ ] [#73 Kubernetes](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/73)
 - [ ] [#74 System Design](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/74)
 - [ ] [#75 DevOps – CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75)
 - [ ] [#26 Terraform](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/26) - Infrastructure as Code
@@ -142,14 +146,10 @@
 - [ ] [#48 RPA Automation](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/48) - Robotic Process Automation
 - [ ] [#49 Computer Vision Basics](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/49) - Image processing with OpenCV
 
-### 🟤 Tools & Productivity (13)
+### 🟤 Tools & Productivity (9)
 - [ ] [#77 Microsoft PowerToys](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/77)
 - [ ] [#78 Stirling PDF](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/78)
 - [ ] [#79 n8n](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/79)
-- [ ] [#80 ImHex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/80)
-- [ ] [#81 AdminLTE](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/81)
-- [ ] [#82 Grocy](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/82)
-- [ ] [#83 Ghost Blogging Platform](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/83)
 - [ ] [#50 Obsidian PKM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/50) - Personal knowledge management
 - [ ] [#51 Zettelkasten](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/51) - Note-taking methodology
 - [ ] [#52 Notion for Docs](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/52) - Collaborative documentation
@@ -201,7 +201,7 @@ Top contributors will be featured here!
 
 | Rank | Contributor | Presentations | Topics |
 |------|-------------|---------------|---------|
-| 🥇 | @aravind-govindhasamy | 20 | Various |
+| 🥇 | @aravind-govindhasamy | 28 | Various |
 | 🥈 | Your name here! | - | - |
 | 🥉 | Your name here! | - | - |
 
@@ -237,9 +237,9 @@ Have a topic not on this list? [Open a feature request](https://github.com/BUDEG
 ## 📊 Statistics
 
 - **Total Topics Planned**: 107
-- **Completed**: 20 (18.7%)
+- **Completed**: 28 (26.2%)
 - **In Progress**: 0
-- **Remaining**: 87 (81.3%)
+- **Remaining**: 79 (73.8%)
 - **Average per month**: ~3-5 presentations
 - **Estimated Completion**: Q4 2025
 
