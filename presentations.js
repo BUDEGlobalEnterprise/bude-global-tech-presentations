@@ -288,6 +288,26 @@ const PRESENTATIONS_CONFIG = [
     "power-user",
     "workflow-optimization"
   ]
+},{
+  "file": "presentations/intro-stirling-pdf.json",
+  "title": "Introduction to Stirling PDF",
+  "description": "Complete self-hosted PDF processing toolkit with advanced document management capabilities",
+  "keywords": [
+    "stirling-pdf",
+    "pdf",
+    "document-processing",
+    "self-hosted",
+    "open-source",
+    "docker",
+    "ocr",
+    "pdf-manipulation",
+    "document-management",
+    "privacy",
+    "pdf-tools",
+    "self-hosted-pdf",
+    "pdf-conversion",
+    "pdf-editing"
+  ]
 }
 
   // Add more presentations here as you create them

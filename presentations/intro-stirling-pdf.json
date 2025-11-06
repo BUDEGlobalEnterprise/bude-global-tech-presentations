@@ -1,0 +1,1861 @@
+{
+  "file": "presentations/intro-stirling-pdf.json",
+  "title": "Introduction to Stirling PDF",
+  "description": "Complete self-hosted PDF processing toolkit with advanced document management capabilities",
+  "keywords": [
+    "stirling-pdf",
+    "pdf",
+    "document-processing",
+    "self-hosted",
+    "open-source",
+    "docker",
+    "ocr",
+    "pdf-manipulation",
+    "document-management",
+    "privacy"
+  ],
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Stirling PDF Mastery",
+            "subtitle": "Complete Self-Hosted PDF Processing<br>From Installation to Advanced Workflows"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Stirling PDF?</strong> - Open Source PDF Toolkit"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Installation Methods</strong> - Docker, Windows, Linux"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Core Features</strong> - Convert, Edit, Merge, Secure"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>OCR Capabilities</strong> - Text Recognition & Extraction"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Self-Hosted Benefits</strong> - Privacy & Security"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker Deployment</strong> - Single Command Setup"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Authentication</strong> - OAuth, Keycloak, Basic Auth"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Enterprise Usage</strong> - Workflows & Integration"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>API & Automation</strong> - Developer Features"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Troubleshooting</strong> - Common Issues & Solutions"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Real-World Use Cases</strong> - Education, Legal, Business"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Best Practices</strong> - Performance & Security"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-stirling-pdf",
+        "title": "What is Stirling PDF?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Stirling PDF"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Stirling PDF?",
+            "box": {
+              "content": "<span class=\"highlight\">Self-hosted web application for PDF processing</span>",
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - MIT License (Free and open source)"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Deployment</strong> - 100% local, no cloud dependencies"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Features</strong> - 40+ PDF manipulation tools"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Platform</strong> - Docker, Windows, Linux, macOS"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Privacy</strong> - Files never leave your server"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Key advantage:</strong> Complete privacy - your documents never leave your infrastructure!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-stirling-pdf",
+        "title": "Why Stirling PDF?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Key Benefits & Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "💪",
+            "title": "Why Choose Stirling PDF?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Privacy First</strong> - No cloud uploads, complete control"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Completely Free</strong> - No subscriptions or limits"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Feature Rich</strong> - 40+ tools in one interface"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Self-Hosted</strong> - Deploy on your infrastructure"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>API Access</strong> - Automate PDF processing"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Based</strong> - Access from any device"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Tool Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Stirling PDF vs Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "PDF Tool Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Stirling PDF</strong> - Free, self-hosted, privacy-focused"
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>Adobe Acrobat</strong> - Expensive, subscription-based"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>PDFsam</strong> - Desktop only, limited features"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Online Tools</strong> - Privacy concerns, file limits"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Stirling Advantage</strong> - Complete control, no costs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "open-source-advantage",
+        "title": "Open Source Advantage",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Open Source Benefits"
+          },
+          {
+            "type": "content",
+            "emoji": "🔓",
+            "title": "Open Source Advantages",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Transparency</strong> - Code is open for inspection"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Customization</strong> - Modify to fit your needs"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Community</strong> - Active development and support"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>No Vendor Lock-in</strong> - You control your data"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Rapid Updates</strong> - Community-driven improvements"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Stirling PDF"
+          },
+          {
+            "type": "content",
+            "emoji": "📥",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Recommended, cross-platform"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows EXE</strong> - Native Windows application"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - Docker or manual installation"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Manual</strong> - From source code"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Docker Installation",
+            "box": {
+              "content": "<strong>Single command deployment</strong>",
+              "code": "# Basic Docker run command\ndocker run -d \\\n  --name stirling-pdf \\\n  -p 8080:8080 \\\n  -v /local/path:/tmp \\\n  frooodle/s stirling-pdf:latest\n\n# With Docker Compose\nversion: '3.8'\nservices:\n  stirling-pdf:\n    image: frooodle/s stirling-pdf:latest\n    ports:\n      - \"8080:8080\"\n    volumes:\n      - ./data:/tmp\n    restart: unless-stopped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ui-overview",
+        "title": "UI Overview",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Interface Tour"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Stirling PDF Interface",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File Upload</strong> - Drag and drop support"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Tool Categories</strong> - Organized by function"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Quick Actions</strong> - Most used tools upfront"
+                },
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Dark Mode</strong> - Easy on the eyes"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Settings</strong> - Customize behavior"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-features",
+        "title": "Core Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Feature Categories"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Core Feature Categories",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Convert</strong> - To/from PDF, multiple formats"
+                },
+                {
+                  "emoji": "✏️",
+                  "text": "<strong>Edit</strong> - Modify, rearrange, annotate"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Merge/Split</strong> - Combine or separate pages"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure</strong> - Encryption, passwords, signatures"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Extract</strong> - Text, images, metadata"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>OCR</strong> - Text recognition from images"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "merge-split",
+        "title": "PDF Merge & Split",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Combine & Separate PDFs"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "Merge & Split Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Merge Multiple PDFs</strong> - Combine documents"
+                },
+                {
+                  "emoji": "✂️",
+                  "text": "<strong>Split by Pages</strong> - Extract specific pages"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Split by Size</strong> - Divide large files"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Batch Processing</strong> - Multiple files at once"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Preview</strong> - See results before saving"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "page-operations",
+        "title": "Page Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reorder, Delete, Rotate"
+          },
+          {
+            "type": "content",
+            "emoji": "📑",
+            "title": "Page Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Reorder Pages</strong> - Drag and drop interface"
+                },
+                {
+                  "emoji": "🗑️",
+                  "text": "<strong>Delete Pages</strong> - Remove unwanted pages"
+                },
+                {
+                  "emoji": "↩️",
+                  "text": "<strong>Rotate Pages</strong> - 90°, 180°, 270° rotation"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Page Size</strong> - Adjust paper dimensions"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Selective Operations</strong> - Apply to specific pages"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "compression",
+        "title": "PDF Compression",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optimize & Reduce Size"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Compression Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>High Compression</strong> - Maximum size reduction"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Balanced</strong> - Good quality with size savings"
+                },
+                {
+                  "emoji": "💎",
+                  "text": "<strong>Low Compression</strong> - Preserve quality"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Image Optimization</strong> - Compress embedded images"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Size Preview</strong> - See savings before processing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "convert-to-pdf",
+        "title": "Convert to PDF",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Create PDFs from Other Formats"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "Supported Input Formats",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Images</strong> - JPG, PNG, GIF, BMP, TIFF"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Word Documents</strong> - DOC, DOCX"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Excel Files</strong> - XLS, XLSX"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>PowerPoint</strong> - PPT, PPTX"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>HTML</strong> - Web pages to PDF"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Text Files</strong> - TXT, RTF"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "convert-from-pdf",
+        "title": "Convert from PDF",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Extract Content from PDFs"
+          },
+          {
+            "type": "content",
+            "emoji": "📤",
+            "title": "Export Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Images</strong> - PDF to JPG, PNG, TIFF"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Word</strong> - PDF to DOCX with formatting"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Text</strong> - Extract plain text content"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>OCR Extract</strong> - Text from scanned PDFs"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Excel</strong> - Tables to spreadsheet"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ocr-support",
+        "title": "OCR Support",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optical Character Recognition"
+          },
+          {
+            "type": "content",
+            "emoji": "👁️",
+            "title": "OCR Capabilities",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Multi-language</strong> - 100+ languages supported"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Searchable PDFs</strong> - Make scanned docs searchable"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Text Extraction</strong> - Copy text from images"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Language Packs</strong> - Download additional languages"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Batch OCR</strong> - Process multiple files"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "watermarks",
+        "title": "Watermarks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Add & Remove Watermarks"
+          },
+          {
+            "type": "content",
+            "emoji": "💧",
+            "title": "Watermark Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Text Watermarks</strong> - Custom text and styling"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Image Watermarks</strong> - Logo or signature stamps"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Position Control</strong> - Place anywhere on page"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Opacity</strong> - Adjust visibility level"
+                },
+                {
+                  "emoji": "🗑️",
+                  "text": "<strong>Remove Watermarks</strong> - Clean existing documents"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "PDF Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Encryption & Passwords"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Add Passwords</strong> - Encrypt PDF with password"
+                },
+                {
+                  "emoji": "🗝️",
+                  "text": "<strong>Remove Passwords</strong> - Decrypt protected PDFs"
+                },
+                {
+                  "emoji": "✍️",
+                  "text": "<strong>Digital Signatures</strong> - Sign documents electronically"
+                },
+                {
+                  "emoji": "🖊️",
+                  "text": "<strong>Drawn Signatures</strong> - Draw your signature"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Permission Control</strong> - Printing, copying limits"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "forms",
+        "title": "Form Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PDF Form Management"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Form Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✏️",
+                  "text": "<strong>Fill Forms</strong> - Complete PDF form fields"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Flatten Forms</strong> - Make form data permanent"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Extract Form Data</strong> - Get form field values"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Form Recognition</strong> - Auto-detect form fields"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "metadata",
+        "title": "PDF Metadata",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Metadata Editor"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Metadata Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✏️",
+                  "text": "<strong>Edit Metadata</strong> - Title, author, subject, keywords"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>View Metadata</strong> - See all document properties"
+                },
+                {
+                  "emoji": "🗑️",
+                  "text": "<strong>Remove Metadata</strong> - Clean personal information"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Preserve SEO</strong> - Maintain search optimization"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "page-numbering",
+        "title": "Page Numbering",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Headers & Footers"
+          },
+          {
+            "type": "content",
+            "emoji": "🔢",
+            "title": "Page Numbering Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Add Page Numbers</strong> - Automatic numbering"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Custom Headers</strong> - Add text to top of pages"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Custom Footers</strong> - Add text to bottom"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Format Options</strong> - Roman, Arabic, custom formats"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Batch Apply</strong> - Multiple documents"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "repair",
+        "title": "PDF Repair",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Fix Corrupted PDFs"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Repair Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Rebuild Structure</strong> - Fix corrupted files"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Recover Content</strong> - Salvage readable content"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Optimize</strong> - Clean up file structure"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Validate</strong> - Check PDF compliance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "compare",
+        "title": "PDF Compare",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Document Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Comparison Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Side-by-Side</strong> - Visual document comparison"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Text Comparison</strong> - Highlight text differences"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Change Detection</strong> - Identify modifications"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Difference Report</strong> - Summary of changes"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ui-customization",
+        "title": "UI Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Interface Options"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Customization Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Dark Mode</strong> - Easy on eyes, reduced strain"
+                },
+                {
+                  "emoji": "🌞",
+                  "text": "<strong>Light Mode</strong> - Traditional bright interface"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Auto Theme</strong> - Follow system preferences"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Custom Branding</strong> - Add your logo"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Language Support</strong> - Multiple UI languages"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "batch-processing",
+        "title": "Batch Processing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Multiple File Operations"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Batch Capabilities",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Bulk Conversion</strong> - Multiple files to PDF"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Bulk Encryption</strong> - Password protect many files"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Bulk Merge</strong> - Combine multiple sets"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Bulk OCR</strong> - Process entire folders"
+                },
+                {
+                  "emoji": "💧",
+                  "text": "<strong>Bulk Watermark</strong> - Brand multiple documents"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-usage",
+        "title": "API Usage",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Command Line & API"
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "API Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>REST API</strong> - Programmatic access to all features"
+                },
+                {
+                  "emoji": "📟",
+                  "text": "<strong>CLI Access</strong> - Command line interface"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Automation</strong> - Integrate with workflows"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Webhooks</strong> - Event-driven processing"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>API Documentation</strong> - Comprehensive docs"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "API Example",
+            "box": {
+              "content": "<strong>Convert image to PDF via API</strong>",
+              "code": "curl -X POST \\\n  http://localhost:8080/api/convert/image \\\n  -H 'Content-Type: multipart/form-data' \\\n  -F 'file=@/path/to/image.jpg' \\\n  -o converted.pdf\n\n# Python example\nimport requests\n\nresponse = requests.post(\n    'http://localhost:8080/api/convert/image',\n    files={'file': open('image.jpg', 'rb')}\n)\n\nwith open('output.pdf', 'wb') as f:\n    f.write(response.content)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "self-hosted-benefits",
+        "title": "Self-Hosted Benefits",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Privacy & Security Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Self-Hosted Advantages",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Data Privacy</strong> - Files never leave your network"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - No internet latency"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Control</strong> - You manage updates and access"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Offline Use</strong> - Works without internet"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Compliance</strong> - Meet data sovereignty requirements"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "docker-deployment",
+        "title": "Docker Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Containerized Setup"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Advanced Docker Setup",
+            "box": {
+              "content": "<strong>Production-ready deployment</strong>",
+              "code": "# docker-compose.yml for production\nversion: '3.8'\nservices:\n  stirling-pdf:\n    image: frooodle/s stirling-pdf:latest\n    container_name: stirling-pdf\n    ports:\n      - \"8080:8080\"\n    environment:\n      - DOCKER_ENABLE_SECURITY=false\n      - STIRLING_WEB_ROOT=\n    volumes:\n      - ./data:/usr/share/tessdata\n      - ./logs:/logs\n    restart: unless-stopped\n    networks:\n      - proxy\n\nnetworks:\n  proxy:\n    external: true"
+            }
+          }
+        ]
+      },
+      {
+        "id": "reverse-proxy",
+        "title": "Reverse Proxy Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "HTTPS & Domain Setup"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Reverse Proxy Configuration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Nginx</strong> - Popular, high performance"
+                },
+                {
+                  "emoji": "🐝",
+                  "text": "<strong>Traefik</strong> - Automatic SSL, container-aware"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Caddy</strong> - Automatic HTTPS, simple config"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>SSL Certificates</strong> - Let's Encrypt integration"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Nginx Configuration Example",
+            "box": {
+              "content": "<strong>Secure proxy setup</strong>",
+              "code": "server {\n    listen 443 ssl http2;\n    server_name pdf.yourdomain.com;\n\n    ssl_certificate /path/to/cert.pem;\n    ssl_certificate_key /path/to/private.key;\n\n    location / {\n        proxy_pass http://localhost:8080;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication",
+        "title": "Authentication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Access Control"
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "Authentication Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Basic Auth</strong> - Simple username/password"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>OAuth</strong> - Google, GitHub, Microsoft login"
+                },
+                {
+                  "emoji": "👑",
+                  "text": "<strong>Keycloak</strong> - Enterprise identity management"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>LDAP/Active Directory</strong> - Corporate integration"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Multi-user</strong> - Role-based access control"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "multi-user",
+        "title": "Multi-user Environment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Team Collaboration"
+          },
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "Multi-user Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>User Roles</strong> - Admin, user, guest permissions"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Usage Tracking</strong> - Monitor user activity"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>User Storage</strong> - Individual workspaces"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Admin Panel</strong> - User management interface"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "enterprise-workflow",
+        "title": "Enterprise Workflow",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Business Integration"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Enterprise Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>API Integration</strong> - Connect with business apps"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Document Management</strong> - Workflow automation"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Audit Logs</strong> - Compliance and tracking"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>High Availability</strong> - Cluster deployment"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Reporting</strong> - Usage analytics"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-use-cases",
+        "title": "Real-World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Industry Applications",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Education</strong> - Course materials, assignments"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Legal</strong> - Document processing, redaction"
+                },
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Healthcare</strong> - Patient records, forms"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>DevOps</strong> - Automated document generation"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Business</strong> - Contracts, reports, invoices"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "dms-integration",
+        "title": "DMS Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Document Management Systems"
+          },
+          {
+            "type": "content",
+            "emoji": "📂",
+            "title": "System Integration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Nextcloud</strong> - Integrated PDF processing"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>OwnCloud</strong> - Self-hosted cloud storage"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Alfresco</strong> - Enterprise content management"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Paperless-ngx</strong> - Document archiving"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Custom Integration</strong> - API-based workflows"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "developer-features",
+        "title": "Developer Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API & Scripting"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Developer Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>REST API</strong> - Full programmatic access"
+                },
+                {
+                  "emoji": "📟",
+                  "text": "<strong>CLI Tools</strong> - Command line scripts"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python SDK</strong> - Python integration library"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Webhooks</strong> - Event notifications"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>API Documentation</strong> - Swagger/OpenAPI"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-lab",
+        "title": "Home Lab Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Personal Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Home Lab Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Savings</strong> - No subscription fees"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Privacy</strong> - Personal documents stay local"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - No internet dependency"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Customization</strong> - Tailor to your needs"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Learning</strong> - Great for skill development"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-considerations",
+        "title": "Security Considerations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>On-Premises</strong> - Complete data control"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Air-Gapped</strong> - Works without internet"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>No Cloud Uploads</strong> - Files stay on your server"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Authentication</strong> - Control access"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Audit Logs</strong> - Track usage"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Performance & Resources",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "System Requirements"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Resource Requirements",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Minimum</strong> - 2GB RAM, 2 CPU cores"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Recommended</strong> - 4GB RAM, 4 CPU cores"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Production</strong> - 8GB+ RAM, SSD storage"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Storage</strong> - 2GB+ for application and data"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Network</strong> - Local network access"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "backup-restore",
+        "title": "Backup & Restore",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Management"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup Strategies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Docker Volumes</strong> - Backup container data"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Configuration</strong> - Export settings"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Automated Backups</strong> - Cron jobs or scripts"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Restore Process</strong> - Quick recovery"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Common Issues & Fixes"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Common Problems",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Port Conflicts</strong> - Change default port 8080"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Permission Issues</strong> - Check volume permissions"
+                },
+                {
+                  "emoji": "🐛",
+                  "text": "<strong>OCR Failures</strong> - Install language packs"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Access Denied</strong> - Check authentication"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>File Size Limits</strong> - Adjust upload limits"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "customization",
+        "title": "Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Branding & Themes"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Customization Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Custom Logos</strong> - Add your organization logo"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Themes</strong> - Custom color schemes"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Languages</strong> - UI translation support"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Settings</strong> - Configure default behaviors"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "roadmap",
+        "title": "Roadmap & Community",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Future Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "Development Roadmap",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>New Features</strong> - Regular updates"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Performance</strong> - Optimization improvements"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Integration</strong> - More system compatibility"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Community Driven</strong> - User feature requests"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "feature-requests",
+        "title": "Feature Requests",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Contributing to Stirling PDF"
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "GitHub Contribution",
+            "box": {
+              "content": "<strong>How to request features</strong>",
+              "code": "1. Visit github.com/Stirling-Tools/Stirling-PDF\n2. Check existing issues for duplicates\n3. Create new issue with:\n   - Clear description of the feature\n   - Use cases and benefits\n   - Any relevant examples\n4. Follow the project's contribution guidelines\n5. Engage with community discussions\n6. Consider contributing code if possible"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Stirling PDF Cheat Sheet",
+            "box": {
+              "content": "<strong>Most Used Tools Quick Reference</strong>",
+              "code": "Essential Operations:\n• Merge PDFs: Combine multiple documents\n• Split PDF: Extract specific pages\n• Compress: Reduce file size\n• OCR: Make scanned docs searchable\n• Convert: Images/Office docs to PDF\n\nSecurity Tools:\n• Add Password: Encrypt with password\n• Remove Password: Decrypt files\n• Digital Sign: Add electronic signatures\n• Watermark: Brand or mark documents\n\nAdvanced Features:\n• Batch Process: Multiple files at once\n• API Access: Programmatic control\n• Form Handling: Fill and flatten forms\n• Metadata: Edit document properties\n\nDeployment:\n• Docker: docker run -p 8080:8080 frooodle/s stirling-pdf\n• Default URL: http://localhost:8080"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-demo",
+        "title": "Hands-On Demo",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Live Demonstration"
+          },
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Demo Workflow: Complete PDF Processing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Merge multiple documents into one PDF"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Perform OCR on scanned pages"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Compress the merged document"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Add digital signature and watermark"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Set password protection"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Export final secured document"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - GitHub README"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - Source code and issues"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community Discussions</strong> - GitHub Discussions"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>Video Tutorials</strong> - YouTube demonstrations"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>API Documentation</strong> - Swagger UI"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Team Implementation"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Best Practices for Teams",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security First</strong> - Always use authentication"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Regular Backups</strong> - Protect your data"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Update Regularly</strong> - Security patches"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitor Usage</strong> - Track performance"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>User Training</strong> - Team onboarding"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the main advantage of self-hosting Stirling PDF?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you perform OCR on a scanned document?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the default Docker run command?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How can you automate PDF processing?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What authentication methods are supported?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "Stirling PDF = Free, open-source PDF toolkit"
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "Self-hosted for complete privacy and control"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "40+ tools covering all PDF operations"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "Advanced OCR with multi-language support"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "API access for automation and integration"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Enterprise-ready with authentication and scaling"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Stirling PDF features, deployment, or specific use cases!<br><span class=\"gradient-accent\">All PDF processing questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">📄</span> Ready to master self-hosted PDF processing?<br><span class=\"gradient-accent\">Start using Stirling PDF today!</span>",
+              "note": "Open Source • Self-Hosted • Privacy-Focused"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
