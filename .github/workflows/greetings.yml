@@ -13,4 +13,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Hello and welcome to the **Bude Global** community! 🎉 We're thrilled you opened your first issue. Our team will review it shortly."
-        pr-message: "Welcome, awesome contributor! ✨ Thank you for your first pull request to **Bude Global**. We appreciate your effort in making our collection even better. We'll be reviewing your changes soon.
+        pr-message: "Welcome, awesome contributor! ✨ Thank you for your first pull request to **Bude Global**. We appreciate your effort in making our collection even better. We'll be reviewing your changes soon."
