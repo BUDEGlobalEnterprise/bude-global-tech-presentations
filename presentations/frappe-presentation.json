@@ -239,10 +239,7 @@
             "title": "System Requirements",
             "box": {
               "content": "<strong>Prerequisites installation</strong>",
-              "code": "sudo apt install python3-dev \\
-  redis-server \\
-  mariadb-server \\
-  && pip install frappe-bench"
+              "code": "sudo apt install python3-dev \\\n  redis-server \\\n  mariadb-server \\\n  && pip install frappe-bench"
             },
             "list": [
               {

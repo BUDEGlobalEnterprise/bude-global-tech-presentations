@@ -7,8 +7,8 @@
         "slides": [
           {
             "type": "title",
-            "title": "Introduction to JavaScript",
-            "subtitle": "The Language of the Web<br>From Basics to Modern Features"
+            "title": "JavaScript Fundamentals",
+            "subtitle": "An Introduction to the Language of the Web"
           }
         ]
       },
@@ -21,9 +21,71 @@
             "name": "Aravind Govindhasamy",
             "title": "Software Developer",
             "experience": "3 years in .NET, Python, IoT & RFID",
-            "oss_experience": "Backend Development & Automation Specialist",
+            "oss_experience": "Full-Stack Development & Modern JavaScript Specialist",
             "github": "https://github.com/aravind-govindhasamy",
             "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>What is JavaScript?</strong> - A brief overview"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Variables & Data Types</strong> - Storing and using data"
+                },
+                {
+                  "emoji": "🧮",
+                  "text": "<strong>Operators</strong> - Performing operations on data"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Control Flow</strong> - Making decisions in your code"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Functions</strong> - Reusable blocks of code"
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Objects & Arrays</strong> - Grouping data together"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>DOM Manipulation</strong> - Interacting with web pages"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "<strong>Events</strong> - Responding to user actions"
+                },
+                {
+                  "emoji": "✨",
+                  "text": "<strong>ES6+ Features</strong> - Modern JavaScript"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Error Handling</strong> - Dealing with errors gracefully"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>JSON</strong> - Working with JSON data"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Web APIs</strong> - Interacting with browser features"
+                }
+              ]
+            }
           }
         ]
       },
@@ -32,56 +94,52 @@
         "title": "What is JavaScript?",
         "slides": [
           {
-            "type": "content",
-            "title": "What is JavaScript?",
-            "box": {
-              "content": "A <span class=\"highlight\">high-level, interpreted</span> programming language that conforms to the <span class=\"highlight\">ECMAScript</span> specification.",
-              "list": [
-                {
-                  "emoji": "🌐",
-                  "text": "<strong>The language of the web</strong> - runs in all modern browsers"
-                },
-                {
-                  "emoji": "⚡",
-                  "text": "<strong>Dynamic and versatile</strong> - used for frontend, backend, mobile, and more"
-                },
-                {
-                  "emoji": "🔄",
-                  "text": "<strong>Event-driven and non-blocking</strong> - ideal for interactive applications"
-                }
-              ]
-            },
-            "note": {
-              "text": "<strong>Key takeaway:</strong> JavaScript brings interactivity to websites."
-            }
-          }
-        ]
-      },
-      {
-        "id": "history",
-        "title": "A Brief History",
-        "slides": [
+            "type": "topic-title",
+            "title": "Understanding JavaScript"
+          },
           {
             "type": "content",
             "emoji": "📜",
-            "title": "The Evolution of JavaScript",
+            "title": "What is JavaScript?",
+            "box": {
+              "content": "<span class=\"highlight\">High-level, interpreted programming language</span>",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>The language of the web</strong> - Runs in all modern browsers"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Versatile</strong> - Used for frontend, backend, mobile, and more"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Dynamic</strong> - No need to specify data types"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "History of JavaScript",
             "box": {
               "list": [
                 {
-                  "emoji": "👶",
-                  "text": "<strong>1995:</strong> Created by Brendan Eich at Netscape in just 10 days."
+                  "emoji": "1️⃣",
+                  "text": "<strong>1995</strong> - Created by Brendan Eich at Netscape"
                 },
                 {
-                  "emoji": "🇪🇺",
-                  "text": "<strong>1997:</strong> Standardized as ECMAScript to ensure compatibility."
+                  "emoji": "2️⃣",
+                  "text": "<strong>1997</strong> - ECMAScript standard created"
                 },
                 {
-                  "emoji": "🚀",
-                  "text": "<strong>2009:</strong> Node.js is released, allowing JavaScript to run on the server."
+                  "emoji": "3️⃣",
+                  "text": "<strong>2009</strong> - Node.js allows JavaScript to run on servers"
                 },
                 {
-                  "emoji": "✨",
-                  "text": "<strong>2015:</strong> ES6 (ES2015) is released, a major update with new features."
+                  "emoji": "4️⃣",
+                  "text": "<strong>2015</strong> - ES6 (ECMAScript 2015) adds major new features"
                 }
               ]
             }
@@ -89,56 +147,103 @@
         ]
       },
       {
-        "id": "variables",
-        "title": "Variables and Data Types",
+        "id": "variables-data-types",
+        "title": "Variables & Data Types",
         "slides": [
           {
             "type": "topic-title",
-            "title": "Variables and Data Types"
+            "title": "Storing and Using Data"
           },
           {
             "type": "content",
             "emoji": "📦",
-            "title": "Declaring Variables",
+            "title": "Variables: var, let, const",
             "box": {
-              "content": "<strong>`let`, `const`, and `var`</strong>",
-              "code": "// 'let' allows you to reassign the value\nlet message = 'Hello';\nmessage = 'Hi';\n\n// 'const' is for constants, the value cannot be changed\nconst PI = 3.14;\n\n// 'var' is the old way, it's function-scoped\nvar name = 'Aravind';"
-            },
-            "note": {
-              "text": "<span class=\"emoji\">💡</span> Use `const` by default, `let` when you need to reassign."
+              "code": "// var (function-scoped, avoid in modern JS)\nfunction myFunction() {\n  var myVar = \"Hello\";\n  if (true) {\n    var myVar = \"Hi\"; // myVar is redeclared\n    console.log(myVar); // Hi\n  }\n  console.log(myVar); // Hi\n}\n\n// let (block-scoped)\nfunction myFunction2() {\n  let myLet = \"Hello\";\n  if (true) {\n    let myLet = \"Hi\"; // myLet is a new variable\n    console.log(myLet); // Hi\n  }\n  console.log(myLet); // Hello\n}\n\n// const (block-scoped, cannot be reassigned)\nconst myConst = \"Hello\";\n// myConst = \"Hi\"; // This will cause an error"
             }
           },
           {
             "type": "content",
-            "emoji": "📊",
+            "emoji": "🧩",
             "title": "Data Types",
             "box": {
               "list": [
                 {
                   "emoji": "📝",
-                  "text": "<strong>String:</strong> 'hello', \"world\""
+                  "text": "<strong>String</strong>: \"Hello, world!\""
                 },
                 {
                   "emoji": "🔢",
-                  "text": "<strong>Number:</strong> 42, 3.14"
+                  "text": "<strong>Number</strong>: 123, 3.14"
                 },
                 {
-                  "emoji": "✅",
-                  "text": "<strong>Boolean:</strong> true, false"
+                  "emoji": "👍",
+                  "text": "<strong>Boolean</strong>: true, false"
                 },
                 {
                   "emoji": "❓",
-                  "text": "<strong>Null & Undefined:</strong> intentional absence vs. unassigned"
+                  "text": "<strong>Null & Undefined</strong>: typeof null is object, typeof undefined is undefined"
                 },
                 {
                   "emoji": "🏢",
-                  "text": "<strong>Object:</strong> { key: 'value' }"
+                  "text": "<strong>Object</strong>: { name: 'John', age: 30 }"
                 },
                 {
-                  "emoji": "⚛️",
-                  "text": "<strong>Symbol:</strong> Unique identifiers"
+                  "emoji": "📜",
+                  "text": "<strong>Symbol</strong>: Symbol('id')"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>BigInt</strong>: 123n"
                 }
               ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "var, let, const: Key Differences",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong><code>var</code></strong>: Function-scoped, can be re-declared and re-assigned. Hoisted with a default value of <code>undefined</code>."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong><code>let</code></strong>: Block-scoped, can be re-assigned but not re-declared. Hoisted but not initialized (Temporal Dead Zone)."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong><code>const</code></strong>: Block-scoped, cannot be re-assigned or re-declared. Must be initialized at declaration. For objects/arrays, the reference is constant, but contents can be modified."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Primitive vs. Non-Primitive Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Primitives</strong>: Stored directly in the location that the variable accesses. (String, Number, Boolean, Null, Undefined, Symbol, BigInt). Passed by value."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Non-Primitives (Objects)</strong>: Stored as a reference to a memory location. (Objects, Arrays, Functions). Passed by reference."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Type Coercion",
+            "box": {
+              "content": "JavaScript often automatically converts values from one type to another (type coercion).",
+              "code": "// Implicit Coercion\nconsole.log('5' + 5); // '55' (Number to String)\nconsole.log('5' - 5); // 0 (String to Number)\nconsole.log(true + 1); // 2 (Boolean to Number)\n\n// Explicit Coercion\nconsole.log(Number('10')); // 10\nconsole.log(String(100)); // '100'\nconsole.log(Boolean(0)); // false"
             }
           }
         ]
@@ -148,31 +253,48 @@
         "title": "Operators",
         "slides": [
           {
+            "type": "topic-title",
+            "title": "Performing Operations"
+          },
+          {
             "type": "content",
-            "emoji": "➕",
-            "title": "Common Operators",
+            "emoji": "🧮",
+            "title": "Arithmetic Operators",
             "box": {
-              "list": [
-                {
-                  "emoji": "🔢",
-                  "text": "<strong>Arithmetic:</strong> `+`, `-`, `*`, `/`, `%`"
-                },
-                {
-                  "emoji": "🤝",
-                  "text": "<strong>Comparison:</strong> `==`, `===`, `!=`, `!==`, `>`, `<`"
-                },
-                {
-                  "emoji": "🧠",
-                  "text": "<strong>Logical:</strong> `&&` (AND), `||` (OR), `!` (NOT)"
-                },
-                {
-                  "emoji": "✍️",
-                  "text": "<strong>Assignment:</strong> `=`, `+=`, `-=`"
-                }
-              ]
-            },
-            "note": {
-              "text": "<strong>`===` vs `==`:</strong> `===` checks for both value and type (strict equality), while `==` performs type coercion."
+              "code": "let x = 10;\nlet y = 5;\n\nconsole.log(x + y); // 15\nconsole.log(x - y); // 5\nconsole.log(x * y); // 50\nconsole.log(x / y); // 2\nconsole.log(x % y); // 0\nconsole.log(x ** y); // 100000"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Comparison & Logical Operators",
+            "box": {
+              "code": "// Comparison\nconsole.log(10 == \"10\"); // true (loose equality)\nconsole.log(10 === \"10\"); // false (strict equality)\nconsole.log(10 != \"10\"); // false\nconsole.log(10 !== \"10\"); // true\nconsole.log(10 > 5); // true\n\n// Logical\nconsole.log(true && false); // false\nconsole.log(true || false); // true\nconsole.log(!true); // false"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Assignment Operators",
+            "box": {
+              "code": "let x = 10;\nx += 5; // x is now 15 (x = x + 5)\nx -= 3; // x is now 12 (x = x - 3)\nx *= 2; // x is now 24 (x = x * 2)\nx /= 4; // x is now 6 (x = x / 4)\nx %= 5; // x is now 1 (x = x % 5)"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Ternary Operator",
+            "box": {
+              "code": "let age = 20;\nlet status = (age >= 18) ? \"adult\" : \"minor\";\nconsole.log(status); // adult"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Operator Precedence",
+            "box": {
+              "content": "Determines the order in which operators are evaluated.",
+              "code": "let result = 5 + 3 * 2; // result is 11 (multiplication before addition)\nlet result2 = (5 + 3) * 2; // result2 is 16 (parentheses change precedence)"
             }
           }
         ]
@@ -183,24 +305,46 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Controlling the Flow"
+            "title": "Making Decisions"
           },
           {
             "type": "content",
             "emoji": "🔀",
             "title": "Conditional Statements",
             "box": {
-              "content": "<strong>`if`, `else if`, `else`</strong>",
-              "code": "let age = 18;\n\nif (age >= 18) {\n    console.log('You are an adult.');\n} else {\n    console.log('You are a minor.');\n}"
+              "code": "let age = 18;\n\nif (age >= 18) {\n  console.log(\"You are an adult.\");\n} else if (age >= 13) {\n  console.log(\"You are a teenager.\");\n} else {\n  console.log(\"You are a child.\");\n}"
             }
           },
           {
             "type": "content",
-            "emoji": "🔄",
+            "emoji": "🔀",
             "title": "Loops",
             "box": {
-              "content": "<strong>`for` and `while` loops</strong>",
-              "code": "// for loop\nfor (let i = 0; i < 5; i++) {\n    console.log(i);\n}\n\n// while loop\nlet count = 0;\nwhile (count < 3) {\n    console.log('Counting...');\n    count++;\n}"
+              "code": "// for loop\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// while loop\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}\n\n// do...while loop\nlet j = 0;\ndo {\n  console.log(j);\n  j++;\n} while (j < 5);"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Switch Statement",
+            "box": {
+              "code": "let day = \"Monday\";\n\nswitch (day) {\n  case \"Monday\":\n    console.log(\"It's the start of the week.\");\n    break;\n  case \"Friday\":\n    console.log(\"It's almost the weekend!\");\n    break;\n  default:\n    console.log(\"It's a regular day.\");\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Break and Continue",
+            "box": {
+              "code": "// break\nfor (let i = 0; i < 10; i++) {\n  if (i === 5) {\n    break; // Exits the loop\n  }\n  console.log(i); // 0, 1, 2, 3, 4\n}\n\n// continue\nfor (let i = 0; i < 10; i++) {\n  if (i % 2 === 0) {\n    continue; // Skips even numbers\n  }\n  console.log(i); // 1, 3, 5, 7, 9\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "for...in and for...of Loops",
+            "box": {
+              "code": "const person = { name: \"John\", age: 30 };\nfor (let key in person) {\n  console.log(`${key}: ${person[key]}`);\n}\n// Output:\n// name: John\n// age: 30\n\nconst colors = [\"red\", \"green\", \"blue\"];\nfor (let color of colors) {\n  console.log(color);\n}\n// Output:\n// red\n// green\n// blue"
             }
           }
         ]
@@ -211,18 +355,48 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Functions - Reusable Code"
+            "title": "Reusable Blocks of Code"
           },
           {
             "type": "content",
-            "emoji": "🛠️",
-            "title": "Defining Functions",
+            "emoji": "🔧",
+            "title": "Defining and Calling Functions",
             "box": {
-              "content": "<strong>Function Declaration, Expression, and Arrow Functions</strong>",
-              "code": "// Function Declaration\nfunction greet(name) {\n    return `Hello, ${name}!`;\n}\n\n// Function Expression\nconst add = function(a, b) {\n    return a + b;\n};\n\n// Arrow Function (ES6+)\nconst multiply = (a, b) => a * b;"
-            },
-            "note": {
-              "text": "Arrow functions provide a more concise syntax and share the same lexical `this` as their surrounding code."
+              "code": "// Function declaration\nfunction greet(name) {\n  return \"Hello, \" + name + \"!\";\n}\n\n// Function expression\nconst greet2 = function(name) {\n  return \"Hello, \" + name + \"!\";\n};\n\n// Arrow function\nconst greet3 = (name) => {\n  return \"Hello, \" + name + \"!\";\n};\n\nconsole.log(greet(\"John\")); // Hello, John!"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Function Parameters & Arguments",
+            "box": {
+              "code": "// Default parameters\nfunction greet(name = \"Guest\") {\n  return \"Hello, \" + name + \"!\";\n}\n\nconsole.log(greet()); // Hello, Guest!\nconsole.log(greet(\"John\")); // Hello, John!\n\n// Rest parameters\nfunction sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(sum(1, 2, 3)); // 6"
+            }
+          }
+        ]
+      },
+      {
+        "id": "objects-arrays",
+        "title": "Objects & Arrays",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Grouping Data"
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Objects",
+            "box": {
+              "code": "const person = {\n  name: \"John\",\n  age: 30,\n  greet: function() {\n    return \"Hello, my name is \" + this.name;\n  }\n};\n\nconsole.log(person.name); // John\nconsole.log(person.greet()); // Hello, my name is John"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Arrays and Array Methods",
+            "box": {
+              "code": "const colors = [\"red\", \"green\", \"blue\"];\n\n// map\nconst upperColors = colors.map(color => color.toUpperCase());\n// [\"RED\", \"GREEN\", \"BLUE\"]\n\n// filter\nconst longColors = colors.filter(color => color.length > 3);\n// [\"green\", \"blue\"]\n\n// reduce\nconst numbers = [1, 2, 3, 4, 5];\nconst sum = numbers.reduce((total, num) => total + num, 0); // 15"
             }
           }
         ]
@@ -232,103 +406,121 @@
         "title": "DOM Manipulation",
         "slides": [
           {
+            "type": "topic-title",
+            "title": "Interacting with Web Pages"
+          },
+          {
             "type": "content",
-            "emoji": "🎯",
-            "title": "Interacting with the DOM",
+            "emoji": "🌐",
+            "title": "Selecting Elements",
             "box": {
-              "content": "The <span class=\"highlight\">Document Object Model</span> (DOM) is a programming interface for web documents.",
-              "code": "// Selecting an element\nconst title = document.getElementById('title');\n\n// Changing content\ntitle.textContent = 'New Title';\n\n// Adding a class\ntitle.classList.add('highlight');\n\n// Event Handling\ndocument.querySelector('button').addEventListener('click', () => {\n    alert('Button was clicked!');\n});"
+              "code": "// by ID\nconst heading = document.getElementById(\"my-heading\");\n\n// by class name\nconst items = document.getElementsByClassName(\"my-item\");\n\n// by tag name\nconst paragraphs = document.getElementsByTagName(\"p\");\n\n// using querySelector\nconst firstItem = document.querySelector(\".my-item\");\n\n// using querySelectorAll\nconst allItems = document.querySelectorAll(\".my-item\");"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Modifying Elements",
+            "box": {
+              "code": "const heading = document.getElementById(\"my-heading\");\n\n// Changing content\nheading.textContent = \"New Heading\";\nheading.innerHTML = \"<em>New Heading</em>\";\n\n// Changing styles\nheading.style.color = \"red\";\nheading.style.fontSize = \"2rem\";\n\n// Adding and removing classes\nheading.classList.add(\"highlight\");\nheading.classList.remove(\"main\");"
+            }
+          }
+        ]
+      },
+      {
+        "id": "events",
+        "title": "Events",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Responding to User Actions"
+          },
+          {
+            "type": "content",
+            "emoji": "🖱️",
+            "title": "Event Handling",
+            "box": {
+              "code": "const myButton = document.getElementById(\"my-button\");\n\nmyButton.addEventListener(\"click\", () => {\n  alert(\"Button clicked!\");\n});\n\nmyButton.addEventListener(\"mouseover\", () => {\n  myButton.style.backgroundColor = \"red\";\n});\n\nmyButton.addEventListener(\"mouseout\", () => {\n  myButton.style.backgroundColor = \"\";\n});"
             }
           }
         ]
       },
       {
         "id": "es6-features",
-        "title": "Modern JavaScript (ES6+)",
+        "title": "ES6+ Features",
         "slides": [
           {
             "type": "topic-title",
-            "title": "Modern JavaScript Features"
+            "title": "Modern JavaScript"
           },
           {
             "type": "content",
             "emoji": "✨",
-            "title": "Key ES6+ Features",
+            "title": "Arrow Functions & Classes",
             "box": {
-              "list": [
-                {
-                  "emoji": "➡️",
-                  "text": "<strong>Arrow Functions:</strong> `(a, b) => a + b`"
-                },
-                {
-                  "emoji": "📦",
-                  "text": "<strong>Modules:</strong> `import` and `export`"
-                },
-                {
-                  "emoji": "📄",
-                  "text": "<strong>Template Literals:</strong> `Hello, ${name}!`"
-                },
-                {
-                  "emoji": "🔍",
-                  "text": "<strong>Destructuring:</strong> `const { name, age } = user;`"
-                },
-                {
-                  "emoji": "🤝",
-                  "text": "<strong>Promises & Async/Await:</strong> For asynchronous operations"
-                }
-              ]
+              "code": "// Arrow Functions\nconst add = (a, b) => a + b;\n\n// Classes\nclass Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n\n  greet() {\n    return `Hello, my name is ${this.name}`;\n  }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "✨",
+            "title": "Promises & Async/Await",
+            "box": {
+              "code": "// Promises\nconst myPromise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve(\"Success!\");\n  }, 1000);\n});\n\nmyPromise.then(result => console.log(result)); // Success!\n\n// Async/Await\nasync function myAsyncFunction() {\n  const result = await myPromise;\n  console.log(result);\n}\n\nmyAsyncFunction(); // Success!"
             }
           }
         ]
       },
       {
-        "id": "async-js",
-        "title": "Asynchronous JavaScript",
+        "id": "error-handling",
+        "title": "Error Handling",
         "slides": [
           {
+            "type": "topic-title",
+            "title": "Dealing with Errors"
+          },
+          {
             "type": "content",
-            "emoji": "⏳",
-            "title": "Handling Asynchronous Operations",
+            "emoji": "🚨",
+            "title": "try...catch",
             "box": {
-              "content": "JavaScript is single-threaded, so long-running tasks can block the main thread. Asynchronous patterns help avoid this.",
-              "code": "// Using Promises\nfetch('https://api.example.com/data')\n    .then(response => response.json())\n    .then(data => console.log(data))\n    .catch(error => console.error('Error:', error));\n\n// Using Async/Await\nasync function fetchData() {\n    try {\n        const response = await fetch('https://api.example.com/data');\n        const data = await response.json();\n        console.log(data);\n    } catch (error) {\n        console.error('Error:', error);\n    }\n}
-
-fetchData(); // Success!"
+              "code": "try {\n  // Code that may throw an error\n  const result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.error(error);\n}"
             }
           }
         ]
       },
       {
-        "id": "ecosystem",
-        "title": "The JavaScript Ecosystem",
+        "id": "json",
+        "title": "JSON",
         "slides": [
           {
+            "type": "topic-title",
+            "title": "Working with JSON"
+          },
+          {
             "type": "content",
-            "emoji": "🌱",
-            "title": "Tools and Frameworks",
+            "emoji": "📄",
+            "title": "JSON.parse() & JSON.stringify()",
             "box": {
-              "list": [
-                {
-                  "emoji": "📦",
-                  "text": "<strong>Package Managers:</strong> npm, Yarn, pnpm"
-                },
-                {
-                  "emoji": "⚛️",
-                  "text": "<strong>Frontend Frameworks:</strong> React, Vue, Angular, Svelte"
-                },
-                {
-                  "emoji": "⚙️",
-                  "text": "<strong>Backend (Node.js):</strong> Express, NestJS, Fastify"
-                },
-                {
-                  "emoji": "✅",
-                  "text": "<strong>Testing:</strong> Jest, Vitest, Cypress"
-                },
-                {
-                  "emoji": "🛠️",
-                  "text": "<strong>Build Tools:</strong> Webpack, Vite, Rollup"
-                }
-              ]
+              "code": "const jsonString = '{\"name\":\"John\",\"age\":30}';\nconst person = JSON.parse(jsonString);\nconsole.log(person.name); // John\n\nconst personObject = { name: \"John\", age: 30 };\nconst json = JSON.stringify(personObject);\nconsole.log(json); // {\"name\":\"John\",\"age\":30}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "web-apis",
+        "title": "Web APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Browser Features"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Fetch API",
+            "box": {
+              "code": "fetch(\"https://api.example.com/data\")\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));"
             }
           }
         ]
@@ -340,14 +532,14 @@ fetchData(); // Success!"
           {
             "type": "qa",
             "title": "Questions? 💬",
-            "content": "Let's discuss JavaScript, web development, or anything else!<br><span class=\"gradient-accent\">Ask away!</span>"
+            "content": "Let's discuss JavaScript concepts or specific use cases!<br><span class=\"gradient-accent\">All web development questions welcome!</span>"
           },
           {
             "type": "thank-you",
             "title": "Thank You! 🎉",
             "box": {
-              "content": "<span class=\"emoji\">🚀</span> Ready to start your JavaScript journey?<br><span class=\"gradient-accent\">Happy coding!</span>",
-              "note": "Practice • Build • Learn • Repeat"
+              "content": "<span class=\"emoji\">📜</span> Ready to build amazing web experiences?<br><span class=\"gradient-accent\">Start your JavaScript journey today!</span>",
+              "note": "The Language of the Web"
             },
             "footer": {
               "org": "Bude Global Enterprise - India",

@@ -18,13 +18,12 @@
         "title": "Presenter Slide",
         "slides": [
           {
+            "name": "Aravind Govindhasamy",
             "type": "presenter",
-            "name": "Web Development Team",
             "title": "Full-Stack Developer",
-            "experience": "5 years in Web Development & UI/UX",
             "oss_experience": "Dashboard Templates & Admin Panel Specialist",
-            "github": "https://github.com/your-username",
-            "website": "https://your-portfolio.com"
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
           }
         ]
       },

@@ -465,8 +465,7 @@
             "title": "Pattern Matching",
             "box": {
               "content": "<strong>Enhanced switch expressions</strong>",
-              "code": "// Traditional switch\nswitch (obj)\n{\n    case string s:\n        Console.WriteLine($\"String: {s}\");\n        break;\n    case int i when i > 0:\n        Console.WriteLine($\"Positive integer: {i}\");\n        break;\n    case null:\n        Console.WriteLine(\"Null value\");\n        break;\n    default:\n        Console.WriteLine(\"Unknown type\");\n        break;\n}\n\n// C# 8.0+ switch expression\nvar message = obj switch\n{\n    string s => $\"String: {s}\",\n    int i when i > 0 => $\"Positive integer: {i}\",\n    null => \"Null value\",\n    _ => \"Unknown type\"
-};"
+              "code": "// Traditional switch\nswitch (obj)\n{\n    case string s:\n        Console.WriteLine($\"String: {s}\");\n        break;\n    case int i when i > 0:\n        Console.WriteLine($\"Positive integer: {i}\");\n        break;\n    case null:\n        Console.WriteLine(\"Null value\");\n        break;\n    default:\n        Console.WriteLine(\"Unknown type\");\n        break;\n}\n\n// C# 8.0+ switch expression\nvar message = obj switch\n{\n    string s => $\"String: {s}\",\n    int i when i > 0 => $\"Positive integer: {i}\",\n    null => \"Null value\",\n    _ => \"Unknown type\"\n};"
             }
           },
           {
