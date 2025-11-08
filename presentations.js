@@ -154,6 +154,7 @@ const PRESENTATIONS_CONFIG = [
     category: ["database"]
   },
 
+
   {
     file: "presentations/intro-typescript.json",
     title: "TypeScript – Typed JavaScript for Scalable Applications",
