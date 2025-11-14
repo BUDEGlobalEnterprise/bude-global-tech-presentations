@@ -36,7 +36,6 @@ body {
   color: #111;
   overflow-x: hidden;
   margin: 0;
-    overflow: hidden;
     background: radial-gradient(ellipse at center, #0a0f1f 0%, #050812 100%);
 }
 

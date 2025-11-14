@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bude Global Tech Presentations | Dynamic, Open-Source Knowledge Platform</title>
+
     <meta name="description"
         content="Explore Bude Global's open-source platform for technical presentations. Dynamically loads content from JSON, features intelligent search, and uses Reveal.js for knowledge sharing.">
     <meta name="keywords"
@@ -26,49 +27,94 @@
 
     <link rel="icon" href="assets/images/budeglobal_logo.png" type="image/x-icon">
 
-    <!-- External Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/theme/black.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="header">
-        <img src="assets/images/budeglobal_logo.png" alt="Bude Global Logo" class="logo">
-        <h1>Tech Presentations</h1>
-        <p>Explore our open-source knowledge library</p>
-    </div>
+    <header class="global-header enhanced">
+        <div class="gh-left">
+            <a href="/" class="gh-brand">
+                <img src="assets/images/budeglobal_logo.png" class="gh-logo" alt="Bude Global">
+                <span class="gh-title">Bude Global Open Tech Docs</span>
+            </a>
+        </div>
 
-    <div class="search-container">
-        <div class="search-box">
-            <i class="ri-search-line search-icon"></i>
-            <input type="text" id="topic-search" placeholder="Search presentations, topics, or technologies..."
-                autocomplete="off">
+        <nav class="gh-center">
+            <div class="gh-dropdown">
+                <button class="gh-dropbtn" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+                <div class="gh-dropdown-content" role="menu" aria-hidden="true">
+                    <a href="/README.md" role="menuitem">Docs</a>
+                    <a href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues" target="_blank"
+                        role="menuitem">Issues</a>
+                    <a href="/PRESENTATIONS_TODO.md" role="menuitem">Roadmap</a>
+                    <a href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/discussions" target="_blank"
+                        role="menuitem">Discussions</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="gh-right">
+            <div class="gh-stats" aria-live="polite">
+                <a id="gh-star" class="gh-btn stat-btn" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations">
+                    <i class="ri-github-fill"></i><span class="stat-value" id="star-count">—</span>
+                </a>
+
+                <a id="gh-forks" class="gh-btn stat-btn" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/network/members">
+                    <i class="ri-restart-line"></i><span class="stat-value" id="fork-count">—</span>
+                </a>
+            </div>
+
+            <a id="fork-btn" class="gh-btn gh-fork" target="_blank" rel="noopener noreferrer"
+                href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/fork">
+                <i class="ri-git-branch-fill"></i> Fork This Repo
+            </a>
+        </div>
+    </header>
+
+    <section class="contrib-carousel" aria-label="Contributors">
+        <div class="contrib-track" id="contrib-track" role="list"></div>
+    </section>
+
+    <div id="main-selector-ui">
+        <div class="header">
+            <img src="assets/images/budeglobal_logo.png" alt="Bude Global Logo" class="logo">
+            <h1>Tech Presentations</h1>
+            <p>Explore our open-source knowledge library</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="ri-search-line search-icon"></i>
+                <input type="text" id="topic-search" placeholder="Search presentations, topics, or technologies..."
+                    autocomplete="off">
+            </div>
+        </div>
+
+        <div class="stats-bar" id="stats-bar">
+            <div class="stat-card">
+                <div class="stat-number" id="total-presentations">0</div>
+                <div class="stat-label">Total Presentations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-categories">0</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="active-categories">0</div>
+                <div class="stat-label">Active Categories</div>
+            </div>
+        </div>
+
+        <div class="categories-container" id="categories-container">
+            <div class="loading">🔍 Loading presentations...</div>
         </div>
     </div>
-
-    <div class="stats-bar" id="stats-bar">
-        <div class="stat-card">
-            <div class="stat-number" id="total-presentations">0</div>
-            <div class="stat-label">Total Presentations</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number" id="total-categories">0</div>
-            <div class="stat-label">Categories</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number" id="active-categories">0</div>
-            <div class="stat-label">Active Categories</div>
-        </div>
-    </div>
-
-    <div class="categories-container" id="categories-container">
-        <div class="loading">🔍 Loading presentations...</div>
-    </div>
-
     <div class="reveal">
         <div class="slides"></div>
         <canvas id="futuristic-bg"></canvas>
@@ -95,9 +141,9 @@
         <p>© 2025 Bude Global Enterprise — Built with ❤️ for Open Collaboration</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"></script>
     <script src="presentations.js"></script>
+    <script src="github-live.js"></script>
     <script src="presenter.js"></script>
     <script src="loader.js"></script>
 </body>
