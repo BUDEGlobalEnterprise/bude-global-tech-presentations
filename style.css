@@ -867,6 +867,42 @@ html[data-theme="light"] .export-progress { background: rgba(0,0,0,0.04); }
 .export-close { font-size: 0.95rem; }
 .gh-btn[disabled] { opacity: 0.6; pointer-events: none; }
 
+/* When exporting, hide page chrome so slides render cleanly */
+body.exporting .global-header,
+body.exporting #main-selector-ui,
+body.exporting .contrib-carousel,
+body.exporting .stats-bar,
+body.exporting .categories-container,
+body.exporting .glow-gradient,
+body.exporting .glow-line,
+body.exporting .floating-shape {
+    display: none !important;
+}
+
+/* Keep footer visible if user prefers; hide during export for clean slides */
+body.exporting footer { display: none !important; }
+
+/* Temporary fullscreen capture styles: applied during export to make the reveal container occupy the viewport
+   This is intentionally high-specificity and only active while JS toggles `body.exporting`. */
+body.exporting .reveal {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 2147483646 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.exporting .reveal .slides {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Avoid transitions during capture */
+body.exporting *, body.exporting *::before, body.exporting *::after { transition: none !important; }
+
 @media (max-width: 480px) {
     .header h1 {
         font-size: 2rem;
