@@ -32,7 +32,7 @@ async function loadPresentations() {
             });
         }
 
-        console.log(PRESENTATIONS_CONFIG);
+       // console.log(PRESENTATIONS_CONFIG);
 
         if (allPresentations.length === 0) {
             container.innerHTML = '<div class="no-results">⚠️ No presentations found</div>';
@@ -60,7 +60,7 @@ function categorizePresentations() {
     allPresentations.forEach(presentation => {
         // Get categories from presentation config
         const categories = presentation.category || ['uncategorized'];
-        console.log('Categories in:', presentation);
+       // console.log('Categories in:', presentation);
         categories.forEach(categoryId => {
             const normalizedId = categoryId.toLowerCase().trim();
 
@@ -79,7 +79,7 @@ function categorizePresentations() {
         });
     });
 
-    console.log('Categories created:', Object.keys(categorizedPresentations));
+  //  console.log('Categories created:', Object.keys(categorizedPresentations));
 }
 
 /**
