@@ -1,28 +1,28 @@
 # 📋 Presentations Progress Tracker
 
 > **Last Updated**: November 2025
-> **Total Presentations**: 38 ✅ | 69 ⬜
-> **Completion**: 35.5%
+> **Total Presentations**: 42 ✅ | 65 ⬜
+> **Completion**: 39.3%
 
 ---
 
 ## 📊 Progress Overview
 
 ```
-███████████░░░░░░░░░░░░░░░░░░░░ 35.5% Complete
+██████████░░░░░░░░░░░░░░░░░░░░░ 39.3% Complete
 ```
 
 | Category | Completed | Pending | Total | Progress |
 |----------|-----------|---------|-------|----------|
-| 🟢 **Core Topics** | 38 | 69 | 107 | 35.5% |
-| 🔵 **Programming Languages** | 6 | 3 | 9 | 66.7% |
+| 🟢 **Core Topics** | 42 | 65 | 107 | 39.3% |
+| 🔵 **Programming Languages** | 7 | 2 | 9 | 77.8% |
 | 🟣 **Backend Frameworks** | 2 | 6 | 8 | 25% |
-| 🔴 **Databases & Storage** | 1 | 7 | 8 | 12.5% |
-| 🟠 **DevOps & Cloud** | 2 | 8 | 10 | 20% |
-| 🟡 **Security & Auth** | 0 | 7 | 7 | 0% |
-| 🟢 **AI & Automation** | 0 | 7 | 7 | 0% |
-| 🟤 **Tools & Productivity** | 7 | 2 | 9 | 77.8% |
-| 🟣 **Business Applications** | 1 | 6 | 7 | 14.3% |
+| 🔴 **Databases & Storage** | 4 | 4 | 8 | 50% |
+| 🟠 **DevOps & Cloud** | 4 | 6 | 10 | 40% |
+| 🟡 **Security & Auth** | 1 | 6 | 7 | 14.3% |
+| 🟢 **AI & Automation** | 2 | 5 | 7 | 28.6% |
+| 🟤 **Tools & Productivity** | 12 | 0 | 12 | 100% |
+| 🟣 **Business Applications** | 7 | 34 | 41 | 17.1% |
 
 ---
 
@@ -35,6 +35,7 @@
 - [x] #1 Python - [View](presentations/intro-python.json)
 - [x] #2 Rust - [View](presentations/intro-rust.json)
 - [x] #3 PHP - [View](presentations/intro-php.json)
+- [x] #4 Ruby - [View](presentations/intro-ruby.json)
 - [x] #6 C# - [View](presentations/intro-csharp.json)
 - [x] #7 .NET MAUI - [View](presentations/intro-maui.json)
 - [x] #7 Dart & Flutter - [View](presentations/intro-dart.json)
@@ -45,7 +46,8 @@
 - [x] #64 TypeScript + Node.js - [View](presentations/intro-typescript.json)
 - [x] #68 GraphQL – API Query Language - [View](presentations/intro-graphql.json)
 - [x] #69 REST API & Swagger/OpenAPI - [View](presentations/intro-rest-api-swagger.json)
-- [x] Flutter - [View](presentations/intro-flutter.json)
+- [x] #84 Flutter - [View](presentations/intro-flutter.json)
+- [x] #85 iOS Advanced Development - [View](presentations/intro-ios-dev.json)
 
 ### CSS Frameworks
 - [x] #11 Tailwind CSS - [View](presentations/tailwind-css-presentation.json)
