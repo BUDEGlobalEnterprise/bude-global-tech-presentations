@@ -614,3 +614,71 @@ body.presentation-mode .reveal {
     0% { filter: blur(40px); opacity: 0.7; }
     100% { filter: blur(70px); opacity: 1; }
   }
+
+  /* Enhanced header + dropdown + stats */
+.global-header.enhanced {
+  padding: 10px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 6000;
+  background: linear-gradient(90deg, rgba(8,12,22,0.75), rgba(10,14,30,0.75));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* brand */
+.gh-brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit; }
+.gh-logo { width:36px; height:36px; border-radius:6px; }
+.gh-title { font-weight:600; color:#e8eef7; font-size:15px; }
+
+/* center nav dropdown */
+.gh-center { flex:1; display:flex; justify-content:center; }
+.gh-dropdown { position:relative; }
+.gh-dropbtn {
+  background:transparent; border:0; color:#cfeffd; font-weight:600; padding:8px 10px; cursor:pointer;
+}
+.gh-dropdown-content {
+  display:none;
+  position:absolute;
+  top:36px;
+  left:0;
+  min-width:160px;
+  background:rgba(7,10,20,0.95);
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(2,6,23,0.6);
+  padding:6px 8px;
+  border:1px solid rgba(255,255,255,0.03);
+  z-index:7000;
+}
+.gh-dropdown-content a {
+  display:block; padding:8px 10px; text-decoration:none; color:#e7f6ff; border-radius:6px; font-size:14px;
+}
+.gh-dropdown-content a:hover { background: rgba(255,255,255,0.03); }
+
+/* right actions */
+.gh-right { display:flex; gap:10px; align-items:center; }
+.gh-btn { display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border-radius:8px; text-decoration:none; color:#eaf8ff; font-weight:600; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); }
+.gh-fork { background: linear-gradient(90deg,#23a6d5,#6f42c1); color:#fff; border:none; }
+.stat-btn { background:transparent; border:1px solid rgba(255,255,255,0.04); padding:6px 10px; }
+
+/* contributor carousel */
+.contrib-carousel { width:100%; overflow:hidden; margin-top:6px; background:transparent; padding:8px 0; }
+.contrib-track { display:flex; gap:10px; padding:8px 14px; align-items:center; animation:scroll 28s linear infinite; }
+.contrib-item { display:flex; flex-direction:column; align-items:center; width:68px; text-align:center; font-size:12px; color:#dff7ff; text-decoration:none; }
+.contrib-avatar { width:56px; height:56px; border-radius:999px; border:2px solid rgba(255,255,255,0.06); box-shadow:0 8px 18px rgba(11,17,35,0.5); }
+
+/* scroll animation fallback: duplicate content to loop */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* responsiveness */
+@media (max-width:700px) {
+  .gh-center { display:none; }
+  .contrib-track { animation-duration: 40s; }
+}
