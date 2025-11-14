@@ -9,6 +9,9 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 const { PDFDocument } = require('pdf-lib');
 
+// Simple delay helper
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 async function startServer(root, port = 3000) {
   const app = express();
   app.use(express.static(root));
@@ -35,8 +38,69 @@ async function main() {
   console.log('Opening', url);
   await page.goto(url, { waitUntil: 'networkidle2' });
 
-  // Wait for Reveal to initialize - at least wait for slides to be present
-  await page.waitForSelector('.reveal .slides section', { timeout: 15000 });
+  // Wait for the page to load and presentations to be fetched/rendered
+  // First, wait for the main selector UI to be visible or the reveal container to exist
+  try {
+    await page.waitForSelector('.reveal', { timeout: 10000 });
+  } catch (e) {
+    console.warn('Reveal container not found, continuing anyway');
+  }
+
+  // Click on first presentation to load slides if needed
+  console.log('Waiting for presentations to load and be clickable...');
+    try {
+      const firstPresBtn = await page.$('.presentation-card, .category-item, [data-presentation]');
+      if (firstPresBtn) {
+        console.log('Found presentation, clicking to load slides...');
+        await firstPresBtn.click();
+        await delay(2000);
+      }
+    } catch (e) {
+      console.log('Could not click first presentation, checking for slides anyway');
+    }  // Now wait for slides to be created - with longer timeout
+  console.log('Waiting for slides to render...');
+  let slideCount = 0;
+  let attempts = 0;
+  while (slideCount === 0 && attempts < 3) {
+    attempts++;
+    try {
+      await page.waitForFunction(() => {
+        const slides = document.querySelectorAll('.reveal .slides section');
+        return slides.length > 0;
+      }, { timeout: 20000 });
+      slideCount = await page.evaluate(() => document.querySelectorAll('.reveal .slides section').length);
+      console.log(`Found ${slideCount} slides`);
+    } catch (e) {
+      slideCount = await page.evaluate(() => document.querySelectorAll('.reveal .slides section').length);
+      if (slideCount === 0 && attempts < 3) {
+        console.log(`Attempt ${attempts}: No slides found, trying to auto-load first presentation...`);
+        // Try to programmatically load the first presentation
+        await page.evaluate(async () => {
+          // Load the presentations.js config and simulate loading first presentation
+          if (window.PRESENTATIONS_CONFIG && window.PRESENTATIONS_CONFIG.length > 0) {
+            const firstFile = window.PRESENTATIONS_CONFIG[0].file;
+            console.log('Loading presentation:', firstFile);
+            const resp = await fetch(firstFile);
+            const data = await resp.json();
+            if (window.renderSlides) {
+              window.renderSlides(data);
+            }
+          }
+        });
+        await delay(3000);
+      } else if (slideCount === 0) {
+        console.error('No slides found after all attempts');
+        const html = await page.content();
+        const match = html.match(/<div class="slides">([\s\S]*?)<\/div>/);
+        if (match) {
+          console.log('Slides container content:', match[1].substring(0, 500));
+        }
+        await browser.close();
+        server.close();
+        process.exit(1);
+      }
+    }
+  }
 
   // Build mapping of slides (h/v)
   const mapping = await page.evaluate(() => {
@@ -65,13 +129,13 @@ async function main() {
     console.log(`Navigating to slide ${i + 1}/${mapping.length}: h=${h} v=${v}`);
     await page.evaluate((hh, vv) => Reveal.slide(hh, vv), h, v);
     // Wait for reveal to reflect the change
-    await page.waitForTimeout(500);
+    await delay(500);
     // extra wait to ensure images/fonts finish
-    await page.waitForTimeout(400);
+    await delay(400);
 
     // Hide UI elements that may cover the slide by adding a class (mirrors CSS in project)
     await page.evaluate(() => document.documentElement.classList.add('exporting'));
-    await page.waitForTimeout(80);
+    await delay(80);
 
     const slideEl = await page.$('.reveal');
     if (!slideEl) {
@@ -91,7 +155,7 @@ async function main() {
 
     // remove the exporting class so the page UI can be visible while we progress (optional)
     await page.evaluate(() => document.documentElement.classList.remove('exporting'));
-    await page.waitForTimeout(80);
+    await delay(80);
   }
 
   if (images.length === 0) {

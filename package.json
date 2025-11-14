@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.30.0"
+  }
+}
