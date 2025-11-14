@@ -731,7 +731,41 @@ html[data-theme="light"] .reveal .progress {
 }
 
 .gradient-bg {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    background: linear-gradient(135deg, rgba(248,249,250,0.95) 0%, rgba(233,236,239,0.95) 100%) !important;
+    color: var(--text-primary);
+    transition: background 0.35s ease, color 0.25s ease;
+}
+
+html[data-theme="dark"] .gradient-bg {
+    background: linear-gradient(135deg, rgba(15,18,34,0.6) 0%, rgba(28,32,50,0.6) 100%) !important;
+    color: var(--text-primary);
+}
+
+/* Code block improvements for slides */
+.code-block {
+    margin-top: 1em;
+}
+
+.code-block pre {
+    background: rgba(0,0,0,0.06);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: auto;
+    max-height: 60vh;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .code-block pre {
+    background: rgba(255,255,255,0.03);
+    color: var(--text-primary);
+}
+
+.code-block pre, .code-block pre code {
+    white-space: pre;
+    tab-size: 4;
 }
 
 .gradient-accent {

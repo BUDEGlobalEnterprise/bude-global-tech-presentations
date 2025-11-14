@@ -428,7 +428,7 @@ function createSlide(slideData) {
         section.innerHTML = `
         <div style="display: flex; align-items: center; gap: 3em; max-width: 900px;">
             <div style="flex-shrink: 0;">
-                <div style="width: 250px; height: 250px; border-radius: 50%; background: linear-gradient(135deg, var(--bude-primary), var(--bude-purple)); display: flex; align-items: center; justify-content: center; color: white; font-size: 4em; font-weight: bold; border: 5px solid white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); animation: float 3s ease-in-out infinite;">
+                <div style="width: 250px; height: 250px; border-radius: 50%; background: linear-gradient(135deg, var(--bude-primary), var(--bude-purple)); display: flex; align-items: center; justify-content: center; color: white; font-size: 4em; font-weight: bold; border: 5px solid var(--card-border); box-shadow: 0 4px 20px rgba(0,0,0,0.15); animation: float 3s ease-in-out infinite;">
                     AGP
                 </div>
             </div>
@@ -473,7 +473,7 @@ function createSlide(slideData) {
         section.classList.add('center', 'gradient-bg');
         section.innerHTML = `
             <h1>${slideData.title}</h1>
-            <p style="margin-top: 1.5em; font-size: 1.2em; color: var(--bude-text-dark);">
+            <p style="margin-top: 1.5em; font-size: 1.2em; color: var(--text-primary);">
                 ${slideData.content}
             </p>
         `;
@@ -529,7 +529,7 @@ function createBox(boxData) {
     }
 
     if (boxData.code) {
-        html += `<pre><code class="language-python">${escapeHtml(boxData.code)}</code></pre>`;
+        html += `<div class="code-block"><pre><code class="language-python">${escapeHtml(boxData.code)}</code></pre></div>`;
     }
 
     html += '</div>';
