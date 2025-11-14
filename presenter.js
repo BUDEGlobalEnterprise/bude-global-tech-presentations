@@ -338,12 +338,14 @@ async function renderSlides(data) {
         controls: true,
         progress: true,
         center: true,
-        width: 1280,
-        height: 720,
-        margin: 0.1,
-        minScale: 0.2,
-        maxScale: 2.0,
+        width: 1920,
+        height: 1080,
+        margin: 0.08,
+        minScale: 0.3,
+        maxScale: 3.0,
         overflow: 'scroll',
+        pdfSeparateFragments: false,
+        pdfMaxPagesPerSlide: 1,
         keyboard: {
             40: () => {
                 const currentSlide = document.querySelector('.reveal .slides section.present');
