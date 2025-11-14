@@ -5,12 +5,27 @@ on:
     types: [created]
 
 jobs:
-  assign:
-    if: contains(github.event.comment.body, 'assign me')
+  assign-commenter:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-      - name: Assign commenter
-        uses: actions-ecosystem/action-assign@v1
+      - name: Check for 'assign me' and assign commenter
+        uses: actions/github-script@v7
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: ${{ github.event.comment.user.login }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = context.payload.comment.body.toLowerCase();
+            const login = context.payload.comment.user.login;
+            const issue_number = context.payload.issue.number;
+            if (body.includes('assign me') || body.includes('i will take this') || body.includes('i\'ll take this')) {
+              await github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number,
+                assignees: [login]
+              });
+              core.info(`Assigned ${login} to issue #${issue_number}`);
+            } else {
+              core.info('No assignment phrase detected; skipping.');
+            }
