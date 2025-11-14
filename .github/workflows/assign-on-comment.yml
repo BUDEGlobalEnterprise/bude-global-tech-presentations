@@ -1,0 +1,16 @@
+name: Assign on Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  assign:
+    if: contains(github.event.comment.body, 'assign me')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign commenter
+        uses: actions-ecosystem/action-assign@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ${{ github.event.comment.user.login }}
