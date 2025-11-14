@@ -789,9 +789,8 @@ body.presentation-mode .contrib-carousel {
     display: none;
 }
 
-body.presentation-mode footer {
-    display: none;
-}
+/* keep footer visible in presentation-mode so users can export and access links */
+/* previously footer was hidden in presentation mode; showing it by default */
 
 body.presentation-mode .reveal {
     display: block !important;
@@ -827,6 +826,46 @@ body.presentation-mode .reveal {
         grid-template-columns: 1fr;
     }
 }
+
+/* Export modal styles */
+.export-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 12000;
+}
+.export-modal[aria-hidden="false"] { display: flex; }
+.export-modal-content {
+    background: var(--card-bg, #fff);
+    color: var(--text-primary);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    width: min(480px, 92%);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    text-align: left;
+}
+.export-options { display:flex; gap:12px; margin-top: 0.75rem; }
+.export-options .gh-btn { flex:1; }
+.export-close { margin-top: 12px; background: transparent; border: none; color: var(--text-secondary); cursor: pointer; }
+
+/* Toast styles */
+.toast-container { position: fixed; right: 20px; bottom: 80px; z-index: 13000; display:flex; flex-direction: column; gap: 8px; }
+.toast { background: rgba(0,0,0,0.8); color: #fff; padding: 10px 14px; border-radius: 8px; min-width: 200px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); opacity: 0; transform: translateY(8px); transition: opacity 0.25s ease, transform 0.28s ease; }
+.toast.show { opacity: 1; transform: translateY(0); }
+html[data-theme="light"] .toast { background: rgba(255,255,255,0.95); color: var(--text-primary); border: 1px solid rgba(0,0,0,0.06); }
+
+/* Export progress UI */
+.export-progress { margin-top: 12px; width: 100%; background: rgba(0,0,0,0.06); border-radius: 8px; overflow: hidden; position: relative; height: 12px; }
+.export-progress-bar { height: 100%; background: linear-gradient(90deg, var(--bude-primary), var(--bude-purple)); width: 0%; transition: width 0.25s ease; }
+.export-progress-label { margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary); }
+html[data-theme="light"] .export-progress { background: rgba(0,0,0,0.04); }
+
+/* small adjustments for export modal buttons */
+.export-close { font-size: 0.95rem; }
+.gh-btn[disabled] { opacity: 0.6; pointer-events: none; }
 
 @media (max-width: 480px) {
     .header h1 {

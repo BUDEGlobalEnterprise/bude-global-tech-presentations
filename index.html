@@ -74,6 +74,10 @@
                 <i class="ri-moon-line"></i>
             </button>
 
+            <button id="export-pdf" class="gh-btn stat-btn" title="Export current slide to PDF" aria-label="Export slide to PDF">
+                <i class="ri-download-2-line"></i>
+            </button>
+
             <a id="fork-btn" class="gh-btn gh-fork" target="_blank" rel="noopener noreferrer"
                 href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/fork">
                 <i class="ri-git-branch-fill"></i> Fork This Repo
@@ -145,11 +149,39 @@
         <p>© 2025 Bude Global Enterprise — Built with ❤️ for Open Collaboration</p>
     </footer>
 
+    <!-- Export modal -->
+    <div id="export-modal" class="export-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="export-modal-content">
+            <h3>Export Slides</h3>
+            <p>Select an export option:</p>
+            <div class="export-options">
+                <button id="export-current" class="gh-btn">Export Current Slide</button>
+                <button id="export-deck" class="gh-btn">Export Whole Deck (Print-PDF)</button>
+                <button id="export-deck-auto" class="gh-btn">Export Whole Deck (Auto)</button>
+            </div>
+            <div class="export-progress" id="export-progress" aria-hidden="true">
+                <div class="export-progress-bar" id="export-progress-bar" style="width:0%"></div>
+                <div class="export-progress-label" id="export-progress-label">Ready</div>
+            </div>
+            <div style="display:flex; gap:8px; margin-top:12px;">
+                <button id="export-cancel" class="gh-btn" style="display:none;">Cancel</button>
+                <button id="export-close" class="export-close" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"></script>
     <script src="theme-switcher.js"></script>
     <script src="presentations.js"></script>
     <script src="github-live.js"></script>
     <script src="presenter.js"></script>
+    <!-- html2canvas and jsPDF for exporting slides to PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="export-slide.js"></script>
     <script src="loader.js"></script>
 </body>
 
