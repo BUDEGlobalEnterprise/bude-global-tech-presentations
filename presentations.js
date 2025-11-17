@@ -40,7 +40,7 @@ const PRESENTATIONS_CONFIG = [
     category: ["devops", "tools"],
     difficulty: "beginner"
   },
-  
+
   // ============= PROGRAMMING LANGUAGES (BEGINNER TO INTERMEDIATE) =============
   {
     file: "presentations/intro-python.json",
@@ -239,7 +239,15 @@ const PRESENTATIONS_CONFIG = [
     keywords: ["frappe", "framework", "python", "erpnext", "web", "fullstack", "metadata"],
     category: ["backend", "business"],
     difficulty: "advanced"
+  }, 
+  {
+    file: "presentations/intro-ionic.json",
+    title: "Ionic – Hybrid Mobile App Development Framework",
+    description: "A cross-platform mobile development framework built on web technologies, enabling developers to create iOS, Android, and web apps using HTML, CSS, and JavaScript with seamless integration into Angular, React, and Vue.",
+    keywords: ["ionic", "mobile-development", "hybrid-apps", "capacitor", "angular", "react", "vue", "cross-platform", "javascript", "typescript"],
+    category: ["mobile", "frontend", "cross-platform"]
   },
+
 
   // ============= DEVOPS & INFRASTRUCTURE (INTERMEDIATE TO ADVANCED) =============
   {
