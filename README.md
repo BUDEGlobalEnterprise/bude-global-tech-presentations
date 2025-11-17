@@ -12,7 +12,7 @@
 
 [View Demo](https://budeglobalenterprise.github.io/bude-global-tech-presentations) • [Report Bug](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues) • [Request Feature](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues)
 
-</div>
+
 
 
 <p align="center">
@@ -21,8 +21,10 @@
   <img src="assets/images/Aravind_GooglePay_QR.png" width="250" />
 </p>
 
+### Sponsors
 
----
+Become a sponsor and get your logo on our README on GitHub with a link to your site.
+</div>
 
 ## 🌟 Overview
 
