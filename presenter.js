@@ -1623,14 +1623,27 @@ function createComparisonSlide(slideData) {
 }
 
 function createImageTextSlide(slideData) {
-    return `
-        <h3>${slideData.title || ''}</h3>
-        <div class="image-text-container ${slideData.layout === 'right-image' ? 'right-image' : ''}">
-            <div class="text-content">${slideData.content}</div>
+    const imageHtml = `
             <div class="image-content">
                 <img src="${slideData.image}" alt="${slideData.imageAlt || ''}">
                 ${slideData.caption ? `<p class="image-caption">${slideData.caption}</p>` : ''}
-            </div>
+            </div>`;
+    const textHtml = `<div class="text-content">${slideData.content}</div>`;
+
+    let contentHtml;
+
+    if (slideData.layout === 'right-image') {
+        // For right-image layout, text comes first
+        contentHtml = textHtml + imageHtml;
+    } else {
+        // Default to image on the left, so image comes first
+        contentHtml = imageHtml + textHtml;
+    }
+
+    return `
+        <h3>${slideData.title || ''}</h3>
+        <div class="image-text-container">
+            ${contentHtml}
         </div>
     `;
 }
