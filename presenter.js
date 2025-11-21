@@ -1547,7 +1547,8 @@ function createSlide(slideData) {
 
         case 'chart':
             section.innerHTML = createChartSlide(slideData);
-            setTimeout(() => renderChart(slideData), 100);
+            // Store chart data for later rendering
+            section._chartData = slideData;
             break;
 
         case 'diagram':
@@ -1734,81 +1735,141 @@ window.handleQuizAnswer = function(quizId, selectedIndex) {
 // ============================================================================
 
 function renderChart(slideData) {
-    const canvas = document.querySelector(`canvas[data-chart-type="${slideData.chartType}"]`);
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    const labels = slideData.labels;
-    const data = slideData.data;
+    // Wait for canvas to be properly rendered
+    setTimeout(() => {
+        const canvas = document.querySelector(`canvas[data-chart-type="${slideData.chartType}"]`);
+        if (!canvas) {
+            console.warn('Chart canvas not found');
+            return;
+        }
+        
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+            console.warn('Could not get canvas context');
+            return;
+        }
+        
+        const labels = slideData.labels;
+        const data = slideData.data;
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = 400;
-    
-    const padding = 40;
-    const chartWidth = canvas.width - padding * 2;
-    const chartHeight = canvas.height - padding * 2;
-    const colors = ['#0060a0', '#6f42c1', '#cb6ce6', '#23a6d5', '#23d5ab'];
+        // Ensure canvas has proper dimensions
+        const containerWidth = canvas.parentElement.offsetWidth;
+        const containerHeight = 400;
+        
+        if (containerWidth <= 0 || containerHeight <= 0) {
+            console.warn('Invalid canvas dimensions');
+            return;
+        }
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = '14px Arial';
+        canvas.width = Math.max(containerWidth, 300);
+        canvas.height = containerHeight;
+        
+        const padding = 40;
+        const chartWidth = Math.max(canvas.width - padding * 2, 100);
+        const chartHeight = Math.max(canvas.height - padding * 2, 100);
+        const colors = ['#0060a0', '#6f42c1', '#cb6ce6', '#23a6d5', '#23d5ab'];
 
-    if (slideData.chartType === 'bar') {
-        const maxValue = Math.max(...data);
-        const barWidth = chartWidth / labels.length - 10;
-        data.forEach((value, index) => {
-            const barHeight = (value / maxValue) * chartHeight;
-            const x = padding + index * (barWidth + 10);
-            const y = padding + chartHeight - barHeight;
-            ctx.fillStyle = colors[index % colors.length];
-            ctx.fillRect(x, y, barWidth, barHeight);
-            ctx.fillStyle = '#333';
-            ctx.textAlign = 'center';
-            ctx.fillText(labels[index], x + barWidth / 2, padding + chartHeight + 20);
-            ctx.fillText(value.toString(), x + barWidth / 2, y - 5);
-        });
-    } else if (slideData.chartType === 'line') {
-        const maxValue = Math.max(...data);
-        const stepX = chartWidth / (labels.length - 1);
-        ctx.strokeStyle = '#0060a0';
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        data.forEach((value, index) => {
-            const x = padding + index * stepX;
-            const y = padding + chartHeight - (value / maxValue) * chartHeight;
-            index === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        });
-        ctx.stroke();
-        data.forEach((value, index) => {
-            const x = padding + index * stepX;
-            const y = padding + chartHeight - (value / maxValue) * chartHeight;
-            ctx.beginPath();
-            ctx.arc(x, y, 5, 0, Math.PI * 2);
-            ctx.fillStyle = '#6f42c1';
-            ctx.fill();
-            ctx.fillStyle = '#333';
-            ctx.fillText(labels[index], x, padding + chartHeight + 20);
-            ctx.fillText(value.toString(), x, y - 10);
-        });
-    } else if (slideData.chartType === 'pie') {
-        const total = data.reduce((a, b) => a + b, 0);
-        let startAngle = -Math.PI / 2;
-        const centerX = canvas.width / 2, centerY = canvas.height / 2;
-        const radius = Math.min(canvas.width, canvas.height) / 2 - 40;
-        data.forEach((value, index) => {
-            const sliceAngle = (value / total) * Math.PI * 2;
-            ctx.fillStyle = colors[index % colors.length];
-            ctx.beginPath();
-            ctx.moveTo(centerX, centerY);
-            ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
-            ctx.fill();
-            const mid = startAngle + sliceAngle / 2;
-            const lx = centerX + Math.cos(mid) * (radius + 20);
-            const ly = centerY + Math.sin(mid) * (radius + 20);
-            ctx.fillStyle = '#333';
-            ctx.fillText(`${labels[index]}: ${value}`, lx, ly);
-            startAngle += sliceAngle;
-        });
-    }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.font = '14px Arial';
+
+        try {
+            if (slideData.chartType === 'bar') {
+                const maxValue = Math.max(...data, 1); // Ensure at least 1
+                const barWidth = Math.max((chartWidth / labels.length) - 10, 20);
+                
+                data.forEach((value, index) => {
+                    const barHeight = Math.max((value / maxValue) * chartHeight, 0);
+                    const x = padding + index * (barWidth + 10);
+                    const y = padding + chartHeight - barHeight;
+                    
+                    ctx.fillStyle = colors[index % colors.length];
+                    ctx.fillRect(x, y, barWidth, barHeight);
+                    
+                    ctx.fillStyle = '#333';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(labels[index], x + barWidth / 2, padding + chartHeight + 20);
+                    ctx.fillText(value.toString(), x + barWidth / 2, y - 5);
+                });
+                
+            } else if (slideData.chartType === 'line') {
+                const maxValue = Math.max(...data, 1);
+                const stepX = labels.length > 1 ? chartWidth / (labels.length - 1) : chartWidth;
+                
+                ctx.strokeStyle = '#0060a0';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                
+                data.forEach((value, index) => {
+                    const x = padding + index * stepX;
+                    const y = padding + chartHeight - ((value / maxValue) * chartHeight);
+                    index === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                });
+                
+                ctx.stroke();
+                
+                // Draw points
+                data.forEach((value, index) => {
+                    const x = padding + index * stepX;
+                    const y = padding + chartHeight - ((value / maxValue) * chartHeight);
+                    
+                    ctx.beginPath();
+                    ctx.arc(x, y, 5, 0, Math.PI * 2);
+                    ctx.fillStyle = '#6f42c1';
+                    ctx.fill();
+                    
+                    ctx.fillStyle = '#333';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(labels[index], x, padding + chartHeight + 20);
+                    ctx.fillText(value.toString(), x, y - 10);
+                });
+                
+            } else if (slideData.chartType === 'pie') {
+                const total = data.reduce((a, b) => a + b, 0);
+                if (total <= 0) {
+                    console.warn('Pie chart total is zero or negative');
+                    return;
+                }
+                
+                let startAngle = -Math.PI / 2;
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                
+                // Calculate radius with safety checks
+                const maxRadius = Math.min(canvas.width, canvas.height) / 2 - 60;
+                const radius = Math.max(maxRadius, 50); // Ensure minimum radius of 50
+                
+                if (radius < 0) {
+                    console.warn('Calculated negative radius, using minimum');
+                    return;
+                }
+                
+                data.forEach((value, index) => {
+                    const sliceAngle = (value / total) * Math.PI * 2;
+                    
+                    ctx.fillStyle = colors[index % colors.length];
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+                    ctx.closePath();
+                    ctx.fill();
+                    
+                    // Label positioning
+                    const mid = startAngle + sliceAngle / 2;
+                    const labelRadius = radius + 30;
+                    const lx = centerX + Math.cos(mid) * labelRadius;
+                    const ly = centerY + Math.sin(mid) * labelRadius;
+                    
+                    ctx.fillStyle = '#333';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`${labels[index]}: ${value}`, lx, ly);
+                    
+                    startAngle += sliceAngle;
+                });
+            }
+        } catch (error) {
+            console.error('Error rendering chart:', error);
+        }
+    }, 200); // Increased delay to ensure proper rendering
 }
 
 // ============================================================================
