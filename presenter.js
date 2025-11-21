@@ -1414,12 +1414,18 @@ async function renderSlides(data) {
             
             const section = createSlide(slide);
             slidesContainer.appendChild(section);
-
-            if (slide.type === 'chart') {
-                setTimeout(() => renderChart(slide), 500);
-            }
         });
     });
+
+    // Render all charts after slides are added
+    setTimeout(() => {
+        const chartSlides = document.querySelectorAll('.reveal .slides section');
+        chartSlides.forEach(slide => {
+            if (slide._chartData) {
+                renderChart(slide._chartData);
+            }
+        });
+    }, 800);
 
     // Reveal.js Configuration
     const revealConfig = {
@@ -1749,24 +1755,30 @@ function renderChart(slideData) {
             return;
         }
         
-        const labels = slideData.labels;
-        const data = slideData.data;
-
-        // Ensure canvas has proper dimensions
-        const containerWidth = canvas.parentElement.offsetWidth;
-        const containerHeight = 400;
+        const labels = slideData.labels || [];
+        const data = slideData.data || [];
         
-        if (containerWidth <= 0 || containerHeight <= 0) {
-            console.warn('Invalid canvas dimensions');
+        if (labels.length === 0 || data.length === 0) {
+            console.warn('No data to render');
             return;
         }
 
-        canvas.width = Math.max(containerWidth, 300);
+        // Ensure canvas has proper dimensions
+        const containerWidth = canvas.parentElement ? canvas.parentElement.offsetWidth : 800;
+        const containerHeight = 400;
+        
+        if (containerWidth <= 0 || containerHeight <= 0) {
+            console.warn('Invalid canvas dimensions, retrying...');
+            setTimeout(() => renderChart(slideData), 500);
+            return;
+        }
+
+        canvas.width = Math.max(containerWidth, 400);
         canvas.height = containerHeight;
         
-        const padding = 40;
-        const chartWidth = Math.max(canvas.width - padding * 2, 100);
-        const chartHeight = Math.max(canvas.height - padding * 2, 100);
+        const padding = 50;
+        const chartWidth = Math.max(canvas.width - padding * 2, 200);
+        const chartHeight = Math.max(canvas.height - padding * 2, 200);
         const colors = ['#0060a0', '#6f42c1', '#cb6ce6', '#23a6d5', '#23d5ab'];
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1787,22 +1799,29 @@ function renderChart(slideData) {
                     
                     ctx.fillStyle = '#333';
                     ctx.textAlign = 'center';
-                    ctx.fillText(labels[index], x + barWidth / 2, padding + chartHeight + 20);
-                    ctx.fillText(value.toString(), x + barWidth / 2, y - 5);
+                    ctx.fillText(labels[index] || '', x + barWidth / 2, padding + chartHeight + 20);
+                    ctx.fillText(value.toString(), x + barWidth / 2, Math.max(y - 5, padding + 10));
                 });
                 
             } else if (slideData.chartType === 'line') {
                 const maxValue = Math.max(...data, 1);
-                const stepX = labels.length > 1 ? chartWidth / (labels.length - 1) : chartWidth;
+                const stepX = labels.length > 1 ? chartWidth / (labels.length - 1) : chartWidth / 2;
                 
                 ctx.strokeStyle = '#0060a0';
                 ctx.lineWidth = 3;
                 ctx.beginPath();
                 
+                let started = false;
                 data.forEach((value, index) => {
                     const x = padding + index * stepX;
                     const y = padding + chartHeight - ((value / maxValue) * chartHeight);
-                    index === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                    
+                    if (!started) {
+                        ctx.moveTo(x, y);
+                        started = true;
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
                 });
                 
                 ctx.stroke();
@@ -1812,21 +1831,28 @@ function renderChart(slideData) {
                     const x = padding + index * stepX;
                     const y = padding + chartHeight - ((value / maxValue) * chartHeight);
                     
-                    ctx.beginPath();
-                    ctx.arc(x, y, 5, 0, Math.PI * 2);
-                    ctx.fillStyle = '#6f42c1';
-                    ctx.fill();
+                    // CRITICAL: Ensure radius is always positive
+                    const pointRadius = 5;
+                    if (pointRadius > 0) {
+                        ctx.beginPath();
+                        ctx.arc(x, y, pointRadius, 0, Math.PI * 2);
+                        ctx.fillStyle = '#6f42c1';
+                        ctx.fill();
+                    }
                     
                     ctx.fillStyle = '#333';
                     ctx.textAlign = 'center';
-                    ctx.fillText(labels[index], x, padding + chartHeight + 20);
-                    ctx.fillText(value.toString(), x, y - 10);
+                    ctx.fillText(labels[index] || '', x, padding + chartHeight + 20);
+                    ctx.fillText(value.toString(), x, Math.max(y - 10, padding + 10));
                 });
                 
             } else if (slideData.chartType === 'pie') {
                 const total = data.reduce((a, b) => a + b, 0);
                 if (total <= 0) {
                     console.warn('Pie chart total is zero or negative');
+                    ctx.fillStyle = '#333';
+                    ctx.textAlign = 'center';
+                    ctx.fillText('No data to display', canvas.width / 2, canvas.height / 2);
                     return;
                 }
                 
@@ -1834,14 +1860,26 @@ function renderChart(slideData) {
                 const centerX = canvas.width / 2;
                 const centerY = canvas.height / 2;
                 
-                // Calculate radius with safety checks
-                const maxRadius = Math.min(canvas.width, canvas.height) / 2 - 60;
-                const radius = Math.max(maxRadius, 50); // Ensure minimum radius of 50
+                // CRITICAL: Calculate radius with absolute safety
+                const availableWidth = canvas.width - (padding * 2);
+                const availableHeight = canvas.height - (padding * 2);
+                const minDimension = Math.min(availableWidth, availableHeight);
                 
-                if (radius < 0) {
-                    console.warn('Calculated negative radius, using minimum');
-                    return;
+                // Ensure radius is ALWAYS positive and reasonable
+                let radius = (minDimension / 2) - 40;
+                
+                // Absolute minimum radius
+                if (radius < 50) {
+                    radius = 50;
                 }
+                
+                // Double-check it's positive
+                if (radius <= 0 || !isFinite(radius)) {
+                    console.error('Invalid radius calculation:', radius);
+                    radius = 100; // Fallback to safe value
+                }
+                
+                console.log('Pie chart radius:', radius, 'Canvas:', canvas.width, 'x', canvas.height);
                 
                 data.forEach((value, index) => {
                     const sliceAngle = (value / total) * Math.PI * 2;
@@ -1849,7 +1887,20 @@ function renderChart(slideData) {
                     ctx.fillStyle = colors[index % colors.length];
                     ctx.beginPath();
                     ctx.moveTo(centerX, centerY);
-                    ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+                    
+                    // CRITICAL: Only call arc if radius is definitely positive
+                    if (radius > 0 && isFinite(radius) && isFinite(startAngle) && isFinite(sliceAngle)) {
+                        try {
+                            ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+                        } catch (arcError) {
+                            console.error('Arc error:', arcError, 'Radius:', radius);
+                            return; // Skip this slice
+                        }
+                    } else {
+                        console.error('Invalid arc parameters:', { radius, startAngle, sliceAngle });
+                        return;
+                    }
+                    
                     ctx.closePath();
                     ctx.fill();
                     
@@ -1861,15 +1912,24 @@ function renderChart(slideData) {
                     
                     ctx.fillStyle = '#333';
                     ctx.textAlign = 'center';
-                    ctx.fillText(`${labels[index]}: ${value}`, lx, ly);
+                    ctx.fillText(`${labels[index] || 'Item'}: ${value}`, lx, ly);
                     
                     startAngle += sliceAngle;
                 });
             }
         } catch (error) {
             console.error('Error rendering chart:', error);
+            console.error('Chart data:', slideData);
+            
+            // Display error message on canvas
+            ctx.fillStyle = '#f44336';
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 16px Arial';
+            ctx.fillText('Error rendering chart', canvas.width / 2, canvas.height / 2);
+            ctx.font = '12px Arial';
+            ctx.fillText('Check console for details', canvas.width / 2, canvas.height / 2 + 20);
         }
-    }, 200); // Increased delay to ensure proper rendering
+    }, 300); // Increased delay for safety
 }
 
 // ============================================================================
