@@ -225,6 +225,14 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "intermediate"
   },
   {
+    file: 'presentations/intro-expressjs.json',
+    title: 'Express.js Deep Dive',
+    description: 'Node.js web framework - middleware, routing, and REST API development',
+    keywords: ['express', 'nodejs', 'javascript', 'api', 'middleware', 'routing', 'rest', 'backend', 'web-framework'],
+    category: ["backend"],
+    difficulty: "intermediate"
+  },
+  {
     file: "presentations/intro-rest-api-swagger.json",
     title: "REST API & Swagger/OpenAPI",
     description: "Complete guide to REST API design principles and OpenAPI documentation",
