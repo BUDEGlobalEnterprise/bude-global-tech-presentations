@@ -232,57 +232,7 @@
           }
         ]
       },
-      {
-        "id": "chart-examples",
-        "title": "Data Visualization",
-        "slides": [
-          {
-            "type": "topic-title",
-            "title": "Chart Examples",
-            "subtitle": "Visualizing data for better insights"
-          },
-          {
-            "type": "chart",
-            "title": "Frontend Framework Adoption 2024",
-            "chartType": "bar",
-            "labels": ["React", "Vue", "Angular", "Svelte", "Solid"],
-            "data": [78, 45, 32, 18, 12],
-            "note": {
-              "text": "Based on State of JS 2024 survey results - percentage of developers using each framework"
-            }
-          },
-          {
-            "type": "chart",
-            "title": "Monthly Active Users Growth",
-            "chartType": "line",
-            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-            "data": [1200, 1900, 2500, 3100, 4200, 5300, 6800, 8200],
-            "note": {
-              "text": "Consistent 30% month-over-month growth demonstrates product-market fit"
-            }
-          },
-          {
-            "type": "chart",
-            "title": "Browser Market Share Distribution",
-            "chartType": "pie",
-            "labels": ["Chrome", "Safari", "Firefox", "Edge", "Others"],
-            "data": [65, 18, 9, 5, 3],
-            "note": {
-              "text": "Chrome dominates with 65% market share as of Q3 2024"
-            }
-          },
-          {
-            "type": "chart",
-            "title": "Programming Language Popularity",
-            "chartType": "bar",
-            "labels": ["JavaScript", "Python", "Java", "C#", "PHP", "Go"],
-            "data": [67, 54, 48, 35, 28, 22],
-            "note": {
-              "text": "JavaScript remains most popular due to web dominance and Node.js adoption"
-            }
-          }
-        ]
-      },
+      
       {
         "id": "diagram-examples",
         "title": "Diagrams",

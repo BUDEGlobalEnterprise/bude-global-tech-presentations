@@ -17,6 +17,22 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "beginner"
   },
   {
+    file: "templates/tamil-movie-quiz.json",
+    title: "Tamil Movie Challenge",
+    description: "Hard-Level Post-2015 Movie Quizzes - Can You Guess Them All?",
+    keywords: ["quiz", "tamil", "movies", "challenge", "fun"],
+    category: ["Movie", "Games"],
+    difficulty: "beginner"
+  },
+  {
+    file: "templates/ERPNext-Solutions-Catalog.json",
+    title: "ERPNext Solutions Catalog",
+    description: "Transforming Open-Source Flexibility into Enterprise-Grade Reliability",
+    keywords: ["erpnext", "business", "enterprise", "solutions", "catalog"],
+    category: ["business", "enterprise"],
+    difficulty: "beginner"
+  },
+  {
     file: "presentations/intro-oss.json",
     title: "Introduction to Open Source",
     description: "Learn the fundamentals of open source software, from licensing to contributing",
