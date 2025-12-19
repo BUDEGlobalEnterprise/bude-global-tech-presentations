@@ -1,0 +1,33 @@
+{
+  "title": "DevOps – CI/CD",
+  "description": "An introduction to CI/CD pipelines",
+  "category": "devops",
+  "keywords": ["devops", "ci/cd", "automation"],
+  "presenter": {
+    "name": "Raj Patil",
+    "github": "Raj-glitch-max",
+    "bio": "B.Tech Student, Learning DevOps"
+  },
+  "slides": [
+    {
+      "id": 1,
+      "title": "DevOps – CI/CD",
+      "subtitle": "Continuous Integration & Deployment",
+      "type": "title"
+    },
+    {
+      "id": 2,
+      "title": "What is CI/CD?",
+      "bullets": [
+        "CI: Automatically test code changes",
+        "CD: Automatically deploy to production",
+        "Reduces manual errors and speeds up releases"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pipeline Stages",
+      "codeExample": "stages:\n  - build\n  - test\n  - deploy"
+    }
+  ]
+}
