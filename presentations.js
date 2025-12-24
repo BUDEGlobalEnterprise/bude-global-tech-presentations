@@ -389,5 +389,13 @@ const PRESENTATIONS_CONFIG = [
     keywords: ["keycloak", "iam", "identity", "access management", "sso", "oauth2", "oidc"],
     category: ["security"],
     difficulty: "advanced"
+  },
+  {
+  file: "presentations/devops-cicd.json",
+  title: "DevOps – CI/CD",
+  description: "Comprehensive introduction to Continuous Integration and Continuous Deployment pipelines, tools, and best practices",
+  keywords: ["devops", "ci/cd", "jenkins", "github-actions", "gitlab-ci", "argo-cd", "automation", "deployment", "pipeline"],
+  category: ["devops", "backend"],
+  difficulty: "beginner"
   }
 ];
