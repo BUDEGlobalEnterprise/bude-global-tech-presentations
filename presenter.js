@@ -1481,10 +1481,11 @@ async function renderSlides(data) {
             switchAnimationMode(slideData._animationMode);
         }
 
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
-        createParticleEffect(centerX, centerY);
-        createRipple(centerX, centerY);
+        // Disabled: Circle animation on slide change
+        // const centerX = window.innerWidth / 2;
+        // const centerY = window.innerHeight / 2;
+        // createParticleEffect(centerX, centerY);
+        // createRipple(centerX, centerY);
     });
 
     const initialSlide = document.querySelector('.reveal .slides section.present');
