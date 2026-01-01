@@ -283,6 +283,84 @@ html[data-theme="dark"] .stat-card {
   margin-top: 0.3rem;
 }
 
+/* ============================================
+   HEADER ANALYTICS - Inline Stats Display
+   ============================================ */
+
+.header-analytics {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="light"] .header-analytics {
+  border-left-color: rgba(0, 0, 0, 0.15);
+}
+
+.analytics-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.analytics-stat i {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.analytics-stat span {
+  font-weight: 600;
+  font-family: 'Molot', sans-serif;
+  font-size: 1rem;
+}
+
+.analytics-stat:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Pulse animation for active users */
+.analytics-stat.pulse-stat {
+  animation: statPulse 2s ease-in-out infinite;
+}
+
+@keyframes statPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.analytics-stat.pulse-stat i {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive - hide on smaller screens */
+@media (max-width: 1200px) {
+  .header-analytics {
+    display: none;
+  }
+}
+
+
 /* Categories Container */
 .categories-container {
   max-width: 1400px;
@@ -1701,3 +1779,19 @@ html[data-theme="light"] .stat-btn {
   outline: 3px solid var(--bude-pink);
   outline-offset: 2px;
 }
+
+/* ============================================
+   PRESENTATION MODE - Hide Gallery
+   ============================================ */
+/* Hide the main selector UI (gallery) when in presentation mode
+   to prevent infinite scroll loader from appearing on slides */
+body.presentation-mode #main-selector-ui {
+  display: none !important;
+}
+
+/* Reduce spacing between header and slides in presentation mode
+   Reveal.js centers slides in full viewport, creating excessive gap with sticky header */
+body.presentation-mode .reveal .slides {
+  margin-top: -80px !important;
+}
+

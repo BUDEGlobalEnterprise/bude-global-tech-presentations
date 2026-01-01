@@ -556,6 +556,11 @@ async function loadPresentation(file) {
         return;
     }
 
+    // Track presentation view for analytics
+    if (typeof trackPresentationView === 'function') {
+        trackPresentationView(file);
+    }
+
     try {
         // Fetch JSON only now (on-demand)
         const response = await fetch(file);

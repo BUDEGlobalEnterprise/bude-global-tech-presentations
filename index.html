@@ -8,6 +8,17 @@
       Bude Global Tech Presentations | Dynamic, Open-Source Knowledge Platform
     </title>
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3CFPLC20M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W3CFPLC20M', {
+        'send_page_view': true
+      });
+    </script>
+
     <meta
       name="description"
       content="Explore Bude Global's open-source platform for technical presentations. Dynamically loads content from JSON, features intelligent search, and uses Reveal.js for knowledge sharing."
@@ -50,20 +61,24 @@
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" 
           content="default-src 'self'; 
-                   script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; 
+                   script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com 'unsafe-inline'; 
                    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
                    img-src 'self' https: data:; 
                    font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net data:; 
-                   connect-src 'self' https://api.github.com;" />
+                   connect-src 'self' https://api.github.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com;" />
 
     <!-- Performance: Preconnect to CDNs for faster resource loading -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://api.github.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     
     <!-- Performance: DNS prefetch for faster resolution -->
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Critical CSS first -->
     <link rel="stylesheet" href="style.css" />
@@ -152,6 +167,22 @@
             <i class="ri-restart-line"></i
             ><span class="stat-value" id="fork-count">—</span>
           </a>
+
+          <!-- Analytics Stats (inline) -->
+          <div class="header-analytics" aria-live="polite">
+            <span class="analytics-stat" title="Today's Visitors">
+              <i class="ri-user-line"></i>
+              <span id="today-visitors">0</span>
+            </span>
+            <span class="analytics-stat" title="Total Visits">
+              <i class="ri-eye-line"></i>
+              <span id="total-visits">0</span>
+            </span>
+            <span class="analytics-stat pulse-stat" title="Active Now">
+              <i class="ri-user-follow-line"></i>
+              <span id="active-users">0</span>
+            </span>
+          </div>
         </div>
 
         <button
@@ -217,6 +248,7 @@
           <div class="stat-label">Active Categories</div>
         </div>
       </div>
+
 
       <div class="categories-container" id="categories-container">
         <div class="loading">🔍 Loading presentations...</div>
@@ -300,6 +332,7 @@
     
     <!-- Defer non-critical scripts for faster initial paint -->
     <script src="theme-switcher.js" defer></script>
+    <script src="analytics.js" defer></script>
     <script src="presentations.js" defer></script>
     <script src="github-live.js" defer></script>
     <script src="presenter.js" defer></script>
