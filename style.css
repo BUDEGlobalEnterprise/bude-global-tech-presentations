@@ -1404,9 +1404,8 @@ html[data-theme="dark"] .gradient-bg {
   background: linear-gradient(145deg, #1e1e2e 0%, #2d2d44 100%);
   padding: 1.5rem 2rem;
   border-radius: 12px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  max-height: none;
+  overflow: hidden;
+  height: 400px;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 18px;
   line-height: 1.7;
@@ -1422,10 +1421,7 @@ html[data-theme="dark"] .gradient-bg {
   column-count: 2;
   column-gap: 3em;
   column-rule: 2px solid rgba(111, 66, 193, 0.3);
-}
-  /* Hide scrollbar but keep functionality */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  column-fill: auto;
 }
 
 /* Hide scrollbar for Chrome, Safari, Opera */
@@ -1473,8 +1469,8 @@ html[data-theme="dark"] .code-block pre {
   font-size: 18px;
   width: 100% !important;
   box-sizing: border-box !important;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+  height: 400px;
   white-space: pre-wrap;
   word-wrap: break-word;
   color: #e0e0e0;
@@ -1484,6 +1480,7 @@ html[data-theme="dark"] .code-block pre {
   column-count: 2;
   column-gap: 3em;
   column-rule: 2px solid rgba(111, 66, 193, 0.3);
+  column-fill: auto;
 }
 
 html[data-theme="light"] .reveal pre {

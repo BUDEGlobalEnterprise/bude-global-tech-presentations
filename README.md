@@ -688,7 +688,8 @@ Special thanks to:
 
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/discussions)
-- 📧 **Email**: budeglobalerp@gmail.com
+- � **WhatsApp Community**: [Join our WhatsApp Group](https://chat.whatsapp.com/BIrcLvcEAJrB23WlUUbkuC)
+- �📧 **Email**: budeglobalerp@gmail.com
 
 ---
 
