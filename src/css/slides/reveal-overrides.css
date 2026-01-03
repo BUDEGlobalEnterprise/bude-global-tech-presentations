@@ -58,11 +58,11 @@
 .reveal p {
   font-size: 1.2em;
   color: var(--text-primary);
-  text-align: center;
+  text-align: left;
 }
 
 .reveal .slides section {
-  text-align: center;
+  text-align: left;
   padding: 40px 80px !important;
   background-color: transparent;
   line-height: 1.6;
@@ -71,8 +71,9 @@
   -moz-osx-font-smoothing: grayscale;
   border-radius: 16px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
+  width: 80% !important;
+  max-width: 80% !important;
+  overflow-x: hidden !important;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -99,8 +100,8 @@ body.hide-watermark::before {
 }
 
 .reveal .slides section.present {
-  overflow-y: auto !important;
-  max-height: 720px !important;
+  overflow-y: auto;
+  max-height: 720px;
   animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -116,10 +117,10 @@ body.hide-watermark::before {
 .reveal ul {
   margin-left: 0;
   color: var(--text-primary);
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: disc;
-  padding-left: 0;
-  text-align: center;
+  padding-left: 2em;
+  text-align: left;
 }
 
 .reveal li {
@@ -159,9 +160,13 @@ code {
   padding: 0.5em 0.9em;
   border-radius: 6px;
   color: var(--bude-purple);
-  font-size: 1.6em;
-  font-family: \"Courier New\", monospace;
+  font-size: 0.9em;
+  font-family: "Courier New", monospace;
   font-weight: 600;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+  overflow-x: hidden;
 }
 
 html[data-theme=\"dark\"] code {

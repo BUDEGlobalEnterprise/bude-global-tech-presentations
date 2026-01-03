@@ -1027,17 +1027,19 @@ html[data-theme="light"] footer p {
 
 .reveal .slides section {
   text-align: left;
-  padding: 60px 60px 100px 60px !important;
+  padding: 40px 50px !important;
   background-color: transparent;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0 auto;
-  max-width: 95%;
+  width: 90% !important;
+  max-width: 90% !important;
+  overflow-x: hidden !important;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1064,8 +1066,9 @@ body.hide-watermark::before {
 }
 
 .reveal .slides section.present {
-  overflow-y: auto !important;
-  max-height: 720px !important;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  max-height: 720px;
   animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1131,21 +1134,29 @@ body.hide-watermark::before {
 }
 
 code {
-  background: rgba(0, 96, 160, 0.1);
-  padding: 0.4em 0.8em;
-  border-radius: 4px;
-  color: var(--bude-purple);
-  font-size: 50px !important;
-  font-family: "Courier New", monospace;
-  font-weight: 600;
+  background: linear-gradient(135deg, rgba(0, 96, 160, 0.12) 0%, rgba(111, 66, 193, 0.08) 100%);
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+  color: #6f42c1;
+  font-size: 1.1em;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-weight: 500;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  border: 1px solid rgba(111, 66, 193, 0.15);
 }
 
 html[data-theme="dark"] code {
-  background: rgba(111, 66, 193, 0.2);
+  background: linear-gradient(135deg, rgba(111, 66, 193, 0.25) 0%, rgba(203, 108, 230, 0.15) 100%);
+  color: #cb6ce6;
+  border-color: rgba(203, 108, 230, 0.25);
 }
 
 html[data-theme="light"] code {
-  background: rgba(0, 96, 160, 0.12);
+  background: linear-gradient(135deg, rgba(0, 96, 160, 0.1) 0%, rgba(111, 66, 193, 0.06) 100%);
+  color: #5a32a3;
+  border-color: rgba(0, 96, 160, 0.15);
 }
 
 .reveal a {
@@ -1213,49 +1224,197 @@ html[data-theme="dark"] .gradient-bg {
 
 /* Code block improvements for slides */
 .code-block {
-  margin-top: 1em;
+  margin: 1.5em 0;
   width: 100%;
+  max-width: 100%;
 }
 
 .code-block pre {
-  background: rgba(0, 0, 0, 0.06);
-  padding: 2rem;
+  background: linear-gradient(145deg, #1e1e2e 0%, #2d2d44 100%);
+  padding: 1.5rem 2rem;
   border-radius: 12px;
-  overflow: auto;
-  max-height: 65vh;
-  font-family: "Courier New", monospace;
-  font-size: 60px !important;
-  line-height: 1.6;
-  color: var(--text-primary);
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 55vh;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #e0e0e0;
   width: 100%;
-  min-height: 200px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  border: 1px solid rgba(111, 66, 193, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="light"] .code-block pre {
+  background: linear-gradient(145deg, #f5f5f7 0%, #e8e8ed 100%);
+  color: #1a1a2e;
+  border-color: rgba(0, 96, 160, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 html[data-theme="dark"] .code-block pre {
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text-primary);
+  background: linear-gradient(145deg, #1a1a2e 0%, #252540 100%);
+  color: #e8eef7;
+  border-color: rgba(111, 66, 193, 0.35);
 }
 
 .code-block pre,
 .code-block pre code {
-  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
   tab-size: 4;
-  font-size: 60px !important;
-  line-height: 1.6 !important;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /* Additional overrides for all code elements in presentations */
 .reveal pre code,
 .reveal code {
-  font-size: 55px !important;
-  line-height: 1.5 !important;
+  font-size: 18px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .reveal pre {
-  font-size: 60px !important;
+  background: linear-gradient(145deg, #1e1e2e 0%, #2d2d44 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 18px;
   width: 100% !important;
   box-sizing: border-box !important;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #e0e0e0;
+  border: 1px solid rgba(111, 66, 193, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
+
+html[data-theme="light"] .reveal pre {
+  background: linear-gradient(145deg, #f5f5f7 0%, #e8e8ed 100%);
+  color: #1a1a2e;
+  border-color: rgba(0, 96, 160, 0.15);
+}
+
+html[data-theme="dark"] .reveal pre {
+  background: linear-gradient(145deg, #1a1a2e 0%, #252540 100%);
+  color: #e8eef7;
+}
+
+/* ============================================
+   SYNTAX HIGHLIGHTING - Code Colors
+   ============================================ */
+
+/* Keywords: var, let, const, function, if, else, return, etc. */
+.code-block .keyword,
+.reveal pre .keyword,
+.reveal code .keyword,
+pre .keyword {
+  color: #c792ea;
+  font-weight: 600;
+}
+
+/* Strings: "hello", 'world', `template` */
+.code-block .string,
+.reveal pre .string,
+.reveal code .string,
+pre .string {
+  color: #c3e88d;
+}
+
+/* Comments: // single line, /* multi line */ */
+.code-block .comment,
+.reveal pre .comment,
+.reveal code .comment,
+pre .comment {
+  color: #676e95;
+  font-style: italic;
+}
+
+/* Functions: functionName(), console.log() */
+.code-block .function,
+.reveal pre .function,
+.reveal code .function,
+pre .function {
+  color: #82aaff;
+}
+
+/* Numbers: 123, 45.67, 0xFF */
+.code-block .number,
+.reveal pre .number,
+.reveal code .number,
+pre .number {
+  color: #f78c6c;
+}
+
+/* Operators: =, +, -, *, /, ===, !== */
+.code-block .operator,
+.reveal pre .operator,
+.reveal code .operator,
+pre .operator {
+  color: #89ddff;
+}
+
+/* Properties: object.property */
+.code-block .property,
+.reveal pre .property,
+.reveal code .property,
+pre .property {
+  color: #ffcb6b;
+}
+
+/* Classes/Types: ClassName, Array, Object */
+.code-block .class-name,
+.reveal pre .class-name,
+.reveal code .class-name,
+pre .class-name {
+  color: #ffcb6b;
+  font-weight: 600;
+}
+
+/* Boolean: true, false, null, undefined */
+.code-block .boolean,
+.reveal pre .boolean,
+.reveal code .boolean,
+pre .boolean {
+  color: #ff5370;
+}
+
+/* Punctuation: (), {}, [], ; */
+.code-block .punctuation,
+.reveal pre .punctuation,
+.reveal code .punctuation,
+pre .punctuation {
+  color: #89ddff;
+}
+
+/* Variables */
+.code-block .variable,
+.reveal pre .variable,
+.reveal code .variable,
+pre .variable {
+  color: #f07178;
+}
+
+/* Light theme syntax colors */
+html[data-theme="light"] .keyword { color: #7c3aed; font-weight: 600; }
+html[data-theme="light"] .string { color: #059669; }
+html[data-theme="light"] .comment { color: #9ca3af; font-style: italic; }
+html[data-theme="light"] .function { color: #2563eb; }
+html[data-theme="light"] .number { color: #d97706; }
+html[data-theme="light"] .operator { color: #0891b2; }
+html[data-theme="light"] .property { color: #b45309; }
+html[data-theme="light"] .class-name { color: #7c3aed; font-weight: 600; }
+html[data-theme="light"] .boolean { color: #dc2626; }
+html[data-theme="light"] .punctuation { color: #6b7280; }
+html[data-theme="light"] .variable { color: #db2777; }
 
 .gradient-accent {
   background: linear-gradient(
