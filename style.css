@@ -1404,8 +1404,9 @@ html[data-theme="dark"] .gradient-bg {
   background: linear-gradient(145deg, #1e1e2e 0%, #2d2d44 100%);
   padding: 1.5rem 2rem;
   border-radius: 12px;
-  overflow: hidden;
-  height: 400px;
+  overflow: visible;
+  height: auto;
+  max-height: none;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 18px;
   line-height: 1.7;
@@ -1417,16 +1418,6 @@ html[data-theme="dark"] .gradient-bg {
   word-break: break-word;
   border: 1px solid rgba(111, 66, 193, 0.3);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  /* Auto two-column layout */
-  column-count: 2;
-  column-gap: 3em;
-  column-rule: 2px solid rgba(111, 66, 193, 0.3);
-  column-fill: auto;
-}
-
-/* Hide scrollbar for Chrome, Safari, Opera */
-.code-block pre::-webkit-scrollbar {
-  display: none;
 }
 
 html[data-theme="light"] .code-block pre {
@@ -1469,18 +1460,14 @@ html[data-theme="dark"] .code-block pre {
   font-size: 18px;
   width: 100% !important;
   box-sizing: border-box !important;
-  overflow: hidden;
-  height: 400px;
+  overflow: visible;
+  height: auto;
+  max-height: none;
   white-space: pre-wrap;
   word-wrap: break-word;
   color: #e0e0e0;
   border: 1px solid rgba(111, 66, 193, 0.3);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  /* Auto two-column layout */
-  column-count: 2;
-  column-gap: 3em;
-  column-rule: 2px solid rgba(111, 66, 193, 0.3);
-  column-fill: auto;
 }
 
 html[data-theme="light"] .reveal pre {
