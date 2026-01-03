@@ -6,6 +6,8 @@
 
 **A Dynamic, Interactive Platform for Technical Knowledge Sharing**
 
+💚 **[Join our WhatsApp Community](https://chat.whatsapp.com/BIrcLvcEAJrB23WlUUbkuC)** 💚
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![GitHub Stars](https://img.shields.io/github/stars/BUDEGlobalEnterprise/bude-global-tech-presentations?style=social)](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations)
