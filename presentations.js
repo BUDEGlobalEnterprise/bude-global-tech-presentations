@@ -437,5 +437,13 @@ const PRESENTATIONS_CONFIG = [
     keywords: ["keycloak", "iam", "identity", "access management", "sso", "oauth2", "oidc"],
     category: ["security"],
     difficulty: "advanced"
+  },
+  {
+    file: "presentations/aspnet-core.json",
+    title: "ASP.NET Core",
+    description: "Beginner-friendly introduction to ASP.NET Core and Web APIs",
+    keywords: ["aspnet-core", "dotnet", "csharp", "web-api"],
+    category: ["backend"],
+    difficulty: "beginner"
   }
 ];

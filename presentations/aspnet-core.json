@@ -1,0 +1,370 @@
+{
+  "id": "aspnet-core-beginner",
+  "title": "ASP.NET Core for Beginners",
+  "description": "A complete beginner-friendly introduction to ASP.NET Core and building Web APIs",
+  "level": "Beginner",
+  "slides": [
+    {
+      "title": "Welcome",
+      "content": [
+        "Introduction to ASP.NET Core",
+        "Build modern Web APIs",
+        "Beginner-friendly overview"
+      ]
+    },
+    {
+      "title": "Who Is This For?",
+      "content": [
+        "Beginners to web development",
+        "Developers new to ASP.NET Core",
+        "Anyone building APIs with .NET"
+      ]
+    },
+    {
+      "title": "What is ASP.NET Core?",
+      "content": [
+        "Cross-platform web framework by Microsoft",
+        "Used for Web APIs, MVC, and Minimal APIs",
+        "Runs on Windows, Linux, and macOS"
+      ]
+    },
+    {
+      "title": "Why Use ASP.NET Core?",
+      "content": [
+        "High performance",
+        "Built-in dependency injection",
+        "Cross-platform support",
+        "Great for microservices"
+      ]
+    },
+    {
+      "title": "What Can You Build?",
+      "content": [
+        "REST APIs",
+        "Web applications",
+        "Microservices"
+      ]
+    },
+    {
+      "title": "Project Structure Overview",
+      "content": [
+        "Program.cs",
+        "Controllers",
+        "Models",
+        "Configuration files"
+      ]
+    },
+    {
+      "title": "Program.cs Explained",
+      "content": [
+        "Entry point of the application",
+        "Configures services",
+        "Defines middleware pipeline"
+      ]
+    },
+    {
+      "title": "What is appsettings.json?",
+      "content": [
+        "Stores configuration values",
+        "Supports environment-specific settings",
+        "Used for connection strings"
+      ]
+    },
+    {
+      "title": "Controllers Folder",
+      "content": [
+        "Contains API controllers",
+        "Handles HTTP requests",
+        "Uses routing attributes"
+      ]
+    },
+    {
+      "title": "Models Folder",
+      "content": [
+        "Represents application data",
+        "Used for requests and responses",
+        "Often maps to database entities"
+      ]
+    },
+    {
+      "title": "Services Folder",
+      "content": [
+        "Contains business logic",
+        "Keeps controllers thin",
+        "Registered using DI"
+      ]
+    },
+    {
+      "title": "What is a Minimal API?",
+      "content": [
+        "Lightweight way to build APIs",
+        "Introduced in .NET 6",
+        "Uses minimal boilerplate"
+      ]
+    },
+    {
+      "title": "Minimal API Example",
+      "content": [
+        "var app = WebApplication.CreateBuilder(args).Build();",
+        "app.MapGet(\"/hello\", () => \"Hello World\");",
+        "app.Run();"
+      ]
+    },
+    {
+      "title": "When to Use Minimal APIs",
+      "content": [
+        "Small services",
+        "Simple APIs",
+        "Prototyping"
+      ]
+    },
+    {
+      "title": "What is a Controller?",
+      "content": [
+        "Handles HTTP requests",
+        "Uses attributes like [HttpGet]",
+        "Returns JSON responses"
+      ]
+    },
+    {
+      "title": "Minimal APIs vs Controllers",
+      "content": [
+        "Minimal APIs are lightweight",
+        "Controllers suit larger apps",
+        "Both can coexist"
+      ]
+    },
+    {
+      "title": "What is Dependency Injection?",
+      "content": [
+        "A design pattern",
+        "Dependencies are provided, not created",
+        "Built into ASP.NET Core"
+      ]
+    },
+    {
+      "title": "Why Dependency Injection Matters",
+      "content": [
+        "Improves testability",
+        "Reduces coupling",
+        "Easier to maintain"
+      ]
+    },
+    {
+      "title": "Registering Services",
+      "content": [
+        "Services registered in Program.cs",
+        "builder.Services.AddScoped()",
+        "builder.Services.AddSingleton()"
+      ]
+    },
+    {
+      "title": "Service Lifetimes",
+      "content": [
+        "Singleton – one instance",
+        "Scoped – one per request",
+        "Transient – new instance each time"
+      ]
+    },
+    {
+      "title": "DI Example",
+      "content": [
+        "builder.Services.AddScoped<IGreetingService, GreetingService>();"
+      ]
+    },
+    {
+      "title": "Using Injected Services",
+      "content": [
+        "Injected automatically",
+        "Available in endpoints",
+        "Managed by framework"
+      ]
+    },
+    {
+      "title": "What is Routing?",
+      "content": [
+        "Maps URLs to endpoints",
+        "Determines request handling",
+        "Core part of web APIs"
+      ]
+    },
+    {
+      "title": "Attribute Routing",
+      "content": [
+        "Uses attributes",
+        "[HttpGet(\"items\")]",
+        "Common in controllers"
+      ]
+    },
+    {
+      "title": "Route Parameters",
+      "content": [
+        "Passed through URL",
+        "Example: /items/{id}",
+        "Automatically bound"
+      ]
+    },
+    {
+      "title": "Query Parameters",
+      "content": [
+        "Passed after ?",
+        "Used for filtering",
+        "Optional values"
+      ]
+    },
+    {
+      "title": "Minimal API Routing",
+      "content": [
+        "Defined with MapGet",
+        "MapPost, MapPut, MapDelete",
+        "Simple and readable"
+      ]
+    },
+    {
+      "title": "What is Middleware?",
+      "content": [
+        "Processes HTTP requests",
+        "Runs in a pipeline",
+        "Each middleware calls the next"
+      ]
+    },
+    {
+      "title": "Middleware Pipeline",
+      "content": [
+        "Request enters pipeline",
+        "Processed step by step",
+        "Response returned"
+      ]
+    },
+    {
+      "title": "Common Middleware",
+      "content": [
+        "Routing",
+        "Authorization",
+        "Exception handling"
+      ]
+    },
+    {
+      "title": "Middleware Order Matters",
+      "content": [
+        "Order affects behavior",
+        "Incorrect order causes issues",
+        "Defined in Program.cs"
+      ]
+    },
+    {
+      "title": "Configuration & Environments",
+      "content": [
+        "Development",
+        "Staging",
+        "Production"
+      ]
+    },
+    {
+      "title": "Using appsettings.json",
+      "content": [
+        "Different files per environment",
+        "Overrides supported",
+        "Easy to manage"
+      ]
+    },
+    {
+      "title": "Logging Basics",
+      "content": [
+        "Built-in logging support",
+        "ILogger interface",
+        "Useful for debugging"
+      ]
+    },
+    {
+      "title": "Error Handling",
+      "content": [
+        "Developer exception page",
+        "Centralized error handling",
+        "Avoid leaking details"
+      ]
+    },
+    {
+      "title": "What is CRUD?",
+      "content": [
+        "Create",
+        "Read",
+        "Update",
+        "Delete"
+      ]
+    },
+    {
+      "title": "Create Endpoint",
+      "content": [
+        "Uses HTTP POST",
+        "Accepts request body",
+        "Creates new resource"
+      ]
+    },
+    {
+      "title": "Read Endpoint",
+      "content": [
+        "Uses HTTP GET",
+        "Returns data",
+        "Most common operation"
+      ]
+    },
+    {
+      "title": "Update Endpoint",
+      "content": [
+        "Uses HTTP PUT",
+        "Modifies existing data",
+        "Requires identifier"
+      ]
+    },
+    {
+      "title": "Delete Endpoint",
+      "content": [
+        "Uses HTTP DELETE",
+        "Removes resource",
+        "Returns status code"
+      ]
+    },
+    {
+      "title": "HTTP Status Codes",
+      "content": [
+        "200 OK",
+        "201 Created",
+        "400 Bad Request",
+        "404 Not Found"
+      ]
+    },
+    {
+      "title": "Authentication Basics",
+      "content": [
+        "Verifies user identity",
+        "Who you are",
+        "Examples: tokens, cookies"
+      ]
+    },
+    {
+      "title": "Authorization Basics",
+      "content": [
+        "Controls access",
+        "What you can do",
+        "Uses roles and policies"
+      ]
+    },
+    {
+      "title": "Beginner Best Practices",
+      "content": [
+        "Keep code simple",
+        "Use async/await",
+        "Validate inputs"
+      ]
+    },
+    {
+      "title": "Next Steps",
+      "content": [
+        "Learn Entity Framework Core",
+        "Add authentication",
+        "Build real projects"
+      ]
+    }
+  ]
+}
