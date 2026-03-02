@@ -1,0 +1,1132 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "slides": [
+          {
+            "type": "title",
+            "title": "ERPNext Solutions Catalog",
+            "subtitle": "Transforming Open-Source Flexibility into Enterprise-Grade Reliability",
+            "backgroundImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          },
+          {
+            "type": "content",
+            "title": "Welcome to Our Productized Revolution",
+            "box": {
+              "title": "🎯 The Future of ERP Implementation is Here",
+              "list": [
+                { "emoji": "⚡", "text": "150+ Successful Implementations" },
+                { "emoji": "🏆", "text": "92% Client Satisfaction Rate" },
+                { "emoji": "💰", "text": "Average ROI: 9 Months" },
+                { "emoji": "🚀", "text": "4-8 Week Deployment Cycles" }
+              ]
+            },
+            "note": {
+              "text": "Proven track record across manufacturing, retail, services, and distribution"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "The ERP Implementation Crisis",
+            "leftTitle": "❌ Traditional Model (Why 70% Fail)",
+            "leftPoints": [
+              "Endless requirements gathering cycles",
+              "45% average scope creep",
+              "6-12 month implementation timelines",
+              "High consultant turnover risk",
+              "Budget overruns averaging 65%",
+              "Post-launch support nightmares",
+              "User resistance and low adoption"
+            ],
+            "rightTitle": "✅ Our Productized Solution",
+            "rightPoints": [
+              "Pre-defined industry blueprints",
+              "Fixed scope, timeline, and budget",
+              "4-8 week rapid deployment",
+              "Dedicated implementation teams",
+              "Maximum 20% budget variance",
+              "30-day hypercare support included",
+              "90%+ user adoption rates"
+            ]
+          },
+          {
+            "type": "content",
+            "title": "Our Vision: ERP Excellence Made Simple",
+            "box": {
+              "title": "🌟 The 80/20 Principle in Action",
+              "list": [
+                { "emoji": "📦", "text": "80% Standardized Best Practices" },
+                { "emoji": "🎨", "text": "20% Customized for Your Business" },
+                { "emoji": "⚡", "text": "100% Focused on Your Success" },
+                { "emoji": "💰", "text": "200% Faster Time-to-Value" }
+              ]
+            },
+            "note": {
+              "text": "We've packaged 8 years of implementation expertise into repeatable, scalable solutions"
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What percentage of traditional ERP implementations experience significant scope creep?",
+            "options": [
+              "15%",
+              "45%",
+              "70%",
+              "90%"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Industry data shows 45% average scope creep in traditional ERP implementations, leading to budget overruns and timeline delays."
+          }
+        ]
+      },
+      {
+        "id": "market-analysis",
+        "title": "Market Analysis",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding the ERP Landscape",
+            "subtitle": "Why Productized Solutions Are Winning"
+          },
+          {
+            "type": "chart",
+            "title": "ERP Implementation Success Rates",
+            "chartType": "bar",
+            "labels": ["Traditional Custom", "Productized Packages", "Our Solution"],
+            "data": [30, 65, 92],
+            "note": {
+              "text": "Based on 150+ implementations across multiple industries"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Competitive Landscape Analysis",
+            "leftTitle": "🟥 Legacy ERP Vendors",
+            "leftPoints": [
+              "High licensing costs (₹15-50L/year)",
+              "Rigid, outdated architecture",
+              "Long implementation cycles (6-12 months)",
+              "Vendor lock-in concerns",
+              "Poor mobile experience"
+            ],
+            "rightTitle": "🟦 Modern Cloud Solutions",
+            "rightPoints": [
+              "Subscription models (Opex)",
+              "Better UX but limited customization",
+              "Data security concerns",
+              "Limited Indian compliance",
+              "Integration challenges"
+            ]
+          },
+          {
+            "type": "content",
+            "title": "Our Sweet Spot: The Gap in the Market",
+            "box": {
+              "title": "🎯 Where We Excel",
+              "list": [
+                { "emoji": "💡", "text": "Open Source Flexibility + Enterprise Reliability" },
+                { "emoji": "🇮🇳", "text": "Built for Indian Business Compliance" },
+                { "emoji": "📦", "text": "Productized Speed + Customization Depth" },
+                { "emoji": "💰", "text": "Transparent Pricing + Predictable Outcomes" }
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Market Positioning Matrix",
+            "content": "          High Customization\n              ▲\n              │\n    Legacy     │    Our\n    ERP        │   Solution\n    Vendors    │    🎯\n              │\nLow Speed ────┼──────── High Speed\n              │\n              │\n   Modern      │\n    Cloud      │\n              ▼\n        Low Customization",
+            "note": {
+              "text": "We occupy the high-speed, high-customization quadrant that competitors can't reach"
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-infrastructure",
+        "title": "Core Infrastructure",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Foundation Packages",
+            "subtitle": "The Essential Building Blocks for Every Successful Implementation"
+          },
+          {
+            "type": "imageText",
+            "title": "Package 1: Implementation Accelerator",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Team collaborating on project launch",
+            "caption": "Rapid Launch Framework - ₹4,50,000 | 4-6 Weeks",
+            "content": "<h4>🚀 Solving the 'Blank Canvas' Problem</h4><p>70% of ERP projects fail due to lack of structure. We provide the blueprint for success from day one.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Implementation Accelerator Features",
+            "box": {
+              "title": "🛠️ What's Included",
+              "list": [
+                { "emoji": "🏭", "text": "Industry Templates (Mfg, Retail, Services, Distribution)" },
+                { "emoji": "🧹", "text": "Data Migration Toolkit with ETL automation" },
+                { "emoji": "🎓", "text": "50+ Hours Training (English/Hindi/Tamil)" },
+                { "emoji": "🚑", "text": "30-Day Hypercare Support" },
+                { "emoji": "🔄", "text": "Change Management Playbooks" },
+                { "emoji": "📊", "text": "KPI Dashboards from Day One" }
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Implementation Methodology",
+            "content": "Week 1-2: Discovery & Blueprinting\n    ↓\nWeek 3-4: Configuration & Data Setup\n    ↓\nWeek 5: User Training & UAT\n    ↓\nWeek 6: Go-Live & Hypercare\n    ↓\nMonth 2: Business Review & Optimization",
+            "note": {
+              "text": "Structured approach ensures consistency and predictability"
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Package 2: Integration Hub",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Connected digital ecosystem",
+            "caption": "The Connected Enterprise - ₹6,50,000 | 3-4 Weeks",
+            "content": "<h4>🔗 Breaking Down Data Silos</h4><p>ERPs become islands without proper integration. We connect your entire business ecosystem seamlessly.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Integration Hub Capabilities",
+            "box": {
+              "title": "🔌 Connected Systems",
+              "list": [
+                { "emoji": "💳", "text": "Banking: ICICI, HDFC, SBI, Axis Auto-reconciliation" },
+                { "emoji": "🛒", "text": "E-commerce: Shopify, WooCommerce, Amazon, Flipkart" },
+                { "emoji": "🏛️", "text": "GST: Auto-filing, e-invoicing, returns" },
+                { "emoji": "📧", "text": "Communication: WhatsApp, Email, SMS gateways" },
+                { "emoji": "📦", "text": "Logistics: Shiprocket, Delhivery, FedEx tracking" },
+                { "emoji": "🔐", "text": "Security: OAuth, API rate limiting, audit logs" }
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Integration Architecture",
+            "content": "┌─────────────┐    ┌─────────────┐    ┌─────────────┐\n│   Banking   │────│  ERPNext   │────│ E-commerce  │\n│   Systems   │    │   Core     │    │  Platforms  │\n└─────────────┘    └─────────────┘    └─────────────┘\n                         │\n                         │\n    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐\n    │   GSTN      │────│  API Gateway │────│  Logistics  │\n    │  Portal     │    │   Layer     │    │  Partners   │\n    └─────────────┘    └─────────────┘    └─────────────┘",
+            "note": {
+              "text": "Centralized API gateway ensures security and reliability"
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Package 3: Analytics & Intelligence Suite",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Data visualization dashboard",
+            "caption": "The Decision Intelligence Platform - ₹3,50,000 | 2-3 Weeks",
+            "content": "<h4>📊 From Reactive Reporting to Predictive Insights</h4><p>Standard reports tell you what happened. We help you understand why and what's next.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Analytics Suite Features",
+            "box": {
+              "title": "📈 Intelligence Capabilities",
+              "list": [
+                { "emoji": "📊", "text": "Executive Dashboards: Real-time P&L, Cash Flow" },
+                { "emoji": "🖱️", "text": "No-Code Builder: Drag-and-drop reports" },
+                { "emoji": "🔮", "text": "Predictive Analytics: Sales forecasting" },
+                { "emoji": "📱", "text": "Mobile Insights: Push notifications" },
+                { "emoji": "☕", "text": "Auto-reports: Morning PDF delivery" },
+                { "emoji": "🔄", "text": "External BI: PowerBI, Tableau connectors" }
+              ]
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Sample Dashboard - Sales Performance",
+            "chartType": "line",
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+            "data": [1200000, 1450000, 1320000, 1680000, 1950000, 2100000],
+            "note": {
+              "text": "Real-time sales tracking with trend analysis and forecasting"
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "Which package includes pre-built industry templates and change management playbooks?",
+            "options": [
+              "Integration Hub",
+              "Implementation Accelerator", 
+              "Analytics Suite",
+              "All of the above"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Implementation Accelerator (Package 1) includes industry-specific blueprints, data migration tools, and change management frameworks to ensure rapid, successful deployment."
+          }
+        ]
+      },
+      {
+        "id": "vertical-powerpacks",
+        "title": "Vertical Powerpacks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Industry-Specific Solutions",
+            "subtitle": "Deep functionality tailored to your business domain"
+          },
+          {
+            "type": "comparison",
+            "title": "Manufacturing Excellence Suite",
+            "leftTitle": "🏭 Smart Manufacturing (₹7,50,000)",
+            "leftPoints": [
+              "IoT Machine Monitoring & OEE Tracking",
+              "SPC Quality Control & Digital Inspections",
+              "Advanced MRP II with Capacity Planning",
+              "Preventive Maintenance Scheduling",
+              "Real-time Production Dashboards",
+              "Shop Floor Mobile Applications"
+            ],
+            "rightTitle": "📊 Key Benefits",
+            "rightPoints": [
+              "30% Increase in OEE",
+              "45% Reduction in Quality Issues",
+              "25% Improvement in On-time Delivery",
+              "60% Faster Production Reporting",
+              "20% Reduction in Machine Downtime",
+              "Real-time WIP Tracking"
+            ]
+          },
+          {
+            "type": "diagram",
+            "title": "Manufacturing Digital Thread",
+            "content": "Sales Order → Production Planning → Material Requisition\n    ↓           ↓                    ↓\nInventory Check → Shop Floor Dispatch → Quality Inspection\n    ↓           ↓                    ↓\nFinished Goods → Stock Transfer → Customer Delivery\n    ↓           ↓                    ↓\n    Invoice ←───── Payment ←───── Delivery Note",
+            "note": {
+              "text": "End-to-end digital workflow from order to cash"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Retail Revolution Package",
+            "leftTitle": "🛍️ Retail Powerpack (₹5,50,000)",
+            "leftPoints": [
+              "Offline-First POS with Sync Capability",
+              "Unified Omnichannel Inventory Management",
+              "Cross-channel Loyalty Points System",
+              "Self-checkout Kiosk Interface",
+              "Advanced Promotion Engine (BOGO, Bundles)",
+              "Customer 360° View"
+            ],
+            "rightTitle": "🎯 Retail Outcomes",
+            "rightPoints": [
+              "Zero Sales Outages During Internet Failures",
+              "Single View of Inventory Across Channels",
+              "Increased Customer Loyalty & Retention",
+              "Reduced Queue Times by 65%",
+              "25% Increase in Average Transaction Value",
+              "Real-time Sales Performance Tracking"
+            ]
+          },
+          {
+            "type": "imageText",
+            "title": "POS System Features",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1563013546-7e49ef149a90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Modern POS system",
+            "caption": "Built for Indian Retail Reality",
+            "content": "<h4>💻 Smart Point of Sale</h4><ul><li>🔄 <strong>Offline Mode</strong> - Continue sales during internet outages</li><li>📱 <strong>Tablet Friendly</strong> - Works on iPad and Android tablets</li><li>💳 <strong>Multiple Payments</strong> - Cash, Card, UPI, Wallet</li><li>🎪 <strong>Promotions</strong> - Automatic discount calculation</li><li>📦 <strong>Inventory Sync</strong> - Real-time stock updates</li><li>👥 <strong>Multi-store</strong> - Centralized management</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "title": "Healthcare Transformation",
+            "leftTitle": "🏥 Healthcare Pro (₹8,50,000)",
+            "leftPoints": [
+              "LIMS Integration for Lab Results",
+              "Pharmacy Batch & Expiry Management",
+              "NABH/NABL Compliance Reporting",
+              "Patient Appointment Scheduling",
+              "TPA Insurance Claim Processing",
+              "Electronic Medical Records"
+            ],
+            "rightTitle": "🩺 Healthcare Benefits",
+            "rightPoints": [
+              "70% Faster Lab Result Processing",
+              "100% Drug Expiry Tracking",
+              "Automated Compliance Reporting",
+              "40% Reduced Patient Wait Times",
+              "Seamless Insurance Processing",
+              "Complete Patient History Access"
+            ]
+          },
+          {
+            "type": "comparison",
+            "title": "Education Management Suite",
+            "leftTitle": "🎓 Education Powerpack (₹5,50,000)",
+            "leftPoints": [
+              "Automated Fee Collection & Receipts",
+              "Parent Portal with Mobile Access",
+              "CCE Grading & Exam Management",
+              "Digital Library Management System",
+              "Bus Route Optimization & Tracking",
+              "Attendance & Timetable Management"
+            ],
+            "rightTitle": "📚 Education Outcomes",
+            "rightPoints": [
+              "95% On-time Fee Collection",
+              "Real-time Parent Communication",
+              "Automated Report Card Generation",
+              "Digital Library Issue/Return",
+              "Optimized Transportation Routes",
+              "Accurate Attendance Tracking"
+            ]
+          },
+          {
+            "type": "imageText",
+            "title": "Field Service Excellence",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Technician using mobile app",
+            "caption": "Package 8: Field Service Management - ₹6,00,000",
+            "content": "<h4>🚛 Transforming Mobile Workforce</h4><p>Complete solution for service businesses with field technicians.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Field Service Features",
+            "box": {
+              "title": "🔧 Service Management Capabilities",
+              "list": [
+                { "emoji": "📍", "text": "Live GPS Technician Tracking" },
+                { "emoji": "📦", "text": "Van Inventory Management" },
+                { "emoji": "✍️", "text": "Digital Work Orders & Signatures" },
+                { "emoji": "⏱️", "text": "Automated Time Tracking" },
+                { "emoji": "🗺️", "text": "AI-Optimized Route Planning" },
+                { "emoji": "📄", "text": "Auto-generated Quotes & Invoices" }
+              ]
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "Which vertical package includes LIMS integration and NABH compliance features?",
+            "options": [
+              "Manufacturing Excellence",
+              "Healthcare Pro",
+              "Retail Revolution", 
+              "Education Suite"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Healthcare Pro includes Laboratory Information Management System (LIMS) integration and NABH/NABL compliance reporting specifically for healthcare providers."
+          }
+        ]
+      },
+      {
+        "id": "operational-modules",
+        "title": "Operational Excellence",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Operational Enhancement Modules",
+            "subtitle": "Optimizing user experience, compliance, and communication"
+          },
+          {
+            "type": "content",
+            "title": "HR & Payroll - Made for India",
+            "box": {
+              "title": "🇮🇳 Package 7: HR Complete - ₹4,00,000",
+              "list": [
+                { "emoji": "👆", "text": "Biometric Integration (50+ device types)" },
+                { "emoji": "📄", "text": "Statutory Compliance (PF/ESI/PT filing)" },
+                { "emoji": "📱", "text": "Employee Self-Service Mobile App" },
+                { "emoji": "🕒", "text": "Advanced Shift Management" },
+                { "emoji": "🎯", "text": "KRA-based Performance Appraisals" },
+                { "emoji": "💰", "text": "Multiple Salary Structures" }
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "HR Compliance Workflow",
+            "content": "Attendance → Salary Calculation → PF/ESI Deduction\n    ↓              ↓                 ↓\nLeave Balance → Net Pay Calc → Professional Tax\n    ↓              ↓                 ↓\nFinal Salary → Bank Transfer → Compliance Filing\n    ↓              ↓                 ↓\nForm 16 Gen ←─── Monthly Returns ←── Quarterly Filing",
+            "note": {
+              "text": "Automated compliance workflow reduces manual effort by 80%"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "User Experience Revolution",
+            "leftTitle": "🎨 UX Enhancement (₹2,50,000)",
+            "leftPoints": [
+              "Role-Based Interface Customization",
+              "Voice-to-Text Data Entry",
+              "Dark Mode & Accessibility Themes",
+              "Progressive Web App (PWA)",
+              "Low-bandwidth Optimization",
+              "AI-powered Smart Defaults"
+            ],
+            "rightTitle": "📈 Business Impact",
+            "rightPoints": [
+              "45% Increase in User Adoption",
+              "70% Faster Data Entry",
+              "Reduced Training Time by 60%",
+              "Mobile Usage Increased 3x",
+              "Better Accessibility Compliance",
+              "Higher Employee Satisfaction"
+            ]
+          },
+          {
+            "type": "comparison",
+            "title": "Audit & Compliance Shield",
+            "leftTitle": "🛡️ Audit Shield (₹3,50,000)",
+            "leftPoints": [
+              "Blockchain-style Immutable Audit Logs",
+              "Field-level Change History Tracking",
+              "SOX/ISO/GDPR Compliance Templates",
+              "Role-based Data Access Controls",
+              "Automated Backup Verification",
+              "Compliance Readiness Scoring"
+            ],
+            "rightTitle": "🔒 Security Benefits",
+            "rightPoints": [
+              "100% Audit Trail Compliance",
+              "Instant Historical Data Retrieval",
+              "Reduced Audit Preparation Time",
+              "Enhanced Data Security",
+              "Automated Compliance Reporting",
+              "Investor Confidence Boost"
+            ]
+          },
+          {
+            "type": "imageText",
+            "title": "WhatsApp Business Integration",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Messaging on smartphone",
+            "caption": "Package 12: Communication Suite - ₹2,50,000",
+            "content": "<h4>💬 Revolutionizing Customer Communication</h4><p>Email: 20% open rate. WhatsApp: 98% open rate. Transform how you connect with customers.</p>"
+          },
+          {
+            "type": "content",
+            "title": "WhatsApp Features",
+            "box": {
+              "title": "📱 Communication Capabilities",
+              "list": [
+                { "emoji": "🔔", "text": "Transaction Alerts & Order Updates" },
+                { "emoji": "📄", "text": "Document Sharing (Invoices, Statements)" },
+                { "emoji": "🤖", "text": "Chatbot Automation for FAQs" },
+                { "emoji": "👥", "text": "Multi-agent Customer Support Inbox" },
+                { "emoji": "📢", "text": "Targeted Marketing Campaigns" },
+                { "emoji": "⭐", "text": "Automated Feedback Collection" }
+              ]
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Communication Channel Effectiveness",
+            "chartType": "pie",
+            "labels": ["WhatsApp", "Email", "SMS", "Phone"],
+            "data": [65, 15, 12, 8],
+            "note": {
+              "text": "WhatsApp dominates customer communication with 65% preference"
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "Which operational module specifically addresses Indian statutory compliance like PF, ESI and professional tax?",
+            "options": [
+              "UX Revolution",
+              "Audit Shield",
+              "HR Complete", 
+              "WhatsApp Integration"
+            ],
+            "correctAnswer": 2,
+            "explanation": "HR Complete is specifically designed for Indian compliance with automated Form 16 generation, PF/ESI filing, and integration with Indian biometric systems."
+          }
+        ]
+      },
+      {
+        "id": "advanced-modules",
+        "title": "Advanced Solutions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Capability Modules",
+            "subtitle": "Next-generation features for competitive advantage"
+          },
+          {
+            "type": "imageText",
+            "title": "AI-Powered Forecasting",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "AI and machine learning",
+            "caption": "Package 13: Predictive Intelligence - ₹4,50,000",
+            "content": "<h4>🤖 Smart Business Forecasting</h4><p>Leverage machine learning to predict sales, optimize inventory, and anticipate market trends.</p>"
+          },
+          {
+            "type": "content",
+            "title": "AI Capabilities",
+            "box": {
+              "title": "🧠 Intelligent Features",
+              "list": [
+                { "emoji": "📈", "text": "Sales Forecasting with 95% Accuracy" },
+                { "emoji": "📦", "text": "Inventory Optimization Algos" },
+                { "emoji": "💰", "text": "Cash Flow Prediction Models" },
+                { "emoji": "👥", "text": "Customer Churn Prediction" },
+                { "emoji": "🛒", "text": "Recommendation Engine" },
+                { "emoji": "⚡", "text": "Anomaly Detection & Alerts" }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Mobile-First Workforce",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Mobile workforce using apps",
+            "caption": "Package 14: Mobile Suite - ₹3,00,000",
+            "content": "<h4>📱 Enterprise Mobility</h4><p>Complete mobile experience for sales teams, field staff, and remote workers.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Mobile Features",
+            "box": {
+              "title": "📲 Mobile Capabilities",
+              "list": [
+                { "emoji": "👨💼", "text": "Sales Team Order Management" },
+                { "emoji": "🔧", "text": "Field Service Technician App" },
+                { "emoji": "📊", "text": "Executive Dashboard Mobile View" },
+                { "emoji": "✅", "text": "Approval Workflows on Mobile" },
+                { "emoji": "📸", "text": "Document Scanning & Upload" },
+                { "emoji": "📍", "text": "Location-based Services" }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Advanced Analytics vs Basic Reporting",
+            "leftTitle": "📊 Standard Reporting",
+            "leftPoints": [
+              "What happened last month?",
+              "Static, historical data",
+              "Manual report generation",
+              "Limited visualization options",
+              "Departmental silos",
+              "Reactive decision making"
+            ],
+            "rightTitle": "📈 Advanced Analytics",
+            "rightPoints": [
+              "What will happen next quarter?",
+              "Real-time predictive insights",
+              "Automated intelligence",
+              "Interactive dashboards",
+              "Cross-functional visibility",
+              "Proactive strategy planning"
+            ]
+          },
+          {
+            "type": "quiz",
+            "question": "Which advanced module includes sales forecasting with 95% accuracy and inventory optimization?",
+            "options": [
+              "Mobile Suite",
+              "Predictive Intelligence",
+              "Communication Suite",
+              "UX Revolution"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Predictive Intelligence uses machine learning algorithms for accurate sales forecasting and inventory optimization, helping businesses anticipate market trends."
+          }
+        ]
+      },
+      {
+        "id": "implementation-methodology",
+        "title": "Implementation Approach",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Our Implementation Methodology",
+            "subtitle": "Proven process for successful ERP deployment"
+          },
+          {
+            "type": "diagram",
+            "title": "4-Phase Implementation Framework",
+            "content": "Phase 1: Discover & Design (Week 1-2)\n    ↓\nPhase 2: Configure & Migrate (Week 3-4)\n    ↓\nPhase 3: Train & Validate (Week 5)\n    ↓\nPhase 4: Launch & Optimize (Week 6+)",
+            "note": {
+              "text": "Structured approach ensures consistent quality across all projects"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Phase 1: Discovery & Design",
+            "box": {
+              "title": "🔍 Weeks 1-2: Foundation Building",
+              "list": [
+                { "emoji": "🎯", "text": "Business Process Mapping" },
+                { "emoji": "📊", "text": "Requirements Gathering Workshops" },
+                { "emoji": "🏗️", "text": "Solution Blueprint Creation" },
+                { "emoji": "📋", "text": "Project Plan Finalization" },
+                { "emoji": "👥", "text": "Stakeholder Alignment Sessions" },
+                { "emoji": "🎪", "text": "Success Metrics Definition" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Phase 2: Configure & Migrate",
+            "box": {
+              "title": "⚙️ Weeks 3-4: System Setup",
+              "list": [
+                { "emoji": "🛠️", "text": "ERPNext Configuration" },
+                { "emoji": "📦", "text": "Data Migration & Cleansing" },
+                { "emoji": "🔗", "text": "Integration Setup" },
+                { "emoji": "🎨", "text": "UI/UX Customization" },
+                { "emoji": "📄", "text": "Report & Dashboard Setup" },
+                { "emoji": "🔐", "text": "Security Configuration" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Phase 3: Train & Validate",
+            "box": {
+              "title": "🎓 Week 5: User Enablement",
+              "list": [
+                { "emoji": "👨🏫", "text": "Role-based Training Sessions" },
+                { "emoji": "🧪", "text": "User Acceptance Testing" },
+                { "emoji": "📖", "text": "Documentation Delivery" },
+                { "emoji": "🔄", "text": "Process Walkthroughs" },
+                { "emoji": "🎯", "text": "Train-the-Trainer Program" },
+                { "emoji": "📱", "text": "Mobile App Training" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Phase 4: Launch & Optimize",
+            "box": {
+              "title": "🚀 Week 6+: Go-Live & Beyond",
+              "list": [
+                { "emoji": "🎪", "text": "Production System Launch" },
+                { "emoji": "🚑", "text": "30-Day Hypercare Support" },
+                { "emoji": "📈", "text": "Performance Monitoring" },
+                { "emoji": "🔄", "text": "Process Optimization" },
+                { "emoji": "📊", "text": "Success Metrics Review" },
+                { "emoji": "🏆", "text": "Project Closure & Handover" }
+              ]
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Implementation Success Metrics",
+            "chartType": "bar",
+            "labels": ["User Adoption", "Process Efficiency", "Data Accuracy", "ROI Time"],
+            "data": [92, 85, 96, 9],
+            "note": {
+              "text": "Average performance across 150+ implementations"
+            }
+          }
+        ]
+      },
+      {
+        "id": "success-stories",
+        "title": "Success Stories",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Client Success Stories",
+            "subtitle": "Real results from businesses we've transformed"
+          },
+          {
+            "type": "imageText",
+            "title": "Manufacturing Client: Auto Components Ltd",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Manufacturing plant",
+            "caption": "200 Cr Revenue | 500 Employees",
+            "content": "<h4>🏭 Challenges & Solutions</h4><p><strong>Before:</strong> Manual production tracking, inventory inaccuracies, delayed deliveries</p><p><strong>After:</strong> Real-time OEE monitoring, 99% inventory accuracy, 95% on-time delivery</p><ul><li>📈 35% Increase in Production Efficiency</li><li>📉 60% Reduction in Inventory Costs</li><li>💰 ROI Achieved in 7 Months</li></ul>"
+          },
+          {
+            "type": "imageText",
+            "title": "Retail Chain: Fashion Trends",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Retail store",
+            "caption": "45 Stores | Pan-India Presence",
+            "content": "<h4>🛍️ Retail Transformation</h4><p><strong>Before:</strong> Disconnected inventory, manual sales reporting, customer data silos</p><p><strong>After:</strong> Unified omnichannel platform, real-time analytics, customer 360° view</p><ul><li>🔄 80% Faster Sales Reporting</li><li>📊 25% Increase in Sales</li><li>👥 40% Higher Customer Retention</li></ul>"
+          },
+          {
+            "type": "imageText",
+            "title": "Healthcare: City Hospitals",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Hospital reception",
+            "caption": "Multi-specialty | 250 Beds",
+            "content": "<h4>🏥 Healthcare Digitalization</h4><p><strong>Before:</strong> Paper-based records, manual billing, patient wait times</p><p><strong>After:</strong> Electronic records, automated billing, streamlined workflows</p><ul><li>⏱️ 50% Reduction in Patient Wait Times</li><li>📄 90% Paperless Operations</li><li>💰 30% Increase in Revenue</li></ul>"
+          },
+          {
+            "type": "content",
+            "title": "Client Testimonials",
+            "box": {
+              "title": "🏆 What Our Clients Say",
+              "list": [
+                { "emoji": "⭐", "text": "\"Implementation was completed in 6 weeks vs 6 months with our previous vendor. Incredible efficiency!\" - Auto Components Ltd" },
+                { "emoji": "⭐", "text": "\"The productized approach gave us exactly what we needed without the complexity of custom development.\" - Fashion Trends" },
+                { "emoji": "⭐", "text": "\"Post-implementation support has been exceptional. Our team was fully operational within days.\" - City Hospitals" },
+                { "emoji": "⭐", "text": "\"The ROI calculator was accurate - we achieved payback in 8 months as promised.\" - EduSmart Schools" }
+              ]
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Client Satisfaction Scores",
+            "chartType": "pie",
+            "labels": ["Very Satisfied", "Satisfied", "Neutral", "Needs Improvement"],
+            "data": [78, 14, 6, 2],
+            "note": {
+              "text": "92% overall satisfaction rate based on post-implementation surveys"
+            }
+          }
+        ]
+      },
+      {
+        "id": "bundles",
+        "title": "Strategic Bundles",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Growth-Focused Bundles",
+            "subtitle": "Maximizing value through strategic packaging"
+          },
+          {
+            "type": "diagram",
+            "title": "Strategic Value Ladder",
+            "content": "      ┌─────────────────────────────────────┐\n      │          🥇 ENTERPRISE ELITE        │\n      │            ₹45,00,000+             │\n      │    Complete Digital Transformation  │\n      │  All Packages + Dedicated Manager   │\n      └───────────────────┬─────────────────┘\n                          │\n      ┌───────────────────▼─────────────────┐\n      │            🥈 GROWTH SCALE          │\n      │            ₹21,00,000              │\n      │       Data-Driven Optimization      │\n      │   4 Core + 2 Specialized Packages   │\n      └───────────────────┬─────────────────┘\n                          │\n      ┌───────────────────▼─────────────────┐\n      │            🥉 DIGITAL START         │\n      │            ₹12,00,000              │\n      │       Foundation for Growth         │\n      │   3 Essential Core Packages         │\n      └─────────────────────────────────────┘",
+            "note": {
+              "text": "Each tier includes implementation, training, and 30-day hypercare support"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Bundle Composition & Value",
+            "leftTitle": "🥉 Digital Start (₹12,00,000)",
+            "leftPoints": [
+              "📦 Implementation Accelerator (₹4.5L)",
+              "📦 Integration Hub (₹6.5L)",
+              "📦 UX Revolution (₹2.5L)",
+              "🎁 Bonus: WhatsApp Basic",
+              "💰 Total Value: ₹14,00,000",
+              "💸 You Save: ₹2,00,000 (14%)",
+              "🎯 Perfect For: First-time digitization"
+            ],
+            "rightTitle": "🥈 Growth Scale (₹21,00,000)",
+            "rightPoints": [
+              "📦 Digital Start Bundle",
+              "📦 Analytics Suite (₹3.5L)",
+              "📦 HR Complete (₹4.0L)",
+              "📦 Industry Powerpack (Choice)",
+              "💰 Total Value: ₹24,50,000",
+              "💸 You Save: ₹3,50,000 (17%)",
+              "🎯 Perfect For: Scaling SMEs"
+            ]
+          },
+          {
+            "type": "content",
+            "title": "🥇 Enterprise Elite Bundle",
+            "box": {
+              "title": "🏆 Complete Transformation Suite - ₹45,00,000+",
+              "list": [
+                { "emoji": "📦", "text": "All Core Infrastructure Packages" },
+                { "emoji": "🏭", "text": "All Vertical Powerpacks" },
+                { "emoji": "🔧", "text": "All Operational Modules" },
+                { "emoji": "🤖", "text": "All Advanced Solutions" },
+                { "emoji": "👨💼", "text": "Dedicated Account Manager" },
+                { "emoji": "🎯", "text": "Strategic Business Consulting" },
+                { "emoji": "🔒", "text": "Premium Support & SLAs" }
+              ]
+            },
+            "note": {
+              "text": "White-glove implementation with C-level strategic alignment"
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Bundle Adoption & Success Rates",
+            "chartType": "bar",
+            "labels": ["Digital Start", "Growth Scale", "Enterprise Elite"],
+            "data": [88, 92, 96],
+            "note": {
+              "text": "Higher bundles show increased success rates due to comprehensive coverage"
+            }
+          }
+        ]
+      },
+      {
+        "id": "revenue-strategy",
+        "title": "Business Model",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Sustainable Revenue Architecture",
+            "subtitle": "Balancing project revenue with recurring services"
+          },
+          {
+            "type": "comparison",
+            "title": "Dual Revenue Stream Strategy",
+            "leftTitle": "💰 Project Revenue (One-Time)",
+            "leftPoints": [
+              "🏷️ Package License Fees",
+              "⚙️ Customization (20% cap)",
+              "🎓 Premium Training (₹15k/day)",
+              "🛠️ Custom Development (₹10k/day)",
+              "📊 Strategic Consulting (₹25k/day)",
+              "🎯 Target: 60% of total revenue"
+            ],
+            "rightTitle": "🔄 Recurring Services (MRR)",
+            "rightPoints": [
+              "🛡️ Annual Maintenance: 20% of license",
+              "☁️ Managed Cloud: ₹8k-₹25k/month",
+              "🚀 Evolution Retainer: ₹20k/month",
+              "📈 Performance Monitoring: ₹5k/month",
+              "🔒 Security & Compliance: ₹10k/month",
+              "🎯 Target: 40% of total revenue"
+            ]
+          },
+          {
+            "type": "content",
+            "title": "Target Industry Roadmap",
+            "box": {
+              "title": "🎯 Strategic Focus Verticals",
+              "list": [
+                { "emoji": "🏭", "text": "Manufacturing (35%): Mfg Excellence → Implementation → Analytics" },
+                { "emoji": "🛍️", "text": "Retail (25%): POS Powerpack → Integration → WhatsApp Suite" },
+                { "emoji": "🏥", "text": "Healthcare (15%): Healthcare Pro → Implementation → Audit Shield" },
+                { "emoji": "🎓", "text": "Education (10%): Edu Suite → Implementation → HR Complete" },
+                { "emoji": "🚛", "text": "Distribution (15%): Implementation → Integration → Field Service" }
+              ]
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Projected Revenue Growth (3-Year Plan)",
+            "chartType": "line",
+            "labels": ["Year 1", "Year 2", "Year 3"],
+            "data": [4200000, 7800000, 12500000],
+            "note": {
+              "text": "Based on 3 implementations/month in Year 1, growing to 8/month by Year 3"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Revenue Growth Drivers",
+            "box": {
+              "title": "🚀 Key Growth Levers",
+              "list": [
+                { "emoji": "📈", "text": "Bundle Up-selling (40% growth)" },
+                { "emoji": "🔄", "text": "Recurring Services Expansion (35% growth)" },
+                { "emoji": "🎯", "text": "Vertical Specialization (15% growth)" },
+                { "emoji": "🤝", "text": "Partner Channel (10% growth)" }
+              ]
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What is our target ratio between project revenue and recurring services revenue?",
+            "options": [
+              "80% Project / 20% Recurring",
+              "60% Project / 40% Recurring", 
+              "40% Project / 60% Recurring",
+              "20% Project / 80% Recurring"
+            ],
+            "correctAnswer": 1,
+            "explanation": "We target 60% project revenue (implementation, customization) and 40% recurring services (AMC, cloud hosting, evolution retainers) for sustainable business growth and stability."
+          }
+        ]
+      },
+      {
+        "id": "technology-stack",
+        "title": "Technology Stack",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Our Technology Foundation",
+            "subtitle": "Enterprise-grade technology for reliable performance"
+          },
+          {
+            "type": "diagram",
+            "title": "Solution Architecture",
+            "content": "Frontend Layer: Frappe UI + Progressive Web App\n    ↓\nApplication Layer: ERPNext + Python + MariaDB\n    ↓\nIntegration Layer: REST API + Webhooks + Message Queue\n    ↓\nData Layer: MariaDB + Redis Cache + Backup\n    ↓\nInfrastructure: AWS/Azure + Load Balancer + CDN",
+            "note": {
+              "text": "Modern, scalable architecture supporting 1000+ concurrent users"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Technology Choices",
+            "leftTitle": "🟢 Our Stack Advantages",
+            "leftPoints": [
+              "Open Source (No vendor lock-in)",
+              "Python + JavaScript (Modern stack)",
+              "MariaDB (Enterprise database)",
+              "REST API (Easy integration)",
+              "PWA (Mobile-first)",
+              "Cloud Native (Scalable)"
+            ],
+            "rightTitle": "🔴 Legacy System Issues",
+            "rightPoints": [
+              "Proprietary (Vendor lock-in)",
+              "Older Technologies (Outdated)",
+              "Oracle/SQL Server (Expensive)",
+              "SOAP API (Complex integration)",
+              "Desktop Only (Limited mobility)",
+              "On-premise Only (Inflexible)"
+            ]
+          },
+          {
+            "type": "content",
+            "title": "Security & Compliance",
+            "box": {
+              "title": "🔒 Enterprise Security Features",
+              "list": [
+                { "emoji": "🔐", "text": "Role-based Access Control" },
+                { "emoji": "📝", "text": "Complete Audit Trail" },
+                { "emoji": "🔒", "text": "Data Encryption at Rest & Transit" },
+                { "emoji": "🛡️", "text": "Regular Security Updates" },
+                { "emoji": "📊", "text": "Compliance Reporting" },
+                { "emoji": "⚡", "text": "Disaster Recovery Setup" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Performance & Scalability",
+            "box": {
+              "title": "⚡ System Capabilities",
+              "list": [
+                { "emoji": "👥", "text": "Supports 1000+ Concurrent Users" },
+                { "emoji": "💾", "text": "Handles 1M+ Transactions/Day" },
+                { "emoji": "📈", "text": "99.9% Uptime SLA" },
+                { "emoji": "🔍", "text": "Sub-second Response Times" },
+                { "emoji": "🌐", "text": "Global CDN Deployment" },
+                { "emoji": "🔄", "text": "Auto-scaling Capabilities" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "team-expertise",
+        "title": "Our Team",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "The Experts Behind Your Success",
+            "subtitle": "Experienced team delivering enterprise-grade solutions"
+          },
+          {
+            "type": "content",
+            "title": "Implementation Team Structure",
+            "box": {
+              "title": "👥 Dedicated Project Teams",
+              "list": [
+                { "emoji": "🎯", "text": "Project Manager (10+ years experience)" },
+                { "emoji": "🛠️", "text": "Solution Architect (ERPNext certified)" },
+                { "emoji": "💻", "text": "Technical Lead (Python/JS expert)" },
+                { "emoji": "📊", "text": "Functional Consultant (Industry expert)" },
+                { "emoji": "🎨", "text": "UX Specialist (User adoption focus)" },
+                { "emoji": "🚀", "text": "Support Engineer (Hypercare period)" }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Why Choose Our Team?",
+            "leftTitle": "🏆 Our Expertise",
+            "leftPoints": [
+              "150+ ERPNext Implementations",
+              "8+ Years Average Team Experience",
+              "ERPNext Certification & Training",
+              "Industry-specific Domain Knowledge",
+              "Proven Implementation Methodology",
+              "Continuous Learning & Improvement"
+            ],
+            "rightTitle": "📈 Client Benefits",
+            "rightPoints": [
+              "Reduced Implementation Risk",
+              "Faster Time-to-Value",
+              "Higher User Adoption Rates",
+              "Better ROI Realization",
+              "Long-term Partnership",
+              "Continuous Innovation"
+            ]
+          },
+          {
+            "type": "chart",
+            "title": "Team Expertise Distribution",
+            "chartType": "pie",
+            "labels": ["ERPNext Experts", "Industry Consultants", "Technical Architects", "Project Managers"],
+            "data": [40, 25, 20, 15],
+            "note": {
+              "text": "Balanced team with both technical and business expertise"
+            }
+          }
+        ]
+      },
+      {
+        "id": "next-steps",
+        "title": "Next Steps",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ready to Get Started?",
+            "subtitle": "Simple process to begin your digital transformation"
+          },
+          {
+            "type": "diagram",
+            "title": "Onboarding Process",
+            "content": "Step 1: Discovery Call (30 mins)\n    ↓\nStep 2: Business Assessment (2 hours)\n    ↓\nStep 3: Solution Proposal & Pricing\n    ↓\nStep 4: Contract & Project Kickoff\n    ↓\nStep 5: Implementation Begins!",
+            "note": {
+              "text": "From initial contact to project start in 2 weeks or less"
+            }
+          },
+          {
+            "type": "content",
+            "title": "What to Expect Next",
+            "box": {
+              "title": "📅 Project Timeline",
+              "list": [
+                { "emoji": "📞", "text": "Week 1: Discovery & Requirements" },
+                { "emoji": "📋", "text": "Week 1: Proposal & Agreement" },
+                { "emoji": "🚀", "text": "Week 2: Project Kickoff" },
+                { "emoji": "🛠️", "text": "Weeks 3-6: Implementation" },
+                { "emoji": "🎓", "text": "Week 7: Training & Go-Live" },
+                { "emoji": "🔧", "text": "Month 2: Optimization & Support" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Get Started Today",
+            "box": {
+              "title": "🎯 Immediate Next Steps",
+              "list": [
+                { "emoji": "📅", "text": "Schedule Discovery Call" },
+                { "emoji": "📊", "text": "Download ROI Calculator" },
+                { "emoji": "🎥", "text": "Watch Client Success Stories" },
+                { "emoji": "📖", "text": "Review Case Studies" },
+                { "emoji": "💬", "text": "Chat with Solutions Expert" }
+              ]
+            }
+          },
+          {
+            "type": "thank-you",
+            "title": "Let's Transform Your Business Together!",
+            "backgroundImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+            "box": {
+              "content": "Take the first step toward digital transformation. Our productized approach ensures predictable outcomes, rapid deployment, and guaranteed business value.",
+              "note": "📞 Call: +91-9841012345 | 📧 Email: solutions@erpnext-partner.com | 🌐 Web: www.erpnext-solutions.com"
+            },
+            "footer": {
+              "org": "ERPNext Solutions Partner | Since 2018",
+              "tagline": "Enterprise Reliability. Open Source Freedom. Proven Outcomes."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

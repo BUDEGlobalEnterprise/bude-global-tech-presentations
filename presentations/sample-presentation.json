@@ -1,0 +1,463 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Web Development",
+            "subtitle": "Complete Guide to Modern Web Technologies<br>From Basics to Advanced Concepts"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "what-is-webdev",
+        "title": "What is Web Development?",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What is Web Development?",
+            "box": {
+              "content": "The process of <span class=\"highlight\">building and maintaining websites</span> covering:",
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Frontend</strong> - What users see and interact with"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Backend</strong> - Server, database, and application logic"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Full Stack</strong> - Combination of frontend and backend"
+                }
+              ]
+            },
+            "note": {
+              "text": "<strong>Evolution:</strong> From static HTML to dynamic web applications<br><strong>Trend:</strong> Moving towards JAMstack and serverless"
+            }
+          }
+        ]
+      },
+      {
+        "id": "frontend-tech",
+        "title": "Frontend Technologies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Frontend Development",
+            "box": {
+              "content": "Everything users see and interact with directly"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🎯</span> <strong>Goal:</strong> Create engaging, responsive user experiences"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Core Technologies",
+            "box": {
+              "title": "The Building Blocks",
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>HTML</strong> - Structure and content"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>CSS</strong> - Styling and layout"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>JavaScript</strong> - Interactivity and logic"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "html-basics",
+        "title": "HTML Fundamentals",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "HTML - The Skeleton"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "HTML Structure",
+            "box": {
+              "content": "<strong>Basic HTML Document Structure</strong>",
+              "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My Page</title>\n</head>\n<body>\n    <h1>Hello World!</h1>\n    <p>This is a paragraph.</p>\n</body>\n</html>"
+            },
+            "list": [
+              {
+                "emoji": "📝",
+                "text": "DOCTYPE declares HTML version"
+              },
+              {
+                "emoji": "🏷️",
+                "text": "Tags define elements and structure"
+              },
+              {
+                "emoji": "📋",
+                "text": "Semantic HTML improves accessibility"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "css-styling",
+        "title": "CSS Styling",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "CSS Basics",
+            "box": {
+              "content": "<strong>Styling with CSS</strong>",
+              "code": "/* Select element by tag */\nh1 {\n    color: blue;\n    font-size: 2em;\n}\n\n/* Select by class */\n.highlight {\n    background-color: yellow;\n}\n\n/* Select by ID */\n#main-content {\n    width: 80%;\n    margin: 0 auto;\n}"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> CSS controls presentation: colors, layout, fonts, animations"
+            }
+          }
+        ]
+      },
+      {
+        "id": "javascript-intro",
+        "title": "JavaScript Introduction",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "JavaScript Basics",
+            "box": {
+              "content": "<strong>Adding Interactivity</strong>",
+              "code": "// Variables\nlet message = 'Hello';\nconst PI = 3.14;\n\n// Functions\nfunction greet(name) {\n    return `${message}, ${name}!`;\n}\n\n// Event handling\ndocument.querySelector('button').addEventListener('click', () => {\n    alert('Button clicked!');\n});"
+            },
+            "list": [
+              {
+                "emoji": "🔄",
+                "text": "Manipulate DOM elements"
+              },
+              {
+                "emoji": "🎯",
+                "text": "Handle user interactions"
+              },
+              {
+                "emoji": "📡",
+                "text": "Make API calls"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "modern-frameworks",
+        "title": "Modern Frameworks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Modern Web Frameworks"
+          },
+          {
+            "type": "content",
+            "emoji": "⚛️",
+            "title": "Popular Frameworks",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⭐",
+                  "text": "<strong>React</strong> - Component-based UI library by Facebook"
+                },
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>Vue</strong> - Progressive framework, easy learning curve"
+                },
+                {
+                  "emoji": "🅰️",
+                  "text": "<strong>Angular</strong> - Full-featured framework by Google"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Svelte</strong> - Compiler-based, no virtual DOM"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "backend-intro",
+        "title": "Backend Development",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Backend - The Brain"
+          },
+          {
+            "type": "content",
+            "emoji": "🖥️",
+            "title": "Backend Technologies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python</strong> - Django, Flask, FastAPI"
+                },
+                {
+                  "emoji": "☕",
+                  "text": "<strong>Java</strong> - Spring Boot, enterprise applications"
+                },
+                {
+                  "emoji": "💎",
+                  "text": "<strong>Ruby</strong> - Ruby on Rails, rapid development"
+                },
+                {
+                  "emoji": "🟨",
+                  "text": "<strong>Node.js</strong> - JavaScript on server"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Databases",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Database Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>SQL</strong> - Structured, relational (MySQL, PostgreSQL)"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>NoSQL</strong> - Flexible, document-based (MongoDB)"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Key-Value</strong> - Fast caching (Redis)"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "devops-tools",
+        "title": "DevOps & Tools",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Essential Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Git</strong> - Version control system"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Containerization"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - AWS, Azure, Google Cloud"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CI/CD</strong> - Automated testing and deployment"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Web Development Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Key Principles",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Responsive Design</strong> - Works on all devices"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Fast loading times"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Protect user data"
+                },
+                {
+                  "emoji": "♿",
+                  "text": "<strong>Accessibility</strong> - Everyone can use"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "career-paths",
+        "title": "Career Paths",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Web Development Careers",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Frontend Developer</strong> - UI/UX implementation"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Backend Developer</strong> - Server, APIs, databases"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Full Stack Developer</strong> - End-to-end development"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Developer</strong> - React Native, Flutter"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-path",
+        "title": "Learning Path",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🛣️",
+            "title": "How to Learn Web Development",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Master HTML, CSS, JavaScript fundamentals"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Learn a frontend framework (React/Vue)"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Understand backend basics (Node.js/Python)"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Practice with projects and build portfolio"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Learn DevOps and deployment"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Learning Resources",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>MDN Web Docs</strong> - Official documentation"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>freeCodeCamp</strong> - Free interactive courses"
+                },
+                {
+                  "emoji": "📹",
+                  "text": "<strong>YouTube</strong> - Tutorials and walkthroughs"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>GitHub</strong> - Open source projects"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss web development, career paths, or specific technologies!<br><span class=\"gradient-accent\">All questions are welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐍</span> Ready to code in Python?<br><span class=\"gradient-accent\">Start building something today!</span>",
+              "note": "Practice • Build Projects • Join Community"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
