@@ -1,7 +1,7 @@
 const PRESENTATIONS_CONFIG = [
   // ============= BEGINNER FUNDAMENTALS =============
   {
-    file: "templates/sample-presentation.json",
+    file: "presentations/sample-presentation.json",
     title: "Introduction to Web Development",
     description: "Complete guide to modern web technologies from basics to advanced concepts",
     keywords: ["web", "html", "css", "javascript", "frontend", "backend", "fullstack"],
@@ -9,7 +9,7 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "beginner"
   },
   {
-    file: "templates/advanced-slides.json",
+    file: "presentations/advanced-slides.json",
     title: "Advanced Slide Components",
     description: "Testing Enhanced Features in BUDE Presentations",
     keywords: ["web", "html", "css", "javascript", "frontend", "backend", "fullstack"],
@@ -17,7 +17,7 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "beginner"
   },
   {
-    file: "templates/tamil-movie-quiz.json",
+    file: "presentations/tamil-movie-quiz.json",
     title: "Tamil Movie Challenge",
     description: "Hard-Level Post-2015 Movie Quizzes - Can You Guess Them All?",
     keywords: ["quiz", "tamil", "movies", "challenge", "fun"],
@@ -25,7 +25,7 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "beginner"
   },
   {
-    file: "templates/ERPNext-Solutions-Catalog.json",
+    file: "presentations/ERPNext-Solutions-Catalog.json",
     title: "ERPNext Solutions Catalog",
     description: "Transforming Open-Source Flexibility into Enterprise-Grade Reliability",
     keywords: ["erpnext", "business", "enterprise", "solutions", "catalog"],
@@ -436,6 +436,14 @@ const PRESENTATIONS_CONFIG = [
     description: "Learn about Keycloak, an open source identity and access management solution",
     keywords: ["keycloak", "iam", "identity", "access management", "sso", "oauth2", "oidc"],
     category: ["security"],
+    difficulty: "advanced"
+  },
+  {
+    file: "presentations/antigravity-deep-dive.json",
+    title: "Antigravity Deep Dive",
+    description: "Redefining the Future of Collaborative Coding with Agentic AI",
+    keywords: ["antigravity", "agentic-ai", "deepmind", "google", "automation", "pair-programming", "tools", "reasoning"],
+    category: ["ai-data", "tools"],
     difficulty: "advanced"
   }
 ];

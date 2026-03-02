@@ -106,53 +106,53 @@ function createCategoryMetadata(categoryId) {
     const categoryDefinitions = {
         'programming': {
             name: 'Programming Languages',
-            icon: '🔵',
-            description: 'Modern programming languages and paradigms'
+            icon: '💻',
+            description: 'Core architectures and language specifications'
         },
         'backend': {
             name: 'Backend Frameworks',
-            icon: '🟣',
-            description: 'Server-side frameworks and APIs'
+            icon: '⚙️',
+            description: 'Scalable server-side architectures'
         },
         'frontend': {
             name: 'Frontend Frameworks',
-            icon: '🎨',
-            description: 'UI frameworks and libraries'
+            icon: '🖥️',
+            description: 'High-performance user interfaces'
         },
         'database': {
             name: 'Databases & Storage',
-            icon: '🔴',
-            description: 'Data storage and management systems'
+            icon: '🗄️',
+            description: 'Enterprise data management systems'
         },
         'devops': {
             name: 'DevOps & Cloud',
-            icon: '🟠',
-            description: 'Infrastructure, deployment, and orchestration'
+            icon: '☁️',
+            description: 'Cloud infrastructure and automation'
         },
         'security': {
             name: 'Security & Auth',
-            icon: '🟡',
-            description: 'Security protocols and authentication'
+            icon: '🔒',
+            description: 'Enterprise security and authentication'
         },
         'ai-data': {
             name: 'AI & Automation',
-            icon: '🟢',
-            description: 'Artificial intelligence and data processing'
+            icon: '🤖',
+            description: 'Artificial intelligence and data science'
         },
         'tools': {
             name: 'Tools & Productivity',
-            icon: '🟤',
-            description: 'Development tools and productivity software'
+            icon: '🛠️',
+            description: 'Professional development workflows'
         },
         'business': {
             name: 'Business Applications',
-            icon: '🟣',
-            description: 'Enterprise and business management systems'
+            icon: '📊',
+            description: 'Enterprise resource planning systems'
         },
         'uncategorized': {
             name: 'Other Topics',
-            icon: '📚',
-            description: 'Miscellaneous technical topics'
+            icon: '📄',
+            description: 'Miscellaneous technical resources'
         }
     };
 
@@ -170,7 +170,7 @@ function createCategoryMetadata(categoryId) {
         name: categoryId.split('-').map(word =>
             word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' '),
-        icon: '📦',
+        icon: '📄',
         description: `${categoryId} related topics`
     };
 }
@@ -337,7 +337,7 @@ function createPresentationCard(presentation) {
     return `
         <div class="presentation-card" onclick="loadPresentation('${presentation.file}')">
             <div class="card-header">
-                <div class="icon">📚</div>
+                <div class="icon">📄</div>
                 ${difficultyBadge}
             </div>
             <div class="title">${presentation.title}</div>
@@ -587,7 +587,7 @@ async function loadPresentation(file) {
         await renderSlides(data);
 
         // Update document title
-        document.title = `${presentation.title} | Bude Global`;
+        document.title = `${presentation.title} | Elite Tech Docs`;
 
     } catch (error) {
         console.error("Error loading presentation:", error);
@@ -596,17 +596,18 @@ async function loadPresentation(file) {
         const slidesContainer = document.querySelector('.slides');
         if (slidesContainer) {
             slidesContainer.innerHTML = `
-                <section class="center" style="text-align: center; padding: 2rem;">
-                    <h2 style="color: #e94560; margin-bottom: 1rem;">⚠️ Error Loading Presentation</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-                        We couldn't load this presentation. Please try again later.
+                <section class="center" style="text-align: center; padding: 4rem;">
+                    <h2 style="color: var(--text-primary); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 2px;">⚠️ Error Loading Presentation</h2>
+                    <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px;">
+                        The requested resource could not be initialized at this time.
                     </p>
                     <button onclick="returnToHomepage()" 
-                            style="margin-top: 2rem; padding: 1rem 2rem; font-size: 1.1rem; cursor: pointer; 
-                                   border-radius: 8px; background: linear-gradient(135deg, #6f42c1, #cb6ce6); 
-                                   color: white; border: none; box-shadow: 0 4px 15px rgba(111, 66, 193, 0.4);
-                                   transition: transform 0.2s;">
-                        ← Back to Home
+                            style="margin-top: 2rem; padding: 1rem 2rem; font-size: 0.8rem; cursor: pointer; 
+                                   border-radius: 0; background: var(--text-primary); 
+                                   color: var(--bg-primary); border: none; font-weight: 700;
+                                   text-transform: uppercase; letter-spacing: 2px;
+                                   transition: var(--transition);">
+                        ← Return to Terminal
                     </button>
                 </section>
             `;
@@ -620,7 +621,7 @@ async function loadPresentation(file) {
 function returnToHomepage() {
     document.body.classList.remove('presentation-mode');
     document.querySelector('.reveal').classList.remove('active');
-    document.title = 'Bude Global Tech Presentations | Dynamic, Open-Source Knowledge Platform';
+    document.title = 'Elite Tech Docs | Enterprise Knowledge Platform';
     location.reload();
 }
 
