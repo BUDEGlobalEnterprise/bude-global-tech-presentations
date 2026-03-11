@@ -54,6 +54,10 @@
   --dark-card-bg: #0f172a;
   --dark-card-border: #1e293b;
   
+  /* Colors */
+  --bude-purple: #7c3aed;
+  --bude-pink: #db2777;
+  
   /* Border Radius - Sharp Enterprise Look */
   --radius-sm: 0px;
   --radius-md: 0px;
@@ -1540,6 +1544,7 @@ html[data-theme="light"] .variable {
 }
 
 .gradient-accent {
+  color: var(--bude-primary); /* Fallback */
   background: linear-gradient(
     135deg,
     var(--bude-purple) 0%,
@@ -1558,11 +1563,12 @@ body.presentation-mode {
 }
 
 body.presentation-mode .header,
+body.presentation-mode .global-header.enhanced,
 body.presentation-mode .search-container,
 body.presentation-mode .stats-bar,
 body.presentation-mode .categories-container,
 body.presentation-mode .contrib-carousel {
-  display: none;
+  display: none !important;
 }
 
 body.presentation-mode footer {
@@ -1586,8 +1592,9 @@ body.presentation-mode .reveal .slides {
 }
 
 body.presentation-mode .reveal .slides > section {
-  height: 100% !important;
+  min-height: 100% !important;
   padding: 2rem !important;
+  overflow-y: auto !important;
 }
 
 /* Mobile presentation optimization */
@@ -2098,7 +2105,7 @@ body.presentation-mode #main-selector-ui {
 /* Reduce spacing between header and slides in presentation mode
    Reveal.js centers slides in full viewport, creating excessive gap with sticky header */
 body.presentation-mode .reveal .slides {
-  margin-top: -80px !important;
+  margin-top: 0 !important;
 }
 
 /* ============================================
@@ -2108,10 +2115,10 @@ body.presentation-mode .reveal .slides {
 .reveal {
   display: none;
   position: relative;
-  z-index: 1;
+  z-index: 5000;
   color: var(--text-primary);
   font-size: 28px;
-  background: transparent;
+  background: var(--bg-primary);
 }
 
 .reveal.active {
@@ -2130,6 +2137,7 @@ body.presentation-mode .reveal .slides {
 }
 
 .reveal h1 {
+  color: var(--text-primary); /* Fallback for when gradient fails */
   background: linear-gradient(
     135deg,
     var(--bude-primary) 0%,
@@ -2182,12 +2190,14 @@ body.presentation-mode .reveal .slides {
   margin: 0 auto;
   width: 100% !important;
   max-width: 100% !important;
-  height: 100% !important;
+  min-height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   align-items: center !important;
+  padding-top: 100px !important;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto !important;
 }
 
 .reveal .slides section.center {
@@ -2258,7 +2268,7 @@ body.hide-watermark::before {
   padding: 1.5em 2em;
   margin: 1.5em auto;
   border-radius: 16px;
-  font-size: 0.9em;
+  font-size: 1.1em;
   max-width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -2269,22 +2279,43 @@ body.hide-watermark::before {
 }
 
 /* Code blocks - Better contrast */
-code {
+.code-block {
+  width: 100%;
+  margin-top: 1.5em;
+  text-align: left;
+}
+
+.code-block pre {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1.5em;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  margin: 0;
+}
+
+html[data-theme="dark"] .code-block pre {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.reveal code {
   background: rgba(0, 96, 160, 0.15) !important;
   padding: 0.5em 0.9em;
   border-radius: 6px;
   color: var(--bude-primary) !important;
-  font-size: 1.2em;
+  font-size: 1.5em !important;
   font-family: "Courier New", monospace;
   font-weight: 600;
 }
 
-html[data-theme="dark"] code {
+html[data-theme="dark"] .reveal code {
   background: rgba(111, 66, 193, 0.25) !important;
   color: var(--bude-pink) !important;
 }
 
-html[data-theme="light"] code {
+html[data-theme="light"] .reveal code {
   background: rgba(0, 96, 160, 0.15) !important;
   color: var(--bude-primary) !important;
 }

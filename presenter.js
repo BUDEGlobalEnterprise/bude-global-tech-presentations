@@ -1442,7 +1442,7 @@ async function renderSlides(data) {
     const revealConfig = {
         controls: true,
         progress: true,
-        center: true,
+        center: false,
         hash: true,
         transition: 'none', // Disable transition effects (removes sparkle/circle)
         transitionSpeed: 'fast',

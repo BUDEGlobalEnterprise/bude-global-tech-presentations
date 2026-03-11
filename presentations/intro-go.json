@@ -1,0 +1,882 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Go (Golang)",
+            "subtitle": "Simplicity, Reliability, and Efficiency <br> Modern Systems Programming"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "introduction-go",
+        "title": "1. Introduction & History",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Introduction & History",
+            "box": {
+              "content": "Why Go was created and what it stands for"
+            }
+          },
+          {
+            "type": "content",
+            "title": "What is Go?",
+            "box": {
+              "content": "Go (often called Golang) is a statically typed, compiled programming language designed at Google. It was created to address the challenges of large-scale software development: slow builds, uncontrolled dependencies, and difficult concurrency. Go combines the <span class=\"highlight\">performance</span> of low-level languages like C++ with the <span class=\"highlight\">readability</span> and productivity of high-level languages like Python.",
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Static Typing</strong> - Provides safety and catches errors early at compile time."
+                },
+                {
+                  "emoji": "🐢",
+                  "text": "<strong>Garbage Collected</strong> - Relieves developers from manual memory management, preventing memory leaks."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Compiled</strong> - Direct translation to machine code means no virtual machine overhead, leading to blazing fast execution."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Origins of Go",
+            "box": {
+              "content": "Created at Google in 2007 to solve real engineering problems",
+              "list": [
+                {
+                  "emoji": "👨‍💻",
+                  "text": "<strong>Robert Griesemer</strong> - V8, Java HotSpot"
+                },
+                {
+                  "emoji": "👨‍💻",
+                  "text": "<strong>Rob Pike</strong> - Unix, UTF-8, Limbo"
+                },
+                {
+                  "emoji": "👨‍💻",
+                  "text": "<strong>Ken Thompson</strong> - B, C, Unix, Plan 9"
+                }
+              ]
+            },
+            "note": { "text": "Released as open source in November 2009" }
+          },
+          {
+            "type": "content",
+            "title": "The Design Philosophy",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Simplicity</strong> - Minimalist syntax over cleverness"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Readability</strong> - Code is for humans to read"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Pragmatism</strong> - Built for large-scale software"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Speed</strong> - Fast compile and run times"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Famous Mascot",
+            "box": {
+              "content": "The <strong>Go Gopher</strong> is one of the most beloved mascots in tech",
+              "list": [
+                { "emoji": "🐹", "text": "Designed by Renee French" },
+                {
+                  "emoji": "🎨",
+                  "text": "Represents the language's friendly nature"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Open source mascot (Creative Commons)"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "environment-tools",
+        "title": "2. Environment & Tooling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. Environment & Tooling",
+            "box": { "content": "Setting up your workspace for success" }
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Installing Go",
+            "box": {
+              "title": "Quick Start",
+              "list": [
+                { "emoji": "🌐", "text": "Visit <strong>go.dev/dl</strong>" },
+                {
+                  "emoji": "💻",
+                  "text": "Select installer for Windows, Mac, or Linux"
+                },
+                { "emoji": "✅", "text": "Verify: <code>go version</code>" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "GOPATH vs Go Modules",
+            "box": {
+              "content": "Before version 1.11, projects had to live inside a single global workspace defined by the <code>GOPATH</code> environment variable. This was restrictive and made versioning difficult. <br><br> Modern Go uses <strong>Go Modules</strong> (introduced in 1.11 and default since 1.13), which allows you to place your project anywhere and manage dependencies precisely with a <code>go.mod</code> file.",
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Legacy (GOPATH):</strong> Strictly required code to be at <code>$GOPATH/src</code>."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Modern (Modules):</strong> Dependencies are tracked per project, ensuring reproducible builds."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Command:</strong> Initialize with <code>go mod init <module-path></code> to start a new project."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Go Command",
+            "box": {
+              "list": [
+                {
+                  "emoji": "▶️",
+                  "text": "<code>go run</code> - Compile and run"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<code>go build</code> - Compile to binary"
+                },
+                { "emoji": "🧪", "text": "<code>go test</code> - Run tests" },
+                {
+                  "emoji": "🧹",
+                  "text": "<code>go fmt</code> - Format code automatically"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<code>go vet</code> - Static analysis"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Editor Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💙",
+                  "text": "<strong>VS Code</strong> - With the Go extension (Gopls)"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>GoLand</strong> - Full-featured JetBrains IDE"
+                },
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Vim/Emacs</strong> - Strong community support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "language-basics",
+        "title": "3. Language Basics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Language Basics",
+            "box": { "content": "Variables, Types, and Syntax" }
+          },
+          {
+            "type": "content",
+            "emoji": "👋",
+            "title": "Hello World Explained",
+            "box": {
+              "content": "Every Go file starts with a package declaration. The <code>main</code> package is a special name that tells the Go compiler that this file should compile as an executable, rather than a shared library. The <code>main</code> function inside this package is the entry point where execution begins.",
+              "code": "// main.go\npackage main\n\nimport \"fmt\" // Import the standard formatting library\n\n// The main function is where the program starts\nfunc main() {\n    // Println outputs text followed by a new line\n    fmt.Println(\"Hello, Bude Global!\")\n}"
+            },
+            "list": [
+              {
+                "emoji": "📦",
+                "text": "<code>package main</code> - Identifies the file as an executable program."
+              },
+              {
+                "emoji": "📥",
+                "text": "<code>import \"fmt\"</code> - Provides functions for formatting text and printing to console."
+              },
+              {
+                "emoji": "🎯",
+                "text": "<code>func main()</code> - The mandatory starting point for any Go application."
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "title": "Variables & Inference",
+            "box": {
+              "content": "Go is strongly typed, but it offers several ways to declare variables to reduce verbosity. While <code>var</code> is used for general declarations, the short declaration operator <code>:=</code> is the most common way to initialize variables within functions.",
+              "code": "// 1. Explicit type declaration\nvar count int = 10 \n\n// 2. Type inference (Go figures it out)\nvar message = \"Hello Go\"\n\n// 3. Short declaration operator (most common inside functions)\nstatus := \"Success\"\n\n// 4. Multiple declarations\nvar a, b, c = 1, \"hi\", true\n\n// 5. Block declaration\nvar (\n    name    string = \"Bude\"\n    version int    = 1\n)"
+            },
+            "note": {
+              "text": "Note: <code>:=</code> cannot be used outside of function bodies."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Zero Values",
+            "box": {
+              "content": "Variables are initialized to their <strong>zero value</strong> if not specified",
+              "list": [
+                {
+                  "emoji": "0️⃣",
+                  "text": "<code>int</code>, <code>float</code> → 0"
+                },
+                {
+                  "emoji": "📭",
+                  "text": "<code>string</code> → \"\" (empty string)"
+                },
+                { "emoji": "❌", "text": "<code>bool</code> → false" },
+                {
+                  "emoji": "👻",
+                  "text": "<code>pointers/slices/maps</code> → nil"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Constants & iota",
+            "box": {
+              "code": "const Pi = 3.14\n\nconst (\n    Red = iota // 0\n    Blue       // 1\n    Green      // 2\n)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Basic Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "Explicit sized: int8, int64, uint32"
+                },
+                { "emoji": "🌊", "text": "Floating: float32, float64" },
+                { "emoji": "🔡", "text": "Text: string, rune (int32)" },
+                { "emoji": "🤖", "text": "Complex: complex64, complex128" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Strings & Runes",
+            "box": {
+              "content": "Go strings are UTF-8 encoded by default",
+              "code": "s := \"Hello 🌏\"\nfmt.Println(len(s)) // 10 bytes\n\nfor i, w := range s {\n    fmt.Printf(\"%d: %q\\n\", i, w)\n}"
+            },
+            "note": {
+              "text": "A <strong>rune</strong> is a Unicode code point"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Pointers",
+            "box": {
+              "content": "Safe pointer support - No pointer arithmetic",
+              "code": "x := 42\np := &x      // Get address\nfmt.Println(*p) // Dereference\n\n*p = 21      // Change value at address"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Type Conversions",
+            "box": {
+              "content": "Go requires <strong>explicit</strong> conversion",
+              "code": "var i int = 42\nvar f float64 = float64(i)\nvar u uint = uint(f)\n\n// No implicit: float64(i) works, f = i fails"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-structures",
+        "title": "4. Data Structures",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Data Structures",
+            "box": { "content": "Arrays, Slices, and Maps" }
+          },
+          {
+            "type": "content",
+            "title": "Arrays",
+            "box": {
+              "content": "Fixed size, part of the type",
+              "code": "var a [5]int\na[0] = 100\n\nb := [2]string{\"hello\", \"world\"}"
+            },
+            "note": { "text": "Arrays are rarely used directly; use slices!" }
+          },
+          {
+            "type": "content",
+            "title": "Slices: The Heart of Go",
+            "box": {
+              "content": "Slices are the most powerful and common data structure in Go. Unlike arrays, which have a fixed size, slices are dynamic and grow as needed. A slice is essentially a descriptor for a contiguous segment of an underlying array.",
+              "code": "// Create a slice with some values\ns := []int{1, 2, 3}\n\n// Add a new element (returns a new slice)\ns = append(s, 4)\n\n// Slicing an existing slice (half-open range [1, 3))\n// Includes index 1, but excludes index 3\nsub := s[1:3] // returns [2, 3]\n\n// Slicing from the start\nstart := s[:2] // [1, 2]\n\n// Slicing to the end\nend := s[2:] // [3, 4]"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Slice Internals",
+            "box": {
+              "content": "Under the hood, a slice is a header consisting of three components. Understanding this is crucial for avoiding common bugs like 'unintended sharing' of underlying arrays between different slices.",
+              "list": [
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Pointer:</strong> Points to the first element of the range in the underlying array."
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Length:</strong> The number of elements currently in the slice."
+                },
+                {
+                  "emoji": "🔋",
+                  "text": "<strong>Capacity:</strong> The maximum number of elements the slice can hold before needing to reallocate."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Working with Slices",
+            "box": {
+              "code": "s := make([]int, 5, 10) // len 5, cap 10\n\ncopy_s := make([]int, len(s))\ncopy(copy_s, s)\n\n// Remove element at index i\ns = append(s[:i], s[i+1:]...)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Appending to Slices",
+            "box": {
+              "title": "How append() works",
+              "list": [
+                { "emoji": "➕", "text": "Adds elements to the end" },
+                { "emoji": "🔄", "text": "Doubles capacity if full" },
+                { "emoji": "📜", "text": "May allocate a new underlying array" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Maps",
+            "box": {
+              "content": "A map is Go's built-in associative data structure (like a dictionary or hash table). It maps keys of one type to values of another. Keys must be 'comparable' types (integers, strings, etc.).",
+              "code": "/* Initialize a map */\nm := make(map[string]int)\n\n/* Insert/Update */\nm[\"Alice\"] = 30\nm[\"Bob\"] = 25\n\n/* Read and Check Existence */\nval, ok := m[\"Charlie\"] \nif !ok {\n    fmt.Println(\"Key not found\")\n}\n\n/* Delete a key */\ndelete(m, \"Alice\")"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Map Iteration",
+            "box": {
+              "content": "<strong>Warning:</strong> Iteration order is random!",
+              "code": "for k, v := range m {\n    fmt.Println(k, v)\n}\n\ndelete(m, \"key\")"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Structs",
+            "box": {
+              "content": "Collections of fields",
+              "code": "type Person struct {\n    Name string\n    Age  int\n}\n\np := Person{Name: \"Alice\", Age: 30}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "control-flow",
+        "title": "5. Control Flow",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Control Flow",
+            "box": { "content": "If, For, Switch" }
+          },
+          {
+            "type": "content",
+            "title": "If/Else",
+            "box": {
+              "content": "Go's <code>if</code> statement is familiar but has a few unique features. Parentheses are not required around the condition, and you can include a short 'initialization' statement before the condition.",
+              "code": "/* 'If' with initialization */\nif val := calculate(); val > 100 {\n    fmt.Println(\"Value is huge!\", val)\n} else if val > 50 {\n    fmt.Println(\"Value is moderate\", val)\n} else {\n    fmt.Println(\"Value is small\")\n}\n\n// Note: 'val' is NOT accessible here (out of scope)"
+            },
+            "note": {
+              "text": "The initialization variable is often used for error checking: <code>if err := doTask(); err != nil</code>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "For Loops",
+            "box": {
+              "content": "The only loop construct in Go",
+              "code": "// 1. Standard\nfor i := 0; i < 5; i++ {}\n\n// 2. While equivalents\nfor condition {}\n\n// 3. Infinite\nfor {}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Range Iteration",
+            "box": {
+              "code": "// Slices\nfor i, v := range slice {}\n\n// Maps\nfor k, v := range map_val {}\n\n// Channels\nfor v := range ch {}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Switch Statements",
+            "box": {
+              "content": "No default fallthrough - Cleaner than C",
+              "code": "switch os := runtime.GOOS; os {\ncase \"darwin\":\n    fmt.Println(\"Mac\")\ncase \"linux\":\n    fmt.Println(\"Linux\")\ndefault:\n    fmt.Println(os)\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Type Switches",
+            "box": {
+              "code": "var i interface{} = 42\nswitch v := i.(type) {\ncase int:\n    fmt.Println(\"Integer\", v)\ncase string:\n    fmt.Println(\"String\", v)\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "functions-defer",
+        "title": "6. Functions & Defer",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Functions & Defer",
+            "box": { "content": "Reusable logic and deferred execution" }
+          },
+          {
+            "type": "content",
+            "title": "Function Basics",
+            "box": {
+              "content": "Functions are first-class citizens in Go. They can be passed as arguments, returned from other functions, and assigned to variables. A function is defined with the <code>func</code> keyword, followed by the name, parameters, and the return type.",
+              "code": "/* A simple function with parameters and return type */\nfunc add(x int, y int) int {\n    return x + y\n}\n\n/* Grouping parameters of the same type */\nfunc multiply(x, y int) int {\n    return x * y\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Multiple Return Values",
+            "box": {
+              "code": "func swap(x, y string) (string, string) {\n    return y, x\n}\n\na, b := swap (\"hello\", \"world\")"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Named & Naked Returns",
+            "box": {
+              "code": "func split(sum int) (x, y int) {\n    x = sum * 4 / 9\n    y = sum - x\n    return // Naked return\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Variadic Functions",
+            "box": {
+              "code": "func sum(nums ...int) int {\n    total := 0\n    for _, n := range nums {\n        total += n\n    }\n    return total\n}\n\nsum(1, 2, 3, 4)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Closures",
+            "box": {
+              "code": "func intSeq() func() int {\n    i := 0\n    return func() int {\n        i++\n        return i\n    }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Defer Keyword",
+            "box": {
+              "content": "The <code>defer</code> statement is one of Go's most elegant features for resource management. It delays the execution of a function until the surrounding function is about to return. It is commonly used for closing files, unlocking mutexes, or cleaning up resources, ensuring they are always handled regardless of which path the function takes to return.",
+              "code": "func processFile(filename string) error {\n    f, err := os.Open(filename)\n    if err != nil {\n        return err\n    }\n    \n    // Ensure the file is closed at the end\n    defer f.Close()\n\n    // Do work with f...\n    return nil\n}"
+            },
+            "note": {
+              "text": "Deferred calls follow <strong>LIFO</strong> (Last-In-First-Out) order."
+            }
+          }
+        ]
+      },
+      {
+        "id": "structs-methods",
+        "title": "7. Structs & Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Structs & Methods",
+            "box": { "content": "Defining behavior for types" }
+          },
+          {
+            "type": "content",
+            "title": "Struct Methods",
+            "box": {
+              "content": "Go does not have classes, but you can define 'methods' on any type (usually structs). A method is just a function with a special 'receiver' argument between the <code>func</code> keyword and the method name.",
+              "code": "type Rect struct {\n    Width, Height float64\n}\n\n/* Receiver (r Rect) makes this a method */\nfunc (r Rect) Area() float64 {\n    return r.Width * r.Height\n}\n\n/* Usage */\nrect := Rect{10.5, 20.0}\nfmt.Println(\"Area:\", rect.Area())"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Value vs Pointer Receivers",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Value:</strong> Method gets a copy (no changes)"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Pointer:</strong> Method can modify the receiver"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Pointer receivers are more memory efficient"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Struct Composition",
+            "box": {
+              "content": "No inheritance - use <strong>Embedding</strong>",
+              "code": "type Admin struct {\n    Person // Embedded\n    Root   bool\n}\n\na := Admin{Person: Person{Name: \"Joe\"}}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Initializing Structs",
+            "box": {
+              "code": "p1 := Person{\"Alice\", 25}       // Positional\np2 := Person{Name: \"Bob\"}       // Named (Age=0)\np3 := new(Person)               // Pointer to zeroed\np4 := &Person{Name: \"Charlie\"}   // Preferred"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interfaces",
+        "title": "8. Interfaces",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Interfaces",
+            "box": { "content": "Polymorphism through implicit implementation" }
+          },
+          {
+            "type": "content",
+            "title": "Implicit Interfaces",
+            "box": {
+              "content": "In many languages, you must explicitly state that a class 'implements' an interface. In Go, this is done <strong>implicitly</strong>. If a type provides all the methods declared in an interface, it is considered to implement that interface automatically. This allows for very flexible and decoupled code.",
+              "code": "/* 1. Define an interface */\ntype Shaper interface {\n    Area() float64\n}\n\n/* 2. Define a type */\ntype Circle struct { Radius float64 }\n\n/* 3. Implement the method (implicitly) */\nfunc (c Circle) Area() float64 {\n    return math.Pi * c.Radius * c.Radius\n}\n\n// Circle now satisfies Shaper"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Empty Interface",
+            "box": {
+              "content": "<code>interface{}</code> (or <code>any</code>) can hold any value",
+              "code": "var i any\ni = 42\ni = \"hello\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Type Assertions",
+            "box": {
+              "code": "s, ok := i.(string)\nif ok {\n    fmt.Println(s)\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Standard Interfaces",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<code>io.Reader</code> - Read bytes"
+                },
+                {
+                  "emoji": "✍️",
+                  "text": "<code>io.Writer</code> - Write bytes"
+                },
+                {
+                  "emoji": "🔡",
+                  "text": "<code>fmt.Stringer</code> - .String() method"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<code>error</code> - .Error() method"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "error-handling",
+        "title": "9. Error Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Error Handling",
+            "box": { "content": "Errors are values, not exceptions" }
+          },
+          {
+            "type": "content",
+            "title": "The Error Pattern",
+            "box": {
+              "content": "Go encourages handling errors explicitly rather than catching exceptions. Errors are just values that implement the <code>error</code> interface. Functions that can fail usually return an error as their last return value, and it's the caller's responsibility to check it immediately.",
+              "code": "/* A function that may return an error */\nfunc divide(a, b float64) (float64, error) {\n    if b == 0 {\n        return 0, errors.New(\"cannot divide by zero\")\n    }\n    return a / b, nil\n}\n\n/* Usage */\nresult, err := divide(10, 0)\nif err != nil {\n    fmt.Println(\"Error:\", err)\n    return\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom Errors",
+            "box": {
+              "code": "type MyError struct { Msg string }\nfunc (e *MyError) Error() string { return e.Msg }\n\nreturn &MyError{\"something broke\"}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Panic & Recover",
+            "box": {
+              "content": "Only for unrecoverable situations",
+              "list": [
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Panic:</strong> Stops execution, starts unwinding stack"
+                },
+                {
+                  "emoji": "🩹",
+                  "text": "<strong>Recover:</strong> Regain control in a deferred function"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "concurrency",
+        "title": "10. Concurrency",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Concurrency",
+            "box": { "content": "Goroutines, Channels, and Select" }
+          },
+          {
+            "type": "content",
+            "title": "The Concurrency Mindset",
+            "box": {
+              "content": "Concurrency is <strong>not</strong> Paralellism",
+              "list": [
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Concurrency:</strong> Dealing with many things at once"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Parallelism:</strong> Doing many things at once"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Goroutines",
+            "box": {
+              "content": "A goroutine is a lightweight thread of execution managed by the Go runtime. Unlike OS threads, which are heavy and have a large fixed stack size, goroutines start with very little memory (about 2KB) and are multiplexed onto a small number of OS threads. This allows you to run hundreds of thousands of goroutines simultaneously without exhausting system resources.",
+              "code": "// Launching a goroutine is simple\ngo doTask(\"Processing data\")\n\nfunc doTask(msg string) {\n    for i := 0; i < 3; i++ {\n        fmt.Println(msg, i)\n        time.Sleep(100 * time.Millisecond)\n    }\n}\n\n// Note: Execution continues here immediately"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Unbuffered Channels",
+            "box": {
+              "content": "Channels are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another. By default, channels are <strong>unbuffered</strong>, meaning they require both the sender and receiver to be ready at the same time for the communication to occur. This provides a natural synchronization point.",
+              "code": "/* Create an unbuffered channel */\nch := make(chan string)\n\n/* Launch goroutine to send data */\ngo func() {\n    ch <- \"ping\" // Blocks until someone receives\n}()\n\n/* Receive in main */\nmsg := <-ch // Blocks until someone sends\nfmt.Println(\"Received:\", msg)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Buffered Channels",
+            "box": {
+              "content": "Asynchronous until capacity is reached",
+              "code": "ch := make(chan int, 2)\nch <- 1\nch <- 2\n// ch <- 3 would block"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Select Statement",
+            "box": {
+              "content": "Waiting on multiple channel operations",
+              "code": "select {\ncase msg1 := <-c1:\n    fmt.Println(\"Received\", msg1)\ncase c2 <- 42:\n    fmt.Println(\"Sent to c2\")\ndefault:\n    fmt.Println(\"No activity\")\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "WaitGroups",
+            "box": {
+              "content": "Synchronizing multiple goroutines",
+              "code": "var wg sync.WaitGroup\nfor i := 0; i < 5; i++ {\n    wg.Add(1)\n    go func() {\n        defer wg.Done()\n        // do work\n    }()\n}\nwg.Wait()"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Mutexes",
+            "box": {
+              "content": "Protecting shared state",
+              "code": "var mu sync.Mutex\nmu.Lock()\ncounter++\nmu.Unlock()"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Race Detector",
+            "box": {
+              "content": "Find concurrency bugs easily",
+              "code": "go run -race main.go\ngo test -race ./..."
+            }
+          }
+        ]
+      },
+      {
+        "id": "std-lib",
+        "title": "11. Standard Library",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Standard Library",
+            "box": { "content": "Built-in power without dependencies" }
+          },
+          {
+            "type": "content",
+            "title": "Web Servers (net/http)",
+            "box": {
+              "content": "Go's standard library includes a production-grade HTTP server. It is highly performant because every request is handled in its own goroutine automatically. This makes Go an excellent choice for building microservices and web APIs.",
+              "code": "package main\n\nimport \"net/http\"\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    w.Header().Set(\"Content-Type\", \"text/plain\")\n    w.Write([]byte(\"Hello from Bude!\"))\n}\n\nfunc main() {\n    http.HandleFunc(\"/\", handler)\n    http.ListenAndServe(\":8080\", nil)\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "JSON (encoding/json)",
+            "box": {
+              "code": "data, _ := json.Marshal(p)\njson.Unmarshal(data, &p)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Files (os & io)",
+            "box": {
+              "code": "f, _ := os.Open(\"file\")\nb, _ := io.ReadAll(f)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Context Package",
+            "box": {
+              "content": "Timeouts and Cancellation",
+              "code": "ctx, cancel := context.WithTimeout(ctx, 5 * time.Second)\ndefer cancel()"
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing",
+        "title": "12. Testing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Testing",
+            "box": { "content": "First-class testing support" }
+          },
+          {
+            "type": "content",
+            "title": "Unit Tests",
+            "box": {
+              "code": "// file: add_test.go\nfunc TestAdd(t *testing.T) {\n    if add(1, 2) != 3 {\n        t.Error(\"1+2 should be 3\")\n    }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Benchmarks",
+            "box": {
+              "code": "func BenchmarkAdd(b *testing.T) {\n    for i := 0; i < b.N; i++ {\n        add(1, 2)\n    }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Fuzz Testing",
+            "box": {
+              "code": "func FuzzAdd(f *testing.F) {\n    f.Add(1, 2)\n    f.Fuzz(func(t *testing.T, a, b int) {\n        add(a, b)\n    })\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "modern-go",
+        "title": "13. Modern Go & Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Modern Go & Conclusion",
+            "box": { "content": "Generics and beyond" }
+          },
+          {
+            "type": "content",
+            "title": "Generics (Go 1.18+)",
+            "box": {
+              "code": "func Sum[T int | float64](nums []T) T {\n    var s T\n    for _, v := range nums {\n        s += v\n    }\n    return s\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Conclusion",
+            "box": {
+              "list": [
+                { "emoji": "✅", "text": "Built for scale and reliability" },
+                { "emoji": "✅", "text": "Unmatched concurrency model" },
+                { "emoji": "✅", "text": "Strong community and ecosystem" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,21 +1,21 @@
 # 📋 Presentations Progress Tracker
 
 > **Last Updated**: November 2025
-> **Total Presentations**: 50 ✅ | 57 ⬜
-> **Completion**: 46.7%
+> **Total Presentations**: 51 ✅ | 56 ⬜
+> **Completion**: 47.7%
 
 ---
 
 ## 📊 Progress Overview
 
 ```
-████████████░░░░░░░░░░░░░░░░░░ 46.7% Complete
+█████████████░░░░░░░░░░░░░░░░░ 47.7% Complete
 ```
 
 | Category | Completed | Pending | Total | Progress |
 |----------|-----------|---------|-------|----------|
-| 🟢 **Core Topics** | 50 | 57 | 107 | 46.7% |
-| 🔵 **Programming Languages** | 7 | 2 | 9 | 77.8% |
+| 🟢 **Core Topics** | 51 | 56 | 107 | 47.7% |
+| 🔵 **Programming Languages** | 8 | 1 | 9 | 88.9% |
 | 🟣 **Backend Frameworks** | 2 | 6 | 8 | 25% |
 | 🔴 **Databases & Storage** | 4 | 4 | 8 | 50% |
 | 🟠 **DevOps & Cloud** | 4 | 6 | 10 | 40% |
@@ -91,6 +91,7 @@
 - [x] #92 System Design - [View](presentations/intro-system-design.json)
 - [x] #93 Express.js Deep Dive - [View](presentations/intro-expressjs.json)
 - [x] #94 Antigravity Deep Dive - [View](presentations/antigravity-deep-dive.json)
+- [x] #108 Go (Golang) - [View](presentations/intro-go.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
 </details>
@@ -99,9 +100,8 @@
 
 ## ⬜ Pending Presentations (69)
 
-### 🔵 Programming Languages & Core Tech (9)
+### 🔵 Programming Languages & Core Tech (8)
 - [ ] [#66 Angular](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66)
-- [ ] [#1 Go (Golang)](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/1) - Introduction to Go programming
 - [ ] [#4 Ruby](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/4) - Ruby language fundamentals
 - [ ] [#5 Swift](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/5) - iOS development with Swift
 - [ ] [#6 Kotlin](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/6) - Android development with Kotlin
