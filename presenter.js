@@ -29,9 +29,9 @@ const ANIMATION_CONFIG = {
     },
     
     colors: {
-        primary: ['#0060a0', '#6f42c1', '#cb6ce6', '#23a6d5', '#23d5ab'],
-        neon: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0066'],
-        cosmic: ['#1a1a2e', '#16213e', '#0f3460', '#533483', '#e94560']
+        primary: ['#0f172a', '#1e293b', '#334155', '#475569', '#64748b'],
+        neon: ['#f8fafc', '#f1f5f9', '#e2e8f0', '#cbd5e1', '#94a3b8'],
+        cosmic: ['#020617', '#0f172a', '#1e293b', '#334155', '#475569']
     },
     
     isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
@@ -514,7 +514,7 @@ function createAnimatedGrid() {
     if (!canvas || !ctx) return;
     
     const gridSize = ANIMATION_CONFIG.isMobile ? 50 : 35;
-    const lineColor = '#0060a0';
+    const lineColor = '#94a3b8';
     let offset = 0;
     let animating = true;
     
@@ -543,7 +543,7 @@ function createAnimatedGrid() {
             ctx.stroke();
         }
         
-        ctx.fillStyle = '#6f42c1';
+        ctx.fillStyle = '#f8fafc';
         ctx.globalAlpha = 0.4;
         for (let x = offset % gridSize; x < w; x += gridSize) {
             for (let y = offset % gridSize; y < h; y += gridSize) {
@@ -617,7 +617,7 @@ function createParticleField() {
         });
         
         ctx.globalAlpha = 0.15;
-        ctx.strokeStyle = '#6f42c1';
+        ctx.strokeStyle = '#475569';
         ctx.lineWidth = 0.8;
         
         for (let i = 0; i < particles.length; i++) {
@@ -1234,8 +1234,9 @@ function addEnhancedStyles() {
             }
 
             .reveal .slides section {
-                padding: 0.5rem 1rem !important;
-                height: 100vh !important;
+                padding: 1rem 2rem !important;
+                height: auto !important;
+                min-height: 100vh !important;
                 overflow-y: auto;
             }
 

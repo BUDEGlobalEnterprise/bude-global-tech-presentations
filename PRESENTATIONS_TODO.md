@@ -1,20 +1,20 @@
 # 📋 Presentations Progress Tracker
 
 > **Last Updated**: November 2025
-> **Total Presentations**: 42 ✅ | 65 ⬜
-> **Completion**: 39.3%
+> **Total Presentations**: 50 ✅ | 57 ⬜
+> **Completion**: 46.7%
 
 ---
 
 ## 📊 Progress Overview
 
 ```
-██████████░░░░░░░░░░░░░░░░░░░░░ 39.3% Complete
+████████████░░░░░░░░░░░░░░░░░░ 46.7% Complete
 ```
 
 | Category | Completed | Pending | Total | Progress |
 |----------|-----------|---------|-------|----------|
-| 🟢 **Core Topics** | 42 | 65 | 107 | 39.3% |
+| 🟢 **Core Topics** | 50 | 57 | 107 | 46.7% |
 | 🔵 **Programming Languages** | 7 | 2 | 9 | 77.8% |
 | 🟣 **Backend Frameworks** | 2 | 6 | 8 | 25% |
 | 🔴 **Databases & Storage** | 4 | 4 | 8 | 50% |
@@ -26,7 +26,7 @@
 
 ---
 
-## ✅ Completed Presentations (38/107)
+## ✅ Completed Presentations (50/107)
 
 <details open>
 <summary><strong>Core Topics Completed</strong></summary>
@@ -79,7 +79,18 @@
 - [x] #80 Introduction to ImHex - Advanced Hex Editor - [View](presentations/intro-imhex.json)
 - [x] #81 Introduction to AdminLTE - [View](presentations/intro-adminlte.json)
 - [x] #82 Introduction to Grocy - ERP for Home & Small Inventory Management - [View](presentations/intro-grocy.json)
-- [x] #83 Ghost - Just a Blogging Platform - [View](presentations/intro-ghost.json)
+- [x] #83 Ghost - [View](presentations/intro-ghost.json)
+- [x] #84 Flutter - [View](presentations/intro-flutter.json)
+- [x] #85 iOS Advanced Development - [View](presentations/intro-ios-dev.json)
+- [x] #86 Vue.js - [View](presentations/intro-vue.json)
+- [x] #87 Svelte - [View](presentations/intro-svelte.json)
+- [x] #88 Ionic - [View](presentations/intro-ionic.json)
+- [x] #89 Appsmith / ToolJet - [View](presentations/intro-appsmith-tooljet.json)
+- [x] #90 Retool - [View](presentations/intro-retool.json)
+- [x] #91 AWS Cloud - [View](presentations/intro-aws.json)
+- [x] #92 System Design - [View](presentations/intro-system-design.json)
+- [x] #93 Express.js Deep Dive - [View](presentations/intro-expressjs.json)
+- [x] #94 Antigravity Deep Dive - [View](presentations/antigravity-deep-dive.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
 </details>
@@ -89,9 +100,7 @@
 ## ⬜ Pending Presentations (69)
 
 ### 🔵 Programming Languages & Core Tech (9)
-- [ ] [#65 Vue.js](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/65)
 - [ ] [#66 Angular](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66)
-- [ ] [#67 Svelte](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/67)
 - [ ] [#1 Go (Golang)](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/1) - Introduction to Go programming
 - [ ] [#4 Ruby](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/4) - Ruby language fundamentals
 - [ ] [#5 Swift](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/5) - iOS development with Swift
@@ -106,7 +115,6 @@
 - [ ] [#13 Laravel](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/13) - PHP web application framework
 - [ ] [#14 Spring Boot](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/14) - Java/Kotlin framework
 - [ ] [#15 ASP.NET Core](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/15) - Modern .NET web framework
-- [ ] [#16 Express.js Deep Dive](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/16) - Node.js web framework
 - [ ] [#17 Bun / Hono](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/17) - Next-gen JavaScript runtime
 
 ### 🔴 Databases & Storage (8)
@@ -120,8 +128,6 @@
 - [ ] [#25 Elasticsearch](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/25) - Search and analytics engine
 
 ### 🟠 DevOps, Infrastructure & Cloud (13)
-- [ ] [#72 AWS Cloud](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/72)
-- [ ] [#74 System Design](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/74)
 - [ ] [#75 DevOps – CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75)
 - [ ] [#26 Terraform](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/26) - Infrastructure as Code
 - [ ] [#27 Ansible](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/27) - Configuration management tool
@@ -167,8 +173,6 @@
 - [ ] [#58 OpenProject](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/58) - Project management platform
 - [ ] [#59 Apache Superset](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/59) - Business intelligence platform
 - [ ] [#60 Redash](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/60) - Data visualization tool
-- [ ] [#61 Appsmith / ToolJet](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/61) - Low-code app builders
-- [ ] [#62 Retool](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/62) - Internal tool builder
 
 ---
 
@@ -241,9 +245,9 @@ Have a topic not on this list? [Open a feature request](https://github.com/BUDEG
 ## 📊 Statistics
 
 - **Total Topics Planned**: 107
-- **Completed**: 38 (35.5%)
+- **Completed**: 50 (46.7%)
 - **In Progress**: 0
-- **Remaining**: 69 (64.5%)
+- **Remaining**: 57 (53.3%)
 - **Average per month**: ~3-5 presentations
 - **Estimated Completion**: Q4 2025
 
