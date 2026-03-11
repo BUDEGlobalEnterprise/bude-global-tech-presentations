@@ -92,6 +92,10 @@
 - [x] #93 Express.js Deep Dive - [View](presentations/intro-expressjs.json)
 - [x] #94 Antigravity Deep Dive - [View](presentations/antigravity-deep-dive.json)
 - [x] #108 Go (Golang) - [View](presentations/intro-go.json)
+- [x] #5 Swift - [View](presentations/intro-swift.json)
+- [x] #6 Kotlin - [View](presentations/intro-kotlin.json)
+- [x] #8 Bash Scripting - [View](presentations/intro-bash.json)
+- [x] #9 Regex - [View](presentations/intro-regex.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
 </details>
@@ -102,9 +106,6 @@
 
 ### 🔵 Programming Languages & Core Tech (8)
 - [ ] [#66 Angular](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66)
-- [ ] [#4 Ruby](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/4) - Ruby language fundamentals
-- [ ] [#5 Swift](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/5) - iOS development with Swift
-- [ ] [#6 Kotlin](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/6) - Android development with Kotlin
 - [ ] [#8 Bash Scripting](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/8) - Shell scripting mastery
 - [ ] [#9 Regex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/9) - Regular expressions guide
 

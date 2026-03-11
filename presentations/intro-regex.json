@@ -1,0 +1,502 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Mastering Regular Expressions",
+            "subtitle": "The Universal Language of Pattern Matching <br> From Fundamentals to Elite Data Processing"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "Specialist in .NET, Go, and Modern Cloud Architecture",
+            "oss_experience": "Open Source Contributor & Technical Content Creator",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "intro-regex",
+        "title": "1. Introduction: The Power of Patterns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Introduction",
+            "box": { "content": "Regex is more than just searching; it's a language for describing text." }
+          },
+          {
+            "type": "content",
+            "title": "What is Regex?",
+            "box": {
+              "content": "A Regular Expression (Regex) is a sequence of characters that forms a search pattern. When you search for data in a text, you can use this search pattern to describe what you are looking for.",
+              "list": [
+                { "emoji": "🧠", "text": "<strong>Theoretical Root:</strong> Based on Finite Automata and Formal Languages." },
+                { "emoji": "🏗️", "text": "<strong>Structural:</strong> It defines a set of strings without listing them all." },
+                { "emoji": "🚀", "text": "<strong>Performant:</strong> Engines are highly optimized for speed." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "A Brief History",
+            "box": {
+              "content": "Regex was invented in the 1950s by mathematician Stephen Kleene and brought to computing by Ken Thompson in the <code>ed</code> text editor (1960s).",
+              "list": [
+                { "emoji": "📜", "text": "<strong>1951:</strong> Regular Sets (Stephen Kleene)." },
+                { "emoji": "📜", "text": "<strong>1968:</strong> Integration into <code>grep</code>." },
+                { "emoji": "📜", "text": "<strong>1987:</strong> Perl revolutionizes Regex syntax." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Engines (Flavors)",
+            "box": {
+              "content": "Not all Regex is created equal. Different programming languages use different 'Engines' with subtle syntax variations.",
+              "list": [
+                { "emoji": "🧬", "text": "<strong>PCRE (Perl Compatible):</strong> The gold standard. Used in PHP, Apache, and many libraries." },
+                { "emoji": "🧬", "text": "<strong>JS / V8:</strong> Fast, but misses advanced features like lookbehinds (fixed in modern versions)." },
+                { "emoji": "🧬", "text": "<strong>Python / re:</strong> Powerful, readable, follows PCRE closely." },
+                { "emoji": "🧬", "text": "<strong>POSIX:</strong> The old school Unix standard (used by <code>sed</code>, <code>awk</code>)." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "building-blocks",
+        "title": "2. The Building Blocks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. The Building Blocks",
+            "box": { "content": "Literals, Classes, and Metacharacters" }
+          },
+          {
+            "type": "content",
+            "title": "Literal Matches",
+            "box": {
+              "content": "The simplest regex is just a string. <code>cat</code> matches the literal sequence 'c', 'a', 't'. Most characters match themselves, but some are 'Special'.",
+              "code": "# To match a literal dot or slash, you must escape it\n/google\\.com/ # matches google.com\n/\\/home\\/user/ # matches /home/user"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Predefined Shorthands",
+            "box": {
+              "content": "Regex provides convenient 'shorthand' characters for common types of data. These make your patterns much shorter and more readable.",
+              "list": [
+                { "emoji": "🔢", "text": "<strong>\\d:</strong> Any decimal digit ([0-9])." },
+                { "emoji": "🔤", "text": "<strong>\\w:</strong> Any word character (A-Z, a-z, 0-9, _)." },
+                { "emoji": "☁️", "text": "<strong>\\s:</strong> Any whitespace (space, tab, newline)." },
+                { "emoji": "❌", "text": "<strong>\\D, \\W, \\S:</strong> Capital versions match the NEGATION (Not a digit, etc.)." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom Character Classes",
+            "box": {
+              "content": "When shorthands aren't enough, you can define your own set of allowed characters using square brackets <code>[...]</code>.",
+              "code": "/[aeiou]/    # Any vowel\n/[A-Z0-9]/   # Any uppercase letter or digit\n/[^0-9]/     # Any character that is NOT a digit"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Wildcard Dot (.)",
+            "box": {
+              "content": "The dot <code>.</code> matches <strong>almost</strong> any single character except for a newline. It is the most used (and most abused) character in Regex.",
+              "code": "/a.b/ # matches aab, a1b, a!b, but not ab"
+            }
+          }
+        ]
+      },
+      {
+        "id": "quantifiers-greed",
+        "title": "3. Quantifiers & Greed",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Quantifiers & Greed",
+            "box": { "content": "How many times should we match?" }
+          },
+          {
+            "type": "content",
+            "title": "Basic Quantifiers",
+            "box": {
+              "content": "Quantifiers specify how many times the preceding element should occur.",
+              "list": [
+                { "emoji": "❓", "text": "<strong>?:</strong> 0 or 1 time (Optional)." },
+                { "emoji": "✳️", "text": "<strong>*:</strong> 0 or more times." },
+                { "emoji": "➕", "text": "<strong>+:</strong> 1 or more times." },
+                { "emoji": "🔢", "text": "<strong>{n,m}:</strong> Between n and m times." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Greedy vs Lazy (Reluctant)",
+            "box": {
+              "content": "By default, quantifiers are **Greedy**—they match as much as possible. Adding a <code>?</code> after a quantifier makes it **Lazy**, matching as little as possible.",
+              "code": "/* Text: \"<div>Hello</div>\" */\n/<.*>/  # Greedy: Matches \"<div>Hello</div>\"\n/<.*?>/ # Lazy: Matches \"<div>\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Possessive Quantifiers (Elite)",
+            "box": {
+              "content": "Available in PCRE and Java, possessive quantifiers (<code>*+</code>, <code>++</code>) are like greedy ones but they **never give back** characters even if it means the whole match fails. This provides massive performance benefits and prevents catastrophic backtracking.",
+              "code": "/.*+a/ # If applied to \"aaaaa\", it matches all 'a's and then fails because there's no 'a' left to match."
+            }
+          }
+        ]
+      },
+      {
+        "id": "anchors-boundaries",
+        "title": "4. Anchors & Boundaries",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Anchors & Boundaries",
+            "box": { "content": "Matching locations, not characters" }
+          },
+          {
+            "type": "content",
+            "title": "Start and End Anchors (^ and $)",
+            "box": {
+              "content": "Anchors don't match any actual text; they match a <strong>location</strong>. Use them to ensure your pattern matches the entire string or the start/end of a line.",
+              "code": "/^Start/ # Matches 'Start' only if it's at the beginning\n/End$/   # Matches 'End' only if it's at the very end"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Word Boundaries (\\b)",
+            "box": {
+              "content": "A word boundary <code>\\b</code> matches the position between a word character (\\w) and a non-word character (\\W), or the start/end of the string.",
+              "code": "/\\bcat\\b/ # Matches 'cat' in 'the cat' but not 'catch' or 'bobcat'"
+            }
+          }
+        ]
+      },
+      {
+        "id": "groups-references",
+        "title": "5. Groups & References",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Groups & References",
+            "box": { "content": "Capturing and reusing patterns" }
+          },
+          {
+            "type": "content",
+            "title": "Capturing Groups ( )",
+            "box": {
+              "content": "Parentheses <code>(...)</code> create a capturing group. They allow you to apply quantifiers to a whole block or 'remember' the matched text for later use.",
+              "code": "/(copy\\s){2}/ # Matches \"copy copy \"\n/(\\d{4})-\\d{2}/ # Group 1 captures the year"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Non-Capturing Groups (?: )",
+            "box": {
+              "content": "Sometimes you need to group parts of a pattern but you don't care about 'remembering' the value. Use <code>(?:...)</code> to save memory and improve performance.",
+              "code": "/(?:https?|ftp):\\/\\// # Groups the protocol without capturing it"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Backreferences",
+            "box": {
+              "content": "You can reference what was matched in a capturing group earlier in the same pattern using <code>\\1</code>, <code>\\2</code>, etc.",
+              "code": "/<(b)>(.*?)<\\/\\1>/ # Ensures the closing tag matches the opening tag"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Named Capturing Groups",
+            "box": {
+              "content": "In modern engines, you can give your groups descriptive names, making your code much more maintainable.",
+              "code": "/(?<year>\\d{4})-(?<month>\\d{2})/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lookarounds",
+        "title": "6. Lookarounds (Elite Mode)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Lookarounds",
+            "box": { "content": "Matching with context without consuming text" }
+          },
+          {
+            "type": "content",
+            "title": "Lookaheads (?= and ?!)",
+            "box": {
+              "content": "A **Lookahead** checks if a pattern exists ahead of the current position without actually 'consuming' those characters.",
+              "code": "/John(?= Smith)/  # Matches 'John' only if followed by ' Smith'\n/\\d+(?!px)/       # Matches digits only if NOT followed by 'px'"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Lookbehinds (?<= and ?<! )",
+            "box": {
+              "content": "Similarly, a **Lookbehind** checks the text *before* the current position. (Note: Some engines only support fixed-length lookbehinds).",
+              "code": "/(?<=\\$)\\d+/   # Matches digits only if preceded by a '$'\n/(?<!bad )dog/ # Matches 'dog' only if NOT preceded by 'bad '"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Complex Password Validation",
+            "box": {
+              "content": "Lookheads are perfect for validating multiple constraints on the same string simultaneously.",
+              "code": "# Must have 1 digit, 1 upper case, 1 lower case, min 8 chars\n/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-pitfalls",
+        "title": "7. Performance & Pitfalls",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Performance & Pitfalls",
+            "box": { "content": "When Regex goes wrong: The Slow and the Dangerous" }
+          },
+          {
+            "type": "content",
+            "title": "Catastrophic Backtracking",
+            "box": {
+              "content": "This occurs when a regex engine tries and fails thousands (or millions) of combinations due to nested quantifiers. It can freeze your application (ReDoS attack).",
+              "code": "/(a+)+b/ # If applied to \"aaaaaaaaaaaaaaaaaaaaac\", it crashes the thread!"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Atomic Grouping",
+            "box": {
+              "content": "Atomic groups <code>(?>...)</code> prevent the engine from backtracking into the group once it has matched. This is a critical 'Elite' technique for performance optimization.",
+              "code": "/(?>a+)b/ # Safer alternative to nested quantifiers"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Optimization Tips",
+            "box": {
+              "content": "Writing fast Regex is about helping the engine fail fast. Use anchors, specific character classes, and avoid 'The Dot' where possible.",
+              "list": [
+                { "emoji": "⚓", "text": "<strong>Be Specific:</strong> Use [0-9] instead of \\d if possible." },
+                { "emoji": "🚪", "text": "<strong>Fail Fast:</strong> Put common characters at the start of branches." },
+                { "emoji": "🚫", "text": "<strong>Avoid Nesting:</strong> Never nest quantifiers like (.*)*." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "practical-patterns",
+        "title": "8. Practical Patterns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Practical Patterns",
+            "box": { "content": "Common solutions for common problems" }
+          },
+          {
+            "type": "content",
+            "title": "Email Validation",
+            "box": {
+              "content": "A standard (though not perfect) pattern for basic email validation.",
+              "code": "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/"
+            }
+          },
+          {
+            "type": "content",
+            "title": "URL Parsing",
+            "box": {
+              "content": "Capturing protocol, domain, and path from a URL using named groups.",
+              "code": "/^(?<protocol>https?):\\/\\/(?<domain>[^\\/\\s]+)(?<path>\\/.*)?$/"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Date Formats (ISO 8601)",
+            "box": {
+              "content": "Matching a YYYY-MM-DD date with specific constraints for months and days.",
+              "code": "/^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$/"
+            }
+          },
+          {
+            "type": "content",
+            "title": "IPv4 and IPv6",
+            "box": {
+              "content": "Validating IP addresses often requires complex character classes and alternations.",
+              "code": "# Simple IPv4\n/^(?:\\d{1,3}\\.){3}\\d{1,3}$/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "elite-features",
+        "title": "9. Elite Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Elite Features",
+            "box": { "content": "Going beyond standard matching" }
+          },
+          {
+            "type": "content",
+            "title": "Conditionals (PCRE)",
+            "box": {
+              "content": "Conditionals allow you to match a pattern ONLY if a specific capturing group was matched earlier.",
+              "code": "/(<)?name(\\d+)(?(1)>)/ # Matches <name1> or name1"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Recursion",
+            "box": {
+              "content": "Some engines (PCRE, Ruby) support recursion, allowing you to match nested structures like balanced parentheses or JSON objects.",
+              "code": "/\\((?>[^()]+|(?R))*\\)/ # Matches balanced parentheses"
+            }
+          }
+        ]
+      },
+      {
+        "id": "regex-internals",
+        "title": "11. Engine Internals",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Engine Internals",
+            "box": { "content": "How the magic happens: DFA vs NFA" }
+          },
+          {
+            "type": "content",
+            "title": "NFA: Non-deterministic Finite Automaton",
+            "box": {
+              "content": "Most modern engines (PCRE, JS, Python) are NFA. They are powerful and support lookarounds/backreferences by using **Backtracking**, but they can be slow on specific patterns.",
+              "list": [
+                { "emoji": "🔄", "text": "<strong>Backtracking:</strong> Tries all paths until one works." },
+                { "emoji": "🛠️", "text": "<strong>Feature-rich:</strong> Supports capture groups and lookarounds." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "DFA: Deterministic Finite Automaton",
+            "box": {
+              "content": "Used in tools like `grep` and the Go `regexp` library. They are incredibly fast and have linear performance, but they lack advanced features like backreferences.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Predictable:</strong> Guaranteed O(n) performance." },
+                { "emoji": "🚫", "text": "<strong>Limited:</strong> No support for lookarounds or backreferences." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "more-practical",
+        "title": "12. Practical Deep Dive",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Practical Deep Dive",
+            "box": { "content": "Advanced Parsing and Log Analysis" }
+          },
+          {
+            "type": "content",
+            "title": "Log Parsing: The 'Elite' Way",
+            "box": {
+              "content": "Parsing a standard Apache access log to extract IP, Timestamp, and Request status.",
+              "code": "/^(?<ip>\\S+)\\s\\S+\\s\\S+\\s\\[(?<time>.*?)\\]\\s\"(?<request>.*?)\"\\s(?<status>\\d{3})\\s(?<size>\\d+)/"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The HTML Trap",
+            "box": {
+              "content": "Can you parse HTML with Regex? **Technically yes, but practically No.** Because HTML is not a 'Regular' language, Regex cannot handle complex nested tags reliably.",
+              "code": "# Dangerous: breaks on self-closing tags or scripts\n/<div.*?>(.*?)<\\/div>/ # Don't do this for production!"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Subroutines (PCRE)",
+            "box": {
+              "content": "Subroutines allow you to reuse parts of your pattern within the same regex, reducing duplication and making complex patterns much cleaner.",
+              "code": "/(?<date>\\d{4}-\\d{2}-\\d{2})\\s\\g<date>/ # Matches two dates separated by a space"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ecosystem-tools",
+        "title": "13. Tools & Ecosystem",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Tools & Ecosystem",
+            "box": { "content": "Mastering the Regex workflow" }
+          },
+          {
+            "type": "content",
+            "title": "Regex101.com",
+            "box": {
+              "content": "The absolute must-have tool for any developer. It provides real-time matching, detailed explanations, and a community library of patterns.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Real-time:</strong> See matches as you type." },
+                { "emoji": "📖", "text": "<strong>Debugger:</strong> Step through the engine's logic." },
+                { "emoji": "🌍", "text": "<strong>Flavor select:</strong> Test across JS, PCRE, Python, and more." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Zen of Regex",
+            "box": {
+              "content": "Regex is a superpower. It allows you to transform chaos into structure with a single line of pattern matching.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Build:</strong> Start with literal strings." },
+                { "emoji": "🧪", "text": "<strong>Test:</strong> Always use a visual debugger." },
+                { "emoji": "🚀", "text": "<strong>Master:</strong> Learn the performance trade-offs." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Thank You & Final Q&A",
+            "box": {
+              "content": "Explore Regex today at **regex101.com**.",
+              "list": [
+                { "emoji": "📧", "text": "Reach out: aravind.govindhasamy@example.com" },
+                { "emoji": "🐙", "text": "GitHub: github.com/aravind-govindhasamy" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
