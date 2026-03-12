@@ -1,8 +1,8 @@
 # 📋 Presentations Progress Tracker
 
-> **Last Updated**: November 2025
-> **Total Presentations**: 51 ✅ | 56 ⬜
-> **Completion**: 47.7%
+> **Last Updated**: March 2026
+> **Total Presentations**: 52 ✅ | 55 ⬜
+> **Completion**: 48.6%
 
 ---
 
@@ -96,6 +96,10 @@
 - [x] #6 Kotlin - [View](presentations/intro-kotlin.json)
 - [x] #8 Bash Scripting - [View](presentations/intro-bash.json)
 - [x] #9 Regex - [View](presentations/intro-regex.json)
+- [x] #10 Docker Fundamentals - [View](presentations/intro-docker.json)
+- [x] #11 Flask - [View](presentations/intro-flask.json)
+- [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
+- [x] #11 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
 </details>
@@ -110,9 +114,8 @@
 - [ ] [#9 Regex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/9) - Regular expressions guide
 
 ### 🟣 Backend Frameworks (8)
-- [ ] [#10 Django](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/10) - Python web framework
 - [ ] [#11 Flask](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/11) - Lightweight Python web framework
-- [ ] [#12 FastAPI](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/12) - Modern Python API framework
+- [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
 - [ ] [#13 Laravel](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/13) - PHP web application framework
 - [ ] [#14 Spring Boot](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/14) - Java/Kotlin framework
 - [ ] [#15 ASP.NET Core](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/15) - Modern .NET web framework

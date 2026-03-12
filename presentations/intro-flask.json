@@ -1,0 +1,492 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Flask Fundamentals",
+            "subtitle": "The Minimalist Web Framework for Python <br> Scale, Extensions, and Production Architecture"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "Specialist in Python, .NET, and Scalable Backend Systems",
+            "oss_experience": "Open Source Contributor & Technical Content Creator",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "philosophy",
+        "title": "1. The Flask Philosophy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Philosophy",
+            "box": { "content": "Minimalist by design. Powerful by choice." }
+          },
+          {
+            "type": "content",
+            "title": "Why Flask?",
+            "box": {
+              "content": "Flask is a micro-framework based on Werkzeug and Jinja2. It doesn't make decisions for you (like database choice or validation).",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Micro-framework:</strong> Core features are kept simple but extensible." },
+                { "emoji": "🛠️", "text": "<strong>Total Control:</strong> You choose every part of your stack (SQLAlchemy, Mongo, etc.)." },
+                { "emoji": "🚀", "text": "<strong>Scalable Architecture:</strong> Start small, grow into a modular system." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Minimalist vs. Opinionated",
+            "box": {
+              "content": "Unlike Django, Flask is unopinionated. It provides a solid foundation without enforcing a specific project structure.",
+              "list": [
+                { "emoji": "🎨", "text": "<strong>Flexibility:</strong> Ideal for microservices and specialized APIs." },
+                { "emoji": "🧩", "text": "<strong>Extension Ecosystem:</strong> Add only what you need (Auth, Admin, Migrations)." },
+                { "emoji": "🧪", "text": "<strong>Modern Python:</strong> Leveraging decorators and latest language features." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "routing-and-requests",
+        "title": "2. Routing & Request Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. Routing & Requests",
+            "box": { "content": "The logic of URL dispatch." }
+          },
+          {
+            "type": "content",
+            "title": "The Routing Decorator",
+            "box": {
+              "content": "Binding functions to URLs is the heart of Flask. Simple, readable, and powerful.",
+              "code": "@app.route('/hello/<name>')\ndef hello(name):\n    return f\"Hello, {name}!\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "URL Converters",
+            "box": {
+              "content": "Flask allows you to specify variable types directly in the URL rule.",
+              "list": [
+                { "emoji": "🔢", "text": "<code>int:</code> Accepts integer values." },
+                { "emoji": "📏", "text": "<code>float:</code> Accepts floating point values." },
+                { "emoji": "📁", "text": "<code>path:</code> Like string but also accepts slashes." },
+                { "emoji": "🆔", "text": "<code>uuid:</code> Accepts UUID strings." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "HTTP Methods",
+            "box": {
+              "content": "Explicitly define which HTTP methods a route should handle.",
+              "code": "@app.route('/login', methods=['GET', 'POST'])\ndef login():\n    if request.method == 'POST':\n        return do_the_login()\n    else:\n        return show_the_login_form()"
+            }
+          }
+        ]
+      },
+      {
+        "id": "request-object",
+        "title": "3. The Request Object & Sessions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Requests & Context",
+            "box": { "content": "Handling incoming data." }
+          },
+          {
+            "type": "content",
+            "title": "Accessing Data",
+            "box": {
+              "content": "The global-like 'request' object provides access to everything from form data to headers.",
+              "list": [
+                { "emoji": "📝", "text": "<strong>request.form:</strong> For POST/PUT form data." },
+                { "emoji": "🔍", "text": "<strong>request.args:</strong> For URL parameters (?key=value)." },
+                { "emoji": "📄", "text": "<strong>request.files:</strong> For uploaded files." },
+                { "emoji": "🍪", "text": "<strong>request.cookies:</strong> To read cookies." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Sessions & Cookies",
+            "box": {
+              "content": "Flask uses cryptographically signed cookies for sessions. This allows you to store data across requests without server-side state by default.",
+              "code": "from flask import session\n\n@app.route('/')\ndef index():\n    session['user'] = 'Aravind'\n    return \"User set!\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "jinja2-templates",
+        "title": "4. Templating with Jinja2",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Templates",
+            "box": { "content": "HTML generated by Python." }
+          },
+          {
+            "type": "content",
+            "title": "Jinja2 Syntax",
+            "box": {
+              "content": "Jinja2 provides a safe and expressive way to render HTML dynamically.",
+              "list": [
+                { "emoji": "🌀", "text": "<code>{{ value }}</code>: Expressions to print to the template output." },
+                { "emoji": "⚙️", "text": "<code>{% if condition %}</code>: Logic statements (loops, conditionals)." },
+                { "emoji": "🧱", "text": "<code>{# comments #}</code>: Template comments." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Template Inheritance",
+            "box": {
+              "content": "Use 'blocks' and 'extends' to keep your HTML structure DRY.",
+              "code": "{% extends \"base.html\" %}\n{% block content %}\n  <h1>Welcome!</h1>\n{% endblock %}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "architectural-patterns",
+        "title": "5. Architectural Patterns: Large Apps",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Architectural Patterns",
+            "box": { "content": "How to structure Flask for growth." }
+          },
+          {
+            "type": "content",
+            "title": "The Application Factory",
+            "box": {
+              "content": "Avoid the 'circular import' trap by creating your app instance inside a function.",
+              "code": "def create_app():\n    app = Flask(__name__)\n    app.config.from_object('config.Config')\n    return app"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Blueprints",
+            "box": {
+              "content": "Blueprints allow you to organize your application into distinct components, making it easier to scale and reuse code.",
+              "code": "from flask import Blueprint\nblog = Blueprint('blog', __name__)\n\n@blog.route('/')\ndef index():\n    return \"Blog Index\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Pluggable Views (Elite)",
+            "box": {
+              "content": "Class-based views for Flask that allow for better code reuse and inheritance patterns.",
+              "code": "from flask.views import View\n\nclass UserView(View):\n    def dispatch_request(self):\n        return render_template('users.html')"
+            }
+          }
+        ]
+      },
+      {
+        "id": "flask-extensions",
+        "title": "6. The Extension Ecosystem",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Extensions",
+            "box": { "content": "The 'Batteries' of the Flask world." }
+          },
+          {
+            "type": "content",
+            "title": "Flask-SQLAlchemy",
+            "box": {
+              "content": "The most popular way to add an ORM to Flask. It simplifies database interactions significantly.",
+              "code": "db = SQLAlchemy(app)\n\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Flask-Migrate",
+            "box": {
+              "content": "Handle database migrations using Alembic, integrated directly into the Flask CLI.",
+              "code": "migrate = Migrate(app, db)\n# shell: flask db migrate -m \"Initial\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Flask-Login & CORS",
+            "box": {
+              "content": "Easily handle user sessions and Cross-Origin Resource Sharing for your APIs.",
+              "list": [
+                { "emoji": "🔐", "text": "<strong>Flask-Login:</strong> Manages authentication state." },
+                { "emoji": "🌐", "text": "<strong>Flask-CORS:</strong> Simple setup for cross-origin requests." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "flask-internals",
+        "title": "7. Under the Hood: Contexts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Flask Internals",
+            "box": { "content": "Understanding the Context Locals." }
+          },
+          {
+            "type": "content",
+            "title": "Request & Application Context",
+            "box": {
+              "content": "Flask uses contexts to make certain objects globally accessible during a request without passing them around.",
+              "list": [
+                { "emoji": "🌐", "text": "<strong>Request Context:</strong> Keeps track of request-level data (request, session)." },
+                { "emoji": "📦", "text": "<strong>Application Context:</strong> Keeps track of app-level data (current_app, g)." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The 'g' Object",
+            "box": {
+              "content": "The 'g' object is a namespace for storing data during a single request. It's unique to each request.",
+              "code": "from flask import g\n\n@app.before_request\ndef load_user():\n    g.user = get_user_from_db()"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Context Locals (Elite)",
+            "box": {
+              "content": "Flask uses <code>werkzeug.local</code> to ensure that 'current_app' and 'request' always point to the correct instance even in multi-threaded environments.",
+              "code": "from flask import current_app\n# Works even if multiple app instances exist"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Proxy Pattern",
+            "box": {
+              "content": "Objects like 'request' are actually proxies. Calling them redirects to the real object sitting in the current context."
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-flask",
+        "title": "8. Advanced Features & Async",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Advanced Flask",
+            "box": { "content": "Signals, CLI, and Modern Async." }
+          },
+          {
+            "type": "content",
+            "title": "Signals (Elite)",
+            "box": {
+              "content": "Flask supports signals via the Blinker library. Decouple your app logic by subscribing to events.",
+              "code": "from flask import template_rendered\n\n@template_rendered.connect_with(app)\ndef log_template(sender, template, context, **extra):\n    print(f'Rendered: {template.name}')"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom CLI Commands",
+            "box": {
+              "content": "Add your own commands to the 'flask' executable using the <code>@app.cli.command()</code> decorator.",
+              "code": "@app.cli.command('create-user')\ndef create_user():\n    # Logic to create user\n    print('User created!')"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Async Support (Flask 2.0+)",
+            "box": {
+              "content": "Modern Flask supports <code>async def</code> for view functions, allowing you to use await for I/O bound tasks.",
+              "code": "@app.route('/data')\nasync def get_data():\n    data = await fetch_external_api()\n    return jsonify(data)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Error Handling",
+            "box": {
+              "content": "Centralize your error logic using the <code>@app.errorhandler</code> decorator.",
+              "code": "@app.errorhandler(404)\ndef page_not_found(e):\n    return render_template('404.html'), 404"
+            }
+          }
+        ]
+      },
+      {
+        "id": "flask-rest-api",
+        "title": "9. Building APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Flask for APIs",
+            "box": { "content": "Building robust RESTful services." }
+          },
+          {
+            "type": "content",
+            "title": "JSON Responses",
+            "box": {
+              "content": "Use <code>jsonify()</code> to return JSON data with the correct content-type header.",
+              "code": "@app.route('/api/user')\ndef get_user():\n    return jsonify({\"username\": \"aravind\", \"status\": \"online\"})"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Request Parsing",
+            "box": {
+              "content": "Access JSON payloads from the client using <code>request.get_json()</code>.",
+              "code": "@app.route('/api/data', methods=['POST'])\ndef post_data():\n    data = request.get_json()\n    return jsonify(data), 201"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Flask-RESTful / Marshmallow",
+            "box": {
+              "content": "For complex schemas and resources, extensions provide structured validation and serialization.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Flask-RESTful:</strong> Adds support for quickly building REST APIs." },
+                { "emoji": "🧼", "text": "<strong>Marshmallow:</strong> Object serialization and validation library." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "API Documentation",
+            "box": {
+              "content": "Use Flasgger or similar tools to automatically generate Swagger/OpenAPI documentation.",
+              "code": "from flasgger import Swagger\nSwagger(app)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "production-deployment",
+        "title": "10. Production & Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Deployment",
+            "box": { "content": "Scaling Flask for the Real World." }
+          },
+          {
+            "type": "content",
+            "title": "WSGI Servers",
+            "box": {
+              "content": "Never use the built-in development server in production. Use a robust WSGI HTTP Server.",
+              "list": [
+                { "emoji": "🦄", "text": "<strong>Gunicorn:</strong> A Python WSGI HTTP Server for UNIX." },
+                { "emoji": "🚀", "text": "<strong>uWSGI:</strong> A full stack for building hosting services." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Proxying with Nginx",
+            "box": {
+              "content": "Use Nginx as a reverse proxy to handle SSL termination, buffering, and static file serving.",
+              "code": "location / {\n    include proxy_params;\n    proxy_pass http://unix:/app.sock;\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Security Headers",
+            "box": {
+              "content": "Protect your app with essential security headers like HSTS and X-Content-Type-Options.",
+              "code": "from flask_talisman import Talisman\nTalisman(app)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Logging & Monitoring",
+            "box": {
+              "content": "Configure Python's logging module to capture errors and performance metrics in production.",
+              "code": "app.logger.setLevel(logging.INFO)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Scalability Patterns (Elite)",
+            "box": {
+              "content": "For high-traffic apps, consider horizontal scaling and task queues.",
+              "list": [
+                { "emoji": "🧱", "text": "<strong>Load Balancing:</strong> Distribute traffic across multiple instances." },
+                { "emoji": "⚡", "text": "<strong>Task Queues:</strong> Offload heavy work to Celery or RQ." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing-flask",
+        "title": "11. Testing Your Flask App",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Testing",
+            "box": { "content": "Standard tools for reliability." }
+          },
+          {
+            "type": "content",
+            "title": "Testing with Pytest",
+            "box": {
+              "content": "Pytest is the standard for Python testing. Use fixtures to manage your app and database state.",
+              "code": "@pytest.fixture\ndef client():\n    app = create_app()\n    with app.test_client() as client:\n        yield client"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Request Context Testing",
+            "box": {
+              "content": "Test code that depends on the request context using <code>test_request_context()</code>.",
+              "code": "with app.test_request_context('/'):\n    assert request.path == '/'"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Integration Testing",
+            "box": {
+              "content": "Test the full request flow, including database interactions and external API calls.",
+              "code": "def test_index(client):\n    rv = client.get('/')\n    assert b'Welcome' in rv.data"
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion & Q&A",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Flask architecture, the extension ecosystem, or production best practices!<br><span class=\"gradient-accent\">Happy to answer anything Flask-related.</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🏺</span> Go build something amazing with Flask.<br><span class=\"gradient-accent\">Happy Coding!</span>",
+              "note": "Flexible • Powerful • Minimalist"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise",
+              "tagline": "Empowering developers through technology"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

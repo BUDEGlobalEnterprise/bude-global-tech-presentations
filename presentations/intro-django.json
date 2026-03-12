@@ -1,0 +1,526 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Django Fundamentals",
+            "subtitle": "The Web Framework for Perfectionists with Deadlines <br> Architecture, ORM, and Production Patterns"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "Specialist in Python, .NET, and Scalable Backend Systems",
+            "oss_experience": "Open Source Contributor & Technical Content Creator",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "philosophy",
+        "title": "1. The Django Philosophy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Philosophy",
+            "box": { "content": "The 'Batteries Included' mindset." }
+          },
+          {
+            "type": "content",
+            "title": "Why Django?",
+            "box": {
+              "content": "Born in a newsroom (Lawrence Journal-World) in 2003, Django was designed to handle fast-moving editorial content with robust technical foundations.",
+              "list": [
+                { "emoji": "🔋", "text": "<strong>Batteries Included:</strong> Auth, Admin, ORM, and Migrations are built-in." },
+                { "emoji": "🏎️", "text": "<strong>Ridiculously Fast:</strong> Go from concept to launch in hours." },
+                { "emoji": "🛡️", "text": "<strong>Reassuringly Secure:</strong> Helps developers avoid common security mistakes (SQLi, XSS, CSRF)." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Don't Repeat Yourself (DRY)",
+            "box": {
+              "content": "Every distinct piece of knowledge must have a single, unambiguous, authoritative representation within a system.",
+              "list": [
+                { "emoji": "🧩", "text": "<strong>Explicit over Implicit:</strong> No magical auto-discovery that breaks." },
+                { "emoji": "📦", "text": "<strong>Loose Coupling:</strong> Components are independent where possible." },
+                { "emoji": "🚀", "text": "<strong>Stability:</strong> Highly disciplined release cycle and LTS versions." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "mvt-architecture",
+        "title": "2. Architecture: MVT",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. MVT Architecture",
+            "box": { "content": "How Django structures the web." }
+          },
+          {
+            "type": "content",
+            "title": "Model-View-Template",
+            "box": {
+              "content": "While similar to MVC (Model-View-Controller), Django uses a slightly different terminology that better reflects the role of the framework.",
+              "list": [
+                { "emoji": "📊", "text": "<strong>Model:</strong> The data access layer (ORM). Defines your data structure." },
+                { "emoji": "🖼️", "text": "<strong>Template:</strong> The presentation layer. How the data looks (HTML/Django Template Language)." },
+                { "emoji": "⚙️", "text": "<strong>View:</strong> The bridge between Model and Template. Contains the business logic." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Request-Response Cycle",
+            "box": {
+              "content": "1. <strong>URL Dispatcher:</strong> Matches the URL to a View.<br>2. <strong>Middleware:</strong> Optional pre-processing of request.<br>3. <strong>View:</strong> Fetches data from Model.<br>4. <strong>Template:</strong> Renders the data.<br>5. <strong>Response:</strong> Sent back through middleware to the client."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Django's Battery Repository",
+            "box": {
+              "content": "Why 'Batteries Included' matters in a microservices world.",
+              "list": [
+                { "emoji": "🍱", "text": "<strong>Uniformity:</strong> Every Django project feels familiar." },
+                { "emoji": "🛡️", "text": "<strong>Security Patches:</strong> Centralized updates for auth and security layers." },
+                { "emoji": "🧩", "text": "<strong>Compatibility:</strong> Integrated components are guaranteed to work together." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "django-internals",
+        "title": "1.1 Django Internals & Explicit Code",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Explicit over Implicit",
+            "box": {
+              "content": "Django avoids 'magic' in favor of explicit configuration. This makes debugging and scaling significantly easier.",
+              "list": [
+                { "emoji": "📜", "text": "<strong>Registry Pattern:</strong> Explicitly register apps and models." },
+                { "emoji": "🧠", "text": "<strong>Readable Settings:</strong> No hidden environment magic without your consent." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "models-and-orm",
+        "title": "3. Models & The ORM",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Models & The ORM",
+            "box": { "content": "Database abstraction at its finest." }
+          },
+          {
+            "type": "content",
+            "title": "Defining Data",
+            "box": {
+              "content": "In Django, your database schema is defined as Python classes. No SQL required (mostly).",
+              "code": "from django.db import models\n\nclass Post(models.Model):\n    title = models.CharField(max_length=200)\n    slug = models.SlugField(unique=True)\n    content = models.TextField()\n    published = models.DateTimeField(auto_now_add=True)\n    author = models.ForeignKey('User', on_delete=models.CASCADE)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Model Meta Options",
+            "box": {
+              "content": "Use the <code>Meta</code> class to define database-specific behavior and ordering.",
+              "code": "class Post(models.Model):\n    # ... fields ...\n    class Meta:\n        ordering = ['-published']\n        verbose_name_plural = \"Blog Posts\"\n        indexes = [\n            models.Index(fields=['slug'])\n        ]"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Migrations: Git for DB",
+            "box": {
+              "content": "Django Migrations track changes to your models and propagate them to your database schema.",
+              "list": [
+                { "emoji": "📝", "text": "<strong>makemigrations:</strong> Scans models and creates a new migration file." },
+                { "emoji": "🚀", "text": "<strong>migrate:</strong> Applies changes to the database." },
+                { "emoji": "📜", "text": "<strong>showmigrations:</strong> List all migrations and their status." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Advanced: Custom Managers (Elite)",
+            "box": {
+              "content": "Personalize how records are fetched by overriding <code>get_queryset</code> or adding custom methods.",
+              "code": "class PostManager(models.Manager):\n    def published(self):\n        return self.filter(status='published')\n\nclass Post(models.Model):\n    # ... fields ...\n    objects = PostManager() # Custom manager usage"
+            }
+          },
+          {
+            "type": "content",
+            "title": "QuerySet Optimization (Elite)",
+            "box": {
+              "content": "QuerySets are lazy and cached. Efficiency is key to prevent N+1 problems.",
+              "list": [
+                { "emoji": "🎯", "text": "<strong>select_related:</strong> Join-based optimization for ForeinKey." },
+                { "emoji": "📥", "text": "<strong>prefetch_related:</strong> Separate query optimization for ManyToMany." },
+                { "emoji": "📉", "text": "<strong>values_list('id', flat=True):</strong> Fetch only primary keys for massive memory savings." }
+              ],
+              "code": "# Efficient fetching\nposts = Post.objects.select_related('author').filter(active=True)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "views-and-urls",
+        "title": "4. Views, URLs & Routing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Routing & Views",
+            "box": { "content": "The logic behind the request." }
+          },
+          {
+            "type": "content",
+            "title": "The URL Dispatcher",
+            "box": {
+              "content": "Decouple your physical file structure from your URL structure.",
+              "code": "from django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('post/<slug:slug>/', views.post_detail, name='post-detail'),\n]"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Class-Based Views (CBVs)",
+            "box": {
+              "content": "While function-based views (FBVs) are simple, CBVs allow for reusable logic through inheritance and mixins.",
+              "list": [
+                { "emoji": "🧱", "text": "<strong>Generic Views:</strong> ListView, DetailView, CreateView, etc." },
+                { "emoji": "🧩", "text": "<strong>Mixins:</strong> Add reusable features (LoginRequiredMixin)." },
+                { "emoji": "🔄", "text": "<strong>Method Mapping:</strong> Automatically maps HTTP verbs (get, post) to methods." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "View Mixins & Decorators",
+            "box": {
+              "content": "Mixins provide a way to add extra functionality to class-based views, while decorators are typically used for function-based views.",
+              "code": "# Mixin usage\nfrom django.contrib.auth.mixins import LoginRequiredMixin\n\nclass MyListView(LoginRequiredMixin, ListView):\n    model = MyModel"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Handling Context Data",
+            "box": {
+              "content": "Override <code>get_context_data</code> in your CBV to add extra information to your template context.",
+              "code": "def get_context_data(self, **kwargs):\n    context = super().get_context_data(**kwargs)\n    context['now'] = timezone.now()\n    return context"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Elite: Custom Mixins",
+            "box": {
+              "content": "Create your own mixins to encapsulate common cross-cutting concerns like logging or data filtering.",
+              "code": "class LoggingMixin:\n    def dispatch(self, request, *args, **kwargs):\n        print(f\"Accessing {self.__class__.__name__}\")\n        return super().dispatch(request, *args, **kwargs)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "forms-and-validation",
+        "title": "5. Forms & Validation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Forms & Validation",
+            "box": { "content": "Beyond simple HTML inputs." }
+          },
+          {
+            "type": "content",
+            "title": "Django Forms",
+            "box": {
+              "content": "Django's form system handles data validation, security, and rendering with minimal code.",
+              "code": "from django import forms\n\nclass ContactForm(forms.Form):\n    subject = forms.CharField(max_length=100)\n    message = forms.CharField(widget=forms.Textarea)\n    sender = forms.EmailField()"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Form Clean Methods",
+            "box": {
+              "content": "Custom validation logic lives in <code>clean()</code> or <code>clean_<fieldname>()</code> methods.",
+              "code": "def clean_sender(self):\n    data = self.cleaned_data['sender']\n    if \"spam.com\" in data:\n        raise ValidationError(\"No spam allowed!\")\n    return data"
+            }
+          },
+          {
+            "type": "content",
+            "title": "ModelForms",
+            "box": {
+              "content": "ModelForms automatically generate form fields from your Model definition, keeping your code DRY.",
+              "code": "class PostForm(forms.ModelForm):\n    class Meta:\n        model = Post\n        fields = ['title', 'content', 'author']"
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-and-auth",
+        "title": "6. Security & Authentication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Security & Auth",
+            "box": { "content": "The 'Reassuringly Secure' framework." }
+          },
+          {
+            "type": "content",
+            "title": "Built-in Security",
+            "box": {
+              "content": "Django protects you from the most common web vulnerabilities out of the box.",
+              "list": [
+                { "emoji": "🛡️", "text": "<strong>CSRF Protection:</strong> Token-based defense against cross-site request forgery." },
+                { "emoji": "💉", "text": "<strong>SQL Injection:</strong> The ORM uses parameterized queries automatically." },
+                { "emoji": "🚫", "text": "<strong>XSS Protection:</strong> Templates escape HTML by default." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "JWT vs Session Auth",
+            "box": {
+              "content": "Django uses sessions by default, but for modern SPAs and Mobile apps, JWT (JSON Web Tokens) are often preferred.",
+              "list": [
+                { "emoji": "🍪", "text": "<strong>Sessions:</strong> Server-side state. Great for standard web apps." },
+                { "emoji": "🔑", "text": "<strong>JWT:</strong> Stateless and portable. Best for APIs." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Production Checklist",
+            "box": {
+              "content": "Before going live, verify these essential security settings.",
+              "list": [
+                { "emoji": "🔒", "text": "<strong>HTTPS Only:</strong> Set <code>SECURE_SSL_REDIRECT=True</code>." },
+                { "emoji": "🍪", "text": "<strong>Secure Cookies:</strong> <code>SESSION_COOKIE_SECURE=True</code>." },
+                { "emoji": "🛡️", "text": "<strong>HSTS:</strong> Enable HTTP Strict Transport Security." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom User Models",
+            "box": {
+              "content": "Always start your project with a custom user model. It's significantly harder to switch later.",
+              "code": "from django.contrib.auth.models import AbstractUser\n\nclass User(AbstractUser):\n    bio = models.TextField(blank=True)\n    is_verified = models.BooleanField(default=False)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Auth System",
+            "box": {
+              "content": "Django comes with a full-featured authentication system: Users, Groups, Permissions, and a pluggable backend.",
+              "code": "from django.contrib.auth.models import User\nfrom django.contrib.auth.decorators import login_required\n\n@login_required\ndef secret_view(request):\n    return HttpResponse(\"Only for logged in users!\")"
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-django",
+        "title": "7. Advanced Internals",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Advanced Internals",
+            "box": { "content": "Signals, Middleware, and Customization." }
+          },
+          {
+            "type": "content",
+            "title": "Middleware",
+            "box": {
+              "content": "Middleware is a framework of hooks into Django’s request/response processing. It’s a light, low-level 'plugin' system.",
+              "code": "def simple_middleware(get_response):\n    def middleware(request):\n        # Pre-processing\n        response = get_response(request)\n        # Post-processing\n        return response\n    return middleware"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Django Signals (Elite)",
+            "box": {
+              "content": "Signals allow certain senders to notify a set of receivers that some action has taken place. Perfect for decoupling.",
+              "code": "from django.db.models.signals import post_save\nfrom django.dispatch import receiver\n\n@receiver(post_save, sender=User)\ndef create_profile(sender, instance, created, **kwargs):\n    if created:\n        Profile.objects.create(user=instance)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Signal Performance (Elite)",
+            "box": {
+              "content": "Signals are synchronous by default. For heavy tasks, always offload to a task queue like Celery.",
+              "list": [
+                { "emoji": "🐌", "text": "<strong>Blocking:</strong> Signals run in the same thread as the request." },
+                { "emoji": "🏎️", "text": "<strong>Asynchronous:</strong> Use signals to trigger Celery tasks instead of doing work inside them." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Caching Framework",
+            "box": {
+              "content": "Django provides several levels of caching to boost performance in high-traffic applications.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Per-site Caching:</strong> Cache the entire site." },
+                { "emoji": "📄", "text": "<strong>Per-view Caching:</strong> Cache individual responses." },
+                { "emoji": "🧱", "text": "<strong>Template Fragment Caching:</strong> Cache specific parts of a page." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Cache Backends",
+            "box": {
+              "content": "Easily switch between different caching engines without changing your code.",
+              "code": "CACHES = {\"default\": {\"BACKEND\": \"django.core.cache.backends.redis.RedisCache\"}}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom Management Commands",
+            "box": {
+              "content": "Add your own custom scripts to <code>manage.py</code> for automation and scheduled tasks.",
+              "code": "from django.core.management.base import BaseCommand\n\nclass Command(BaseCommand):\n    def handle(self, *args, **options):\n        self.stdout.write(\"Task executed!\")"
+            }
+          }
+        ]
+      },
+      {
+        "id": "django-rest-framework",
+        "title": "8. Django REST Framework",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Django REST Framework (DRF)",
+            "box": { "content": "The Standard for Web APIs." }
+          },
+          {
+            "type": "content",
+            "title": "Serializers",
+            "box": {
+              "content": "Serializers allow complex data such as QuerySets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON/XML.",
+              "code": "from rest_framework import serializers\n\nclass PostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = '__all__'"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Authentication & Permissions",
+            "box": {
+              "content": "DRF provides flexible authentication and permission schemes to secure your API endpoints.",
+              "code": "from rest_framework.permissions import IsAuthenticated\n\npermission_classes = [IsAuthenticated]"
+            }
+          },
+          {
+            "type": "content",
+            "title": "ViewSets & Routers",
+            "box": {
+              "content": "Combine the logic for a set of related views in a single class. Routers automatically handle the URL conf.",
+              "code": "from rest_framework import viewsets\n\nclass PostViewSet(viewsets.ModelViewSet):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment",
+        "title": "9. Deployment & Production",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Deployment",
+            "box": { "content": "Taking Django to the World." }
+          },
+          {
+            "type": "content",
+            "title": "WSGI vs. ASGI",
+            "box": {
+              "content": "Django supports both traditional synchronous and modern asynchronous server interfaces.",
+              "list": [
+                { "emoji": "🚉", "text": "<strong>WSGI (Gunicorn):</strong> Successful for years. Best for standard sync apps." },
+                { "emoji": "⚡", "text": "<strong>ASGI (Daphne/Uvicorn):</strong> Support for WebSockets, HTTP2, and async code." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Production Settings",
+            "box": {
+              "content": "Never deploy with <code>DEBUG=True</code>. Use environment variables for secrets.",
+              "list": [
+                { "emoji": "🔑", "text": "<strong>SECRET_KEY:</strong> Keep it secret, keep it safe." },
+                { "emoji": "🌐", "text": "<strong>ALLOWED_HOSTS:</strong> Prevent host header attacks." },
+                { "emoji": "📦", "text": "<strong>Static Files:</strong> Use WhiteNoise or S3/CDN for assets." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing",
+        "title": "10. Testing & Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Testing & Patterns",
+            "box": { "content": "Built for long-term maintainability." }
+          },
+          {
+            "type": "content",
+            "title": "Unit Testing",
+            "box": {
+              "content": "Django's test runner is built on Python's <code>unittest</code> module, providing a test client to simulate requests.",
+              "code": "from django.test import TestCase\n\nclass PostTest(TestCase):\n    def test_post_creation(self):\n        post = Post.objects.create(title=\"Test\")\n        self.assertEqual(post.title, \"Test\")"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Big Picture",
+            "box": {
+              "list": [
+                { "emoji": "🎯", "text": "<strong>Use Fat Models, Thin Views:</strong> Keep logic in models." },
+                { "emoji": "🛡️", "text": "<strong>Keep Settings Modular:</strong> Separate base.py, dev.py, and prod.py." },
+                { "emoji": "🚀", "text": "<strong>Stay Updated:</strong> Django has a predictable security/LTS roadmap." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion & Q&A",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Django architecture, the ORM, or production deployment!<br><span class=\"gradient-accent\">Any Django-related queries welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐍</span> Use Django to build something great.<br><span class=\"gradient-accent\">Happy Coding!</span>",
+              "note": "Secure • Scalable • Fast"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise",
+              "tagline": "Empowering developers through technology"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
