@@ -99,6 +99,10 @@
 - [x] #10 Docker Fundamentals - [View](presentations/intro-docker.json)
 - [x] #11 Flask - [View](presentations/intro-flask.json)
 - [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
+- [x] #13 Laravel - [View](presentations/intro-laravel.json)
+- [x] #14 Spring Boot - [View](presentations/intro-spring-boot.json)
+- [x] #15 ASP.NET Core - [View](presentations/intro-aspnet-core.json)
+- [x] #17 Bun / Hono - [View](presentations/intro-bun-hono.json)
 - [x] #11 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
@@ -116,10 +120,11 @@
 ### 🟣 Backend Frameworks (8)
 - [ ] [#11 Flask](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/11) - Lightweight Python web framework
 - [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
-- [ ] [#13 Laravel](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/13) - PHP web application framework
-- [ ] [#14 Spring Boot](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/14) - Java/Kotlin framework
-- [ ] [#15 ASP.NET Core](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/15) - Modern .NET web framework
-- [ ] [#17 Bun / Hono](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/17) - Next-gen JavaScript runtime
+- [x] #13 Laravel - [View](presentations/intro-laravel.json)
+- [x] #14 Spring Boot - [View](presentations/intro-spring-boot.json)
+- [x] #15 ASP.NET Core - [View](presentations/intro-aspnet-core.json)
+- [x] #17 Bun / Hono - [View](presentations/intro-bun-hono.json)
+- [ ] [#18 SvelteKit / Elysia](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/18) - High-speed Bun ecosystem
 
 ### 🔴 Databases & Storage (8)
 - [ ] [#18 Redis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/18) - In-memory data structure store
