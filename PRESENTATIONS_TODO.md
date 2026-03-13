@@ -1,8 +1,8 @@
 # 📋 Presentations Progress Tracker
 
 > **Last Updated**: March 2026
-> **Total Presentations**: 57 ✅ | 50 ⬜
-> **Completion**: 53.3%
+> **Total Presentations**: 59 ✅ | 48 ⬜
+> **Completion**: 55.1%
 
 ---
 
@@ -128,10 +128,10 @@
 - [x] #26 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
 
 ### 🔴 Databases & Storage (8)
-- [ ] [#18 Redis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/18) - In-memory data structure store
+- [x] #18 Redis (Elite) - [View](presentations/intro-redis.json)
 - [x] #19 SQLite (Elite) - [View](presentations/intro-sqlite.json)
 - [x] #20 Cassandra (Elite) - [View](presentations/intro-cassandra.json)
-- [ ] [#21 Neo4j](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/21) - Graph database platform
+- [x] #21 Neo4j (Elite) - [View](presentations/intro-neo4j.json)
 - [ ] [#22 Supabase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/22) - Open-source Firebase alternative
 - [ ] [#23 Firebase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/23) - Google's mobile platform
 - [ ] [#24 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/24) - Next-generation ORM

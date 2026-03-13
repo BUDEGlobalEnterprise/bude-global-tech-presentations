@@ -324,6 +324,172 @@
         ]
       },
       {
+        "id": "knowledge-graphs",
+        "title": "11. Knowledge Graphs & Semantics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Knowledge Graphs",
+            "box": { "content": "The peak of data connectivity." }
+          },
+          {
+            "type": "content",
+            "title": "What is a Knowledge Graph?",
+            "box": {
+              "content": "A network of interconnected entities and their meanings.",
+              "list": [
+                { "emoji": "🧠", "text": "<strong>Semantic Context:</strong> Defining the 'why' behind the connections." },
+                { "emoji": "🌐", "text": "<strong>Ontologies:</strong> Standardized schemas for shared understanding (e.g., Schema.org)." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "RDF vs. Property Graphs",
+            "box": {
+              "list": [
+                { "emoji": "🪵", "text": "<strong>RDF:</strong> Triples (Subject-Predicate-Object). High formal structure." },
+                { "emoji": "🛠️", "text": "<strong>LPG (Neo4j):</strong> Nodes and relationships with properties. High developer agility." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "graph-embeddings",
+        "title": "12. Graph Machine Learning (GraphML)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Graph Embeddings",
+            "box": { "content": "Turning graphs into vectors." }
+          },
+          {
+            "type": "content",
+            "title": "Node2Vec",
+            "box": {
+              "content": "Representing nodes in a continuous vector space.",
+              "list": [
+                { "emoji": "🔢", "text": "<strong>Vectorization:</strong> Preserving structural similarity for downstream ML models." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Link Prediction",
+            "box": {
+              "content": "Predicting future connections.",
+              "list": [
+                { "emoji": "🔮", "text": "<strong>Recommendations:</strong> 'People you may know' logic." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "scaling-ops",
+        "title": "13. Enterprise Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Graph at Scale",
+            "box": { "content": "Maintaining massive graphs." }
+          },
+          {
+            "type": "content",
+            "title": "Memory Management",
+            "box": {
+              "content": "The Neo4j Page Cache.",
+              "list": [
+                { "emoji": "🧠", "text": "<strong>Page Cache:</strong> Storing the graph data in memory outside the JVM heap." },
+                { "emoji": "🧹", "text": "<strong>JVM Heap:</strong> Used for query execution and transaction state." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Backup & Restoration",
+            "box": {
+              "list": [
+                { "emoji": "💾", "text": "<strong>Online Backups:</strong> Zero-downtime consistency snapshots." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud-native",
+        "title": "14. Neo4j Aura & Cloud",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "14. Cloud Native",
+            "box": { "content": "Managed graph databases." }
+          },
+          {
+            "type": "content",
+            "title": "Neo4j Aura",
+            "box": {
+              "content": "The fully managed DBaaS.",
+              "list": [
+                { "emoji": "☁️", "text": "<strong>Auto-scaling:</strong> Dynamic cluster sizing based on workload." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "visualization-bloom",
+        "title": "15. Graph Visualization & Exploration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "15. Neo4j Bloom",
+            "box": { "content": "Visual exploration for non-technical users." }
+          },
+          {
+            "type": "content",
+            "title": "Natural Language Search",
+            "box": {
+              "content": "Exploring the graph without Cypher.",
+              "list": [
+                { "emoji": "🗣️", "text": "<strong>Semantic Search:</strong> 'Show me all users who bought product X' maps to graph patterns." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Visual Styling",
+            "box": {
+              "content": "Customizing the graph view.",
+              "list": [
+                { "emoji": "🎨", "text": "<strong>Rule-based Styling:</strong> Color nodes and relationships based on properties." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Graph Layouts",
+            "box": {
+              "list": [
+                { "emoji": "📐", "text": "<strong>Force-Directed:</strong> Organizing nodes based on physical forces." },
+                { "emoji": "🏗️", "text": "<strong>Hierarchical:</strong> Displaying tree-like structures." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Perspective Management",
+            "box": {
+              "content": "Filtering what users can see.",
+              "list": [
+                { "emoji": "👁️", "text": "<strong>Perspectives:</strong> Limiting node labels and types for different business roles." }
+              ]
+            }
+          }
+        ]
+      },
+      {
         "id": "conclusion",
         "title": "Conclusion",
         "slides": [
