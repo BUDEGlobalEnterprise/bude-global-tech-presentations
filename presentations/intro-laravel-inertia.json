@@ -1,0 +1,519 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "intro",
+        "title": "Laravel 11 & Inertia.js Mastery",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Laravel 11 & Inertia.js Mastery",
+            "box": {
+              "content": "The Modern Monolith Architecture.",
+              "list": [
+                { "emoji": "🔴", "text": "<strong>Laravel 11:</strong> The minimalist PHP framework." },
+                { "emoji": "🛰️", "text": "<strong>Inertia.js:</strong> The bridge to modern SPAs." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Presenter",
+            "box": {
+              "content": "Aravind Govindhasamy",
+              "list": [
+                { "emoji": "🏗️", "text": "Elite Technical Architect" },
+                { "emoji": "🚀", "text": "PHP & Laravel Expert" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-core",
+        "title": "1. Laravel 11 Core",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Simplified Professionalism",
+            "box": { "content": "Exploring the streamlined Laravel 11 core." }
+          },
+          {
+            "type": "content",
+            "title": "The Minimalist Core",
+            "box": {
+              "content": "Laravel 11 reduces boilerplate by moving configuration out of the application and into the framework core.",
+              "list": [
+                { "emoji": "📉", "text": "<strong>Less Code:</strong> Fewer files in the default installation." },
+                { "emoji": "⚙️", "text": "<strong>Streamlined:</strong> Simplified service providers and middleware." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "New Directory Structure",
+            "box": {
+              "content": "A cleaner organization for modern PHP applications.",
+              "list": [
+                { "emoji": "📂", "text": "<strong>bootstrap/app.php:</strong> The new hub for routing and middleware." },
+                { "emoji": "📂", "text": "<strong>config/:</strong> Fully optional - default values are now integrated." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "SQLite by Default",
+            "box": {
+              "content": "Laravel 11 now uses SQLite as the default database, making local development even faster.",
+              "list": [
+                { "emoji": "📀", "text": "<strong>Zero Config:</strong> Start building immediately." },
+                { "emoji": "🏎️", "text": "<strong>Fast:</strong> Perfect for rapid prototyping and testing." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "inertia-protocol",
+        "title": "2. The Inertia.js Protocol",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. Bridging the Gap",
+            "box": { "content": "How Inertia connects Laravel to modern frontend frameworks." }
+          },
+          {
+            "type": "content",
+            "title": "What is Inertia.js?",
+            "box": {
+              "content": "Inertia allows you to create fully client-side rendered, single-page apps, using classic server-side routing and controllers.",
+              "list": [
+                { "emoji": "🛰️", "text": "<strong>The Bridge:</strong> It sits between your server-side framework and your client-side framework." },
+                { "emoji": "📂", "text": "<strong>No API Required:</strong> You don't need to build a REST or GraphQL API." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "X-Inertia Headers",
+            "box": {
+              "content": "Inertia works by intercepting standard link clicks and sending an XHR request with specific headers.",
+              "list": [
+                { "emoji": "📨", "text": "<strong>Header-based:</strong> The server detects the header and returns JSON instead of HTML." },
+                { "emoji": "🔄", "text": "<strong>State Update:</strong> The client-side framework receives the JSON and updates the UI." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Initial Load vs Navigation",
+            "box": {
+              "content": "The first request returns full HTML with a root div, while subsequentnavigations return only data.",
+              "list": [
+                { "emoji": "📄", "text": "<strong>First Hit:</strong> Standard SSR for fast initial paint." },
+                { "emoji": "🏎️", "text": "<strong>Navigation:</strong> Super fast JSON-only updates." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-routing",
+        "title": "3. Routing & Controllers",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Elegant Backend Flow",
+            "box": { "content": "Defining routes and controllers for Inertia." }
+          },
+          {
+            "type": "content",
+            "title": "Standard Laravel Routing",
+            "box": {
+              "content": "Use the same `routes/web.php` file you've always used.",
+              "code": "Route::get('/users', [UserController::class, 'index']);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Inertia Response",
+            "box": {
+              "content": "Render your frontend components directly from your PHP controllers.",
+              "code": "return Inertia::render('Users/Index', [\n    'users' => User::all(),\n]);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Route Parameters",
+            "box": {
+              "content": "Passing dynamic data through URLs to your components.",
+              "code": "Route::get('/users/{user}', function (User $user) {\n    return Inertia::render('Users/Show', ['user' => $user]);\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Named Routes in JS",
+            "box": {
+              "content": "Using the Ziggy package to access your Laravel routes directly in your Vue or React components.",
+              "code": "route('users.show', { user: 1 });"
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-eloquent-data",
+        "title": "4. Data & Shared State",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Sharing Information",
+            "box": { "content": "Mastering Eloquent and global state sharing." }
+          },
+          {
+            "type": "content",
+            "title": "Eloquent Resources",
+            "box": {
+              "content": "Transforming your database models into clean, predictable JSON for the frontend.",
+              "code": "return UserResource::collection(User::paginate());"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Global Data Sharing",
+            "box": {
+              "content": "Sharing data (like the authenticated user) with every Inertia response automatically.",
+              "code": "// HandleInertiaRequests middleware\npublic function share(Request $request): array {\n    return array_merge(parent::share($request), [\n        'auth' => ['user' => $request->user()],\n    ]);\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Lazy Data Evaluation",
+            "box": {
+              "content": "Optimize performance by only sending expensive data when it's explicitly requested by the frontend.",
+              "code": "'users' => Inertia::lazy(fn () => User::all()),"
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-auth-security",
+        "title": "5. Authentication & Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Fortress Laravel",
+            "box": { "content": "Securing your Inertia application." }
+          },
+          {
+            "type": "content",
+            "title": "Laravel Breeze & Inertia",
+            "box": {
+              "content": "A minimal, simple implementation of all of Laravel's authentication features, including login, registration, password reset, and dashboard.",
+              "list": [
+                { "emoji": "🌬️", "text": "<strong>Ready-to-go:</strong> Pre-configured with Inertia and Vue/React." },
+                { "emoji": "⚙️", "text": "<strong>Tailwind:</strong> Styled with Tailwind CSS out of the box." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Gates & Policies",
+            "box": {
+              "content": "Providing a simple, uniform way to authorize user actions against your models.",
+              "code": "// Policy\npublic function update(User $user, Post $post) {\n    return $user->id === $post->user_id;\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Authorizing on the Frontend",
+            "box": {
+              "content": "Laravel sends authorization status to the frontend via shared data, allowing you to toggle UI elements securely.",
+              "code": "<button v-if=\"$page.props.auth.can.updatePost\">Edit</button>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "CSRF & Security Headers",
+            "box": {
+              "content": "Laravel's built-in protection against cross-site request forgery and other common attacks.",
+              "list": [
+                { "emoji": "🛡️", "text": "<strong>Auto-token:</strong> CSRF tokens are handled automatically by Inertia/Axios." },
+                { "emoji": "🏠", "text": "<strong>Helmet:</strong> Easy integration of security headers." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-vite-assets",
+        "title": "6. Vite & Assets",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Modern Bundling",
+            "box": { "content": "Mastering Vite in the Laravel ecosystem." }
+          },
+          {
+            "type": "content",
+            "title": "The Laravel Vite Plugin",
+            "box": {
+              "content": "Vite provides a lightning-fast development experience with hot module replacement.",
+              "code": "// vite.config.js\nlaravel({\n    input: ['resources/css/app.css', 'resources/js/app.js'],\n    refresh: true,\n})"
+            }
+          },
+          {
+            "type": "content",
+            "title": "SSR with Vite",
+            "box": {
+              "content": "Inertia uses Vite to bundle your components for server-side rendering.",
+              "list": [
+                { "emoji": "📄", "text": "<strong>Unified:</strong> Same build process for client and server." },
+                { "emoji": "🚀", "text": "<strong>Performance:</strong> Fast initial paints with pre-rendered HTML." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-deployment",
+        "title": "7. Deployment & Scaling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Shipping Laravel",
+            "box": { "content": "Production strategies for modern PHP." }
+          },
+          {
+            "type": "content",
+            "title": "Laravel Forge",
+            "box": {
+              "content": "Painless server management and deployment optimized specifically for Laravel.",
+              "list": [
+                { "emoji": "🔨", "text": "<strong>Infrastructure:</strong> Automate server setup (Nginx, MySQL, PHP)." },
+                { "emoji": "🚥", "text": "<strong>CI/CD:</strong> Deploy on push to your main branch." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Laravel Vapor",
+            "box": {
+              "content": "The serverless deployment platform for Laravel, powered by AWS Lambda.",
+              "list": [
+                { "emoji": "☁️", "text": "<strong>Infinite Scale:</strong> Scale your app to millions of requests." },
+                { "emoji": "💰", "text": "<strong>Cost Effective:</strong> Pay only for what you use." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Docker in Laravel 11",
+            "box": {
+              "content": "Using Laravel Sail for local development and optimized Dockerfiles for production.",
+              "list": [
+                { "emoji": "⛵", "text": "<strong>Sail:</strong> A lightweight CLI for interacting with Laravel's default Docker development environment." },
+                { "emoji": "🐳", "text": "<strong>Production:</strong> Multi-stage builds for lean PHP images." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-advanced-layouts",
+        "title": "8. Advanced Layouts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Complex UI Structures",
+            "box": { "content": "Mastering persistent and nested layouts in Inertia." }
+          },
+          {
+            "type": "content",
+            "title": "Persistent Layouts",
+            "box": {
+              "content": "Keep state (like playing audio or form input) as you navigate between pages.",
+              "code": "const Page = (props) => { ... };\nPage.layout = (page) => <Layout children={page} />;\nexport default Page;"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Nested Layouts",
+            "box": {
+              "content": "Stacking layouts for deep application structures.",
+              "code": "Page.layout = (page) => (\n    <AppLayout>\n        <AdminLayout>{page}</AdminLayout>\n    </AppLayout>\n);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Sensing Navigation",
+            "box": {
+              "content": "Detecting when a navigation is occurring to show loading states or progress bars.",
+              "code": "import { router } from '@inertiajs/react';\nrouter.on('start', () => NProgress.start());"
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-forms",
+        "title": "9. Form Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Interactive Mutations",
+            "box": { "content": "The Inertia form helper and validation flow." }
+          },
+          {
+            "type": "content",
+            "title": "The useForm Helper",
+            "box": {
+              "content": "A powerful hook for managing form state, submission, and validation errors.",
+              "code": "const form = useForm({ email: '', password: '' });\nform.post('/login');"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Server-side Validation",
+            "box": {
+              "content": "Laravel handles the validation, and Inertia automatically shares the error bag with your component.",
+              "code": "request->validate(['email' => 'required|email']);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Processing and Success States",
+            "box": {
+              "content": "Easily toggle button states and show success messages using form helper properties.",
+              "code": "<button :disabled=\"form.processing\">Submit</button>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-realtime",
+        "title": "10. Real-time with Reverb",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Living Applications",
+            "box": { "content": "Adding real-time interactivity with Laravel Reverb." }
+          },
+          {
+            "type": "content",
+            "title": "What is Laravel Reverb?",
+            "box": {
+              "content": "A first-party, high-performance WebSocket server specifically designed for Laravel.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Fast:</strong> Built for high throughput and low latency." },
+                { "emoji": "🔌", "text": "<strong>Integrated:</strong> Deeply integrated with Laravel Echo." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Broadcasting Events",
+            "box": {
+              "content": "Trigger real-time updates from your PHP backend by implementing the ShouldBroadcast interface.",
+              "code": "class NewMessage implements ShouldBroadcast { ... }"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Listening on the Frontend",
+            "box": {
+              "content": "Using Laravel Echo to listen for events and update your Inertia state.",
+              "code": "Echo.channel('chat').listen('NewMessage', (e) => { ... });"
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-testing",
+        "title": "11. Testing Mastery",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Quality Assurance",
+            "box": { "content": "Testing Laravel and Inertia with Pest." }
+          },
+          {
+            "type": "content",
+            "title": "Pest for Backend",
+            "box": {
+              "content": "A delightful PHP testing framework with a focus on simplicity and readability.",
+              "code": "test('user can see dashboard', function () {\n    $this->get('/dashboard')->assertOk();\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Inertia Testing Helpers",
+            "box": {
+              "content": "Asserting that the correct components and data are being returned from your controllers.",
+              "code": "$this->get('/users')->assertInertia(fn (Assert $page) => $page->component('Users/Index'));"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Playwright for E2E",
+            "box": {
+              "content": "Ensuring the full user flow works correctly in the browser.",
+              "list": [
+                { "emoji": "🎭", "text": "<strong>Cross-browser:</strong> Test across different rendering engines." },
+                { "emoji": "🚥", "text": "<strong>Robust:</strong> Handle asynchronous interactions with ease." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "laravel-conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Conclusion",
+            "box": { "content": "The Future of Full-stack Laravel." }
+          },
+          {
+            "type": "content",
+            "title": "Why Laravel 11 & Inertia?",
+            "box": {
+              "content": "The most productive and mature way to build powerful, modern web applications.",
+              "list": [
+                { "emoji": "🚀", "text": "<strong>Velocity:</strong> Move from idea to production faster than any other stack." },
+                { "emoji": "🧱", "text": "<strong>Stability:</strong> A mature ecosystem with long-term support." },
+                { "emoji": "🌟", "text": "<strong>Experience:</strong> A delightful developer experience on both backend and frontend." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Road Ahead",
+            "box": {
+              "content": "Stay updated with the latest in the Laravel ecosystem.",
+              "list": [
+                { "emoji": "📈", "text": "<strong>Growth:</strong> Laravel continues to innovate at a rapid pace." },
+                { "emoji": "🔧", "text": "<strong>Tooling:</strong> New first-party tools are released regularly." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Next Steps",
+            "box": {
+              "content": "Start your Laravel 11 journey today.",
+              "list": [
+                { "emoji": "🛠️", "text": "<strong>Build:</strong> Install Laravel with the Inertia starter kit." },
+                { "emoji": "📚", "text": "<strong>Learn:</strong> Explore Laracasts and the official documentation." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": { "content": "Thank you for your time! Any questions?" }
+          }
+        ]
+      }
+    ]
+  }
+}

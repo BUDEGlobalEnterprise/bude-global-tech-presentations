@@ -469,6 +469,71 @@
         ]
       },
       {
+        "id": "language-implementations",
+        "title": "12. Regex Across Languages",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Language Variations",
+            "box": { "content": "How different runtimes handle regex." }
+          },
+          {
+            "type": "content",
+            "title": "JavaScript (V8)",
+            "box": {
+              "content": "Fast NFA-based engine with modern flag support.",
+              "list": [
+                { "emoji": "🚀", "text": "<strong>Flags:</strong> /g, /i, /m, /y (sticky), /u (unicode), /v (v8 set notation)." }
+              ],
+              "code": "/\\p{Emoji}/v.test('📍')"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Python (re module)",
+            "box": {
+              "content": "Rich feature set with verbose mode.",
+              "code": "re.compile(r\"\"\"\n    \\d+     # match digits\n    \\s+     # match space\n    \\w+     # match word\n\"\"\", re.VERBOSE)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "PHP (PCRE2)",
+            "box": {
+              "content": "The gold standard for features (Recursion, Subroutines).",
+              "code": "preg_match('/(?R)/', $subject)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-case-studies",
+        "title": "13. Advanced Case Studies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Advanced Use Cases",
+            "box": { "content": "Solving complex engineering problems." }
+          },
+          {
+            "type": "content",
+            "title": "HTML Sanitization",
+            "box": {
+              "content": "Removing script tags safely.",
+              "code": "<script\\b[^>]*>([\\s\\S]*?)<\\/script>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "JWT Validation",
+            "box": {
+              "content": "Verifying the structure of a JSON Web Token.",
+              "code": "^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$"
+            }
+          }
+        ]
+      },
+      {
         "id": "conclusion",
         "title": "Conclusion",
         "slides": [

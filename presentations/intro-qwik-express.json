@@ -1,0 +1,563 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "intro",
+        "title": "Qwik & Express Mastery",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Qwik & Express Mastery",
+            "box": {
+              "content": "Zero Hydration, Pure Performance.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Qwik:</strong> The Resumable Meta-framework." },
+                { "emoji": "🚂", "text": "<strong>Express:</strong> The Standard for Node.js Backends." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Presenter",
+            "box": {
+              "content": "Aravind Govindhasamy",
+              "list": [
+                { "emoji": "👷", "text": "Elite Technical Architect" },
+                { "emoji": "🚀", "text": "Performance & Architecture Lead" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qwik-foundations",
+        "title": "1. Qwik Foundations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. The Resumability Revolution",
+            "box": { "content": "Beyond Hydration: Why Qwik matters." }
+          },
+          {
+            "type": "content",
+            "title": "The Hydration Problem",
+            "box": {
+              "content": "Traditional frameworks 'hydrate' on the client, essentially re-running the app to make it interactive.",
+              "list": [
+                { "emoji": "🐢", "text": "<strong>Slow:</strong> High JS execution on startup." },
+                { "emoji": "📉", "text": "<strong>Expensive:</strong> Downloading code that might never run." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "What is Resumability?",
+            "box": {
+              "content": "Qwik 'pauses' execution on the server and 'resumes' it on the client without downloading or executing JS upfront.",
+              "list": [
+                { "emoji": "⏸️", "text": "<strong>Zero Hydration:</strong> No upfront execution cost." },
+                { "emoji": "🚀", "text": "<strong>Instant TTI:</strong> App is interactive as soon as the HTML arrives." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The 'O(1)' Framework",
+            "box": {
+              "content": "Qwik's performance is constant relative to the size of the application. More components don't mean slower starts.",
+              "list": [
+                { "emoji": "🎯", "text": "<strong>Scalable:</strong> Perfect for massive e-commerce sites." },
+                { "emoji": "📏", "text": "<strong>Predictable:</strong> Performance remains elite as the app grows." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qwik-core",
+        "title": "2. Qwik Core Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. Mastering QRLs",
+            "box": { "content": "The Magic behind Late Execution." }
+          },
+          {
+            "type": "content",
+            "title": "What is a QRL?",
+            "box": {
+              "content": "Qwik Resolution Locator. A string that identifies how to lazy-load and execute code on demand.",
+              "code": "// 컴포넌트가 아닌 지연 로딩 가능한 참조\nconst onButtonClick = $(() => console.log('Clicked!'));"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Component$()",
+            "box": {
+              "content": "Defined with a trailing dollar sign, these components are automatically split by the optimizer for lazy loading.",
+              "code": "export const MyComp = component$(() => {\n  return <div>Hello</div>;\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "useSignal & useStore",
+            "box": {
+              "content": "Reactive primitives that manage state and trigger updates precisely where they are needed.",
+              "list": [
+                { "emoji": "📡", "text": "<strong>useSignal:</strong> Simple value reactivity." },
+                { "emoji": "📦", "text": "<strong>useStore:</strong> Deeply reactive objects." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Serialization",
+            "box": {
+              "content": "Qwik serializes the application state and the execution listeners into the HTML.",
+              "list": [
+                { "emoji": "💾", "text": "<strong>Stateful HTML:</strong> The UI knows exactly where it left off." },
+                { "emoji": "🔗", "text": "<strong>Pure Resumability:</strong> No JS execution required until an event occurs." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "express-integration",
+        "title": "3. Express Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Powering the Backend",
+            "box": { "content": "Qwik City + Express.js Middleware." }
+          },
+          {
+            "type": "content",
+            "title": "Why Express?",
+            "box": {
+              "content": "The most mature and widely used Node.js framework, providing a stable foundation for complex APIs.",
+              "list": [
+                { "emoji": "🛡️", "text": "<strong>Proven:</strong> Years of production testing." },
+                { "emoji": "🧩", "text": "<strong>Middleware:</strong> Access to thousands of existing plugins." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom Handlers",
+            "box": {
+              "content": "Integrating Express middleware directly into Qwik City's server-side processing.",
+              "code": "// entry.express.ts\nconst app = express();\napp.use(myMiddleware);\napp.use(router);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "API Design",
+            "box": {
+              "content": "Building robust RESTful APIs that serve both your Qwik frontend and external clients.",
+              "list": [
+                { "emoji": "🔌", "text": "<strong>Unified:</strong> One backend, multiple consumption points." },
+                { "emoji": "🚥", "text": "<strong>Reliable:</strong> Standard Express routing patterns." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Error Handling",
+            "box": {
+              "content": "Centralized error management using Express middleware to ensure consistent API responses.",
+              "code": "app.use((err, req, res, next) => {\n  res.status(500).json({ error: err.message });\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-flow",
+        "title": "4. Data Flow & Server Logic",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Seamless Data Handling",
+            "box": { "content": "Route Loaders and Actions in Qwik City." }
+          },
+          {
+            "type": "content",
+            "title": "routeLoader$()",
+            "box": {
+              "content": "Functions that run on the server to fetch data before a route is rendered, providing full type safety.",
+              "code": "export const useUserLoader = routeLoader$(async (requestEvent) => {\n  return await db.user.get(requestEvent.params.id);\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "routeAction$()",
+            "box": {
+              "content": "Handles form submissions and data mutations with built-in validation and state management.",
+              "code": "export const useAddUser = routeAction$(async (data) => {\n  await db.user.add(data);\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "End-to-End Type Safety",
+            "box": {
+              "content": "Loaders and Actions automatically infer types, ensuring your frontend is always in sync with your backend data.",
+              "list": [
+                { "emoji": "🛡️", "text": "<strong>Shared Models:</strong> Use the same Pydantic/Zod schemas everywhere." },
+                { "emoji": "🚦", "text": "<strong>Validated:</strong> Catch type errors at compile time." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Express as a Proxy",
+            "box": {
+              "content": "Using Express to tunnel requests to microservices while maintaining Qwik's resumability benefits.",
+              "list": [
+                { "emoji": "🔌", "text": "<strong>Gateway:</strong> Express handles auth and rate limiting." },
+                { "emoji": "🌊", "text": "<strong>Streaming:</strong> Proxying data efficiently to the client." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-optimization",
+        "title": "5. Advanced Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. The Qwik Optimizer",
+            "box": { "content": "Under the Hood: How Qwik stays small and fast." }
+          },
+          {
+            "type": "content",
+            "title": "The Optimizer's Job",
+            "box": {
+              "content": "A tool that analyzes your code and splits it into tiny, independent 'QRL' chunks.",
+              "list": [
+                { "emoji": "✂️", "text": "<strong>Dynamic Splitting:</strong> Code is only downloaded when needed." },
+                { "emoji": "🧹", "text": "<strong>Tree Shaking:</strong> Removing unreachable server code from the client bundle." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Prefetching Strategies",
+            "box": {
+              "content": "Qwik speculatively fetches the code for components that are likely to be interacted with.",
+              "list": [
+                { "emoji": "🔮", "text": "<strong>Predictive:</strong> Smart algorithms identify user intent." },
+                { "emoji": "🛰️", "text": "<strong>Background:</strong> Downloads happen during idle time, avoiding lag." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Lazy Execution",
+            "box": {
+              "content": "Code is not only lazy-loaded but also lazy-executed, minimizing the CPU work on the client.",
+              "code": "// Code stays in the cache until the event fires\nconst onClick = $(() => { ... });"
+            }
+          },
+          {
+            "type": "content",
+            "title": "OOCSS & Scoped Styles",
+            "box": {
+              "content": "Object-Oriented CSS patterns in Qwik ensure that styles are as resumable and optimized as the logic.",
+              "list": [
+                { "emoji": "🎨", "text": "<strong>Minimal CSS:</strong> Only ship the styles for visible components." },
+                { "emoji": "🏗️", "text": "<strong>Reusable:</strong> Build a component-driven design system with ease." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "state-management",
+        "title": "6. State Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Deep Reactivity",
+            "box": { "content": "Signals, Stores, and Context in Qwik." }
+          },
+          {
+            "type": "content",
+            "title": "useSignal vs useStore",
+            "box": {
+              "content": "Use `useSignal` for primitive values and `useStore` for complex, deeply nested objects.",
+              "code": "const count = useSignal(0);\nconst state = useStore({ users: [] });"
+            }
+          },
+          {
+            "type": "content",
+            "title": "useContext()",
+            "box": {
+              "content": "Share reactive state across your entire component tree without prop drilling.",
+              "code": "const AuthContext = createContextId('auth');\nconst auth = useContext(AuthContext);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Task Lifecycle",
+            "box": {
+              "content": "Use `useTask$` and `useVisibleTask$` to handle side effects and data synchronization.",
+              "list": [
+                { "emoji": "🔄", "text": "<strong>useTask$:</strong> Runs on both server and client." },
+                { "emoji": "👁️", "text": "<strong>useVisibleTask$:</strong> Runs only on the client when visible." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Reactive Prop Passing",
+            "box": {
+              "content": "Passing signals and stores as props allows child components to react to state changes efficiently.",
+              "code": "<Child count={count} />"
+            }
+          }
+        ]
+      },
+      {
+        "id": "styling-design",
+        "title": "7. Styling & Design",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Designing the Future",
+            "box": { "content": "Tailwind, CSS Modules, and Resumable CSS." }
+          },
+          {
+            "type": "content",
+            "title": "Tailwind CSS",
+            "box": {
+              "content": "The utility-first framework that fits perfectly into Qwik's component-based architecture.",
+              "list": [
+                { "emoji": "🎨", "text": "<strong>Fast:</strong> Rapidly build UIs without leaving your HTML." },
+                { "emoji": "📏", "text": "<strong>Consistent:</strong> Leverage a robust design system." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Scoped CSS",
+            "box": {
+              "content": "Using `useStylesScpoted$` to ensure styling is encapsulated within your component.",
+              "code": "useStylesScoped$(Styles);\nreturn <div class=\"container\">...</div>;"
+            }
+          },
+          {
+            "type": "content",
+            "title": "CSS-in-JS vs CSS Modules",
+            "box": {
+              "content": "Qwik prefers static CSS or compiled CSS-in-JS to maintain its zero-JS-at-startup guarantee.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Static:</strong> CSS is delivered in the initial HTML." },
+                { "emoji": "🧹", "text": "<strong>Clean:</strong> No runtime style generation costs." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Qwik 'Style' Hook",
+            "box": {
+              "content": "Using the `style` prop for dynamic styling while ensuring the optimizer can still do its work.",
+              "code": "<div style={{ opacity: visible.value ? 1 : 0 }}>...</div>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment-edge",
+        "title": "8. Deployment & Edge",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Global Delivery",
+            "box": { "content": "Adapters, Qwik City, and the Edge." }
+          },
+          {
+            "type": "content",
+            "title": "Qwik City Adapters",
+            "box": {
+              "content": "Deploy your Qwik application anywhere with a single command using built-in adapters.",
+              "code": "// npx qwik add cloudflare-pages\n// npx qwik add netlify-edge"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Edge Middleware",
+            "box": {
+              "content": "Leveraging the Edge to handle localized data fetching and security headers before the user's request reaches the origin.",
+              "list": [
+                { "emoji": "🌍", "text": "<strong>Localized:</strong> Serve users from the nearest data center." },
+                { "emoji": "🛡️", "text": "<strong>Secure:</strong> Perform authentication at the edge." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Hybrid Rendering",
+            "box": {
+              "content": "Combining SSR, SSG, and CSR to achieve the perfect balance of performance and flexibility.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Dynamic:</strong> SSR for personalized content." },
+                { "emoji": "📄", "text": "<strong>Fast:</strong> SSG for static landing pages." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Env Variable Management",
+            "box": {
+              "content": "Using Qwik's strictly-typed environment variables to ensure production configuration is reliable.",
+              "code": "const apiURL = import.meta.env.VITE_API_URL;"
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing-qa",
+        "title": "9. Testing & QA",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Ensuring Quality",
+            "box": { "content": "Vitest, Playwright, and Mocking." }
+          },
+          {
+            "type": "content",
+            "title": "Vitest for Components",
+            "box": {
+              "content": "Fast, native unit tests for your Qwik components and signal logic.",
+              "code": "import { render } from '@builder.io/qwik/testing';\ntest('renders', async () => {\n  const { screen } = await render(<MyComp />);\n  expect(screen.innerHTML).toContain('Hello');\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Playwright for E2E",
+            "box": {
+              "content": "Automating browser interactions to ensure your full-stack flows work perfectly in the real world.",
+              "list": [
+                { "emoji": "🎭", "text": "<strong>Reliable:</strong> Test complex user journeys across routes." },
+                { "emoji": "📸", "text": "<strong>Visual:</strong> Capture screenshots and videos of failures." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Mocking Express APIs",
+            "box": {
+              "content": "Using tools like MSW (Mock Service Worker) to simulate your Express backend during frontend development and testing.",
+              "code": "rest.get('/api/user', (req, res, ctx) => {\n  return res(ctx.json({ name: 'Test' }));\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Load Testing",
+            "box": {
+              "content": "Verifying that your Express server can handle high traffic volumes and identifying performance bottlenecks.",
+              "list": [
+                { "emoji": "⚖️", "text": "<strong>Scalable:</strong> Ensure your app grows gracefully." },
+                { "emoji": "🔍", "text": "<strong>Insights:</strong> Monitor CPU and memory usage during stress tests." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "fullstack-utilities",
+        "title": "10. Full-stack Utilities",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Architectural Glue",
+            "box": { "content": "Validation, Logger, and Config." }
+          },
+          {
+            "type": "content",
+            "title": "Shared Validation",
+            "box": {
+              "content": "Using Zod to define schemas that can be used on the server, the client, and within loaders for 100% consistency.",
+              "code": "// shared/schemas.ts\nexport const UserSchema = z.object({ id: z.string() });"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Express logging",
+            "box": {
+              "content": "Integrating Morgan or Winston into your Express server for detailed request and error logging.",
+              "list": [
+                { "emoji": "📝", "text": "<strong>Traceable:</strong> Debug issues faster with clear logs." },
+                { "emoji": "📊", "text": "<strong>Analyzable:</strong> Export logs to systems like ELK or Datadog." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Config Management",
+            "box": {
+              "content": "A centralized approach to managing secrets and configurations across the full stack.",
+              "code": "// server/config.ts\nexport const databaseURL = process.env.DATABASE_URL;"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Type Utility Patterns",
+            "box": {
+              "content": "Using TypeScript utility types (`Pick`, `Omit`, `Partial`) to strictly define data shapes for different layers of your app.",
+              "list": [
+                { "emoji": "🧩", "text": "<strong>Modular:</strong> Types evolve with your business logic." },
+                { "emoji": "🛡️", "text": "<strong>Strong:</strong> Prevent accidental data leakages." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion-trends",
+        "title": "Conclusion & Trends",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Conclusion",
+            "box": { "content": "Mastering the Resumable Stack." }
+          },
+          {
+            "type": "content",
+            "title": "Stack Overview",
+            "box": {
+              "content": "Qwik and Express provide a unique combination of cutting-edge resumability and industry-standard backend reliability.",
+              "list": [
+                { "emoji": "⏸️", "text": "<strong>Resumability:</strong> The next step in web performance." },
+                { "emoji": "🚂", "text": "<strong>Express:</strong> The solid foundation for every project." },
+                { "emoji": "🛠️", "text": "<strong>Tooling:</strong> Exceptional DX with Qwik City and Node.js." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Future Trends",
+            "box": {
+              "content": "Keep an eye on the continued evolution of resumability and the move towards more specialized edge computing runtimes.",
+              "list": [
+                { "emoji": "📈", "text": "<strong>Growth:</strong> Qwik is quickly gaining a loyal following." },
+                { "emoji": "🔧", "text": "<strong>Optimization:</strong> Expect even smaller bundles and faster delivery." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Final Thoughts",
+            "box": { "content": "Resumability is not just a feature; it's a paradigm shift. Start building with Qwik and Express today!" }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": { "content": "Thank you for your time! Any questions?" }
+          }
+        ]
+      }
+    ]
+  }
+}

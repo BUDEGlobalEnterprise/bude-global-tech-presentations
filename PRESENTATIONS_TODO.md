@@ -1,8 +1,8 @@
 # 📋 Presentations Progress Tracker
 
 > **Last Updated**: March 2026
-> **Total Presentations**: 52 ✅ | 55 ⬜
-> **Completion**: 48.6%
+> **Total Presentations**: 57 ✅ | 50 ⬜
+> **Completion**: 53.3%
 
 ---
 
@@ -32,6 +32,7 @@
 <summary><strong>Core Topics Completed</strong></summary>
 
 ### Programming & Frameworks
+
 - [x] #1 Python - [View](presentations/intro-python.json)
 - [x] #2 Rust - [View](presentations/intro-rust.json)
 - [x] #3 PHP - [View](presentations/intro-php.json)
@@ -50,16 +51,20 @@
 - [x] #85 iOS Advanced Development - [View](presentations/intro-ios-dev.json)
 
 ### CSS Frameworks
+
 - [x] #11 Tailwind CSS - [View](presentations/tailwind-css-presentation.json)
 - [x] #12 Bootstrap - [View](presentations/bootstrap-presentation.json)
 
 ### Databases
+
 - [x] #16 PostgreSQL - [View](presentations/intro-postgresql.json)
 - [x] #17 MySQL - [View](presentations/intro-mysql.json)
-- [x] #18 MongoDB - [View](presentations/intro-mongodb.json)
+- [x] #18 Redis - [View](presentations/intro-redis.json)
+- [x] #19 SQLite (Elite) - [View](presentations/intro-sqlite.json)
 - [x] #70 SQL & Databases - [View](presentations/intro-sql-databases.json)
 
 ### DevOps & Cloud
+
 - [x] #9 Linux - [View](presentations/intro-linux.json)
 - [x] #10 Docker - [View](presentations/intro-docker.json)
 - [x] #27 Git vs GitHub - [View](presentations/intro-git-github.json)
@@ -94,8 +99,8 @@
 - [x] #108 Go (Golang) - [View](presentations/intro-go.json)
 - [x] #5 Swift - [View](presentations/intro-swift.json)
 - [x] #6 Kotlin - [View](presentations/intro-kotlin.json)
-- [x] #8 Bash Scripting - [View](presentations/intro-bash.json)
-- [x] #9 Regex - [View](presentations/intro-regex.json)
+- [x] #8 Bash Scripting (Elite) - [View](presentations/intro-bash.json)
+- [x] #9 Regex (Elite) - [View](presentations/intro-regex.json)
 - [x] #10 Docker Fundamentals - [View](presentations/intro-docker.json)
 - [x] #11 Flask - [View](presentations/intro-flask.json)
 - [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
@@ -103,7 +108,12 @@
 - [x] #14 Spring Boot - [View](presentations/intro-spring-boot.json)
 - [x] #15 ASP.NET Core - [View](presentations/intro-aspnet-core.json)
 - [x] #17 Bun / Hono - [View](presentations/intro-bun-hono.json)
-- [x] #11 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
+- [x] #18 SvelteKit / Elysia - [View](presentations/intro-sveltekit-elysia.json)
+- [x] #19 SolidStart / Hono - [View](presentations/intro-solidstart-hono.json)
+- [x] #20 Qwik / Express - [View](presentations/intro-qwik-express.json)
+- [x] #21 Remix / Express - [View](presentations/intro-remix-express.json)
+- [x] #22 Next.js 15 / Fastify - [View](presentations/intro-nextjs-fastify.json)
+- [x] #26 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
 </details>
@@ -114,27 +124,18 @@
 
 ### 🔵 Programming Languages & Core Tech (8)
 - [ ] [#66 Angular](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66)
-- [ ] [#8 Bash Scripting](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/8) - Shell scripting mastery
-- [ ] [#9 Regex](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/9) - Regular expressions guide
-
-### 🟣 Backend Frameworks (8)
-- [ ] [#11 Flask](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/11) - Lightweight Python web framework
-- [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
-- [x] #13 Laravel - [View](presentations/intro-laravel.json)
-- [x] #14 Spring Boot - [View](presentations/intro-spring-boot.json)
-- [x] #15 ASP.NET Core - [View](presentations/intro-aspnet-core.json)
-- [x] #17 Bun / Hono - [View](presentations/intro-bun-hono.json)
-- [ ] [#18 SvelteKit / Elysia](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/18) - High-speed Bun ecosystem
+- [x] #8 Bash Scripting (Elite) - [View](presentations/intro-bash.json)
+- [x] #26 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
 
 ### 🔴 Databases & Storage (8)
 - [ ] [#18 Redis](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/18) - In-memory data structure store
-- [ ] [#19 SQLite](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/19) - Embedded database engine
-- [ ] [#20 Cassandra](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/20) - Distributed NoSQL database
+- [x] #19 SQLite (Elite) - [View](presentations/intro-sqlite.json)
+- [x] #20 Cassandra (Elite) - [View](presentations/intro-cassandra.json)
 - [ ] [#21 Neo4j](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/21) - Graph database platform
 - [ ] [#22 Supabase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/22) - Open-source Firebase alternative
 - [ ] [#23 Firebase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/23) - Google's mobile platform
 - [ ] [#24 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/24) - Next-generation ORM
-- [ ] [#25 Elasticsearch](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/25) - Search and analytics engine
+- [x] #25 Elasticsearch (Elite) - [View](presentations/intro-elasticsearch.json)
 
 ### 🟠 DevOps, Infrastructure & Cloud (13)
 - [ ] [#75 DevOps – CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75)
@@ -227,19 +228,23 @@ Top contributors will be featured here!
 ## 🗓️ Roadmap
 
 ### Q1 2025 (January - March)
+
 - [ ] Complete all Programming Languages (14)
 - [ ] Complete Backend Frameworks (10)
 - [ ] Complete Databases (9)
 
 ### Q2 2025 (April - June)
+
 - [ ] Complete DevOps & Cloud (15)
 - [ ] Complete Security topics (7)
 
 ### Q3 2025 (July - September)
+
 - [ ] Complete AI & Data topics (8)
 - [ ] Complete Tools & Productivity (13)
 
 ### Q4 2025 (October - December)
+
 - [ ] Complete Business Applications (7)
 - [ ] Review and update all existing presentations
 

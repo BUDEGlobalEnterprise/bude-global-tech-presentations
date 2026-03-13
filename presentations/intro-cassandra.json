@@ -1,0 +1,539 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Cassandra & Distributed Systems (Elite)",
+            "subtitle": "Mastering Availability, Scalability, and Consensus <br> The Architecture of NoSQL at Scale"
+          }
+        ]
+      },
+      {
+        "id": "cassandra-foundations",
+        "title": "1. Cassandra Foundations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. What is Apache Cassandra?",
+            "box": { "content": "A high-performance, distributed NoSQL database." }
+          },
+          {
+            "type": "content",
+            "title": "Core Philosophy",
+            "box": {
+              "content": "Designed to handle massive amounts of data across many servers without a single point of failure.",
+              "list": [
+                { "emoji": "🌐", "text": "<strong>Decentralized:</strong> Every node in the cluster is identical." },
+                { "emoji": "📈", "text": "<strong>Elastic Scalability:</strong> Add more nodes to increase throughput linearly." },
+                { "emoji": "🛠️", "text": "<strong>Fault Tolerant:</strong> Data is replicated across multiple nodes." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "distributed-theory",
+        "title": "2. Distributed Theory",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. The CAP Theorem",
+            "box": { "content": "Understanding the trade-offs of distributed systems." }
+          },
+          {
+            "type": "content",
+            "title": "CAP: Consistency, Availability, Partition Tolerance",
+            "box": {
+              "content": "You can only have two out of three in a network partition.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Cassandra Choice:</strong> AP (Availability + Partition Tolerance)." },
+                { "emoji": "⚖️", "text": "<strong>Tunable Consistency:</strong> You can choose consistency level per query." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "gossip-protocol",
+        "title": "3. The Gossip Protocol",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Cluster State",
+            "box": { "content": "How nodes talk to each other." }
+          },
+          {
+            "type": "content",
+            "title": "Peer-to-Peer Communication",
+            "box": {
+              "content": "Every node periodically chats with a few other nodes to share state.",
+              "list": [
+                { "emoji": "🗣️", "text": "<strong>Epidemic Protocol:</strong> Information spreads like a virus through the cluster." },
+                { "emoji": "⏱️", "text": "<strong>Convergence:</strong> State reaches all nodes in log(N) time." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Phi Accrual Failure Detector",
+            "box": {
+              "content": "How Cassandra knows if a node is 'down'.",
+              "list": [
+                { "emoji": "📉", "text": "<strong>Adaptive:</strong> Uses historical heartbeat data to predict if a node is likely dead." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "partitioning-hashing",
+        "title": "4. Data Partitioning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Dividing Data",
+            "box": { "content": "The Ring and the Hash." }
+          },
+          {
+            "type": "content",
+            "title": "Consistent Hashing",
+            "box": {
+              "content": "Partition keys are hashed into a 128-bit range (The Ring).",
+              "list": [
+                { "emoji": "⭕", "text": "<strong>Token Ring:</strong> Each node is responsible for a range of tokens." }
+              ],
+              "code": "PartitionKey -> Murmur3 Hash -> Token"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Virtual Nodes (vnodes)",
+            "box": {
+              "content": "Splitting a node's token range into many small pieces.",
+              "list": [
+                { "emoji": "🍕", "text": "<strong>Load Balancing:</strong> Helps in rebalancing when adding/removing nodes." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "write-path",
+        "title": "5. The Write Path",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Writing Data",
+            "box": { "content": "Designing for extreme write-throughput." }
+          },
+          {
+            "type": "content",
+            "title": "The CommitLog",
+            "box": {
+              "content": "Sequential, append-only log for durability.",
+              "list": [
+                { "emoji": "🗒️", "text": "<strong>Safety first:</strong> Write returns success only after the CommitLog is flushed." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The MemTable",
+            "box": {
+              "content": "In-memory sorted buffer (LSM-Tree head).",
+              "list": [
+                { "emoji": "🧠", "text": "<strong>Speed:</strong> Updates are handled in memory before disk flush." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "SSTable Flush",
+            "box": {
+              "content": "When MemTable is full, it's flushed to disk as an SSTable.",
+              "list": [
+                { "emoji": "📑", "text": "<strong>Immutability:</strong> SSTables are never edited; only compacted later." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "read-path",
+        "title": "6. The Read Path",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Reading Data",
+            "box": { "content": "How Cassandra finds data across multiple files." }
+          },
+          {
+            "type": "content",
+            "title": "The Multi-File Search",
+            "box": {
+              "content": "Cassandra might need to check multiple SSTables for a single row.",
+              "list": [
+                { "emoji": "🔍", "text": "<strong>Process:</strong> Check MemTable -> Check Row Cache -> Check Bloom Filters -> Check SSTables." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Bloom Filters",
+            "box": {
+              "content": "Probabilistic exclusion of SSTables.",
+              "list": [
+                { "emoji": "🔬", "text": "<strong>Benefit:</strong> Drastically reduces expensive disk I/O." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "tunable-consistency",
+        "title": "7. Tunable Consistency",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Consistency Levels",
+            "box": { "content": "The power of the CAP theorem in your hands." }
+          },
+          {
+            "type": "content",
+            "title": "Read & Write Levels",
+            "box": {
+              "list": [
+                { "emoji": "1️⃣", "text": "<strong>ONE:</strong> Fast, but risk of stale data." },
+                { "emoji": "⚖️", "text": "<strong>QUORUM:</strong> Majority response; ensures linearizability if W+R > N." },
+                { "emoji": "♾️", "text": "<strong>ALL:</strong> Highest consistency, lowest availability." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "compaction-strategies",
+        "title": "8. Compaction Mechanisms",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Compaction",
+            "box": { "content": "Managing the proliferation of SSTables." }
+          },
+          {
+            "type": "content",
+            "title": "Why Compact?",
+            "box": {
+              "content": "Merging multiple SSTables into one to improve read performance and reclaim space.",
+              "list": [
+                { "emoji": "🧹", "text": "<strong>Garbage Collection:</strong> Removing tombstoned (deleted) data." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "STCS vs LCS",
+            "box": {
+              "list": [
+                { "emoji": "📈", "text": "<strong>STCS:</strong> SizeTiered Compaction Strategy (Optimized for writes)." },
+                { "emoji": "🏗️", "text": "<strong>LCS:</strong> Leveled Compaction Strategy (Optimized for reads)." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "anti-entropy",
+        "title": "9. Anti-Entropy & Repair",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Cluster Healing",
+            "box": { "content": "Ensuring all replicas are in sync." }
+          },
+          {
+            "type": "content",
+            "title": "Hinted Handoff",
+            "box": {
+              "content": "Storing writes locally for a node that is temporarily down.",
+              "list": [
+                { "emoji": "📦", "text": "<strong>Recovery:</strong> When the node comes back, the hints are delivered." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Read Repair",
+            "box": {
+              "content": "Repairing stale replicas during a read query.",
+              "list": [
+                { "emoji": "🚑", "text": "<strong>Mechanism:</strong> If replicas differ, the latest data is written to the stale nodes." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Merkle Trees",
+            "box": {
+              "content": "Comparing data across nodes efficiently using hash trees.",
+              "list": [
+                { "emoji": "🌳", "text": "<strong>Validation:</strong> Used during full cluster repair ('nodetool repair')." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-modeling",
+        "title": "10. CQL & Data Modeling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Data Modeling",
+            "box": { "content": "The NoSQL way: Query-First Design." }
+          },
+          {
+            "type": "content",
+            "title": "Partition Key vs Clustering Key",
+            "box": {
+              "list": [
+                { "emoji": "🔑", "text": "<strong>Partition Key:</strong> Determines which node stores the data." },
+                { "emoji": "📁", "text": "<strong>Clustering Key:</strong> Determines the sort order within the partition." }
+              ],
+              "code": "PRIMARY KEY (user_id, posted_at)"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Golden Rule",
+            "box": {
+              "content": "One Table Per Query.",
+              "list": [
+                { "emoji": "🚫", "text": "<strong>No Joins:</strong> Denormalize data to avoid cross-node communication." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "replication-architecture",
+        "title": "11. Replication & Snitches",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Topology",
+            "box": { "content": "How Cassandra understands your data center." }
+          },
+          {
+            "type": "content",
+            "title": "Replication Strategies",
+            "box": {
+              "list": [
+                { "emoji": "🏢", "text": "<strong>NetworkTopologyStrategy:</strong> Multi-DC aware replication." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Snitch",
+            "box": {
+              "content": "Determines relative node proximity for routing queries.",
+              "list": [
+                { "emoji": "📡", "text": "<strong>GossipingPropertyFileSnitch:</strong> Best for production cloud environments." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "maintenance",
+        "title": "12. Maintenance & Nodetool",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Operations",
+            "box": { "content": "Keeping the clusters healthy." }
+          },
+          {
+            "type": "content",
+            "title": "Nodetool",
+            "box": {
+              "content": "The swiss army knife for Cassandra operators.",
+              "list": [
+                { "emoji": "🛠️", "text": "<strong>status:</strong> Check node health." },
+                { "emoji": "🔄", "text": "<strong>repair:</strong> Perform full cluster sync." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "paxos-lwt",
+        "title": "13. Lightweight Transactions (Paxos)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Strong Consistency",
+            "box": { "content": "How Cassandra achieves 'Linearizability'." }
+          },
+          {
+            "type": "content",
+            "title": "What are LWTs?",
+            "box": {
+              "content": "Compare-and-Set (CAS) operations using the Paxos consensus protocol.",
+              "code": "INSERT INTO users (...) IF NOT EXISTS;"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Paxos Phases",
+            "box": {
+              "list": [
+                { "emoji": "🏁", "text": "<strong>Prepare/Promise:</strong> Propose a change to the cluster." },
+                { "emoji": "🗳️", "text": "<strong>Accept/Acknowledge:</strong> Agreement on the proposal." },
+                { "emoji": "🚀", "text": "<strong>Commit/Learn:</strong> Finalizing the change." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "indexing-sei",
+        "title": "14. Advanced Indexing (SAI)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "14. Secondary Indexing",
+            "box": { "content": "Querying non-partition keys efficiently." }
+          },
+          {
+            "type": "content",
+            "title": "Storage Attached Indexing (SAI)",
+            "box": {
+              "content": "The modern way to index in Cassandra 4.0+.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Efficiency:</strong> Highly space-efficient, decoupled from the storage engine." }
+              ],
+              "code": "CREATE INDEX ON users(email) USING 'sai';"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-tuning",
+        "title": "15. Performance Engineering",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "15. Tuning",
+            "box": { "content": "Squeezing every drop of throughput." }
+          },
+          {
+            "type": "content",
+            "title": "JVM Tuning (G1GC)",
+            "box": {
+              "content": "Why garbage collection matters for NoSQL latency.",
+              "list": [
+                { "emoji": "🧹", "text": "<strong>G1GC:</strong> The standard collector for large Cassandra heaps." },
+                { "emoji": "🧠", "text": "<strong>Off-heap:</strong> Moving caches outside the JVM to reduce GC pressure." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Disk I/O Strategies",
+            "box": {
+              "list": [
+                { "emoji": "⚡", "text": "<strong>SSD Optimization:</strong> Cassandra is designed to leverage random access speed." },
+                { "emoji": "🗜️", "text": "<strong>Compression:</strong> LZ4 is the default for a reason." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cass-maintenance",
+        "title": "16. Operational Excellence",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "16. Operations",
+            "box": { "content": "Monitoring and scaling a production cluster." }
+          },
+          {
+            "type": "content",
+            "title": "Monitoring (JMX/OpenTelemetry)",
+            "box": {
+              "list": [
+                { "emoji": "📊", "text": "<strong>Metrics:</strong> Dropped messages, Pending tasks, SSTable count." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Modern Cassandra (4.0/5.0)",
+            "box": {
+              "content": "The latest innovations in distributed storage.",
+              "list": [
+                { "emoji": "🏎️", "text": "<strong>Zero Copy Streaming:</strong> 5x faster data movement during rebalancing." },
+                { "emoji": "🏗️", "text": "<strong>SAI:</strong> Storage Attached Indexing for high-performance secondary queries." },
+                { "emoji": "🔍", "text": "<strong>Guardrails:</strong> Prevent dangerous queries from crashing nodes." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Cassandra on Kubernetes",
+            "box": {
+              "content": "Running stateful workloads @ scale.",
+              "list": [
+                { "emoji": "☸️", "text": "<strong>K8ssandra:</strong> The operator-driven approach to Cassandra on K8s." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Cassandra Mastery",
+            "box": { "content": "The architecture of scale." }
+          },
+          {
+            "type": "content",
+            "title": "Scaling Considerations",
+            "box": {
+              "content": "When to scale up vs. scale out.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Scale Out:</strong> Adding more nodes for data capacity/throughput." },
+                { "emoji": "⚡", "text": "<strong>Scale Up:</strong> Vertical scaling for higher per-node query rates." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Summary",
+            "box": {
+              "list": [
+                { "emoji": "✅", "text": "<strong>Scale:</strong> From 3 nodes to 3000." },
+                { "emoji": "✅", "text": "<strong>Speed:</strong> Designed for high write-availability." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": { "content": "Thank you! Any questions?" }
+          }
+        ]
+      }
+    ]
+  }
+}

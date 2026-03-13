@@ -1,0 +1,561 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Redis Masterclass",
+            "subtitle": "Advanced Data Structures & Distributed Patterns <br> Scaling beyond the simple Key-Value store"
+          }
+        ]
+      },
+      {
+        "id": "intro",
+        "title": "1. Redis Foundations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Redis Foundations",
+            "box": { "content": "Memory-first, single-threaded, and blazingly fast." }
+          },
+          {
+            "type": "content",
+            "title": "What is Redis?",
+            "box": {
+              "content": "REmote DIctionary Server. An open-source, in-memory data structure store used as a database, cache, message broker, and streaming engine.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>In-Memory:</strong> Sub-millisecond latency." },
+                { "emoji": "🧠", "text": "<strong>Data Structures:</strong> Not just strings, but lists, sets, hashes, etc." },
+                { "emoji": "🧵", "text": "<strong>Single-Threaded:</strong> Atomic operations without complex locking." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Strings & Hashes",
+            "box": {
+              "content": "The fundamental building blocks of Redis data modeling.",
+              "list": [
+                { "emoji": "🔤", "text": "<strong>Strings:</strong> Binary-safe values up to 512MB." },
+                { "emoji": "📋", "text": "<strong>Hashes:</strong> Collections of field-value pairs (objects)." }
+              ],
+              "code": "SET user:1 \"Aravind\"\nHSET user:2 name \"John\" age 30"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Lists & Sets",
+            "box": {
+              "content": "Managing collections of data with different mathematical properties.",
+              "list": [
+                { "emoji": "📜", "text": "<strong>Lists:</strong> Linked lists of strings (Insertion order)." },
+                { "emoji": "💎", "text": "<strong>Sets:</strong> Unordered collections of unique strings." }
+              ],
+              "code": "LPUSH stack \"item1\"\nSADD unique_visitors \"ip123\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Sorted Sets (ZSET)",
+            "box": {
+              "content": "Unique strings associated with a score, ordered by that score.",
+              "list": [
+                { "emoji": "🏆", "text": "<strong>Leaderboards:</strong> Perfect for ranking and range queries." },
+                { "emoji": "⏱️", "text": "<strong>Time-Series:</strong> Use timestamps as scores." }
+              ],
+              "code": "ZADD leaderboard 100 \"player1\" 200 \"player2\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-structures",
+        "title": "2. Advanced Data Structures",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. Advanced Structures",
+            "box": { "content": "Specialized tools for complex engineering problems." }
+          },
+          {
+            "type": "content",
+            "title": "Bitmaps",
+            "box": {
+              "content": "Using strings as a compact array of bits. Extremely efficient for boolean flags.",
+              "list": [
+                { "emoji": "📉", "text": "<strong>Memory:</strong> 1 bit per entry (125MB for 1B users)." },
+                { "emoji": "📊", "text": "<strong>Use Case:</strong> Daily active user tracking." }
+              ],
+              "code": "SETBIT user_active:2024-03-12 101 1"
+            }
+          },
+          {
+            "type": "content",
+            "title": "HyperLogLog",
+            "box": {
+              "content": "Probabilistic data structure for estimating cardinality (distinct counts).",
+              "list": [
+                { "emoji": "🔮", "text": "<strong>Accuracy:</strong> 0.81% standard error." },
+                { "emoji": "📦", "text": "<strong>Size:</strong> Fixed 12KB regardless of entry count (even billions)." }
+              ],
+              "code": "PFADD hll:visitors \"user1\" \"user2\"\nPFCOUNT hll:visitors"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Geospatial Indexes",
+            "box": {
+              "content": "Storing and querying coordinates (Longitude/Latitude).",
+              "list": [
+                { "emoji": "📍", "text": "<strong>Proximity:</strong> Find points within a radius." },
+                { "emoji": "🗺️", "text": "<strong>Rich:</strong> Calculate distances between members." }
+              ],
+              "code": "GEOADD shops 13.0827 80.2707 \"Chennai\"\nGEODIST shops \"Chennai\" \"Bangalore\" km"
+            }
+          }
+        ]
+      },
+      {
+        "id": "persistence",
+        "title": "3. Persistence Mechanisms",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Persistence",
+            "box": { "content": "Keeping data safe on disk." }
+          },
+          {
+            "type": "content",
+            "title": "RDB (Redis Database)",
+            "box": {
+              "content": "Point-in-time snapshots of the dataset at specified intervals.",
+              "list": [
+                { "emoji": "📸", "text": "<strong>Compact:</strong> Single file representation of data." },
+                { "emoji": "🏎️", "text": "<strong>Performance:</strong> Minimal impact on the main process." }
+              ],
+              "code": "SAVE\nBGSAVE"
+            }
+          },
+          {
+            "type": "content",
+            "title": "AOF (Append Only File)",
+            "box": {
+              "content": "Logs every write operation received by the server.",
+              "list": [
+                { "emoji": "📜", "text": "<strong>Durable:</strong> High data safety with fsync policies." },
+                { "emoji": "🔄", "text": "<strong>Auto-Rewrite:</strong> Background rewriting to keep file size manageable." }
+              ],
+              "code": "appendonly yes\nappendfsync everysec"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Hybrid Persistence",
+            "box": {
+              "content": "Combining RDB and AOF for fast restarts and high durability.",
+              "list": [
+                { "emoji": "🧬", "text": "<strong>Best of both:</strong> RDB preamble in the AOF file." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "messaging-and-streams",
+        "title": "4. Messaging & Streams",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Messaging Patterns",
+            "box": { "content": "Event-driven architecture with Redis." }
+          },
+          {
+            "type": "content",
+            "title": "Pub/Sub",
+            "box": {
+              "content": "Classic 'fire and forget' messaging pattern.",
+              "list": [
+                { "emoji": "📣", "text": "<strong>Publisher:</strong> Sends message to a channel." },
+                { "emoji": "👂", "text": "<strong>Subscriber:</strong> Listens to messages on a channel." }
+              ],
+              "code": "PUBLISH updates \"hello\"\nSUBSCRIBE updates"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Redis Streams (Elite)",
+            "box": {
+              "content": "Append-only data structure that models a log file. Perfect for message brokers.",
+              "list": [
+                { "emoji": "🌊", "text": "<strong>Persistent:</strong> Messages are stored and can be replayed." },
+                { "emoji": "🤝", "text": "<strong>Consumer Groups:</strong> Distributed processing of a stream." }
+              ],
+              "code": "XADD mystream * sensor-id 1234 temp 19.8\nXREAD COUNT 1 STREAMS mystream 0"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Consumer Groups",
+            "box": {
+              "content": "Scale out stream processing by distributing messages across multiple consumers.",
+              "list": [
+                { "emoji": "👥", "text": "<strong>Group:</strong> Consumers working on the same stream." },
+                { "emoji": "✅", "text": "<strong>Acknowledgment:</strong> XACK ensures no message is lost." }
+              ],
+              "code": "XGROUP CREATE mystream mygroup $\nXREADGROUP GROUP mygroup alice COUNT 1 STREAMS mystream >"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Stream Monitoring",
+            "box": {
+              "content": "Inspecting stream state and consumer performance.",
+              "code": "XINFO STREAM mystream\nXPENDING mystream mygroup"
+            }
+          }
+        ]
+      },
+      {
+        "id": "elite-patterns",
+        "title": "5. Elite Redis Patterns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Elite Patterns",
+            "box": { "content": "Solving real-world architecture challenges." }
+          },
+          {
+            "type": "content",
+            "title": "Distributed Locking (Redlock)",
+            "box": {
+              "content": "Ensuring exclusive access to a resource across different processes using the Redlock algorithm.",
+              "list": [
+                { "emoji": "🔒", "text": "<strong>Safety:</strong> Mutual exclusion and deadlock free." },
+                { "emoji": "🏗️", "text": "<strong>Distributed:</strong> Locks work even if some Redis nodes fail." }
+              ],
+              "code": "SET resource_name my_unique_id NX PX 30000"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Rate Limiting: Fixed Window",
+            "box": {
+              "content": "Simple but effective rate limiting using counters and expirations.",
+              "code": "MULTI\nINCR user:123:limit\nEXPIRE user:123:limit 60\nEXEC"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Rate Limiting: Sliding Window",
+            "box": {
+              "content": "More precise rate limiting using Sorted Sets (ZSET) to track events in time.",
+              "code": "ZADD user:123:reqs 1710283200 \"req_id_1\"\nZREMRANGEBYSCORE user:123:reqs -inf 1710283140"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Session Management at Scale",
+            "box": {
+              "content": "Storing user sessions in Redis for stateless application scaling.",
+              "list": [
+                { "emoji": "🎟️", "text": "<strong>Fast:</strong> Low overhead for check-in logic." },
+                { "emoji": "⏳", "text": "<strong>Auto-Expiry:</strong> Sessions naturally clean up via TTL." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Real-time Leaderboards",
+            "box": {
+              "content": "Leveraging ZSETs for high-frequency ranking updates.",
+              "code": "ZINCRBY leaderboard 50 \"player_1\"\nZREVRANGE leaderboard 0 9 WITHSCORES"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Client-Side Caching (Redis 6)",
+            "box": {
+              "content": "Using Redis Tracking to invalidate local memory caches.",
+              "list": [
+                { "emoji": "⚡", "text": "<strong>Zero Latency:</strong> Fetches from local RAM." },
+                { "emoji": "🔄", "text": "<strong>Invalidation:</strong> Server notifies client when keys change." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "high-availability",
+        "title": "5. High Availability & Scalability",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Scaling Redis",
+            "box": { "content": "Replication, Sentinel, and Cluster." }
+          },
+          {
+            "type": "content",
+            "title": "Replication",
+            "box": {
+              "content": "Master-Slave architecture for read scalability and data redundancy.",
+              "list": [
+                { "emoji": "👤", "text": "<strong>Master:</strong> Handles all writes." },
+                { "emoji": "👥", "text": "<strong>Slaves:</strong> Synchronize data from Master (Read-only)." }
+              ],
+              "code": "SLAVEOF 192.168.1.1 6379"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Redis Sentinel",
+            "box": {
+              "content": "Monitoring and automatic failover system.",
+              "list": [
+                { "emoji": "🕵️", "text": "<strong>Monitoring:</strong> Checks if master and slaves are working." },
+                { "emoji": "📢", "text": "<strong>Notification:</strong> Informs applications about failover." },
+                { "emoji": "⚖️", "text": "<strong>Failover:</strong> Promotes a slave to master if master dies." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Redis Cluster",
+            "box": {
+              "content": "Distributed implementation for sharding data across multiple nodes.",
+              "list": [
+                { "emoji": "🧩", "text": "<strong>Sharding:</strong> 16384 hash slots distributed among nodes." },
+                { "emoji": "📈", "text": "<strong>Scalable:</strong> Add or remove nodes without downtime." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-and-acls",
+        "title": "6. Security & Access Control",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Security & ACLs",
+            "box": { "content": "Modern security features in Redis 6+." }
+          },
+          {
+            "type": "content",
+            "title": "ACLs (Access Control Lists)",
+            "box": {
+              "content": "Granular control over users and the commands they can execute.",
+              "list": [
+                { "emoji": "👤", "text": "<strong>User Management:</strong> Define multiple users with different roles." },
+                { "emoji": "🚫", "text": "<strong>Command Restrictions:</strong> Allow or deny specific commands/keys." }
+              ],
+              "code": "ACL SETUSER developer on >password +get +set ~cached:*"
+            }
+          },
+          {
+            "type": "content",
+            "title": "TLS Encryption",
+            "box": {
+              "content": "Securing data in transit with Transport Layer Security.",
+              "list": [
+                { "emoji": "🔒", "text": "<strong>Encrypted:</strong> All communication between client and server is encrypted." },
+                { "emoji": "🤝", "text": "<strong>Mutual TLS:</strong> Authenticate clients using certificates." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lua-and-functions",
+        "title": "7. Lua Scripting & Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Server-Side Logic",
+            "box": { "content": "Lua scripting and Redis Functions." }
+          },
+          {
+            "type": "content",
+            "title": "Lua Scripting",
+            "box": {
+              "content": "Executing atomic logic on the server using the Lua interpreter.",
+              "list": [
+                { "emoji": "⚛️", "text": "<strong>Atomic:</strong> The script runs as a single operation." },
+                { "emoji": "📉", "text": "<strong>Bandwidth:</strong> Reduce network round-trips." }
+              ],
+              "code": "EVAL \"return redis.call('set',KEYS[1],ARGV[1])\" 1 key value"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Redis Functions (Elite)",
+            "box": {
+              "content": "Managed scripts that are stored as part of the database state.",
+              "list": [
+                { "emoji": "📦", "text": "<strong>Library:</strong> Group related functions into libraries." },
+                { "emoji": "🚀", "text": "<strong>First-Class:</strong> Replicated and persisted like data." }
+              ],
+              "code": "FUNCTION LOAD \"#!lua name=mylib\\n redis.register_function('myfunc', ...)\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "redis-modules",
+        "title": "8. Beyond Cache: Redis Modules",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Redis Modules",
+            "box": { "content": "Extending Redis with new capabilities." }
+          },
+          {
+            "type": "content",
+            "title": "Redis Bloom",
+            "box": {
+              "content": "Probabilistic data structures for lightning-fast membership tests.",
+              "list": [
+                { "emoji": "🌸", "text": "<strong>Bloom Filter:</strong> 'Maybe in set' vs 'Definitely not in set'." },
+                { "emoji": "🏗️", "text": "<strong>Cuckoo Filter:</strong> Supports deletions and higher efficiency." }
+              ],
+              "code": "BF.ADD myfilter element\nBF.EXISTS myfilter element"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Redis Search",
+            "box": {
+              "content": "Full-text search and secondary indexing engine.",
+              "list": [
+                { "emoji": "🔍", "text": "<strong>Indexing:</strong> Index hashes and JSON documents." },
+                { "emoji": "⚡", "text": "<strong>Fast:</strong> Complex queries at sub-millisecond speeds." }
+              ],
+              "code": "FT.CREATE myidx ON HASH PREFIX 1 doc: SCHEMA title TEXT weight 1.0"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Redis JSON",
+            "box": {
+              "content": "Efficient JSON document storage and manipulation.",
+              "code": "JSON.SET doc:1 $ '{\"name\":\"Aravind\", \"details\":{...}}'\nJSON.GET doc:1 $.name"
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-tuning",
+        "title": "9. Performance & Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Peak Performance",
+            "box": { "content": "Tuning Redis for high-load systems." }
+          },
+          {
+            "type": "content",
+            "title": "Pipelining",
+            "box": {
+              "content": "Sending multiple commands without waiting for previous replies.",
+              "list": [
+                { "emoji": "🚀", "text": "<strong>Throughput:</strong> Drastically reduces network latency impact." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Maxmemory Policy",
+            "box": {
+              "content": "Configuring how Redis behaves when it hits the memory limit.",
+              "list": [
+                { "emoji": "🧠", "text": "<strong>allkeys-lru:</strong> Evict the least recently used keys." },
+                { "emoji": "📉", "text": "<strong>volatile-ttl:</strong> Evict keys with the shortest time to live." }
+              ],
+              "code": "maxmemory 2gb\nmaxmemory-policy allkeys-lru"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Lazy Freeing",
+            "box": {
+              "content": "Non-blocking freeing of large keys in the background.",
+              "code": "lazyfree-lazy-eviction yes\nUNLINK largekey"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment-and-monitoring",
+        "title": "10. Production Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Production Ready",
+            "box": { "content": "Deployment, Monitoring, and Tools." }
+          },
+          {
+            "type": "content",
+            "title": "Redis Insights",
+            "box": {
+              "content": "The visual dashboard for managing and analyzing Redis data.",
+              "list": [
+                { "emoji": "📊", "text": "<strong>Analyze:</strong> Real-time performance analysis." },
+                { "emoji": "🏹", "text": "<strong>Memory:</strong> Identify memory-heavy keys and patterns." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Kubernetes Deployment",
+            "box": {
+              "content": "Running Redis at scale using Operators.",
+              "list": [
+                { "emoji": "☸️", "text": "<strong>Redis Operator:</strong> Handles Cluster creation and failover." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Conclusion",
+            "box": { "content": "Final Recap and Q&A." }
+          },
+          {
+            "type": "content",
+            "title": "Redis as a Primary Database?",
+            "box": {
+              "content": "When it makes sense to use Redis as your single source of truth.",
+              "list": [
+                { "emoji": "🚀", "text": "<strong>Speed:</strong> Unmatched performance requirements." },
+                { "emoji": "🏗️", "text": "<strong>Complexity:</strong> Simplified architecture for specific domains." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Final Thoughts",
+            "box": {
+              "content": "Redis is more than a cache; it's a multi-purpose distributed platform.",
+              "list": [
+                { "emoji": "📈", "text": "<strong>Scale:</strong> From single node to global clusters." },
+                { "emoji": "🛠️", "text": "<strong>Tools:</strong> An essential part of the modern backend stack." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": { "content": "Thank you for your attention! Questions?" }
+          }
+        ]
+      }
+    ]
+  }
+}

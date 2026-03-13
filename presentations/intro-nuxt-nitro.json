@@ -1,0 +1,551 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "intro",
+        "title": "Nuxt 3 & Nitro Mastery",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Nuxt 3 & Nitro Mastery",
+            "box": {
+              "content": "The High-Performance Vue Framework.",
+              "list": [
+                { "emoji": "🟢", "text": "<strong>Nuxt 3:</strong> The intuitive way to build Vue apps." },
+                { "emoji": "🔥", "text": "<strong>Nitro:</strong> The next-gen server engine." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Presenter",
+            "box": {
+              "content": "Aravind Govindhasamy",
+              "list": [
+                { "emoji": "🏗️", "text": "Elite Technical Architect" },
+                { "emoji": "🚀", "text": "Vue Ecosystem Expert" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-foundations",
+        "title": "1. Nuxt Foundations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Built on Vue 3",
+            "box": { "content": "The power of the Composition API and Vite." }
+          },
+          {
+            "type": "content",
+            "title": "Vue 3 & Composition API",
+            "box": {
+              "content": "Nuxt 3 is built from the ground up for Vue 3, leveraging its high performance and modularity.",
+              "list": [
+                { "emoji": "🧩", "text": "<strong>Modular:</strong> Composition API for better logic reuse." },
+                { "emoji": "⚡", "text": "<strong>Fast:</strong> Built-in support for Vite for instant dev starts." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Auto-Imports",
+            "box": {
+              "content": "Zero-config development with automatic imports for components, composables, and Vue APIs.",
+              "list": [
+                { "emoji": "🪄", "text": "<strong>Seamless:</strong> No need to manually import `ref`, `computed`, or components." },
+                { "emoji": "📦", "text": "<strong>Tree-shaken:</strong> Only the code you use is included in the build." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "File-based Routing",
+            "box": {
+              "content": "Define your application structure through the filesystem.",
+              "list": [
+                { "emoji": "📂", "text": "<strong>pages/:</strong> Automatically generates routes based on folder structure." },
+                { "emoji": "🏗️", "text": "<strong>layouts/:</strong> Reusable UI shells for your pages." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Universal Rendering",
+            "box": {
+              "content": "Nuxt handles both server-side and client-side rendering out of the box.",
+              "list": [
+                { "emoji": "🌍", "text": "<strong>SSR:</strong> Fast initial load and excellent SEO." },
+                { "emoji": "🏎️", "text": "<strong>Hydration:</strong> Seamless transition to a single-page app in the browser." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nitro-engine",
+        "title": "2. The Nitro Engine",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. High-Performance Runtime",
+            "box": { "content": "The engine that powers Nuxt 3." }
+          },
+          {
+            "type": "content",
+            "title": "What is Nitro?",
+            "box": {
+              "content": "A portable, performant, and lightweight server engine for Node.js and the Edge.",
+              "list": [
+                { "emoji": "🚀", "text": "<strong>Fast:</strong> Built with Rollup and Unjs packages." },
+                { "emoji": "📦", "text": "<strong>Portable:</strong> Deploy to any runtime without modification." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Built-in Storage (Unstorage)",
+            "box": {
+              "content": "A unified storage layer for different drivers (Redis, FS, Cloudflare KV).",
+              "code": "// server/api/data.js\nconst storage = useStorage('data');\nawait storage.setItem('key', { value: 'nitro' });"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Server API Routes",
+            "box": {
+              "content": "Create type-safe API routes easily in the `server/api` directory.",
+              "code": "export default defineEventHandler((event) => {\n  return { hello: 'world' };\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Server Middleware",
+            "box": {
+              "content": "Intercept and handle requests on the server side before they reach your components.",
+              "list": [
+                { "emoji": "🛡️", "text": "<strong>Security:</strong> Add headers or validation." },
+                { "emoji": "🔍", "text": "<strong>Logging:</strong> Track request performance." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-data-fetching",
+        "title": "3. Data Fetching Mastery",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Universal Data Handling",
+            "box": { "content": "Mastering useFetch and useAsyncData." }
+          },
+          {
+            "type": "content",
+            "title": "useFetch",
+            "box": {
+              "content": "The most common way to fetch data in Nuxt. Isomorphic and SSR-friendly.",
+              "code": "const { data, pending, error } = await useFetch('/api/users');"
+            }
+          },
+          {
+            "type": "content",
+            "title": "useAsyncData",
+            "box": {
+              "content": "Flexible data fetching for complex scenarios or when using non-fetch sources (e.g., SDKs).",
+              "code": "const { data } = await useAsyncData('users', () => $fetch('/api/users'));"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Isomorphic $fetch",
+            "box": {
+              "content": "Nuxt provides `$fetch` which works on both server and client, calling server routes directly on the server to save overhead.",
+              "list": [
+                { "emoji": "🏎️", "text": "<strong>Direct Call:</strong> Skips the network layer when on the server." },
+                { "emoji": "🧩", "text": "<strong>Consistent:</strong> Same API everywhere." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Refresh and Watch",
+            "box": {
+              "content": "Automatically re-fetch data when reactive parameters change.",
+              "code": "useFetch('/api/search', { watch: [query] });"
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-rendering-modes",
+        "title": "4. Rendering Modes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Hybrid & Edge Rendering",
+            "box": { "content": "Tailoring rendering to your needs." }
+          },
+          {
+            "type": "content",
+            "title": "Static vs Dynamic",
+            "box": {
+              "content": "Choosing the right strategy for each route in your application.",
+              "list": [
+                { "emoji": "📄", "text": "<strong>SSG:</strong> Static Site Generation for speed and cost." },
+                { "emoji": "🌊", "text": "<strong>SSR:</strong> Server-Side Rendering for real-time data." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Incremental Static Regeneration (ISR)",
+            "box": {
+              "content": "Update static content in the background after deployment without a full rebuild.",
+              "code": "// nuxt.config.ts\nrouteRules: {\n  '/blog/**': { isr: 3600 }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Stale-While-Revalidate (SWR)",
+            "box": {
+              "content": "Serve cached content immediately and refresh it in the background.",
+              "code": "routeRules: {\n  '/api/data': { swr: true }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Nuxt Islands & Server Components",
+            "box": {
+              "content": "The experimental future of server-only components in Nuxt.",
+              "list": [
+                { "emoji": "🏝️", "text": "<strong>Islands:</strong> Render a component on the server with zero client JS." },
+                { "emoji": "🚀", "text": "<strong>Efficient:</strong> Reduce the payload size significantly." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-state-management",
+        "title": "5. State Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Managing Application State",
+            "box": { "content": "Reactivity at scale with Nuxt 3." }
+          },
+          {
+            "type": "content",
+            "title": "useState",
+            "box": {
+              "content": "A Nuxt-specific composable for creating SSR-friendly shared state.",
+              "code": "const counter = useState('counter', () => 0);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Pinia Integration",
+            "box": {
+              "content": "The official state management library for Vue, seamlessly integrated into Nuxt.",
+              "list": [
+                { "emoji": "🍍", "text": "<strong>Store-based:</strong> Modular and type-safe stores." },
+                { "emoji": "🔄", "text": "<strong>SSR Ready:</strong> Automatic state hydration from server to client." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Server-side State Hydration",
+            "box": {
+              "content": "How Nuxt ensures that the state you set on the server is available in the browser without re-fetching.",
+              "list": [
+                { "emoji": "💧", "text": "<strong>Hydration:</strong> The process of attaching Vue to the server-rendered HTML." },
+                { "emoji": "🚀", "text": "<strong>Seamless:</strong> User sees the final state immediately." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Shared Composables",
+            "box": {
+              "content": "Defining reusable logic and state in the `composables/` directory.",
+              "code": "// composables/useAuth.js\nexport const useAuth = () => useState('auth', () => ({ user: null }));"
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-server-routes",
+        "title": "6. Server Routes & Middleware",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Backend logic in Nuxt",
+            "box": { "content": "Building powerful APIs with Nitro." }
+          },
+          {
+            "type": "content",
+            "title": "The server/ Directory",
+            "box": {
+              "content": "Organization of backend logic, separated from your frontend components.",
+              "list": [
+                { "emoji": "📂", "text": "<strong>api/:</strong> JSON API endpoints." },
+                { "emoji": "📂", "text": "<strong>routes/:</strong> Custom server routes." },
+                { "emoji": "📂", "text": "<strong>middleware/:</strong> Server-side request interceptors." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Writing API Handlers",
+            "box": {
+              "content": "Type-safe handlers with access to the H3 event and context.",
+              "code": "export default defineEventHandler(async (event) => {\n  const body = await readBody(event);\n  return { success: true, body };\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Server Utilities",
+            "box": {
+              "content": "Leveraging Nitro utilities for headers, cookies, and redirects.",
+              "code": "setCookie(event, 'token', 'abc');\nsendRedirect(event, '/login');"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Database Integration",
+            "box": {
+              "content": "Connecting to databases like PostgreSQL or MongoDB within server routes.",
+              "list": [
+                { "emoji": "🔌", "text": "<strong>ORM:</strong> Use Prisma or Drizzle for type-safety." },
+                { "emoji": "🏗️", "text": "<strong>Lifecycle:</strong> Manage connections in server plugins." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-deployment",
+        "title": "7. Deployment & Strategy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Deployment Mastery",
+            "box": { "content": "Deploying Nuxt 3 anywhere." }
+          },
+          {
+            "type": "content",
+            "title": "Multi-Runtime Deployment",
+            "box": {
+              "content": "Nitro enables Nuxt to run on Node.js, Vercel, Netlify, Cloudflare Workers, and more.",
+              "list": [
+                { "emoji": "🌍", "text": "<strong>Adaptability:</strong> Change hosting without changing code." },
+                { "emoji": "⚡", "text": "<strong>Edge Enabled:</strong> Run your entire app at the edge." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Cloudflare Workers Adapter",
+            "box": {
+              "content": "Deploying Nuxt to the Cloudflare global network.",
+              "code": "// nuxt.config.ts\nnitro: { preset: 'cloudflare-pages' }"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Self-Hosting with Docker",
+            "box": {
+              "content": "Creating production-ready Docker images for your Nuxt application.",
+              "list": [
+                { "emoji": "🐳", "text": "<strong>Lean:</strong> Use alpine-based images for minimal footprint." },
+                { "emoji": "⚙️", "text": "<strong>Predictable:</strong> Consistent environment across all stages." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Performance Checklist",
+            "box": {
+              "content": "Key areas to optimize before going live.",
+              "list": [
+                { "emoji": "🚀", "text": "<strong>Critical CSS:</strong> Inline important styles for fast FCP." },
+                { "emoji": "📦", "text": "<strong>Analyze:</strong> Use the Nuxt bundle analyzer to find bloat." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-advanced-components",
+        "title": "8. Advanced Components",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Beyond the Basics",
+            "box": { "content": "Mastering Nuxt Islands and Slots." }
+          },
+          {
+            "type": "content",
+            "title": "Nuxt Islands",
+            "box": {
+              "content": "Render non-interactive components on the server for zero client bundle impact.",
+              "code": "<NuxtIsland name=\"MyServerOnlyComponent\" />"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Server Components",
+            "box": {
+              "content": "Using the `.server.vue` suffix to ensure a component never reaches the client.",
+              "list": [
+                { "emoji": "🛡️", "text": "<strong>Isolated:</strong> Logic stays on the server." },
+                { "emoji": "📉", "text": "<strong>Lean:</strong> No JS hydration required." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Named Slots & Layouts",
+            "box": {
+              "content": "Advanced content projection patterns for complex UI structures.",
+              "code": "<template #header>\n  <h1>Page Title</h1>\n</template>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-ecosystem",
+        "title": "9. Ecosystem & Modules",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. The Power of Modules",
+            "box": { "content": "Supercharging Nuxt with the community ecosystem." }
+          },
+          {
+            "type": "content",
+            "title": "Nuxt DevTools",
+            "box": {
+              "content": "A powerful in-browser dashboard for inspecting your application.",
+              "list": [
+                { "emoji": "🛠️", "text": "<strong>Insight:</strong> Inspect routes, components, and state." },
+                { "emoji": "📊", "text": "<strong>Timeline:</strong> Track performance and request logs." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "@nuxtjs/tailwindcss",
+            "box": {
+              "content": "Seamless integration of Tailwind CSS into your Nuxt project.",
+              "code": "// nuxt.config.ts\nmodules: ['@nuxtjs/tailwindcss']"
+            }
+          },
+          {
+            "type": "content",
+            "title": "@sidebase/nuxt-auth",
+            "box": {
+              "content": "Full-stack authentication patterns for Nuxt applications.",
+              "list": [
+                { "emoji": "🔑", "text": "<strong>Flexible:</strong> Supports NextAuth.js providers." },
+                { "emoji": "🔒", "text": "<strong>Secure:</strong> Built-in session handling and middleware." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-testing",
+        "title": "10. Testing Strategies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Quality Assurance",
+            "box": { "content": "Testing Nuxt 3 with Vitest and Playwright." }
+          },
+          {
+            "type": "content",
+            "title": "Vitest for Units",
+            "box": {
+              "content": "High-performance unit testing for your composables and utilities.",
+              "code": "test('useCounter works', () => {\n  const counter = useCounter();\n  counter.increment();\n  expect(counter.value).toBe(1);\n});"
+            }
+          },
+          {
+            "type": "content",
+            "title": "@nuxt/test-utils",
+            "box": {
+              "content": "Official utilities for testing Nuxt components and server routes.",
+              "code": "import { mountSuspended } from '@nuxt/test-utils/runtime';\nconst component = await mountSuspended(MyComponent);"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Playwright for E2E",
+            "box": {
+              "content": "End-to-end testing that covers everything from the server response to browser interaction.",
+              "list": [
+                { "emoji": "🎭", "text": "<strong>Realistic:</strong> Validates the full SSR and hydration flow." },
+                { "emoji": "🚥", "text": "<strong>Stable:</strong> Integrated with Nuxt's development server." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "nuxt-conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Conclusion",
+            "box": { "content": "The Future of Professional Vue Apps." }
+          },
+          {
+            "type": "content",
+            "title": "Why Nuxt 3?",
+            "box": {
+              "content": "The most intuitive and powerful way to build high-performance web applications with Vue.",
+              "list": [
+                { "emoji": "🏗️", "text": "<strong>Industrial:</strong> Best-in-class developer experience." },
+                { "emoji": "⚡", "text": "<strong>Performance:</strong> Nitro ensures elite speed everywhere." },
+                { "emoji": "🌟", "text": "<strong>Community:</strong> A vast and growing ecosystem of modules." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Road Ahead",
+            "box": {
+              "content": "Stay tuned for further optimizations and deeper Nitro integration.",
+              "list": [
+                { "emoji": "📈", "text": "<strong>Evolution:</strong> Nuxt continues to push the boundaries of web development." },
+                { "emoji": "🔧", "text": "<strong>Tooling:</strong> Expect even faster builds and better debugging." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Next Steps",
+            "box": {
+              "content": "Start your Nuxt 3 journey today.",
+              "list": [
+                { "emoji": "🛠️", "text": "<strong>Build:</strong> Create a new project with `npx nuxi@latest init`." },
+                { "emoji": "📚", "text": "<strong>Learn:</strong> Dive into the official documentation." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": { "content": "Thank you for your time! Any questions?" }
+          }
+        ]
+      }
+    ]
+  }
+}
