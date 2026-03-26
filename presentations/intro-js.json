@@ -102,7 +102,6 @@
             "emoji": "📜",
             "title": "What is JavaScript?",
             "box": {
-              "content": "<span class=\"highlight\">High-level, interpreted programming language</span>",
               "list": [
                 {
                   "emoji": "🚀",
@@ -116,7 +115,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Dynamic</strong> - No need to specify data types"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">High-level, interpreted programming language</span>"
             }
           },
           {
@@ -242,8 +242,8 @@
             "emoji": "🧮",
             "title": "Type Coercion",
             "box": {
-              "content": "JavaScript often automatically converts values from one type to another (type coercion).",
-              "code": "// Implicit Coercion\nconsole.log('5' + 5); // '55' (Number to String)\nconsole.log('5' - 5); // 0 (String to Number)\nconsole.log(true + 1); // 2 (Boolean to Number)\n\n// Explicit Coercion\nconsole.log(Number('10')); // 10\nconsole.log(String(100)); // '100'\nconsole.log(Boolean(0)); // false"
+              "code": "// Implicit Coercion\nconsole.log('5' + 5); // '55' (Number to String)\nconsole.log('5' - 5); // 0 (String to Number)\nconsole.log(true + 1); // 2 (Boolean to Number)\n\n// Explicit Coercion\nconsole.log(Number('10')); // 10\nconsole.log(String(100)); // '100'\nconsole.log(Boolean(0)); // false",
+              "title": "JavaScript often automatically converts values from one type to another (type coercion)."
             }
           }
         ]
@@ -293,8 +293,8 @@
             "emoji": "🧮",
             "title": "Operator Precedence",
             "box": {
-              "content": "Determines the order in which operators are evaluated.",
-              "code": "let result = 5 + 3 * 2; // result is 11 (multiplication before addition)\nlet result2 = (5 + 3) * 2; // result2 is 16 (parentheses change precedence)"
+              "code": "let result = 5 + 3 * 2; // result is 11 (multiplication before addition)\nlet result2 = (5 + 3) * 2; // result2 is 16 (parentheses change precedence)",
+              "title": "Determines the order in which operators are evaluated."
             }
           }
         ]

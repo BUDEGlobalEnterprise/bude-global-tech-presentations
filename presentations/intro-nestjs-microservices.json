@@ -8,23 +8,23 @@
           {
             "type": "title",
             "title": "NestJS & Microservices",
-            "box": {
-              "content": "Enterprise-grade Node.js Architecture.",
-              "list": [
-                { "emoji": "🦁", "text": "<strong>NestJS:</strong> The progressive Node.js framework." },
-                { "emoji": "🏗️", "text": "<strong>Microservices:</strong> Scalable distributed systems." }
-              ]
-            }
+            "subtitle": "Enterprise-grade Node.js Architecture."
           },
           {
             "type": "content",
             "title": "Presenter",
             "box": {
-              "content": "Aravind Govindhasamy",
               "list": [
-                { "emoji": "🏗️", "text": "Elite Technical Architect" },
-                { "emoji": "🚀", "text": "Enterprise Backend Expert" }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "Elite Technical Architect"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Enterprise Backend Expert"
+                }
+              ],
+              "title": "Aravind Govindhasamy"
             }
           }
         ]
@@ -36,41 +36,47 @@
           {
             "type": "topic-title",
             "title": "1. Solid Grounding",
-            "box": { "content": "The philosophy and core concepts of NestJS." }
+            "subtitle": "The philosophy and core concepts of NestJS."
           },
           {
             "type": "content",
             "title": "What is NestJS?",
             "box": {
-              "content": "Nest is built on top of Express or Fastify, providing an out-of-the-box application architecture.",
               "list": [
-                { "emoji": "📜", "text": "<strong>TypeScript:</strong> Built with and for TypeScript." },
-                { "emoji": "🧩", "text": "<strong>Modular:</strong> Encourages encapsulation and separation of concerns." }
-              ]
+                {
+                  "emoji": "📜",
+                  "text": "<strong>TypeScript:</strong> Built with and for TypeScript."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Modular:</strong> Encourages encapsulation and separation of concerns."
+                }
+              ],
+              "title": "Nest is built on top of Express or Fastify, providing an out-of-the-box application architecture."
             }
           },
           {
             "type": "content",
             "title": "Dependency Injection (DI)",
             "box": {
-              "content": "A core architectural pattern for managing object creation and lifecycle.",
-              "code": "@Injectable()\nexport class UsersService { ... }"
+              "code": "@Injectable()\nexport class UsersService { ... }",
+              "title": "A core architectural pattern for managing object creation and lifecycle."
             }
           },
           {
             "type": "content",
             "title": "Decorators",
             "box": {
-              "content": "Using TypeScript decorators for clean, declarative meta-programming.",
-              "code": "@Controller('users')\nexport class UsersController { ... }"
+              "code": "@Controller('users')\nexport class UsersController { ... }",
+              "title": "Using TypeScript decorators for clean, declarative meta-programming."
             }
           },
           {
             "type": "content",
             "title": "The Modular System",
             "box": {
-              "content": "Every Nest application has at least one module (the root module).",
-              "code": "@Module({\n    controllers: [UsersController],\n    providers: [UsersService],\n})\nexport class UsersModule {}"
+              "code": "@Module({\n    controllers: [UsersController],\n    providers: [UsersService],\n})\nexport class UsersModule {}",
+              "title": "Every Nest application has at least one module (the root module)."
             }
           }
         ]
@@ -82,33 +88,39 @@
           {
             "type": "topic-title",
             "title": "2. Inside the Box",
-            "box": { "content": "Mastering Controllers, Providers, and Pipes." }
+            "subtitle": "Mastering Controllers, Providers, and Pipes."
           },
           {
             "type": "content",
             "title": "Controllers",
             "box": {
-              "content": "Responsible for handling incoming requests and returning responses to the client.",
-              "code": "@Get()\nfindAll(@Query() query: ListAllEntities) {\n    return `This action returns all cats (limit: ${query.limit} items)`;\n}"
+              "code": "@Get()\nfindAll(@Query() query: ListAllEntities) {\n    return `This action returns all cats (limit: ${query.limit} items)`;\n}",
+              "title": "Responsible for handling incoming requests and returning responses to the client."
             }
           },
           {
             "type": "content",
             "title": "Providers",
             "box": {
-              "content": "Almost everything in Nest is a provider: services, repositories, factories, helpers, etc.",
               "list": [
-                { "emoji": "💉", "text": "<strong>Injected:</strong> Can be injected into other classes via constructors." },
-                { "emoji": "🔄", "text": "<strong>Lifecycle:</strong> Managed by the Nest IoC container." }
-              ]
+                {
+                  "emoji": "💉",
+                  "text": "<strong>Injected:</strong> Can be injected into other classes via constructors."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Lifecycle:</strong> Managed by the Nest IoC container."
+                }
+              ],
+              "title": "Almost everything in Nest is a provider: services, repositories, factories, helpers, etc."
             }
           },
           {
             "type": "content",
             "title": "Pipes & Validation",
             "box": {
-              "content": "Use pipes for transformation and validation of input data.",
-              "code": "@Post()\n@UsePipes(new ValidationPipe())\ncreate(@Body() createCatDto: CreateCatDto) { ... }"
+              "code": "@Post()\n@UsePipes(new ValidationPipe())\ncreate(@Body() createCatDto: CreateCatDto) { ... }",
+              "title": "Use pipes for transformation and validation of input data."
             }
           }
         ]
@@ -120,36 +132,48 @@
           {
             "type": "topic-title",
             "title": "3. Distributed Power",
-            "box": { "content": "Understanding transport layers and message patterns." }
+            "subtitle": "Understanding transport layers and message patterns."
           },
           {
             "type": "content",
             "title": "What is a Nest Microservice?",
             "box": {
-              "content": "An application that uses a different transport layer than HTTP.",
               "list": [
-                { "emoji": "📡", "text": "<strong>Transport:</strong> TCP, Redis, gRPC, RabbitMQ, MQTT, NATS." },
-                { "emoji": "🏗️", "text": "<strong>ClientProxy:</strong> Used to communicate with external microservices." }
-              ]
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Transport:</strong> TCP, Redis, gRPC, RabbitMQ, MQTT, NATS."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>ClientProxy:</strong> Used to communicate with external microservices."
+                }
+              ],
+              "title": "An application that uses a different transport layer than HTTP."
             }
           },
           {
             "type": "content",
             "title": "The gRPC Transport",
             "box": {
-              "content": "High-performance, cross-language communication using Protocol Buffers.",
-              "code": "options: {\n    package: 'hero',\n    protoPath: join(__dirname, 'hero/hero.proto'),\n}"
+              "code": "options: {\n    package: 'hero',\n    protoPath: join(__dirname, 'hero/hero.proto'),\n}",
+              "title": "High-performance, cross-language communication using Protocol Buffers."
             }
           },
           {
             "type": "content",
             "title": "RabbitMQ & Messaging",
             "box": {
-              "content": "Asynchronous communication using message brokers for decoupled systems.",
               "list": [
-                { "emoji": "🐇", "text": "<strong>Reliable:</strong> Guaranteed delivery and message queuing." },
-                { "emoji": "🧩", "text": "<strong>Scalable:</strong> Easily add more consumers to handle load." }
-              ]
+                {
+                  "emoji": "🐇",
+                  "text": "<strong>Reliable:</strong> Guaranteed delivery and message queuing."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Scalable:</strong> Easily add more consumers to handle load."
+                }
+              ],
+              "title": "Asynchronous communication using message brokers for decoupled systems."
             }
           }
         ]
@@ -161,30 +185,30 @@
           {
             "type": "topic-title",
             "title": "4. The Best of Both Worlds",
-            "box": { "content": "Combining HTTP and Microservice transport layers." }
+            "subtitle": "Combining HTTP and Microservice transport layers."
           },
           {
             "type": "content",
             "title": "What is a Hybrid App?",
             "box": {
-              "content": "An application that listens on multiple ports or uses multiple transport layers simultaneously.",
-              "code": "const app = await NestFactory.create(AppModule);\nconst microservice = app.connectMicroservice({ ... });\nawait app.startAllMicroservices();\nawait app.listen(3000);"
+              "code": "const app = await NestFactory.create(AppModule);\nconst microservice = app.connectMicroservice({ ... });\nawait app.startAllMicroservices();\nawait app.listen(3000);",
+              "title": "An application that listens on multiple ports or uses multiple transport layers simultaneously."
             }
           },
           {
             "type": "content",
             "title": "Request-Response Pattern",
             "box": {
-              "content": "Synchronous communication where the caller waits for a response.",
-              "code": "@MessagePattern({ cmd: 'sum' })\naccumulate(data: number[]): number {\n    return (data || []).reduce((a, b) => a + b);\n}"
+              "code": "@MessagePattern({ cmd: 'sum' })\naccumulate(data: number[]): number {\n    return (data || []).reduce((a, b) => a + b);\n}",
+              "title": "Synchronous communication where the caller waits for a response."
             }
           },
           {
             "type": "content",
             "title": "Event-based Pattern",
             "box": {
-              "content": "Asynchronous communication for 'fire and forget' operations.",
-              "code": "@EventPattern('user_created')\nasync handleUserCreated(data: Record<string, unknown>) {\n    // handle event\n}"
+              "code": "@EventPattern('user_created')\nasync handleUserCreated(data: Record<string, unknown>) {\n    // handle event\n}",
+              "title": "Asynchronous communication for 'fire and forget' operations."
             }
           }
         ]
@@ -196,30 +220,30 @@
           {
             "type": "topic-title",
             "title": "5. Data and Protection",
-            "box": { "content": "Mastering TypeORM, Prisma, and JWT." }
+            "subtitle": "Mastering TypeORM, Prisma, and JWT."
           },
           {
             "type": "content",
             "title": "ORM Integration",
             "box": {
-              "content": "Nest provides official modules for TypeORM, Prisma, and Mongoose.",
-              "code": "@Module({\n    imports: [TypeOrmModule.forRoot({ ... })],\n})"
+              "code": "@Module({\n    imports: [TypeOrmModule.forRoot({ ... })],\n})",
+              "title": "Nest provides official modules for TypeORM, Prisma, and Mongoose."
             }
           },
           {
             "type": "content",
             "title": "Authentication with Passport",
             "box": {
-              "content": "Using the @nestjs/passport and @nestjs/jwt modules for secure session management.",
-              "code": "@UseGuards(JwtAuthGuard)\n@Get('profile')\ngetProfile(@Request() req) {\n    return req.user;\n}"
+              "code": "@UseGuards(JwtAuthGuard)\n@Get('profile')\ngetProfile(@Request() req) {\n    return req.user;\n}",
+              "title": "Using the @nestjs/passport and @nestjs/jwt modules for secure session management."
             }
           },
           {
             "type": "content",
             "title": "RBAC and Guards",
             "box": {
-              "content": "Implementing Role-Based Access Control using custom decorators and guards.",
-              "code": "@Roles(Role.Admin)\n@UseGuards(RolesGuard)"
+              "code": "@Roles(Role.Admin)\n@UseGuards(RolesGuard)",
+              "title": "Implementing Role-Based Access Control using custom decorators and guards."
             }
           }
         ]
@@ -231,41 +255,47 @@
           {
             "type": "topic-title",
             "title": "6. Maintenance & Monitoring",
-            "box": { "content": "Logging, health checks, and metrics." }
+            "subtitle": "Logging, health checks, and metrics."
           },
           {
             "type": "content",
             "title": "OpenTelemetry Integration",
             "box": {
-              "content": "Distributed tracing for microservices using OpenTelemetry and Jaeger.",
               "list": [
-                { "emoji": "🕵️", "text": "<strong>Tracing:</strong> Track requests across service boundaries." },
-                { "emoji": "📊", "text": "<strong>Visibility:</strong> Identify bottlenecks in complex distributed flows." }
-              ]
+                {
+                  "emoji": "🕵️",
+                  "text": "<strong>Tracing:</strong> Track requests across service boundaries."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Visibility:</strong> Identify bottlenecks in complex distributed flows."
+                }
+              ],
+              "title": "Distributed tracing for microservices using OpenTelemetry and Jaeger."
             }
           },
           {
             "type": "content",
             "title": "Logger Integration",
             "box": {
-              "content": "Using the built-in Logger class or integrating Pino for high-performance logging.",
-              "code": "private readonly logger = new Logger(MyService.name);"
+              "code": "private readonly logger = new Logger(MyService.name);",
+              "title": "Using the built-in Logger class or integrating Pino for high-performance logging."
             }
           },
           {
             "type": "content",
             "title": "Terminus Health Checks",
             "box": {
-              "content": "Providing endpoints for Kubernetes liveness and readiness probes.",
-              "code": "@Get('health')\n@HealthCheck()\ncheck() {\n    return this.health.check([ ... ]);\n}"
+              "code": "@Get('health')\n@HealthCheck()\ncheck() {\n    return this.health.check([ ... ]);\n}",
+              "title": "Providing endpoints for Kubernetes liveness and readiness probes."
             }
           },
           {
             "type": "content",
             "title": "Custom Health Indicators",
             "box": {
-              "content": "Creating custom checks for external dependencies like third-party APIs.",
-              "code": "export class MyHealthIndicator extends HealthIndicator { ... }"
+              "code": "export class MyHealthIndicator extends HealthIndicator { ... }",
+              "title": "Creating custom checks for external dependencies like third-party APIs."
             }
           }
         ]
@@ -277,22 +307,22 @@
           {
             "type": "topic-title",
             "title": "7. Quality First",
-            "box": { "content": "Unit, Integration, and E2E testing with Jest." }
+            "subtitle": "Unit, Integration, and E2E testing with Jest."
           },
           {
             "type": "content",
             "title": "The Testing Module",
             "box": {
-              "content": "Using Test.createTestingModule() to mock dependencies and isolate tests.",
-              "code": "const module: TestingModule = await Test.createTestingModule({ ... }).compile();"
+              "code": "const module: TestingModule = await Test.createTestingModule({ ... }).compile();",
+              "title": "Using Test.createTestingModule() to mock dependencies and isolate tests."
             }
           },
           {
             "type": "content",
             "title": "E2E Testing",
             "box": {
-              "content": "Testing the full request-response cycle using SuperTest.",
-              "code": "return request(app.getHttpServer()).get('/cats').expect(200);"
+              "code": "return request(app.getHttpServer()).get('/cats').expect(200);",
+              "title": "Testing the full request-response cycle using SuperTest."
             }
           }
         ]
@@ -304,28 +334,40 @@
           {
             "type": "topic-title",
             "title": "8. Scaling in Production",
-            "box": { "content": "Docker, Kubernetes, and Serverless." }
+            "subtitle": "Docker, Kubernetes, and Serverless."
           },
           {
             "type": "content",
             "title": "Multi-stage Docker Builds",
             "box": {
-              "content": "Creating lean production images by separating build and runtime environments.",
               "list": [
-                { "emoji": "🐳", "text": "<strong>Small:</strong> Drastically reduce image size." },
-                { "emoji": "🔒", "text": "<strong>Secure:</strong> Only include production dependencies." }
-              ]
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Small:</strong> Drastically reduce image size."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure:</strong> Only include production dependencies."
+                }
+              ],
+              "title": "Creating lean production images by separating build and runtime environments."
             }
           },
           {
             "type": "content",
             "title": "Kubernetes Orchestration",
             "box": {
-              "content": "Deploying NestJS microservices as stateless pods in a K8s cluster.",
               "list": [
-                { "emoji": "☸️", "text": "<strong>Self-healing:</strong> Auto-restart failed containers." },
-                { "emoji": "⚖️", "text": "<strong>Auto-scaling:</strong> Scale based on CPU/Memory usage." }
-              ]
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Self-healing:</strong> Auto-restart failed containers."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Auto-scaling:</strong> Scale based on CPU/Memory usage."
+                }
+              ],
+              "title": "Deploying NestJS microservices as stateless pods in a K8s cluster."
             }
           }
         ]
@@ -337,35 +379,52 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "Building for the Future with NestJS." }
+            "subtitle": "Building for the Future with NestJS."
           },
           {
             "type": "content",
             "title": "The Modular Advantage",
             "box": {
-              "content": "Why NestJS is the preferred choice for enterprise Node.js development.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Scalable:</strong> Handles complex codebase growth." },
-                { "emoji": "🤝", "text": "<strong>Collaborative:</strong> Enforces consistent patterns across teams." },
-                { "emoji": "🚀", "text": "<strong>Performance:</strong> Fast and lightweight runtime." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Scalable:</strong> Handles complex codebase growth."
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Collaborative:</strong> Enforces consistent patterns across teams."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performance:</strong> Fast and lightweight runtime."
+                }
+              ],
+              "title": "Why NestJS is the preferred choice for enterprise Node.js development."
             }
           },
           {
             "type": "content",
             "title": "Final Thoughts",
             "box": {
-              "content": "Start building enterprise-grade applications today.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>Build:</strong> Use `nest new project-name` to get started." },
-                { "emoji": "📚", "text": "<strong>Learn:</strong> Explore the official documentation and community tutorials." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Build:</strong> Use `nest new project-name` to get started."
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Learn:</strong> Explore the official documentation and community tutorials."
+                }
+              ],
+              "title": "Start building enterprise-grade applications today."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you for your time! Any questions?" }
+            "box": {
+              "title": "Thank you for your time! Any questions?"
+            }
           }
         ]
       },
@@ -376,30 +435,30 @@
           {
             "type": "topic-title",
             "title": "9. Beyond the Basics",
-            "box": { "content": "Mastering Interceptors, Filters, and Middlewares." }
+            "subtitle": "Mastering Interceptors, Filters, and Middlewares."
           },
           {
             "type": "content",
             "title": "Interceptors",
             "box": {
-              "content": "Bind extra logic before or after method execution, transform results, or wrap functions.",
-              "code": "@Injectable()\nexport class TransformInterceptor implements NestInterceptor { ... }"
+              "code": "@Injectable()\nexport class TransformInterceptor implements NestInterceptor { ... }",
+              "title": "Bind extra logic before or after method execution, transform results, or wrap functions."
             }
           },
           {
             "type": "content",
             "title": "Exception Filters",
             "box": {
-              "content": "Responsible for processing all unhandled exceptions across an application.",
-              "code": "@Catch(HttpException)\nexport class HttpErrorFilter implements ExceptionFilter { ... }"
+              "code": "@Catch(HttpException)\nexport class HttpErrorFilter implements ExceptionFilter { ... }",
+              "title": "Responsible for processing all unhandled exceptions across an application."
             }
           },
           {
             "type": "content",
             "title": "Middlewares",
             "box": {
-              "content": "Functions called before the route handler, perfect for logging or request manipulation.",
-              "code": "export function logger(req: Request, res: Response, next: NextFunction) { ... }"
+              "code": "export function logger(req: Request, res: Response, next: NextFunction) { ... }",
+              "title": "Functions called before the route handler, perfect for logging or request manipulation."
             }
           }
         ]
@@ -411,30 +470,30 @@
           {
             "type": "topic-title",
             "title": "10. Scalable Configuration",
-            "box": { "content": "Creating flexible, configurable modules." }
+            "subtitle": "Creating flexible, configurable modules."
           },
           {
             "type": "content",
             "title": "What are Dynamic Modules?",
             "box": {
-              "content": "Modules that can be configured dynamically at runtime.",
-              "code": "static register(options: ConfigOptions): DynamicModule { ... }"
+              "code": "static register(options: ConfigOptions): DynamicModule { ... }",
+              "title": "Modules that can be configured dynamically at runtime."
             }
           },
           {
             "type": "content",
             "title": "The ConfigModule Pattern",
             "box": {
-              "content": "Using the official ConfigModule for managing application environment variables.",
-              "code": "ConfigModule.forRoot({ isGlobal: true })"
+              "code": "ConfigModule.forRoot({ isGlobal: true })",
+              "title": "Using the official ConfigModule for managing application environment variables."
             }
           },
           {
             "type": "content",
             "title": "Custom Providers",
             "box": {
-              "content": "Defining your own providers using useValue, useClass, or useFactory.",
-              "code": "{\n    provide: 'CONNECTION',\n    useValue: connection,\n}"
+              "code": "{\n    provide: 'CONNECTION',\n    useValue: connection,\n}",
+              "title": "Defining your own providers using useValue, useClass, or useFactory."
             }
           }
         ]
@@ -446,35 +505,52 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The Future of Enterprise Node.js." }
+            "subtitle": "The Future of Enterprise Node.js."
           },
           {
             "type": "content",
             "title": "Why NestJS & Microservices?",
             "box": {
-              "content": "The ultimate architecture for building large-scale, resilient systems with TypeScript.",
               "list": [
-                { "emoji": "🏢", "text": "<strong>Enterprise:</strong> Scalable and maintainable codebase." },
-                { "emoji": "🏗️", "text": "<strong>Architectural:</strong> Decoupled and modular design." },
-                { "emoji": "⚡", "text": "<strong>Performance:</strong> Fast and reliable distributed systems." }
-              ]
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise:</strong> Scalable and maintainable codebase."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Architectural:</strong> Decoupled and modular design."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance:</strong> Fast and reliable distributed systems."
+                }
+              ],
+              "title": "The ultimate architecture for building large-scale, resilient systems with TypeScript."
             }
           },
           {
             "type": "content",
             "title": "Next Steps",
             "box": {
-              "content": "Start your NestJS journey today.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>Build:</strong> Create a new project with `nest new`." },
-                { "emoji": "📚", "text": "<strong>Learn:</strong> Explore the NestJS documentation and microservice samples." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Build:</strong> Create a new project with `nest new`."
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Learn:</strong> Explore the NestJS documentation and microservice samples."
+                }
+              ],
+              "title": "Start your NestJS journey today."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you for your time! Any questions?" }
+            "box": {
+              "title": "Thank you for your time! Any questions?"
+            }
           }
         ]
       }

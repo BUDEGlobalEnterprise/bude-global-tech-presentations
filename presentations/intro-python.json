@@ -35,7 +35,6 @@
             "type": "content",
             "title": "What is Python?",
             "box": {
-              "content": "A <span class=\"highlight\">high-level, interpreted</span> programming language designed for:",
               "list": [
                 {
                   "emoji": "📖",
@@ -49,7 +48,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Versatility</strong> - From web to AI to automation"
                 }
-              ]
+              ],
+              "title": "A <span class=\"highlight\">high-level, interpreted</span> programming language designed for:"
             },
             "note": {
               "text": "<strong>Created by:</strong> Guido van Rossum in 1991<br><strong>Named after:</strong> Monty Python's Flying Circus"
@@ -64,12 +64,10 @@
           {
             "type": "topic-title",
             "title": "Why Python Dominates",
-            "box": {
-              "content": "Python is the #1 language for beginners and the most in-demand for professionals"
-            },
             "note": {
               "text": "<span class=\"emoji\">📊</span> <strong>Fact:</strong> Used by Google, Netflix, NASA, Instagram, and Spotify"
-            }
+            },
+            "subtitle": "Python is the #1 language for beginners and the most in-demand for professionals"
           },
           {
             "type": "content",
@@ -175,8 +173,8 @@
             "emoji": "👋",
             "title": "Hello World",
             "box": {
-              "content": "<strong>Your First Python Program</strong>",
-              "code": "print(\"Hello, World!\")"
+              "code": "print(\"Hello, World!\")",
+              "title": "<strong>Your First Python Program</strong>"
             },
             "list": [
               {
@@ -201,17 +199,15 @@
           {
             "type": "topic-title",
             "title": "Python Syntax Basics",
-            "box": {
-              "content": "Simple, readable, and strict about indentation"
-            }
+            "subtitle": "Simple, readable, and strict about indentation"
           },
           {
             "type": "content",
             "emoji": "📏",
             "title": "Indentation Matters!",
             "box": {
-              "content": "<strong>Python uses indentation to define code blocks</strong>",
-              "code": "if True:\n    print(\"Correct\")\nprint(\"Also correct\")"
+              "code": "if True:\n    print(\"Correct\")\nprint(\"Also correct\")",
+              "title": "<strong>Python uses indentation to define code blocks</strong>"
             },
             "list": [
               {
@@ -233,8 +229,8 @@
             "emoji": "📝",
             "title": "Variables & Types",
             "box": {
-              "content": "<strong>Dynamic typing - no declaration needed</strong>",
-              "code": "age = 25          # int\nname = 'John'     # str\nprice = 19.99     # float\nis_active = True  # bool"
+              "code": "age = 25          # int\nname = 'John'     # str\nprice = 19.99     # float\nis_active = True  # bool",
+              "title": "<strong>Dynamic typing - no declaration needed</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">🔄</span> Variables can change type anytime"
@@ -749,7 +745,6 @@
             "emoji": "📖",
             "title": "PEP 8 Style Guide",
             "box": {
-              "content": "<strong>Python's official style guide</strong>",
               "list": [
                 {
                   "emoji": "✅",
@@ -771,7 +766,8 @@
                   "emoji": "✅",
                   "text": "Use docstrings for documentation"
                 }
-              ]
+              ],
+              "title": "<strong>Python's official style guide</strong>"
             }
           },
           {

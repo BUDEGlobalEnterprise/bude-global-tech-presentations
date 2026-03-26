@@ -103,7 +103,6 @@
             "emoji": "🎯",
             "title": "What is C#?",
             "box": {
-              "content": "C# (pronounced 'C-Sharp') is a modern, object-oriented, and type-safe programming language. It belongs to the C-family of languages (like C, C++, and Java) and will feel immediately familiar to many developers. C# was designed from the ground up to be simple, powerful, and productive, making it the primary language for the .NET ecosystem.",
               "list": [
                 {
                   "emoji": "💻",
@@ -117,7 +116,8 @@
                   "emoji": "🌐",
                   "text": "<strong>Platform Neutral:</strong> Runs on Windows, Linux, and macOS via .NET."
                 }
-              ]
+              ],
+              "title": "C# (pronounced 'C-Sharp') is a modern, object-oriented, and type-safe programming language. It belongs to the C-family of languages (like C, C++, and Java) and will feel immediately familiar to many developers. C# was designed from the ground up to be simple, powerful, and productive, making it the primary language for the .NET ecosystem."
             },
             "note": {
               "text": "Released in 2002 alongside .NET Framework 1.0. Now a top choice for cloud, web, and enterprise apps."
@@ -138,7 +138,6 @@
             "emoji": "🌐",
             "title": "The .NET Ecosystem",
             "box": {
-              "content": ".NET is a free, cross-platform, open-source developer platform for building many different types of applications. It provides the runtime, libraries, and tools needed to execute C# code efficiently. The ecosystem has evolved from the Windows-only '.NET Framework' to the modern, high-performance '.NET' (formerly .NET Core).",
               "list": [
                 {
                   "emoji": "🚀",
@@ -152,7 +151,8 @@
                   "emoji": "📚",
                   "text": "<strong>NuGet:</strong> A massive ecosystem of over 300,000 packages."
                 }
-              ]
+              ],
+              "title": ".NET is a free, cross-platform, open-source developer platform for building many different types of applications. It provides the runtime, libraries, and tools needed to execute C# code efficiently. The ecosystem has evolved from the Windows-only '.NET Framework' to the modern, high-performance '.NET' (formerly .NET Core)."
             }
           }
         ]
@@ -170,8 +170,8 @@
             "emoji": "👋",
             "title": "Hello World: The Anatomy",
             "box": {
-              "content": "This is the classic structure of a C# program. It uses namespaces to organize code, classes to encapsulate logic, and a static <code>Main</code> method as the entry point. Every line here has a specific purpose in the C# compilation process.",
-              "code": "using System; // Import the base namespace\n\nnamespace HelloWorldApp\n{\n    /* Classes are the building blocks of C# */\n    class Program\n    {\n        /* The entry point of the application */\n        static void Main(string[] args)\n        {\n            // Printing to the standard output\n            Console.WriteLine(\"Hello, Bude Global!\");\n        }\n    }\n}"
+              "code": "using System; // Import the base namespace\n\nnamespace HelloWorldApp\n{\n    /* Classes are the building blocks of C# */\n    class Program\n    {\n        /* The entry point of the application */\n        static void Main(string[] args)\n        {\n            // Printing to the standard output\n            Console.WriteLine(\"Hello, Bude Global!\");\n        }\n    }\n}",
+              "title": "This is the classic structure of a C# program. It uses namespaces to organize code, classes to encapsulate logic, and a static <code>Main</code> method as the entry point. Every line here has a specific purpose in the C# compilation process."
             }
           },
           {
@@ -179,8 +179,8 @@
             "emoji": "⚡",
             "title": "Modern C# (Top-Level Statements)",
             "box": {
-              "content": "<strong>C# 9+ simplified approach</strong>",
-              "code": "// C# 9.0 and above\nConsole.WriteLine(\"Hello, World!\");"
+              "code": "// C# 9.0 and above\nConsole.WriteLine(\"Hello, World!\");",
+              "title": "<strong>C# 9+ simplified approach</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Top-level statements eliminate boilerplate code"
@@ -201,12 +201,21 @@
             "emoji": "🔢",
             "title": "Numeric Types & Precision",
             "box": {
-              "content": "Choosing the right numeric type is critical for performance and accuracy. C# distinguishes between integers, floating-point numbers, and <code>decimal</code> for financial accuracy. Understanding these ranges prevents overflow and precision errors.",
               "list": [
-                { "emoji": "📦", "text": "<strong>int / long:</strong> 32-bit and 64-bit signed integers." },
-                { "emoji": "💸", "text": "<strong>decimal:</strong> 128-bit high-precision type for financial logic." },
-                { "emoji": "🧬", "text": "<strong>double:</strong> 64-bit IEEE 754 floating point (standard for science)." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>int / long:</strong> 32-bit and 64-bit signed integers."
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>decimal:</strong> 128-bit high-precision type for financial logic."
+                },
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>double:</strong> 64-bit IEEE 754 floating point (standard for science)."
+                }
+              ],
+              "title": "Choosing the right numeric type is critical for performance and accuracy. C# distinguishes between integers, floating-point numbers, and <code>decimal</code> for financial accuracy. Understanding these ranges prevents overflow and precision errors."
             }
           },
           {
@@ -214,8 +223,8 @@
             "emoji": "📝",
             "title": "Advanced Strings",
             "box": {
-              "content": "C# offers several ways to work with text. String interpolation (<code>$\"\"</code>) is the modern standard for concatenation, while verbatim strings (<code>@\"\"</code>) and raw string literals (<code>\"\"\" \"\"\"</code>) handle paths and multi-line text with ease.",
-              "code": "// Interpolation with formatting\nvar price = 19.99;\nConsole.WriteLine($\"The cost is: {price:C}\");\n\n// Verbatim (good for paths)\nvar path = @\"C:\\Users\\Bude\\Documents\";\n\n// Raw string literals (C# 11)\nvar json = \"\"\"\n{\n  \"message\": \"Hello C# 11\"\n}\n\"\"\";"
+              "code": "// Interpolation with formatting\nvar price = 19.99;\nConsole.WriteLine($\"The cost is: {price:C}\");\n\n// Verbatim (good for paths)\nvar path = @\"C:\\Users\\Bude\\Documents\";\n\n// Raw string literals (C# 11)\nvar json = \"\"\"\n{\n  \"message\": \"Hello C# 11\"\n}\n\"\"\";",
+              "title": "C# offers several ways to work with text. String interpolation (<code>$\"\"</code>) is the modern standard for concatenation, while verbatim strings (<code>@\"\"</code>) and raw string literals (<code>\"\"\" \"\"\"</code>) handle paths and multi-line text with ease."
             }
           },
           {
@@ -223,8 +232,8 @@
             "emoji": "🎯",
             "title": "Variable Declaration",
             "box": {
-              "content": "C# provides multiple ways to declare variables. While explicit typing is traditional, modern C# heavily uses <code>var</code> for local variables to keep code clean without losing type safety. Once assigned, the type of a <code>var</code> variable is locked and cannot change.",
-              "code": "/* 1. Explicit Typing */\nint studentCount = 50;\nstring projectName = \"Elite Docs\";\n\n/* 2. Implicit Typing (compiler infers the type) */\nvar score = 95.5; // inferred as double\nvar user = new User(); // inferred as User\n\n/* 3. Constants (immutable) */\nconst decimal TaxRate = 0.15m;\n\n/* 4. Multiple Initializers */\nint x = 1, y = 2, z = 3;"
+              "code": "/* 1. Explicit Typing */\nint studentCount = 50;\nstring projectName = \"Elite Docs\";\n\n/* 2. Implicit Typing (compiler infers the type) */\nvar score = 95.5; // inferred as double\nvar user = new User(); // inferred as User\n\n/* 3. Constants (immutable) */\nconst decimal TaxRate = 0.15m;\n\n/* 4. Multiple Initializers */\nint x = 1, y = 2, z = 3;",
+              "title": "C# provides multiple ways to declare variables. While explicit typing is traditional, modern C# heavily uses <code>var</code> for local variables to keep code clean without losing type safety. Once assigned, the type of a <code>var</code> variable is locked and cannot change."
             }
           }
         ]
@@ -242,8 +251,8 @@
             "emoji": "🔀",
             "title": "Conditional Logic: If/Else",
             "box": {
-              "content": "Conditional statements allow your code to take different paths based on Boolean logic. C# supports standard <code>if/else</code> constructs, along with the 'ternary operator' for simple inline decisions. Modern C# also emphasizes patterns that reduce nested logic.",
-              "code": "/* Standard If/Else */\nif (age >= 18) {\n    Console.WriteLine(\"Welcome, Elite User!\");\n} else {\n    Console.WriteLine(\"Access Denied.\");\n}\n\n/* Inline Ternary Operator */\nstring status = (isAdmin) ? \"Administrator\" : \"Client\";\n\n/* Null-Coalescing Operator */\nstring name = inputName ?? \"Anonymous User\";"
+              "code": "/* Standard If/Else */\nif (age >= 18) {\n    Console.WriteLine(\"Welcome, Elite User!\");\n} else {\n    Console.WriteLine(\"Access Denied.\");\n}\n\n/* Inline Ternary Operator */\nstring status = (isAdmin) ? \"Administrator\" : \"Client\";\n\n/* Null-Coalescing Operator */\nstring name = inputName ?? \"Anonymous User\";",
+              "title": "Conditional statements allow your code to take different paths based on Boolean logic. C# supports standard <code>if/else</code> constructs, along with the 'ternary operator' for simple inline decisions. Modern C# also emphasizes patterns that reduce nested logic."
             }
           },
           {
@@ -251,8 +260,8 @@
             "emoji": "🔀",
             "title": "Advanced Decisions: Switch Expressions",
             "box": {
-              "content": "While the traditional <code>switch</code> statement is still available, modern C# (8.0+) introduces 'Switch Expressions'. They are more concise, return a value directly, and use 'Pattern Matching' to handle complex object states with minimal boilerplate.",
-              "code": "/* Modern Switch Expression */\nvar message = day switch {\n    \"Monday\" => \"Back to the grind!\",\n    \"Friday\" => \"The weekend is here!\",\n    _        => \"Just another day.\"\n};\n\n/* Pattern Matching with Switch */\nvar result = shape switch {\n    Circle c when c.Radius > 10 => \"Large Circle\",\n    Square s => \"A Square\",\n    _ => \"Unknown Shape\"\n};"
+              "code": "/* Modern Switch Expression */\nvar message = day switch {\n    \"Monday\" => \"Back to the grind!\",\n    \"Friday\" => \"The weekend is here!\",\n    _        => \"Just another day.\"\n};\n\n/* Pattern Matching with Switch */\nvar result = shape switch {\n    Circle c when c.Radius > 10 => \"Large Circle\",\n    Square s => \"A Square\",\n    _ => \"Unknown Shape\"\n};",
+              "title": "While the traditional <code>switch</code> statement is still available, modern C# (8.0+) introduces 'Switch Expressions'. They are more concise, return a value directly, and use 'Pattern Matching' to handle complex object states with minimal boilerplate."
             }
           },
           {
@@ -260,8 +269,8 @@
             "emoji": "🔄",
             "title": "Looping Constructs",
             "box": {
-              "content": "Loops are fundamental for processing collections or repeating tasks. C# provides <code>for</code> for index-based iterating, and the powerful <code>foreach</code> for safe, readable iteration over any enumerable collection.",
-              "code": "// The standard 'for' loop\nfor (int i = 0; i < 5; i++) {\n    Console.WriteLine($\"Iteration {i}\");\n}\n\n// The elegant 'foreach' loop\nvar tools = new string[] { \"C#\", \"Vite\", \"Reveal.js\" };\nforeach (var tool in tools) {\n    Console.WriteLine($\"Empowered by {tool}\");\n}"
+              "code": "// The standard 'for' loop\nfor (int i = 0; i < 5; i++) {\n    Console.WriteLine($\"Iteration {i}\");\n}\n\n// The elegant 'foreach' loop\nvar tools = new string[] { \"C#\", \"Vite\", \"Reveal.js\" };\nforeach (var tool in tools) {\n    Console.WriteLine($\"Empowered by {tool}\");\n}",
+              "title": "Loops are fundamental for processing collections or repeating tasks. C# provides <code>for</code> for index-based iterating, and the powerful <code>foreach</code> for safe, readable iteration over any enumerable collection."
             }
           }
         ]
@@ -279,7 +288,6 @@
             "emoji": "🏗️",
             "title": "The Four Pillars of OOP",
             "box": {
-              "content": "C# is a pure object-oriented language. To master it, you must understand the four core pillars that guide its design. These principles allow you to build software that is modular, reusable, and easy to maintain as it grows in complexity.",
               "list": [
                 {
                   "emoji": "📦",
@@ -297,7 +305,8 @@
                   "emoji": "🔍",
                   "text": "<strong>Abstraction:</strong> Modeling only the relevant data and behaviors of an object for the current context."
                 }
-              ]
+              ],
+              "title": "C# is a pure object-oriented language. To master it, you must understand the four core pillars that guide its design. These principles allow you to build software that is modular, reusable, and easy to maintain as it grows in complexity."
             }
           },
           {
@@ -305,8 +314,8 @@
             "emoji": "🗝️",
             "title": "Properties: Init-Only & Required",
             "box": {
-              "content": "Modern C# has refined how we define property mutability. <code>init</code> properties allow setting values during initialization but make them read-only afterwards. The <code>required</code> keyword ensures that specific properties are always provided by the caller.",
-              "code": "public class Product {\n    // Must be set during creation\n    public required string Id { get; init; }\n    \n    // Can be read but not changed after init\n    public string Sku { get; init; }\n\n    public decimal Price { get; set; }\n}\n\n// Usage\nvar p = new Product { Id = \"B-01\", Sku = \"ABC\", Price = 9.9m };\n// p.Sku = \"DEF\"; // Error: Init-only"
+              "code": "public class Product {\n    // Must be set during creation\n    public required string Id { get; init; }\n    \n    // Can be read but not changed after init\n    public string Sku { get; init; }\n\n    public decimal Price { get; set; }\n}\n\n// Usage\nvar p = new Product { Id = \"B-01\", Sku = \"ABC\", Price = 9.9m };\n// p.Sku = \"DEF\"; // Error: Init-only",
+              "title": "Modern C# has refined how we define property mutability. <code>init</code> properties allow setting values during initialization but make them read-only afterwards. The <code>required</code> keyword ensures that specific properties are always provided by the caller."
             }
           }
         ]
@@ -324,8 +333,8 @@
             "emoji": "👑",
             "title": "Inheritance & Method Overriding",
             "box": {
-              "content": "Inheritance allows a 'Derived' class to reuse and specialize the logic of a 'Base' class. Use the <code>virtual</code> keyword in the base class to allow methods to be <code>overridden</code> in derived classes, enabling specialized behavior while maintaining a common interface.",
-              "code": "/* Base Class */\npublic class Device {\n    public virtual void TurnOn() => Console.WriteLine(\"Device starting...\");\n}\n\n/* Derived Class */\npublic class Laptop : Device {\n    // Overriding the base behavior\n    public override void TurnOn() => Console.WriteLine(\"Laptop waking up from sleep mode...\");\n\n    public void Charge() => Console.WriteLine(\"Charging battery...\");\n}"
+              "code": "/* Base Class */\npublic class Device {\n    public virtual void TurnOn() => Console.WriteLine(\"Device starting...\");\n}\n\n/* Derived Class */\npublic class Laptop : Device {\n    // Overriding the base behavior\n    public override void TurnOn() => Console.WriteLine(\"Laptop waking up from sleep mode...\");\n\n    public void Charge() => Console.WriteLine(\"Charging battery...\");\n}",
+              "title": "Inheritance allows a 'Derived' class to reuse and specialize the logic of a 'Base' class. Use the <code>virtual</code> keyword in the base class to allow methods to be <code>overridden</code> in derived classes, enabling specialized behavior while maintaining a common interface."
             }
           },
           {
@@ -333,8 +342,8 @@
             "emoji": "🔌",
             "title": "Interfaces: Defining Contracts",
             "box": {
-              "content": "Interfaces define a 'contract' that implementing classes must follow. They contain method signatures but no implementation (until C# 8.0). Interfaces are the key to 'Loose Coupling' and are primary tools for building testable, modular systems.",
-              "code": "public interface ILogger {\n    void Log(string message);\n}\n\npublic class DatabaseLogger : ILogger {\n    public void Log(string message) => Console.WriteLine($\"[DB] {message}\");\n}\n\n/* Usage with Dependency Injection style */\npublic void Process(ILogger logger) {\n    logger.Log(\"Process started\");\n}"
+              "code": "public interface ILogger {\n    void Log(string message);\n}\n\npublic class DatabaseLogger : ILogger {\n    public void Log(string message) => Console.WriteLine($\"[DB] {message}\");\n}\n\n/* Usage with Dependency Injection style */\npublic void Process(ILogger logger) {\n    logger.Log(\"Process started\");\n}",
+              "title": "Interfaces define a 'contract' that implementing classes must follow. They contain method signatures but no implementation (until C# 8.0). Interfaces are the key to 'Loose Coupling' and are primary tools for building testable, modular systems."
             }
           }
         ]
@@ -352,7 +361,6 @@
             "emoji": "📚",
             "title": "Generic Collections",
             "box": {
-              "content": "C# offers a rich set of generic collections in the <code>System.Collections.Generic</code> namespace. These provide type-safe, high-performance data structures that are optimized for various use cases like rapid lookups or ordered processing.",
               "list": [
                 {
                   "emoji": "📋",
@@ -366,7 +374,8 @@
                   "emoji": "📊",
                   "text": "<strong>HashSet&lt;T&gt;:</strong> Ensures unique elements with O(1) performance."
                 }
-              ]
+              ],
+              "title": "C# offers a rich set of generic collections in the <code>System.Collections.Generic</code> namespace. These provide type-safe, high-performance data structures that are optimized for various use cases like rapid lookups or ordered processing."
             }
           },
           {
@@ -374,8 +383,8 @@
             "emoji": "🔍",
             "title": "LINQ: Functional Data Querying",
             "box": {
-              "content": "LINQ (Language Integrated Query) is one of C#'s most powerful features. It allows you to query collections using a SQL-like syntax or functional method chains. It's fully type-safe and works with objects, databases (EF), and XML.",
-              "code": "var numbers = new[] { 1, 2, 3, 4, 5, 10 };\n\n/* Method Syntax (Functional) */\nvar highScores = numbers\n    .Where(n => n > 5)\n    .OrderByDescending(n => n)\n    .ToList();\n\n/* Aggregations */\nvar total = numbers.Sum();\n\n/* Projection */\nvar names = employees.Select(e => e.Name);"
+              "code": "var numbers = new[] { 1, 2, 3, 4, 5, 10 };\n\n/* Method Syntax (Functional) */\nvar highScores = numbers\n    .Where(n => n > 5)\n    .OrderByDescending(n => n)\n    .ToList();\n\n/* Aggregations */\nvar total = numbers.Sum();\n\n/* Projection */\nvar names = employees.Select(e => e.Name);",
+              "title": "LINQ (Language Integrated Query) is one of C#'s most powerful features. It allows you to query collections using a SQL-like syntax or functional method chains. It's fully type-safe and works with objects, databases (EF), and XML."
             }
           }
         ]
@@ -393,8 +402,8 @@
             "emoji": "⚡",
             "title": "Async/Await: Non-Blocking Code",
             "box": {
-              "content": "Modern C# applications depend on <code>async/await</code> for high performance and responsiveness. By using asynchronous patterns, you can perform I/O-bound tasks (like database queries or API calls) without blocking the main execution thread.",
-              "code": "/* Asynchronous Method Definition */\npublic async Task<string> FetchDataAsync(string url) {\n    using var client = new HttpClient();\n    // Control is yielded here until the task completes\n    return await client.GetStringAsync(url);\n}\n\n/* Concurrent Execution */\nvar task1 = FetchDataAsync(url1);\nvar task2 = FetchDataAsync(url2);\n\n// Wait for both to complete efficiently\nawait Task.WhenAll(task1, task2);"
+              "code": "/* Asynchronous Method Definition */\npublic async Task<string> FetchDataAsync(string url) {\n    using var client = new HttpClient();\n    // Control is yielded here until the task completes\n    return await client.GetStringAsync(url);\n}\n\n/* Concurrent Execution */\nvar task1 = FetchDataAsync(url1);\nvar task2 = FetchDataAsync(url2);\n\n// Wait for both to complete efficiently\nawait Task.WhenAll(task1, task2);",
+              "title": "Modern C# applications depend on <code>async/await</code> for high performance and responsiveness. By using asynchronous patterns, you can perform I/O-bound tasks (like database queries or API calls) without blocking the main execution thread."
             }
           }
         ]
@@ -412,8 +421,8 @@
             "emoji": "🚨",
             "title": "Robust Error Handling",
             "box": {
-              "content": "C# uses <code>try-catch-finally</code> blocks for structured exception handling. It's best practice to catch specific exceptions rather than the base <code>Exception</code> class, and to use <code>finally</code> for critical resource cleanup.",
-              "code": "try {\n    var result = ProcessOrder(orderId);\n} catch (OrderNotFoundException ex) {\n    Log.Warning($\"Order {orderId} missing: {ex.Message}\");\n} catch (Exception ex) {\n    Log.Error(ex, \"Fatal process error\");\n    throw; // Rethrow while preserving stack trace\n} finally {\n    database.CloseConnection();\n}"
+              "code": "try {\n    var result = ProcessOrder(orderId);\n} catch (OrderNotFoundException ex) {\n    Log.Warning($\"Order {orderId} missing: {ex.Message}\");\n} catch (Exception ex) {\n    Log.Error(ex, \"Fatal process error\");\n    throw; // Rethrow while preserving stack trace\n} finally {\n    database.CloseConnection();\n}",
+              "title": "C# uses <code>try-catch-finally</code> blocks for structured exception handling. It's best practice to catch specific exceptions rather than the base <code>Exception</code> class, and to use <code>finally</code> for critical resource cleanup."
             }
           }
         ]
@@ -431,8 +440,8 @@
             "emoji": "🔄",
             "title": "Delegates & Events",
             "box": {
-              "content": "Delegates are type-safe function pointers, and Events are a way for a class to provide notifications to clients of that class when something of interest happens. This decoupling is fundamental to designing large-scale, extensible systems in .NET.",
-              "code": "/* Delegate Definition */\npublic delegate void Notify(string message);\n\n/* Event usage */\npublic class ProcessManager {\n    public event Notify ProcessCompleted;\n\n    public void Start() {\n        // ... process logic ...\n        ProcessCompleted?.Invoke(\"Done!\");\n    }\n}"
+              "code": "/* Delegate Definition */\npublic delegate void Notify(string message);\n\n/* Event usage */\npublic class ProcessManager {\n    public event Notify ProcessCompleted;\n\n    public void Start() {\n        // ... process logic ...\n        ProcessCompleted?.Invoke(\"Done!\");\n    }\n}",
+              "title": "Delegates are type-safe function pointers, and Events are a way for a class to provide notifications to clients of that class when something of interest happens. This decoupling is fundamental to designing large-scale, extensible systems in .NET."
             }
           },
           {
@@ -440,12 +449,21 @@
             "emoji": "📦",
             "title": "The NuGet Ecosystem",
             "box": {
-              "content": "NuGet is the package manager for .NET. It allows you to easily share and consume code. With over 300,000 packages, it's the heart of the .NET ecosystem, providing libraries for everything from JSON parsing (Newtonsoft.Json) to robust logging (Serilog).",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Dependency Management:</strong> Automatically handles transitive dependencies." },
-                { "emoji": "🛠️", "text": "<strong>CLI Support:</strong> <code>dotnet add package Newtonsoft.Json</code>" },
-                { "emoji": "🌐", "text": "<strong>Global Reach:</strong> Hosted at nuget.org." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Dependency Management:</strong> Automatically handles transitive dependencies."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>CLI Support:</strong> <code>dotnet add package Newtonsoft.Json</code>"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Global Reach:</strong> Hosted at nuget.org."
+                }
+              ],
+              "title": "NuGet is the package manager for .NET. It allows you to easily share and consume code. With over 300,000 packages, it's the heart of the .NET ecosystem, providing libraries for everything from JSON parsing (Newtonsoft.Json) to robust logging (Serilog)."
             }
           },
           {
@@ -453,8 +471,8 @@
             "emoji": "🎯",
             "title": "Record Types: Immutable Data",
             "box": {
-              "content": "C# Records are ideal for data-centric objects. They provide built-in functionality for value-based equality and non-destructive mutation using the <code>with</code> expression. They are concise, thread-safe, and highly readable.",
-              "code": "/* Primary Constructor Record */\npublic record User(string Name, string Email);\n\nvar u1 = new User(\"Bude\", \"dev@bude.com\");\nvar u2 = u1 with { Name = \"Elite Dev\" }; // Immutable copy\n\nConsole.WriteLine(u1 == u2); // False (Value check)"
+              "code": "/* Primary Constructor Record */\npublic record User(string Name, string Email);\n\nvar u1 = new User(\"Bude\", \"dev@bude.com\");\nvar u2 = u1 with { Name = \"Elite Dev\" }; // Immutable copy\n\nConsole.WriteLine(u1 == u2); // False (Value check)",
+              "title": "C# Records are ideal for data-centric objects. They provide built-in functionality for value-based equality and non-destructive mutation using the <code>with</code> expression. They are concise, thread-safe, and highly readable."
             }
           },
           {
@@ -462,8 +480,8 @@
             "emoji": "🔍",
             "title": "Modern Pattern Matching",
             "box": {
-              "content": "Pattern matching has evolved into a powerful tool for inspecting object shapes. Beyond simple type checks, you can now use Property Patterns and Positional Patterns to write expressive, safe conditional logic.",
-              "code": "/* Property Pattern */\nif (order is { Status: \"Pending\", Total: > 1000 }) {\n    ProcessHighValueOrder(order);\n}\n\n/* Positional Pattern with Deconstruction */\nif (point is (var x, var y) && x == y) {\n    Console.WriteLine(\"On the diagonal\");\n}"
+              "code": "/* Property Pattern */\nif (order is { Status: \"Pending\", Total: > 1000 }) {\n    ProcessHighValueOrder(order);\n}\n\n/* Positional Pattern with Deconstruction */\nif (point is (var x, var y) && x == y) {\n    Console.WriteLine(\"On the diagonal\");\n}",
+              "title": "Pattern matching has evolved into a powerful tool for inspecting object shapes. Beyond simple type checks, you can now use Property Patterns and Positional Patterns to write expressive, safe conditional logic."
             }
           },
           {
@@ -471,8 +489,8 @@
             "emoji": "🔒",
             "title": "Nullable Reference Types",
             "box": {
-              "content": "Nullable Reference Types (NRT) help eliminate the dreaded <code>NullReferenceException</code>. By enabling this feature, the compiler tracks nullability and warns you if you might be dereferencing a null value.",
-              "code": "#nullable enable\nstring name; // Cannot be null\nstring? nickname; // Can be null\n\nConsole.WriteLine(name.Length); // Safe\nConsole.WriteLine(nickname?.Length); // Safe (using null-conditional)"
+              "code": "#nullable enable\nstring name; // Cannot be null\nstring? nickname; // Can be null\n\nConsole.WriteLine(name.Length); // Safe\nConsole.WriteLine(nickname?.Length); // Safe (using null-conditional)",
+              "title": "Nullable Reference Types (NRT) help eliminate the dreaded <code>NullReferenceException</code>. By enabling this feature, the compiler tracks nullability and warns you if you might be dereferencing a null value."
             }
           },
           {
@@ -480,8 +498,8 @@
             "emoji": "🚀",
             "title": "C# 12: Primary Constructors",
             "box": {
-              "content": "C# 12 introduces 'Primary Constructors' for all classes and structs, not just records. This feature reduces boilerplate by allowing you to declare parameters directly in the class header and use them throughout the class members.",
-              "code": "/* C# 12 Primary Constructor */\npublic class Device(string model, string serial) {\n    public string FullName => $\"{model} ({serial})\";\n    public void Log() => Console.WriteLine($\"Logging {model}\");\n}"
+              "code": "/* C# 12 Primary Constructor */\npublic class Device(string model, string serial) {\n    public string FullName => $\"{model} ({serial})\";\n    public void Log() => Console.WriteLine($\"Logging {model}\");\n}",
+              "title": "C# 12 introduces 'Primary Constructors' for all classes and structs, not just records. This feature reduces boilerplate by allowing you to declare parameters directly in the class header and use them throughout the class members."
             }
           }
         ]
@@ -584,8 +602,8 @@
             "emoji": "🧪",
             "title": "Unit Testing",
             "box": {
-              "content": "<strong>Testing C# code</strong>",
-              "code": "// xUnit test example\npublic class CalculatorTests\n{\n    [Fact]\n    public void Add_TwoNumbers_ReturnsSum()\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(3, 5);\n        \n        // Assert\n        Assert.Equal(8, result);\n    }\n\n    [Theory]\n    [InlineData(1, 1, 2)]\n    [InlineData(2, 3, 5)]\n    [InlineData(-1, 1, 0)]\n    public void Add_VariousNumbers_ReturnsCorrectSum(int a, int b, int expected)\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(a, b);\n        \n        // Assert\n        Assert.Equal(expected, result);\n    }\n}\n\npublic class Calculator\n{\n    public int Add(int a, int b) => a + b;\n}"
+              "code": "// xUnit test example\npublic class CalculatorTests\n{\n    [Fact]\n    public void Add_TwoNumbers_ReturnsSum()\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(3, 5);\n        \n        // Assert\n        Assert.Equal(8, result);\n    }\n\n    [Theory]\n    [InlineData(1, 1, 2)]\n    [InlineData(2, 3, 5)]\n    [InlineData(-1, 1, 0)]\n    public void Add_VariousNumbers_ReturnsCorrectSum(int a, int b, int expected)\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(a, b);\n        \n        // Assert\n        Assert.Equal(expected, result);\n    }\n}\n\npublic class Calculator\n{\n    public int Add(int a, int b) => a + b;\n}",
+              "title": "<strong>Testing C# code</strong>"
             }
           }
         ]
@@ -603,8 +621,8 @@
             "emoji": "📐",
             "title": "SOLID: Single Responsibility",
             "box": {
-              "content": "The Single Responsibility Principle (SRP) states that a class should have one, and only one, reason to change. In C#, this means keeping your classes focused and avoiding 'God Classes' that handle everything from data access to UI logic.",
-              "code": "/* Violation: Class does too much */\npublic class Invoice { \n    public void CalculateTotal() { ... }\n    public void SaveToDatabase() { ... } // Should be in a repository\n}"
+              "code": "/* Violation: Class does too much */\npublic class Invoice { \n    public void CalculateTotal() { ... }\n    public void SaveToDatabase() { ... } // Should be in a repository\n}",
+              "title": "The Single Responsibility Principle (SRP) states that a class should have one, and only one, reason to change. In C#, this means keeping your classes focused and avoiding 'God Classes' that handle everything from data access to UI logic."
             }
           },
           {
@@ -612,8 +630,8 @@
             "emoji": "🔓",
             "title": "SOLID: Open/Closed",
             "box": {
-              "content": "Classes should be open for extension but closed for modification. Use inheritance or interfaces to add new functionality without changing existing, tested code. This is the foundation of a stable and extensible codebase.",
-              "code": "/* Extension via Interface */\npublic interface IShape { double Area(); }\n\npublic class Circle : IShape { ... }\npublic class Square : IShape { ... } // Added without changing Circle"
+              "code": "/* Extension via Interface */\npublic interface IShape { double Area(); }\n\npublic class Circle : IShape { ... }\npublic class Square : IShape { ... } // Added without changing Circle",
+              "title": "Classes should be open for extension but closed for modification. Use inheritance or interfaces to add new functionality without changing existing, tested code. This is the foundation of a stable and extensible codebase."
             }
           },
           {
@@ -621,8 +639,8 @@
             "emoji": "🔄",
             "title": "SOLID: Liskov Substitution",
             "box": {
-              "content": "Objects of a superclass should be replaceable with objects of its subclasses without breaking the application. In C#, if you find yourself throwing <code>NotImplementedException</code> in a subclass method, you might be violating LSP.",
-              "code": "/* Potential LSP Violation */\npublic class Bird { public virtual void Fly() { ... } }\npublic class Penguin : Bird {\n    public override void Fly() => throw new Exception(\"Can't fly!\");\n}"
+              "code": "/* Potential LSP Violation */\npublic class Bird { public virtual void Fly() { ... } }\npublic class Penguin : Bird {\n    public override void Fly() => throw new Exception(\"Can't fly!\");\n}",
+              "title": "Objects of a superclass should be replaceable with objects of its subclasses without breaking the application. In C#, if you find yourself throwing <code>NotImplementedException</code> in a subclass method, you might be violating LSP."
             }
           },
           {
@@ -630,8 +648,8 @@
             "emoji": "🔌",
             "title": "SOLID: Interface Segregation",
             "box": {
-              "content": "Clients should not be forced to depend on methods they do not use. Instead of one fat interface, create many small, specific interfaces. This keeps your implementations clean and focused.",
-              "code": "/* Specialized Interfaces */\npublic interface IPrinter { void Print(); }\npublic interface IScanner { void Scan(); }\n\npublic class BasicPrinter : IPrinter { ... } // Doesn't need Scan()"
+              "code": "/* Specialized Interfaces */\npublic interface IPrinter { void Print(); }\npublic interface IScanner { void Scan(); }\n\npublic class BasicPrinter : IPrinter { ... } // Doesn't need Scan()",
+              "title": "Clients should not be forced to depend on methods they do not use. Instead of one fat interface, create many small, specific interfaces. This keeps your implementations clean and focused."
             }
           },
           {
@@ -639,8 +657,8 @@
             "emoji": "💉",
             "title": "SOLID: Dependency Inversion",
             "box": {
-              "content": "Depend on abstractions, not on concretions. High-level modules should not depend on low-level modules; both should depend on interfaces. This makes your system loosely coupled and highly testable.",
-              "code": "/* Dependency Inversion */\npublic class OrderProcessor {\n    private readonly IEmailService _mailService;\n    public OrderProcessor(IEmailService mail) => _mailService = mail;\n}"
+              "code": "/* Dependency Inversion */\npublic class OrderProcessor {\n    private readonly IEmailService _mailService;\n    public OrderProcessor(IEmailService mail) => _mailService = mail;\n}",
+              "title": "Depend on abstractions, not on concretions. High-level modules should not depend on low-level modules; both should depend on interfaces. This makes your system loosely coupled and highly testable."
             }
           },
           {
@@ -648,8 +666,8 @@
             "emoji": "🗑️",
             "title": "The IDisposable Pattern",
             "box": {
-              "content": "For unmanaged resources (file handles, database connections), C# uses the <code>IDisposable</code> interface. The <code>using</code> statement ensures that resources are automatically cleaned up even if an exception occurs.",
-              "code": "/* Automatic cleanup with 'using' */\nusing var writer = new StreamWriter(\"log.txt\");\nwriter.WriteLine(\"Session started\");\n\n// writer.Dispose() is called automatically at the end of the scope"
+              "code": "/* Automatic cleanup with 'using' */\nusing var writer = new StreamWriter(\"log.txt\");\nwriter.WriteLine(\"Session started\");\n\n// writer.Dispose() is called automatically at the end of the scope",
+              "title": "For unmanaged resources (file handles, database connections), C# uses the <code>IDisposable</code> interface. The <code>using</code> statement ensures that resources are automatically cleaned up even if an exception occurs."
             }
           },
           {
@@ -657,8 +675,8 @@
             "emoji": "🗄️",
             "title": "Entity Framework Core",
             "box": {
-              "content": "Entity Framework (EF) Core is the recommended Object-Relational Mapper (ORM) for .NET. It allows you to work with a database using C# objects, eliminating the need for most of the data-access code that you usually need to write.",
-              "code": "public class AppDbContext : DbContext {\n    public DbSet<User> Users { get; set; }\n}\n\n// Querying with LINQ\nvar eliteUsers = await dbContext.Users\n    .Where(u => u.IsPremium)\n    .ToListAsync();"
+              "code": "public class AppDbContext : DbContext {\n    public DbSet<User> Users { get; set; }\n}\n\n// Querying with LINQ\nvar eliteUsers = await dbContext.Users\n    .Where(u => u.IsPremium)\n    .ToListAsync();",
+              "title": "Entity Framework (EF) Core is the recommended Object-Relational Mapper (ORM) for .NET. It allows you to work with a database using C# objects, eliminating the need for most of the data-access code that you usually need to write."
             }
           }
         ]
@@ -777,8 +795,8 @@
             "emoji": "⚡",
             "title": "Span<T> & Memory<T>",
             "box": {
-              "content": "<code>Span&lt;T&gt;</code> is a stack-allocated representation of contiguous memory. It allows for high-performance slicing and manipulation of arrays, strings, and unmanaged memory without additional allocations, significantly reducing GC pressure.",
-              "code": "/* High-performance string slicing */\nReadOnlySpan<char> text = \"Extract substring from here\".AsSpan();\nvar sub = text.Slice(8, 9); // No new string allocation!\n\n/* Allocation-free buffer manipulation */\nSpan<int> numbers = stackalloc int[100];"
+              "code": "/* High-performance string slicing */\nReadOnlySpan<char> text = \"Extract substring from here\".AsSpan();\nvar sub = text.Slice(8, 9); // No new string allocation!\n\n/* Allocation-free buffer manipulation */\nSpan<int> numbers = stackalloc int[100];",
+              "title": "<code>Span&lt;T&gt;</code> is a stack-allocated representation of contiguous memory. It allows for high-performance slicing and manipulation of arrays, strings, and unmanaged memory without additional allocations, significantly reducing GC pressure."
             }
           },
           {
@@ -786,8 +804,8 @@
             "emoji": "🪞",
             "title": "Reflection: Runtime Metadata",
             "box": {
-              "content": "Reflection allows you to inspect and interact with code metadata at runtime. While powerful for building frameworks, DI containers, and serializers, it should be used judiciously due to the performance overhead of dynamic lookups.",
-              "code": "/* Inspecting an object at runtime */\nvar type = user.GetType();\nforeach (var prop in type.GetProperties()) {\n    Console.WriteLine($\"Found Property: {prop.Name}\");\n}\n\n/* Dynamic instantiation */\nvar instance = Activator.CreateInstance(typeof(MyClass));"
+              "code": "/* Inspecting an object at runtime */\nvar type = user.GetType();\nforeach (var prop in type.GetProperties()) {\n    Console.WriteLine($\"Found Property: {prop.Name}\");\n}\n\n/* Dynamic instantiation */\nvar instance = Activator.CreateInstance(typeof(MyClass));",
+              "title": "Reflection allows you to inspect and interact with code metadata at runtime. While powerful for building frameworks, DI containers, and serializers, it should be used judiciously due to the performance overhead of dynamic lookups."
             }
           }
         ]

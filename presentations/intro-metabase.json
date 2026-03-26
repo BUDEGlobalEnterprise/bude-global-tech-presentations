@@ -35,7 +35,6 @@
             "type": "content",
             "title": "Welcome to Metabase",
             "box": {
-              "content": "Open-source <span class=\"highlight\">Business Intelligence</span> and data visualization platform:",
               "list": [
                 {
                   "emoji": "📊",
@@ -53,7 +52,8 @@
                   "emoji": "🌐",
                   "text": "<strong>Embedding</strong> - White-label analytics for apps"
                 }
-              ]
+              ],
+              "title": "Open-source <span class=\"highlight\">Business Intelligence</span> and data visualization platform:"
             },
             "note": {
               "text": "<strong>Founded:</strong> 2014<br><strong>License:</strong> Open Source (AGPL) + Enterprise"
@@ -68,12 +68,10 @@
           {
             "type": "topic-title",
             "title": "Why Choose Metabase?",
-            "box": {
-              "content": "Democratizing data analytics for everyone in your organization"
-            },
             "note": {
               "text": "<span class=\"emoji\">📈</span> <strong>Used by:</strong> 50,000+ companies worldwide"
-            }
+            },
+            "subtitle": "Democratizing data analytics for everyone in your organization"
           },
           {
             "type": "content",
@@ -123,7 +121,6 @@
             "emoji": "🏗️",
             "title": "System Overview",
             "box": {
-              "content": "<strong>How Metabase works</strong>",
               "list": [
                 {
                   "emoji": "🖥️",
@@ -145,7 +142,8 @@
                   "emoji": "👥",
                   "text": "<strong>User Access Layer</strong> - Permissions & security"
                 }
-              ]
+              ],
+              "title": "<strong>How Metabase works</strong>"
             }
           }
         ]
@@ -163,8 +161,8 @@
             "emoji": "🐳",
             "title": "Docker Installation",
             "box": {
-              "content": "<strong>Quick start with Docker</strong>",
-              "code": "docker run -d --name metabase \\\n  -p 3000:3000 \\\n  -e MB_DB_TYPE=postgres \\\n  -e MB_DB_DBNAME=metabase \\\n  -e MB_DB_PORT=5432 \\\n  -e MB_DB_USER=username \\\n  -e MB_DB_PASS=password \\\n  -e MB_DB_HOST=hostname \\\n  metabase/metabase"
+              "code": "docker run -d --name metabase \\\n  -p 3000:3000 \\\n  -e MB_DB_TYPE=postgres \\\n  -e MB_DB_DBNAME=metabase \\\n  -e MB_DB_PORT=5432 \\\n  -e MB_DB_USER=username \\\n  -e MB_DB_PASS=password \\\n  -e MB_DB_HOST=hostname \\\n  metabase/metabase",
+              "title": "<strong>Quick start with Docker</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">⚡</span> Access at http://localhost:3000 after startup"
@@ -175,8 +173,8 @@
             "emoji": "📦",
             "title": "JAR File Installation",
             "box": {
-              "content": "<strong>Traditional Java deployment</strong>",
-              "code": "java -jar metabase.jar"
+              "code": "java -jar metabase.jar",
+              "title": "<strong>Traditional Java deployment</strong>"
             },
             "list": [
               {
@@ -194,8 +192,8 @@
             "emoji": "☸️",
             "title": "Kubernetes Deployment",
             "box": {
-              "content": "<strong>Production-grade setup</strong>",
-              "code": "helm repo add metabase https://charts.bitnami.com/bitnami\nhelm install my-metabase metabase/metabase"
+              "code": "helm repo add metabase https://charts.bitnami.com/bitnami\nhelm install my-metabase metabase/metabase",
+              "title": "<strong>Production-grade setup</strong>"
             }
           }
         ]
@@ -247,8 +245,8 @@
             "emoji": "⚙️",
             "title": "Connection Setup",
             "box": {
-              "content": "<strong>Database connection parameters</strong>",
-              "code": "Host: db.company.com\nPort: 5432\nDatabase: analytics\nUsername: metabase_user\nPassword: ********\nSSL: Required"
+              "code": "Host: db.company.com\nPort: 5432\nDatabase: analytics\nUsername: metabase_user\nPassword: ********\nSSL: Required",
+              "title": "<strong>Database connection parameters</strong>"
             },
             "list": [
               {
@@ -276,7 +274,6 @@
             "emoji": "❓",
             "title": "Simple Questions",
             "box": {
-              "content": "<strong>Point-and-click query builder</strong>",
               "list": [
                 {
                   "emoji": "📊",
@@ -294,7 +291,8 @@
                   "emoji": "👥",
                   "text": "<strong>Group By</strong> - Categories and segments"
                 }
-              ]
+              ],
+              "title": "<strong>Point-and-click query builder</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> No SQL knowledge required for basic analysis"
@@ -305,7 +303,6 @@
             "emoji": "🔧",
             "title": "Custom Questions",
             "box": {
-              "content": "<strong>Advanced query builder</strong>",
               "list": [
                 {
                   "emoji": "🔄",
@@ -319,7 +316,8 @@
                   "emoji": "📊",
                   "text": "<strong>Multiple Aggregations</strong> - Complex metrics"
                 }
-              ]
+              ],
+              "title": "<strong>Advanced query builder</strong>"
             }
           },
           {
@@ -327,8 +325,8 @@
             "emoji": "💻",
             "title": "Native SQL",
             "box": {
-              "content": "<strong>Write raw SQL queries</strong>",
-              "code": "SELECT \n  DATE(created_at) as date,\n  COUNT(*) as signups,\n  SUM(amount) as revenue\nFROM users\nWHERE created_at >= CURRENT_DATE - INTERVAL 30 DAY\nGROUP BY DATE(created_at)\nORDER BY date DESC"
+              "code": "SELECT \n  DATE(created_at) as date,\n  COUNT(*) as signups,\n  SUM(amount) as revenue\nFROM users\nWHERE created_at >= CURRENT_DATE - INTERVAL 30 DAY\nGROUP BY DATE(created_at)\nORDER BY date DESC",
+              "title": "<strong>Write raw SQL queries</strong>"
             },
             "list": [
               {
@@ -400,7 +398,6 @@
             "emoji": "🎨",
             "title": "Dashboard Creation",
             "box": {
-              "content": "<strong>Combine multiple questions</strong>",
               "list": [
                 {
                   "emoji": "➕",
@@ -418,7 +415,8 @@
                   "emoji": "📝",
                   "text": "<strong>Text Boxes</strong> - Add context and notes"
                 }
-              ]
+              ],
+              "title": "<strong>Combine multiple questions</strong>"
             }
           },
           {
@@ -426,7 +424,6 @@
             "emoji": "🎛️",
             "title": "Dashboard Filters",
             "box": {
-              "content": "<strong>Interactive filtering</strong>",
               "list": [
                 {
                   "emoji": "📅",
@@ -440,7 +437,8 @@
                   "emoji": "🔍",
                   "text": "<strong>Search</strong> - Text search filters"
                 }
-              ]
+              ],
+              "title": "<strong>Interactive filtering</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Filters automatically apply to all dashboard cards"
@@ -451,7 +449,6 @@
             "emoji": "🔍",
             "title": "Drill-Through",
             "box": {
-              "content": "<strong>Interactive data exploration</strong>",
               "list": [
                 {
                   "emoji": "📋",
@@ -465,7 +462,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Zoom In</strong> - Focus on specific segment"
                 }
-              ]
+              ],
+              "title": "<strong>Interactive data exploration</strong>"
             }
           }
         ]
@@ -483,7 +481,6 @@
             "emoji": "📁",
             "title": "Collections",
             "box": {
-              "content": "<strong>Folder-based organization</strong>",
               "list": [
                 {
                   "emoji": "🏠",
@@ -497,7 +494,8 @@
                   "emoji": "🔒",
                   "text": "<strong>Personal Collections</strong> - User-specific"
                 }
-              ]
+              ],
+              "title": "<strong>Folder-based organization</strong>"
             }
           },
           {
@@ -505,7 +503,6 @@
             "emoji": "🔖",
             "title": "Models",
             "box": {
-              "content": "<strong>Curated data models</strong>",
               "list": [
                 {
                   "emoji": "🎯",
@@ -519,7 +516,8 @@
                   "emoji": "📊",
                   "text": "<strong>Metrics</strong> - Standard calculations"
                 }
-              ]
+              ],
+              "title": "<strong>Curated data models</strong>"
             }
           }
         ]
@@ -559,8 +557,8 @@
             "emoji": "🔒",
             "title": "Row-Level Permissions",
             "box": {
-              "content": "<strong>Data segmentation</strong>",
-              "code": "-- Sales team sees only their region\nWHERE region = '{{user_region}}'\n\n-- Managers see their team only\nWHERE manager_id = {{user_id}}"
+              "code": "-- Sales team sees only their region\nWHERE region = '{{user_region}}'\n\n-- Managers see their team only\nWHERE manager_id = {{user_id}}",
+              "title": "<strong>Data segmentation</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Different users see different data from the same query"
@@ -607,7 +605,6 @@
             "emoji": "🚨",
             "title": "Alerts",
             "box": {
-              "content": "<strong>Condition-based notifications</strong>",
               "list": [
                 {
                   "emoji": "📧",
@@ -621,7 +618,8 @@
                   "emoji": "⏰",
                   "text": "<strong>Schedule</strong> - Daily, weekly, or real-time"
                 }
-              ]
+              ],
+              "title": "<strong>Condition-based notifications</strong>"
             }
           },
           {
@@ -629,7 +627,6 @@
             "emoji": "📨",
             "title": "Subscriptions",
             "box": {
-              "content": "<strong>Scheduled report delivery</strong>",
               "list": [
                 {
                   "emoji": "📊",
@@ -643,7 +640,8 @@
                   "emoji": "👥",
                   "text": "<strong>Multiple Recipients</strong> - Team distribution"
                 }
-              ]
+              ],
+              "title": "<strong>Scheduled report delivery</strong>"
             }
           }
         ]
@@ -661,8 +659,8 @@
             "emoji": "🌐",
             "title": "Embedding Dashboards",
             "box": {
-              "content": "<strong>White-label analytics</strong>",
-              "code": "<iframe\n  src=\"https://metabase.company.com/embed/dashboard/abc123\"\n  width=\"800\"\n  height=\"600\"\n  frameborder=\"0\">\n</iframe>"
+              "code": "<iframe\n  src=\"https://metabase.company.com/embed/dashboard/abc123\"\n  width=\"800\"\n  height=\"600\"\n  frameborder=\"0\">\n</iframe>",
+              "title": "<strong>White-label analytics</strong>"
             },
             "list": [
               {
@@ -680,8 +678,8 @@
             "emoji": "🔌",
             "title": "REST API",
             "box": {
-              "content": "<strong>Programmatic access</strong>",
-              "code": "// Get dashboard data\nGET /api/dashboard/1\n\n// Create new user\nPOST /api/user\n{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"john@company.com\"\n}\n\n// Run query programmatically\nPOST /api/card/1/query/json"
+              "code": "// Get dashboard data\nGET /api/dashboard/1\n\n// Create new user\nPOST /api/user\n{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"john@company.com\"\n}\n\n// Run query programmatically\nPOST /api/card/1/query/json",
+              "title": "<strong>Programmatic access</strong>"
             }
           }
         ]
@@ -699,7 +697,6 @@
             "emoji": "🗄️",
             "title": "Database Configuration",
             "box": {
-              "content": "<strong>Production metadata database</strong>",
               "list": [
                 {
                   "emoji": "🐘",
@@ -713,7 +710,8 @@
                   "emoji": "❌",
                   "text": "<strong>Avoid H2</strong> - For development only"
                 }
-              ]
+              ],
+              "title": "<strong>Production metadata database</strong>"
             }
           },
           {

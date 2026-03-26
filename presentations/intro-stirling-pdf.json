@@ -117,7 +117,6 @@
             "emoji": "🎯",
             "title": "What is Stirling PDF?",
             "box": {
-              "content": "<span class=\"highlight\">Self-hosted web application for PDF processing</span>",
               "list": [
                 {
                   "emoji": "🔓",
@@ -139,7 +138,8 @@
                   "emoji": "🔒",
                   "text": "<strong>Privacy</strong> - Files never leave your server"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Self-hosted web application for PDF processing</span>"
             },
             "note": {
               "text": "<strong>Key advantage:</strong> Complete privacy - your documents never leave your infrastructure!"
@@ -306,8 +306,8 @@
             "emoji": "🐳",
             "title": "Docker Installation",
             "box": {
-              "content": "<strong>Single command deployment</strong>",
-              "code": "# Basic Docker run command\ndocker run -d \\\n  --name stirling-pdf \\\n  -p 8080:8080 \\\n  -v /local/path:/tmp \\\n  frooodle/s stirling-pdf:latest\n\n# With Docker Compose\nversion: '3.8'\nservices:\n  stirling-pdf:\n    image: frooodle/s stirling-pdf:latest\n    ports:\n      - \"8080:8080\"\n    volumes:\n      - ./data:/tmp\n    restart: unless-stopped"
+              "code": "# Basic Docker run command\ndocker run -d \\\n  --name stirling-pdf \\\n  -p 8080:8080 \\\n  -v /local/path:/tmp \\\n  frooodle/s stirling-pdf:latest\n\n# With Docker Compose\nversion: '3.8'\nservices:\n  stirling-pdf:\n    image: frooodle/s stirling-pdf:latest\n    ports:\n      - \"8080:8080\"\n    volumes:\n      - ./data:/tmp\n    restart: unless-stopped",
+              "title": "<strong>Single command deployment</strong>"
             }
           }
         ]
@@ -1009,8 +1009,8 @@
             "emoji": "⚡",
             "title": "API Example",
             "box": {
-              "content": "<strong>Convert image to PDF via API</strong>",
-              "code": "curl -X POST \\\n  http://localhost:8080/api/convert/image \\\n  -H 'Content-Type: multipart/form-data' \\\n  -F 'file=@/path/to/image.jpg' \\\n  -o converted.pdf\n\n# Python example\nimport requests\n\nresponse = requests.post(\n    'http://localhost:8080/api/convert/image',\n    files={'file': open('image.jpg', 'rb')}\n)\n\nwith open('output.pdf', 'wb') as f:\n    f.write(response.content)"
+              "code": "curl -X POST \\\n  http://localhost:8080/api/convert/image \\\n  -H 'Content-Type: multipart/form-data' \\\n  -F 'file=@/path/to/image.jpg' \\\n  -o converted.pdf\n\n# Python example\nimport requests\n\nresponse = requests.post(\n    'http://localhost:8080/api/convert/image',\n    files={'file': open('image.jpg', 'rb')}\n)\n\nwith open('output.pdf', 'wb') as f:\n    f.write(response.content)",
+              "title": "<strong>Convert image to PDF via API</strong>"
             }
           }
         ]
@@ -1067,8 +1067,8 @@
             "emoji": "🐳",
             "title": "Advanced Docker Setup",
             "box": {
-              "content": "<strong>Production-ready deployment</strong>",
-              "code": "# docker-compose.yml for production\nversion: '3.8'\nservices:\n  stirling-pdf:\n    image: frooodle/s stirling-pdf:latest\n    container_name: stirling-pdf\n    ports:\n      - \"8080:8080\"\n    environment:\n      - DOCKER_ENABLE_SECURITY=false\n      - STIRLING_WEB_ROOT=\n    volumes:\n      - ./data:/usr/share/tessdata\n      - ./logs:/logs\n    restart: unless-stopped\n    networks:\n      - proxy\n\nnetworks:\n  proxy:\n    external: true"
+              "code": "# docker-compose.yml for production\nversion: '3.8'\nservices:\n  stirling-pdf:\n    image: frooodle/s stirling-pdf:latest\n    container_name: stirling-pdf\n    ports:\n      - \"8080:8080\"\n    environment:\n      - DOCKER_ENABLE_SECURITY=false\n      - STIRLING_WEB_ROOT=\n    volumes:\n      - ./data:/usr/share/tessdata\n      - ./logs:/logs\n    restart: unless-stopped\n    networks:\n      - proxy\n\nnetworks:\n  proxy:\n    external: true",
+              "title": "<strong>Production-ready deployment</strong>"
             }
           }
         ]
@@ -1111,8 +1111,8 @@
             "emoji": "🔧",
             "title": "Nginx Configuration Example",
             "box": {
-              "content": "<strong>Secure proxy setup</strong>",
-              "code": "server {\n    listen 443 ssl http2;\n    server_name pdf.yourdomain.com;\n\n    ssl_certificate /path/to/cert.pem;\n    ssl_certificate_key /path/to/private.key;\n\n    location / {\n        proxy_pass http://localhost:8080;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}"
+              "code": "server {\n    listen 443 ssl http2;\n    server_name pdf.yourdomain.com;\n\n    ssl_certificate /path/to/cert.pem;\n    ssl_certificate_key /path/to/private.key;\n\n    location / {\n        proxy_pass http://localhost:8080;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}",
+              "title": "<strong>Secure proxy setup</strong>"
             }
           }
         ]
@@ -1621,8 +1621,8 @@
             "emoji": "💡",
             "title": "GitHub Contribution",
             "box": {
-              "content": "<strong>How to request features</strong>",
-              "code": "1. Visit github.com/Stirling-Tools/Stirling-PDF\n2. Check existing issues for duplicates\n3. Create new issue with:\n   - Clear description of the feature\n   - Use cases and benefits\n   - Any relevant examples\n4. Follow the project's contribution guidelines\n5. Engage with community discussions\n6. Consider contributing code if possible"
+              "code": "1. Visit github.com/Stirling-Tools/Stirling-PDF\n2. Check existing issues for duplicates\n3. Create new issue with:\n   - Clear description of the feature\n   - Use cases and benefits\n   - Any relevant examples\n4. Follow the project's contribution guidelines\n5. Engage with community discussions\n6. Consider contributing code if possible",
+              "title": "<strong>How to request features</strong>"
             }
           }
         ]
@@ -1636,8 +1636,8 @@
             "emoji": "📋",
             "title": "Stirling PDF Cheat Sheet",
             "box": {
-              "content": "<strong>Most Used Tools Quick Reference</strong>",
-              "code": "Essential Operations:\n• Merge PDFs: Combine multiple documents\n• Split PDF: Extract specific pages\n• Compress: Reduce file size\n• OCR: Make scanned docs searchable\n• Convert: Images/Office docs to PDF\n\nSecurity Tools:\n• Add Password: Encrypt with password\n• Remove Password: Decrypt files\n• Digital Sign: Add electronic signatures\n• Watermark: Brand or mark documents\n\nAdvanced Features:\n• Batch Process: Multiple files at once\n• API Access: Programmatic control\n• Form Handling: Fill and flatten forms\n• Metadata: Edit document properties\n\nDeployment:\n• Docker: docker run -p 8080:8080 frooodle/s stirling-pdf\n• Default URL: http://localhost:8080"
+              "code": "Essential Operations:\n• Merge PDFs: Combine multiple documents\n• Split PDF: Extract specific pages\n• Compress: Reduce file size\n• OCR: Make scanned docs searchable\n• Convert: Images/Office docs to PDF\n\nSecurity Tools:\n• Add Password: Encrypt with password\n• Remove Password: Decrypt files\n• Digital Sign: Add electronic signatures\n• Watermark: Brand or mark documents\n\nAdvanced Features:\n• Batch Process: Multiple files at once\n• API Access: Programmatic control\n• Form Handling: Fill and flatten forms\n• Metadata: Edit document properties\n\nDeployment:\n• Docker: docker run -p 8080:8080 frooodle/s stirling-pdf\n• Default URL: http://localhost:8080",
+              "title": "<strong>Most Used Tools Quick Reference</strong>"
             }
           }
         ]

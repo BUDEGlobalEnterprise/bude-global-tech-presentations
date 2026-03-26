@@ -115,7 +115,6 @@
             "emoji": "🎯",
             "title": "What is PowerToys?",
             "box": {
-              "content": "<span class=\"highlight\">Open-source Windows utilities for power users</span>",
               "list": [
                 {
                   "emoji": "🏢",
@@ -137,7 +136,8 @@
                   "emoji": "💻",
                   "text": "<strong>Platform</strong> - Windows 10 & 11 (64-bit)"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Open-source Windows utilities for power users</span>"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> PowerToys originally debuted for Windows 95 and was revived for Windows 10!"
@@ -269,8 +269,8 @@
             "emoji": "⚡",
             "title": "Winget Installation",
             "box": {
-              "content": "<strong>Command line installation</strong>",
-              "code": "# Install using Winget\nwinget install Microsoft.PowerToys\n\n# Or with specific version\nwinget install Microsoft.PowerToys --version 0.77.0\n\n# Update PowerToys\nwinget upgrade Microsoft.PowerToys"
+              "code": "# Install using Winget\nwinget install Microsoft.PowerToys\n\n# Or with specific version\nwinget install Microsoft.PowerToys --version 0.77.0\n\n# Update PowerToys\nwinget upgrade Microsoft.PowerToys",
+              "title": "<strong>Command line installation</strong>"
             }
           }
         ]
@@ -327,7 +327,6 @@
             "emoji": "📌",
             "title": "Always On Top Feature",
             "box": {
-              "content": "<strong>Pin windows above others</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -341,7 +340,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Visual Feedback</strong> - Border indicates pinned state"
                 }
-              ]
+              ],
+              "title": "<strong>Pin windows above others</strong>"
             },
             "note": {
               "text": "<strong>Pro tip:</strong> Great for keeping documentation visible while coding!"
@@ -362,7 +362,6 @@
             "emoji": "🪟",
             "title": "FancyZones Overview",
             "box": {
-              "content": "<strong>Advanced window snapping</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -380,7 +379,8 @@
                   "emoji": "💾",
                   "text": "<strong>Custom Layouts</strong> - Create your own zones"
                 }
-              ]
+              ],
+              "title": "<strong>Advanced window snapping</strong>"
             }
           },
           {
@@ -388,8 +388,8 @@
             "emoji": "🔧",
             "title": "Custom Layout Creation",
             "box": {
-              "content": "<strong>Create personalized zones</strong>",
-              "code": "1. Open PowerToys Settings\n2. Navigate to FancyZones\n3. Click \"Edit zones\"\n4. Choose \"Create new layout\"\n5. Select \"Custom\" layout type\n6. Drag to create zones\n7. Set spacing and number of zones\n8. Save with custom name"
+              "code": "1. Open PowerToys Settings\n2. Navigate to FancyZones\n3. Click \"Edit zones\"\n4. Choose \"Create new layout\"\n5. Select \"Custom\" layout type\n6. Drag to create zones\n7. Set spacing and number of zones\n8. Save with custom name",
+              "title": "<strong>Create personalized zones</strong>"
             }
           }
         ]
@@ -450,7 +450,6 @@
             "emoji": "⌨️",
             "title": "Keyboard Remapping",
             "box": {
-              "content": "<strong>Remap individual keys</strong>",
               "list": [
                 {
                   "emoji": "🔧",
@@ -468,7 +467,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Disable Keys</strong> - Turn off problematic keys"
                 }
-              ]
+              ],
+              "title": "<strong>Remap individual keys</strong>"
             }
           },
           {
@@ -476,8 +476,8 @@
             "emoji": "🎯",
             "title": "Common Remapping Examples",
             "box": {
-              "content": "<strong>Popular remappings</strong>",
-              "code": "# Disable Caps Lock\nCaps Lock → Disabled\n\n# Swap Ctrl and Caps Lock\nCaps Lock → Left Ctrl\nLeft Ctrl → Caps Lock\n\n# Media controls\nF9 → Volume Down\nF10 → Volume Up\nF11 → Mute\n\n# Navigation\nCaps Lock + H → Left Arrow\nCaps Lock + J → Down Arrow\nCaps Lock + K → Up Arrow\nCaps Lock + L → Right Arrow"
+              "code": "# Disable Caps Lock\nCaps Lock → Disabled\n\n# Swap Ctrl and Caps Lock\nCaps Lock → Left Ctrl\nLeft Ctrl → Caps Lock\n\n# Media controls\nF9 → Volume Down\nF10 → Volume Up\nF11 → Mute\n\n# Navigation\nCaps Lock + H → Left Arrow\nCaps Lock + J → Down Arrow\nCaps Lock + K → Up Arrow\nCaps Lock + L → Right Arrow",
+              "title": "<strong>Popular remappings</strong>"
             }
           }
         ]
@@ -534,7 +534,6 @@
             "emoji": "🖼️",
             "title": "Image Resizer Features",
             "box": {
-              "content": "<strong>Right-click image resizing</strong>",
               "list": [
                 {
                   "emoji": "📏",
@@ -552,7 +551,8 @@
                   "emoji": "💾",
                   "text": "<strong>Format Options</strong> - JPEG, PNG, TIFF, BMP"
                 }
-              ]
+              ],
+              "title": "<strong>Right-click image resizing</strong>"
             }
           }
         ]
@@ -570,7 +570,6 @@
             "emoji": "📝",
             "title": "PowerRename Features",
             "box": {
-              "content": "<strong>Advanced search and replace</strong>",
               "list": [
                 {
                   "emoji": "🔍",
@@ -592,7 +591,8 @@
                   "emoji": "⏰",
                   "text": "<strong>Date/Time</strong> - Add timestamps to filenames"
                 }
-              ]
+              ],
+              "title": "<strong>Advanced search and replace</strong>"
             }
           },
           {
@@ -600,8 +600,8 @@
             "emoji": "⚡",
             "title": "PowerRename Examples",
             "box": {
-              "content": "<strong>Common renaming patterns</strong>",
-              "code": "# Add prefix to all files\nSearch: ^\nReplace: Vacation_\nResult: file.jpg → Vacation_file.jpg\n\n# Change file extension\nSearch: \\.jpeg$\nReplace: .jpg\nResult: photo.jpeg → photo.jpg\n\n# Remove text from filenames\nSearch: -copy\nReplace: (empty)\nResult: document-copy.txt → document.txt\n\n# Sequential numbering\nSearch: ^\nReplace: Photo_<#>\nResult: file1.jpg → Photo_1.jpg, file2.jpg → Photo_2.jpg"
+              "code": "# Add prefix to all files\nSearch: ^\nReplace: Vacation_\nResult: file.jpg → Vacation_file.jpg\n\n# Change file extension\nSearch: \\.jpeg$\nReplace: .jpg\nResult: photo.jpeg → photo.jpg\n\n# Remove text from filenames\nSearch: -copy\nReplace: (empty)\nResult: document-copy.txt → document.txt\n\n# Sequential numbering\nSearch: ^\nReplace: Photo_<#>\nResult: file1.jpg → Photo_1.jpg, file2.jpg → Photo_2.jpg",
+              "title": "<strong>Common renaming patterns</strong>"
             }
           }
         ]
@@ -619,7 +619,6 @@
             "emoji": "🎨",
             "title": "Color Picker Features",
             "box": {
-              "content": "<strong>Pick colors from anywhere on screen</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -641,7 +640,8 @@
                   "emoji": "🎯",
                   "text": "<strong>Zoom</strong> - Pixel-level precision"
                 }
-              ]
+              ],
+              "title": "<strong>Pick colors from anywhere on screen</strong>"
             }
           }
         ]
@@ -659,7 +659,6 @@
             "emoji": "📄",
             "title": "Text Extractor (OCR)",
             "box": {
-              "content": "<strong>Extract text from images and videos</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -681,7 +680,8 @@
                   "emoji": "💾",
                   "text": "<strong>History</strong> - Keep track of extracted text"
                 }
-              ]
+              ],
+              "title": "<strong>Extract text from images and videos</strong>"
             }
           }
         ]
@@ -699,7 +699,6 @@
             "emoji": "📏",
             "title": "Screen Ruler Features",
             "box": {
-              "content": "<strong>Measure on-screen distances</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -717,7 +716,8 @@
                   "emoji": "🎨",
                   "text": "<strong>Customization</strong> - Colors, thickness, opacity"
                 }
-              ]
+              ],
+              "title": "<strong>Measure on-screen distances</strong>"
             }
           }
         ]
@@ -735,7 +735,6 @@
             "emoji": "🔤",
             "title": "Quick Accent Features",
             "box": {
-              "content": "<strong>Type accented characters easily</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -753,7 +752,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Speed</strong> - Faster than Alt codes"
                 }
-              ]
+              ],
+              "title": "<strong>Type accented characters easily</strong>"
             }
           }
         ]
@@ -806,7 +806,6 @@
             "emoji": "⚡",
             "title": "Awake Features",
             "box": {
-              "content": "<strong>Prevent sleep without changing settings</strong>",
               "list": [
                 {
                   "emoji": "⏰",
@@ -824,7 +823,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Automatic</strong> - No need to change power settings"
                 }
-              ]
+              ],
+              "title": "<strong>Prevent sleep without changing settings</strong>"
             }
           }
         ]
@@ -842,7 +842,6 @@
             "emoji": "🌐",
             "title": "Hosts File Editor",
             "box": {
-              "content": "<strong>Safe and easy hosts file editing</strong>",
               "list": [
                 {
                   "emoji": "🔒",
@@ -860,7 +859,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Quick Toggle</strong> - Enable/disable entries easily"
                 }
-              ]
+              ],
+              "title": "<strong>Safe and easy hosts file editing</strong>"
             }
           }
         ]
@@ -878,7 +878,6 @@
             "emoji": "🔄",
             "title": "Shortcut Guide",
             "box": {
-              "content": "<strong>Learn Windows shortcuts interactively</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -896,7 +895,8 @@
                   "emoji": "💡",
                   "text": "<strong>Learning Tool</strong> - Great for new Windows users"
                 }
-              ]
+              ],
+              "title": "<strong>Learn Windows shortcuts interactively</strong>"
             }
           }
         ]
@@ -914,7 +914,6 @@
             "emoji": "📋",
             "title": "Paste as Plain Text",
             "box": {
-              "content": "<strong>Remove formatting when pasting</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -932,7 +931,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Customization</strong> - Choose target applications"
                 }
-              ]
+              ],
+              "title": "<strong>Remove formatting when pasting</strong>"
             }
           }
         ]
@@ -950,7 +950,6 @@
             "emoji": "🔧",
             "title": "Registry Preview",
             "box": {
-              "content": "<strong>View .reg files safely</strong>",
               "list": [
                 {
                   "emoji": "👀",
@@ -968,7 +967,8 @@
                   "emoji": "💾",
                   "text": "<strong>Export</strong> - Save as readable format"
                 }
-              ]
+              ],
+              "title": "<strong>View .reg files safely</strong>"
             }
           }
         ]
@@ -986,7 +986,6 @@
             "emoji": "⚙️",
             "title": "Environment Variables Editor",
             "box": {
-              "content": "<strong>User-friendly environment variables management</strong>",
               "list": [
                 {
                   "emoji": "👀",
@@ -1004,7 +1003,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Real-time Preview</strong> - See changes immediately"
                 }
-              ]
+              ],
+              "title": "<strong>User-friendly environment variables management</strong>"
             }
           }
         ]
@@ -1022,7 +1022,6 @@
             "emoji": "🔒",
             "title": "File Locksmith",
             "box": {
-              "content": "<strong>Identify processes locking files</strong>",
               "list": [
                 {
                   "emoji": "📁",
@@ -1040,7 +1039,8 @@
                   "emoji": "💻",
                   "text": "<strong>Use Case</strong> - File deletion errors, access denied"
                 }
-              ]
+              ],
+              "title": "<strong>Identify processes locking files</strong>"
             }
           }
         ]
@@ -1058,7 +1058,6 @@
             "emoji": "👀",
             "title": "Peek File Viewer",
             "box": {
-              "content": "<strong>Quick Look-style file preview</strong>",
               "list": [
                 {
                   "emoji": "⌨️",
@@ -1076,7 +1075,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Customization</strong> - File type associations"
                 }
-              ]
+              ],
+              "title": "<strong>Quick Look-style file preview</strong>"
             }
           }
         ]
@@ -1094,7 +1094,6 @@
             "emoji": "💻",
             "title": "Command Not Found",
             "box": {
-              "content": "<strong>Suggest installations for missing commands</strong>",
               "list": [
                 {
                   "emoji": "🔍",
@@ -1112,7 +1111,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Quick Install</strong> - Copy-paste installation commands"
                 }
-              ]
+              ],
+              "title": "<strong>Suggest installations for missing commands</strong>"
             }
           }
         ]
@@ -1130,8 +1130,8 @@
             "emoji": "🎨",
             "title": "Creating Custom Layouts",
             "box": {
-              "content": "<strong>Design your perfect workspace</strong>",
-              "code": "1. Open PowerToys → FancyZones\n2. Click \"Edit zones\" → \"Create new layout\"\n3. Choose layout type:\n   - Grid: Equal-sized zones\n   - Canvas: Free-form zone creation\n   - Priority Grid: Focus on main workspace\n4. Customize zone count and spacing\n5. Drag to resize and position zones\n6. Save with descriptive name\n7. Apply to specific monitors\n8. Use Shift+drag to snap windows"
+              "code": "1. Open PowerToys → FancyZones\n2. Click \"Edit zones\" → \"Create new layout\"\n3. Choose layout type:\n   - Grid: Equal-sized zones\n   - Canvas: Free-form zone creation\n   - Priority Grid: Focus on main workspace\n4. Customize zone count and spacing\n5. Drag to resize and position zones\n6. Save with descriptive name\n7. Apply to specific monitors\n8. Use Shift+drag to snap windows",
+              "title": "<strong>Design your perfect workspace</strong>"
             }
           }
         ]
@@ -1597,8 +1597,8 @@
             "emoji": "⌨️",
             "title": "Must-Know Shortcuts",
             "box": {
-              "content": "<strong>Daily use shortcuts</strong>",
-              "code": "PowerToys Run: Alt + Space\nColor Picker: Win + Shift + C\nText Extractor: Win + Shift + T\nAlways On Top: Win + Ctrl + T\nFancyZones: Hold Shift while dragging\nScreen Ruler: Win + Shift + M\nFind My Mouse: Double-click Ctrl\nMouse Crosshair: Win + Alt + P\nPaste as Plain Text: Win + Ctrl + V\nShortcut Guide: Hold Windows key"
+              "code": "PowerToys Run: Alt + Space\nColor Picker: Win + Shift + C\nText Extractor: Win + Shift + T\nAlways On Top: Win + Ctrl + T\nFancyZones: Hold Shift while dragging\nScreen Ruler: Win + Shift + M\nFind My Mouse: Double-click Ctrl\nMouse Crosshair: Win + Alt + P\nPaste as Plain Text: Win + Ctrl + V\nShortcut Guide: Hold Windows key",
+              "title": "<strong>Daily use shortcuts</strong>"
             }
           }
         ]
@@ -1616,8 +1616,8 @@
             "emoji": "💡",
             "title": "GitHub Workflow",
             "box": {
-              "content": "<strong>How to request features</strong>",
-              "code": "1. Visit github.com/microsoft/PowerToys\n2. Check existing issues for duplicates\n3. Create new issue with:\n   - Clear title and description\n   - Use case and benefits\n   - Screenshots or mockups if possible\n4. Follow issue template\n5. Engage with community discussion\n6. Upvote popular feature requests"
+              "code": "1. Visit github.com/microsoft/PowerToys\n2. Check existing issues for duplicates\n3. Create new issue with:\n   - Clear title and description\n   - Use case and benefits\n   - Screenshots or mockups if possible\n4. Follow issue template\n5. Engage with community discussion\n6. Upvote popular feature requests",
+              "title": "<strong>How to request features</strong>"
             }
           }
         ]
@@ -1717,8 +1717,8 @@
             "emoji": "📋",
             "title": "PowerToys Cheat Sheet",
             "box": {
-              "content": "<strong>Quick reference guide</strong>",
-              "code": "Essential Shortcuts:\n• PowerToys Run: Alt + Space\n• Color Picker: Win + Shift + C\n• Always On Top: Win + Ctrl + T\n• FancyZones: Shift + Drag\n• Text Extractor: Win + Shift + T\n\nFile Management:\n• PowerRename: Right-click → PowerRename\n• Image Resizer: Right-click → Resize pictures\n• File Locksmith: Right-click → What's using this file?\n\nProductivity Tips:\n• Create custom FancyZones layouts\n• Use PowerToys Run for calculations\n• Enable Mouse Highlighter for presentations\n• Configure Keyboard Manager for app-specific shortcuts"
+              "code": "Essential Shortcuts:\n• PowerToys Run: Alt + Space\n• Color Picker: Win + Shift + C\n• Always On Top: Win + Ctrl + T\n• FancyZones: Shift + Drag\n• Text Extractor: Win + Shift + T\n\nFile Management:\n• PowerRename: Right-click → PowerRename\n• Image Resizer: Right-click → Resize pictures\n• File Locksmith: Right-click → What's using this file?\n\nProductivity Tips:\n• Create custom FancyZones layouts\n• Use PowerToys Run for calculations\n• Enable Mouse Highlighter for presentations\n• Configure Keyboard Manager for app-specific shortcuts",
+              "title": "<strong>Quick reference guide</strong>"
             }
           }
         ]

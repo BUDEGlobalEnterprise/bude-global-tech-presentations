@@ -118,7 +118,6 @@
             "emoji": "🐳",
             "title": "What is Docker?",
             "box": {
-              "content": "<span class=\"highlight\">Containerization platform</span> for developing, shipping, and running applications",
               "list": [
                 {
                   "emoji": "📦",
@@ -140,7 +139,8 @@
                   "emoji": "💪",
                   "text": "<strong>Benefit</strong> - Consistent environments across development and production"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Containerization platform</span> for developing, shipping, and running applications"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Docker gets its name from shipping containers - it packages applications like cargo containers!"
@@ -156,7 +156,6 @@
             "type": "content",
             "title": "The Matrix of Hell",
             "box": {
-              "content": "Before Docker, developers managed a complex matrix of static dependencies and OS versions for every app/server combination.",
               "list": [
                 {
                   "emoji": "📉",
@@ -170,14 +169,14 @@
                   "emoji": "🧊",
                   "text": "<strong>Rigid:</strong> Difficult to scale or move between clouds."
                 }
-              ]
+              ],
+              "title": "Before Docker, developers managed a complex matrix of static dependencies and OS versions for every app/server combination."
             }
           },
           {
             "type": "content",
             "title": "The Container Metaphor",
             "box": {
-              "content": "Just as shipping containers revolutionized global trade, Docker revolutionized software by standardizing the deployment unit.",
               "list": [
                 {
                   "emoji": "📦",
@@ -191,7 +190,8 @@
                   "emoji": "🏗️",
                   "text": "<strong>Run everywhere:</strong> High isolation and zero conflict."
                 }
-              ]
+              ],
+              "title": "Just as shipping containers revolutionized global trade, Docker revolutionized software by standardizing the deployment unit."
             }
           }
         ]
@@ -204,7 +204,6 @@
             "type": "content",
             "title": "The Matrix of Hell",
             "box": {
-              "content": "Before Docker, developers managed a complex matrix of static dependencies and OS versions.",
               "list": [
                 {
                   "emoji": "📉",
@@ -214,14 +213,14 @@
                   "emoji": "🐌",
                   "text": "<strong>Slow:</strong> Setting up new servers took hours/days."
                 }
-              ]
+              ],
+              "title": "Before Docker, developers managed a complex matrix of static dependencies and OS versions."
             }
           },
           {
             "type": "content",
             "title": "The Container Metaphor",
             "box": {
-              "content": "Docker standardized the deployment unit just like shipping containers standardized cargo.",
               "list": [
                 {
                   "emoji": "📦",
@@ -231,7 +230,8 @@
                   "emoji": "🏗️",
                   "text": "<strong>Run everywhere:</strong> High isolation and zero conflict."
                 }
-              ]
+              ],
+              "title": "Docker standardized the deployment unit just like shipping containers standardized cargo."
             }
           }
         ]
@@ -369,7 +369,6 @@
             "type": "content",
             "title": "Linux Kernel Magic",
             "box": {
-              "content": "Docker provides a management layer over existing Linux kernel features to provide isolation and resource management.",
               "list": [
                 {
                   "emoji": "🛡️",
@@ -383,7 +382,8 @@
                   "emoji": "📂",
                   "text": "<strong>Union File System (Overlay2):</strong> Layered image storage."
                 }
-              ]
+              ],
+              "title": "Docker provides a management layer over existing Linux kernel features to provide isolation and resource management."
             }
           }
         ]
@@ -396,7 +396,6 @@
             "type": "content",
             "title": "Linux Kernel Magic",
             "box": {
-              "content": "Docker provides a management layer over existing Linux kernel features.",
               "list": [
                 {
                   "emoji": "🛡️",
@@ -410,7 +409,8 @@
                   "emoji": "📂",
                   "text": "<strong>Union File System:</strong> Layered image storage."
                 }
-              ]
+              ],
+              "title": "Docker provides a management layer over existing Linux kernel features."
             }
           }
         ]
@@ -453,8 +453,8 @@
             "emoji": "🐧",
             "title": "Linux Installation",
             "box": {
-              "content": "<strong>Install Docker on Ubuntu</strong>",
-              "code": "# Update package index\nsudo apt update\n\n# Install prerequisites\nsudo apt install apt-transport-https ca-certificates curl software-properties-common\n\n# Add Docker's official GPG key\ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg\n\n# Add Docker repository\necho \"deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null\n\n# Install Docker Engine\nsudo apt update\nsudo apt install docker-ce docker-ce-cli containerd.io\n\n# Add user to docker group\nsudo usermod -aG docker $USER\n\n# Verify installation\ndocker --version"
+              "code": "# Update package index\nsudo apt update\n\n# Install prerequisites\nsudo apt install apt-transport-https ca-certificates curl software-properties-common\n\n# Add Docker's official GPG key\ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg\n\n# Add Docker repository\necho \"deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null\n\n# Install Docker Engine\nsudo apt update\nsudo apt install docker-ce docker-ce-cli containerd.io\n\n# Add user to docker group\nsudo usermod -aG docker $USER\n\n# Verify installation\ndocker --version",
+              "title": "<strong>Install Docker on Ubuntu</strong>"
             }
           }
         ]
@@ -515,8 +515,8 @@
             "emoji": "💻",
             "title": "Basic Container Management",
             "box": {
-              "content": "<strong>Fundamental Docker commands</strong>",
-              "code": "# Run a container\ndocker run hello-world\ndocker run -it ubuntu bash\ndocker run -d -p 80:80 nginx\n\n# Container management\ndocker ps                      # List running containers\ndocker ps -a                   # List all containers\ndocker stop container_name     # Stop container\ndocker start container_name    # Start container\ndocker restart container_name  # Restart container\ndocker rm container_name       # Remove container\n\n# Image management\ndocker images                  # List images\ndocker pull image_name         # Download image\ndocker rmi image_name          # Remove image\n\n# Information\ndocker logs container_name     # View container logs\ndocker inspect container_name  # Detailed container info"
+              "code": "# Run a container\ndocker run hello-world\ndocker run -it ubuntu bash\ndocker run -d -p 80:80 nginx\n\n# Container management\ndocker ps                      # List running containers\ndocker ps -a                   # List all containers\ndocker stop container_name     # Stop container\ndocker start container_name    # Start container\ndocker restart container_name  # Restart container\ndocker rm container_name       # Remove container\n\n# Image management\ndocker images                  # List images\ndocker pull image_name         # Download image\ndocker rmi image_name          # Remove image\n\n# Information\ndocker logs container_name     # View container logs\ndocker inspect container_name  # Detailed container info",
+              "title": "<strong>Fundamental Docker commands</strong>"
             }
           }
         ]
@@ -528,23 +528,20 @@
           {
             "type": "topic-title",
             "title": "10. Practical CLI",
-            "box": {
-              "content": "Mastering the Command Line"
-            }
+            "subtitle": "Mastering the Command Line"
           },
           {
             "type": "content",
             "title": "Cleanup Commands",
             "box": {
-              "content": "Docker can consume a lot of disk space. Regular cleanup of dangling images, stopped containers, and unused volumes is essential.",
-              "code": "docker system prune -a   # Remove EVERY unused object\ndocker volume prune       # Remove unused volumes\ndocker image prune        # Remove dangling images"
+              "code": "docker system prune -a   # Remove EVERY unused object\ndocker volume prune       # Remove unused volumes\ndocker image prune        # Remove dangling images",
+              "title": "Docker can consume a lot of disk space. Regular cleanup of dangling images, stopped containers, and unused volumes is essential."
             }
           },
           {
             "type": "content",
             "title": "Troubleshooting 101",
             "box": {
-              "content": "When a container doesn't work as expected, these commands are your best friends.",
               "list": [
                 {
                   "emoji": "🕵️",
@@ -558,7 +555,8 @@
                   "emoji": "🚥",
                   "text": "<strong>top:</strong> See processes running inside the container."
                 }
-              ]
+              ],
+              "title": "When a container doesn't work as expected, these commands are your best friends."
             }
           }
         ]
@@ -576,8 +574,8 @@
             "emoji": "🔨",
             "title": "Dockerfile Instructions",
             "box": {
-              "content": "<strong>Common Dockerfile commands</strong>",
-              "code": "# Sample Dockerfile\nFROM node:18-alpine          # Base image\nWORKDIR /app                 # Working directory\nCOPY package*.json ./        # Copy files\nRUN npm install              # Run command during build\nCOPY . .                     # Copy application code\nEXPOSE 3000                  # Expose port\nCMD [\"npm\", \"start\"]         # Default command\n\n# Build the image\ndocker build -t my-app .\n\n# Run the container\ndocker run -p 3000:3000 my-app"
+              "code": "# Sample Dockerfile\nFROM node:18-alpine          # Base image\nWORKDIR /app                 # Working directory\nCOPY package*.json ./        # Copy files\nRUN npm install              # Run command during build\nCOPY . .                     # Copy application code\nEXPOSE 3000                  # Expose port\nCMD [\"npm\", \"start\"]         # Default command\n\n# Build the image\ndocker build -t my-app .\n\n# Run the container\ndocker run -p 3000:3000 my-app",
+              "title": "<strong>Common Dockerfile commands</strong>"
             }
           },
           {
@@ -618,15 +616,12 @@
           {
             "type": "topic-title",
             "title": "4. The Dockerfile",
-            "box": {
-              "content": "The Blueprint for your Container"
-            }
+            "subtitle": "The Blueprint for your Container"
           },
           {
             "type": "content",
             "title": "Essential Instructions",
             "box": {
-              "content": "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.",
               "list": [
                 {
                   "emoji": "🏗️",
@@ -644,14 +639,14 @@
                   "emoji": "⚙️",
                   "text": "<strong>RUN:</strong> Executes commands in a new layer (e.g., npm install)."
                 }
-              ]
+              ],
+              "title": "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image."
             }
           },
           {
             "type": "content",
             "title": "CMD vs ENTRYPOINT",
             "box": {
-              "content": "One of the most common points of confusion in Docker. Both define the process that runs when the container starts.",
               "list": [
                 {
                   "emoji": "📢",
@@ -665,23 +660,24 @@
                   "emoji": "💡",
                   "text": "<strong>Best Practice:</strong> Use ENTRYPOINT for the executable and CMD for default arguments."
                 }
-              ]
+              ],
+              "title": "One of the most common points of confusion in Docker. Both define the process that runs when the container starts."
             }
           },
           {
             "type": "content",
             "title": "Layer Caching & Optimization",
             "box": {
-              "content": "Docker uses a layer-based cache. If a layer hasn't changed, Docker reuses it. To optimize build speed, put the most frequently changed files at the BOTTOM.",
-              "code": "# Optimization: Copy package files first\nCOPY package*.json ./\nRUN npm install\n\n# Then copy everything else\nCOPY . .\nCMD [\"npm\", \"start\"]"
+              "code": "# Optimization: Copy package files first\nCOPY package*.json ./\nRUN npm install\n\n# Then copy everything else\nCOPY . .\nCMD [\"npm\", \"start\"]",
+              "title": "Docker uses a layer-based cache. If a layer hasn't changed, Docker reuses it. To optimize build speed, put the most frequently changed files at the BOTTOM."
             }
           },
           {
             "type": "content",
             "title": "Multi-stage Builds (Elite)",
             "box": {
-              "content": "Multi-stage builds allow you to use multiple <code>FROM</code> statements in a single Dockerfile. You can compile your code in one stage and copy only the binary to a smaller production image.",
-              "code": "# Stage 1: Build\nFROM golang:1.21-alpine AS builder\nCOPY . .\nRUN go build -o app\n\n# Stage 2: Production\nFROM alpine:latest\nCOPY --from=builder /app /app\nCMD [\"/app\"]"
+              "code": "# Stage 1: Build\nFROM golang:1.21-alpine AS builder\nCOPY . .\nRUN go build -o app\n\n# Stage 2: Production\nFROM alpine:latest\nCOPY --from=builder /app /app\nCMD [\"/app\"]",
+              "title": "Multi-stage builds allow you to use multiple <code>FROM</code> statements in a single Dockerfile. You can compile your code in one stage and copy only the binary to a smaller production image."
             }
           }
         ]
@@ -699,8 +695,8 @@
             "emoji": "💾",
             "title": "Docker Volumes",
             "box": {
-              "content": "<strong>Managing persistent data</strong>",
-              "code": "# Volume management\ndocker volume create my_volume     # Create volume\ndocker volume ls                   # List volumes\ndocker volume inspect my_volume    # Volume details\ndocker volume rm my_volume         # Remove volume\n\n# Using volumes\ndocker run -v my_volume:/data ubuntu  # Mount volume\ndocker run -v $(pwd):/app ubuntu     # Bind mount\n\n# Volume examples\ndocker run -v db_data:/var/lib/mysql mysql\ndocker run -v /host/path:/container/path nginx\n\n# Clean up unused volumes\ndocker volume prune"
+              "code": "# Volume management\ndocker volume create my_volume     # Create volume\ndocker volume ls                   # List volumes\ndocker volume inspect my_volume    # Volume details\ndocker volume rm my_volume         # Remove volume\n\n# Using volumes\ndocker run -v my_volume:/data ubuntu  # Mount volume\ndocker run -v $(pwd):/app ubuntu     # Bind mount\n\n# Volume examples\ndocker run -v db_data:/var/lib/mysql mysql\ndocker run -v /host/path:/container/path nginx\n\n# Clean up unused volumes\ndocker volume prune",
+              "title": "<strong>Managing persistent data</strong>"
             }
           }
         ]
@@ -712,15 +708,12 @@
           {
             "type": "topic-title",
             "title": "6. Docker Storage",
-            "box": {
-              "content": "Persistent Data in an Ephemeral World"
-            }
+            "subtitle": "Persistent Data in an Ephemeral World"
           },
           {
             "type": "content",
             "title": "Volumes vs Bind Mounts",
             "box": {
-              "content": "Docker provides three main ways to manage data independently of the container's lifecycle.",
               "list": [
                 {
                   "emoji": "📦",
@@ -734,15 +727,16 @@
                   "emoji": "💾",
                   "text": "<strong>tmpfs:</strong> Stored in memory only. Fast and secure (not persistent)."
                 }
-              ]
+              ],
+              "title": "Docker provides three main ways to manage data independently of the container's lifecycle."
             }
           },
           {
             "type": "content",
             "title": "Why we need Storage?",
             "box": {
-              "content": "Since containers are ephemeral, any data stored in the writable layer is lost when the container is deleted. Storage allows us to persist databases and logs.",
-              "code": "# Mount a volume to persist Postgres data\ndocker run -v my_db_data:/var/lib/postgresql/data postgres"
+              "code": "# Mount a volume to persist Postgres data\ndocker run -v my_db_data:/var/lib/postgresql/data postgres",
+              "title": "Since containers are ephemeral, any data stored in the writable layer is lost when the container is deleted. Storage allows us to persist databases and logs."
             }
           }
         ]
@@ -789,8 +783,8 @@
             "emoji": "🔗",
             "title": "Networking Commands",
             "box": {
-              "content": "<strong>Network management</strong>",
-              "code": "# Network management\ndocker network ls                  # List networks\ndocker network create my_network   # Create network\ndocker network inspect my_network  # Network details\ndocker network rm my_network       # Remove network\n\n# Using networks\ndocker run --network my_network nginx\ndocker run -p 8080:80 nginx        # Port mapping\n\n# Container communication\ndocker run --name web --network app_network nginx\ndocker run --name app --network app_network my-app\n\n# DNS resolution\n# Containers can communicate using container names"
+              "code": "# Network management\ndocker network ls                  # List networks\ndocker network create my_network   # Create network\ndocker network inspect my_network  # Network details\ndocker network rm my_network       # Remove network\n\n# Using networks\ndocker run --network my_network nginx\ndocker run -p 8080:80 nginx        # Port mapping\n\n# Container communication\ndocker run --name web --network app_network nginx\ndocker run --name app --network app_network my-app\n\n# DNS resolution\n# Containers can communicate using container names",
+              "title": "<strong>Network management</strong>"
             }
           }
         ]
@@ -802,15 +796,12 @@
           {
             "type": "topic-title",
             "title": "5. Docker Networking",
-            "box": {
-              "content": "How Containers Talk"
-            }
+            "subtitle": "How Containers Talk"
           },
           {
             "type": "content",
             "title": "Default Network Drivers",
             "box": {
-              "content": "Docker comes with several network drivers that provide different levels of isolation and connectivity.",
               "list": [
                 {
                   "emoji": "🌉",
@@ -824,15 +815,16 @@
                   "emoji": "🚫",
                   "text": "<strong>None:</strong> Disables all networking for a container."
                 }
-              ]
+              ],
+              "title": "Docker comes with several network drivers that provide different levels of isolation and connectivity."
             }
           },
           {
             "type": "content",
             "title": "Service Discovery",
             "box": {
-              "content": "On user-defined bridge networks, Docker provides automatic service discovery via an internal DNS server. You can refer to other containers by their <strong>name</strong> instead of an IP address.",
-              "code": "# Connect to database by container name\nDATABASE_URL=postgres://db_container:5432/mydb"
+              "code": "# Connect to database by container name\nDATABASE_URL=postgres://db_container:5432/mydb",
+              "title": "On user-defined bridge networks, Docker provides automatic service discovery via an internal DNS server. You can refer to other containers by their <strong>name</strong> instead of an IP address."
             }
           }
         ]
@@ -850,8 +842,8 @@
             "emoji": "🚀",
             "title": "Docker Compose Basics",
             "box": {
-              "content": "<strong>Sample docker-compose.yml</strong>",
-              "code": "version: '3.8'\n\nservices:\n  web:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n    volumes:\n      - ./html:/usr/share/nginx/html\n    depends_on:\n      - app\n\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://user:pass@db:5432/mydb\n    depends_on:\n      - db\n\n  db:\n    image: postgres:13\n    environment:\n      - POSTGRES_DB=mydb\n      - POSTGRES_USER=user\n      - POSTGRES_PASSWORD=pass\n    volumes:\n      - db_data:/var/lib/postgresql/data\n\nvolumes:\n  db_data:"
+              "code": "version: '3.8'\n\nservices:\n  web:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n    volumes:\n      - ./html:/usr/share/nginx/html\n    depends_on:\n      - app\n\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://user:pass@db:5432/mydb\n    depends_on:\n      - db\n\n  db:\n    image: postgres:13\n    environment:\n      - POSTGRES_DB=mydb\n      - POSTGRES_USER=user\n      - POSTGRES_PASSWORD=pass\n    volumes:\n      - db_data:/var/lib/postgresql/data\n\nvolumes:\n  db_data:",
+              "title": "<strong>Sample docker-compose.yml</strong>"
             }
           },
           {
@@ -859,8 +851,8 @@
             "emoji": "⚡",
             "title": "Compose Commands",
             "box": {
-              "content": "<strong>Essential Compose commands</strong>",
-              "code": "# Start services\ndocker-compose up              # Start in foreground\ndocker-compose up -d           # Start in background\ndocker-compose up --build      # Rebuild images\n\n# Manage services\ndocker-compose ps              # Show running services\ndocker-compose logs            # View logs\ndocker-compose logs service_name  # Specific service logs\n\n# Stop and cleanup\ndocker-compose stop            # Stop services\ndocker-compose down            # Stop and remove\ndocker-compose down -v         # Remove with volumes\n\n# Other commands\ndocker-compose exec service_name command  # Execute command\ndocker-compose pull            # Pull latest images\ndocker-compose build           # Build images"
+              "code": "# Start services\ndocker-compose up              # Start in foreground\ndocker-compose up -d           # Start in background\ndocker-compose up --build      # Rebuild images\n\n# Manage services\ndocker-compose ps              # Show running services\ndocker-compose logs            # View logs\ndocker-compose logs service_name  # Specific service logs\n\n# Stop and cleanup\ndocker-compose stop            # Stop services\ndocker-compose down            # Stop and remove\ndocker-compose down -v         # Remove with volumes\n\n# Other commands\ndocker-compose exec service_name command  # Execute command\ndocker-compose pull            # Pull latest images\ndocker-compose build           # Build images",
+              "title": "<strong>Essential Compose commands</strong>"
             }
           }
         ]
@@ -872,15 +864,12 @@
           {
             "type": "topic-title",
             "title": "7. Docker Compose",
-            "box": {
-              "content": "Orchestrating the Stack"
-            }
+            "subtitle": "Orchestrating the Stack"
           },
           {
             "type": "content",
             "title": "What is Docker Compose?",
             "box": {
-              "content": "Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure your application’s services.",
               "list": [
                 {
                   "emoji": "📜",
@@ -894,15 +883,16 @@
                   "emoji": "🛠️",
                   "text": "<strong>Isolated:</strong> Automatically creates a dedicated network."
                 }
-              ]
+              ],
+              "title": "Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure your application’s services."
             }
           },
           {
             "type": "content",
             "title": "The compose.yaml",
             "box": {
-              "content": "A simple example of a web application and a database running together.",
-              "code": "services:\n  app:\n    build: .\n    ports: [\"8080:8080\"]\n    depends_on: [\"db\"]\n\n  db:\n    image: postgres:15\n    volumes: [\"db_data:/var/lib/postgresql/data\"]\n\nvolumes:\n  db_data:"
+              "code": "services:\n  app:\n    build: .\n    ports: [\"8080:8080\"]\n    depends_on: [\"db\"]\n\n  db:\n    image: postgres:15\n    volumes: [\"db_data:/var/lib/postgresql/data\"]\n\nvolumes:\n  db_data:",
+              "title": "A simple example of a web application and a database running together."
             }
           }
         ]
@@ -914,15 +904,12 @@
           {
             "type": "topic-title",
             "title": "8. Advanced Docker",
-            "box": {
-              "content": "Beyond the Basics: Speed, Secrets, and Scale"
-            }
+            "subtitle": "Beyond the Basics: Speed, Secrets, and Scale"
           },
           {
             "type": "content",
             "title": "Buildkit: The Modern Engine",
             "box": {
-              "content": "Buildkit is the next-generation build engine for Docker. It provides parallelization, smarter caching, and secret management durante build time.",
               "list": [
                 {
                   "emoji": "⚡",
@@ -936,14 +923,14 @@
                   "emoji": "📂",
                   "text": "<strong>SSH Mounts:</strong> Build using your local SSH agent."
                 }
-              ]
+              ],
+              "title": "Buildkit is the next-generation build engine for Docker. It provides parallelization, smarter caching, and secret management durante build time."
             }
           },
           {
             "type": "content",
             "title": "Reducing Image Size",
             "box": {
-              "content": "A smaller image is a faster and more secure image. Production containers should never contain compilers, build tools, or source code.",
               "list": [
                 {
                   "emoji": "✂️",
@@ -957,7 +944,8 @@
                   "emoji": "🗑️",
                   "text": "<strong>Clean up:</strong> Delete caches and temp files in the same RUN command."
                 }
-              ]
+              ],
+              "title": "A smaller image is a faster and more secure image. Production containers should never contain compilers, build tools, or source code."
             }
           }
         ]
@@ -1000,8 +988,8 @@
             "emoji": "🏷️",
             "title": "Tagging & Pushing Images",
             "box": {
-              "content": "<strong>Image tagging and distribution</strong>",
-              "code": "# Tag images\ndocker tag my-app:latest myusername/my-app:latest\ndocker tag my-app:latest my-app:v1.0\ndocker tag my-app:latest registry.example.com/my-app:latest\n\n# Push to registry\ndocker push myusername/my-app:latest\ndocker push registry.example.com/my-app:latest\n\n# Pull from registry\ndocker pull myusername/my-app:latest\ndocker pull nginx:alpine\n\n# Login to registry\ndocker login                    # Docker Hub\ndocker login registry.example.com  # Private registry\n\n# Save and load images\ndocker save my-app > my-app.tar\ndocker load < my-app.tar"
+              "code": "# Tag images\ndocker tag my-app:latest myusername/my-app:latest\ndocker tag my-app:latest my-app:v1.0\ndocker tag my-app:latest registry.example.com/my-app:latest\n\n# Push to registry\ndocker push myusername/my-app:latest\ndocker push registry.example.com/my-app:latest\n\n# Pull from registry\ndocker pull myusername/my-app:latest\ndocker pull nginx:alpine\n\n# Login to registry\ndocker login                    # Docker Hub\ndocker login registry.example.com  # Private registry\n\n# Save and load images\ndocker save my-app > my-app.tar\ndocker load < my-app.tar",
+              "title": "<strong>Image tagging and distribution</strong>"
             }
           }
         ]
@@ -1062,8 +1050,8 @@
             "emoji": "🔄",
             "title": "CI/CD Pipeline Example",
             "box": {
-              "content": "<strong>GitHub Actions example</strong>",
-              "code": "name: Build and Push Docker Image\n\non:\n  push:\n    branches: [ main ]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    \n    steps:\n    - name: Checkout code\n      uses: actions/checkout@v3\n      \n    - name: Build Docker image\n      run: |\n        docker build -t my-app:${{ github.sha }} .\n        docker build -t my-app:latest .\n        \n    - name: Push to Docker Hub\n      run: |\n        echo \"${{ secrets.DOCKER_PASSWORD }}\" | docker login -u \"${{ secrets.DOCKER_USERNAME }}\" --password-stdin\n        docker push my-app:${{ github.sha }}\n        docker push my-app:latest\n        \n    - name: Deploy to server\n      run: |\n        ssh deploy@server \"docker pull my-app:latest && docker-compose up -d\""
+              "code": "name: Build and Push Docker Image\n\non:\n  push:\n    branches: [ main ]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    \n    steps:\n    - name: Checkout code\n      uses: actions/checkout@v3\n      \n    - name: Build Docker image\n      run: |\n        docker build -t my-app:${{ github.sha }} .\n        docker build -t my-app:latest .\n        \n    - name: Push to Docker Hub\n      run: |\n        echo \"${{ secrets.DOCKER_PASSWORD }}\" | docker login -u \"${{ secrets.DOCKER_USERNAME }}\" --password-stdin\n        docker push my-app:${{ github.sha }}\n        docker push my-app:latest\n        \n    - name: Deploy to server\n      run: |\n        ssh deploy@server \"docker pull my-app:latest && docker-compose up -d\"",
+              "title": "<strong>GitHub Actions example</strong>"
             }
           }
         ]
@@ -1075,15 +1063,12 @@
           {
             "type": "topic-title",
             "title": "11. Deployment Patterns",
-            "box": {
-              "content": "Containers in the Real World"
-            }
+            "subtitle": "Containers in the Real World"
           },
           {
             "type": "content",
             "title": "CI/CD Integration",
             "box": {
-              "content": "Docker is the foundation of modern CI/CD. It ensures that the exact same environment used for testing is what gets deployed to production.",
               "list": [
                 {
                   "emoji": "🛠️",
@@ -1097,14 +1082,14 @@
                   "emoji": "🚀",
                   "text": "<strong>Deploy Stage:</strong> Push to registry and trigger update."
                 }
-              ]
+              ],
+              "title": "Docker is the foundation of modern CI/CD. It ensures that the exact same environment used for testing is what gets deployed to production."
             }
           },
           {
             "type": "content",
             "title": "Blue-Green Deployment",
             "box": {
-              "content": "Blue-Green deployment involves running two identical production environments. Only one (Blue) is live. New changes are pushed to Green, tested, and then traffic is switched.",
               "list": [
                 {
                   "emoji": "🔵",
@@ -1118,14 +1103,14 @@
                   "emoji": "🔀",
                   "text": "<strong>Switch:</strong> Zero-downtime cutover."
                 }
-              ]
+              ],
+              "title": "Blue-Green deployment involves running two identical production environments. Only one (Blue) is live. New changes are pushed to Green, tested, and then traffic is switched."
             }
           },
           {
             "type": "content",
             "title": "Canary Releases",
             "box": {
-              "content": "Canary releases involve rolling out new features to a small subset of users before making them available to everyone.",
               "list": [
                 {
                   "emoji": "🐤",
@@ -1135,7 +1120,8 @@
                   "emoji": "📈",
                   "text": "<strong>Gradual:</strong> Increase traffic percentage over time."
                 }
-              ]
+              ],
+              "title": "Canary releases involve rolling out new features to a small subset of users before making them available to everyone."
             }
           }
         ]
@@ -1182,15 +1168,12 @@
           {
             "type": "topic-title",
             "title": "14. Modern Ecosystem",
-            "box": {
-              "content": "Life beyond Docker Desktop"
-            }
+            "subtitle": "Life beyond Docker Desktop"
           },
           {
             "type": "content",
             "title": "Podman & Finch",
             "box": {
-              "content": "Alternatives to Docker that are often daemonless and rootless by default.",
               "list": [
                 {
                   "emoji": "🦭",
@@ -1200,14 +1183,14 @@
                   "emoji": "🐦",
                   "text": "<strong>Finch:</strong> AWS's open-source tool for local development."
                 }
-              ]
+              ],
+              "title": "Alternatives to Docker that are often daemonless and rootless by default."
             }
           },
           {
             "type": "content",
             "title": "OrbStack & Colima",
             "box": {
-              "content": "Modern Mac/Linux alternatives that offer better performance and lower resource usage than Docker Desktop.",
               "list": [
                 {
                   "emoji": "🚀",
@@ -1217,14 +1200,14 @@
                   "emoji": "🐳",
                   "text": "<strong>Colima:</strong> Simple CLI for running Docker/Kubernetes in VMs."
                 }
-              ]
+              ],
+              "title": "Modern Mac/Linux alternatives that offer better performance and lower resource usage than Docker Desktop."
             }
           },
           {
             "type": "content",
             "title": "Summary & Next Steps",
             "box": {
-              "content": "Docker is just the beginning of your Cloud Native journey.",
               "list": [
                 {
                   "emoji": "🏗️",
@@ -1238,14 +1221,14 @@
                   "emoji": "☸️",
                   "text": "<strong>Look at Kubernetes:</strong> Prepare for massive scale."
                 }
-              ]
+              ],
+              "title": "Docker is just the beginning of your Cloud Native journey."
             }
           },
           {
             "type": "content",
             "title": "Thank You & Final Q&A",
             "box": {
-              "content": "Dive deeper at **docs.docker.com**.",
               "list": [
                 {
                   "emoji": "📧",
@@ -1255,7 +1238,8 @@
                   "emoji": "🐙",
                   "text": "GitHub: github.com/aravind-govindhasamy"
                 }
-              ]
+              ],
+              "title": "Dive deeper at **docs.docker.com**."
             }
           }
         ]
@@ -1302,15 +1286,12 @@
           {
             "type": "topic-title",
             "title": "12. Orchestration",
-            "box": {
-              "content": "Managing Containers at Scale"
-            }
+            "subtitle": "Managing Containers at Scale"
           },
           {
             "type": "content",
             "title": "Why Orchestration?",
             "box": {
-              "content": "When you have hundreds or thousands of containers across many servers, manual management with <code>docker run</code> is impossible.",
               "list": [
                 {
                   "emoji": "🏥",
@@ -1324,14 +1305,14 @@
                   "emoji": "🔄",
                   "text": "<strong>Rolling Updates:</strong> Update services without downtime."
                 }
-              ]
+              ],
+              "title": "When you have hundreds or thousands of containers across many servers, manual management with <code>docker run</code> is impossible."
             }
           },
           {
             "type": "content",
             "title": "Swarm vs Kubernetes",
             "box": {
-              "content": "The two dominant clustering technologies in the Docker ecosystem.",
               "list": [
                 {
                   "emoji": "🐝",
@@ -1341,7 +1322,8 @@
                   "emoji": "☸️",
                   "text": "<strong>Kubernetes:</strong> The industry standard. Highly powerful, complex, and infinitely scalable."
                 }
-              ]
+              ],
+              "title": "The two dominant clustering technologies in the Docker ecosystem."
             }
           }
         ]
@@ -1443,15 +1425,12 @@
           {
             "type": "topic-title",
             "title": "9. Docker Security",
-            "box": {
-              "content": "Hardening your Containers"
-            }
+            "subtitle": "Hardening your Containers"
           },
           {
             "type": "content",
             "title": "The Rootless Mode",
             "box": {
-              "content": "By default, the Docker daemon runs as root. Rootless mode allows running the daemon and containers as a non-privileged user, mitigating potential breakout exploits.",
               "list": [
                 {
                   "emoji": "🛡️",
@@ -1461,22 +1440,22 @@
                   "emoji": "🚫",
                   "text": "<strong>Reduced Surface:</strong> Daemon has no root privileges."
                 }
-              ]
+              ],
+              "title": "By default, the Docker daemon runs as root. Rootless mode allows running the daemon and containers as a non-privileged user, mitigating potential breakout exploits."
             }
           },
           {
             "type": "content",
             "title": "Image Scanning",
             "box": {
-              "content": "Always scan your images for known vulnerabilities (CVEs) before deploying. Docker Desktop and tools like Snyk/Trivy make this easy.",
-              "code": "# Scan an image for vulnerabilities\ndocker scan my-app-image"
+              "code": "# Scan an image for vulnerabilities\ndocker scan my-app-image",
+              "title": "Always scan your images for known vulnerabilities (CVEs) before deploying. Docker Desktop and tools like Snyk/Trivy make this easy."
             }
           },
           {
             "type": "content",
             "title": "Trust & Signatures",
             "box": {
-              "content": "Docker Content Trust (DCT) allows you to use digital signatures for data sent to and received from remote Docker registries.",
               "list": [
                 {
                   "emoji": "🖋️",
@@ -1486,7 +1465,8 @@
                   "emoji": "✅",
                   "text": "<strong>Integrity:</strong> Ensure the image hasn't been tampered with."
                 }
-              ]
+              ],
+              "title": "Docker Content Trust (DCT) allows you to use digital signatures for data sent to and received from remote Docker registries."
             }
           }
         ]
@@ -1498,15 +1478,12 @@
           {
             "type": "topic-title",
             "title": "13. Common Anti-patterns",
-            "box": {
-              "content": "What NOT to do with Docker"
-            }
+            "subtitle": "What NOT to do with Docker"
           },
           {
             "type": "content",
             "title": "The Golden Image Trap",
             "box": {
-              "content": "Avoid creating 'Golden Images' by manually installing software and 'committing' the container. Always use a Dockerfile for reproducibility.",
               "list": [
                 {
                   "emoji": "📝",
@@ -1516,14 +1493,14 @@
                   "emoji": "🕵️",
                   "text": "<strong>Auditing:</strong> See exactly what is inside the image."
                 }
-              ]
+              ],
+              "title": "Avoid creating 'Golden Images' by manually installing software and 'committing' the container. Always use a Dockerfile for reproducibility."
             }
           },
           {
             "type": "content",
             "title": "Mixing Data and Code",
             "box": {
-              "content": "Never store persistent data (databases, user uploads) inside the container's writable layer.",
               "list": [
                 {
                   "emoji": "💾",
@@ -1533,14 +1510,14 @@
                   "emoji": "📦",
                   "text": "<strong>Bloat:</strong> Images should remain thin and portable."
                 }
-              ]
+              ],
+              "title": "Never store persistent data (databases, user uploads) inside the container's writable layer."
             }
           },
           {
             "type": "content",
             "title": "One Process per Container",
             "box": {
-              "content": "Standard practice is to run exactly one main process per container. Don't try to run an entire LAMP stack in one image.",
               "list": [
                 {
                   "emoji": "🧩",
@@ -1550,14 +1527,14 @@
                   "emoji": "📉",
                   "text": "<strong>Debugging:</strong> Simpler logs and resource monitoring."
                 }
-              ]
+              ],
+              "title": "Standard practice is to run exactly one main process per container. Don't try to run an entire LAMP stack in one image."
             }
           },
           {
             "type": "content",
             "title": "Using the 'latest' Tag",
             "box": {
-              "content": "NEVER use the <code>:latest</code> tag in production Dockerfiles or Compose files. It leads to non-deterministic deployments.",
               "list": [
                 {
                   "emoji": "💥",
@@ -1567,7 +1544,8 @@
                   "emoji": "📜",
                   "text": "<strong>Best Practice:</strong> Always use specific version tags or SHAs."
                 }
-              ]
+              ],
+              "title": "NEVER use the <code>:latest</code> tag in production Dockerfiles or Compose files. It leads to non-deterministic deployments."
             }
           }
         ]
@@ -1620,8 +1598,8 @@
             "emoji": "📋",
             "title": "Docker Command Cheat Sheet",
             "box": {
-              "content": "<strong>Essential commands quick reference</strong>",
-              "code": "# Container Management\ndocker run, docker ps, docker stop, docker start, docker rm\n\n# Image Management\ndocker build, docker images, docker rmi, docker pull, docker push\n\n# Network & Volumes\ndocker network, docker volume, docker-compose\n\n# Information & Logs\ndocker logs, docker inspect, docker stats, docker exec\n\n# System Management\ndocker system df, docker system prune, docker info\n\n# Common Patterns\ndocker run -d -p 80:80 --name web nginx\ndocker exec -it container_name bash\ndocker-compose up -d\ndocker logs -f container_name\n\n# Cleanup\ndocker system prune -a    # Remove all unused data\ndocker volume prune       # Remove unused volumes"
+              "code": "# Container Management\ndocker run, docker ps, docker stop, docker start, docker rm\n\n# Image Management\ndocker build, docker images, docker rmi, docker pull, docker push\n\n# Network & Volumes\ndocker network, docker volume, docker-compose\n\n# Information & Logs\ndocker logs, docker inspect, docker stats, docker exec\n\n# System Management\ndocker system df, docker system prune, docker info\n\n# Common Patterns\ndocker run -d -p 80:80 --name web nginx\ndocker exec -it container_name bash\ndocker-compose up -d\ndocker logs -f container_name\n\n# Cleanup\ndocker system prune -a    # Remove all unused data\ndocker volume prune       # Remove unused volumes",
+              "title": "<strong>Essential commands quick reference</strong>"
             }
           }
         ]

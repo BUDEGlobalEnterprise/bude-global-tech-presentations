@@ -118,7 +118,6 @@
             "emoji": "🎯",
             "title": "What is Dart?",
             "box": {
-              "content": "<span class=\"highlight\">Client-optimized language for fast apps on any platform</span>",
               "list": [
                 {
                   "emoji": "🏢",
@@ -140,7 +139,8 @@
                   "emoji": "🎭",
                   "text": "<strong>Compilation</strong> - JIT (development) & AOT (production)"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Client-optimized language for fast apps on any platform</span>"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Dart powers Flutter - one of the most popular cross-platform frameworks!"
@@ -276,8 +276,8 @@
             "emoji": "⚡",
             "title": "Quick Setup Commands",
             "box": {
-              "content": "<strong>Installation examples</strong>",
-              "code": "# macOS with Homebrew\nbrew tap dart-lang/dart\nbrew install dart\n\n# Windows with Chocolatey\nchoco install dart-sdk\n\n# Linux with apt\nsudo apt update\nsudo apt install dart\n\n# Verify installation\ndart --version\n\n# Create new project\ndart create my_project\ncd my_project\n\n# Run project\ndart run"
+              "code": "# macOS with Homebrew\nbrew tap dart-lang/dart\nbrew install dart\n\n# Windows with Chocolatey\nchoco install dart-sdk\n\n# Linux with apt\nsudo apt update\nsudo apt install dart\n\n# Verify installation\ndart --version\n\n# Create new project\ndart create my_project\ncd my_project\n\n# Run project\ndart run",
+              "title": "<strong>Installation examples</strong>"
             }
           }
         ]
@@ -295,8 +295,8 @@
             "emoji": "🌍",
             "title": "Hello World Example",
             "box": {
-              "content": "<strong>Basic Dart program structure</strong>",
-              "code": "// main function is the entry point\nvoid main() {\n  // Print to console\n  print('Hello, Dart!');\n  \n  // Variable declaration\n  var name = 'Dart Developer';\n  final version = 3.0;\n  \n  // String interpolation\n  print('Welcome to $name using Dart $version');\n  \n  // Function call\n  greetUser('Alice');\n}\n\n// Function definition\nvoid greetUser(String name) {\n  print('Hello, $name!');\n}"
+              "code": "// main function is the entry point\nvoid main() {\n  // Print to console\n  print('Hello, Dart!');\n  \n  // Variable declaration\n  var name = 'Dart Developer';\n  final version = 3.0;\n  \n  // String interpolation\n  print('Welcome to $name using Dart $version');\n  \n  // Function call\n  greetUser('Alice');\n}\n\n// Function definition\nvoid greetUser(String name) {\n  print('Hello, $name!');\n}",
+              "title": "<strong>Basic Dart program structure</strong>"
             }
           }
         ]
@@ -314,8 +314,8 @@
             "emoji": "🔤",
             "title": "Variable Declaration",
             "box": {
-              "content": "<strong>Different ways to declare variables</strong>",
-              "code": "// Explicit type declaration\nString name = 'John';\nint age = 25;\ndouble height = 5.9;\nbool isStudent = true;\n\n// Type inference with var\nvar company = 'Google';\nvar year = 2024;\n\n// Final variables (set once)\nfinal String language = 'Dart';\nfinal currentTime = DateTime.now();\n\n// Const (compile-time constants)\nconst double pi = 3.14159;\nconst List<int> numbers = [1, 2, 3];\n\n// Late initialization\nlate String description;\ndescription = 'This is initialized later';"
+              "code": "// Explicit type declaration\nString name = 'John';\nint age = 25;\ndouble height = 5.9;\nbool isStudent = true;\n\n// Type inference with var\nvar company = 'Google';\nvar year = 2024;\n\n// Final variables (set once)\nfinal String language = 'Dart';\nfinal currentTime = DateTime.now();\n\n// Const (compile-time constants)\nconst double pi = 3.14159;\nconst List<int> numbers = [1, 2, 3];\n\n// Late initialization\nlate String description;\ndescription = 'This is initialized later';",
+              "title": "<strong>Different ways to declare variables</strong>"
             }
           },
           {
@@ -362,8 +362,8 @@
             "emoji": "🔒",
             "title": "Null Safety Basics",
             "box": {
-              "content": "<strong>Preventing null reference errors</strong>",
-              "code": "// Non-nullable by default\nString name = 'John';  // Cannot be null\n// String name = null; // This would cause compile error\n\n// Nullable variables\nString? nullableName = null;  // Can be null\nnullableName = 'Now it has a value';\n\n// Safe access\nprint(nullableName?.length);  // null-aware operator\nprint(nullableName!.length);  // null assertion (use carefully)\n\n// Default values\nString displayName = nullableName ?? 'Guest';\n\n// Late initialization\nlate String lateName;\nvoid initialize() {\n  lateName = 'Initialized later';\n}"
+              "code": "// Non-nullable by default\nString name = 'John';  // Cannot be null\n// String name = null; // This would cause compile error\n\n// Nullable variables\nString? nullableName = null;  // Can be null\nnullableName = 'Now it has a value';\n\n// Safe access\nprint(nullableName?.length);  // null-aware operator\nprint(nullableName!.length);  // null assertion (use carefully)\n\n// Default values\nString displayName = nullableName ?? 'Guest';\n\n// Late initialization\nlate String lateName;\nvoid initialize() {\n  lateName = 'Initialized later';\n}",
+              "title": "<strong>Preventing null reference errors</strong>"
             }
           }
         ]
@@ -381,8 +381,8 @@
             "emoji": "🔧",
             "title": "Function Types",
             "box": {
-              "content": "<strong>Different function syntaxes</strong>",
-              "code": "// Basic function\nint add(int a, int b) {\n  return a + b;\n}\n\n// Arrow syntax for single expression\nint multiply(int a, int b) => a * b;\n\n// Optional positional parameters\nvoid greet(String name, [String? title]) {\n  if (title != null) {\n    print('Hello $title $name');\n  } else {\n    print('Hello $name');\n  }\n}\n\n// Named parameters\nvoid configure({required String host, int port = 8080, bool secure = true}) {\n  print('Connecting to $host:$port (secure: $secure)');\n}\n\n// Default parameters\nvoid logMessage(String message, [String level = 'INFO']) {\n  print('[$level] $message');\n}"
+              "code": "// Basic function\nint add(int a, int b) {\n  return a + b;\n}\n\n// Arrow syntax for single expression\nint multiply(int a, int b) => a * b;\n\n// Optional positional parameters\nvoid greet(String name, [String? title]) {\n  if (title != null) {\n    print('Hello $title $name');\n  } else {\n    print('Hello $name');\n  }\n}\n\n// Named parameters\nvoid configure({required String host, int port = 8080, bool secure = true}) {\n  print('Connecting to $host:$port (secure: $secure)');\n}\n\n// Default parameters\nvoid logMessage(String message, [String level = 'INFO']) {\n  print('[$level] $message');\n}",
+              "title": "<strong>Different function syntaxes</strong>"
             }
           }
         ]
@@ -400,8 +400,8 @@
             "emoji": "📦",
             "title": "List, Set, and Map",
             "box": {
-              "content": "<strong>Collection types and operations</strong>",
-              "code": "// Lists (ordered collection)\nList<String> fruits = ['apple', 'banana', 'orange'];\nfruits.add('grape');\nprint(fruits[0]);  // 'apple'\n\n// Sets (unique items)\nSet<int> numbers = {1, 2, 3, 3, 4};  // {1, 2, 3, 4}\nnumbers.add(5);\n\n// Maps (key-value pairs)\nMap<String, int> ages = {\n  'Alice': 30,\n  'Bob': 25,\n  'Charlie': 35,\n};\nages['David'] = 28;\nprint(ages['Alice']);  // 30\n\n// Collection operators\nvar doubled = numbers.map((n) => n * 2).toList();\nvar evenNumbers = numbers.where((n) => n % 2 == 0).toList();\nvar hasApple = fruits.any((fruit) => fruit == 'apple');"
+              "code": "// Lists (ordered collection)\nList<String> fruits = ['apple', 'banana', 'orange'];\nfruits.add('grape');\nprint(fruits[0]);  // 'apple'\n\n// Sets (unique items)\nSet<int> numbers = {1, 2, 3, 3, 4};  // {1, 2, 3, 4}\nnumbers.add(5);\n\n// Maps (key-value pairs)\nMap<String, int> ages = {\n  'Alice': 30,\n  'Bob': 25,\n  'Charlie': 35,\n};\nages['David'] = 28;\nprint(ages['Alice']);  // 30\n\n// Collection operators\nvar doubled = numbers.map((n) => n * 2).toList();\nvar evenNumbers = numbers.where((n) => n % 2 == 0).toList();\nvar hasApple = fruits.any((fruit) => fruit == 'apple');",
+              "title": "<strong>Collection types and operations</strong>"
             }
           }
         ]
@@ -419,8 +419,8 @@
             "emoji": "🏗️",
             "title": "Classes and Objects",
             "box": {
-              "content": "<strong>Class definition and usage</strong>",
-              "code": "class Person {\n  // Properties\n  String name;\n  int age;\n  \n  // Constructor\n  Person(this.name, this.age);\n  \n  // Named constructor\n  Person.newborn(String name) : this(name, 0);\n  \n  // Method\n  void introduce() {\n    print('Hello, I\\'m $name and I\\'m $age years old');\n  }\n  \n  // Getter\n  String get description => '$name ($age)';\n  \n  // Setter\n  set updateAge(int newAge) {\n    if (newAge > 0) age = newAge;\n  }\n}\n\n// Usage\nvoid main() {\n  var person = Person('Alice', 30);\n  person.introduce();\n  print(person.description);\n}"
+              "code": "class Person {\n  // Properties\n  String name;\n  int age;\n  \n  // Constructor\n  Person(this.name, this.age);\n  \n  // Named constructor\n  Person.newborn(String name) : this(name, 0);\n  \n  // Method\n  void introduce() {\n    print('Hello, I\\'m $name and I\\'m $age years old');\n  }\n  \n  // Getter\n  String get description => '$name ($age)';\n  \n  // Setter\n  set updateAge(int newAge) {\n    if (newAge > 0) age = newAge;\n  }\n}\n\n// Usage\nvoid main() {\n  var person = Person('Alice', 30);\n  person.introduce();\n  print(person.description);\n}",
+              "title": "<strong>Class definition and usage</strong>"
             }
           },
           {
@@ -428,8 +428,8 @@
             "emoji": "🔄",
             "title": "Inheritance & Mixins",
             "box": {
-              "content": "<strong>Advanced OOP features</strong>",
-              "code": "// Base class\nabstract class Animal {\n  void makeSound();\n  void sleep() => print('Sleeping...');\n}\n\n// Interface (implicit in Dart)\nclass Flyable {\n  void fly() => print('Flying');\n}\n\n// Mixin\nmixin Swimmable {\n  void swim() => print('Swimming');\n}\n\n// Inheritance with mixin\nclass Bird extends Animal with Swimmable {\n  @override\n  void makeSound() => print('Chirp chirp!');\n}\n\n// Implementation\nclass Duck extends Animal with Swimmable, Flyable {\n  @override\n  void makeSound() => print('Quack!');\n}"
+              "code": "// Base class\nabstract class Animal {\n  void makeSound();\n  void sleep() => print('Sleeping...');\n}\n\n// Interface (implicit in Dart)\nclass Flyable {\n  void fly() => print('Flying');\n}\n\n// Mixin\nmixin Swimmable {\n  void swim() => print('Swimming');\n}\n\n// Inheritance with mixin\nclass Bird extends Animal with Swimmable {\n  @override\n  void makeSound() => print('Chirp chirp!');\n}\n\n// Implementation\nclass Duck extends Animal with Swimmable, Flyable {\n  @override\n  void makeSound() => print('Quack!');\n}",
+              "title": "<strong>Advanced OOP features</strong>"
             }
           }
         ]
@@ -447,8 +447,8 @@
             "emoji": "⚡",
             "title": "Future and Async/Await",
             "box": {
-              "content": "<strong>Handling asynchronous operations</strong>",
-              "code": "// Future-based API\nFuture<String> fetchUserData() {\n  return Future.delayed(\n    Duration(seconds: 2),\n    () => 'User data loaded',\n  );\n}\n\n// Using async/await\nFuture<void> loadData() async {\n  print('Loading...');\n  try {\n    final data = await fetchUserData();\n    print('Data: $data');\n  } catch (e) {\n    print('Error: $e');\n  }\n}\n\n// Multiple async operations\nFuture<void> loadAllData() async {\n  final results = await Future.wait([\n    fetchUserData(),\n    Future.delayed(Duration(seconds: 1), () => 'Settings'),\n  ]);\n  print('All data: $results');\n}\n\n// Error handling\nFuture<String> safeFetch() async {\n  try {\n    return await fetchUserData();\n  } catch (e) {\n    return 'Default data';\n  }\n}"
+              "code": "// Future-based API\nFuture<String> fetchUserData() {\n  return Future.delayed(\n    Duration(seconds: 2),\n    () => 'User data loaded',\n  );\n}\n\n// Using async/await\nFuture<void> loadData() async {\n  print('Loading...');\n  try {\n    final data = await fetchUserData();\n    print('Data: $data');\n  } catch (e) {\n    print('Error: $e');\n  }\n}\n\n// Multiple async operations\nFuture<void> loadAllData() async {\n  final results = await Future.wait([\n    fetchUserData(),\n    Future.delayed(Duration(seconds: 1), () => 'Settings'),\n  ]);\n  print('All data: $results');\n}\n\n// Error handling\nFuture<String> safeFetch() async {\n  try {\n    return await fetchUserData();\n  } catch (e) {\n    return 'Default data';\n  }\n}",
+              "title": "<strong>Handling asynchronous operations</strong>"
             }
           },
           {
@@ -456,8 +456,8 @@
             "emoji": "🌊",
             "title": "Streams",
             "box": {
-              "content": "<strong>Reactive programming with streams</strong>",
-              "code": "import 'dart:async';\n\n// Creating a stream\nStream<int> countStream(int max) async* {\n  for (int i = 1; i <= max; i++) {\n    await Future.delayed(Duration(seconds: 1));\n    yield i;\n  }\n}\n\n// Using streams\nvoid listenToStream() {\n  final stream = countStream(5);\n  \n  stream.listen(\n    (data) => print('Data: $data'),\n    onError: (error) => print('Error: $error'),\n    onDone: () => print('Stream completed'),\n  );\n}\n\n// Stream transformation\nvoid transformStream() {\n  countStream(3)\n    .map((number) => number * 2)\n    .where((number) => number > 2)\n    .listen(print);  // Prints: 4, 6\n}"
+              "code": "import 'dart:async';\n\n// Creating a stream\nStream<int> countStream(int max) async* {\n  for (int i = 1; i <= max; i++) {\n    await Future.delayed(Duration(seconds: 1));\n    yield i;\n  }\n}\n\n// Using streams\nvoid listenToStream() {\n  final stream = countStream(5);\n  \n  stream.listen(\n    (data) => print('Data: $data'),\n    onError: (error) => print('Error: $error'),\n    onDone: () => print('Stream completed'),\n  );\n}\n\n// Stream transformation\nvoid transformStream() {\n  countStream(3)\n    .map((number) => number * 2)\n    .where((number) => number > 2)\n    .listen(print);  // Prints: 4, 6\n}",
+              "title": "<strong>Reactive programming with streams</strong>"
             }
           }
         ]
@@ -475,8 +475,8 @@
             "emoji": "🔮",
             "title": "Records & Patterns",
             "box": {
-              "content": "<strong>New language features</strong>",
-              "code": "// Records - lightweight anonymous tuples\n(String, int) getUserInfo() {\n  return ('Alice', 30);  // Record\n}\n\n// Pattern matching\nvar (name, age) = getUserInfo();\nprint('$name is $age years old');\n\n// Switch expressions with patterns\nString describeNumber(int number) => switch (number) {\n  0 => 'Zero',\n  1 => 'One',\n  _ => 'Other',\n};\n\n// Sealed classes for exhaustive switching\nsealed class Shape {}\nclass Square implements Shape {\n  final double side;\n  Square(this.side);\n}\nclass Circle implements Shape {\n  final double radius;\n  Circle(this.radius);\n}\n\ndouble calculateArea(Shape shape) => switch (shape) {\n  Square(side: var s) => s * s,\n  Circle(radius: var r) => 3.14 * r * r,\n};"
+              "code": "// Records - lightweight anonymous tuples\n(String, int) getUserInfo() {\n  return ('Alice', 30);  // Record\n}\n\n// Pattern matching\nvar (name, age) = getUserInfo();\nprint('$name is $age years old');\n\n// Switch expressions with patterns\nString describeNumber(int number) => switch (number) {\n  0 => 'Zero',\n  1 => 'One',\n  _ => 'Other',\n};\n\n// Sealed classes for exhaustive switching\nsealed class Shape {}\nclass Square implements Shape {\n  final double side;\n  Square(this.side);\n}\nclass Circle implements Shape {\n  final double radius;\n  Circle(this.radius);\n}\n\ndouble calculateArea(Shape shape) => switch (shape) {\n  Square(side: var s) => s * s,\n  Circle(radius: var r) => 3.14 * r * r,\n};",
+              "title": "<strong>New language features</strong>"
             }
           }
         ]
@@ -615,8 +615,8 @@
             "emoji": "📋",
             "title": "Dart Quick Reference",
             "box": {
-              "content": "<strong>Essential syntax quick reference</strong>",
-              "code": "// Variables\nvar name = 'Dart';\nfinal version = 3.0;\nconst pi = 3.14;\n\n// Functions\nint add(int a, int b) => a + b;\nvoid log(String msg) => print(msg);\n\n// Collections\nList<int> numbers = [1, 2, 3];\nSet<String> unique = {'a', 'b'};\nMap<String, int> scores = {'Alice': 95};\n\n// Control flow\nif (condition) { }\nfor (var item in list) { }\nwhile (condition) { }\n\n// Classes\nclass Person {\n  Person(this.name);\n  String name;\n  void greet() => print('Hello $name');\n}\n\n// Async\nFuture<String> fetch() async {\n  return await http.get(url);\n}\n\n// Error handling\ntry { risky(); } \ncatch (e) { handle(e); }\nfinally { cleanup(); }"
+              "code": "// Variables\nvar name = 'Dart';\nfinal version = 3.0;\nconst pi = 3.14;\n\n// Functions\nint add(int a, int b) => a + b;\nvoid log(String msg) => print(msg);\n\n// Collections\nList<int> numbers = [1, 2, 3];\nSet<String> unique = {'a', 'b'};\nMap<String, int> scores = {'Alice': 95};\n\n// Control flow\nif (condition) { }\nfor (var item in list) { }\nwhile (condition) { }\n\n// Classes\nclass Person {\n  Person(this.name);\n  String name;\n  void greet() => print('Hello $name');\n}\n\n// Async\nFuture<String> fetch() async {\n  return await http.get(url);\n}\n\n// Error handling\ntry { risky(); } \ncatch (e) { handle(e); }\nfinally { cleanup(); }",
+              "title": "<strong>Essential syntax quick reference</strong>"
             }
           }
         ]

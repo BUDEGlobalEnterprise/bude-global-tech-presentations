@@ -118,7 +118,6 @@
             "emoji": "🏢",
             "title": "Complete Business Solution Suite",
             "box": {
-              "content": "<span class=\"highlight\">Open-source business applications</span> built on Frappe Framework",
               "list": [
                 {
                   "emoji": "🚀",
@@ -140,7 +139,8 @@
                   "emoji": "☁️",
                   "text": "<strong>Cloud Platform</strong> - Managed hosting services"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Open-source business applications</span> built on Frappe Framework"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Frappe started as a web framework and evolved into a complete business application ecosystem!"
@@ -161,7 +161,6 @@
             "emoji": "📊",
             "title": "World's Best Open Source ERP",
             "box": {
-              "content": "<strong>Comprehensive enterprise resource planning</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -183,7 +182,8 @@
                   "emoji": "💰",
                   "text": "<strong>Cost</strong> - Completely free and open source"
                 }
-              ]
+              ],
+              "title": "<strong>Comprehensive enterprise resource planning</strong>"
             }
           },
           {
@@ -234,7 +234,6 @@
             "emoji": "🔧",
             "title": "Low Code Web Framework",
             "box": {
-              "content": "<strong>Full-stack web framework for rapid development</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -256,7 +255,8 @@
                   "emoji": "🎯",
                   "text": "<strong>Purpose</strong> - Build business applications fast"
                 }
-              ]
+              ],
+              "title": "<strong>Full-stack web framework for rapid development</strong>"
             }
           }
         ]
@@ -274,7 +274,6 @@
             "emoji": "👥",
             "title": "HR and Payroll Software",
             "box": {
-              "content": "<strong>Complete human resource management</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -296,7 +295,8 @@
                   "emoji": "🎯",
                   "text": "<strong>Integration</strong> - Seamless with ERPNext"
                 }
-              ]
+              ],
+              "title": "<strong>Complete human resource management</strong>"
             }
           }
         ]
@@ -314,7 +314,6 @@
             "emoji": "☁️",
             "title": "Official Cloud Platform",
             "box": {
-              "content": "<strong>Managed hosting for Frappe applications</strong>",
               "list": [
                 {
                   "emoji": "🚀",
@@ -332,7 +331,8 @@
                   "emoji": "🌐",
                   "text": "<strong>Global</strong> - Multi-region hosting available"
                 }
-              ]
+              ],
+              "title": "<strong>Managed hosting for Frappe applications</strong>"
             }
           }
         ]
@@ -350,7 +350,6 @@
             "emoji": "🎓",
             "title": "Frappe Learning",
             "box": {
-              "content": "<strong>A better Moodle alternative</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -368,7 +367,8 @@
                   "emoji": "👨‍🏫",
                   "text": "<strong>Audience</strong> - Schools, universities, training centers"
                 }
-              ]
+              ],
+              "title": "<strong>A better Moodle alternative</strong>"
             }
           },
           {
@@ -376,7 +376,6 @@
             "emoji": "🏫",
             "title": "Frappe School",
             "box": {
-              "content": "<strong>ERPNext training platform</strong>",
               "list": [
                 {
                   "emoji": "🎯",
@@ -390,7 +389,8 @@
                   "emoji": "📖",
                   "text": "<strong>Content</strong> - Courses, certifications, resources"
                 }
-              ]
+              ],
+              "title": "<strong>ERPNext training platform</strong>"
             }
           }
         ]
@@ -408,7 +408,6 @@
             "emoji": "📈",
             "title": "Frappe Insights",
             "box": {
-              "content": "<strong>Bring your data alive</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -426,7 +425,8 @@
                   "emoji": "🔗",
                   "text": "<strong>Integration</strong> - Works with multiple data sources"
                 }
-              ]
+              ],
+              "title": "<strong>Bring your data alive</strong>"
             }
           }
         ]
@@ -444,7 +444,6 @@
             "emoji": "🤝",
             "title": "Frappe CRM",
             "box": {
-              "content": "<strong>The future of open source CRM</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -462,7 +461,8 @@
                   "emoji": "📧",
                   "text": "<strong>Communication</strong> - Email integration, campaigns"
                 }
-              ]
+              ],
+              "title": "<strong>The future of open source CRM</strong>"
             }
           }
         ]
@@ -480,7 +480,6 @@
             "emoji": "🎫",
             "title": "Frappe Helpdesk",
             "box": {
-              "content": "<strong>Well designed, open source helpdesk</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -498,7 +497,8 @@
                   "emoji": "👥",
                   "text": "<strong>Teams</strong> - Agent assignment, workload management"
                 }
-              ]
+              ],
+              "title": "<strong>Well designed, open source helpdesk</strong>"
             }
           }
         ]
@@ -516,7 +516,6 @@
             "emoji": "🌐",
             "title": "Frappe Builder",
             "box": {
-              "content": "<strong>Web publishing, redefined</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -534,7 +533,8 @@
                   "emoji": "🛒",
                   "text": "<strong>E-commerce</strong> - Online store capabilities"
                 }
-              ]
+              ],
+              "title": "<strong>Web publishing, redefined</strong>"
             }
           }
         ]
@@ -552,7 +552,6 @@
             "emoji": "💰",
             "title": "Frappe Lending",
             "box": {
-              "content": "<strong>Open Source Lending Software</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -566,7 +565,8 @@
                   "emoji": "🏦",
                   "text": "<strong>Features</strong> - Loan management, EMI calculations, recovery"
                 }
-              ]
+              ],
+              "title": "<strong>Open Source Lending Software</strong>"
             }
           },
           {
@@ -574,7 +574,6 @@
             "emoji": "📚",
             "title": "Frappe Books",
             "box": {
-              "content": "<strong>Modern desktop accounting</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -588,7 +587,8 @@
                   "emoji": "💼",
                   "text": "<strong>Features</strong> - Invoicing, expenses, financial reports"
                 }
-              ]
+              ],
+              "title": "<strong>Modern desktop accounting</strong>"
             }
           }
         ]
@@ -606,7 +606,6 @@
             "emoji": "💬",
             "title": "Frappe Gameplan",
             "box": {
-              "content": "<strong>Work communication for remote teams</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -620,7 +619,8 @@
                   "emoji": "🗣️",
                   "text": "<strong>Features</strong> - Team chat, project discussions, file sharing"
                 }
-              ]
+              ],
+              "title": "<strong>Work communication for remote teams</strong>"
             }
           }
         ]
@@ -638,7 +638,6 @@
             "emoji": "📁",
             "title": "Frappe Drive",
             "box": {
-              "content": "<strong>Create. Share. Collaborate.</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -652,7 +651,8 @@
                   "emoji": "☁️",
                   "text": "<strong>Features</strong> - Cloud storage, file sharing, version control"
                 }
-              ]
+              ],
+              "title": "<strong>Create. Share. Collaborate.</strong>"
             }
           }
         ]
@@ -670,7 +670,6 @@
             "emoji": "🛠️",
             "title": "Frappe Bench",
             "box": {
-              "content": "<strong>CLI for multi-tenant deployments</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -688,7 +687,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Features</strong> - Site management, backups, updates"
                 }
-              ]
+              ],
+              "title": "<strong>CLI for multi-tenant deployments</strong>"
             }
           },
           {
@@ -696,7 +696,6 @@
             "emoji": "🚀",
             "title": "Frappe Press",
             "box": {
-              "content": "<strong>Infrastructure management for Frappe Cloud</strong>",
               "list": [
                 {
                   "emoji": "⭐",
@@ -710,7 +709,8 @@
                   "emoji": "🏪",
                   "text": "<strong>Features</strong> - Marketplace, SaaS management, billing"
                 }
-              ]
+              ],
+              "title": "<strong>Infrastructure management for Frappe Cloud</strong>"
             }
           }
         ]

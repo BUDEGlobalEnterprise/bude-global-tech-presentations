@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is GraphQL?",
             "box": {
-              "content": "<span class=\"highlight\">Open-source API query language</span> developed by Facebook",
               "list": [
                 {
                   "emoji": "📱",
@@ -124,7 +123,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Runtime</strong> - Executes queries against your data"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Open-source API query language</span> developed by Facebook"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> GraphQL was developed by Facebook to solve mobile news feed efficiency problems!"
@@ -231,8 +231,8 @@
             "emoji": "📐",
             "title": "Schema Definition Language (SDL)",
             "box": {
-              "content": "<strong>Defining your data structure</strong>",
-              "code": "type User {\n  id: ID!\n  name: String!\n  email: String!\n  posts: [Post!]!\n  createdAt: String!\n}\n\ntype Post {\n  id: ID!\n  title: String!\n  content: String!\n  author: User!\n  comments: [Comment!]!\n}\n\ntype Comment {\n  id: ID!\n  text: String!\n  author: User!\n  post: Post!\n}\n\ntype Query {\n  users: [User!]!\n  user(id: ID!): User\n  posts: [Post!]!\n  post(id: ID!): Post\n}"
+              "code": "type User {\n  id: ID!\n  name: String!\n  email: String!\n  posts: [Post!]!\n  createdAt: String!\n}\n\ntype Post {\n  id: ID!\n  title: String!\n  content: String!\n  author: User!\n  comments: [Comment!]!\n}\n\ntype Comment {\n  id: ID!\n  text: String!\n  author: User!\n  post: Post!\n}\n\ntype Query {\n  users: [User!]!\n  user(id: ID!): User\n  posts: [Post!]!\n  post(id: ID!): Post\n}",
+              "title": "<strong>Defining your data structure</strong>"
             }
           },
           {
@@ -283,8 +283,8 @@
             "emoji": "❓",
             "title": "Basic Query Structure",
             "box": {
-              "content": "<strong>Requesting specific data</strong>",
-              "code": "# Basic query\nquery {\n  users {\n    id\n    name\n    email\n  }\n}\n\n# Query with arguments\nquery {\n  user(id: \"123\") {\n    name\n    email\n    posts {\n      title\n      content\n    }\n  }\n}\n\n# Aliases\nquery {\n  firstUser: user(id: \"1\") {\n    name\n  }\n  secondUser: user(id: \"2\") {\n    name\n  }\n}"
+              "code": "# Basic query\nquery {\n  users {\n    id\n    name\n    email\n  }\n}\n\n# Query with arguments\nquery {\n  user(id: \"123\") {\n    name\n    email\n    posts {\n      title\n      content\n    }\n  }\n}\n\n# Aliases\nquery {\n  firstUser: user(id: \"1\") {\n    name\n  }\n  secondUser: user(id: \"2\") {\n    name\n  }\n}",
+              "title": "<strong>Requesting specific data</strong>"
             }
           },
           {
@@ -331,8 +331,8 @@
             "emoji": "✏️",
             "title": "Mutation Operations",
             "box": {
-              "content": "<strong>Modifying data</strong>",
-              "code": "# Define mutations in schema\ntype Mutation {\n  createUser(input: UserInput!): User!\n  updateUser(id: ID!, input: UserInput!): User\n  deleteUser(id: ID!): Boolean!\n}\n\ninput UserInput {\n  name: String!\n  email: String!\n  password: String!\n}\n\n# Execute mutation\nmutation {\n  createUser(input: {\n    name: \"John Doe\"\n    email: \"john@example.com\"\n    password: \"secret\"\n  }) {\n    id\n    name\n    email\n  }\n}"
+              "code": "# Define mutations in schema\ntype Mutation {\n  createUser(input: UserInput!): User!\n  updateUser(id: ID!, input: UserInput!): User\n  deleteUser(id: ID!): Boolean!\n}\n\ninput UserInput {\n  name: String!\n  email: String!\n  password: String!\n}\n\n# Execute mutation\nmutation {\n  createUser(input: {\n    name: \"John Doe\"\n    email: \"john@example.com\"\n    password: \"secret\"\n  }) {\n    id\n    name\n    email\n  }\n}",
+              "title": "<strong>Modifying data</strong>"
             }
           }
         ]
@@ -350,8 +350,8 @@
             "emoji": "📡",
             "title": "Real-time Subscriptions",
             "box": {
-              "content": "<strong>Live data updates</strong>",
-              "code": "# Define subscriptions in schema\ntype Subscription {\n  newPost: Post!\n  postUpdated(id: ID!): Post\n  userOnline: User!\n}\n\n# Subscribe to real-time data\nsubscription {\n  newPost {\n    id\n    title\n    author {\n      name\n    }\n  }\n}\n\n# Typically uses WebSockets\n# Perfect for:\n# - Live chats\n# - Notifications\n# - Real-time dashboards\n# - Collaborative editing"
+              "code": "# Define subscriptions in schema\ntype Subscription {\n  newPost: Post!\n  postUpdated(id: ID!): Post\n  userOnline: User!\n}\n\n# Subscribe to real-time data\nsubscription {\n  newPost {\n    id\n    title\n    author {\n      name\n    }\n  }\n}\n\n# Typically uses WebSockets\n# Perfect for:\n# - Live chats\n# - Notifications\n# - Real-time dashboards\n# - Collaborative editing",
+              "title": "<strong>Live data updates</strong>"
             }
           }
         ]
@@ -369,8 +369,8 @@
             "emoji": "🔗",
             "title": "Resolver Functions",
             "box": {
-              "content": "<strong>Connecting schema to data sources</strong>",
-              "code": "// JavaScript resolver example\nconst resolvers = {\n  Query: {\n    users: () => db.users.findAll(),\n    user: (parent, { id }) => db.users.findById(id),\n    posts: () => db.posts.findAll()\n  },\n  Mutation: {\n    createUser: (parent, { input }) => db.users.create(input)\n  },\n  User: {\n    posts: (user) => db.posts.findByAuthor(user.id)\n  },\n  Post: {\n    author: (post) => db.users.findById(post.authorId),\n    comments: (post) => db.comments.findByPost(post.id)\n  }\n};\n\n// Resolver parameters:\n// parent - Parent object\n// args - Arguments provided\n// context - Shared context (auth, db connections)\n// info - AST information"
+              "code": "// JavaScript resolver example\nconst resolvers = {\n  Query: {\n    users: () => db.users.findAll(),\n    user: (parent, { id }) => db.users.findById(id),\n    posts: () => db.posts.findAll()\n  },\n  Mutation: {\n    createUser: (parent, { input }) => db.users.create(input)\n  },\n  User: {\n    posts: (user) => db.posts.findByAuthor(user.id)\n  },\n  Post: {\n    author: (post) => db.users.findById(post.authorId),\n    comments: (post) => db.comments.findByPost(post.id)\n  }\n};\n\n// Resolver parameters:\n// parent - Parent object\n// args - Arguments provided\n// context - Shared context (auth, db connections)\n// info - AST information",
+              "title": "<strong>Connecting schema to data sources</strong>"
             }
           }
         ]
@@ -464,8 +464,8 @@
             "emoji": "⚛️",
             "title": "React with Apollo Client",
             "box": {
-              "content": "<strong>Modern React development</strong>",
-              "code": "import { useQuery, gql } from '@apollo/client';\n\nconst GET_USERS = gql`\n  query GetUsers {\n    users {\n      id\n      name\n      email\n      posts {\n        title\n      }\n    }\n  }\n`;\n\nfunction UserList() {\n  const { loading, error, data } = useQuery(GET_USERS);\n\n  if (loading) return <p>Loading...</p>;\n  if (error) return <p>Error: {error.message}</p>;\n\n  return (\n    <div>\n      {data.users.map(user => (\n        <div key={user.id}>\n          <h3>{user.name}</h3>\n          <p>{user.email}</p>\n          <p>Posts: {user.posts.length}</p>\n        </div>\n      ))}\n    </div>\n  );\n}"
+              "code": "import { useQuery, gql } from '@apollo/client';\n\nconst GET_USERS = gql`\n  query GetUsers {\n    users {\n      id\n      name\n      email\n      posts {\n        title\n      }\n    }\n  }\n`;\n\nfunction UserList() {\n  const { loading, error, data } = useQuery(GET_USERS);\n\n  if (loading) return <p>Loading...</p>;\n  if (error) return <p>Error: {error.message}</p>;\n\n  return (\n    <div>\n      {data.users.map(user => (\n        <div key={user.id}>\n          <h3>{user.name}</h3>\n          <p>{user.email}</p>\n          <p>Posts: {user.posts.length}</p>\n        </div>\n      ))}\n    </div>\n  );\n}",
+              "title": "<strong>Modern React development</strong>"
             }
           }
         ]
@@ -666,8 +666,8 @@
             "emoji": "🐙",
             "title": "GitHub GraphQL Example",
             "box": {
-              "content": "<strong>Querying GitHub data</strong>",
-              "code": "query {\n  viewer {\n    login\n    name\n    repositories(first: 10) {\n      nodes {\n        name\n        description\n        stargazerCount\n        forkCount\n        updatedAt\n        primaryLanguage {\n          name\n          color\n        }\n      }\n    }\n  }\n  rateLimit {\n    cost\n    remaining\n    resetAt\n  }\n}\n\n# Benefits:\n# - Single request for multiple data points\n# - No over-fetching of repository details\n# - Type-safe responses\n# - Real-time rate limit information"
+              "code": "query {\n  viewer {\n    login\n    name\n    repositories(first: 10) {\n      nodes {\n        name\n        description\n        stargazerCount\n        forkCount\n        updatedAt\n        primaryLanguage {\n          name\n          color\n        }\n      }\n    }\n  }\n  rateLimit {\n    cost\n    remaining\n    resetAt\n  }\n}\n\n# Benefits:\n# - Single request for multiple data points\n# - No over-fetching of repository details\n# - Type-safe responses\n# - Real-time rate limit information",
+              "title": "<strong>Querying GitHub data</strong>"
             }
           }
         ]
@@ -724,8 +724,8 @@
             "emoji": "📋",
             "title": "GraphQL Quick Reference",
             "box": {
-              "content": "<strong>Essential GraphQL syntax</strong>",
-              "code": "# Basic Query\nquery GetUser($id: ID!) {\n  user(id: $id) {\n    name\n    email\n  }\n}\n\n# Mutation\nmutation CreateUser($input: UserInput!) {\n  createUser(input: $input) {\n    id\n    name\n  }\n}\n\n# Subscription\nsubscription OnNewMessage {\n  newMessage {\n    id\n    content\n    author\n  }\n}\n\n# Fragment\nfragment UserDetails on User {\n  id\n  name\n  email\n  createdAt\n}\n\n# Common Scalar Types\nID, String, Int, Float, Boolean\n\n# Schema Definition\ntype TypeName {\n  fieldName: FieldType!\n  optionalField: FieldType\n}"
+              "code": "# Basic Query\nquery GetUser($id: ID!) {\n  user(id: $id) {\n    name\n    email\n  }\n}\n\n# Mutation\nmutation CreateUser($input: UserInput!) {\n  createUser(input: $input) {\n    id\n    name\n  }\n}\n\n# Subscription\nsubscription OnNewMessage {\n  newMessage {\n    id\n    content\n    author\n  }\n}\n\n# Fragment\nfragment UserDetails on User {\n  id\n  name\n  email\n  createdAt\n}\n\n# Common Scalar Types\nID, String, Int, Float, Boolean\n\n# Schema Definition\ntype TypeName {\n  fieldName: FieldType!\n  optionalField: FieldType\n}",
+              "title": "<strong>Essential GraphQL syntax</strong>"
             }
           }
         ]

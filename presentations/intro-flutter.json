@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is Flutter?",
             "box": {
-              "content": "<span class=\"highlight\">Google's open-source UI toolkit</span> for building natively compiled applications",
               "list": [
                 {
                   "emoji": "📱",
@@ -124,7 +123,8 @@
                   "emoji": "🔥",
                   "text": "<strong>Hot Reload</strong> - Instant code changes"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Google's open-source UI toolkit</span> for building natively compiled applications"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Flutter powers apps from Google, Alibaba, BMW, and many Fortune 500 companies!"
@@ -231,8 +231,8 @@
             "emoji": "🏗️",
             "title": "Flutter Architecture Layers",
             "box": {
-              "content": "<strong>Layered architecture for maximum flexibility</strong>",
-              "code": "Flutter App\n├── Widgets (Your Code)\n├── Rendering\n├── Animation/Gestures\n├── Foundation\n└── Engine (C++)\n    ├─ Skia (2D Graphics)\n    ├─ Dart Runtime\n    └─ Platform Channels"
+              "code": "Flutter App\n├── Widgets (Your Code)\n├── Rendering\n├── Animation/Gestures\n├── Foundation\n└── Engine (C++)\n    ├─ Skia (2D Graphics)\n    ├─ Dart Runtime\n    └─ Platform Channels",
+              "title": "<strong>Layered architecture for maximum flexibility</strong>"
             }
           }
         ]
@@ -279,8 +279,8 @@
             "emoji": "💻",
             "title": "Flutter Doctor Command",
             "box": {
-              "content": "<strong>Check your Flutter installation</strong>",
-              "code": "# Run in terminal\nflutter doctor\n\n# Expected output:\n[✓] Flutter (Channel stable, 3.x.x)\n[✓] Android toolchain\n[✓] VS Code\n[✓] Connected device\n[!] Xcode - for iOS development (macOS only)\n\n# Install missing dependencies\nflutter doctor --android-licenses"
+              "code": "# Run in terminal\nflutter doctor\n\n# Expected output:\n[✓] Flutter (Channel stable, 3.x.x)\n[✓] Android toolchain\n[✓] VS Code\n[✓] Connected device\n[!] Xcode - for iOS development (macOS only)\n\n# Install missing dependencies\nflutter doctor --android-licenses",
+              "title": "<strong>Check your Flutter installation</strong>"
             }
           }
         ]
@@ -298,8 +298,8 @@
             "emoji": "🚀",
             "title": "Create New Flutter Project",
             "box": {
-              "content": "<strong>Generate a new Flutter project</strong>",
-              "code": "# Create new project\nflutter create my_first_app\n\n# Navigate to project\ncd my_first_app\n\n# Run the app\nflutter run\n\n# Or use VS Code:\n# 1. Open Command Palette\n# 2. Type 'Flutter: New Project'\n# 3. Choose application type\n# 4. Select project location"
+              "code": "# Create new project\nflutter create my_first_app\n\n# Navigate to project\ncd my_first_app\n\n# Run the app\nflutter run\n\n# Or use VS Code:\n# 1. Open Command Palette\n# 2. Type 'Flutter: New Project'\n# 3. Choose application type\n# 4. Select project location",
+              "title": "<strong>Generate a new Flutter project</strong>"
             }
           },
           {
@@ -307,8 +307,8 @@
             "emoji": "📱",
             "title": "Hello World in Flutter",
             "box": {
-              "content": "<strong>Basic Flutter app structure</strong>",
-              "code": "import 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: Text('My First App')),\n        body: Center(\n          child: Text('Hello, Flutter!'),\n        ),\n      ),\n    );\n  }\n}"
+              "code": "import 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: Text('My First App')),\n        body: Center(\n          child: Text('Hello, Flutter!'),\n        ),\n      ),\n    );\n  }\n}",
+              "title": "<strong>Basic Flutter app structure</strong>"
             }
           }
         ]
@@ -326,7 +326,6 @@
             "emoji": "🧩",
             "title": "What are Widgets?",
             "box": {
-              "content": "<span class=\"highlight\">Everything is a Widget</span> in Flutter",
               "list": [
                 {
                   "emoji": "🎯",
@@ -344,7 +343,8 @@
                   "emoji": "🎨",
                   "text": "<strong>Material/Cupertino</strong> - Platform-specific widgets"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Everything is a Widget</span> in Flutter"
             }
           },
           {
@@ -352,8 +352,8 @@
             "emoji": "⚡",
             "title": "Stateless vs Stateful Widgets",
             "box": {
-              "content": "<strong>When to use each type</strong>",
-              "code": "// Stateless Widget - For static content\nclass MyText extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Text('Hello World');\n  }\n}\n\n// Stateful Widget - For dynamic content\nclass Counter extends StatefulWidget {\n  @override\n  _CounterState createState() => _CounterState();\n}\n\nclass _CounterState extends State<Counter> {\n  int count = 0;\n  \n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        Text('Count: $count'),\n        ElevatedButton(\n          onPressed: () => setState(() => count++),\n          child: Text('Increment'),\n        ),\n      ],\n    );\n  }\n}"
+              "code": "// Stateless Widget - For static content\nclass MyText extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Text('Hello World');\n  }\n}\n\n// Stateful Widget - For dynamic content\nclass Counter extends StatefulWidget {\n  @override\n  _CounterState createState() => _CounterState();\n}\n\nclass _CounterState extends State<Counter> {\n  int count = 0;\n  \n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        Text('Count: $count'),\n        ElevatedButton(\n          onPressed: () => setState(() => count++),\n          child: Text('Increment'),\n        ),\n      ],\n    );\n  }\n}",
+              "title": "<strong>When to use each type</strong>"
             }
           }
         ]
@@ -439,8 +439,8 @@
             "emoji": "🏗️",
             "title": "Basic Layout Example",
             "box": {
-              "content": "<strong>Creating a simple layout</strong>",
-              "code": "Column(\n  children: [\n    Container(\n      padding: EdgeInsets.all(16),\n      color: Colors.blue,\n      child: Text('Header'),\n    ),\n    Expanded(\n      child: Row(\n        children: [\n          Expanded(\n            flex: 2,\n            child: Container(color: Colors.red),\n          ),\n          Expanded(\n            flex: 1,\n            child: Container(color: Colors.green),\n          ),\n        ],\n      ),\n    ),\n  ],\n)"
+              "code": "Column(\n  children: [\n    Container(\n      padding: EdgeInsets.all(16),\n      color: Colors.blue,\n      child: Text('Header'),\n    ),\n    Expanded(\n      child: Row(\n        children: [\n          Expanded(\n            flex: 2,\n            child: Container(color: Colors.red),\n          ),\n          Expanded(\n            flex: 1,\n            child: Container(color: Colors.green),\n          ),\n        ],\n      ),\n    ),\n  ],\n)",
+              "title": "<strong>Creating a simple layout</strong>"
             }
           }
         ]
@@ -491,8 +491,8 @@
             "emoji": "📦",
             "title": "Provider Example",
             "box": {
-              "content": "<strong>Simple state management with Provider</strong>",
-              "code": "// Model\nclass Counter with ChangeNotifier {\n  int _count = 0;\n  int get count => _count;\n  \n  void increment() {\n    _count++;\n    notifyListeners();\n  }\n}\n\n// In main.dart\nChangeNotifierProvider(\n  create: (context) => Counter(),\n  child: MyApp(),\n)\n\n// In widget\nConsumer<Counter>(\n  builder: (context, counter, child) {\n    return Text('Count: ${counter.count}');\n  },\n)"
+              "code": "// Model\nclass Counter with ChangeNotifier {\n  int _count = 0;\n  int get count => _count;\n  \n  void increment() {\n    _count++;\n    notifyListeners();\n  }\n}\n\n// In main.dart\nChangeNotifierProvider(\n  create: (context) => Counter(),\n  child: MyApp(),\n)\n\n// In widget\nConsumer<Counter>(\n  builder: (context, counter, child) {\n    return Text('Count: ${counter.count}');\n  },\n)",
+              "title": "<strong>Simple state management with Provider</strong>"
             }
           }
         ]
@@ -510,8 +510,8 @@
             "emoji": "🧭",
             "title": "Navigation Methods",
             "box": {
-              "content": "<strong>Moving between screens</strong>",
-              "code": "// Navigator 1.0 - Imperative\nNavigator.push(\n  context,\n  MaterialPageRoute(builder: (context) => SecondScreen()),\n);\n\n// Navigator 2.0 - Declarative\nMaterialApp(\n  routes: {\n    '/': (context) => HomeScreen(),\n    '/details': (context) => DetailsScreen(),\n  },\n)\n\n// Named routes\nNavigator.pushNamed(context, '/details');\n\n// GoRouter (Popular package)\nfinal _router = GoRouter(\n  routes: [\n    GoRoute(path: '/', builder: (context, state) => Home()),\n    GoRoute(path: '/details', builder: (context, state) => Details()),\n  ],\n)"
+              "code": "// Navigator 1.0 - Imperative\nNavigator.push(\n  context,\n  MaterialPageRoute(builder: (context) => SecondScreen()),\n);\n\n// Navigator 2.0 - Declarative\nMaterialApp(\n  routes: {\n    '/': (context) => HomeScreen(),\n    '/details': (context) => DetailsScreen(),\n  },\n)\n\n// Named routes\nNavigator.pushNamed(context, '/details');\n\n// GoRouter (Popular package)\nfinal _router = GoRouter(\n  routes: [\n    GoRoute(path: '/', builder: (context, state) => Home()),\n    GoRoute(path: '/details', builder: (context, state) => Details()),\n  ],\n)",
+              "title": "<strong>Moving between screens</strong>"
             }
           }
         ]
@@ -529,8 +529,8 @@
             "emoji": "🌐",
             "title": "HTTP Requests",
             "box": {
-              "content": "<strong>Making API calls</strong>",
-              "code": "// Add http package to pubspec.yaml\n// dependencies:\n//   http: ^1.1.0\n\nimport 'package:http/http.dart' as http;\n\nclass ApiService {\n  static const String baseUrl = 'https://api.example.com';\n  \n  Future<User> fetchUser(int id) async {\n    final response = await http.get(\n      Uri.parse('$baseUrl/users/$id'),\n    );\n    \n    if (response.statusCode == 200) {\n      return User.fromJson(jsonDecode(response.body));\n    } else {\n      throw Exception('Failed to load user');\n    }\n  }\n}\n\n// Using Dio (alternative)\n// Better for complex requests, interceptors"
+              "code": "// Add http package to pubspec.yaml\n// dependencies:\n//   http: ^1.1.0\n\nimport 'package:http/http.dart' as http;\n\nclass ApiService {\n  static const String baseUrl = 'https://api.example.com';\n  \n  Future<User> fetchUser(int id) async {\n    final response = await http.get(\n      Uri.parse('$baseUrl/users/$id'),\n    );\n    \n    if (response.statusCode == 200) {\n      return User.fromJson(jsonDecode(response.body));\n    } else {\n      throw Exception('Failed to load user');\n    }\n  }\n}\n\n// Using Dio (alternative)\n// Better for complex requests, interceptors",
+              "title": "<strong>Making API calls</strong>"
             }
           }
         ]
@@ -651,8 +651,8 @@
             "emoji": "⚡",
             "title": "Test Examples",
             "box": {
-              "content": "<strong>Writing tests in Flutter</strong>",
-              "code": "// Unit test\ntest('Counter value should be incremented', () {\n  final counter = Counter();\n  counter.increment();\n  expect(counter.value, 1);\n});\n\n// Widget test\ntestWidgets('MyWidget has a title and message', (tester) async {\n  await tester.pumpWidget(MyWidget());\n  expect(find.text('Title'), findsOneWidget);\n  expect(find.text('Message'), findsOneWidget);\n});\n\n// Integration test\nvoid main() {\n  testWidgets('Tap counter button', (tester) async {\n    app.main();\n    await tester.pumpAndSettle();\n    await tester.tap(find.byIcon(Icons.add));\n    await tester.pump();\n    expect(find.text('1'), findsOneWidget);\n  });\n}"
+              "code": "// Unit test\ntest('Counter value should be incremented', () {\n  final counter = Counter();\n  counter.increment();\n  expect(counter.value, 1);\n});\n\n// Widget test\ntestWidgets('MyWidget has a title and message', (tester) async {\n  await tester.pumpWidget(MyWidget());\n  expect(find.text('Title'), findsOneWidget);\n  expect(find.text('Message'), findsOneWidget);\n});\n\n// Integration test\nvoid main() {\n  testWidgets('Tap counter button', (tester) async {\n    app.main();\n    await tester.pumpAndSettle();\n    await tester.tap(find.byIcon(Icons.add));\n    await tester.pump();\n    expect(find.text('1'), findsOneWidget);\n  });\n}",
+              "title": "<strong>Writing tests in Flutter</strong>"
             }
           }
         ]
@@ -670,8 +670,8 @@
             "emoji": "📲",
             "title": "Build Commands",
             "box": {
-              "content": "<strong>Building for different platforms</strong>",
-              "code": "# Build APK (Android)\nflutter build apk --release\n\n# Build App Bundle (Android)\nflutter build appbundle --release\n\n# Build iOS\nflutter build ios --release\n\n# Build Web\nflutter build web --release\n\n# Build Desktop (macOS)\nflutter build macos --release\n\n# Build Desktop (Windows)\nflutter build windows --release\n\n# Build Desktop (Linux)\nflutter build linux --release"
+              "code": "# Build APK (Android)\nflutter build apk --release\n\n# Build App Bundle (Android)\nflutter build appbundle --release\n\n# Build iOS\nflutter build ios --release\n\n# Build Web\nflutter build web --release\n\n# Build Desktop (macOS)\nflutter build macos --release\n\n# Build Desktop (Windows)\nflutter build windows --release\n\n# Build Desktop (Linux)\nflutter build linux --release",
+              "title": "<strong>Building for different platforms</strong>"
             }
           }
         ]
@@ -771,8 +771,8 @@
             "emoji": "📋",
             "title": "Flutter Command Cheat Sheet",
             "box": {
-              "content": "<strong>Essential Flutter commands</strong>",
-              "code": "# Project Management\nflutter create project_name\nflutter pub get\nflutter pub add package_name\n\n# Development\nflutter run\nflutter run -d chrome          # Web\nflutter run -d windows         # Windows\n\n# Building\nflutter build apk\nflutter build ios\nflutter build web\n\n# Testing & Analysis\nflutter test\nflutter test --coverage\nflutter analyze\n\n# Utilities\nflutter doctor\nflutter clean\nflutter upgrade\n\n# Debugging\nflutter logs\nflutter attach\n\n# Code Generation\nflutter packages pub run build_runner build\nflutter packages pub run build_runner watch"
+              "code": "# Project Management\nflutter create project_name\nflutter pub get\nflutter pub add package_name\n\n# Development\nflutter run\nflutter run -d chrome          # Web\nflutter run -d windows         # Windows\n\n# Building\nflutter build apk\nflutter build ios\nflutter build web\n\n# Testing & Analysis\nflutter test\nflutter test --coverage\nflutter analyze\n\n# Utilities\nflutter doctor\nflutter clean\nflutter upgrade\n\n# Debugging\nflutter logs\nflutter attach\n\n# Code Generation\nflutter packages pub run build_runner build\nflutter packages pub run build_runner watch",
+              "title": "<strong>Essential Flutter commands</strong>"
             }
           }
         ]

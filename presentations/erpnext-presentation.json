@@ -107,7 +107,6 @@
             "emoji": "🎯",
             "title": "What is ERPNext?",
             "box": {
-              "content": "Fully <span class=\"highlight\">open-source, modular ERP</span> built on Frappe Framework",
               "list": [
                 {
                   "emoji": "🔓",
@@ -133,7 +132,8 @@
                   "emoji": "🎨",
                   "text": "<strong>Highly Customizable</strong> - No-code customization"
                 }
-              ]
+              ],
+              "title": "Fully <span class=\"highlight\">open-source, modular ERP</span> built on Frappe Framework"
             },
             "note": {
               "text": "<strong>Founded:</strong> 2008<br><strong>Company:</strong> Frappe Technologies<br><strong>Used by:</strong> 10,000+ companies worldwide"
@@ -197,7 +197,6 @@
             "emoji": "🏗️",
             "title": "Frappe Framework Relationship",
             "box": {
-              "content": "<strong>ERPNext = Frappe Framework + Business Applications</strong>",
               "list": [
                 {
                   "emoji": "🔧",
@@ -219,7 +218,8 @@
                   "emoji": "🎨",
                   "text": "<strong>Auto UI</strong> - Forms and lists generated from models"
                 }
-              ]
+              ],
+              "title": "<strong>ERPNext = Frappe Framework + Business Applications</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Same technology powers thousands of custom apps beyond ERPNext"
@@ -334,7 +334,6 @@
             "emoji": "🏗️",
             "title": "Everything is a DocType",
             "box": {
-              "content": "<strong>Every form, report, and process powered by DocTypes</strong>",
               "list": [
                 {
                   "emoji": "📊",
@@ -360,7 +359,8 @@
                   "emoji": "💼",
                   "text": "<strong>Project</strong> - Job tracking"
                 }
-              ]
+              ],
+              "title": "<strong>Every form, report, and process powered by DocTypes</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> 500+ built-in DocTypes covering all business processes"
@@ -381,8 +381,8 @@
             "emoji": "📈",
             "title": "Complete Sales Workflow",
             "box": {
-              "content": "<strong>End-to-end sales process automation</strong>",
-              "code": "Lead → Opportunity → Quotation →\nSales Order → Delivery Note →\nSales Invoice → Payment Entry"
+              "code": "Lead → Opportunity → Quotation →\nSales Order → Delivery Note →\nSales Invoice → Payment Entry",
+              "title": "<strong>End-to-end sales process automation</strong>"
             },
             "list": [
               {
@@ -426,8 +426,8 @@
             "emoji": "🏭",
             "title": "Manufacturing Flow",
             "box": {
-              "content": "<strong>Complete production lifecycle</strong>",
-              "code": "BOM → Work Order → Material Transfer →\nProduction → Finished Goods → Stock Update"
+              "code": "BOM → Work Order → Material Transfer →\nProduction → Finished Goods → Stock Update",
+              "title": "<strong>Complete production lifecycle</strong>"
             },
             "list": [
               {
@@ -514,8 +514,8 @@
             "emoji": "🌐",
             "title": "ERPNext REST API",
             "box": {
-              "content": "<strong>Auto-generated REST endpoints for all DocTypes</strong>",
-              "code": "# GET all items\nGET /api/resource/Item\n\n# GET specific customer\nGET /api/resource/Customer/CUST-001\n\n# CREATE new customer\nPOST /api/resource/Customer\n{\n    \"customer_name\": \"ABC Corp\",\n    \"customer_type\": \"Company\",\n    \"territory\": \"India\"\n}\n\n# UPDATE customer\nPUT /api/resource/Customer/CUST-001\n{\n    \"mobile_no\": \"9876543210\"\n}\n\n# DELETE customer\nDELETE /api/resource/Customer/CUST-001"
+              "code": "# GET all items\nGET /api/resource/Item\n\n# GET specific customer\nGET /api/resource/Customer/CUST-001\n\n# CREATE new customer\nPOST /api/resource/Customer\n{\n    \"customer_name\": \"ABC Corp\",\n    \"customer_type\": \"Company\",\n    \"territory\": \"India\"\n}\n\n# UPDATE customer\nPUT /api/resource/Customer/CUST-001\n{\n    \"mobile_no\": \"9876543210\"\n}\n\n# DELETE customer\nDELETE /api/resource/Customer/CUST-001",
+              "title": "<strong>Auto-generated REST endpoints for all DocTypes</strong>"
             }
           }
         ]
@@ -558,8 +558,8 @@
             "emoji": "💾",
             "title": "Backup & Restore",
             "box": {
-              "content": "<strong>Data protection and migration</strong>",
-              "code": "# Create backup\nbench backup\n\n# Restore from backup\nbench restore filename.sql.gz\n\n# Scheduled backups\nbench setup backups"
+              "code": "# Create backup\nbench backup\n\n# Restore from backup\nbench restore filename.sql.gz\n\n# Scheduled backups\nbench setup backups",
+              "title": "<strong>Data protection and migration</strong>"
             }
           },
           {
@@ -567,8 +567,8 @@
             "emoji": "🔄",
             "title": "Updates & Maintenance",
             "box": {
-              "content": "<strong>Keeping ERPNext updated</strong>",
-              "code": "# Update to latest version\nbench update\n\n# Apply specific patches\nbench update --patch\n\n# Update specific app\nbench update --apps erpnext"
+              "code": "# Update to latest version\nbench update\n\n# Apply specific patches\nbench update --patch\n\n# Update specific app\nbench update --apps erpnext",
+              "title": "<strong>Keeping ERPNext updated</strong>"
             }
           }
         ]

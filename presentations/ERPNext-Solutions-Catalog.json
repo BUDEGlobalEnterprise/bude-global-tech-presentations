@@ -17,10 +17,22 @@
             "box": {
               "title": "🎯 The Future of ERP Implementation is Here",
               "list": [
-                { "emoji": "⚡", "text": "150+ Successful Implementations" },
-                { "emoji": "🏆", "text": "92% Client Satisfaction Rate" },
-                { "emoji": "💰", "text": "Average ROI: 9 Months" },
-                { "emoji": "🚀", "text": "4-8 Week Deployment Cycles" }
+                {
+                  "emoji": "⚡",
+                  "text": "150+ Successful Implementations"
+                },
+                {
+                  "emoji": "🏆",
+                  "text": "92% Client Satisfaction Rate"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Average ROI: 9 Months"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "4-8 Week Deployment Cycles"
+                }
               ]
             },
             "note": {
@@ -57,10 +69,22 @@
             "box": {
               "title": "🌟 The 80/20 Principle in Action",
               "list": [
-                { "emoji": "📦", "text": "80% Standardized Best Practices" },
-                { "emoji": "🎨", "text": "20% Customized for Your Business" },
-                { "emoji": "⚡", "text": "100% Focused on Your Success" },
-                { "emoji": "💰", "text": "200% Faster Time-to-Value" }
+                {
+                  "emoji": "📦",
+                  "text": "80% Standardized Best Practices"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "20% Customized for Your Business"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "100% Focused on Your Success"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "200% Faster Time-to-Value"
+                }
               ]
             },
             "note": {
@@ -94,8 +118,16 @@
             "type": "chart",
             "title": "ERP Implementation Success Rates",
             "chartType": "bar",
-            "labels": ["Traditional Custom", "Productized Packages", "Our Solution"],
-            "data": [30, 65, 92],
+            "labels": [
+              "Traditional Custom",
+              "Productized Packages",
+              "Our Solution"
+            ],
+            "data": [
+              30,
+              65,
+              92
+            ],
             "note": {
               "text": "Based on 150+ implementations across multiple industries"
             }
@@ -126,10 +158,22 @@
             "box": {
               "title": "🎯 Where We Excel",
               "list": [
-                { "emoji": "💡", "text": "Open Source Flexibility + Enterprise Reliability" },
-                { "emoji": "🇮🇳", "text": "Built for Indian Business Compliance" },
-                { "emoji": "📦", "text": "Productized Speed + Customization Depth" },
-                { "emoji": "💰", "text": "Transparent Pricing + Predictable Outcomes" }
+                {
+                  "emoji": "💡",
+                  "text": "Open Source Flexibility + Enterprise Reliability"
+                },
+                {
+                  "emoji": "🇮🇳",
+                  "text": "Built for Indian Business Compliance"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Productized Speed + Customization Depth"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Transparent Pricing + Predictable Outcomes"
+                }
               ]
             }
           },
@@ -167,12 +211,30 @@
             "box": {
               "title": "🛠️ What's Included",
               "list": [
-                { "emoji": "🏭", "text": "Industry Templates (Mfg, Retail, Services, Distribution)" },
-                { "emoji": "🧹", "text": "Data Migration Toolkit with ETL automation" },
-                { "emoji": "🎓", "text": "50+ Hours Training (English/Hindi/Tamil)" },
-                { "emoji": "🚑", "text": "30-Day Hypercare Support" },
-                { "emoji": "🔄", "text": "Change Management Playbooks" },
-                { "emoji": "📊", "text": "KPI Dashboards from Day One" }
+                {
+                  "emoji": "🏭",
+                  "text": "Industry Templates (Mfg, Retail, Services, Distribution)"
+                },
+                {
+                  "emoji": "🧹",
+                  "text": "Data Migration Toolkit with ETL automation"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "50+ Hours Training (English/Hindi/Tamil)"
+                },
+                {
+                  "emoji": "🚑",
+                  "text": "30-Day Hypercare Support"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Change Management Playbooks"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "KPI Dashboards from Day One"
+                }
               ]
             }
           },
@@ -199,12 +261,30 @@
             "box": {
               "title": "🔌 Connected Systems",
               "list": [
-                { "emoji": "💳", "text": "Banking: ICICI, HDFC, SBI, Axis Auto-reconciliation" },
-                { "emoji": "🛒", "text": "E-commerce: Shopify, WooCommerce, Amazon, Flipkart" },
-                { "emoji": "🏛️", "text": "GST: Auto-filing, e-invoicing, returns" },
-                { "emoji": "📧", "text": "Communication: WhatsApp, Email, SMS gateways" },
-                { "emoji": "📦", "text": "Logistics: Shiprocket, Delhivery, FedEx tracking" },
-                { "emoji": "🔐", "text": "Security: OAuth, API rate limiting, audit logs" }
+                {
+                  "emoji": "💳",
+                  "text": "Banking: ICICI, HDFC, SBI, Axis Auto-reconciliation"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "E-commerce: Shopify, WooCommerce, Amazon, Flipkart"
+                },
+                {
+                  "emoji": "🏛️",
+                  "text": "GST: Auto-filing, e-invoicing, returns"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "Communication: WhatsApp, Email, SMS gateways"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Logistics: Shiprocket, Delhivery, FedEx tracking"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "Security: OAuth, API rate limiting, audit logs"
+                }
               ]
             }
           },
@@ -231,12 +311,30 @@
             "box": {
               "title": "📈 Intelligence Capabilities",
               "list": [
-                { "emoji": "📊", "text": "Executive Dashboards: Real-time P&L, Cash Flow" },
-                { "emoji": "🖱️", "text": "No-Code Builder: Drag-and-drop reports" },
-                { "emoji": "🔮", "text": "Predictive Analytics: Sales forecasting" },
-                { "emoji": "📱", "text": "Mobile Insights: Push notifications" },
-                { "emoji": "☕", "text": "Auto-reports: Morning PDF delivery" },
-                { "emoji": "🔄", "text": "External BI: PowerBI, Tableau connectors" }
+                {
+                  "emoji": "📊",
+                  "text": "Executive Dashboards: Real-time P&L, Cash Flow"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "No-Code Builder: Drag-and-drop reports"
+                },
+                {
+                  "emoji": "🔮",
+                  "text": "Predictive Analytics: Sales forecasting"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Mobile Insights: Push notifications"
+                },
+                {
+                  "emoji": "☕",
+                  "text": "Auto-reports: Morning PDF delivery"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "External BI: PowerBI, Tableau connectors"
+                }
               ]
             }
           },
@@ -244,8 +342,22 @@
             "type": "chart",
             "title": "Sample Dashboard - Sales Performance",
             "chartType": "line",
-            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-            "data": [1200000, 1450000, 1320000, 1680000, 1950000, 2100000],
+            "labels": [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun"
+            ],
+            "data": [
+              1200000,
+              1450000,
+              1320000,
+              1680000,
+              1950000,
+              2100000
+            ],
             "note": {
               "text": "Real-time sales tracking with trend analysis and forecasting"
             }
@@ -255,7 +367,7 @@
             "question": "Which package includes pre-built industry templates and change management playbooks?",
             "options": [
               "Integration Hub",
-              "Implementation Accelerator", 
+              "Implementation Accelerator",
               "Analytics Suite",
               "All of the above"
             ],
@@ -393,12 +505,30 @@
             "box": {
               "title": "🔧 Service Management Capabilities",
               "list": [
-                { "emoji": "📍", "text": "Live GPS Technician Tracking" },
-                { "emoji": "📦", "text": "Van Inventory Management" },
-                { "emoji": "✍️", "text": "Digital Work Orders & Signatures" },
-                { "emoji": "⏱️", "text": "Automated Time Tracking" },
-                { "emoji": "🗺️", "text": "AI-Optimized Route Planning" },
-                { "emoji": "📄", "text": "Auto-generated Quotes & Invoices" }
+                {
+                  "emoji": "📍",
+                  "text": "Live GPS Technician Tracking"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Van Inventory Management"
+                },
+                {
+                  "emoji": "✍️",
+                  "text": "Digital Work Orders & Signatures"
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "Automated Time Tracking"
+                },
+                {
+                  "emoji": "🗺️",
+                  "text": "AI-Optimized Route Planning"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "Auto-generated Quotes & Invoices"
+                }
               ]
             }
           },
@@ -408,7 +538,7 @@
             "options": [
               "Manufacturing Excellence",
               "Healthcare Pro",
-              "Retail Revolution", 
+              "Retail Revolution",
               "Education Suite"
             ],
             "correctAnswer": 1,
@@ -431,12 +561,30 @@
             "box": {
               "title": "🇮🇳 Package 7: HR Complete - ₹4,00,000",
               "list": [
-                { "emoji": "👆", "text": "Biometric Integration (50+ device types)" },
-                { "emoji": "📄", "text": "Statutory Compliance (PF/ESI/PT filing)" },
-                { "emoji": "📱", "text": "Employee Self-Service Mobile App" },
-                { "emoji": "🕒", "text": "Advanced Shift Management" },
-                { "emoji": "🎯", "text": "KRA-based Performance Appraisals" },
-                { "emoji": "💰", "text": "Multiple Salary Structures" }
+                {
+                  "emoji": "👆",
+                  "text": "Biometric Integration (50+ device types)"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "Statutory Compliance (PF/ESI/PT filing)"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Employee Self-Service Mobile App"
+                },
+                {
+                  "emoji": "🕒",
+                  "text": "Advanced Shift Management"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "KRA-based Performance Appraisals"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Multiple Salary Structures"
+                }
               ]
             }
           },
@@ -507,12 +655,30 @@
             "box": {
               "title": "📱 Communication Capabilities",
               "list": [
-                { "emoji": "🔔", "text": "Transaction Alerts & Order Updates" },
-                { "emoji": "📄", "text": "Document Sharing (Invoices, Statements)" },
-                { "emoji": "🤖", "text": "Chatbot Automation for FAQs" },
-                { "emoji": "👥", "text": "Multi-agent Customer Support Inbox" },
-                { "emoji": "📢", "text": "Targeted Marketing Campaigns" },
-                { "emoji": "⭐", "text": "Automated Feedback Collection" }
+                {
+                  "emoji": "🔔",
+                  "text": "Transaction Alerts & Order Updates"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "Document Sharing (Invoices, Statements)"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "Chatbot Automation for FAQs"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "Multi-agent Customer Support Inbox"
+                },
+                {
+                  "emoji": "📢",
+                  "text": "Targeted Marketing Campaigns"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "Automated Feedback Collection"
+                }
               ]
             }
           },
@@ -520,8 +686,18 @@
             "type": "chart",
             "title": "Communication Channel Effectiveness",
             "chartType": "pie",
-            "labels": ["WhatsApp", "Email", "SMS", "Phone"],
-            "data": [65, 15, 12, 8],
+            "labels": [
+              "WhatsApp",
+              "Email",
+              "SMS",
+              "Phone"
+            ],
+            "data": [
+              65,
+              15,
+              12,
+              8
+            ],
             "note": {
               "text": "WhatsApp dominates customer communication with 65% preference"
             }
@@ -532,7 +708,7 @@
             "options": [
               "UX Revolution",
               "Audit Shield",
-              "HR Complete", 
+              "HR Complete",
               "WhatsApp Integration"
             ],
             "correctAnswer": 2,
@@ -564,12 +740,30 @@
             "box": {
               "title": "🧠 Intelligent Features",
               "list": [
-                { "emoji": "📈", "text": "Sales Forecasting with 95% Accuracy" },
-                { "emoji": "📦", "text": "Inventory Optimization Algos" },
-                { "emoji": "💰", "text": "Cash Flow Prediction Models" },
-                { "emoji": "👥", "text": "Customer Churn Prediction" },
-                { "emoji": "🛒", "text": "Recommendation Engine" },
-                { "emoji": "⚡", "text": "Anomaly Detection & Alerts" }
+                {
+                  "emoji": "📈",
+                  "text": "Sales Forecasting with 95% Accuracy"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Inventory Optimization Algos"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Cash Flow Prediction Models"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "Customer Churn Prediction"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "Recommendation Engine"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Anomaly Detection & Alerts"
+                }
               ]
             }
           },
@@ -588,12 +782,30 @@
             "box": {
               "title": "📲 Mobile Capabilities",
               "list": [
-                { "emoji": "👨💼", "text": "Sales Team Order Management" },
-                { "emoji": "🔧", "text": "Field Service Technician App" },
-                { "emoji": "📊", "text": "Executive Dashboard Mobile View" },
-                { "emoji": "✅", "text": "Approval Workflows on Mobile" },
-                { "emoji": "📸", "text": "Document Scanning & Upload" },
-                { "emoji": "📍", "text": "Location-based Services" }
+                {
+                  "emoji": "👨💼",
+                  "text": "Sales Team Order Management"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Field Service Technician App"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Executive Dashboard Mobile View"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Approval Workflows on Mobile"
+                },
+                {
+                  "emoji": "📸",
+                  "text": "Document Scanning & Upload"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "Location-based Services"
+                }
               ]
             }
           },
@@ -656,12 +868,30 @@
             "box": {
               "title": "🔍 Weeks 1-2: Foundation Building",
               "list": [
-                { "emoji": "🎯", "text": "Business Process Mapping" },
-                { "emoji": "📊", "text": "Requirements Gathering Workshops" },
-                { "emoji": "🏗️", "text": "Solution Blueprint Creation" },
-                { "emoji": "📋", "text": "Project Plan Finalization" },
-                { "emoji": "👥", "text": "Stakeholder Alignment Sessions" },
-                { "emoji": "🎪", "text": "Success Metrics Definition" }
+                {
+                  "emoji": "🎯",
+                  "text": "Business Process Mapping"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Requirements Gathering Workshops"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "Solution Blueprint Creation"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "Project Plan Finalization"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "Stakeholder Alignment Sessions"
+                },
+                {
+                  "emoji": "🎪",
+                  "text": "Success Metrics Definition"
+                }
               ]
             }
           },
@@ -671,12 +901,30 @@
             "box": {
               "title": "⚙️ Weeks 3-4: System Setup",
               "list": [
-                { "emoji": "🛠️", "text": "ERPNext Configuration" },
-                { "emoji": "📦", "text": "Data Migration & Cleansing" },
-                { "emoji": "🔗", "text": "Integration Setup" },
-                { "emoji": "🎨", "text": "UI/UX Customization" },
-                { "emoji": "📄", "text": "Report & Dashboard Setup" },
-                { "emoji": "🔐", "text": "Security Configuration" }
+                {
+                  "emoji": "🛠️",
+                  "text": "ERPNext Configuration"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Data Migration & Cleansing"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "Integration Setup"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "UI/UX Customization"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "Report & Dashboard Setup"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "Security Configuration"
+                }
               ]
             }
           },
@@ -686,12 +934,30 @@
             "box": {
               "title": "🎓 Week 5: User Enablement",
               "list": [
-                { "emoji": "👨🏫", "text": "Role-based Training Sessions" },
-                { "emoji": "🧪", "text": "User Acceptance Testing" },
-                { "emoji": "📖", "text": "Documentation Delivery" },
-                { "emoji": "🔄", "text": "Process Walkthroughs" },
-                { "emoji": "🎯", "text": "Train-the-Trainer Program" },
-                { "emoji": "📱", "text": "Mobile App Training" }
+                {
+                  "emoji": "👨🏫",
+                  "text": "Role-based Training Sessions"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "User Acceptance Testing"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "Documentation Delivery"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Process Walkthroughs"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "Train-the-Trainer Program"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Mobile App Training"
+                }
               ]
             }
           },
@@ -701,12 +967,30 @@
             "box": {
               "title": "🚀 Week 6+: Go-Live & Beyond",
               "list": [
-                { "emoji": "🎪", "text": "Production System Launch" },
-                { "emoji": "🚑", "text": "30-Day Hypercare Support" },
-                { "emoji": "📈", "text": "Performance Monitoring" },
-                { "emoji": "🔄", "text": "Process Optimization" },
-                { "emoji": "📊", "text": "Success Metrics Review" },
-                { "emoji": "🏆", "text": "Project Closure & Handover" }
+                {
+                  "emoji": "🎪",
+                  "text": "Production System Launch"
+                },
+                {
+                  "emoji": "🚑",
+                  "text": "30-Day Hypercare Support"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "Performance Monitoring"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Process Optimization"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Success Metrics Review"
+                },
+                {
+                  "emoji": "🏆",
+                  "text": "Project Closure & Handover"
+                }
               ]
             }
           },
@@ -714,8 +998,18 @@
             "type": "chart",
             "title": "Implementation Success Metrics",
             "chartType": "bar",
-            "labels": ["User Adoption", "Process Efficiency", "Data Accuracy", "ROI Time"],
-            "data": [92, 85, 96, 9],
+            "labels": [
+              "User Adoption",
+              "Process Efficiency",
+              "Data Accuracy",
+              "ROI Time"
+            ],
+            "data": [
+              92,
+              85,
+              96,
+              9
+            ],
             "note": {
               "text": "Average performance across 150+ implementations"
             }
@@ -764,10 +1058,22 @@
             "box": {
               "title": "🏆 What Our Clients Say",
               "list": [
-                { "emoji": "⭐", "text": "\"Implementation was completed in 6 weeks vs 6 months with our previous vendor. Incredible efficiency!\" - Auto Components Ltd" },
-                { "emoji": "⭐", "text": "\"The productized approach gave us exactly what we needed without the complexity of custom development.\" - Fashion Trends" },
-                { "emoji": "⭐", "text": "\"Post-implementation support has been exceptional. Our team was fully operational within days.\" - City Hospitals" },
-                { "emoji": "⭐", "text": "\"The ROI calculator was accurate - we achieved payback in 8 months as promised.\" - EduSmart Schools" }
+                {
+                  "emoji": "⭐",
+                  "text": "\"Implementation was completed in 6 weeks vs 6 months with our previous vendor. Incredible efficiency!\" - Auto Components Ltd"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "\"The productized approach gave us exactly what we needed without the complexity of custom development.\" - Fashion Trends"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "\"Post-implementation support has been exceptional. Our team was fully operational within days.\" - City Hospitals"
+                },
+                {
+                  "emoji": "⭐",
+                  "text": "\"The ROI calculator was accurate - we achieved payback in 8 months as promised.\" - EduSmart Schools"
+                }
               ]
             }
           },
@@ -775,8 +1081,18 @@
             "type": "chart",
             "title": "Client Satisfaction Scores",
             "chartType": "pie",
-            "labels": ["Very Satisfied", "Satisfied", "Neutral", "Needs Improvement"],
-            "data": [78, 14, 6, 2],
+            "labels": [
+              "Very Satisfied",
+              "Satisfied",
+              "Neutral",
+              "Needs Improvement"
+            ],
+            "data": [
+              78,
+              14,
+              6,
+              2
+            ],
             "note": {
               "text": "92% overall satisfaction rate based on post-implementation surveys"
             }
@@ -830,13 +1146,34 @@
             "box": {
               "title": "🏆 Complete Transformation Suite - ₹45,00,000+",
               "list": [
-                { "emoji": "📦", "text": "All Core Infrastructure Packages" },
-                { "emoji": "🏭", "text": "All Vertical Powerpacks" },
-                { "emoji": "🔧", "text": "All Operational Modules" },
-                { "emoji": "🤖", "text": "All Advanced Solutions" },
-                { "emoji": "👨💼", "text": "Dedicated Account Manager" },
-                { "emoji": "🎯", "text": "Strategic Business Consulting" },
-                { "emoji": "🔒", "text": "Premium Support & SLAs" }
+                {
+                  "emoji": "📦",
+                  "text": "All Core Infrastructure Packages"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "All Vertical Powerpacks"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "All Operational Modules"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "All Advanced Solutions"
+                },
+                {
+                  "emoji": "👨💼",
+                  "text": "Dedicated Account Manager"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "Strategic Business Consulting"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "Premium Support & SLAs"
+                }
               ]
             },
             "note": {
@@ -847,8 +1184,16 @@
             "type": "chart",
             "title": "Bundle Adoption & Success Rates",
             "chartType": "bar",
-            "labels": ["Digital Start", "Growth Scale", "Enterprise Elite"],
-            "data": [88, 92, 96],
+            "labels": [
+              "Digital Start",
+              "Growth Scale",
+              "Enterprise Elite"
+            ],
+            "data": [
+              88,
+              92,
+              96
+            ],
             "note": {
               "text": "Higher bundles show increased success rates due to comprehensive coverage"
             }
@@ -892,11 +1237,26 @@
             "box": {
               "title": "🎯 Strategic Focus Verticals",
               "list": [
-                { "emoji": "🏭", "text": "Manufacturing (35%): Mfg Excellence → Implementation → Analytics" },
-                { "emoji": "🛍️", "text": "Retail (25%): POS Powerpack → Integration → WhatsApp Suite" },
-                { "emoji": "🏥", "text": "Healthcare (15%): Healthcare Pro → Implementation → Audit Shield" },
-                { "emoji": "🎓", "text": "Education (10%): Edu Suite → Implementation → HR Complete" },
-                { "emoji": "🚛", "text": "Distribution (15%): Implementation → Integration → Field Service" }
+                {
+                  "emoji": "🏭",
+                  "text": "Manufacturing (35%): Mfg Excellence → Implementation → Analytics"
+                },
+                {
+                  "emoji": "🛍️",
+                  "text": "Retail (25%): POS Powerpack → Integration → WhatsApp Suite"
+                },
+                {
+                  "emoji": "🏥",
+                  "text": "Healthcare (15%): Healthcare Pro → Implementation → Audit Shield"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "Education (10%): Edu Suite → Implementation → HR Complete"
+                },
+                {
+                  "emoji": "🚛",
+                  "text": "Distribution (15%): Implementation → Integration → Field Service"
+                }
               ]
             }
           },
@@ -904,8 +1264,16 @@
             "type": "chart",
             "title": "Projected Revenue Growth (3-Year Plan)",
             "chartType": "line",
-            "labels": ["Year 1", "Year 2", "Year 3"],
-            "data": [4200000, 7800000, 12500000],
+            "labels": [
+              "Year 1",
+              "Year 2",
+              "Year 3"
+            ],
+            "data": [
+              4200000,
+              7800000,
+              12500000
+            ],
             "note": {
               "text": "Based on 3 implementations/month in Year 1, growing to 8/month by Year 3"
             }
@@ -916,10 +1284,22 @@
             "box": {
               "title": "🚀 Key Growth Levers",
               "list": [
-                { "emoji": "📈", "text": "Bundle Up-selling (40% growth)" },
-                { "emoji": "🔄", "text": "Recurring Services Expansion (35% growth)" },
-                { "emoji": "🎯", "text": "Vertical Specialization (15% growth)" },
-                { "emoji": "🤝", "text": "Partner Channel (10% growth)" }
+                {
+                  "emoji": "📈",
+                  "text": "Bundle Up-selling (40% growth)"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Recurring Services Expansion (35% growth)"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "Vertical Specialization (15% growth)"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "Partner Channel (10% growth)"
+                }
               ]
             }
           },
@@ -928,7 +1308,7 @@
             "question": "What is our target ratio between project revenue and recurring services revenue?",
             "options": [
               "80% Project / 20% Recurring",
-              "60% Project / 40% Recurring", 
+              "60% Project / 40% Recurring",
               "40% Project / 60% Recurring",
               "20% Project / 80% Recurring"
             ],
@@ -982,12 +1362,30 @@
             "box": {
               "title": "🔒 Enterprise Security Features",
               "list": [
-                { "emoji": "🔐", "text": "Role-based Access Control" },
-                { "emoji": "📝", "text": "Complete Audit Trail" },
-                { "emoji": "🔒", "text": "Data Encryption at Rest & Transit" },
-                { "emoji": "🛡️", "text": "Regular Security Updates" },
-                { "emoji": "📊", "text": "Compliance Reporting" },
-                { "emoji": "⚡", "text": "Disaster Recovery Setup" }
+                {
+                  "emoji": "🔐",
+                  "text": "Role-based Access Control"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "Complete Audit Trail"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "Data Encryption at Rest & Transit"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "Regular Security Updates"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Compliance Reporting"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Disaster Recovery Setup"
+                }
               ]
             }
           },
@@ -997,12 +1395,30 @@
             "box": {
               "title": "⚡ System Capabilities",
               "list": [
-                { "emoji": "👥", "text": "Supports 1000+ Concurrent Users" },
-                { "emoji": "💾", "text": "Handles 1M+ Transactions/Day" },
-                { "emoji": "📈", "text": "99.9% Uptime SLA" },
-                { "emoji": "🔍", "text": "Sub-second Response Times" },
-                { "emoji": "🌐", "text": "Global CDN Deployment" },
-                { "emoji": "🔄", "text": "Auto-scaling Capabilities" }
+                {
+                  "emoji": "👥",
+                  "text": "Supports 1000+ Concurrent Users"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "Handles 1M+ Transactions/Day"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "99.9% Uptime SLA"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "Sub-second Response Times"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Global CDN Deployment"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Auto-scaling Capabilities"
+                }
               ]
             }
           }
@@ -1023,12 +1439,30 @@
             "box": {
               "title": "👥 Dedicated Project Teams",
               "list": [
-                { "emoji": "🎯", "text": "Project Manager (10+ years experience)" },
-                { "emoji": "🛠️", "text": "Solution Architect (ERPNext certified)" },
-                { "emoji": "💻", "text": "Technical Lead (Python/JS expert)" },
-                { "emoji": "📊", "text": "Functional Consultant (Industry expert)" },
-                { "emoji": "🎨", "text": "UX Specialist (User adoption focus)" },
-                { "emoji": "🚀", "text": "Support Engineer (Hypercare period)" }
+                {
+                  "emoji": "🎯",
+                  "text": "Project Manager (10+ years experience)"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "Solution Architect (ERPNext certified)"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "Technical Lead (Python/JS expert)"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Functional Consultant (Industry expert)"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "UX Specialist (User adoption focus)"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Support Engineer (Hypercare period)"
+                }
               ]
             }
           },
@@ -1058,8 +1492,18 @@
             "type": "chart",
             "title": "Team Expertise Distribution",
             "chartType": "pie",
-            "labels": ["ERPNext Experts", "Industry Consultants", "Technical Architects", "Project Managers"],
-            "data": [40, 25, 20, 15],
+            "labels": [
+              "ERPNext Experts",
+              "Industry Consultants",
+              "Technical Architects",
+              "Project Managers"
+            ],
+            "data": [
+              40,
+              25,
+              20,
+              15
+            ],
             "note": {
               "text": "Balanced team with both technical and business expertise"
             }
@@ -1089,12 +1533,30 @@
             "box": {
               "title": "📅 Project Timeline",
               "list": [
-                { "emoji": "📞", "text": "Week 1: Discovery & Requirements" },
-                { "emoji": "📋", "text": "Week 1: Proposal & Agreement" },
-                { "emoji": "🚀", "text": "Week 2: Project Kickoff" },
-                { "emoji": "🛠️", "text": "Weeks 3-6: Implementation" },
-                { "emoji": "🎓", "text": "Week 7: Training & Go-Live" },
-                { "emoji": "🔧", "text": "Month 2: Optimization & Support" }
+                {
+                  "emoji": "📞",
+                  "text": "Week 1: Discovery & Requirements"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "Week 1: Proposal & Agreement"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Week 2: Project Kickoff"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "Weeks 3-6: Implementation"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "Week 7: Training & Go-Live"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Month 2: Optimization & Support"
+                }
               ]
             }
           },
@@ -1104,11 +1566,26 @@
             "box": {
               "title": "🎯 Immediate Next Steps",
               "list": [
-                { "emoji": "📅", "text": "Schedule Discovery Call" },
-                { "emoji": "📊", "text": "Download ROI Calculator" },
-                { "emoji": "🎥", "text": "Watch Client Success Stories" },
-                { "emoji": "📖", "text": "Review Case Studies" },
-                { "emoji": "💬", "text": "Chat with Solutions Expert" }
+                {
+                  "emoji": "📅",
+                  "text": "Schedule Discovery Call"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Download ROI Calculator"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "Watch Client Success Stories"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "Review Case Studies"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "Chat with Solutions Expert"
+                }
               ]
             }
           },

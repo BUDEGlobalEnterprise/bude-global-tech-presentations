@@ -1,4 +1,4 @@
-{  
+{
   "presentation": {
     "topics": [
       {
@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is WSL?",
             "box": {
-              "content": "<span class=\"highlight\">Compatibility layer for running Linux binary executables natively on Windows</span>",
               "list": [
                 {
                   "emoji": "🏢",
@@ -124,7 +123,8 @@
                   "emoji": "💻",
                   "text": "<strong>Platform</strong> - Windows 10 & 11"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Compatibility layer for running Linux binary executables natively on Windows</span>"
             },
             "note": {
               "text": "<strong>Key advantage:</strong> Run Linux commands and tools without dual-booting or using virtual machines!"
@@ -270,8 +270,8 @@
             "emoji": "🏗️",
             "title": "WSL2 Architecture",
             "box": {
-              "content": "<strong>Virtualized Linux kernel on Windows</strong>",
-              "code": "Windows 10/11 Host\n├── Windows Kernel\n├── WSL2 Virtual Machine\n│   ├── Real Linux Kernel\n│   ├── Systemd & Init\n│   └── Linux Distribution\n├── P9 File System Server\n└── WSLg (GUI Support)\n\nKey Components:\n• Lightweight Utility VM\n• Real Linux Kernel (Microsoft-built)\n• Seamless file system integration\n• Integrated networking stack"
+              "code": "Windows 10/11 Host\n├── Windows Kernel\n├── WSL2 Virtual Machine\n│   ├── Real Linux Kernel\n│   ├── Systemd & Init\n│   └── Linux Distribution\n├── P9 File System Server\n└── WSLg (GUI Support)\n\nKey Components:\n• Lightweight Utility VM\n• Real Linux Kernel (Microsoft-built)\n• Seamless file system integration\n• Integrated networking stack",
+              "title": "<strong>Virtualized Linux kernel on Windows</strong>"
             }
           }
         ]
@@ -353,8 +353,8 @@
             "emoji": "⚡",
             "title": "Quick Installation Command",
             "box": {
-              "content": "<strong>One-line WSL installation</strong>",
-              "code": "# Install WSL with default Ubuntu\ndism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart\n\n# Or use the new command (Windows 10 2004+)\nwsl --install\n\n# Install specific distribution\nwsl --install -d Ubuntu-22.04\nwsl --install -d Debian\nwsl --install -d Kali-Linux"
+              "code": "# Install WSL with default Ubuntu\ndism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart\n\n# Or use the new command (Windows 10 2004+)\nwsl --install\n\n# Install specific distribution\nwsl --install -d Ubuntu-22.04\nwsl --install -d Debian\nwsl --install -d Kali-Linux",
+              "title": "<strong>One-line WSL installation</strong>"
             }
           }
         ]
@@ -415,8 +415,8 @@
             "emoji": "💻",
             "title": "WSL Command Line",
             "box": {
-              "content": "<strong>Managing WSL distributions</strong>",
-              "code": "# List installed distributions\nwsl --list --verbose\n\n# Set default WSL version\nwsl --set-default-version 2\n\n# Set default distribution\nwsl --set-default Ubuntu-22.04\n\n# Run specific distribution\nwsl -d Ubuntu-22.04\n\n# Run command in WSL without entering shell\nwsl ls -la\n\n# Shutdown WSL\nwsl --shutdown\n\n# Terminate specific distribution\nwsl --terminate Ubuntu-22.04"
+              "code": "# List installed distributions\nwsl --list --verbose\n\n# Set default WSL version\nwsl --set-default-version 2\n\n# Set default distribution\nwsl --set-default Ubuntu-22.04\n\n# Run specific distribution\nwsl -d Ubuntu-22.04\n\n# Run command in WSL without entering shell\nwsl ls -la\n\n# Shutdown WSL\nwsl --shutdown\n\n# Terminate specific distribution\nwsl --terminate Ubuntu-22.04",
+              "title": "<strong>Managing WSL distributions</strong>"
             }
           }
         ]
@@ -473,8 +473,8 @@
             "emoji": "🏠",
             "title": "Directory Mapping",
             "box": {
-              "content": "<strong>File system paths</strong>",
-              "code": "# Linux home directory (WSL filesystem)\n/home/username/\n  ├── .bashrc\n  ├── .ssh/\n  ├── projects/\n  └── ...\n\n# Windows drives (mounted)\n/mnt/c/          # C: drive\n/mnt/d/          # D: drive\n/mnt/e/          # E: drive\n\n# Access Windows from Linux\ncd /mnt/c/Users/username/Desktop\n\n# Access Linux from Windows\n# Explorer path: \\\\wsl$\\Ubuntu-22.04\\home\\username"
+              "code": "# Linux home directory (WSL filesystem)\n/home/username/\n  ├── .bashrc\n  ├── .ssh/\n  ├── projects/\n  └── ...\n\n# Windows drives (mounted)\n/mnt/c/          # C: drive\n/mnt/d/          # D: drive\n/mnt/e/          # E: drive\n\n# Access Windows from Linux\ncd /mnt/c/Users/username/Desktop\n\n# Access Linux from Windows\n# Explorer path: \\\\wsl$\\Ubuntu-22.04\\home\\username",
+              "title": "<strong>File system paths</strong>"
             }
           }
         ]
@@ -564,8 +564,8 @@
             "emoji": "⚡",
             "title": "APT Commands (Ubuntu/Debian)",
             "box": {
-              "content": "<strong>Common package operations</strong>",
-              "code": "# Update package lists\nsudo apt update\n\n# Upgrade installed packages\nsudo apt upgrade\n\n# Install new package\nsudo apt install package-name\n\n# Remove package\nsudo apt remove package-name\n\n# Search for packages\napt search \"keyword\"\n\n# Clean up\nsudo apt autoremove\nsudo apt autoclean"
+              "code": "# Update package lists\nsudo apt update\n\n# Upgrade installed packages\nsudo apt upgrade\n\n# Install new package\nsudo apt install package-name\n\n# Remove package\nsudo apt remove package-name\n\n# Search for packages\napt search \"keyword\"\n\n# Clean up\nsudo apt autoremove\nsudo apt autoclean",
+              "title": "<strong>Common package operations</strong>"
             }
           }
         ]
@@ -583,8 +583,8 @@
             "emoji": "🔑",
             "title": "Git & SSH Setup",
             "box": {
-              "content": "<strong>Development tools configuration</strong>",
-              "code": "# Install Git and SSH\nsudo apt install git openssh-client\n\n# Generate SSH key\nssh-keygen -t ed25519 -C \"your_email@example.com\"\n\n# Start SSH agent\neval \"$(ssh-agent -s)\"\n\n# Add SSH key to agent\nssh-add ~/.ssh/id_ed25519\n\n# Configure Git\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your_email@example.com\"\n\n# Copy SSH public key to clipboard\ncat ~/.ssh/id_ed25519.pub | clip.exe"
+              "code": "# Install Git and SSH\nsudo apt install git openssh-client\n\n# Generate SSH key\nssh-keygen -t ed25519 -C \"your_email@example.com\"\n\n# Start SSH agent\neval \"$(ssh-agent -s)\"\n\n# Add SSH key to agent\nssh-add ~/.ssh/id_ed25519\n\n# Configure Git\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your_email@example.com\"\n\n# Copy SSH public key to clipboard\ncat ~/.ssh/id_ed25519.pub | clip.exe",
+              "title": "<strong>Development tools configuration</strong>"
             }
           }
         ]
@@ -719,8 +719,8 @@
             "emoji": "🔧",
             "title": "VS Code + WSL",
             "box": {
-              "content": "<strong>Remote Development Extension</strong>",
-              "code": "# Install Remote Development extension in VS Code\n# Then connect to WSL:\n\n1. Open VS Code\n2. Press Ctrl+Shift+P\n3. Type \"Remote-WSL: New Window\"\n4. Select your WSL distribution\n\n# Features:\n• Edit files in WSL file system\n• Use WSL terminal in VS Code\n• Run and debug in WSL environment\n• Install extensions in WSL context\n• Seamless Git integration\n\n# From WSL terminal:\ncode .  # Opens current directory in VS Code"
+              "code": "# Install Remote Development extension in VS Code\n# Then connect to WSL:\n\n1. Open VS Code\n2. Press Ctrl+Shift+P\n3. Type \"Remote-WSL: New Window\"\n4. Select your WSL distribution\n\n# Features:\n• Edit files in WSL file system\n• Use WSL terminal in VS Code\n• Run and debug in WSL environment\n• Install extensions in WSL context\n• Seamless Git integration\n\n# From WSL terminal:\ncode .  # Opens current directory in VS Code",
+              "title": "<strong>Remote Development Extension</strong>"
             }
           }
         ]
@@ -816,8 +816,8 @@
             "emoji": "📁",
             "title": "Cross-Platform File Access",
             "box": {
-              "content": "<strong>Access files from both systems</strong>",
-              "code": "# From WSL, access Windows files:\ncd /mnt/c/Users/YourName/Desktop\ncd /mnt/c/Projects/my-project\n\n# From Windows, access WSL files:\n# File Explorer: \\\\wsl$\\\n# Or: \\\\wsl$\\Ubuntu-22.04\\home\\username\n\n# Best practices:\n• Store project files in Windows for backup\n• Use WSL for development operations\n• Avoid editing Linux system files from Windows\n• Use /home/username for WSL-specific configs"
+              "code": "# From WSL, access Windows files:\ncd /mnt/c/Users/YourName/Desktop\ncd /mnt/c/Projects/my-project\n\n# From Windows, access WSL files:\n# File Explorer: \\\\wsl$\\\n# Or: \\\\wsl$\\Ubuntu-22.04\\home\\username\n\n# Best practices:\n• Store project files in Windows for backup\n• Use WSL for development operations\n• Avoid editing Linux system files from Windows\n• Use /home/username for WSL-specific configs",
+              "title": "<strong>Access files from both systems</strong>"
             }
           }
         ]
@@ -835,8 +835,8 @@
             "emoji": "💽",
             "title": "Drive Mounting",
             "box": {
-              "content": "<strong>Mount external drives in WSL</strong>",
-              "code": "# List available drives\nwsl --mount --list\n\n# Mount a drive (replace X with drive letter)\nwsl --mount \\\\.\\X:\n\n# Mount with specific filesystem\nwsl --mount \\\\.\\X: -t ext4\n\n# Unmount a drive\nwsl --unmount \\\\.\\X:\n\n# Access mounted drive in WSL\ncd /mnt/x/\n\n# Mount USB drives, external HDDs, etc."
+              "code": "# List available drives\nwsl --mount --list\n\n# Mount a drive (replace X with drive letter)\nwsl --mount \\\\.\\X:\n\n# Mount with specific filesystem\nwsl --mount \\\\.\\X: -t ext4\n\n# Unmount a drive\nwsl --unmount \\\\.\\X:\n\n# Access mounted drive in WSL\ncd /mnt/x/\n\n# Mount USB drives, external HDDs, etc.",
+              "title": "<strong>Mount external drives in WSL</strong>"
             }
           }
         ]
@@ -932,8 +932,8 @@
             "emoji": "🎨",
             "title": "WSL Customization",
             "box": {
-              "content": "<strong>Personalize your WSL environment</strong>",
-              "code": "# Install Zsh and Oh-My-Zsh\nsudo apt install zsh\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"\n\n# Popular plugins:\n• zsh-autosuggestions\n• zsh-syntax-highlighting\n• git plugin (built-in)\n\n# Configure WSL settings in /etc/wsl.conf\n[network]\nhostname = my-wsl\n\n[interop]\nappendWindowsPath = false\n\n# Windows Terminal settings:\n• Custom color schemes\n• Different profiles per distro\n• Background images\n• Key bindings"
+              "code": "# Install Zsh and Oh-My-Zsh\nsudo apt install zsh\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"\n\n# Popular plugins:\n• zsh-autosuggestions\n• zsh-syntax-highlighting\n• git plugin (built-in)\n\n# Configure WSL settings in /etc/wsl.conf\n[network]\nhostname = my-wsl\n\n[interop]\nappendWindowsPath = false\n\n# Windows Terminal settings:\n• Custom color schemes\n• Different profiles per distro\n• Background images\n• Key bindings",
+              "title": "<strong>Personalize your WSL environment</strong>"
             }
           }
         ]
@@ -1107,8 +1107,8 @@
             "emoji": "💾",
             "title": "Backup and Migration",
             "box": {
-              "content": "<strong>Export and import WSL distributions</strong>",
-              "code": "# Export distribution to tar file\nwsl --export Ubuntu-22.04 ubuntu-backup.tar\n\n# Import from tar file as new distribution\nwsl --import New-Ubuntu C:\\WSL\\New-Ubuntu ubuntu-backup.tar\n\n# List all distributions\nwsl --list --all\n\n# Unregister/delete distribution\nwsl --unregister Ubuntu-22.04\n\n# Backup entire WSL environment:\n1. Export each distribution\n2. Backup Windows Terminal settings\n3. Save wsl.conf configurations\n4. Export VS Code extensions list"
+              "code": "# Export distribution to tar file\nwsl --export Ubuntu-22.04 ubuntu-backup.tar\n\n# Import from tar file as new distribution\nwsl --import New-Ubuntu C:\\WSL\\New-Ubuntu ubuntu-backup.tar\n\n# List all distributions\nwsl --list --all\n\n# Unregister/delete distribution\nwsl --unregister Ubuntu-22.04\n\n# Backup entire WSL environment:\n1. Export each distribution\n2. Backup Windows Terminal settings\n3. Save wsl.conf configurations\n4. Export VS Code extensions list",
+              "title": "<strong>Export and import WSL distributions</strong>"
             }
           }
         ]
@@ -1126,8 +1126,8 @@
             "emoji": "🔄",
             "title": "Upgrade Process",
             "box": {
-              "content": "<strong>Convert WSL1 to WSL2</strong>",
-              "code": "# Check current WSL version\nwsl --list --verbose\n\n# Set WSL2 as default version\nwsl --set-default-version 2\n\n# Convert existing distribution\nwsl --set-version Ubuntu-22.04 2\n\n# Requirements for WSL2:\n• Windows 10 Version 2004 or later\n• Virtualization enabled in BIOS\n• Windows Subsystem for Linux feature\n• Virtual Machine Platform feature\n\n# Verify conversion\nwsl --list --verbose"
+              "code": "# Check current WSL version\nwsl --list --verbose\n\n# Set WSL2 as default version\nwsl --set-default-version 2\n\n# Convert existing distribution\nwsl --set-version Ubuntu-22.04 2\n\n# Requirements for WSL2:\n• Windows 10 Version 2004 or later\n• Virtualization enabled in BIOS\n• Windows Subsystem for Linux feature\n• Virtual Machine Platform feature\n\n# Verify conversion\nwsl --list --verbose",
+              "title": "<strong>Convert WSL1 to WSL2</strong>"
             }
           }
         ]
@@ -1262,8 +1262,8 @@
             "emoji": "📋",
             "title": "Diagnostic Tools",
             "box": {
-              "content": "<strong>WSL troubleshooting commands</strong>",
-              "code": "# Check WSL status\nwsl --status\n\n# Generate diagnostic log\nwsl --system\n\n# Check distribution status\nwsl -l -v\n\n# Restart WSL service\nwsl --shutdown\n\n# Event logs in Windows:\nEvent Viewer → Windows Logs → System\n\n# WSL logs location:\n%USERPROFILE%\\AppData\\Local\\Temp\n\n# Enable verbose logging:\nAdd to %USERPROFILE%\\.wslconfig:\n[WSL2]\nkernelCommandLine = \"systemd.unit=multi-user.target debug\""
+              "code": "# Check WSL status\nwsl --status\n\n# Generate diagnostic log\nwsl --system\n\n# Check distribution status\nwsl -l -v\n\n# Restart WSL service\nwsl --shutdown\n\n# Event logs in Windows:\nEvent Viewer → Windows Logs → System\n\n# WSL logs location:\n%USERPROFILE%\\AppData\\Local\\Temp\n\n# Enable verbose logging:\nAdd to %USERPROFILE%\\.wslconfig:\n[WSL2]\nkernelCommandLine = \"systemd.unit=multi-user.target debug\"",
+              "title": "<strong>WSL troubleshooting commands</strong>"
             }
           }
         ]
@@ -1507,8 +1507,8 @@
             "emoji": "📋",
             "title": "WSL Cheat Sheet",
             "box": {
-              "content": "<strong>Essential WSL Commands</strong>",
-              "code": "Installation & Management:\nwsl --install                    # Install WSL\nwsl --list --verbose            # List distributions\nwsl --set-default-version 2     # Set WSL2 as default\nwsl --shutdown                  # Shutdown WSL\nwsl --terminate <distro>        # Stop specific distro\n\nDistribution Management:\nwsl --export <distro> file.tar  # Export distribution\nwsl --import <name> path file.tar # Import distribution\nwsl --unregister <distro>       # Remove distribution\n\nFile System:\n/mnt/c/                         # Access C: drive\n/mnt/d/                         # Access D: drive\n\\\\wsl$\\<distro>                 # Access WSL from Windows\n\nCommon Operations:\nwsl <command>                   # Run Linux command\ncode .                          # Open VS Code in current dir\n explorer.exe .                 # Open Windows Explorer"
+              "code": "Installation & Management:\nwsl --install                    # Install WSL\nwsl --list --verbose            # List distributions\nwsl --set-default-version 2     # Set WSL2 as default\nwsl --shutdown                  # Shutdown WSL\nwsl --terminate <distro>        # Stop specific distro\n\nDistribution Management:\nwsl --export <distro> file.tar  # Export distribution\nwsl --import <name> path file.tar # Import distribution\nwsl --unregister <distro>       # Remove distribution\n\nFile System:\n/mnt/c/                         # Access C: drive\n/mnt/d/                         # Access D: drive\n\\\\wsl$\\<distro>                 # Access WSL from Windows\n\nCommon Operations:\nwsl <command>                   # Run Linux command\ncode .                          # Open VS Code in current dir\n explorer.exe .                 # Open Windows Explorer",
+              "title": "<strong>Essential WSL Commands</strong>"
             }
           }
         ]

@@ -35,7 +35,6 @@
             "type": "content",
             "title": "What is Web Development?",
             "box": {
-              "content": "The process of <span class=\"highlight\">building and maintaining websites</span> covering:",
               "list": [
                 {
                   "emoji": "🎨",
@@ -49,7 +48,8 @@
                   "emoji": "📱",
                   "text": "<strong>Full Stack</strong> - Combination of frontend and backend"
                 }
-              ]
+              ],
+              "title": "The process of <span class=\"highlight\">building and maintaining websites</span> covering:"
             },
             "note": {
               "text": "<strong>Evolution:</strong> From static HTML to dynamic web applications<br><strong>Trend:</strong> Moving towards JAMstack and serverless"
@@ -64,12 +64,10 @@
           {
             "type": "topic-title",
             "title": "Frontend Development",
-            "box": {
-              "content": "Everything users see and interact with directly"
-            },
             "note": {
               "text": "<span class=\"emoji\">🎯</span> <strong>Goal:</strong> Create engaging, responsive user experiences"
-            }
+            },
+            "subtitle": "Everything users see and interact with directly"
           },
           {
             "type": "content",
@@ -108,8 +106,8 @@
             "emoji": "🏗️",
             "title": "HTML Structure",
             "box": {
-              "content": "<strong>Basic HTML Document Structure</strong>",
-              "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My Page</title>\n</head>\n<body>\n    <h1>Hello World!</h1>\n    <p>This is a paragraph.</p>\n</body>\n</html>"
+              "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My Page</title>\n</head>\n<body>\n    <h1>Hello World!</h1>\n    <p>This is a paragraph.</p>\n</body>\n</html>",
+              "title": "<strong>Basic HTML Document Structure</strong>"
             },
             "list": [
               {
@@ -137,8 +135,8 @@
             "emoji": "🎨",
             "title": "CSS Basics",
             "box": {
-              "content": "<strong>Styling with CSS</strong>",
-              "code": "/* Select element by tag */\nh1 {\n    color: blue;\n    font-size: 2em;\n}\n\n/* Select by class */\n.highlight {\n    background-color: yellow;\n}\n\n/* Select by ID */\n#main-content {\n    width: 80%;\n    margin: 0 auto;\n}"
+              "code": "/* Select element by tag */\nh1 {\n    color: blue;\n    font-size: 2em;\n}\n\n/* Select by class */\n.highlight {\n    background-color: yellow;\n}\n\n/* Select by ID */\n#main-content {\n    width: 80%;\n    margin: 0 auto;\n}",
+              "title": "<strong>Styling with CSS</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> CSS controls presentation: colors, layout, fonts, animations"
@@ -155,8 +153,8 @@
             "emoji": "⚡",
             "title": "JavaScript Basics",
             "box": {
-              "content": "<strong>Adding Interactivity</strong>",
-              "code": "// Variables\nlet message = 'Hello';\nconst PI = 3.14;\n\n// Functions\nfunction greet(name) {\n    return `${message}, ${name}!`;\n}\n\n// Event handling\ndocument.querySelector('button').addEventListener('click', () => {\n    alert('Button clicked!');\n});"
+              "code": "// Variables\nlet message = 'Hello';\nconst PI = 3.14;\n\n// Functions\nfunction greet(name) {\n    return `${message}, ${name}!`;\n}\n\n// Event handling\ndocument.querySelector('button').addEventListener('click', () => {\n    alert('Button clicked!');\n});",
+              "title": "<strong>Adding Interactivity</strong>"
             },
             "list": [
               {

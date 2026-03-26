@@ -35,7 +35,6 @@
             "type": "content",
             "title": "Welcome to Keycloak",
             "box": {
-              "content": "Open-source <span class=\"highlight\">Identity and Access Management</span> solution by Red Hat:",
               "list": [
                 {
                   "emoji": "🔐",
@@ -53,7 +52,8 @@
                   "emoji": "🎯",
                   "text": "<strong>Standards Compliant</strong> - OAuth2, OIDC, SAML"
                 }
-              ]
+              ],
+              "title": "Open-source <span class=\"highlight\">Identity and Access Management</span> solution by Red Hat:"
             },
             "note": {
               "text": "<strong>Developed by:</strong> Red Hat<br><strong>License:</strong> Apache 2.0<br><strong>Written in:</strong> Java"
@@ -68,12 +68,10 @@
           {
             "type": "topic-title",
             "title": "Why Choose Keycloak?",
-            "box": {
-              "content": "The modern solution for authentication and authorization challenges"
-            },
             "note": {
               "text": "<span class=\"emoji\">📊</span> <strong>Used by:</strong> Major enterprises, banks, universities, and SaaS platforms"
-            }
+            },
+            "subtitle": "The modern solution for authentication and authorization challenges"
           },
           {
             "type": "content",
@@ -123,8 +121,8 @@
             "emoji": "🏰",
             "title": "Realms",
             "box": {
-              "content": "<strong>Logical security domains that isolate configurations</strong>",
-              "code": "// Master Realm (admin)\n// → Company Realm\n//   → Web App Client\n//   → Mobile App Client\n//   → API Client"
+              "code": "// Master Realm (admin)\n// → Company Realm\n//   → Web App Client\n//   → Mobile App Client\n//   → API Client",
+              "title": "<strong>Logical security domains that isolate configurations</strong>"
             },
             "list": [
               {
@@ -145,7 +143,6 @@
             "emoji": "📱",
             "title": "Clients",
             "box": {
-              "content": "<strong>Applications that use Keycloak for authentication</strong>",
               "list": [
                 {
                   "emoji": "🔒",
@@ -159,7 +156,8 @@
                   "emoji": "🔑",
                   "text": "<strong>Bearer-only</strong> - APIs that only validate tokens"
                 }
-              ]
+              ],
+              "title": "<strong>Applications that use Keycloak for authentication</strong>"
             }
           },
           {
@@ -167,8 +165,8 @@
             "emoji": "👤",
             "title": "Users & Roles",
             "box": {
-              "content": "<strong>User management and permission system</strong>",
-              "code": "// User: alice@company.com\n// Realm Roles: user, admin\n// Client Roles: read_data, write_data\n// Groups: developers, managers"
+              "code": "// User: alice@company.com\n// Realm Roles: user, admin\n// Client Roles: read_data, write_data\n// Groups: developers, managers",
+              "title": "<strong>User management and permission system</strong>"
             },
             "list": [
               {
@@ -200,7 +198,6 @@
             "emoji": "🔐",
             "title": "Authentication vs Authorization",
             "box": {
-              "content": "<strong>Understanding the difference</strong>",
               "list": [
                 {
                   "emoji": "🆔",
@@ -210,7 +207,8 @@
                   "emoji": "✅",
                   "text": "<strong>Authorization</strong> - What can you do? (Checking permissions)"
                 }
-              ]
+              ],
+              "title": "<strong>Understanding the difference</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">🔑</span> Keycloak handles both: AuthN + AuthZ = Complete IAM"
@@ -221,8 +219,8 @@
             "emoji": "🔄",
             "title": "Authentication Flows",
             "box": {
-              "content": "<strong>Customizable login processes</strong>",
-              "code": "1. Username/Password\n2. Conditional MFA\n3. Terms & Conditions\n4. Required Actions\n5. Token Issued"
+              "code": "1. Username/Password\n2. Conditional MFA\n3. Terms & Conditions\n4. Required Actions\n5. Token Issued",
+              "title": "<strong>Customizable login processes</strong>"
             },
             "list": [
               {
@@ -280,8 +278,8 @@
             "emoji": "🎫",
             "title": "JWT Tokens",
             "box": {
-              "content": "<strong>JSON Web Tokens - The authentication standard</strong>",
-              "code": "{\n  \"iss\": \"keycloak-server\",\n  \"sub\": \"user123\",\n  \"preferred_username\": \"alice\",\n  \"email\": \"alice@company.com\",\n  \"realm_access\": { \"roles\": [\"user\", \"admin\"] },\n  \"exp\": 1672531200\n}"
+              "code": "{\n  \"iss\": \"keycloak-server\",\n  \"sub\": \"user123\",\n  \"preferred_username\": \"alice\",\n  \"email\": \"alice@company.com\",\n  \"realm_access\": { \"roles\": [\"user\", \"admin\"] },\n  \"exp\": 1672531200\n}",
+              "title": "<strong>JSON Web Tokens - The authentication standard</strong>"
             },
             "list": [
               {
@@ -303,7 +301,6 @@
             "emoji": "🌐",
             "title": "OAuth2 vs OpenID Connect",
             "box": {
-              "content": "<strong>Understanding the protocols</strong>",
               "list": [
                 {
                   "emoji": "🔐",
@@ -313,7 +310,8 @@
                   "emoji": "🆔",
                   "text": "<strong>OpenID Connect</strong> - Authentication layer (WHO you are)"
                 }
-              ]
+              ],
+              "title": "<strong>Understanding the protocols</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> OIDC = OAuth 2.0 + Identity Information"
@@ -324,7 +322,6 @@
             "emoji": "📋",
             "title": "SAML 2.0 Support",
             "box": {
-              "content": "<strong>Enterprise identity protocol</strong>",
               "list": [
                 {
                   "emoji": "🏢",
@@ -338,7 +335,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Bridge</strong> - Connect SAML and OIDC worlds"
                 }
-              ]
+              ],
+              "title": "<strong>Enterprise identity protocol</strong>"
             }
           }
         ]
@@ -356,8 +354,8 @@
             "emoji": "🐳",
             "title": "Docker Installation",
             "box": {
-              "content": "<strong>Quick start with Docker</strong>",
-              "code": "docker run -p 8080:8080 \\\n  -e KEYCLOAK_ADMIN=admin \\\n  -e KEYCLOAK_ADMIN_PASSWORD=admin \\\n  quay.io/keycloak/keycloak:latest \\\n  start-dev"
+              "code": "docker run -p 8080:8080 \\\n  -e KEYCLOAK_ADMIN=admin \\\n  -e KEYCLOAK_ADMIN_PASSWORD=admin \\\n  quay.io/keycloak/keycloak:latest \\\n  start-dev",
+              "title": "<strong>Quick start with Docker</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">⚡</span> Development mode with H2 database - not for production!"
@@ -394,8 +392,8 @@
             "emoji": "☸️",
             "title": "Kubernetes Deployment",
             "box": {
-              "content": "<strong>Helm chart installation</strong>",
-              "code": "helm repo add bitnami https://charts.bitnami.com/bitnami\nhelm install keycloak bitnami/keycloak \\\n  --set auth.adminUser=admin \\\n  --set auth.adminPassword=admin"
+              "code": "helm repo add bitnami https://charts.bitnami.com/bitnami\nhelm install keycloak bitnami/keycloak \\\n  --set auth.adminUser=admin \\\n  --set auth.adminPassword=admin",
+              "title": "<strong>Helm chart installation</strong>"
             }
           }
         ]
@@ -422,8 +420,8 @@
             "emoji": "☕",
             "title": "Spring Boot Integration",
             "box": {
-              "content": "<strong>Java/Spring Boot setup</strong>",
-              "code": "// application.properties\nkeycloak.auth-server-url=https://keycloak.company.com\nkeycloak.realm=myrealm\nkeycloak.resource=myapp\nkeycloak.public-client=true\nkeycloak.principal-attribute=preferred_username"
+              "code": "// application.properties\nkeycloak.auth-server-url=https://keycloak.company.com\nkeycloak.realm=myrealm\nkeycloak.resource=myapp\nkeycloak.public-client=true\nkeycloak.principal-attribute=preferred_username",
+              "title": "<strong>Java/Spring Boot setup</strong>"
             },
             "list": [
               {
@@ -441,8 +439,8 @@
             "emoji": "🔌",
             "title": ".NET Integration",
             "box": {
-              "content": "<strong>ASP.NET Core setup</strong>",
-              "code": "services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n  .AddJwtBearer(options =>\n  {\n    options.Authority = \"https://keycloak.company.com\";\n    options.Audience = \"myapp\";\n  });"
+              "code": "services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n  .AddJwtBearer(options =>\n  {\n    options.Authority = \"https://keycloak.company.com\";\n    options.Audience = \"myapp\";\n  });",
+              "title": "<strong>ASP.NET Core setup</strong>"
             }
           }
         ]
@@ -522,7 +520,6 @@
             "emoji": "🖥️",
             "title": "Admin Console",
             "box": {
-              "content": "<strong>Web-based administration UI</strong>",
               "list": [
                 {
                   "emoji": "👥",
@@ -540,7 +537,8 @@
                   "emoji": "📊",
                   "text": "<strong>Session Management</strong> - Active sessions"
                 }
-              ]
+              ],
+              "title": "<strong>Web-based administration UI</strong>"
             }
           },
           {
@@ -548,8 +546,8 @@
             "emoji": "📡",
             "title": "REST API",
             "box": {
-              "content": "<strong>Programmatic administration</strong>",
-              "code": "// Get access token\ncurl -X POST \\\n  https://keycloak.company.com/realms/master/protocol/openid-connect/token \\\n  -d 'client_id=admin-cli&username=admin&password=admin&grant_type=password'\n\n// Create user\ncurl -X POST \\\n  -H \"Authorization: Bearer $ACCESS_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"username\":\"newuser\",\"email\":\"user@company.com\"}' \\\n  https://keycloak.company.com/admin/realms/myrealm/users"
+              "code": "// Get access token\ncurl -X POST \\\n  https://keycloak.company.com/realms/master/protocol/openid-connect/token \\\n  -d 'client_id=admin-cli&username=admin&password=admin&grant_type=password'\n\n// Create user\ncurl -X POST \\\n  -H \"Authorization: Bearer $ACCESS_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"username\":\"newuser\",\"email\":\"user@company.com\"}' \\\n  https://keycloak.company.com/admin/realms/myrealm/users",
+              "title": "<strong>Programmatic administration</strong>"
             }
           }
         ]
@@ -567,7 +565,6 @@
             "emoji": "🛡️",
             "title": "Brute Force Protection",
             "box": {
-              "content": "<strong>Automatic attack prevention</strong>",
               "list": [
                 {
                   "emoji": "🔒",
@@ -581,7 +578,8 @@
                   "emoji": "🚫",
                   "text": "<strong>Permanent Lock</strong> - Manual admin intervention required"
                 }
-              ]
+              ],
+              "title": "<strong>Automatic attack prevention</strong>"
             }
           },
           {
@@ -589,7 +587,6 @@
             "emoji": "📝",
             "title": "Audit & Events",
             "box": {
-              "content": "<strong>Comprehensive logging</strong>",
               "list": [
                 {
                   "emoji": "✅",
@@ -603,7 +600,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Token Events</strong> - Issuance and validation"
                 }
-              ]
+              ],
+              "title": "<strong>Comprehensive logging</strong>"
             }
           }
         ]
@@ -681,7 +679,6 @@
             "emoji": "🏦",
             "title": "Banking & Finance",
             "box": {
-              "content": "<strong>High security requirements</strong>",
               "list": [
                 {
                   "emoji": "🔒",
@@ -695,7 +692,8 @@
                   "emoji": "🌐",
                   "text": "<strong>Online Banking</strong> - Web portal SSO"
                 }
-              ]
+              ],
+              "title": "<strong>High security requirements</strong>"
             }
           },
           {
@@ -703,7 +701,6 @@
             "emoji": "🎓",
             "title": "Education & Universities",
             "box": {
-              "content": "<strong>Large user base with different roles</strong>",
               "list": [
                 {
                   "emoji": "👨‍🎓",
@@ -717,7 +714,8 @@
                   "emoji": "💼",
                   "text": "<strong>Administration</strong> - HR and finance systems"
                 }
-              ]
+              ],
+              "title": "<strong>Large user base with different roles</strong>"
             }
           }
         ]

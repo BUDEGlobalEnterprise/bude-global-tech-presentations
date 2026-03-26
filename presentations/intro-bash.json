@@ -34,39 +34,60 @@
           {
             "type": "topic-title",
             "title": "1. Introduction",
-            "box": { "content": "The Shell as an interface, not just a command prompt" }
+            "subtitle": "The Shell as an interface, not just a command prompt"
           },
           {
             "type": "content",
             "title": "What is a Shell?",
             "box": {
-              "content": "A shell is a computer program which exposes an operating system's services to a human user or other program. In general, operating system shells use either a command-line interface (CLI) or a graphical user interface (GUI), depending on a computer's role and particular operation.",
               "list": [
-                { "emoji": "🗣️", "text": "<strong>Interpreter:</strong> It reads your commands and tells the OS what to do." },
-                { "emoji": "🛠️", "text": "<strong>Environment:</strong> It provides tools (variables, history, aliases) to make work easier." },
-                { "emoji": "🏗️", "text": "<strong>Programming Language:</strong> It allows you to wrap sequence of commands into a script." }
-              ]
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Interpreter:</strong> It reads your commands and tells the OS what to do."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Environment:</strong> It provides tools (variables, history, aliases) to make work easier."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Programming Language:</strong> It allows you to wrap sequence of commands into a script."
+                }
+              ],
+              "title": "A shell is a computer program which exposes an operating system's services to a human user or other program. In general, operating system shells use either a command-line interface (CLI) or a graphical user interface (GUI), depending on a computer's role and particular operation."
             }
           },
           {
             "type": "content",
             "title": "The Evolution of Shells",
             "box": {
-              "content": "While there are many shells today, they mostly derive from a few core ancestors in the Unix ecosystem.",
               "list": [
-                { "emoji": "🐚", "text": "<strong>sh (Bourne Shell):</strong> The 1979 original. Minimalist, ubiquitous." },
-                { "emoji": "🐚", "text": "<strong>bash (Bourne Again Shell):</strong> The GNU project's enhancement. The standard on Linux." },
-                { "emoji": "🐚", "text": "<strong>zsh (Z Shell):</strong> Highly customizable, default on macOS." },
-                { "emoji": "🐚", "text": "<strong>fish (Friendly Interactive Shell):</strong> Modern, focus on UX." }
-              ]
+                {
+                  "emoji": "🐚",
+                  "text": "<strong>sh (Bourne Shell):</strong> The 1979 original. Minimalist, ubiquitous."
+                },
+                {
+                  "emoji": "🐚",
+                  "text": "<strong>bash (Bourne Again Shell):</strong> The GNU project's enhancement. The standard on Linux."
+                },
+                {
+                  "emoji": "🐚",
+                  "text": "<strong>zsh (Z Shell):</strong> Highly customizable, default on macOS."
+                },
+                {
+                  "emoji": "🐚",
+                  "text": "<strong>fish (Friendly Interactive Shell):</strong> Modern, focus on UX."
+                }
+              ],
+              "title": "While there are many shells today, they mostly derive from a few core ancestors in the Unix ecosystem."
             }
           },
           {
             "type": "content",
             "title": "The Shebang (!#)",
             "box": {
-              "content": "The Shebang is the first line of a script. It tells the operating system which interpreter should be used to execute the code. Without it, the system might try to run your script using a different (and potentially incompatible) shell.",
-              "code": "#!/bin/bash\n\n# Correct: portable shebang\n#!/usr/bin/env bash\n\necho \"Hello, Automation!\""
+              "code": "#!/bin/bash\n\n# Correct: portable shebang\n#!/usr/bin/env bash\n\necho \"Hello, Automation!\"",
+              "title": "The Shebang is the first line of a script. It tells the operating system which interpreter should be used to execute the code. Without it, the system might try to run your script using a different (and potentially incompatible) shell."
             }
           }
         ]
@@ -78,38 +99,38 @@
           {
             "type": "topic-title",
             "title": "2. Variables & Quoting",
-            "box": { "content": "Managing data and preventing common errors" }
+            "subtitle": "Managing data and preventing common errors"
           },
           {
             "type": "content",
             "title": "Defining Variables",
             "box": {
-              "content": "Variables in Bash are simple. No spaces are allowed around the equals sign! By convention, environment variables are UPPERCASE, and local script variables are lowercase.",
-              "code": "# Assignment (NO SPACES!)\nname=\"Antigravity\"\nversion=1.0\n\n# Usage (Prefix with $)\necho \"Tool: $name v$version\""
+              "code": "# Assignment (NO SPACES!)\nname=\"Antigravity\"\nversion=1.0\n\n# Usage (Prefix with $)\necho \"Tool: $name v$version\"",
+              "title": "Variables in Bash are simple. No spaces are allowed around the equals sign! By convention, environment variables are UPPERCASE, and local script variables are lowercase."
             }
           },
           {
             "type": "content",
             "title": "Command Substitution",
             "box": {
-              "content": "You can capture the output of a command and store it in a variable using the <code>$(...)</code> syntax. This is the heart of automation logic.",
-              "code": "current_dir=$(pwd)\ntoday=$(date +%Y-%m-%d)\n\necho \"Location: $current_dir\"\necho \"Date: $today\""
+              "code": "current_dir=$(pwd)\ntoday=$(date +%Y-%m-%d)\n\necho \"Location: $current_dir\"\necho \"Date: $today\"",
+              "title": "You can capture the output of a command and store it in a variable using the <code>$(...)</code> syntax. This is the heart of automation logic."
             }
           },
           {
             "type": "content",
             "title": "Quoting: The Great Divide",
             "box": {
-              "content": "Understanding the difference between single and double quotes is CRITICAL in Bash. It's the #1 source of beginner bugs.",
-              "code": "name=\"Bude\"\n\n# Double Quotes: Variable INTERPOLATION\necho \"Hello $name\" # Hello Bude\n\n# Single Quotes: LITERAL interpretation\necho 'Hello $name' # Hello $name"
+              "code": "name=\"Bude\"\n\n# Double Quotes: Variable INTERPOLATION\necho \"Hello $name\" # Hello Bude\n\n# Single Quotes: LITERAL interpretation\necho 'Hello $name' # Hello $name",
+              "title": "Understanding the difference between single and double quotes is CRITICAL in Bash. It's the #1 source of beginner bugs."
             }
           },
           {
             "type": "content",
             "title": "When to Quote Everything",
             "box": {
-              "content": "The 'Elite' rule of Bash: **Always wrap variable usages in double quotes.** This prevents the shell from breaking your variable into multiple arguments if it contains spaces.",
-              "code": "file=\"Daily Report.txt\"\n\n# WRONG: Looks for 'Daily' and 'Report.txt'\nrm $file \n\n# CORRECT: Treats as one file\nrm \"$file\""
+              "code": "file=\"Daily Report.txt\"\n\n# WRONG: Looks for 'Daily' and 'Report.txt'\nrm $file \n\n# CORRECT: Treats as one file\nrm \"$file\"",
+              "title": "The 'Elite' rule of Bash: **Always wrap variable usages in double quotes.** This prevents the shell from breaking your variable into multiple arguments if it contains spaces."
             }
           }
         ]
@@ -121,34 +142,40 @@
           {
             "type": "topic-title",
             "title": "3. Logic & Exit Codes",
-            "box": { "content": "Success, Failure, and Decisions" }
+            "subtitle": "Success, Failure, and Decisions"
           },
           {
             "type": "content",
             "title": "The Test Command ([ ])",
             "box": {
-              "content": "Logic in Bash usually relies on the <code>test</code> command or its alias <code>[</code>. Modern Bash scripts should prefer the double bracket <code>[[</code> for better performance and safety.",
-              "code": "# String comparison\nif [[ \"$env\" == \"prod\" ]]; then\n    echo \"Careful!\"\nfi\n\n# Numerical comparison\nif [[ $lines -gt 100 ]]; then\n    echo \"File is large\"\nfi"
+              "code": "# String comparison\nif [[ \"$env\" == \"prod\" ]]; then\n    echo \"Careful!\"\nfi\n\n# Numerical comparison\nif [[ $lines -gt 100 ]]; then\n    echo \"File is large\"\nfi",
+              "title": "Logic in Bash usually relies on the <code>test</code> command or its alias <code>[</code>. Modern Bash scripts should prefer the double bracket <code>[[</code> for better performance and safety."
             }
           },
           {
             "type": "content",
             "title": "Exit Status Codes",
             "box": {
-              "content": "Every Unix command returns an Exit Status Code (0 to 255) to the shell. This is stored in the special variable <code>$?</code>.",
               "list": [
-                { "emoji": "✅", "text": "<strong>0:</strong> Success. Everything went as expected." },
-                { "emoji": "❌", "text": "<strong>Non-Zero:</strong> Failure. Specific numbers can indicate specific errors." }
+                {
+                  "emoji": "✅",
+                  "text": "<strong>0:</strong> Success. Everything went as expected."
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>Non-Zero:</strong> Failure. Specific numbers can indicate specific errors."
+                }
               ],
-              "code": "ls /non-existent-dir\necho $? # Prints 2 (or other failure code)"
+              "code": "ls /non-existent-dir\necho $? # Prints 2 (or other failure code)",
+              "title": "Every Unix command returns an Exit Status Code (0 to 255) to the shell. This is stored in the special variable <code>$?</code>."
             }
           },
           {
             "type": "content",
             "title": "Short-Circuit Logic",
             "box": {
-              "content": "You can combine commands using <code>&&</code> (and) and <code>||</code> (or) based on their exit codes. This allows for very concise 'one-liner' automation.",
-              "code": "# Run second command ONLY if first succeeds\nmkdir logs && touch logs/app.log\n\n# Run second command ONLY if first FAILS\nls data.csv || echo \"Data file missing!\""
+              "code": "# Run second command ONLY if first succeeds\nmkdir logs && touch logs/app.log\n\n# Run second command ONLY if first FAILS\nls data.csv || echo \"Data file missing!\"",
+              "title": "You can combine commands using <code>&&</code> (and) and <code>||</code> (or) based on their exit codes. This allows for very concise 'one-liner' automation."
             }
           }
         ]
@@ -160,42 +187,51 @@
           {
             "type": "topic-title",
             "title": "4. Input/Output",
-            "box": { "content": "Mastering streams, redirection, and pipes" }
+            "subtitle": "Mastering streams, redirection, and pipes"
           },
           {
             "type": "content",
             "title": "Standard Streams",
             "box": {
-              "content": "Every Unix process has three standard communication channels (file descriptors). Understanding these is key to redirecting errors and capturing output correctly.",
               "list": [
-                { "emoji": "📥", "text": "<strong>stdin (0):</strong> Standard input (usually keyboard)." },
-                { "emoji": "📤", "text": "<strong>stdout (1):</strong> Standard output (usually terminal)." },
-                { "emoji": "⚠️", "text": "<strong>stderr (2):</strong> Standard error (diagnostics/errors)." }
-              ]
+                {
+                  "emoji": "📥",
+                  "text": "<strong>stdin (0):</strong> Standard input (usually keyboard)."
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>stdout (1):</strong> Standard output (usually terminal)."
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>stderr (2):</strong> Standard error (diagnostics/errors)."
+                }
+              ],
+              "title": "Every Unix process has three standard communication channels (file descriptors). Understanding these is key to redirecting errors and capturing output correctly."
             }
           },
           {
             "type": "content",
             "title": "Redirection (<, >, >>)",
             "box": {
-              "content": "Redirection allows you to send output to a file or read input from a file instead of the terminal.",
-              "code": "# Send output to file (OVERWRITE)\necho \"Log started\" > app.log\n\n# Send output to file (APPEND)\necho \"Update\" >> app.log\n\n# Redirect stderr to a separate file\n./myscript.sh 2> errors.log\n\n# Redirect both stdout and stderr to the same file\n./myscript.sh &> combined.log"
+              "code": "# Send output to file (OVERWRITE)\necho \"Log started\" > app.log\n\n# Send output to file (APPEND)\necho \"Update\" >> app.log\n\n# Redirect stderr to a separate file\n./myscript.sh 2> errors.log\n\n# Redirect both stdout and stderr to the same file\n./myscript.sh &> combined.log",
+              "title": "Redirection allows you to send output to a file or read input from a file instead of the terminal."
             }
           },
           {
             "type": "content",
             "title": "The Power of Pipes (|)",
             "box": {
-              "content": "Pipes allow you to connect the <strong>stdout</strong> of one command directly to the <strong>stdin</strong> of another. This is the cornerstone of the Unix philosophy: 'Write programs that do one thing and do it well. Write programs to work together.'",
-              "code": "# Count occurrences of a word in a file\ncat access.log | grep \"ERROR\" | wc -l\n\n# Find top 5 largest files\ndu -ah | sort -rh | head -n 5"
+              "code": "# Count occurrences of a word in a file\ncat access.log | grep \"ERROR\" | wc -l\n\n# Find top 5 largest files\ndu -ah | sort -rh | head -n 5",
+              "title": "Pipes allow you to connect the <strong>stdout</strong> of one command directly to the <strong>stdin</strong> of another. This is the cornerstone of the Unix philosophy: 'Write programs that do one thing and do it well. Write programs to work together.'"
             }
           },
           {
             "type": "content",
             "title": "Here-Docs (<<EOF)",
             "box": {
-              "content": "Here-docs allow you to pass multi-line blocks of text into a command. This is incredibly useful for generating configuration files or SQL scripts from within a Bash script.",
-              "code": "cat <<EOF > config.yaml\nserver:\n  port: 8080\n  env: \"$ENV_NAME\"\nEOF"
+              "code": "cat <<EOF > config.yaml\nserver:\n  port: 8080\n  env: \"$ENV_NAME\"\nEOF",
+              "title": "Here-docs allow you to pass multi-line blocks of text into a command. This is incredibly useful for generating configuration files or SQL scripts from within a Bash script."
             }
           }
         ]
@@ -207,30 +243,30 @@
           {
             "type": "topic-title",
             "title": "5. Control Flow",
-            "box": { "content": "Loops, Branching, and Automation" }
+            "subtitle": "Loops, Branching, and Automation"
           },
           {
             "type": "content",
             "title": "The 'for' Loop",
             "box": {
-              "content": "The <code>for</code> loop is used to iterate over a list of items, such as filenames, numbers, or words.",
-              "code": "# Iterate over files\nfor file in *.txt; do\n    echo \"Processing $file\"\ndone\n\n# Numerical range\nfor i in {1..5}; do\n    echo \"Round $i\"\ndone"
+              "code": "# Iterate over files\nfor file in *.txt; do\n    echo \"Processing $file\"\ndone\n\n# Numerical range\nfor i in {1..5}; do\n    echo \"Round $i\"\ndone",
+              "title": "The <code>for</code> loop is used to iterate over a list of items, such as filenames, numbers, or words."
             }
           },
           {
             "type": "content",
             "title": "The 'while' Loop",
             "box": {
-              "content": "The <code>while</code> loop continues to execute as long as a condition is true. It's often used for reading files line by line.",
-              "code": "while IFS= read -r line; do\n    echo \"Line: $line\"\ndone < input.txt"
+              "code": "while IFS= read -r line; do\n    echo \"Line: $line\"\ndone < input.txt",
+              "title": "The <code>while</code> loop continues to execute as long as a condition is true. It's often used for reading files line by line."
             }
           },
           {
             "type": "content",
             "title": "Decisions with 'case'",
             "box": {
-              "content": "When you have multiple branches based on a single variable, the <code>case</code> statement is much cleaner and more efficient than a long <code>if/elif</code> chain.",
-              "code": "case \"$OS\" in\n    \"Linux\")\n        echo \"Deploying to Linux\"\n        ;;\n    \"FreeBSD\" | \"OpenBSD\")\n        echo \"Deploying to BSD\"\n        ;;\n    *)\n        echo \"Unsupported OS\"\n        exit 1\n        ;;\nesac"
+              "code": "case \"$OS\" in\n    \"Linux\")\n        echo \"Deploying to Linux\"\n        ;;\n    \"FreeBSD\" | \"OpenBSD\")\n        echo \"Deploying to BSD\"\n        ;;\n    *)\n        echo \"Unsupported OS\"\n        exit 1\n        ;;\nesac",
+              "title": "When you have multiple branches based on a single variable, the <code>case</code> statement is much cleaner and more efficient than a long <code>if/elif</code> chain."
             }
           }
         ]
@@ -242,30 +278,30 @@
           {
             "type": "topic-title",
             "title": "6. Functions",
-            "box": { "content": "Encapsulation and Reusability in the Shell" }
+            "subtitle": "Encapsulation and Reusability in the Shell"
           },
           {
             "type": "content",
             "title": "Defining & Calling Functions",
             "box": {
-              "content": "Functions in Bash are a way to group commands. Unlike most languages, you don't declare parameters in the function signature; instead, they are accessed via positional parameters ($1, $2, etc.).",
-              "code": "function greeting() {\n    echo \"Hello, $1!\"\n}\n\n# Or the shorthand syntax\nslog() {\n    echo \"[$(date)] $1\"\n}\n\n# Execution\ngreeting \"Developer\"\nslog \"System update started\""
+              "code": "function greeting() {\n    echo \"Hello, $1!\"\n}\n\n# Or the shorthand syntax\nslog() {\n    echo \"[$(date)] $1\"\n}\n\n# Execution\ngreeting \"Developer\"\nslog \"System update started\"",
+              "title": "Functions in Bash are a way to group commands. Unlike most languages, you don't declare parameters in the function signature; instead, they are accessed via positional parameters ($1, $2, etc.)."
             }
           },
           {
             "type": "content",
             "title": "Variable Scope: 'local'",
             "box": {
-              "content": "By default, all variables in Bash are **global**. To prevent functions from accidentally overwriting variables in the rest of your script, you MUST use the <code>local</code> keyword.",
-              "code": "name=\"Global Antigravity\"\n\nupdate_name() {\n    local name=\"Local Bude\"\n    echo \"Inside: $name\"\n}\n\nupdate_name\necho \"Outside: $name\" # Still 'Global Antigravity'!"
+              "code": "name=\"Global Antigravity\"\n\nupdate_name() {\n    local name=\"Local Bude\"\n    echo \"Inside: $name\"\n}\n\nupdate_name\necho \"Outside: $name\" # Still 'Global Antigravity'!",
+              "title": "By default, all variables in Bash are **global**. To prevent functions from accidentally overwriting variables in the rest of your script, you MUST use the <code>local</code> keyword."
             }
           },
           {
             "type": "content",
             "title": "Returning Values",
             "box": {
-              "content": "Bash functions don't 'return' objects. They can only return an exit status (0-255). To 'return' data, the common pattern is to <code>echo</code> the result and capture it using command substitution.",
-              "code": "get_sum() {\n    local result=$(( $1 + $2 ))\n    echo \"$result\"\n}\n\ntotal=$(get_sum 10 20)\necho \"The total is $total\""
+              "code": "get_sum() {\n    local result=$(( $1 + $2 ))\n    echo \"$result\"\n}\n\ntotal=$(get_sum 10 20)\necho \"The total is $total\"",
+              "title": "Bash functions don't 'return' objects. They can only return an exit status (0-255). To 'return' data, the common pattern is to <code>echo</code> the result and capture it using command substitution."
             }
           }
         ]
@@ -277,38 +313,38 @@
           {
             "type": "topic-title",
             "title": "7. Advanced Features",
-            "box": { "content": "Data structures and powerful string expansion" }
+            "subtitle": "Data structures and powerful string expansion"
           },
           {
             "type": "content",
             "title": "Indexed Arrays",
             "box": {
-              "content": "Bash supports one-dimensional indexed arrays. They are useful for storing lists of items like configuration values or lists of files for processing.",
-              "code": "# Definition\nservers=(\"web01\" \"web02\" \"db01\")\n\n# Access specific element\necho \"First: ${servers[0]}\"\n\n# Iterate over all elements\nfor server in \"${servers[@]}\"; do\n    echo \"Checking $server...\"\ndone"
+              "code": "# Definition\nservers=(\"web01\" \"web02\" \"db01\")\n\n# Access specific element\necho \"First: ${servers[0]}\"\n\n# Iterate over all elements\nfor server in \"${servers[@]}\"; do\n    echo \"Checking $server...\"\ndone",
+              "title": "Bash supports one-dimensional indexed arrays. They are useful for storing lists of items like configuration values or lists of files for processing."
             }
           },
           {
             "type": "content",
             "title": "Associative Arrays (Bash 4+)",
             "box": {
-              "content": "Associative arrays allow you to use strings as keys (like a hash map or dictionary). You must explicitly declare them using <code>declare -A</code>.",
-              "code": "declare -A config\n\nconfig[port]=8080\nconfig[env]=\"prod\"\n\necho \"Port is ${config[port]}\""
+              "code": "declare -A config\n\nconfig[port]=8080\nconfig[env]=\"prod\"\n\necho \"Port is ${config[port]}\"",
+              "title": "Associative arrays allow you to use strings as keys (like a hash map or dictionary). You must explicitly declare them using <code>declare -A</code>."
             }
           },
           {
             "type": "content",
             "title": "Parameter Expansion",
             "box": {
-              "content": "Bash has a built-in 'mini-language' for manipulating variables during expansion. This is often faster and cleaner than piping to <code>sed</code> or <code>awk</code>.",
-              "code": "file=\"backup_2024.tar.gz\"\n\n# Substring replacement\necho \"${file/backup/archive}\" # archive_2024.tar.gz\n\n# Strip suffix\necho \"${file%.*}\" # backup_2024.tar\n\n# Default values\necho \"User: ${DB_USER:-admin}\""
+              "code": "file=\"backup_2024.tar.gz\"\n\n# Substring replacement\necho \"${file/backup/archive}\" # archive_2024.tar.gz\n\n# Strip suffix\necho \"${file%.*}\" # backup_2024.tar\n\n# Default values\necho \"User: ${DB_USER:-admin}\"",
+              "title": "Bash has a built-in 'mini-language' for manipulating variables during expansion. This is often faster and cleaner than piping to <code>sed</code> or <code>awk</code>."
             }
           },
           {
             "type": "content",
             "title": "Process Substitution",
             "box": {
-              "content": "Process substitution allows you to treat the output of a command like a file. This is incredibly useful for commands that expect a filename but you want to provide dynamic output.",
-              "code": "# Compare output of two commands directly\ndiff <(ls dir_a) <(ls dir_b)"
+              "code": "# Compare output of two commands directly\ndiff <(ls dir_a) <(ls dir_b)",
+              "title": "Process substitution allows you to treat the output of a command like a file. This is incredibly useful for commands that expect a filename but you want to provide dynamic output."
             }
           }
         ]
@@ -320,38 +356,38 @@
           {
             "type": "topic-title",
             "title": "8. Robust Scripting",
-            "box": { "content": "Writing production-grade Bash scripts" }
+            "subtitle": "Writing production-grade Bash scripts"
           },
           {
             "type": "content",
             "title": "Bash Strict Mode",
             "box": {
-              "content": "Most Bash scripts fail silently or continue after errors. The 'Strict Mode' is a set of flags that turn Bash into a much more predictable and safer environment.",
-              "code": "# The 'Elite' Header\nset -euo pipefail\n\n/* \n -e: Exit on error\n -u: Exit on unset variables\n -o pipefail: Pipeline fails if any command fails\n*/"
+              "code": "# The 'Elite' Header\nset -euo pipefail\n\n/* \n -e: Exit on error\n -u: Exit on unset variables\n -o pipefail: Pipeline fails if any command fails\n*/",
+              "title": "Most Bash scripts fail silently or continue after errors. The 'Strict Mode' is a set of flags that turn Bash into a much more predictable and safer environment."
             }
           },
           {
             "type": "content",
             "title": "The 'trap' Command",
             "box": {
-              "content": "Scripts often create temporary files or locks. The <code>trap</code> command allows you to specify cleanup logic that runs when the script exits, even if it crashes or is interrupted.",
-              "code": "cleanup() {\n    rm -f \"$TMP_FILE\"\n    echo \"Cleanup complete.\"\n}\n\ntrap cleanup EXIT INT TERM"
+              "code": "cleanup() {\n    rm -f \"$TMP_FILE\"\n    echo \"Cleanup complete.\"\n}\n\ntrap cleanup EXIT INT TERM",
+              "title": "Scripts often create temporary files or locks. The <code>trap</code> command allows you to specify cleanup logic that runs when the script exits, even if it crashes or is interrupted."
             }
           },
           {
             "type": "content",
             "title": "Defensive Programming",
             "box": {
-              "content": "Never assume a directory exists or a command succeeded. Always verify your environment before taking destructive actions.",
-              "code": "# Check if directory exists before entering\ncd \"$TARGET_DIR\" || { echo \"Failed to cd\"; exit 1; }\n\n# Check if variable is set\n: \"${REQUIRED_VAR?Error: REQUIRED_VAR is not set}\""
+              "code": "# Check if directory exists before entering\ncd \"$TARGET_DIR\" || { echo \"Failed to cd\"; exit 1; }\n\n# Check if variable is set\n: \"${REQUIRED_VAR?Error: REQUIRED_VAR is not set}\"",
+              "title": "Never assume a directory exists or a command succeeded. Always verify your environment before taking destructive actions."
             }
           },
           {
             "type": "content",
             "title": "Debugging Your Scripts",
             "box": {
-              "content": "When things go wrong, Bash provides built-in tools to trace execution. You can enable them globally or for specific blocks of code.",
-              "code": "# Trace every command (print to stderr)\nset -x \n\n# Add line numbers and script name to trace\nexport PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'\n\n# Stop tracing\nset +x"
+              "code": "# Trace every command (print to stderr)\nset -x \n\n# Add line numbers and script name to trace\nexport PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'\n\n# Stop tracing\nset +x",
+              "title": "When things go wrong, Bash provides built-in tools to trace execution. You can enable them globally or for specific blocks of code."
             }
           }
         ]
@@ -363,30 +399,30 @@
           {
             "type": "topic-title",
             "title": "9. Scripting Patterns",
-            "box": { "content": "Solved problems and design architecture" }
+            "subtitle": "Solved problems and design architecture"
           },
           {
             "type": "content",
             "title": "Flag Parsing with getopts",
             "box": {
-              "content": "Instead of guessing positional parameters, use <code>getopts</code> to provide a professional, Unix-standard command line interface for your scripts.",
-              "code": "while getopts \"v:p:\" opt; do\n  case $opt in\n    v) version=\"$OPTARG\" ;;\n    p) port=\"$OPTARG\" ;;\n    *) usage ;;\n  esac\ndone"
+              "code": "while getopts \"v:p:\" opt; do\n  case $opt in\n    v) version=\"$OPTARG\" ;;\n    p) port=\"$OPTARG\" ;;\n    *) usage ;;\n  esac\ndone",
+              "title": "Instead of guessing positional parameters, use <code>getopts</code> to provide a professional, Unix-standard command line interface for your scripts."
             }
           },
           {
             "type": "content",
             "title": "The Lock File Pattern",
             "box": {
-              "content": "To prevent multiple instances of a cron job or script from running simultaneously, use a lock file (often with <code>flock</code>).",
-              "code": "# Wait for lock, then run command\n( flock -x 200 || exit 1\n  # ... critical section ...\n) 200>/var/lock/mylockfile"
+              "code": "# Wait for lock, then run command\n( flock -x 200 || exit 1\n  # ... critical section ...\n) 200>/var/lock/mylockfile",
+              "title": "To prevent multiple instances of a cron job or script from running simultaneously, use a lock file (often with <code>flock</code>)."
             }
           },
           {
             "type": "content",
             "title": "Logging Best Practices",
             "box": {
-              "content": "In automation, logs are your only window into the past. Always include timestamps, levels, and script metadata.",
-              "code": "log() {\n    local level=\"$1\"\n    local msg=\"$2\"\n    echo \"[$(date +'%Y-%m-%dT%H:%M:%S%z')] [$level] $msg\" >&2\n}\n\nlog \"INFO\" \"Initialization complete\""
+              "code": "log() {\n    local level=\"$1\"\n    local msg=\"$2\"\n    echo \"[$(date +'%Y-%m-%dT%H:%M:%S%z')] [$level] $msg\" >&2\n}\n\nlog \"INFO\" \"Initialization complete\"",
+              "title": "In automation, logs are your only window into the past. Always include timestamps, levels, and script metadata."
             }
           }
         ]
@@ -398,42 +434,69 @@
           {
             "type": "topic-title",
             "title": "10. Modern Shell Ecosystem",
-            "box": { "content": "Tools that help you write better scripts" }
+            "subtitle": "Tools that help you write better scripts"
           },
           {
             "type": "content",
             "title": "ShellCheck: The Linter",
             "box": {
-               "content": "ShellCheck is a static analysis tool that automatically finds bugs and non-standard practices in your shell scripts. It is the absolute 'Gold Standard' for shell scripting quality.",
-               "list": [
-                 { "emoji": "🦟", "text": "<strong>Bug detection:</strong> Catches quoting issues and logic errors." },
-                 { "emoji": "📏", "text": "<strong>Style:</strong> Suggests modern alternatives for legacy syntax." },
-                 { "emoji": "🚀", "text": "<strong>Performant:</strong> Instant feedback in your IDE." }
-               ]
+              "list": [
+                {
+                  "emoji": "🦟",
+                  "text": "<strong>Bug detection:</strong> Catches quoting issues and logic errors."
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Style:</strong> Suggests modern alternatives for legacy syntax."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performant:</strong> Instant feedback in your IDE."
+                }
+              ],
+              "title": "ShellCheck is a static analysis tool that automatically finds bugs and non-standard practices in your shell scripts. It is the absolute 'Gold Standard' for shell scripting quality."
             }
           },
           {
             "type": "content",
             "title": "Modern Alternatives",
             "box": {
-              "content": "Sometimes Bash isn't enough. Many modern tools provide 'shell-like' simplicity with modern language features.",
               "list": [
-                { "emoji": "🦀", "text": "<strong>Rust tools:</strong> bat, fd, rg (Modern replacements for cat, find, grep)." },
-                { "emoji": "🐍", "text": "<strong>Python/Node.js:</strong> Best for complex data processing." },
-                { "emoji": "🗜️", "text": "<strong>Ansible:</strong> Better for declarative server configuration." }
-              ]
+                {
+                  "emoji": "🦀",
+                  "text": "<strong>Rust tools:</strong> bat, fd, rg (Modern replacements for cat, find, grep)."
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Python/Node.js:</strong> Best for complex data processing."
+                },
+                {
+                  "emoji": "🗜️",
+                  "text": "<strong>Ansible:</strong> Better for declarative server configuration."
+                }
+              ],
+              "title": "Sometimes Bash isn't enough. Many modern tools provide 'shell-like' simplicity with modern language features."
             }
           },
           {
             "type": "content",
             "title": "Summary: The Shell Power",
             "box": {
-              "content": "Bash is the 'glue' of the internet. Mastering it means mastering the ability to automate almost any task on almost any system.",
               "list": [
-                { "emoji": "✅", "text": "Ubiquitous and portable." },
-                { "emoji": "✅", "text": "Unrivalled at combining small tools." },
-                { "emoji": "✅", "text": "The foundation of DevOps and CI/CD." }
-              ]
+                {
+                  "emoji": "✅",
+                  "text": "Ubiquitous and portable."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Unrivalled at combining small tools."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "The foundation of DevOps and CI/CD."
+                }
+              ],
+              "title": "Bash is the 'glue' of the internet. Mastering it means mastering the ability to automate almost any task on almost any system."
             }
           }
         ]
@@ -445,30 +508,30 @@
           {
             "type": "topic-title",
             "title": "11. Common Shell Pitfalls",
-            "box": { "content": "Avoiding common mistakes and 'Gotchas'" }
+            "subtitle": "Avoiding common mistakes and 'Gotchas'"
           },
           {
             "type": "content",
             "title": "Word Splitting",
             "box": {
-              "content": "Bash splits unquoted variables into multiple arguments based on whitespace. This can lead to disastrous results when handling filenames with spaces.",
-              "code": "files=\"Daily Report.pdf\"\n\n# WRONG: rm thinks you mean two files\nrm $files \n\n# CORRECT: Treat as one string\nrm \"$files\""
+              "code": "files=\"Daily Report.pdf\"\n\n# WRONG: rm thinks you mean two files\nrm $files \n\n# CORRECT: Treat as one string\nrm \"$files\"",
+              "title": "Bash splits unquoted variables into multiple arguments based on whitespace. This can lead to disastrous results when handling filenames with spaces."
             }
           },
           {
             "type": "content",
             "title": "Unexpected Globbing",
             "box": {
-              "content": "If you use wildcards like <code>*</code> or <code>?</code> in unquoted variables, Bash will expand them to match files in the current directory, which can be a massive security risk.",
-              "code": "search_term=\"*\"\n\n# WRONG: if unquoted, this command might expand to everything!\necho $search_term"
+              "code": "search_term=\"*\"\n\n# WRONG: if unquoted, this command might expand to everything!\necho $search_term",
+              "title": "If you use wildcards like <code>*</code> or <code>?</code> in unquoted variables, Bash will expand them to match files in the current directory, which can be a massive security risk."
             }
           },
           {
             "type": "content",
             "title": "The [ vs [[ Trap",
             "box": {
-              "content": "The single bracket <code>[</code> is an external command with strict rules. The double bracket <code>[[</code> is a shell keyword that handles empty variables and regex much better.",
-              "code": "# WRONG: fails if name is empty\nif [ $name = \"Bude\" ]; then ...\n\n# CORRECT: safe and modern\nif [[ $name == \"Bude\" ]]; then ..."
+              "code": "# WRONG: fails if name is empty\nif [ $name = \"Bude\" ]; then ...\n\n# CORRECT: safe and modern\nif [[ $name == \"Bude\" ]]; then ...",
+              "title": "The single bracket <code>[</code> is an external command with strict rules. The double bracket <code>[[</code> is a shell keyword that handles empty variables and regex much better."
             }
           }
         ]
@@ -480,34 +543,43 @@
           {
             "type": "topic-title",
             "title": "12. Practical Automation",
-            "box": { "content": "Real-world production scripts" }
+            "subtitle": "Real-world production scripts"
           },
           {
             "type": "content",
             "title": "Pattern: Database Backup",
             "box": {
-              "content": "A robust script to back up a database, compress it, and rotate old logs.",
-              "code": "#!/bin/bash\nset -euo pipefail\n\nBACKUP_DIR=\"/mnt/backups/db\"\nDATE=$(date +%Y%m%d)\n\nmysqldump my_app > \"$BACKUP_DIR/db_$DATE.sql\"\ngzip \"$BACKUP_DIR/db_$DATE.sql\"\n\n# Delete backups older than 7 days\nfind \"$BACKUP_DIR\" -name \"*.gz\" -mtime +7 -delete"
+              "code": "#!/bin/bash\nset -euo pipefail\n\nBACKUP_DIR=\"/mnt/backups/db\"\nDATE=$(date +%Y%m%d)\n\nmysqldump my_app > \"$BACKUP_DIR/db_$DATE.sql\"\ngzip \"$BACKUP_DIR/db_$DATE.sql\"\n\n# Delete backups older than 7 days\nfind \"$BACKUP_DIR\" -name \"*.gz\" -mtime +7 -delete",
+              "title": "A robust script to back up a database, compress it, and rotate old logs."
             }
           },
           {
             "type": "content",
             "title": "Pattern: Batch Image Processing",
             "box": {
-              "content": "Automating the resizing of all images in a directory using a loop and the <code>convert</code> tool.",
-              "code": "mkdir -p thumbnails\n\nfor img in *.jpg; do\n    echo \"Processing $img...\"\n    convert \"$img\" -resize 200x200 \"thumbnails/${img%.*}.thumb.jpg\"\ndone"
+              "code": "mkdir -p thumbnails\n\nfor img in *.jpg; do\n    echo \"Processing $img...\"\n    convert \"$img\" -resize 200x200 \"thumbnails/${img%.*}.thumb.jpg\"\ndone",
+              "title": "Automating the resizing of all images in a directory using a loop and the <code>convert</code> tool."
             }
           },
           {
             "type": "content",
             "title": "Conclusion: Start Small",
             "box": {
-              "content": "Don't build massive scripts at first. Use the Unix philosophy: start with a pipe, then a loop, then a function, then a script.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Iterate:</strong> Refactor one-liners into scripts." },
-                { "emoji": "🛠️", "text": "<strong>Lint:</strong> Always use Shellcheck." },
-                { "emoji": "🚀", "text": "<strong>Deploy:</strong> Standardize your automation environment." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Iterate:</strong> Refactor one-liners into scripts."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Lint:</strong> Always use Shellcheck."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Deploy:</strong> Standardize your automation environment."
+                }
+              ],
+              "title": "Don't build massive scripts at first. Use the Unix philosophy: start with a pipe, then a loop, then a function, then a script."
             }
           }
         ]

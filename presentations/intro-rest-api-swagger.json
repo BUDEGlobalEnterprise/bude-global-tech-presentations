@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is REST?",
             "box": {
-              "content": "<span class=\"highlight\">Representational State Transfer</span> - Architectural style for web APIs",
               "list": [
                 {
                   "emoji": "📜",
@@ -124,7 +123,8 @@
                   "emoji": "💡",
                   "text": "<strong>Key Concept</strong> - Resources with uniform interface"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Representational State Transfer</span> - Architectural style for web APIs"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> REST was introduced in Roy Fielding's doctoral dissertation in 2000 and has become the standard for web API design!"
@@ -246,8 +246,8 @@
             "emoji": "💡",
             "title": "HTTP Method Examples",
             "box": {
-              "content": "<strong>CRUD operations with HTTP methods</strong>",
-              "code": "GET    /api/users          # List all users\nPOST   /api/users          # Create new user\nGET    /api/users/123      # Get user with ID 123\nPUT    /api/users/123      # Update user 123 (full)\nPATCH  /api/users/123      # Update user 123 (partial)\nDELETE /api/users/123      # Delete user 123\n\nGET    /api/users/123/orders    # Get orders for user 123\nPOST   /api/users/123/orders    # Create order for user 123"
+              "code": "GET    /api/users          # List all users\nPOST   /api/users          # Create new user\nGET    /api/users/123      # Get user with ID 123\nPUT    /api/users/123      # Update user 123 (full)\nPATCH  /api/users/123      # Update user 123 (partial)\nDELETE /api/users/123      # Delete user 123\n\nGET    /api/users/123/orders    # Get orders for user 123\nPOST   /api/users/123/orders    # Create order for user 123",
+              "title": "<strong>CRUD operations with HTTP methods</strong>"
             }
           }
         ]
@@ -290,8 +290,8 @@
             "emoji": "🎯",
             "title": "Essential Status Codes",
             "box": {
-              "content": "<strong>Most commonly used status codes</strong>",
-              "code": "200 OK                    # Successful GET, PUT, PATCH\n201 Created               # Resource created (POST)\n204 No Content            # Successful DELETE\n\n400 Bad Request           # Malformed request\n401 Unauthorized          # Authentication required\n403 Forbidden             # Authenticated but no permission\n404 Not Found             # Resource doesn't exist\n409 Conflict              # Resource conflict\n422 Unprocessable Entity  # Validation errors\n\n500 Internal Server Error # Generic server error\n503 Service Unavailable   # Server overloaded/maintenance"
+              "code": "200 OK                    # Successful GET, PUT, PATCH\n201 Created               # Resource created (POST)\n204 No Content            # Successful DELETE\n\n400 Bad Request           # Malformed request\n401 Unauthorized          # Authentication required\n403 Forbidden             # Authenticated but no permission\n404 Not Found             # Resource doesn't exist\n409 Conflict              # Resource conflict\n422 Unprocessable Entity  # Validation errors\n\n500 Internal Server Error # Generic server error\n503 Service Unavailable   # Server overloaded/maintenance",
+              "title": "<strong>Most commonly used status codes</strong>"
             }
           }
         ]
@@ -342,8 +342,8 @@
             "emoji": "📋",
             "title": "API Design Examples",
             "box": {
-              "content": "<strong>Good vs Bad URL design</strong>",
-              "code": "✅ GOOD DESIGN:\nGET    /api/v1/users\nPOST   /api/v1/users\nGET    /api/v1/users/123\nPUT    /api/v1/users/123\nDELETE /api/v1/users/123\nGET    /api/v1/users/123/orders\nPOST   /api/v1/users/123/orders\nGET    /api/v1/orders?status=shipped&limit=10\n\n❌ BAD DESIGN:\nGET    /api/v1/getAllUsers\nPOST   /api/v1/createUser\nGET    /api/v1/getUserById/123\nPOST   /api/v1/updateUser/123\nGET    /api/v1/deleteUser/123\nGET    /api/v1/getUserOrders/123"
+              "code": "✅ GOOD DESIGN:\nGET    /api/v1/users\nPOST   /api/v1/users\nGET    /api/v1/users/123\nPUT    /api/v1/users/123\nDELETE /api/v1/users/123\nGET    /api/v1/users/123/orders\nPOST   /api/v1/users/123/orders\nGET    /api/v1/orders?status=shipped&limit=10\n\n❌ BAD DESIGN:\nGET    /api/v1/getAllUsers\nPOST   /api/v1/createUser\nGET    /api/v1/getUserById/123\nPOST   /api/v1/updateUser/123\nGET    /api/v1/deleteUser/123\nGET    /api/v1/getUserOrders/123",
+              "title": "<strong>Good vs Bad URL design</strong>"
             }
           }
         ]
@@ -361,7 +361,6 @@
             "emoji": "📊",
             "title": "Swagger vs OpenAPI",
             "box": {
-              "content": "<span class=\"highlight\">OpenAPI Specification</span> - Standard for REST API documentation",
               "list": [
                 {
                   "emoji": "📜",
@@ -383,7 +382,8 @@
                   "emoji": "🚀",
                   "text": "<strong>Benefits</strong> - Interactive docs, code generation"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">OpenAPI Specification</span> - Standard for REST API documentation"
             }
           }
         ]
@@ -434,8 +434,8 @@
             "emoji": "💻",
             "title": "Basic OpenAPI Example",
             "box": {
-              "content": "<strong>Minimal OpenAPI 3.0 specification</strong>",
-              "code": "openapi: 3.0.0\ninfo:\n  title: Sample API\n  description: A sample API to demonstrate OpenAPI\n  version: 1.0.0\n  contact:\n    name: API Support\n    email: support@example.com\n\nservers:\n  - url: https://api.example.com/v1\n    description: Production server\n\npaths:\n  /users:\n    get:\n      summary: Returns a list of users\n      description: Optional extended description\n      responses:\n        '200':\n          description: Successful response\n          content:\n            application/json:\n              schema:\n                type: array\n                items:\n                  $ref: '#/components/schemas/User'\n\ncomponents:\n  schemas:\n    User:\n      type: object\n      properties:\n        id:\n          type: integer\n        name:\n          type: string\n        email:\n          type: string\n      required:\n        - id\n        - name\n        - email"
+              "code": "openapi: 3.0.0\ninfo:\n  title: Sample API\n  description: A sample API to demonstrate OpenAPI\n  version: 1.0.0\n  contact:\n    name: API Support\n    email: support@example.com\n\nservers:\n  - url: https://api.example.com/v1\n    description: Production server\n\npaths:\n  /users:\n    get:\n      summary: Returns a list of users\n      description: Optional extended description\n      responses:\n        '200':\n          description: Successful response\n          content:\n            application/json:\n              schema:\n                type: array\n                items:\n                  $ref: '#/components/schemas/User'\n\ncomponents:\n  schemas:\n    User:\n      type: object\n      properties:\n        id:\n          type: integer\n        name:\n          type: string\n        email:\n          type: string\n      required:\n        - id\n        - name\n        - email",
+              "title": "<strong>Minimal OpenAPI 3.0 specification</strong>"
             }
           }
         ]
@@ -529,8 +529,8 @@
             "emoji": "⚡",
             "title": "Integrating Swagger UI",
             "box": {
-              "content": "<strong>Adding Swagger UI to your project</strong>",
-              "code": "// Node.js/Express example\nconst swaggerUi = require('swagger-ui-express');\nconst YAML = require('yamljs');\n\n// Load OpenAPI specification\nconst swaggerDocument = YAML.load('./api/openapi.yaml');\n\n// Serve Swagger UI at /api-docs\napp.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));\n\n// ASP.NET Core example\nservices.AddSwaggerGen(c =>\n{\n    c.SwaggerDoc(\"v1\", new OpenApiInfo { \n        Title = \"My API\", \n        Version = \"v1\" \n    });\n});\n\napp.UseSwagger();\napp.UseSwaggerUI(c => \n{\n    c.SwaggerEndpoint(\"/swagger/v1/swagger.json\", \"My API V1\");\n});"
+              "code": "// Node.js/Express example\nconst swaggerUi = require('swagger-ui-express');\nconst YAML = require('yamljs');\n\n// Load OpenAPI specification\nconst swaggerDocument = YAML.load('./api/openapi.yaml');\n\n// Serve Swagger UI at /api-docs\napp.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));\n\n// ASP.NET Core example\nservices.AddSwaggerGen(c =>\n{\n    c.SwaggerDoc(\"v1\", new OpenApiInfo { \n        Title = \"My API\", \n        Version = \"v1\" \n    });\n});\n\napp.UseSwagger();\napp.UseSwaggerUI(c => \n{\n    c.SwaggerEndpoint(\"/swagger/v1/swagger.json\", \"My API V1\");\n});",
+              "title": "<strong>Adding Swagger UI to your project</strong>"
             }
           }
         ]
@@ -577,8 +577,8 @@
             "emoji": "🚀",
             "title": "Codegen Examples",
             "box": {
-              "content": "<strong>Generating client SDKs</strong>",
-              "code": "# Using Swagger Codegen CLI\njava -jar swagger-codegen-cli.jar generate \\\n  -i https://api.example.com/openapi.json \\\n  -l python \\\n  -o ./client-sdk/python\n\n# Generate for different languages\n-l javascript    # JavaScript client\n-l java          # Java client\n-l csharp        # C# client\n-l go            # Go client\n-l php           # PHP client\n-l ruby          # Ruby client\n-l swift         # Swift client\n\n# Using OpenAPI Generator (alternative)\nopenapi-generator generate \\\n  -i openapi.yaml \\\n  -g typescript-axios \\\n  -o ./client-sdk/typescript"
+              "code": "# Using Swagger Codegen CLI\njava -jar swagger-codegen-cli.jar generate \\\n  -i https://api.example.com/openapi.json \\\n  -l python \\\n  -o ./client-sdk/python\n\n# Generate for different languages\n-l javascript    # JavaScript client\n-l java          # Java client\n-l csharp        # C# client\n-l go            # Go client\n-l php           # PHP client\n-l ruby          # Ruby client\n-l swift         # Swift client\n\n# Using OpenAPI Generator (alternative)\nopenapi-generator generate \\\n  -i openapi.yaml \\\n  -g typescript-axios \\\n  -o ./client-sdk/typescript",
+              "title": "<strong>Generating client SDKs</strong>"
             }
           }
         ]
@@ -629,8 +629,8 @@
             "emoji": "🔷",
             "title": "ASP.NET Core Example",
             "box": {
-              "content": "<strong>REST API with Swagger in .NET</strong>",
-              "code": "// Program.cs\nvar builder = WebApplication.CreateBuilder(args);\n\n// Add services\nbuilder.Services.AddControllers();\nbuilder.Services.AddEndpointsApiExplorer();\nbuilder.Services.AddSwaggerGen(c =>\n{\n    c.SwaggerDoc(\"v1\", new OpenApiInfo \n    { \n        Title = \"User API\", \n        Version = \"v1\",\n        Description = \"A simple example ASP.NET Core Web API\"\n    });\n});\n\nvar app = builder.Build();\n\n// Configure pipeline\nif (app.Environment.IsDevelopment())\n{\n    app.UseSwagger();\n    app.UseSwaggerUI();\n}\n\napp.UseHttpsRedirection();\napp.UseAuthorization();\napp.MapControllers();\n\napp.Run();\n\n// UserController.cs\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class UsersController : ControllerBase\n{\n    [HttpGet]\n    public ActionResult<IEnumerable<User>> GetUsers() { ... }\n    \n    [HttpGet(\"{id}\")]\n    public ActionResult<User> GetUser(int id) { ... }\n    \n    [HttpPost]\n    public ActionResult<User> CreateUser(User user) { ... }\n    \n    [HttpPut(\"{id}\")]\n    public IActionResult UpdateUser(int id, User user) { ... }\n    \n    [HttpDelete(\"{id}\")]\n    public IActionResult DeleteUser(int id) { ... }\n}"
+              "code": "// Program.cs\nvar builder = WebApplication.CreateBuilder(args);\n\n// Add services\nbuilder.Services.AddControllers();\nbuilder.Services.AddEndpointsApiExplorer();\nbuilder.Services.AddSwaggerGen(c =>\n{\n    c.SwaggerDoc(\"v1\", new OpenApiInfo \n    { \n        Title = \"User API\", \n        Version = \"v1\",\n        Description = \"A simple example ASP.NET Core Web API\"\n    });\n});\n\nvar app = builder.Build();\n\n// Configure pipeline\nif (app.Environment.IsDevelopment())\n{\n    app.UseSwagger();\n    app.UseSwaggerUI();\n}\n\napp.UseHttpsRedirection();\napp.UseAuthorization();\napp.MapControllers();\n\napp.Run();\n\n// UserController.cs\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class UsersController : ControllerBase\n{\n    [HttpGet]\n    public ActionResult<IEnumerable<User>> GetUsers() { ... }\n    \n    [HttpGet(\"{id}\")]\n    public ActionResult<User> GetUser(int id) { ... }\n    \n    [HttpPost]\n    public ActionResult<User> CreateUser(User user) { ... }\n    \n    [HttpPut(\"{id}\")]\n    public IActionResult UpdateUser(int id, User user) { ... }\n    \n    [HttpDelete(\"{id}\")]\n    public IActionResult DeleteUser(int id) { ... }\n}",
+              "title": "<strong>REST API with Swagger in .NET</strong>"
             }
           }
         ]
@@ -681,8 +681,8 @@
             "emoji": "🔑",
             "title": "JWT Authentication",
             "box": {
-              "content": "<strong>JWT-based authentication flow</strong>",
-              "code": "// JWT Structure: Header.Payload.Signature\n// Example JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\n\n// OpenAPI security scheme definition\ncomponents:\n  securitySchemes:\n    bearerAuth:\n      type: http\n      scheme: bearer\n      bearerFormat: JWT\n\n// Applying security to endpoints\npaths:\n  /users:\n    get:\n      security:\n        - bearerAuth: []\n      responses:\n        '200':\n          description: Success\n\n// ASP.NET Core JWT configuration\nservices.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n    .AddJwtBearer(options =>\n    {\n        options.TokenValidationParameters = new TokenValidationParameters\n        {\n            ValidateIssuer = true,\n            ValidateAudience = true,\n            ValidateLifetime = true,\n            ValidateIssuerSigningKey = true,\n            ValidIssuer = \"your-issuer\",\n            ValidAudience = \"your-audience\",\n            IssuerSigningKey = new SymmetricSecurityKey(\n                Encoding.UTF8.GetBytes(\"your-secret-key\"))\n        };\n    });"
+              "code": "// JWT Structure: Header.Payload.Signature\n// Example JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\n\n// OpenAPI security scheme definition\ncomponents:\n  securitySchemes:\n    bearerAuth:\n      type: http\n      scheme: bearer\n      bearerFormat: JWT\n\n// Applying security to endpoints\npaths:\n  /users:\n    get:\n      security:\n        - bearerAuth: []\n      responses:\n        '200':\n          description: Success\n\n// ASP.NET Core JWT configuration\nservices.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n    .AddJwtBearer(options =>\n    {\n        options.TokenValidationParameters = new TokenValidationParameters\n        {\n            ValidateIssuer = true,\n            ValidateAudience = true,\n            ValidateLifetime = true,\n            ValidateIssuerSigningKey = true,\n            ValidIssuer = \"your-issuer\",\n            ValidAudience = \"your-audience\",\n            IssuerSigningKey = new SymmetricSecurityKey(\n                Encoding.UTF8.GetBytes(\"your-secret-key\"))\n        };\n    });",
+              "title": "<strong>JWT-based authentication flow</strong>"
             }
           }
         ]

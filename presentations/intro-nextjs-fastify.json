@@ -8,23 +8,23 @@
           {
             "type": "title",
             "title": "Next.js 15 & Fastify Mastery",
-            "box": {
-              "content": "The Future of Full-stack Performance.",
-              "list": [
-                { "emoji": "🚀", "text": "<strong>Next.js 15:</strong> The Ultimate React Framework." },
-                { "emoji": "⚡", "text": "<strong>Fastify:</strong> Low Overhead, High Throughput." }
-              ]
-            }
+            "subtitle": "The Future of Full-stack Performance."
           },
           {
             "type": "content",
             "title": "Presenter",
             "box": {
-              "content": "Aravind Govindhasamy",
               "list": [
-                { "emoji": "👷", "text": "Elite Technical Architect" },
-                { "emoji": "🚀", "text": "Full-stack & Performance Lead" }
-              ]
+                {
+                  "emoji": "👷",
+                  "text": "Elite Technical Architect"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Full-stack & Performance Lead"
+                }
+              ],
+              "title": "Aravind Govindhasamy"
             }
           }
         ]
@@ -36,66 +36,90 @@
           {
             "type": "topic-title",
             "title": "1. The App Router Era",
-            "box": { "content": "Rethinking the Web with React Server Components." }
+            "subtitle": "Rethinking the Web with React Server Components."
           },
           {
             "type": "content",
             "title": "The App Router",
             "box": {
-              "content": "A paradigm shift in routing, focusing on modularity and server-centric rendering.",
               "list": [
-                { "emoji": "📂", "text": "<strong>Directory-based:</strong> Routes are defined by folders." },
-                { "emoji": "🏗️", "text": "<strong>Layout-first:</strong> Nested layouts are a first-class citizen." }
-              ]
+                {
+                  "emoji": "📂",
+                  "text": "<strong>Directory-based:</strong> Routes are defined by folders."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Layout-first:</strong> Nested layouts are a first-class citizen."
+                }
+              ],
+              "title": "A paradigm shift in routing, focusing on modularity and server-centric rendering."
             }
           },
           {
             "type": "content",
             "title": "React Server Components (RSC)",
             "box": {
-              "content": "Render components on the server to reduce client-side JS and improve performance.",
               "list": [
-                { "emoji": "📉", "text": "<strong>Zero JS:</strong> RSCs don't send JS to the client." },
-                { "emoji": "🔌", "text": "<strong>Direct DB Access:</strong> Fetch data directly in your components." }
-              ]
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Zero JS:</strong> RSCs don't send JS to the client."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Direct DB Access:</strong> Fetch data directly in your components."
+                }
+              ],
+              "title": "Render components on the server to reduce client-side JS and improve performance."
             }
           },
           {
             "type": "content",
             "title": "Turbopack",
             "box": {
-              "content": "The next-generation bundler, written in Rust, for lightning-fast development builds.",
               "list": [
-                { "emoji": "🦀", "text": "<strong>Rust-powered:</strong> Optimized for speed and concurrency." },
-                { "emoji": "🔥", "text": "<strong>Fast Refresh:</strong> Instant updates during development." }
-              ]
+                {
+                  "emoji": "🦀",
+                  "text": "<strong>Rust-powered:</strong> Optimized for speed and concurrency."
+                },
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>Fast Refresh:</strong> Instant updates during development."
+                }
+              ],
+              "title": "The next-generation bundler, written in Rust, for lightning-fast development builds."
             }
           },
           {
             "type": "content",
             "title": "Server Components Code",
             "box": {
-              "content": "Declarative data fetching in the component body.",
-              "code": "async function Page() {\n  const data = await fetch('https://api.example.com');\n  return <div>{data.title}</div>;\n}"
+              "code": "async function Page() {\n  const data = await fetch('https://api.example.com');\n  return <div>{data.title}</div>;\n}",
+              "title": "Declarative data fetching in the component body."
             }
           },
           {
             "type": "content",
             "title": "Caching by Default",
             "box": {
-              "content": "Next.js 15 optimizes your app by caching data and rendered results automatically.",
               "list": [
-                { "emoji": "📦", "text": "<strong>Request Memoization:</strong> Fetch the same data multiple times in one request without extra calls." },
-                { "emoji": "⚡", "text": "<strong>Data Cache:</strong> Persistence across multiple requests." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Request Memoization:</strong> Fetch the same data multiple times in one request without extra calls."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Data Cache:</strong> Persistence across multiple requests."
+                }
+              ],
+              "title": "Next.js 15 optimizes your app by caching data and rendered results automatically."
             }
           },
           {
             "type": "content",
             "title": "Streaming with Suspense",
             "box": {
-              "content": "Improve perceived performance by streaming parts of the page as they become ready.",
-              "code": "<Suspense fallback={<Loading />}>\n  <SlowComponent />\n</Suspense>"
+              "code": "<Suspense fallback={<Loading />}>\n  <SlowComponent />\n</Suspense>",
+              "title": "Improve perceived performance by streaming parts of the page as they become ready."
             }
           }
         ]
@@ -107,55 +131,73 @@
           {
             "type": "topic-title",
             "title": "2. Scaling with Fastify",
-            "box": { "content": "The high-performance custom server for Next.js." }
+            "subtitle": "The high-performance custom server for Next.js."
           },
           {
             "type": "content",
             "title": "Why Fastify?",
             "box": {
-              "content": "Fastify is significantly faster than Express and has a modern, plugin-based architecture.",
               "list": [
-                { "emoji": "📈", "text": "<strong>Speed:</strong> One of the fastest web frameworks in the Node.js ecosystem." },
-                { "emoji": "🧩", "text": "<strong>Encapsulation:</strong> Plugins make it easy to organize code." }
-              ]
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Speed:</strong> One of the fastest web frameworks in the Node.js ecosystem."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Encapsulation:</strong> Plugins make it easy to organize code."
+                }
+              ],
+              "title": "Fastify is significantly faster than Express and has a modern, plugin-based architecture."
             }
           },
           {
             "type": "content",
             "title": "The Custom Server Setup",
             "box": {
-              "content": "Integrating Next.js into the Fastify request lifecycle.",
-              "code": "fastify.all('*', (req, reply) => {\n  return handle(req.raw, reply.raw);\n});"
+              "code": "fastify.all('*', (req, reply) => {\n  return handle(req.raw, reply.raw);\n});",
+              "title": "Integrating Next.js into the Fastify request lifecycle."
             }
           },
           {
             "type": "content",
             "title": "Fastify Plugins",
             "box": {
-              "content": "Leveraging the Fastify ecosystem for everything from DB connections to validation.",
               "list": [
-                { "emoji": "📦", "text": "<strong>fastify-cors:</strong> Standard CORS support." },
-                { "emoji": "🛡️", "text": "<strong>fastify-helmet:</strong> Security headers made easy." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>fastify-cors:</strong> Standard CORS support."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>fastify-helmet:</strong> Security headers made easy."
+                }
+              ],
+              "title": "Leveraging the Fastify ecosystem for everything from DB connections to validation."
             }
           },
           {
             "type": "content",
             "title": "Schema Validation with AJV",
             "box": {
-              "content": "Built-in JSON Schema validation for high throughput and security.",
-              "code": "fastify.post('/api', { schema: { body: mySchema } }, handler);"
+              "code": "fastify.post('/api', { schema: { body: mySchema } }, handler);",
+              "title": "Built-in JSON Schema validation for high throughput and security."
             }
           },
           {
             "type": "content",
             "title": "Pino: Elite Logging",
             "box": {
-              "content": "Fastify comes with Pino, the fastest Node.js logger, built-in.",
               "list": [
-                { "emoji": "📝", "text": "<strong>Low Overhead:</strong> Log without blocking the event loop." },
-                { "emoji": "🔍", "text": "<strong>Structured:</strong> Easy to parse and analyze in production." }
-              ]
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Low Overhead:</strong> Log without blocking the event loop."
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Structured:</strong> Easy to parse and analyze in production."
+                }
+              ],
+              "title": "Fastify comes with Pino, the fastest Node.js logger, built-in."
             }
           }
         ]
@@ -167,52 +209,64 @@
           {
             "type": "topic-title",
             "title": "3. Interactive Foundations",
-            "box": { "content": "Mastering mutations and caching in Next.js 15." }
+            "subtitle": "Mastering mutations and caching in Next.js 15."
           },
           {
             "type": "content",
             "title": "Server Actions",
             "box": {
-              "content": "Define server-side logic that can be called directly from client components.",
-              "code": "'use server';\n\nexport async function createProject(formData: FormData) {\n  await db.project.create({ title: formData.get('title') });\n  revalidatePath('/projects');\n}"
+              "code": "'use server';\n\nexport async function createProject(formData: FormData) {\n  await db.project.create({ title: formData.get('title') });\n  revalidatePath('/projects');\n}",
+              "title": "Define server-side logic that can be called directly from client components."
             }
           },
           {
             "type": "content",
             "title": "Type-safe Mutations",
             "box": {
-              "content": "Leveraging TypeScript to ensure that the data you send to the server is always valid.",
               "list": [
-                { "emoji": "🛡️", "text": "<strong>Zod Validation:</strong> Validate formData on the server." },
-                { "emoji": "🧩", "text": "<strong>Shared Types:</strong> Reuse types between client and server." }
-              ]
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Zod Validation:</strong> Validate formData on the server."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Shared Types:</strong> Reuse types between client and server."
+                }
+              ],
+              "title": "Leveraging TypeScript to ensure that the data you send to the server is always valid."
             }
           },
           {
             "type": "content",
             "title": "Cache Tagging & Revalidation",
             "box": {
-              "content": "Fine-grained control over when your data should be updated.",
-              "code": "fetch('...', { next: { tags: ['projects'] } });\nrevalidateTag('projects');"
+              "code": "fetch('...', { next: { tags: ['projects'] } });\nrevalidateTag('projects');",
+              "title": "Fine-grained control over when your data should be updated."
             }
           },
           {
             "type": "content",
             "title": "Partial Prerendering (PPR)",
             "box": {
-              "content": "A new optimization that combines static shell with dynamic islands of content.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>Instant Shell:</strong> The static part of your page loads immediately." },
-                { "emoji": "🌊", "text": "<strong>Streaming Dynamic:</strong> Dynamic parts are streamed in as they're ready." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Instant Shell:</strong> The static part of your page loads immediately."
+                },
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>Streaming Dynamic:</strong> Dynamic parts are streamed in as they're ready."
+                }
+              ],
+              "title": "A new optimization that combines static shell with dynamic islands of content."
             }
           },
           {
             "type": "content",
             "title": "Optimistic Updates with useOptimistic",
             "box": {
-              "content": "A React hook that allows you to update the UI immediately during a server action.",
-              "code": "const [optimisticState, addOptimisticState] = useOptimistic(state, (curr, newVal) => [...curr, newVal]);"
+              "code": "const [optimisticState, addOptimisticState] = useOptimistic(state, (curr, newVal) => [...curr, newVal]);",
+              "title": "A React hook that allows you to update the UI immediately during a server action."
             }
           }
         ]
@@ -224,58 +278,82 @@
           {
             "type": "topic-title",
             "title": "4. Complex UI Architectures",
-            "box": { "content": "Mastering Parallel and Intercepting Routes." }
+            "subtitle": "Mastering Parallel and Intercepting Routes."
           },
           {
             "type": "content",
             "title": "Parallel Routes",
             "box": {
-              "content": "Render multiple pages in the same layout simultaneously.",
               "list": [
-                { "emoji": "📊", "text": "<strong>Dashboards:</strong> Complex UIs with independent sections." },
-                { "emoji": "🏗️", "text": "<strong>Slots:</strong> Use @folder naming convention to define slots in layouts." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Dashboards:</strong> Complex UIs with independent sections."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Slots:</strong> Use @folder naming convention to define slots in layouts."
+                }
+              ],
+              "title": "Render multiple pages in the same layout simultaneously."
             }
           },
           {
             "type": "content",
             "title": "Intercepting Routes",
             "box": {
-              "content": "Load a route from another part of your application within the current context (e.g., photo modals).",
               "list": [
-                { "emoji": "🖼️", "text": "<strong>Modal Pattern:</strong> Open a modal with a URL that can be shared." },
-                { "emoji": "🔙", "text": "<strong>Soft/Hard Navigation:</strong> Seamlessly handle back button and direct refresh." }
-              ]
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Modal Pattern:</strong> Open a modal with a URL that can be shared."
+                },
+                {
+                  "emoji": "🔙",
+                  "text": "<strong>Soft/Hard Navigation:</strong> Seamlessly handle back button and direct refresh."
+                }
+              ],
+              "title": "Load a route from another part of your application within the current context (e.g., photo modals)."
             }
           },
           {
             "type": "content",
             "title": "Global Metadata API",
             "box": {
-              "content": "Dynamic and static metadata for SEO and social sharing.",
-              "code": "export async function generateMetadata({ params }) {\n  const product = await getProduct(params.id);\n  return { title: product.name };\n}"
+              "code": "export async function generateMetadata({ params }) {\n  const product = await getProduct(params.id);\n  return { title: product.name };\n}",
+              "title": "Dynamic and static metadata for SEO and social sharing."
             }
           },
           {
             "type": "content",
             "title": "Streaming with Slots",
             "box": {
-              "content": "Combining Parallel Routes with Suspense for an optimized user experience.",
               "list": [
-                { "emoji": "🌊", "text": "<strong>Independent Loading:</strong> Each slot can have its own loading state." },
-                { "emoji": "✨", "text": "<strong>Polished UI:</strong> No more blank screens while waiting for data." }
-              ]
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>Independent Loading:</strong> Each slot can have its own loading state."
+                },
+                {
+                  "emoji": "✨",
+                  "text": "<strong>Polished UI:</strong> No more blank screens while waiting for data."
+                }
+              ],
+              "title": "Combining Parallel Routes with Suspense for an optimized user experience."
             }
           },
           {
             "type": "content",
             "title": "Configuring Environments",
             "box": {
-              "content": "Professional management of environment variables in Next.js 15.",
               "list": [
-                { "emoji": "🔐", "text": "<strong>.env.local:</strong> Secure local development." },
-                { "emoji": "🌍", "text": "<strong>Build-time vs Runtime:</strong> Understanding when variables are injected." }
-              ]
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>.env.local:</strong> Secure local development."
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Build-time vs Runtime:</strong> Understanding when variables are injected."
+                }
+              ],
+              "title": "Professional management of environment variables in Next.js 15."
             }
           }
         ]
@@ -288,19 +366,25 @@
             "type": "content",
             "title": "Fast JSON Stringify",
             "box": {
-              "content": "Why Fastify is so fast: it uses pre-compiled schemas for serialization.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>2x-5x Faster:</strong> Significantly faster than standard JSON.stringify." },
-                { "emoji": "🧱", "text": "<strong>Validation:</strong> Ensures your outgoing data matches your API contract." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>2x-5x Faster:</strong> Significantly faster than standard JSON.stringify."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Validation:</strong> Ensures your outgoing data matches your API contract."
+                }
+              ],
+              "title": "Why Fastify is so fast: it uses pre-compiled schemas for serialization."
             }
           },
           {
             "type": "content",
             "title": "Schema Best Practices",
             "box": {
-              "content": "Reusing schemas for both validation and serialization to minimize boilerplate.",
-              "code": "const mySchema = { type: 'object', properties: { id: { type: 'string' } } };\nfastify.get('/item', { schema: { response: { 200: mySchema } } }, handler);"
+              "code": "const mySchema = { type: 'object', properties: { id: { type: 'string' } } };\nfastify.get('/item', { schema: { response: { 200: mySchema } } }, handler);",
+              "title": "Reusing schemas for both validation and serialization to minimize boilerplate."
             }
           }
         ]
@@ -313,19 +397,25 @@
             "type": "content",
             "title": "Pino & OpenTelemetry",
             "box": {
-              "content": "Gaining visibility into your production environment.",
               "list": [
-                { "emoji": "📊", "text": "<strong>Tracing:</strong> Track requests across Next.js and Fastify boundaries." },
-                { "emoji": "🪵", "text": "<strong>Structured Logs:</strong> Centralize your Pino logs for analysis." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Tracing:</strong> Track requests across Next.js and Fastify boundaries."
+                },
+                {
+                  "emoji": "🪵",
+                  "text": "<strong>Structured Logs:</strong> Centralize your Pino logs for analysis."
+                }
+              ],
+              "title": "Gaining visibility into your production environment."
             }
           },
           {
             "type": "content",
             "title": "Health Checks",
             "box": {
-              "content": "Ensuring your application is ready to receive traffic.",
-              "code": "fastify.get('/health', async () => ({ status: 'ok' }));"
+              "code": "fastify.get('/health', async () => ({ status: 'ok' }));",
+              "title": "Ensuring your application is ready to receive traffic."
             }
           }
         ]
@@ -337,47 +427,65 @@
           {
             "type": "topic-title",
             "title": "5. Securing the Full Stack",
-            "box": { "content": "Protecting your Next.js and Fastify applications." }
+            "subtitle": "Protecting your Next.js and Fastify applications."
           },
           {
             "type": "content",
             "title": "Next.js Middleware",
             "box": {
-              "content": "Run code before a request is completed, perfect for auth and redirect logic.",
-              "code": "export function middleware(request: NextRequest) {\n  if (!request.cookies.get('token')) {\n    return NextResponse.redirect(new URL('/login', request.url));\n  }\n}"
+              "code": "export function middleware(request: NextRequest) {\n  if (!request.cookies.get('token')) {\n    return NextResponse.redirect(new URL('/login', request.url));\n  }\n}",
+              "title": "Run code before a request is completed, perfect for auth and redirect logic."
             }
           },
           {
             "type": "content",
             "title": "Fastify Hooks",
             "box": {
-              "content": "Fastify's version of middleware, allowing you to intercept requests at various stages of their lifecycle.",
               "list": [
-                { "emoji": "🪝", "text": "<strong>onRequest:</strong> Very early in the request lifecycle." },
-                { "emoji": "🛡️", "text": "<strong>preValidation:</strong> Ideal for security checks." }
-              ]
+                {
+                  "emoji": "🪝",
+                  "text": "<strong>onRequest:</strong> Very early in the request lifecycle."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>preValidation:</strong> Ideal for security checks."
+                }
+              ],
+              "title": "Fastify's version of middleware, allowing you to intercept requests at various stages of their lifecycle."
             }
           },
           {
             "type": "content",
             "title": "Content Security Policy (CSP)",
             "box": {
-              "content": "Protecting your app from XSS and other injection attacks by defining which resources are allowed to load.",
               "list": [
-                { "emoji": "🧱", "text": "<strong>Strict:</strong> Only allow known sources." },
-                { "emoji": "🛡️", "text": "<strong>Nonces:</strong> Using nonces to allow specific scripts." }
-              ]
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Strict:</strong> Only allow known sources."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Nonces:</strong> Using nonces to allow specific scripts."
+                }
+              ],
+              "title": "Protecting your app from XSS and other injection attacks by defining which resources are allowed to load."
             }
           },
           {
             "type": "content",
             "title": "Authentication in Next.js 15",
             "box": {
-              "content": "Modern patterns for managing user identity using NextAuth.js or custom session logic.",
               "list": [
-                { "emoji": "🔑", "text": "<strong>Social Login:</strong> Easy integration with Google, GitHub, etc." },
-                { "emoji": "🔒", "text": "<strong>Stateless:</strong> Leveraging JWTs for scalable authentication." }
-              ]
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Social Login:</strong> Easy integration with Google, GitHub, etc."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Stateless:</strong> Leveraging JWTs for scalable authentication."
+                }
+              ],
+              "title": "Modern patterns for managing user identity using NextAuth.js or custom session logic."
             }
           }
         ]
@@ -389,47 +497,65 @@
           {
             "type": "topic-title",
             "title": "6. Shipping to Production",
-            "box": { "content": "Modern deployment strategies for Next.js 15." }
+            "subtitle": "Modern deployment strategies for Next.js 15."
           },
           {
             "type": "content",
             "title": "Standalone Mode",
             "box": {
-              "content": "Next.js can automatically create a minimal standalone build directory that includes only the necessary files for production.",
-              "code": "// next.config.js\nmodule.exports = { output: 'standalone' };"
+              "code": "// next.config.js\nmodule.exports = { output: 'standalone' };",
+              "title": "Next.js can automatically create a minimal standalone build directory that includes only the necessary files for production."
             }
           },
           {
             "type": "content",
             "title": "Docker Optimization",
             "box": {
-              "content": "Building small, secure, and fast Docker images for your Next.js and Fastify app.",
               "list": [
-                { "emoji": "🐳", "text": "<strong>Multi-stage Builds:</strong> Keep your final image lean." },
-                { "emoji": "🛡️", "text": "<strong>Non-root User:</strong> Better security in production." }
-              ]
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Multi-stage Builds:</strong> Keep your final image lean."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Non-root User:</strong> Better security in production."
+                }
+              ],
+              "title": "Building small, secure, and fast Docker images for your Next.js and Fastify app."
             }
           },
           {
             "type": "content",
             "title": "Edge Runtimes",
             "box": {
-              "content": "Deploying parts of your application to the edge for the lowest possible latency.",
               "list": [
-                { "emoji": "🌍", "text": "<strong>Global:</strong> Your code runs in regions close to your users." },
-                { "emoji": "⚡", "text": "<strong>Fast:</strong> Minimal startup time and high performance." }
-              ]
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Global:</strong> Your code runs in regions close to your users."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast:</strong> Minimal startup time and high performance."
+                }
+              ],
+              "title": "Deploying parts of your application to the edge for the lowest possible latency."
             }
           },
           {
             "type": "content",
             "title": "Scaling Fastify",
             "box": {
-              "content": "Leveraging Fastify's high performance to handle massive traffic with minimal resources.",
               "list": [
-                { "emoji": "📈", "text": "<strong>Horizontal Scaling:</strong> Run multiple instances behind a load balancer." },
-                { "emoji": "🧱", "text": "<strong>Cluster Mode:</strong> Utilize all CPU cores on a single machine." }
-              ]
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Horizontal Scaling:</strong> Run multiple instances behind a load balancer."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Cluster Mode:</strong> Utilize all CPU cores on a single machine."
+                }
+              ],
+              "title": "Leveraging Fastify's high performance to handle massive traffic with minimal resources."
             }
           }
         ]
@@ -441,47 +567,65 @@
           {
             "type": "topic-title",
             "title": "7. Quality Assurance",
-            "box": { "content": "Testing strategies for modern Next.js 15 applications." }
+            "subtitle": "Testing strategies for modern Next.js 15 applications."
           },
           {
             "type": "content",
             "title": "Vitest for Server Logic",
             "box": {
-              "content": "Testing your Server Actions and utilities with Vite's high-performance test runner.",
-              "code": "test('action creates project', async () => {\n  const formData = new FormData();\n  formData.append('title', 'New Project');\n  await createProject(formData);\n  expect(db.project.create).toHaveBeenCalled();\n});"
+              "code": "test('action creates project', async () => {\n  const formData = new FormData();\n  formData.append('title', 'New Project');\n  await createProject(formData);\n  expect(db.project.create).toHaveBeenCalled();\n});",
+              "title": "Testing your Server Actions and utilities with Vite's high-performance test runner."
             }
           },
           {
             "type": "content",
             "title": "Playwright for E2E",
             "box": {
-              "content": "The gold standard for end-to-end testing, ensuring your App Router pages and Server Actions work in real browsers.",
               "list": [
-                { "emoji": "🎭", "text": "<strong>Realistic:</strong> Test across Chromium, Firefox, and WebKit." },
-                { "emoji": "🏎️", "text": "<strong>Parallel:</strong> Run hundreds of tests in minutes." }
-              ]
+                {
+                  "emoji": "🎭",
+                  "text": "<strong>Realistic:</strong> Test across Chromium, Firefox, and WebKit."
+                },
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Parallel:</strong> Run hundreds of tests in minutes."
+                }
+              ],
+              "title": "The gold standard for end-to-end testing, ensuring your App Router pages and Server Actions work in real browsers."
             }
           },
           {
             "type": "content",
             "title": "Mocking External APIs",
             "box": {
-              "content": "Strategies for isolating your tests by mocking database calls and downstream services.",
               "list": [
-                { "emoji": "🧩", "text": "<strong>Service Mocking:</strong> Use MSW or custom mocks." },
-                { "emoji": "🚥", "text": "<strong>Predictable:</strong> Ensure your tests are not flaky due to external dependencies." }
-              ]
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Service Mocking:</strong> Use MSW or custom mocks."
+                },
+                {
+                  "emoji": "🚥",
+                  "text": "<strong>Predictable:</strong> Ensure your tests are not flaky due to external dependencies."
+                }
+              ],
+              "title": "Strategies for isolating your tests by mocking database calls and downstream services."
             }
           },
           {
             "type": "content",
             "title": "Integration Testing",
             "box": {
-              "content": "Verifying the interaction between Next.js frontend and Fastify backend components.",
               "list": [
-                { "emoji": "🛡️", "text": "<strong>End-to-End:</strong> Validate the entire request-response flow." },
-                { "emoji": "🚥", "text": "<strong>Contract Testing:</strong> Ensure API boundaries remain stable." }
-              ]
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>End-to-End:</strong> Validate the entire request-response flow."
+                },
+                {
+                  "emoji": "🚥",
+                  "text": "<strong>Contract Testing:</strong> Ensure API boundaries remain stable."
+                }
+              ],
+              "title": "Verifying the interaction between Next.js frontend and Fastify backend components."
             }
           }
         ]
@@ -493,46 +637,69 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The Future of Full-stack with Next.js 15." }
+            "subtitle": "The Future of Full-stack with Next.js 15."
           },
           {
             "type": "content",
             "title": "Why Next.js 15 & Fastify?",
             "box": {
-              "content": "A perfect synergy of modern developer experience and industrial-grade backend performance.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Elite Architecture:</strong> Built on React Server Components." },
-                { "emoji": "⚡", "text": "<strong>Throughput:</strong> Fastify handles the heaviest loads with ease." },
-                { "emoji": "🌍", "text": "<strong>Ready for the Edge:</strong> Global delivery baked-in." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Elite Architecture:</strong> Built on React Server Components."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Throughput:</strong> Fastify handles the heaviest loads with ease."
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Ready for the Edge:</strong> Global delivery baked-in."
+                }
+              ],
+              "title": "A perfect synergy of modern developer experience and industrial-grade backend performance."
             }
           },
           {
             "type": "content",
             "title": "The Road Ahead",
             "box": {
-              "content": "Stay updated with the latest in the Next.js and Fastify ecosystems.",
               "list": [
-                { "emoji": "📈", "text": "<strong>Evolution:</strong> Expect even deeper React integration and performance gains." },
-                { "emoji": "🔧", "text": "<strong>Tooling:</strong> Turbopack and other Rust-based tools will continue to mature." }
-              ]
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Evolution:</strong> Expect even deeper React integration and performance gains."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tooling:</strong> Turbopack and other Rust-based tools will continue to mature."
+                }
+              ],
+              "title": "Stay updated with the latest in the Next.js and Fastify ecosystems."
             }
           },
           {
             "type": "content",
             "title": "Next Steps",
             "box": {
-              "content": "Build your first elite app with this stack today.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>Practice:</strong> Migrate an existing app or start a new project." },
-                { "emoji": "📚", "text": "<strong>Learn:</strong> Explore the official documentation and community resources." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Practice:</strong> Migrate an existing app or start a new project."
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Learn:</strong> Explore the official documentation and community resources."
+                }
+              ],
+              "title": "Build your first elite app with this stack today."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you for joining! Any questions?" }
+            "box": {
+              "title": "Thank you for joining! Any questions?"
+            }
           }
         ]
       }

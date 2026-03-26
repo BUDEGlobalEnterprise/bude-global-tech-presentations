@@ -34,15 +34,12 @@
           {
             "type": "topic-title",
             "title": "1. Introduction & History",
-            "box": {
-              "content": "The evolution of the language that redefined Apple software"
-            }
+            "subtitle": "The evolution of the language that redefined Apple software"
           },
           {
             "type": "content",
             "title": "What is Swift?",
             "box": {
-              "content": "Swift is a powerful and intuitive programming language created by Apple for building apps for iOS, Mac, Apple TV, and Apple Watch. It was designed to replace Objective-C, combining the <span class=\"highlight\">performance</span> of compiled languages with the <span class=\"highlight\">modernity</span> of scripting languages. Swift is open-source (Swift.org) and has rapidly grown into one of the most popular languages in the world.",
               "list": [
                 {
                   "emoji": "🛡️",
@@ -56,31 +53,50 @@
                   "emoji": "✍️",
                   "text": "<strong>Expressive Syntax:</strong> Code is concise yet readable, often feeling as lightweight as Python or Ruby while maintaining static type safety."
                 }
-              ]
+              ],
+              "title": "Swift is a powerful and intuitive programming language created by Apple for building apps for iOS, Mac, Apple TV, and Apple Watch. It was designed to replace Objective-C, combining the <span class=\"highlight\">performance</span> of compiled languages with the <span class=\"highlight\">modernity</span> of scripting languages. Swift is open-source (Swift.org) and has rapidly grown into one of the most popular languages in the world."
             }
           },
           {
             "type": "content",
             "title": "The Origins: Chris Lattner & Google",
             "box": {
-              "content": "Swift development began in July 2010 by Chris Lattner, who also created LLVM and Clang. Lattner drew inspiration from many languages (C++, Objective-C, Rust, Haskell, Ruby, and Python) to create a language that could span from low-level systems programming to high-level application development.",
               "list": [
-                { "emoji": "📅", "text": "<strong>2010:</strong> Secret development starts at Apple." },
-                { "emoji": "📅", "text": "<strong>2014:</strong> Version 1.0 announced at WWDC." },
-                { "emoji": "📅", "text": "<strong>2015:</strong> Swift goes Open Source (v2.2)." }
-              ]
+                {
+                  "emoji": "📅",
+                  "text": "<strong>2010:</strong> Secret development starts at Apple."
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>2014:</strong> Version 1.0 announced at WWDC."
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>2015:</strong> Swift goes Open Source (v2.2)."
+                }
+              ],
+              "title": "Swift development began in July 2010 by Chris Lattner, who also created LLVM and Clang. Lattner drew inspiration from many languages (C++, Objective-C, Rust, Haskell, Ruby, and Python) to create a language that could span from low-level systems programming to high-level application development."
             }
           },
           {
             "type": "content",
             "title": "The Three Pillars of Swift",
             "box": {
-              "content": "Swift was built from the ground up to satisfy three main goals, often referred to as its core pillars. Every new feature added to the language must align with these values.",
               "list": [
-                { "emoji": "🔒", "text": "<strong>Safe:</strong> Variables are always initialized, arrays are checked for out-of-bounds, and integer overflow is caught." },
-                { "emoji": "⚡", "text": "<strong>Fast:</strong> Swift is intended as a replacement for C-based languages (C, C++, and Objective-C)." },
-                { "emoji": "🎨", "text": "<strong>Expressive:</strong> Swift provides many modern features developers expect, like Generics, Closures, and Optionals." }
-              ]
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Safe:</strong> Variables are always initialized, arrays are checked for out-of-bounds, and integer overflow is caught."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast:</strong> Swift is intended as a replacement for C-based languages (C, C++, and Objective-C)."
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Expressive:</strong> Swift provides many modern features developers expect, like Generics, Closures, and Optionals."
+                }
+              ],
+              "title": "Swift was built from the ground up to satisfy three main goals, often referred to as its core pillars. Every new feature added to the language must align with these values."
             }
           }
         ]
@@ -92,34 +108,43 @@
           {
             "type": "topic-title",
             "title": "2. Environment & Tooling",
-            "box": { "content": "Mastering the Apple Development Stack" }
+            "subtitle": "Mastering the Apple Development Stack"
           },
           {
             "type": "content",
             "title": "Xcode: The Command Center",
             "box": {
-              "content": "Xcode is Apple's integrated development environment (IDE) for macOS. It includes everything you need to create apps for every Apple platform: a source code editor, asset management tools, simulators, and debugging instruments.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Interface Builder:</strong> Visual designer for UIs." },
-                { "emoji": "📱", "text": "<strong>Simulators:</strong> Test on iPhone/iPad/Watch directly on your Mac." },
-                { "emoji": "🔍", "text": "<strong>Instruments:</strong> Professional performance profiling (Memory, CPU, Battery)." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Interface Builder:</strong> Visual designer for UIs."
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Simulators:</strong> Test on iPhone/iPad/Watch directly on your Mac."
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Instruments:</strong> Professional performance profiling (Memory, CPU, Battery)."
+                }
+              ],
+              "title": "Xcode is Apple's integrated development environment (IDE) for macOS. It includes everything you need to create apps for every Apple platform: a source code editor, asset management tools, simulators, and debugging instruments."
             }
           },
           {
             "type": "content",
             "title": "Swift Playgrounds",
             "box": {
-              "content": "Playgrounds are a revolutionary way to write Swift code. They allow you to see the results of your code immediately as you type, without the need to compile and run an entire app. It's the ultimate tool for rapid prototyping and learning.",
-              "code": "import UIKit\n\nlet label = UILabel()\nlabel.text = \"Hello, SwiftUI!\"\nlabel.textColor = .systemBlue\nlabel.sizeToFit()\n\n// The result is rendered instantly in the sidebar!"
+              "code": "import UIKit\n\nlet label = UILabel()\nlabel.text = \"Hello, SwiftUI!\"\nlabel.textColor = .systemBlue\nlabel.sizeToFit()\n\n// The result is rendered instantly in the sidebar!",
+              "title": "Playgrounds are a revolutionary way to write Swift code. They allow you to see the results of your code immediately as you type, without the need to compile and run an entire app. It's the ultimate tool for rapid prototyping and learning."
             }
           },
           {
             "type": "content",
             "title": "Swift Package Manager (SPM)",
             "box": {
-              "content": "SPM is the official tool for managing the distribution of Swift code. It is integrated directly into the Swift build system to automate the process of downloading, compiling, and linking dependencies.",
-              "code": "// Package.swift\nlet package = Package(\n    name: \"MyAwesomeApp\",\n    dependencies: [\n        .package(url: \"https://github.com/apple/swift-algorithms\", from: \"1.0.0\")\n    ]\n)"
+              "code": "// Package.swift\nlet package = Package(\n    name: \"MyAwesomeApp\",\n    dependencies: [\n        .package(url: \"https://github.com/apple/swift-algorithms\", from: \"1.0.0\")\n    ]\n)",
+              "title": "SPM is the official tool for managing the distribution of Swift code. It is integrated directly into the Swift build system to automate the process of downloading, compiling, and linking dependencies."
             }
           }
         ]
@@ -131,52 +156,61 @@
           {
             "type": "topic-title",
             "title": "3. Language Basics",
-            "box": { "content": "Syntax, Variables, and Types" }
+            "subtitle": "Syntax, Variables, and Types"
           },
           {
             "type": "content",
             "emoji": "💬",
             "title": "Constants and Variables",
             "box": {
-              "content": "Swift strongly encourages the use of constants wherever possible. This 'Immutability by Default' makes code safer and easier for the compiler to optimize.",
-              "code": "/* Constants - Immutable (Recommended) */\nlet maximumLoginAttempts = 10\n\n/* Variables - Mutable */\nvar currentLoginAttempt = 0\n\n// Trying to change a 'let' will cause a compiler error!\n// maximumLoginAttempts = 11 // ERROR"
+              "code": "/* Constants - Immutable (Recommended) */\nlet maximumLoginAttempts = 10\n\n/* Variables - Mutable */\nvar currentLoginAttempt = 0\n\n// Trying to change a 'let' will cause a compiler error!\n// maximumLoginAttempts = 11 // ERROR",
+              "title": "Swift strongly encourages the use of constants wherever possible. This 'Immutability by Default' makes code safer and easier for the compiler to optimize."
             }
           },
           {
             "type": "content",
             "title": "Type Safety & Inference",
             "box": {
-              "content": "Swift is a type-safe language. It performs type checks when compiling your code and flags any mismatched types as errors. However, you don't always have to write the type explicitly; Swift's powerful **Type Inference** can figure it out.",
-              "code": "/* Type Inference */\nlet meaningOfLife = 42 // Inferred as Int\nlet pi = 3.14159       // Inferred as Double\nlet name = \"Antigravity\" // Inferred as String\n\n/* Explicit Type Annotation */\nvar score: Int = 100\nvar message: String\nmessage = \"Welcome!\""
+              "code": "/* Type Inference */\nlet meaningOfLife = 42 // Inferred as Int\nlet pi = 3.14159       // Inferred as Double\nlet name = \"Antigravity\" // Inferred as String\n\n/* Explicit Type Annotation */\nvar score: Int = 100\nvar message: String\nmessage = \"Welcome!\"",
+              "title": "Swift is a type-safe language. It performs type checks when compiling your code and flags any mismatched types as errors. However, you don't always have to write the type explicitly; Swift's powerful **Type Inference** can figure it out."
             }
           },
           {
             "type": "content",
             "title": "Strings and Characters",
             "box": {
-              "content": "Strings in Swift are Unicode-compliant and extremely powerful. String interpolation allows you to create new strings by including variable values directly within them.",
-              "code": "let name = \"Alice\"\nlet age = 30\n\n/* String Interpolation */\nlet greeting = \"Hello, \\(name)! You are \\(age) years old.\"\n\n/* Multi-line Literals */\nlet poem = \"\"\"\n    The woods are lovely, dark and deep,\n    But I have promises to keep,\n    And miles to go before I sleep.\n    \"\"\""
+              "code": "let name = \"Alice\"\nlet age = 30\n\n/* String Interpolation */\nlet greeting = \"Hello, \\(name)! You are \\(age) years old.\"\n\n/* Multi-line Literals */\nlet poem = \"\"\"\n    The woods are lovely, dark and deep,\n    But I have promises to keep,\n    And miles to go before I sleep.\n    \"\"\"",
+              "title": "Strings in Swift are Unicode-compliant and extremely powerful. String interpolation allows you to create new strings by including variable values directly within them."
             }
           },
           {
             "type": "content",
             "title": "Numeric Types & Conversion",
             "box": {
-              "content": "Swift provides a variety of numeric types (Int, Double, Float). Unlike some languages, Swift **does not perform implicit conversion** between numeric types, reinforcing safety.",
-              "code": "let integerVal: Int = 3\nlet doubleVal: Double = 0.14159\n\n/* Explicit Conversion Required */\nlet result = Double(integerVal) + doubleVal"
+              "code": "let integerVal: Int = 3\nlet doubleVal: Double = 0.14159\n\n/* Explicit Conversion Required */\nlet result = Double(integerVal) + doubleVal",
+              "title": "Swift provides a variety of numeric types (Int, Double, Float). Unlike some languages, Swift **does not perform implicit conversion** between numeric types, reinforcing safety."
             }
           },
           {
             "type": "content",
             "title": "Arrays, Sets, and Dictionaries",
             "box": {
-              "content": "Swift provides three primary collection types for storing groups of values. All collections in Swift are **Value Types**, meaning they are copied when passed around (though optimized using Copy-on-Write).",
               "list": [
-                { "emoji": "🔢", "text": "<strong>Arrays:</strong> Ordered collections of values: <code>[1, 2, 3]</code>" },
-                { "emoji": "🗂️", "text": "<strong>Dictionaries:</strong> Unordered Key-Value pairs: <code>[\"Key\": \"Value\"]</code>" },
-                { "emoji": "🎯", "text": "<strong>Sets:</strong> Unordered collections of unique values." }
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Arrays:</strong> Ordered collections of values: <code>[1, 2, 3]</code>"
+                },
+                {
+                  "emoji": "🗂️",
+                  "text": "<strong>Dictionaries:</strong> Unordered Key-Value pairs: <code>[\"Key\": \"Value\"]</code>"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Sets:</strong> Unordered collections of unique values."
+                }
               ],
-              "code": "var names = [\"Alice\", \"Bob\", \"Charlie\"]\nnames.append(\"Dave\")\n\nvar ages = [\"Alice\": 25, \"Bob\": 30]\nages[\"Charlie\"] = 35"
+              "code": "var names = [\"Alice\", \"Bob\", \"Charlie\"]\nnames.append(\"Dave\")\n\nvar ages = [\"Alice\": 25, \"Bob\": 30]\nages[\"Charlie\"] = 35",
+              "title": "Swift provides three primary collection types for storing groups of values. All collections in Swift are **Value Types**, meaning they are copied when passed around (though optimized using Copy-on-Write)."
             }
           }
         ]
@@ -188,46 +222,46 @@
           {
             "type": "topic-title",
             "title": "4. The Power of Optionals",
-            "box": { "content": "Swift's solution to the 'Billion Dollar Mistake' (Null Pointers)" }
+            "subtitle": "Swift's solution to the 'Billion Dollar Mistake' (Null Pointers)"
           },
           {
             "type": "content",
             "title": "What is an Optional?",
             "box": {
-              "content": "In many languages, variables can be `null` or `nil`, often leading to runtime crashes. In Swift, a variable **cannot** be nil unless it is explicitly declared as an **Optional**. An optional is like a box: it either contains a value of a specific type, or it contains nothing (nil).",
-              "code": "var normalString: String = \"Hello\" \n// normalString = nil // ERROR: Compile-time safety!\n\nvar optionalString: String? = \"Hello\"\noptionalString = nil // OK: This box can be empty"
+              "code": "var normalString: String = \"Hello\" \n// normalString = nil // ERROR: Compile-time safety!\n\nvar optionalString: String? = \"Hello\"\noptionalString = nil // OK: This box can be empty",
+              "title": "In many languages, variables can be `null` or `nil`, often leading to runtime crashes. In Swift, a variable **cannot** be nil unless it is explicitly declared as an **Optional**. An optional is like a box: it either contains a value of a specific type, or it contains nothing (nil)."
             }
           },
           {
             "type": "content",
             "title": "Safe Unwrapping: If-Let",
             "box": {
-              "content": "To access the value inside an optional 'box', you must safely 'unwrap' it. The <code>if let</code> statement is the most common way to do this. It checks if the optional has a value, and if so, makes that value available in a temporary constant.",
-              "code": "let possibleNumber: Int? = 42\n\nif let actualNumber = possibleNumber {\n    print(\"The number is \\(actualNumber)\")\n} else {\n    print(\"The box was empty!\")\n}"
+              "code": "let possibleNumber: Int? = 42\n\nif let actualNumber = possibleNumber {\n    print(\"The number is \\(actualNumber)\")\n} else {\n    print(\"The box was empty!\")\n}",
+              "title": "To access the value inside an optional 'box', you must safely 'unwrap' it. The <code>if let</code> statement is the most common way to do this. It checks if the optional has a value, and if so, makes that value available in a temporary constant."
             }
           },
           {
             "type": "content",
             "title": "The Guard Statement",
             "box": {
-              "content": "<code>guard</code> is another form of unwrapping that is particularly useful for 'early returns' in functions. It keeps the main logic of your function 'at the left margin' and uncluttered, while ensuring all required values are present.",
-              "code": "func greet(user: String?) {\n    guard let name = user else {\n        print(\"No name provided\")\n        return\n    }\n    \n    // 'name' is available for the rest of the function!\n    print(\"Hello, \\(name)!\")\n}"
+              "code": "func greet(user: String?) {\n    guard let name = user else {\n        print(\"No name provided\")\n        return\n    }\n    \n    // 'name' is available for the rest of the function!\n    print(\"Hello, \\(name)!\")\n}",
+              "title": "<code>guard</code> is another form of unwrapping that is particularly useful for 'early returns' in functions. It keeps the main logic of your function 'at the left margin' and uncluttered, while ensuring all required values are present."
             }
           },
           {
             "type": "content",
             "title": "Nil-Coalescing & Chaining",
             "box": {
-              "content": "Swift provides several shorthand operators to work with optionals concisely. **Nil-coalescing** provides a default value, while **Optional Chaining** allowing you to access properties of an optional only if it contains a value.",
-              "code": "/* Nil-Coalescing */\nlet userPref: String? = nil\nlet theme = userPref ?? \"Default-Dark\"\n\n/* Optional Chaining */\nlet viewHeight = view?.frame.size.height // Only accessed if view is not nil\n// viewHeight is inferred as Double?"
+              "code": "/* Nil-Coalescing */\nlet userPref: String? = nil\nlet theme = userPref ?? \"Default-Dark\"\n\n/* Optional Chaining */\nlet viewHeight = view?.frame.size.height // Only accessed if view is not nil\n// viewHeight is inferred as Double?",
+              "title": "Swift provides several shorthand operators to work with optionals concisely. **Nil-coalescing** provides a default value, while **Optional Chaining** allowing you to access properties of an optional only if it contains a value."
             }
           },
           {
             "type": "content",
             "title": "Forced Unwrapping (!)",
             "box": {
-              "content": "You can use <code>!</code> to force an optional to unwrap. However, if the optional is <code>nil</code> at runtime, the app will **crash**. This is generally discouraged unless you are 100% certain the value exists (e.g., resources bundled with the app).",
-              "code": "let definitelyExists: String! = \"Apple\"\nprint(definitelyExists!) // Works!\n\nlet mayBeNil: String? = nil\n// print(mayBeNil!) // CRASH: Unexpectedly found nil"
+              "code": "let definitelyExists: String! = \"Apple\"\nprint(definitelyExists!) // Works!\n\nlet mayBeNil: String? = nil\n// print(mayBeNil!) // CRASH: Unexpectedly found nil",
+              "title": "You can use <code>!</code> to force an optional to unwrap. However, if the optional is <code>nil</code> at runtime, the app will **crash**. This is generally discouraged unless you are 100% certain the value exists (e.g., resources bundled with the app)."
             }
           }
         ]
@@ -239,54 +273,54 @@
           {
             "type": "topic-title",
             "title": "5. Functions & Closures",
-            "box": { "content": "Flexible logic and first-class citizens" }
+            "subtitle": "Flexible logic and first-class citizens"
           },
           {
             "type": "content",
             "title": "Defining Functions",
             "box": {
-              "content": "Swift functions are defined using the <code>func</code> keyword. One of Swift's most distinct features is the use of **Argument Labels**, which allow functions to read like natural English sentences.",
-              "code": "/* Argument Labels: 'to' is the label, 'name' is the parameter */\nfunc sayHello(to name: String) -> String {\n    return \"Hello, \\(name)!\"\n}\n\n// Usage: Reads like a sentence\nprint(sayHello(to: \"Bude Global\"))"
+              "code": "/* Argument Labels: 'to' is the label, 'name' is the parameter */\nfunc sayHello(to name: String) -> String {\n    return \"Hello, \\(name)!\"\n}\n\n// Usage: Reads like a sentence\nprint(sayHello(to: \"Bude Global\"))",
+              "title": "Swift functions are defined using the <code>func</code> keyword. One of Swift's most distinct features is the use of **Argument Labels**, which allow functions to read like natural English sentences."
             }
           },
           {
             "type": "content",
             "title": "Parameter Shorthands",
             "box": {
-              "content": "You can omit argument labels using an underscore <code>_</code>, or provide default parameter values to make your functions more flexible.",
-              "code": "/* Underscore omits the label at call site */\nfunc add(_ a: Int, _ b: Int) -> Int {\n    return a + b\n}\n_ = add(5, 10)\n\n/* Default values */\nfunc greet(name: String = \"Guest\") {\n    print(\"Hello, \\(name)\")\n}"
+              "code": "/* Underscore omits the label at call site */\nfunc add(_ a: Int, _ b: Int) -> Int {\n    return a + b\n}\n_ = add(5, 10)\n\n/* Default values */\nfunc greet(name: String = \"Guest\") {\n    print(\"Hello, \\(name)\")\n}",
+              "title": "You can omit argument labels using an underscore <code>_</code>, or provide default parameter values to make your functions more flexible."
             }
           },
           {
             "type": "content",
             "title": "Inout Parameters",
             "box": {
-              "content": "Function parameters are constants by default. To modify a variable passed as an argument, you must use the <code>inout</code> keyword, which allows the function to change the value of the variable in the caller's scope.",
-              "code": "func doubleValue(_ number: inout Int) {\n    number *= 2\n}\n\nvar x = 5\ndoubleValue(&x) // Explicit '&' indicates modification\nprint(x) // 10"
+              "code": "func doubleValue(_ number: inout Int) {\n    number *= 2\n}\n\nvar x = 5\ndoubleValue(&x) // Explicit '&' indicates modification\nprint(x) // 10",
+              "title": "Function parameters are constants by default. To modify a variable passed as an argument, you must use the <code>inout</code> keyword, which allows the function to change the value of the variable in the caller's scope."
             }
           },
           {
             "type": "content",
             "title": "Introduction to Closures",
             "box": {
-              "content": "Closures are self-contained blocks of functionality that can be passed around and used in your code. They are similar to 'lambdas' in other languages and can 'capture' and store references to variables from the context in which they are defined.",
-              "code": "let simpleClosure = { \n    print(\"I am a closure!\")\n}\n\nlet square = { (n: Int) -> Int in\n    return n * n\n}\n\nprint(square(4)) // 16"
+              "code": "let simpleClosure = { \n    print(\"I am a closure!\")\n}\n\nlet square = { (n: Int) -> Int in\n    return n * n\n}\n\nprint(square(4)) // 16",
+              "title": "Closures are self-contained blocks of functionality that can be passed around and used in your code. They are similar to 'lambdas' in other languages and can 'capture' and store references to variables from the context in which they are defined."
             }
           },
           {
             "type": "content",
             "title": "Trailing Closure Syntax",
             "box": {
-              "content": "Swift allows a beautiful syntactic sugar called **Trailing Closure Syntax**. If a closure is the final argument to a function, you can write the closure body outside the function's parentheses.",
-              "code": "func performAction(name: String, action: () -> Void) {\n    print(\"Starting \\(name)...\")\n    action()\n}\n\n/* Standard call */\nperformAction(name: \"Task\", action: { print(\"Done!\") })\n\n/* Trailing closure call (Cleaner) */\nperformAction(name: \"Task\") {\n    print(\"Done!\")\n}"
+              "code": "func performAction(name: String, action: () -> Void) {\n    print(\"Starting \\(name)...\")\n    action()\n}\n\n/* Standard call */\nperformAction(name: \"Task\", action: { print(\"Done!\") })\n\n/* Trailing closure call (Cleaner) */\nperformAction(name: \"Task\") {\n    print(\"Done!\")\n}",
+              "title": "Swift allows a beautiful syntactic sugar called **Trailing Closure Syntax**. If a closure is the final argument to a function, you can write the closure body outside the function's parentheses."
             }
           },
           {
             "type": "content",
             "title": "Shorthand Argument Names",
             "box": {
-              "content": "When using inline closures, Swift automatically provides shorthand argument names like <code>$0</code>, <code>$1</code>, etc., allowing for extremely concise functional-style programming.",
-              "code": "let numbers = [5, 2, 8, 1]\n\n/* Standard */\nlet sorted1 = numbers.sorted(by: { a, b in a < b })\n\n/* Shorthand */\nlet sorted2 = numbers.sorted { $0 < $1 }"
+              "code": "let numbers = [5, 2, 8, 1]\n\n/* Standard */\nlet sorted1 = numbers.sorted(by: { a, b in a < b })\n\n/* Shorthand */\nlet sorted2 = numbers.sorted { $0 < $1 }",
+              "title": "When using inline closures, Swift automatically provides shorthand argument names like <code>$0</code>, <code>$1</code>, etc., allowing for extremely concise functional-style programming."
             }
           }
         ]
@@ -298,49 +332,55 @@
           {
             "type": "topic-title",
             "title": "6. Structs vs Classes",
-            "box": { "content": "Value Types vs Reference Types" }
+            "subtitle": "Value Types vs Reference Types"
           },
           {
             "type": "content",
             "title": "Structuring Data: Structs",
             "box": {
-              "content": "Structs are the building blocks of most Swift code. They are **Value Types**, which means when you assign a struct to a new variable or pass it to a function, it is **copied**. This prevents unexpected side effects from multiple parts of your code modifying the same instance.",
-              "code": "struct Poster {\n    var title: String\n    var likes: Int\n}\n\nvar p1 = Poster(title: \"Swift is Cool\", likes: 10)\nvar p2 = p1 // p2 is a COPY of p1\np2.title = \"Swift is Amazing\"\n\nprint(p1.title) // Still \"Swift is Cool\""
+              "code": "struct Poster {\n    var title: String\n    var likes: Int\n}\n\nvar p1 = Poster(title: \"Swift is Cool\", likes: 10)\nvar p2 = p1 // p2 is a COPY of p1\np2.title = \"Swift is Amazing\"\n\nprint(p1.title) // Still \"Swift is Cool\"",
+              "title": "Structs are the building blocks of most Swift code. They are **Value Types**, which means when you assign a struct to a new variable or pass it to a function, it is **copied**. This prevents unexpected side effects from multiple parts of your code modifying the same instance."
             }
           },
           {
             "type": "content",
             "title": "Reference Types: Classes",
             "box": {
-              "content": "Classes are **Reference Types**. When you assign a class instance to a new variable, both variables point to the **same memory address**. Modifying one will affect the other. Classes also support inheritance, which structs do not.",
-              "code": "class User {\n    var nickname: String\n    init(name: String) { self.nickname = name }\n}\n\nlet u1 = User(name: \"Alice\")\nlet u2 = u1 // u2 points to the SAME instance as u1\nu2.nickname = \"Bob\"\n\nprint(u1.nickname) // Now prints \"Bob\"!"
+              "code": "class User {\n    var nickname: String\n    init(name: String) { self.nickname = name }\n}\n\nlet u1 = User(name: \"Alice\")\nlet u2 = u1 // u2 points to the SAME instance as u1\nu2.nickname = \"Bob\"\n\nprint(u1.nickname) // Now prints \"Bob\"!",
+              "title": "Classes are **Reference Types**. When you assign a class instance to a new variable, both variables point to the **same memory address**. Modifying one will affect the other. Classes also support inheritance, which structs do not."
             }
           },
           {
             "type": "content",
             "title": "The Core Choice: When to use which?",
             "box": {
-              "content": "Apple generally recommends **using structs by default**. They are faster, thread-safe (due to immutability/copying), and easier to reason about.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Use Structs for:</strong> Data models, simple state, and when you want individual copies." },
-                { "emoji": "🏛️", "text": "<strong>Use Classes for:</strong> When you need inheritance, when you need to manage a shared identity, or when working with legacy Objective-C APIs." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Use Structs for:</strong> Data models, simple state, and when you want individual copies."
+                },
+                {
+                  "emoji": "🏛️",
+                  "text": "<strong>Use Classes for:</strong> When you need inheritance, when you need to manage a shared identity, or when working with legacy Objective-C APIs."
+                }
+              ],
+              "title": "Apple generally recommends **using structs by default**. They are faster, thread-safe (due to immutability/copying), and easier to reason about."
             }
           },
           {
             "type": "content",
             "title": "Initializers & Deinitializers",
             "box": {
-              "content": "Initializers are called to set up a new instance of a type. In Swift, structs get a 'memberwise initializer' for free, while classes require you to write your own. Classes also have **deinitializers** (`deinit`) which run just before an instance is deallocated.",
-              "code": "class DatabaseConnection {\n    init() { print(\"Connecting to DB...\") }\n    \n    // Clean up resources\n    deinit { print(\"Closing connection...\") }\n}"
+              "code": "class DatabaseConnection {\n    init() { print(\"Connecting to DB...\") }\n    \n    // Clean up resources\n    deinit { print(\"Closing connection...\") }\n}",
+              "title": "Initializers are called to set up a new instance of a type. In Swift, structs get a 'memberwise initializer' for free, while classes require you to write your own. Classes also have **deinitializers** (`deinit`) which run just before an instance is deallocated."
             }
           },
           {
             "type": "content",
             "title": "Automatic Reference Counting (ARC)",
             "box": {
-              "content": "Swift uses ARC to manage memory. It automatically tracks how many variables are 'pointing' to a class instance and deallocates it when that count hits zero. You must use `weak` or `unowned` references to avoid **Retain Cycles** (memory leaks).",
-              "code": "class Controller {\n    // weak prevents a strong circular reference\n    weak var delegate: TaskDelegate?\n}"
+              "code": "class Controller {\n    // weak prevents a strong circular reference\n    weak var delegate: TaskDelegate?\n}",
+              "title": "Swift uses ARC to manage memory. It automatically tracks how many variables are 'pointing' to a class instance and deallocates it when that count hits zero. You must use `weak` or `unowned` references to avoid **Retain Cycles** (memory leaks)."
             }
           }
         ]
@@ -352,54 +392,54 @@
           {
             "type": "topic-title",
             "title": "7. Protocols & Generics",
-            "box": { "content": "The foundations of Protocol-Oriented Programming (POP)" }
+            "subtitle": "The foundations of Protocol-Oriented Programming (POP)"
           },
           {
             "type": "content",
             "title": "Defining Protocols",
             "box": {
-              "content": "A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task. Types can then 'adopt' and 'conform' to the protocol by providing the actual implementation. It's similar to 'Interfaces' in other languages.",
-              "code": "protocol Viewable {\n    var id: String { get }\n    func render()\n}\n\nstruct Banner: Viewable {\n    let id: String\n    func render() { print(\"Rendering Banner \\(id)\") }\n}"
+              "code": "protocol Viewable {\n    var id: String { get }\n    func render()\n}\n\nstruct Banner: Viewable {\n    let id: String\n    func render() { print(\"Rendering Banner \\(id)\") }\n}",
+              "title": "A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task. Types can then 'adopt' and 'conform' to the protocol by providing the actual implementation. It's similar to 'Interfaces' in other languages."
             }
           },
           {
             "type": "content",
             "title": "Protocol Extensions",
             "box": {
-              "content": "This is a 'killer feature' of Swift. You can provide **default implementations** for any requirement of a protocol via an extension. This allows you to add functionality to multiple types at once, forming the basis of Protocol-Oriented Programming.",
-              "code": "extension Viewable {\n    // Default implementation\n    func render() {\n        print(\"Default render for \\(id)\")\n    }\n}\n\n// Now Banner doesn't HAVE to implement render()!"
+              "code": "extension Viewable {\n    // Default implementation\n    func render() {\n        print(\"Default render for \\(id)\")\n    }\n}\n\n// Now Banner doesn't HAVE to implement render()!",
+              "title": "This is a 'killer feature' of Swift. You can provide **default implementations** for any requirement of a protocol via an extension. This allows you to add functionality to multiple types at once, forming the basis of Protocol-Oriented Programming."
             }
           },
           {
             "type": "content",
             "title": "Delegation Pattern",
             "box": {
-              "content": "Delegation is a design pattern that enables a class or struct to hand off (or delegate) some of its responsibilities to an instance of another type. It is used extensively in Apple's frameworks (UIKit, AppKit).",
-              "code": "protocol DownloaderDelegate: AnyObject {\n    func didFinishDownload(data: Data)\n}\n\nclass FileDownloader {\n    weak var delegate: DownloaderDelegate?\n    \n    func finish() {\n        delegate?.didFinishDownload(data: Data())\n    }\n}"
+              "code": "protocol DownloaderDelegate: AnyObject {\n    func didFinishDownload(data: Data)\n}\n\nclass FileDownloader {\n    weak var delegate: DownloaderDelegate?\n    \n    func finish() {\n        delegate?.didFinishDownload(data: Data())\n    }\n}",
+              "title": "Delegation is a design pattern that enables a class or struct to hand off (or delegate) some of its responsibilities to an instance of another type. It is used extensively in Apple's frameworks (UIKit, AppKit)."
             }
           },
           {
             "type": "content",
             "title": "Introduction to Generics",
             "box": {
-              "content": "Generics enable you to write flexible, reusable functions and types that can work with any type, subject to requirements that you define. Swift avoids code duplication by using generics for its core types like Array and Dictionary.",
-              "code": "/* A generic function with a type parameter 'T' */\nfunc swapValues<T>(_ a: inout T, _ b: inout T) {\n    let temporaryA = a\n    a = b\n    b = temporaryA\n}"
+              "code": "/* A generic function with a type parameter 'T' */\nfunc swapValues<T>(_ a: inout T, _ b: inout T) {\n    let temporaryA = a\n    a = b\n    b = temporaryA\n}",
+              "title": "Generics enable you to write flexible, reusable functions and types that can work with any type, subject to requirements that you define. Swift avoids code duplication by using generics for its core types like Array and Dictionary."
             }
           },
           {
             "type": "content",
             "title": "Type Constraints",
             "box": {
-              "content": "You can limit which types can be used with a generic function or type by adding constraints. For example, you can require that a type must conform to the <code>Equatable</code> protocol to support comparisons.",
-              "code": "func findIndex<T: Equatable>(of valueToFind: T, in array:[T]) -> Int? {\n    for (index, value) in array.enumerated() {\n        if value == valueToFind { return index }\n    }\n    return nil\n}"
+              "code": "func findIndex<T: Equatable>(of valueToFind: T, in array:[T]) -> Int? {\n    for (index, value) in array.enumerated() {\n        if value == valueToFind { return index }\n    }\n    return nil\n}",
+              "title": "You can limit which types can be used with a generic function or type by adding constraints. For example, you can require that a type must conform to the <code>Equatable</code> protocol to support comparisons."
             }
           },
           {
             "type": "content",
             "title": "Opaque Types (some)",
             "box": {
-              "content": "Introduced in Swift 5.1, opaque types allow a function to return an object of a type that is hidden behind a protocol, but without losing the identity of that type. This is fundamental to how **SwiftUI** works.",
-              "code": "/* The function returns 'some' type that conforms to Shape */\nfunc makeSquare() -> some Shape {\n    return Square(side: 10)\n}"
+              "code": "/* The function returns 'some' type that conforms to Shape */\nfunc makeSquare() -> some Shape {\n    return Square(side: 10)\n}",
+              "title": "Introduced in Swift 5.1, opaque types allow a function to return an object of a type that is hidden behind a protocol, but without losing the identity of that type. This is fundamental to how **SwiftUI** works."
             }
           }
         ]
@@ -411,38 +451,38 @@
           {
             "type": "topic-title",
             "title": "8. Error Handling",
-            "box": { "content": "Graceful failure and Recoverable Errors" }
+            "subtitle": "Graceful failure and Recoverable Errors"
           },
           {
             "type": "content",
             "title": "The Error Protocol",
             "box": {
-              "content": "In Swift, errors are represented by values of types that conform to the <code>Error</code> protocol. This empty protocol indicates that a type can be used for error handling. Enums are a natural fit for representing error conditions.",
-              "code": "enum PrinterError: Error {\n    case outOfPaper\n    case noToner\n    case onFire\n}"
+              "code": "enum PrinterError: Error {\n    case outOfPaper\n    case noToner\n    case onFire\n}",
+              "title": "In Swift, errors are represented by values of types that conform to the <code>Error</code> protocol. This empty protocol indicates that a type can be used for error handling. Enums are a natural fit for representing error conditions."
             }
           },
           {
             "type": "content",
             "title": "Throwing & Catching",
             "box": {
-              "content": "Functions that can fail are marked with the <code>throws</code> keyword. To call such a function, you must use <code>try</code> within a <code>do-catch</code> block to handle potential errors.",
-              "code": "func send(job: Int) throws -> String {\n    if job == 0 { throw PrinterError.onFire }\n    return \"Job sent\"\n}\n\ndo {\n    let printerResponse = try send(job: 10)\n    print(printerResponse)\n} catch PrinterError.onFire {\n    print(\"I'll buy a new printer.\")\n} catch {\n    print(error)\n}"
+              "code": "func send(job: Int) throws -> String {\n    if job == 0 { throw PrinterError.onFire }\n    return \"Job sent\"\n}\n\ndo {\n    let printerResponse = try send(job: 10)\n    print(printerResponse)\n} catch PrinterError.onFire {\n    print(\"I'll buy a new printer.\")\n} catch {\n    print(error)\n}",
+              "title": "Functions that can fail are marked with the <code>throws</code> keyword. To call such a function, you must use <code>try</code> within a <code>do-catch</code> block to handle potential errors."
             }
           },
           {
             "type": "content",
             "title": "Try? and Try!",
             "box": {
-              "content": "Swift provides shorthands for handling errors when you don't need a full catch block. <code>try?</code> converts the result into an optional (nil if an error was thrown), while <code>try!</code> disables error propagation but crashes on failure.",
-              "code": "/* try? returns nil on error */\nlet x = try? send(job: 0) \n\n/* try! crashes on error (discouraged) */\nlet y = try! send(job: 10)"
+              "code": "/* try? returns nil on error */\nlet x = try? send(job: 0) \n\n/* try! crashes on error (discouraged) */\nlet y = try! send(job: 10)",
+              "title": "Swift provides shorthands for handling errors when you don't need a full catch block. <code>try?</code> converts the result into an optional (nil if an error was thrown), while <code>try!</code> disables error propagation but crashes on failure."
             }
           },
           {
             "type": "content",
             "title": "Defer in Swift",
             "box": {
-              "content": "Similar to Go, Swift's <code>defer</code> statement is used to write cleanup code that must be executed regardless of whether an error was thrown or not.",
-              "code": "func processFile(filename: String) throws {\n    let file = open(filename)\n    defer {\n        close(file) // Always executes at the end of the scope\n    }\n    try changeFile(file)\n}"
+              "code": "func processFile(filename: String) throws {\n    let file = open(filename)\n    defer {\n        close(file) // Always executes at the end of the scope\n    }\n    try changeFile(file)\n}",
+              "title": "Similar to Go, Swift's <code>defer</code> statement is used to write cleanup code that must be executed regardless of whether an error was thrown or not."
             }
           }
         ]
@@ -454,54 +494,54 @@
           {
             "type": "topic-title",
             "title": "9. Modern Swift",
-            "box": { "content": "Declarative UIs and Structured Concurrency" }
+            "subtitle": "Declarative UIs and Structured Concurrency"
           },
           {
             "type": "content",
             "title": "SwiftUI: The Declarative Paradigm",
             "box": {
-              "content": "SwiftUI is an innovative, exceptionally simple way to build user interfaces across all Apple platforms with the power of Swift. Unlike UIKit's imperative approach, you describe **what** your UI should look like, and Swift handles the **how**.",
-              "code": "struct ContentView: View {\n    var body: some View {\n        VStack {\n            Image(systemName: \"swift\")\n                .resizable()\n                .frame(width: 100, height: 100)\n            Text(\"Hello, SwiftUI!\")\n                .font(.largeTitle)\n                .padding()\n        }\n    }\n}"
+              "code": "struct ContentView: View {\n    var body: some View {\n        VStack {\n            Image(systemName: \"swift\")\n                .resizable()\n                .frame(width: 100, height: 100)\n            Text(\"Hello, SwiftUI!\")\n                .font(.largeTitle)\n                .padding()\n        }\n    }\n}",
+              "title": "SwiftUI is an innovative, exceptionally simple way to build user interfaces across all Apple platforms with the power of Swift. Unlike UIKit's imperative approach, you describe **what** your UI should look like, and Swift handles the **how**."
             }
           },
           {
             "type": "content",
             "title": "SwiftUI State Management",
             "box": {
-              "content": "SwiftUI uses **Property Wrappers** like <code>@State</code> and <code>@Binding</code> to manage data flow. When the state changes, SwiftUI automatically re-renders the relevant parts of the UI.",
-              "code": "struct CounterView: View {\n    @State private var count = 0\n\n    var body: some View {\n        Button(\"Count: \\(count)\") {\n            count += 1\n        }\n    }\n}"
+              "code": "struct CounterView: View {\n    @State private var count = 0\n\n    var body: some View {\n        Button(\"Count: \\(count)\") {\n            count += 1\n        }\n    }\n}",
+              "title": "SwiftUI uses **Property Wrappers** like <code>@State</code> and <code>@Binding</code> to manage data flow. When the state changes, SwiftUI automatically re-renders the relevant parts of the UI."
             }
           },
           {
             "type": "content",
             "title": "Structured Concurrency: Async/Await",
             "box": {
-              "content": "Introduced in Swift 5.5, the `async/await` syntax makes asynchronous code as easy to read and write as synchronous code. It eliminates 'callback hell' and provides a structured way to manage concurrent tasks.",
-              "code": "func fetchUser() async throws -> User {\n    let (data, _) = try await URLSession.shared.data(from: url)\n    return try JSONDecoder().decode(User.self, from: data)\n}\n\nTask {\n    let user = try await fetchUser()\n    print(\"Fetched \\(user.name)\")\n}"
+              "code": "func fetchUser() async throws -> User {\n    let (data, _) = try await URLSession.shared.data(from: url)\n    return try JSONDecoder().decode(User.self, from: data)\n}\n\nTask {\n    let user = try await fetchUser()\n    print(\"Fetched \\(user.name)\")\n}",
+              "title": "Introduced in Swift 5.5, the `async/await` syntax makes asynchronous code as easy to read and write as synchronous code. It eliminates 'callback hell' and provides a structured way to manage concurrent tasks."
             }
           },
           {
             "type": "content",
             "title": "Concurrent Loops: Task Groups",
             "box": {
-              "content": "Task groups allow you to launch multiple asynchronous tasks in parallel and wait for all of them to complete, providing a safe and efficient way to perform bulk operations.",
-              "code": "func fetchAllPhotos(ids: [String]) async throws -> [UIImage] {\n    try await withThrowingTaskGroup(of: UIImage.self) { group in\n        for id in ids {\n            group.addTask { try await fetchPhoto(id: id) }\n        }\n        \n        var photos = [UIImage]()\n        for try await photo in group {\n            photos.append(photo)\n        }\n        return photos\n    }\n}"
+              "code": "func fetchAllPhotos(ids: [String]) async throws -> [UIImage] {\n    try await withThrowingTaskGroup(of: UIImage.self) { group in\n        for id in ids {\n            group.addTask { try await fetchPhoto(id: id) }\n        }\n        \n        var photos = [UIImage]()\n        for try await photo in group {\n            photos.append(photo)\n        }\n        return photos\n    }\n}",
+              "title": "Task groups allow you to launch multiple asynchronous tasks in parallel and wait for all of them to complete, providing a safe and efficient way to perform bulk operations."
             }
           },
           {
             "type": "content",
             "title": "Thread Safety: Actors",
             "box": {
-              "content": "Actors are reference types (like classes) that protect their internal state from data races. Only one task can access an actor's mutable state at a time, making it safe to use in a concurrent environment without manual locks or mutexes.",
-              "code": "actor BankAccount {\n    var balance: Double = 0\n\n    func deposit(amount: Double) {\n        balance += amount\n    }\n}\n\nlet account = BankAccount()\nawait account.deposit(amount: 100)"
+              "code": "actor BankAccount {\n    var balance: Double = 0\n\n    func deposit(amount: Double) {\n        balance += amount\n    }\n}\n\nlet account = BankAccount()\nawait account.deposit(amount: 100)",
+              "title": "Actors are reference types (like classes) that protect their internal state from data races. Only one task can access an actor's mutable state at a time, making it safe to use in a concurrent environment without manual locks or mutexes."
             }
           },
           {
             "type": "content",
             "title": "MainActor",
             "box": {
-              "content": "The <code>@MainActor</code> attribute ensures that a specific function or class always runs on the main thread. This is crucial for UI updates, which must always happen on the main thread to avoid crashes.",
-              "code": "@MainActor\nclass ViewModel: ObservableObject {\n    @Published var data = \"\"\n    \n    func updateUI() {\n        data = \"Updated on Main Thread!\"\n    }\n}"
+              "code": "@MainActor\nclass ViewModel: ObservableObject {\n    @Published var data = \"\"\n    \n    func updateUI() {\n        data = \"Updated on Main Thread!\"\n    }\n}",
+              "title": "The <code>@MainActor</code> attribute ensures that a specific function or class always runs on the main thread. This is crucial for UI updates, which must always happen on the main thread to avoid crashes."
             }
           }
         ]
@@ -513,43 +553,73 @@
           {
             "type": "topic-title",
             "title": "10. Conclusion",
-            "box": { "content": "Looking ahead to the future of Swift" }
+            "subtitle": "Looking ahead to the future of Swift"
           },
           {
             "type": "content",
             "title": "The Road Ahead: Swift 6 & Beyond",
             "box": {
-              "content": "Swift continues to evolve with a focus on **Data-Race Safety**, embedded systems support, and even more efficient memory management. It is becoming a truly universal language, used for everything from server-side development (Vapor) to high-performance AI on Apple Silicon.",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Server-Side Swift:</strong> Build robust backends with frameworks like Vapor." },
-                { "emoji": "🧠", "text": "<strong>ML & CoreML:</strong> Seamless integration with Apple's powerful AI hardware." },
-                { "emoji": "🍎", "text": "<strong>One Language, All Devices:</strong> Shared logic across iOS, macOS, watchOS, and more." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Server-Side Swift:</strong> Build robust backends with frameworks like Vapor."
+                },
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>ML & CoreML:</strong> Seamless integration with Apple's powerful AI hardware."
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>One Language, All Devices:</strong> Shared logic across iOS, macOS, watchOS, and more."
+                }
+              ],
+              "title": "Swift continues to evolve with a focus on **Data-Race Safety**, embedded systems support, and even more efficient memory management. It is becoming a truly universal language, used for everything from server-side development (Vapor) to high-performance AI on Apple Silicon."
             }
           },
           {
             "type": "content",
             "title": "Resources & Community",
             "box": {
-              "content": "Join the elite Swift developer community with these essential resources:",
               "list": [
-                { "emoji": "📚", "text": "<strong>Swift.org:</strong> The official home of open-source Swift." },
-                { "emoji": "🎙️", "text": "<strong>Swift by Sundell:</strong> High-quality articles and podcasts." },
-                { "emoji": "📺", "text": "<strong>WWDC Sessions:</strong> Yearly deep dives into new language features." },
-                { "emoji": "🛠️", "text": "<strong>Hacking with Swift:</strong> Practical, project-based learning." }
-              ]
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Swift.org:</strong> The official home of open-source Swift."
+                },
+                {
+                  "emoji": "🎙️",
+                  "text": "<strong>Swift by Sundell:</strong> High-quality articles and podcasts."
+                },
+                {
+                  "emoji": "📺",
+                  "text": "<strong>WWDC Sessions:</strong> Yearly deep dives into new language features."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Hacking with Swift:</strong> Practical, project-based learning."
+                }
+              ],
+              "title": "Join the elite Swift developer community with these essential resources:"
             }
           },
           {
             "type": "content",
             "title": "Q&A and Thank You",
             "box": {
-              "content": "Thank you for joining this deep dive into Swift. The future of app development is safe, fast, and expressive!",
               "list": [
-                { "emoji": "💡", "text": "Questions on Structs vs Classes?" },
-                { "emoji": "🔀", "text": "Deep dive into Async/Await?" },
-                { "emoji": "📱", "text": "Getting started with SwiftUI?" }
-              ]
+                {
+                  "emoji": "💡",
+                  "text": "Questions on Structs vs Classes?"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "Deep dive into Async/Await?"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Getting started with SwiftUI?"
+                }
+              ],
+              "title": "Thank you for joining this deep dive into Swift. The future of app development is safe, fast, and expressive!"
             }
           }
         ]

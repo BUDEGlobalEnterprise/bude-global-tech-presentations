@@ -34,36 +34,48 @@
           {
             "type": "topic-title",
             "title": "1. IoC & DI",
-            "box": { "content": "The Core Pillars of the Spring Framework." }
+            "subtitle": "The Core Pillars of the Spring Framework."
           },
           {
             "type": "content",
             "title": "Inversion of Control (IoC)",
             "box": {
-              "content": "A design principle in which the custom-written portions of a computer program receive the flow of control from a generic framework.",
               "list": [
-                { "emoji": "🔄", "text": "<strong>Hollywood Principle:</strong> 'Don't call us, we'll call you.'" },
-                { "emoji": "📦", "text": "<strong>Decoupling:</strong> Object creation and lifecycle management is handed to the container." }
-              ]
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Hollywood Principle:</strong> 'Don't call us, we'll call you.'"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Decoupling:</strong> Object creation and lifecycle management is handed to the container."
+                }
+              ],
+              "title": "A design principle in which the custom-written portions of a computer program receive the flow of control from a generic framework."
             }
           },
           {
             "type": "content",
             "title": "Dependency Injection (DI)",
             "box": {
-              "content": "A concrete implementation of IoC where an object's dependencies are 'injected' at runtime.",
-              "code": "@Service\npublic class TradeService {\n    private final TradeRepository repository;\n\n    @Autowired\n    public TradeService(TradeRepository repository) {\n        this.repository = repository;\n    }\n}"
+              "code": "@Service\npublic class TradeService {\n    private final TradeRepository repository;\n\n    @Autowired\n    public TradeService(TradeRepository repository) {\n        this.repository = repository;\n    }\n}",
+              "title": "A concrete implementation of IoC where an object's dependencies are 'injected' at runtime."
             }
           },
           {
             "type": "content",
             "title": "The ApplicationContext",
             "box": {
-              "content": "The central interface to a Spring IoC container, responsible for instantiating, configuring, and assembling beans.",
               "list": [
-                { "emoji": "🌱", "text": "<strong>Bean:</strong> An object that is managed by the Spring IoC container." },
-                { "emoji": "📜", "text": "<strong>Configuration:</strong> Metadata describing how beans are created (XML, Java Config, Annotations)." }
-              ]
+                {
+                  "emoji": "🌱",
+                  "text": "<strong>Bean:</strong> An object that is managed by the Spring IoC container."
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Configuration:</strong> Metadata describing how beans are created (XML, Java Config, Annotations)."
+                }
+              ],
+              "title": "The central interface to a Spring IoC container, responsible for instantiating, configuring, and assembling beans."
             }
           }
         ]
@@ -75,33 +87,39 @@
           {
             "type": "topic-title",
             "title": "2. Ecosystem",
-            "box": { "content": "Opinionated defaults for fast development." }
+            "subtitle": "Opinionated defaults for fast development."
           },
           {
             "type": "content",
             "title": "Spring Boot Starters",
             "box": {
-              "content": "Curated dependency descriptors that simplify your build configuration.",
-              "code": "<!-- Maven Dependency -->\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-web</artifactId>\n</dependency>"
+              "code": "<!-- Maven Dependency -->\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-web</artifactId>\n</dependency>",
+              "title": "Curated dependency descriptors that simplify your build configuration."
             }
           },
           {
             "type": "content",
             "title": "Auto-configuration",
             "box": {
-              "content": "Spring Boot automatically configures your application based on the dependencies found on the classpath.",
               "list": [
-                { "emoji": "🔍", "text": "<strong>@EnableAutoConfiguration:</strong> The magic behind the scenes." },
-                { "emoji": "🧪", "text": "<strong>@Conditional:</strong> Logic that decides whether to trigger configuration." }
-              ]
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>@EnableAutoConfiguration:</strong> The magic behind the scenes."
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>@Conditional:</strong> Logic that decides whether to trigger configuration."
+                }
+              ],
+              "title": "Spring Boot automatically configures your application based on the dependencies found on the classpath."
             }
           },
           {
             "type": "content",
             "title": "The Fat JAR",
             "box": {
-              "content": "Package your application and its dependencies into a single, executable JAR file with an embedded server (Tomcat/Jetty).",
-              "code": "# shell: java -jar target/myapp.jar"
+              "code": "# shell: java -jar target/myapp.jar",
+              "title": "Package your application and its dependencies into a single, executable JAR file with an embedded server (Tomcat/Jetty)."
             }
           }
         ]
@@ -113,30 +131,30 @@
           {
             "type": "topic-title",
             "title": "3. Persistence",
-            "box": { "content": "Abstraction over JPA and JDBC." }
+            "subtitle": "Abstraction over JPA and JDBC."
           },
           {
             "type": "content",
             "title": "The Repository Abstraction",
             "box": {
-              "content": "Spring Data JPA reduces boilerplate by allowing you to define repositories as interfaces.",
-              "code": "public interface UserRepository extends JpaRepository<User, Long> {\n    List<User> findByLastName(String lastName);\n}"
+              "code": "public interface UserRepository extends JpaRepository<User, Long> {\n    List<User> findByLastName(String lastName);\n}",
+              "title": "Spring Data JPA reduces boilerplate by allowing you to define repositories as interfaces."
             }
           },
           {
             "type": "content",
             "title": "Entity Mapping (JPA)",
             "box": {
-              "content": "Use annotations to map your Java classes to database tables.",
-              "code": "@Entity\npublic class User {\n    @Id @GeneratedValue\n    private Long id;\n    private String username;\n}"
+              "code": "@Entity\npublic class User {\n    @Id @GeneratedValue\n    private Long id;\n    private String username;\n}",
+              "title": "Use annotations to map your Java classes to database tables."
             }
           },
           {
             "type": "content",
             "title": "Transaction Management",
             "box": {
-              "content": "Declarative transaction management using the @Transactional annotation.",
-              "code": "@Transactional\npublic void saveUserAndProfile(User user, Profile profile) {\n    userRepository.save(user);\n    profileRepository.save(profile);\n}"
+              "code": "@Transactional\npublic void saveUserAndProfile(User user, Profile profile) {\n    userRepository.save(user);\n    profileRepository.save(profile);\n}",
+              "title": "Declarative transaction management using the @Transactional annotation."
             }
           }
         ]
@@ -148,41 +166,47 @@
           {
             "type": "topic-title",
             "title": "4. Web Layer",
-            "box": { "content": "Building robust RESTful APIs." }
+            "subtitle": "Building robust RESTful APIs."
           },
           {
             "type": "content",
             "title": "REST Controllers",
             "box": {
-              "content": "Use @RestController to build APIs that return JSON or XML by default.",
-              "code": "@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n    @GetMapping(\"/{id}\")\n    public User getUser(@PathVariable Long id) { ... }\n}"
+              "code": "@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n    @GetMapping(\"/{id}\")\n    public User getUser(@PathVariable Long id) { ... }\n}",
+              "title": "Use @RestController to build APIs that return JSON or XML by default."
             }
           },
           {
             "type": "content",
             "title": "Request & Response",
             "box": {
-              "content": "Handle query parameters, body data, and custom response statuses.",
-              "code": "@PostMapping\n@ResponseStatus(HttpStatus.CREATED)\npublic User createUser(@RequestBody User user) { ... }"
+              "code": "@PostMapping\n@ResponseStatus(HttpStatus.CREATED)\npublic User createUser(@RequestBody User user) { ... }",
+              "title": "Handle query parameters, body data, and custom response statuses."
             }
           },
           {
             "type": "content",
             "title": "Global Error Handling",
             "box": {
-              "content": "Use @ControllerAdvice and @ExceptionHandler for consistent error responses across your entire API.",
-              "code": "@ControllerAdvice\npublic class GlobalErrorHandler {\n    @ExceptionHandler(UserNotFoundException.class)\n    public ResponseEntity<Error> handleNotFound() { ... }\n}"
+              "code": "@ControllerAdvice\npublic class GlobalErrorHandler {\n    @ExceptionHandler(UserNotFoundException.class)\n    public ResponseEntity<Error> handleNotFound() { ... }\n}",
+              "title": "Use @ControllerAdvice and @ExceptionHandler for consistent error responses across your entire API."
             }
           },
           {
             "type": "content",
             "title": "HATEOAS (Hypermedia as the Engine of Application State)",
             "box": {
-              "content": "Enhance your REST APIs by including links to related resources, guiding clients through the application's state.",
               "list": [
-                { "emoji": "🕸️", "text": "<strong>Spring HATEOAS:</strong> Simplifies adding hypermedia to Spring MVC REST controllers." },
-                { "emoji": "🔗", "text": "<strong>Link Relations:</strong> Standardized ways to describe relationships between resources." }
-              ]
+                {
+                  "emoji": "🕸️",
+                  "text": "<strong>Spring HATEOAS:</strong> Simplifies adding hypermedia to Spring MVC REST controllers."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Link Relations:</strong> Standardized ways to describe relationships between resources."
+                }
+              ],
+              "title": "Enhance your REST APIs by including links to related resources, guiding clients through the application's state."
             }
           }
         ]
@@ -194,41 +218,47 @@
           {
             "type": "topic-title",
             "title": "5. Security",
-            "box": { "content": "Comprehensive security for enterprise apps." }
+            "subtitle": "Comprehensive security for enterprise apps."
           },
           {
             "type": "content",
             "title": "The Security Filter Chain",
             "box": {
-              "content": "Spring Security is built on a series of Servlet Filters that intercept requests to enforce authentication and authorization.",
-              "code": "@Bean\npublic SecurityFilterChain filterChain(HttpSecurity http) {\n    http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated())\n        .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));\n    return http.build();\n}"
+              "code": "@Bean\npublic SecurityFilterChain filterChain(HttpSecurity http) {\n    http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated())\n        .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));\n    return http.build();\n}",
+              "title": "Spring Security is built on a series of Servlet Filters that intercept requests to enforce authentication and authorization."
             }
           },
           {
             "type": "content",
             "title": "Method Level Security",
             "box": {
-              "content": "Secure individual methods using annotations like @PreAuthorize.",
-              "code": "@PreAuthorize(\"hasRole('ADMIN')\")\npublic void deleteUser(Long id) { ... }"
+              "code": "@PreAuthorize(\"hasRole('ADMIN')\")\npublic void deleteUser(Long id) { ... }",
+              "title": "Secure individual methods using annotations like @PreAuthorize."
             }
           },
           {
             "type": "content",
             "title": "OAuth2 & JWT",
             "box": {
-              "content": "Spring Security provides deep integration with Identity Providers (Okta, Keycloak, Auth0) using OAuth2 and OpenID Connect.",
               "list": [
-                { "emoji": "🔑", "text": "<strong>JWT:</strong> Stateless authentication using JSON Web Tokens." },
-                { "emoji": "🛡️", "text": "<strong>Scopes:</strong> Granular permission control." }
-              ]
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>JWT:</strong> Stateless authentication using JSON Web Tokens."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Scopes:</strong> Granular permission control."
+                }
+              ],
+              "title": "Spring Security provides deep integration with Identity Providers (Okta, Keycloak, Auth0) using OAuth2 and OpenID Connect."
             }
           },
           {
             "type": "content",
             "title": "Custom Auth Providers",
             "box": {
-              "content": "Implement your own authentication logic by creating a custom AuthenticationProvider.",
-              "code": "public class MyAuthProvider implements AuthenticationProvider { ... }"
+              "code": "public class MyAuthProvider implements AuthenticationProvider { ... }",
+              "title": "Implement your own authentication logic by creating a custom AuthenticationProvider."
             }
           }
         ]
@@ -240,30 +270,30 @@
           {
             "type": "topic-title",
             "title": "6. Advanced",
-            "box": { "content": "AOP, Events, and Scheduling." }
+            "subtitle": "AOP, Events, and Scheduling."
           },
           {
             "type": "content",
             "title": "Aspect-Oriented Programming (AOP)",
             "box": {
-              "content": "Modularize cross-cutting concerns like logging, performance monitoring, or transaction management without cluttering business logic.",
-              "code": "@Aspect\n@Component\npublic class LoggingAspect {\n    @Before(\"execution(* com.example.service.*.*(..))\")\n    public void logBefore() { ... }\n}"
+              "code": "@Aspect\n@Component\npublic class LoggingAspect {\n    @Before(\"execution(* com.example.service.*.*(..))\")\n    public void logBefore() { ... }\n}",
+              "title": "Modularize cross-cutting concerns like logging, performance monitoring, or transaction management without cluttering business logic."
             }
           },
           {
             "type": "content",
             "title": "Application Events",
             "box": {
-              "content": "Decouple components using Spring's built-in event publishing and listening mechanism.",
-              "code": "eventPublisher.publishEvent(new OrderCreatedEvent(this, order));\n\n@EventListener\npublic void handleOrderCreated(OrderCreatedEvent event) { ... }"
+              "code": "eventPublisher.publishEvent(new OrderCreatedEvent(this, order));\n\n@EventListener\npublic void handleOrderCreated(OrderCreatedEvent event) { ... }",
+              "title": "Decouple components using Spring's built-in event publishing and listening mechanism."
             }
           },
           {
             "type": "content",
             "title": "Scheduled Tasks",
             "box": {
-              "content": "Easily run background tasks on a fixed schedule or using CRON expressions.",
-              "code": "@Scheduled(cron = \"0 0 * * * *\")\npublic void runHourlyTask() { ... }"
+              "code": "@Scheduled(cron = \"0 0 * * * *\")\npublic void runHourlyTask() { ... }",
+              "title": "Easily run background tasks on a fixed schedule or using CRON expressions."
             }
           }
         ]
@@ -275,70 +305,103 @@
           {
             "type": "topic-title",
             "title": "7. Cloud Native",
-            "box": { "content": "Modern deployment and observability." }
+            "subtitle": "Modern deployment and observability."
           },
           {
             "type": "content",
             "title": "Spring Boot Actuator",
             "box": {
-              "content": "Production-ready features to help you monitor and manage your application.",
               "list": [
-                { "emoji": "📈", "text": "<strong>/health:</strong> Check application status." },
-                { "emoji": "📊", "text": "<strong>/metrics:</strong> Integration with Prometheus/Grafana." },
-                { "emoji": "📝", "text": "<strong>/info:</strong> Arbitrary application info." }
-              ]
+                {
+                  "emoji": "📈",
+                  "text": "<strong>/health:</strong> Check application status."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>/metrics:</strong> Integration with Prometheus/Grafana."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>/info:</strong> Arbitrary application info."
+                }
+              ],
+              "title": "Production-ready features to help you monitor and manage your application."
             }
           },
           {
             "type": "content",
             "title": "Containerization (Docker)",
             "box": {
-              "content": "Spring Boot natively supports building optimized Docker images using Buildpacks.",
-              "code": "# shell: ./mvnw spring-boot:build-image"
+              "code": "# shell: ./mvnw spring-boot:build-image",
+              "title": "Spring Boot natively supports building optimized Docker images using Buildpacks."
             }
           },
           {
             "type": "content",
             "title": "Microservices with Spring Cloud",
             "box": {
-              "content": "Tools for building distributed systems: Configuration Management, Service Discovery, and Circuit Breakers.",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Eureka:</b> Service registry." },
-                { "emoji": "🛡️", "text": "<strong>Resilience4j:</strong> Fault tolerance." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Eureka:</b> Service registry."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Resilience4j:</strong> Fault tolerance."
+                }
+              ],
+              "title": "Tools for building distributed systems: Configuration Management, Service Discovery, and Circuit Breakers."
             }
           },
           {
             "type": "content",
             "title": "Spring Boot Admin",
             "box": {
-              "content": "A community project to manage and monitor your Spring Boot applications via a beautiful UI.",
               "list": [
-                { "emoji": "📋", "text": "<strong>Dashboard:</strong> Overview of all registered applications." },
-                { "emoji": "🔔", "text": "<strong>Notifications:</strong> Alerting for health status changes." }
-              ]
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Dashboard:</strong> Overview of all registered applications."
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Notifications:</strong> Alerting for health status changes."
+                }
+              ],
+              "title": "A community project to manage and monitor your Spring Boot applications via a beautiful UI."
             }
           },
           {
             "type": "content",
             "title": "Distributed Tracing",
             "box": {
-              "content": "Track requests across multiple microservices to understand performance and debug issues.",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Sleuth/Micrometer Tracing:</strong> Integrate with Zipkin/Jaeger." },
-                { "emoji": "⏱️", "text": "<strong>Spans & Traces:</strong> Visualize request flow." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Sleuth/Micrometer Tracing:</strong> Integrate with Zipkin/Jaeger."
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Spans & Traces:</strong> Visualize request flow."
+                }
+              ],
+              "title": "Track requests across multiple microservices to understand performance and debug issues."
             }
           },
           {
             "type": "content",
             "title": "Externalized Configuration",
             "box": {
-              "content": "Manage application properties outside the codebase for different environments.",
               "list": [
-                { "emoji": "⚙️", "text": "<strong>Spring Cloud Config:</strong> Centralized configuration server." },
-                { "emoji": "🌳", "text": "<strong>Vault:</strong> Secure secret management." }
-              ]
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Spring Cloud Config:</strong> Centralized configuration server."
+                },
+                {
+                  "emoji": "🌳",
+                  "text": "<strong>Vault:</strong> Secure secret management."
+                }
+              ],
+              "title": "Manage application properties outside the codebase for different environments."
             }
           }
         ]
@@ -350,33 +413,39 @@
           {
             "type": "topic-title",
             "title": "8. Testing",
-            "box": { "content": "JUnit 5, Mockito, and Spring Test." }
+            "subtitle": "JUnit 5, Mockito, and Spring Test."
           },
           {
             "type": "content",
             "title": "Unit Testing with Mockito",
             "box": {
-              "content": "Test your business logic in isolation by mocking external dependencies.",
-              "code": "@ExtendWith(MockitoExtension.class)\nclass TradeServiceTest {\n    @Mock private TradeRepository repository;\n    @InjectMocks private TradeService service;\n}"
+              "code": "@ExtendWith(MockitoExtension.class)\nclass TradeServiceTest {\n    @Mock private TradeRepository repository;\n    @InjectMocks private TradeService service;\n}",
+              "title": "Test your business logic in isolation by mocking external dependencies."
             }
           },
           {
             "type": "content",
             "title": "Integration Testing",
             "box": {
-              "content": "Use @SpringBootTest to bootstrap the full application context for end-to-end verification.",
-              "code": "@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)\nclass ApplicationTests { ... }"
+              "code": "@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)\nclass ApplicationTests { ... }",
+              "title": "Use @SpringBootTest to bootstrap the full application context for end-to-end verification."
             }
           },
           {
             "type": "content",
             "title": "Slice Testing",
             "box": {
-              "content": "Focus on testing specific layers using specialized annotations like @WebMvcTest or @DataJpaTest.",
               "list": [
-                { "emoji": "🧪", "text": "Focus on testing specific layers using specialized annotations like @WebMvcTest or @DataJpaTest." },
-                { "emoji": "🔌", "text": "<strong>Testcontainers:</strong> Spin up real databases for integration tests." }
-              ]
+                {
+                  "emoji": "🧪",
+                  "text": "Focus on testing specific layers using specialized annotations like @WebMvcTest or @DataJpaTest."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Testcontainers:</strong> Spin up real databases for integration tests."
+                }
+              ],
+              "title": "Focus on testing specific layers using specialized annotations like @WebMvcTest or @DataJpaTest."
             }
           }
         ]
@@ -388,33 +457,39 @@
           {
             "type": "topic-title",
             "title": "9. Future of Spring",
-            "box": { "content": "GraalVM, Native Images, and AI." }
+            "subtitle": "GraalVM, Native Images, and AI."
           },
           {
             "type": "content",
             "title": "GraalVM Native Image",
             "box": {
-              "content": "Compile Spring applications to native executables for instant startup and low memory footprint.",
-              "code": "# shell: ./mvnw native:compile"
+              "code": "# shell: ./mvnw native:compile",
+              "title": "Compile Spring applications to native executables for instant startup and low memory footprint."
             }
           },
           {
             "type": "content",
             "title": "Spring AI",
             "box": {
-              "content": "Deep integration with AI models (OpenAI, Azure, Hugging Face) directly within the Spring ecosystem.",
-              "code": "ChatResponse response = chatClient.call(new Prompt(\"Explain Spring AI\"));"
+              "code": "ChatResponse response = chatClient.call(new Prompt(\"Explain Spring AI\"));",
+              "title": "Deep integration with AI models (OpenAI, Azure, Hugging Face) directly within the Spring ecosystem."
             }
           },
           {
             "type": "content",
             "title": "Observability with Micrometer",
             "box": {
-              "content": "Unified metrics and tracing for modern distributed systems.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Tracing:</strong> Track requests across microservices." },
-                { "emoji": "📊", "text": "<strong>Prometheus:</strong> Export performance metrics." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Tracing:</strong> Track requests across microservices."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Prometheus:</strong> Export performance metrics."
+                }
+              ],
+              "title": "Unified metrics and tracing for modern distributed systems."
             }
           }
         ]
@@ -426,33 +501,39 @@
           {
             "type": "topic-title",
             "title": "9. Reactive",
-            "box": { "content": "Non-blocking basics with WebFlux." }
+            "subtitle": "Non-blocking basics with WebFlux."
           },
           {
             "type": "content",
             "title": "Project Reactor",
             "box": {
-              "content": "The underlying library for Reactive Programming in Spring, providing the Flux and Mono types.",
               "list": [
-                { "emoji": "🌊", "text": "<strong>Flux:</strong> A stream of 0 to N elements." },
-                { "emoji": "💧", "text": "<strong>Mono:</strong> A stream of 0 or 1 element." }
-              ]
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>Flux:</strong> A stream of 0 to N elements."
+                },
+                {
+                  "emoji": "💧",
+                  "text": "<strong>Mono:</strong> A stream of 0 or 1 element."
+                }
+              ],
+              "title": "The underlying library for Reactive Programming in Spring, providing the Flux and Mono types."
             }
           },
           {
             "type": "content",
             "title": "Spring WebFlux",
             "box": {
-              "content": "A fully non-blocking web framework for building scalable applications on top of Netty.",
-              "code": "@RestController\npublic class ReactiveController {\n    @GetMapping(\"/stream\")\n    public Flux<Trade> getTrades() { ... }\n}"
+              "code": "@RestController\npublic class ReactiveController {\n    @GetMapping(\"/stream\")\n    public Flux<Trade> getTrades() { ... }\n}",
+              "title": "A fully non-blocking web framework for building scalable applications on top of Netty."
             }
           },
           {
             "type": "content",
             "title": "Reactive Data Access",
             "box": {
-              "content": "Use R2DBC for reactive, non-blocking database access.",
-              "code": "public interface TradeRepository extends ReactiveCrudRepository<Trade, Long> { ... }"
+              "code": "public interface TradeRepository extends ReactiveCrudRepository<Trade, Long> { ... }",
+              "title": "Use R2DBC for reactive, non-blocking database access."
             }
           }
         ]
@@ -464,24 +545,35 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The Future of Enterprise Java." }
+            "subtitle": "The Future of Enterprise Java."
           },
           {
             "type": "content",
             "title": "Summary",
             "box": {
-              "content": "Spring Boot continues to be the industry gold standard for Java development.",
               "list": [
-                { "emoji": "🚀", "text": "Unmatched ecosystem and community support." },
-                { "emoji": "🛠️", "text": "Modern, opinionated, and fast." },
-                { "emoji": "🌐", "text": "Cloud-native and microservices ready." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "Unmatched ecosystem and community support."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "Modern, opinionated, and fast."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Cloud-native and microservices ready."
+                }
+              ],
+              "title": "Spring Boot continues to be the industry gold standard for Java development."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Any questions? Thank you!" }
+            "box": {
+              "title": "Any questions? Thank you!"
+            }
           }
         ]
       }

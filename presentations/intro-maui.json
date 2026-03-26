@@ -106,7 +106,6 @@
             "emoji": "🎯",
             "title": "What is .NET MAUI?",
             "box": {
-              "content": "<span class=\"highlight\">Multi-platform App UI</span> - Cross-platform framework for native apps",
               "list": [
                 {
                   "emoji": "📱",
@@ -132,7 +131,8 @@
                   "emoji": "🎨",
                   "text": "<strong>Native Performance</strong> - True native controls"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Multi-platform App UI</span> - Cross-platform framework for native apps"
             },
             "note": {
               "text": "<strong>Released:</strong> May 2022<br><strong>Replaces:</strong> Xamarin.Forms<br><strong>Part of:</strong> .NET 6+"
@@ -264,8 +264,8 @@
             "emoji": "🚀",
             "title": "Create MAUI Project",
             "box": {
-              "content": "<strong>Command line or Visual Studio</strong>",
-              "code": "# Create new MAUI project\ndotnet new maui -n MyMauiApp\n\n# Run on specific platform\ndotnet build -t:Run -f net7.0-android\ndotnet build -t:Run -f net7.0-ios\ndotnet build -t:Run -f net7.0-windows10.0.19041.0"
+              "code": "# Create new MAUI project\ndotnet new maui -n MyMauiApp\n\n# Run on specific platform\ndotnet build -t:Run -f net7.0-android\ndotnet build -t:Run -f net7.0-ios\ndotnet build -t:Run -f net7.0-windows10.0.19041.0",
+              "title": "<strong>Command line or Visual Studio</strong>"
             }
           }
         ]
@@ -283,8 +283,8 @@
             "emoji": "📁",
             "title": "Project Structure",
             "box": {
-              "content": "<strong>Single project structure</strong>",
-              "code": "MyMauiApp/\n├── Platforms/           # Platform-specific code\n│   ├── Android/\n│   ├── iOS/\n│   ├── MacCatalyst/\n│   └── Windows/\n├── Resources/\n│   ├── Images/         # App icons & images\n│   ├── Fonts/          # Custom fonts\n│   └── Styles/         # XAML styles\n├── Views/              # Pages and views\n├── ViewModels/         # MVVM ViewModels\n├── Models/             # Data models\n├── Services/           # Business logic\n└── App.xaml           # Application entry"
+              "code": "MyMauiApp/\n├── Platforms/           # Platform-specific code\n│   ├── Android/\n│   ├── iOS/\n│   ├── MacCatalyst/\n│   └── Windows/\n├── Resources/\n│   ├── Images/         # App icons & images\n│   ├── Fonts/          # Custom fonts\n│   └── Styles/         # XAML styles\n├── Views/              # Pages and views\n├── ViewModels/         # MVVM ViewModels\n├── Models/             # Data models\n├── Services/           # Business logic\n└── App.xaml           # Application entry",
+              "title": "<strong>Single project structure</strong>"
             }
           }
         ]
@@ -302,8 +302,8 @@
             "emoji": "👋",
             "title": "Basic MAUI Page",
             "box": {
-              "content": "<strong>Simple counter example</strong>",
-              "code": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<ContentPage x:Class=\"MyMauiApp.MainPage\"\n             xmlns=\"http://schemas.microsoft.com/dotnet/2021/maui\"\n             xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\">\n    \n    <ScrollView>\n        <VerticalStackLayout Spacing=\"25\" Padding=\"30,0\" VerticalOptions=\"Center\">\n            \n            <Label x:Name=\"CounterLabel\"\n                   Text=\"Welcome to .NET MAUI!\"\n                   SemanticProperties.HeadingLevel=\"Level1\"\n                   FontSize=\"32\"\n                   HorizontalOptions=\"Center\" />\n            \n            <Button x:Name=\"CounterBtn\"\n                    Text=\"Click me\"\n                    SemanticProperties.Hint=\"Counts the number of times you click\"\n                    Clicked=\"OnCounterClicked\"\n                    HorizontalOptions=\"Center\" />\n                    \n        </VerticalStackLayout>\n    </ScrollView>\n    \n</ContentPage>"
+              "code": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<ContentPage x:Class=\"MyMauiApp.MainPage\"\n             xmlns=\"http://schemas.microsoft.com/dotnet/2021/maui\"\n             xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\">\n    \n    <ScrollView>\n        <VerticalStackLayout Spacing=\"25\" Padding=\"30,0\" VerticalOptions=\"Center\">\n            \n            <Label x:Name=\"CounterLabel\"\n                   Text=\"Welcome to .NET MAUI!\"\n                   SemanticProperties.HeadingLevel=\"Level1\"\n                   FontSize=\"32\"\n                   HorizontalOptions=\"Center\" />\n            \n            <Button x:Name=\"CounterBtn\"\n                    Text=\"Click me\"\n                    SemanticProperties.Hint=\"Counts the number of times you click\"\n                    Clicked=\"OnCounterClicked\"\n                    HorizontalOptions=\"Center\" />\n                    \n        </VerticalStackLayout>\n    </ScrollView>\n    \n</ContentPage>",
+              "title": "<strong>Simple counter example</strong>"
             }
           },
           {
@@ -311,8 +311,8 @@
             "emoji": "💻",
             "title": "Code-Behind",
             "box": {
-              "content": "<strong>C# code for the page</strong>",
-              "code": "namespace MyMauiApp;\n\npublic partial class MainPage : ContentPage\n{\n    int count = 0;\n\n    public MainPage()\n    {\n        InitializeComponent();\n    }\n\n    private void OnCounterClicked(object sender, EventArgs e)\n    {\n        count++;\n\n        CounterLabel.Text = $\"Current count: {count}\";\n\n        SemanticScreenReader.Announce(CounterLabel.Text);\n    }\n}"
+              "code": "namespace MyMauiApp;\n\npublic partial class MainPage : ContentPage\n{\n    int count = 0;\n\n    public MainPage()\n    {\n        InitializeComponent();\n    }\n\n    private void OnCounterClicked(object sender, EventArgs e)\n    {\n        count++;\n\n        CounterLabel.Text = $\"Current count: {count}\";\n\n        SemanticScreenReader.Announce(CounterLabel.Text);\n    }\n}",
+              "title": "<strong>C# code for the page</strong>"
             }
           }
         ]
@@ -330,8 +330,8 @@
             "emoji": "🎨",
             "title": "Basic XAML Controls",
             "box": {
-              "content": "<strong>Common UI controls</strong>",
-              "code": "<!-- Basic Controls -->\n<Label Text=\"Welcome to MAUI!\" \n       HorizontalOptions=\"Center\"\n       FontSize=\"24\"\n       TextColor=\"Blue\" />\n\n<Entry Placeholder=\"Enter text here\"\n       Text=\"{Binding UserName}\" />\n\n<Button Text=\"Click Me\" \n        Command=\"{Binding SubmitCommand}\" />\n\n<Image Source=\"dotnet_bot.png\" \n       HeightRequest=\"200\"\n       HorizontalOptions=\"Center\" />\n\n<!-- Layout Containers -->\n<StackLayout Orientation=\"Vertical\" Spacing=\"10\">\n    <Label Text=\"Item 1\" />\n    <Label Text=\"Item 2\" />\n    <Label Text=\"Item 3\" />\n</StackLayout>\n\n<Grid RowDefinitions=\"Auto, *\" ColumnDefinitions=\"*, *\">\n    <Label Grid.Row=\"0\" Grid.Column=\"0\" Text=\"Top Left\" />\n    <Label Grid.Row=\"0\" Grid.Column=\"1\" Text=\"Top Right\" />\n    <Label Grid.Row=\"1\" Grid.ColumnSpan=\"2\" Text=\"Bottom Full\" />\n</Grid>"
+              "code": "<!-- Basic Controls -->\n<Label Text=\"Welcome to MAUI!\" \n       HorizontalOptions=\"Center\"\n       FontSize=\"24\"\n       TextColor=\"Blue\" />\n\n<Entry Placeholder=\"Enter text here\"\n       Text=\"{Binding UserName}\" />\n\n<Button Text=\"Click Me\" \n        Command=\"{Binding SubmitCommand}\" />\n\n<Image Source=\"dotnet_bot.png\" \n       HeightRequest=\"200\"\n       HorizontalOptions=\"Center\" />\n\n<!-- Layout Containers -->\n<StackLayout Orientation=\"Vertical\" Spacing=\"10\">\n    <Label Text=\"Item 1\" />\n    <Label Text=\"Item 2\" />\n    <Label Text=\"Item 3\" />\n</StackLayout>\n\n<Grid RowDefinitions=\"Auto, *\" ColumnDefinitions=\"*, *\">\n    <Label Grid.Row=\"0\" Grid.Column=\"0\" Text=\"Top Left\" />\n    <Label Grid.Row=\"0\" Grid.Column=\"1\" Text=\"Top Right\" />\n    <Label Grid.Row=\"1\" Grid.ColumnSpan=\"2\" Text=\"Bottom Full\" />\n</Grid>",
+              "title": "<strong>Common UI controls</strong>"
             }
           }
         ]
@@ -349,7 +349,6 @@
             "emoji": "🏗️",
             "title": "MVVM in MAUI",
             "box": {
-              "content": "<strong>Separation of concerns</strong>",
               "list": [
                 {
                   "emoji": "📊",
@@ -371,7 +370,8 @@
                   "emoji": "⚡",
                   "text": "<strong>Commands</strong> - Replace event handlers"
                 }
-              ]
+              ],
+              "title": "<strong>Separation of concerns</strong>"
             }
           },
           {
@@ -379,8 +379,8 @@
             "emoji": "💻",
             "title": "ViewModel Example",
             "box": {
-              "content": "<strong>Simple ViewModel with commands</strong>",
-              "code": "using CommunityToolkit.Mvvm.ComponentModel;\nusing CommunityToolkit.Mvvm.Input;\n\npublic partial class MainViewModel : ObservableObject\n{\n    [ObservableProperty]\n    private string title = \"Welcome to MAUI!\";\n\n    [ObservableProperty]\n    private int count = 0;\n\n    [RelayCommand]\n    private void IncrementCount()\n    {\n        Count++;\n        Title = $\"Count: {Count}\";\n    }\n\n    [RelayCommand]\n    private async Task NavigateToDetails()\n    {\n        await Shell.Current.GoToAsync(nameof(DetailsPage));\n    }\n}\n\n// XAML Binding:\n// <Label Text=\"{Binding Title}\" />\n// <Button Command=\"{Binding IncrementCountCommand}\" Text=\"Increment\" />"
+              "code": "using CommunityToolkit.Mvvm.ComponentModel;\nusing CommunityToolkit.Mvvm.Input;\n\npublic partial class MainViewModel : ObservableObject\n{\n    [ObservableProperty]\n    private string title = \"Welcome to MAUI!\";\n\n    [ObservableProperty]\n    private int count = 0;\n\n    [RelayCommand]\n    private void IncrementCount()\n    {\n        Count++;\n        Title = $\"Count: {Count}\";\n    }\n\n    [RelayCommand]\n    private async Task NavigateToDetails()\n    {\n        await Shell.Current.GoToAsync(nameof(DetailsPage));\n    }\n}\n\n// XAML Binding:\n// <Label Text=\"{Binding Title}\" />\n// <Button Command=\"{Binding IncrementCountCommand}\" Text=\"Increment\" />",
+              "title": "<strong>Simple ViewModel with commands</strong>"
             }
           }
         ]
@@ -423,8 +423,8 @@
             "emoji": "🔧",
             "title": "Binding Examples",
             "box": {
-              "content": "<strong>Different binding scenarios</strong>",
-              "code": "<!-- Basic property binding -->\n<Label Text=\"{Binding UserName}\" />\n\n<!-- Two-way binding for Entry -->\n<Entry Text=\"{Binding Email, Mode=TwoWay}\" />\n\n<!-- Command binding -->\n<Button Command=\"{Binding SaveCommand}\" \n        Text=\"Save\" />\n\n<!-- Value conversion -->\n<Label Text=\"{Binding BirthDate, \n                StringFormat='{0:MMM dd, yyyy}'}\" />\n\n<!-- Collection binding -->\n<CollectionView ItemsSource=\"{Binding Users}\">\n    <CollectionView.ItemTemplate>\n        <DataTemplate>\n            <Label Text=\"{Binding Name}\" />\n        </DataTemplate>\n    </CollectionView.ItemTemplate>\n</CollectionView>"
+              "code": "<!-- Basic property binding -->\n<Label Text=\"{Binding UserName}\" />\n\n<!-- Two-way binding for Entry -->\n<Entry Text=\"{Binding Email, Mode=TwoWay}\" />\n\n<!-- Command binding -->\n<Button Command=\"{Binding SaveCommand}\" \n        Text=\"Save\" />\n\n<!-- Value conversion -->\n<Label Text=\"{Binding BirthDate, \n                StringFormat='{0:MMM dd, yyyy}'}\" />\n\n<!-- Collection binding -->\n<CollectionView ItemsSource=\"{Binding Users}\">\n    <CollectionView.ItemTemplate>\n        <DataTemplate>\n            <Label Text=\"{Binding Name}\" />\n        </DataTemplate>\n    </CollectionView.ItemTemplate>\n</CollectionView>",
+              "title": "<strong>Different binding scenarios</strong>"
             }
           }
         ]
@@ -442,8 +442,8 @@
             "emoji": "🧭",
             "title": "Shell Navigation",
             "box": {
-              "content": "<strong>Modern app navigation with Shell</strong>",
-              "code": "<!-- AppShell.xaml -->\n<Shell xmlns=\"http://schemas.microsoft.com/dotnet/2021/maui\"\n       xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\"\n       xmlns:views=\"clr-namespace:MyMauiApp.Views\"\n       Title=\"MyMauiApp\">\n    \n    <!-- Bottom Tabs -->\n    <TabBar>\n        <ShellContent Route=\"home\" \n                      Title=\"Home\" \n                      Icon=\"home.png\"\n                      ContentTemplate=\"{DataTemplate views:HomePage}\" />\n        \n        <ShellContent Route=\"profile\" \n                      Title=\"Profile\" \n                      Icon=\"user.png\"\n                      ContentTemplate=\"{DataTemplate views:ProfilePage}\" />\n        \n        <ShellContent Route=\"settings\" \n                      Title=\"Settings\" \n                      Icon=\"settings.png\"\n                      ContentTemplate=\"{DataTemplate views:SettingsPage}\" />\n    </TabBar>\n    \n    <!-- Flyout Menu Items -->\n    <FlyoutItem Title=\"About\">\n        <ShellContent Route=\"about\" \n                      ContentTemplate=\"{DataTemplate views:AboutPage}\" />\n    </FlyoutItem>\n    \n</Shell>"
+              "code": "<!-- AppShell.xaml -->\n<Shell xmlns=\"http://schemas.microsoft.com/dotnet/2021/maui\"\n       xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\"\n       xmlns:views=\"clr-namespace:MyMauiApp.Views\"\n       Title=\"MyMauiApp\">\n    \n    <!-- Bottom Tabs -->\n    <TabBar>\n        <ShellContent Route=\"home\" \n                      Title=\"Home\" \n                      Icon=\"home.png\"\n                      ContentTemplate=\"{DataTemplate views:HomePage}\" />\n        \n        <ShellContent Route=\"profile\" \n                      Title=\"Profile\" \n                      Icon=\"user.png\"\n                      ContentTemplate=\"{DataTemplate views:ProfilePage}\" />\n        \n        <ShellContent Route=\"settings\" \n                      Title=\"Settings\" \n                      Icon=\"settings.png\"\n                      ContentTemplate=\"{DataTemplate views:SettingsPage}\" />\n    </TabBar>\n    \n    <!-- Flyout Menu Items -->\n    <FlyoutItem Title=\"About\">\n        <ShellContent Route=\"about\" \n                      ContentTemplate=\"{DataTemplate views:AboutPage}\" />\n    </FlyoutItem>\n    \n</Shell>",
+              "title": "<strong>Modern app navigation with Shell</strong>"
             }
           },
           {
@@ -451,8 +451,8 @@
             "emoji": "🔧",
             "title": "Navigation in Code",
             "box": {
-              "content": "<strong>Programmatic navigation</strong>",
-              "code": "// Basic navigation\nawait Shell.Current.GoToAsync(nameof(DetailsPage));\n\n// Navigation with parameters\nawait Shell.Current.GoToAsync($\"{nameof(DetailsPage)}?id={itemId}\");\n\n// Navigation with complex data\nvar navigationParameters = new Dictionary<string, object>\n{\n    { \"User\", currentUser }\n};\nawait Shell.Current.GoToAsync(nameof(ProfilePage), navigationParameters);\n\n// Go back\nawait Shell.Current.GoToAsync(\"..\");\n\n// Absolute navigation\nawait Shell.Current.GoToAsync(\"//home/profile\");"
+              "code": "// Basic navigation\nawait Shell.Current.GoToAsync(nameof(DetailsPage));\n\n// Navigation with parameters\nawait Shell.Current.GoToAsync($\"{nameof(DetailsPage)}?id={itemId}\");\n\n// Navigation with complex data\nvar navigationParameters = new Dictionary<string, object>\n{\n    { \"User\", currentUser }\n};\nawait Shell.Current.GoToAsync(nameof(ProfilePage), navigationParameters);\n\n// Go back\nawait Shell.Current.GoToAsync(\"..\");\n\n// Absolute navigation\nawait Shell.Current.GoToAsync(\"//home/profile\");",
+              "title": "<strong>Programmatic navigation</strong>"
             }
           }
         ]
@@ -495,8 +495,8 @@
             "emoji": "🗄️",
             "title": "SQLite with MAUI",
             "box": {
-              "content": "<strong>Local database setup</strong>",
-              "code": "// Model\npublic class User\n{\n    [PrimaryKey, AutoIncrement]\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public string Email { get; set; }\n}\n\n// Database service\npublic class UserService\n{\n    private SQLiteAsyncConnection _database;\n\n    public UserService()\n    {\n        _database = new SQLiteAsyncConnection(\n            Path.Combine(FileSystem.AppDataDirectory, \"users.db3\"));\n        _database.CreateTableAsync<User>().Wait();\n    }\n\n    public async Task<List<User>> GetUsersAsync()\n    {\n        return await _database.Table<User>().ToListAsync();\n    }\n\n    public async Task<int> SaveUserAsync(User user)\n    {\n        if (user.Id != 0)\n            return await _database.UpdateAsync(user);\n        else\n            return await _database.InsertAsync(user);\n    }\n}"
+              "code": "// Model\npublic class User\n{\n    [PrimaryKey, AutoIncrement]\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public string Email { get; set; }\n}\n\n// Database service\npublic class UserService\n{\n    private SQLiteAsyncConnection _database;\n\n    public UserService()\n    {\n        _database = new SQLiteAsyncConnection(\n            Path.Combine(FileSystem.AppDataDirectory, \"users.db3\"));\n        _database.CreateTableAsync<User>().Wait();\n    }\n\n    public async Task<List<User>> GetUsersAsync()\n    {\n        return await _database.Table<User>().ToListAsync();\n    }\n\n    public async Task<int> SaveUserAsync(User user)\n    {\n        if (user.Id != 0)\n            return await _database.UpdateAsync(user);\n        else\n            return await _database.InsertAsync(user);\n    }\n}",
+              "title": "<strong>Local database setup</strong>"
             }
           },
           {
@@ -504,8 +504,8 @@
             "emoji": "🌐",
             "title": "API Integration",
             "box": {
-              "content": "<strong>HTTP calls with HttpClient</strong>",
-              "code": "public class ApiService\n{\n    private readonly HttpClient _httpClient;\n\n    public ApiService()\n    {\n        _httpClient = new HttpClient\n        {\n            BaseAddress = new Uri(\"https://api.example.com\")\n        };\n    }\n\n    public async Task<List<User>> GetUsersAsync()\n    {\n        try\n        {\n            var response = await _httpClient\n                .GetFromJsonAsync<List<User>>(\"/api/users\");\n            return response ?? new List<User>();\n        }\n        catch (Exception ex)\n        {\n            // Handle error\n            Debug.WriteLine($\"API Error: {ex.Message}\");\n            return new List<User>();\n        }\n    }\n\n    public async Task<User> CreateUserAsync(User user)\n    {\n        var response = await _httpClient\n            .PostAsJsonAsync(\"/api/users\", user);\n        \n        response.EnsureSuccessStatusCode();\n        \n        return await response.Content\n            .ReadFromJsonAsync<User>();\n    }\n}"
+              "code": "public class ApiService\n{\n    private readonly HttpClient _httpClient;\n\n    public ApiService()\n    {\n        _httpClient = new HttpClient\n        {\n            BaseAddress = new Uri(\"https://api.example.com\")\n        };\n    }\n\n    public async Task<List<User>> GetUsersAsync()\n    {\n        try\n        {\n            var response = await _httpClient\n                .GetFromJsonAsync<List<User>>(\"/api/users\");\n            return response ?? new List<User>();\n        }\n        catch (Exception ex)\n        {\n            // Handle error\n            Debug.WriteLine($\"API Error: {ex.Message}\");\n            return new List<User>();\n        }\n    }\n\n    public async Task<User> CreateUserAsync(User user)\n    {\n        var response = await _httpClient\n            .PostAsJsonAsync(\"/api/users\", user);\n        \n        response.EnsureSuccessStatusCode();\n        \n        return await response.Content\n            .ReadFromJsonAsync<User>();\n    }\n}",
+              "title": "<strong>HTTP calls with HttpClient</strong>"
             }
           }
         ]
@@ -556,8 +556,8 @@
             "emoji": "💻",
             "title": "Essentials Usage",
             "box": {
-              "content": "<strong>Accessing device features</strong>",
-              "code": "// Check network connectivity\nvar current = Connectivity.NetworkAccess;\nif (current == NetworkAccess.Internet)\n{\n    // Connection to internet is available\n}\n\n// Get device location\nvar location = await Geolocation\n    .GetLocationAsync(new GeolocationRequest\n    {\n        DesiredAccuracy = GeolocationAccuracy.Medium,\n        Timeout = TimeSpan.FromSeconds(30)\n    });\n\nConsole.WriteLine($\"Latitude: {location.Latitude}, Longitude: {location.Longitude}\");\n\n// Secure storage for sensitive data\nawait SecureStorage.SetAsync(\"oauth_token\", \"user_oauth_token\");\nvar token = await SecureStorage.GetAsync(\"oauth_token\");\n\n// Preferences for app settings\nPreferences.Set(\"user_id\", \"12345\");\nvar userId = Preferences.Get(\"user_id\", string.Empty);\n\n// Device information\nvar deviceInfo = DeviceInfo.Current;\nConsole.WriteLine($\"Model: {deviceInfo.Model}\");\nConsole.WriteLine($\"Platform: {deviceInfo.Platform}\");\nConsole.WriteLine($\"Version: {deviceInfo.VersionString}\");"
+              "code": "// Check network connectivity\nvar current = Connectivity.NetworkAccess;\nif (current == NetworkAccess.Internet)\n{\n    // Connection to internet is available\n}\n\n// Get device location\nvar location = await Geolocation\n    .GetLocationAsync(new GeolocationRequest\n    {\n        DesiredAccuracy = GeolocationAccuracy.Medium,\n        Timeout = TimeSpan.FromSeconds(30)\n    });\n\nConsole.WriteLine($\"Latitude: {location.Latitude}, Longitude: {location.Longitude}\");\n\n// Secure storage for sensitive data\nawait SecureStorage.SetAsync(\"oauth_token\", \"user_oauth_token\");\nvar token = await SecureStorage.GetAsync(\"oauth_token\");\n\n// Preferences for app settings\nPreferences.Set(\"user_id\", \"12345\");\nvar userId = Preferences.Get(\"user_id\", string.Empty);\n\n// Device information\nvar deviceInfo = DeviceInfo.Current;\nConsole.WriteLine($\"Model: {deviceInfo.Model}\");\nConsole.WriteLine($\"Platform: {deviceInfo.Platform}\");\nConsole.WriteLine($\"Version: {deviceInfo.VersionString}\");",
+              "title": "<strong>Accessing device features</strong>"
             }
           }
         ]
@@ -575,7 +575,6 @@
             "emoji": "🌐",
             "title": "Blazor Hybrid Architecture",
             "box": {
-              "content": "<strong>Web + Native together</strong>",
               "list": [
                 {
                   "emoji": "🎯",
@@ -593,7 +592,8 @@
                   "emoji": "📦",
                   "text": "<strong>Component Libraries</strong> - Reuse existing Blazor libs"
                 }
-              ]
+              ],
+              "title": "<strong>Web + Native together</strong>"
             }
           },
           {
@@ -601,8 +601,8 @@
             "emoji": "💻",
             "title": "Blazor Hybrid Setup",
             "box": {
-              "content": "<strong>Adding Blazor to MAUI</strong>",
-              "code": "// In MauiProgram.cs\nbuilder.Services.AddMauiBlazorWebView();\n\n#if DEBUG\nbuilder.Services.AddBlazorWebViewDeveloperTools();\n#endif\n\n// In MainPage.xaml\n<blazor:BlazorWebView HostPage=\"wwwroot/index.html\">\n    <blazor:BlazorWebView.RootComponents>\n        <blazor:RootComponent Selector=\"#app\" \n                              ComponentType=\"{x:Type local:Main}\" />\n    </blazor:BlazorWebView.RootComponents>\n</blazor:BlazorWebView>\n\n// Razor component (Main.razor)\n@page \"/\"\n\n<h1>Hello, Blazor Hybrid!</h1>\n\n<button class=\"btn btn-primary\" @onclick=\"IncrementCount\">\n    Click me\n</button>\n\n<p>Current count: @count</p>\n\n@code {\n    private int count = 0;\n\n    private void IncrementCount()\n    {\n        count++;\n    }\n}"
+              "code": "// In MauiProgram.cs\nbuilder.Services.AddMauiBlazorWebView();\n\n#if DEBUG\nbuilder.Services.AddBlazorWebViewDeveloperTools();\n#endif\n\n// In MainPage.xaml\n<blazor:BlazorWebView HostPage=\"wwwroot/index.html\">\n    <blazor:BlazorWebView.RootComponents>\n        <blazor:RootComponent Selector=\"#app\" \n                              ComponentType=\"{x:Type local:Main}\" />\n    </blazor:BlazorWebView.RootComponents>\n</blazor:BlazorWebView>\n\n// Razor component (Main.razor)\n@page \"/\"\n\n<h1>Hello, Blazor Hybrid!</h1>\n\n<button class=\"btn btn-primary\" @onclick=\"IncrementCount\">\n    Click me\n</button>\n\n<p>Current count: @count</p>\n\n@code {\n    private int count = 0;\n\n    private void IncrementCount()\n    {\n        count++;\n    }\n}",
+              "title": "<strong>Adding Blazor to MAUI</strong>"
             }
           }
         ]
@@ -645,8 +645,8 @@
             "emoji": "🔧",
             "title": "Build Commands",
             "box": {
-              "content": "<strong>Command line deployment</strong>",
-              "code": "# Build for Android\ndotnet build -c Release -f net7.0-android -p:AndroidPackageFormat=apk\n\n# Build for iOS (requires Mac)\ndotnet build -c Release -f net7.0-ios -p:BuildIpa=true\n\n# Build for Windows\ndotnet build -c Release -f net7.0-windows10.0.19041.0\n\n# Publish single file (Windows)\ndotnet publish -c Release -f net7.0-windows10.0.19041.0 \\\n  -p:PublishSingleFile=true \\\n  -p:IncludeNativeLibrariesForSelfExtract=true\n\n# Create Android APK\ndotnet publish -c Release -f net7.0-android -p:AndroidPackageFormat=apk"
+              "code": "# Build for Android\ndotnet build -c Release -f net7.0-android -p:AndroidPackageFormat=apk\n\n# Build for iOS (requires Mac)\ndotnet build -c Release -f net7.0-ios -p:BuildIpa=true\n\n# Build for Windows\ndotnet build -c Release -f net7.0-windows10.0.19041.0\n\n# Publish single file (Windows)\ndotnet publish -c Release -f net7.0-windows10.0.19041.0 \\\n  -p:PublishSingleFile=true \\\n  -p:IncludeNativeLibrariesForSelfExtract=true\n\n# Create Android APK\ndotnet publish -c Release -f net7.0-android -p:AndroidPackageFormat=apk",
+              "title": "<strong>Command line deployment</strong>"
             }
           }
         ]
@@ -689,7 +689,6 @@
             "emoji": "🐛",
             "title": "Debugging Tools",
             "box": {
-              "content": "<strong>Development productivity</strong>",
               "list": [
                 {
                   "emoji": "🔍",
@@ -707,7 +706,8 @@
                   "emoji": "📊",
                   "text": "<strong>Performance Profiler</strong> - Identify bottlenecks"
                 }
-              ]
+              ],
+              "title": "<strong>Development productivity</strong>"
             }
           }
         ]
@@ -776,8 +776,8 @@
             "emoji": "🔐",
             "title": "Authentication & OAuth",
             "box": {
-              "content": "<strong>MAUI + Keycloak Integration</strong>",
-              "code": "public class AuthService\n{\n    private readonly HttpClient _httpClient;\n    \n    public async Task<bool> LoginAsync(string username, string password)\n    {\n        var tokenRequest = new\n        {\n            client_id = \"maui-app\",\n            grant_type = \"password\",\n            username = username,\n            password = password\n        };\n\n        var response = await _httpClient\n            .PostAsJsonAsync(\"https://keycloak.example.com/auth/realms/myrealm/protocol/openid-connect/token\", \n                           tokenRequest);\n\n        if (response.IsSuccessStatusCode)\n        {\n            var tokenResponse = await response.Content.ReadFromJsonAsync<TokenResponse>();\n            \n            // Store tokens securely\n            await SecureStorage.SetAsync(\"access_token\", tokenResponse.AccessToken);\n            await SecureStorage.SetAsync(\"refresh_token\", tokenResponse.RefreshToken);\n            \n            return true;\n        }\n        \n        return false;\n    }\n\n    public async Task<string> GetAccessTokenAsync()\n    {\n        return await SecureStorage.GetAsync(\"access_token\");\n    }\n}"
+              "code": "public class AuthService\n{\n    private readonly HttpClient _httpClient;\n    \n    public async Task<bool> LoginAsync(string username, string password)\n    {\n        var tokenRequest = new\n        {\n            client_id = \"maui-app\",\n            grant_type = \"password\",\n            username = username,\n            password = password\n        };\n\n        var response = await _httpClient\n            .PostAsJsonAsync(\"https://keycloak.example.com/auth/realms/myrealm/protocol/openid-connect/token\", \n                           tokenRequest);\n\n        if (response.IsSuccessStatusCode)\n        {\n            var tokenResponse = await response.Content.ReadFromJsonAsync<TokenResponse>();\n            \n            // Store tokens securely\n            await SecureStorage.SetAsync(\"access_token\", tokenResponse.AccessToken);\n            await SecureStorage.SetAsync(\"refresh_token\", tokenResponse.RefreshToken);\n            \n            return true;\n        }\n        \n        return false;\n    }\n\n    public async Task<string> GetAccessTokenAsync()\n    {\n        return await SecureStorage.GetAsync(\"access_token\");\n    }\n}",
+              "title": "<strong>MAUI + Keycloak Integration</strong>"
             }
           }
         ]

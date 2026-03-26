@@ -115,7 +115,6 @@
             "emoji": "🎯",
             "title": "What is Frappe?",
             "box": {
-              "content": "Full-stack, <span class=\"highlight\">metadata-driven web framework</span> for rapid application development",
               "list": [
                 {
                   "emoji": "🐍",
@@ -137,7 +136,8 @@
                   "emoji": "🏢",
                   "text": "<strong>Powering</strong> - ERPNext and thousands of custom apps"
                 }
-              ]
+              ],
+              "title": "Full-stack, <span class=\"highlight\">metadata-driven web framework</span> for rapid application development"
             },
             "note": {
               "text": "<strong>Founded:</strong> 2008<br><strong>Company:</strong> Frappe Technologies<br><strong>License:</strong> MIT"
@@ -201,8 +201,8 @@
             "emoji": "🏗️",
             "title": "System Architecture",
             "box": {
-              "content": "<strong>MVC + Metadata + Event Hooks Architecture</strong>",
-              "code": "Client ↔ Web Server ↔ Frappe App ↔ Database\n        ↓\n   Metadata Layer\n        ↓\n   Event Hooks"
+              "code": "Client ↔ Web Server ↔ Frappe App ↔ Database\n        ↓\n   Metadata Layer\n        ↓\n   Event Hooks",
+              "title": "<strong>MVC + Metadata + Event Hooks Architecture</strong>"
             },
             "list": [
               {
@@ -238,8 +238,8 @@
             "emoji": "⚡",
             "title": "System Requirements",
             "box": {
-              "content": "<strong>Prerequisites installation</strong>",
-              "code": "sudo apt install python3-dev \\\n  redis-server \\\n  mariadb-server \\\n  && pip install frappe-bench"
+              "code": "sudo apt install python3-dev \\\n  redis-server \\\n  mariadb-server \\\n  && pip install frappe-bench",
+              "title": "<strong>Prerequisites installation</strong>"
             },
             "list": [
               {
@@ -265,8 +265,8 @@
             "emoji": "🚀",
             "title": "Quick Setup",
             "box": {
-              "content": "<strong>Initialize Frappe environment</strong>",
-              "code": "# Create bench directory\nbench init --frappe-branch version-15 mysite\n\n# Create new site\ncd mysite\nbench new-site test.local\n\n# Start development server\nbench start"
+              "code": "# Create bench directory\nbench init --frappe-branch version-15 mysite\n\n# Create new site\ncd mysite\nbench new-site test.local\n\n# Start development server\nbench start",
+              "title": "<strong>Initialize Frappe environment</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Access your site at http://test.local:8000"
@@ -287,7 +287,6 @@
             "emoji": "🏗️",
             "title": "What are DocTypes?",
             "box": {
-              "content": "<strong>Unified definition for database tables + forms + permissions</strong>",
               "list": [
                 {
                   "emoji": "📊",
@@ -313,7 +312,8 @@
                   "emoji": "🔄",
                   "text": "<strong>Workflows</strong> - Business process flows"
                 }
-              ]
+              ],
+              "title": "<strong>Unified definition for database tables + forms + permissions</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> One DocType definition = Database table + UI + API + Permissions"
@@ -334,8 +334,8 @@
             "emoji": "🔧",
             "title": "Frappe ORM Examples",
             "box": {
-              "content": "<strong>Working with documents</strong>",
-              "code": "import frappe\n\n# Get document\nuser = frappe.get_doc('User', 'test@example.com')\nprint(user.first_name)\n\n# Create new document\nnew_user = frappe.get_doc({\n    'doctype': 'User',\n    'email': 'new@example.com',\n    'first_name': 'John'\n})\nnew_user.insert()\n\n# Update document\nuser.last_name = 'Doe'\nuser.save()\n\n# Query documents\nusers = frappe.get_all('User', \n    filters={'enabled': 1},\n    fields=['name', 'first_name']\n)"
+              "code": "import frappe\n\n# Get document\nuser = frappe.get_doc('User', 'test@example.com')\nprint(user.first_name)\n\n# Create new document\nnew_user = frappe.get_doc({\n    'doctype': 'User',\n    'email': 'new@example.com',\n    'first_name': 'John'\n})\nnew_user.insert()\n\n# Update document\nuser.last_name = 'Doe'\nuser.save()\n\n# Query documents\nusers = frappe.get_all('User', \n    filters={'enabled': 1},\n    fields=['name', 'first_name']\n)",
+              "title": "<strong>Working with documents</strong>"
             }
           }
         ]
@@ -388,8 +388,8 @@
             "emoji": "🌐",
             "title": "REST API",
             "box": {
-              "content": "<strong>Auto-generated REST endpoints</strong>",
-              "code": "# GET all items\nGET /api/resource/Item\n\n# GET specific item\nGET /api/resource/Item/ITEM-001\n\n# CREATE new item\nPOST /api/resource/Item\n{\n    \"item_name\": \"Laptop\",\n    \"item_code\": \"LAP-001\",\n    \"standard_rate\": 999.99\n}\n\n# UPDATE item\nPUT /api/resource/Item/ITEM-001\n{\n    \"standard_rate\": 899.99\n}\n\n# DELETE item\nDELETE /api/resource/Item/ITEM-001"
+              "code": "# GET all items\nGET /api/resource/Item\n\n# GET specific item\nGET /api/resource/Item/ITEM-001\n\n# CREATE new item\nPOST /api/resource/Item\n{\n    \"item_name\": \"Laptop\",\n    \"item_code\": \"LAP-001\",\n    \"standard_rate\": 999.99\n}\n\n# UPDATE item\nPUT /api/resource/Item/ITEM-001\n{\n    \"standard_rate\": 899.99\n}\n\n# DELETE item\nDELETE /api/resource/Item/ITEM-001",
+              "title": "<strong>Auto-generated REST endpoints</strong>"
             }
           },
           {
@@ -397,8 +397,8 @@
             "emoji": "🔮",
             "title": "GraphQL Support",
             "box": {
-              "content": "<strong>Modern GraphQL API</strong>",
-              "code": "query {\n  User(name: \"test@example.com\") {\n    name\n    first_name\n    last_name\n    roles {\n      role\n    }\n  }\n}"
+              "code": "query {\n  User(name: \"test@example.com\") {\n    name\n    first_name\n    last_name\n    roles {\n      role\n    }\n  }\n}",
+              "title": "<strong>Modern GraphQL API</strong>"
             }
           }
         ]
@@ -416,8 +416,8 @@
             "emoji": "📦",
             "title": "Creating New Apps",
             "box": {
-              "content": "<strong>App development workflow</strong>",
-              "code": "# Create new app\nbench new-app hrms_custom\n\n# Install app on site\nbench --site test.local install-app hrms_custom\n\n# Create new DocType\nbench new-doctype \"Employee\"\n\n# Build assets\nbench build --app hrms_custom"
+              "code": "# Create new app\nbench new-app hrms_custom\n\n# Install app on site\nbench --site test.local install-app hrms_custom\n\n# Create new DocType\nbench new-doctype \"Employee\"\n\n# Build assets\nbench build --app hrms_custom",
+              "title": "<strong>App development workflow</strong>"
             },
             "list": [
               {
@@ -492,7 +492,6 @@
             "emoji": "🔄",
             "title": "Workflows",
             "box": {
-              "content": "<strong>Visual approval workflows at DocType level</strong>",
               "list": [
                 {
                   "emoji": "📋",
@@ -514,7 +513,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Actions</strong> - Automated tasks on transitions"
                 }
-              ]
+              ],
+              "title": "<strong>Visual approval workflows at DocType level</strong>"
             }
           },
           {
@@ -596,8 +596,8 @@
             "emoji": "🔌",
             "title": "Event-Driven Architecture",
             "box": {
-              "content": "<strong>Hook into document lifecycle events</strong>",
-              "code": "# In hooks.py\ndoc_events = {\n    'User': {\n        'after_insert': 'app.user.after_create',\n        'on_update': 'app.user.on_update',\n        'on_trash': 'app.user.before_delete'\n    },\n    'Task': {\n        'on_change': 'app.tasks.sync_with_external'\n    }\n}\n\n# Event handler method\ndef after_create(doc, method):\n    # Custom logic after user creation\n    frappe.sendmail(\n        recipients=doc.email,\n        subject='Welcome!',\n        message='Your account was created.'\n    )"
+              "code": "# In hooks.py\ndoc_events = {\n    'User': {\n        'after_insert': 'app.user.after_create',\n        'on_update': 'app.user.on_update',\n        'on_trash': 'app.user.before_delete'\n    },\n    'Task': {\n        'on_change': 'app.tasks.sync_with_external'\n    }\n}\n\n# Event handler method\ndef after_create(doc, method):\n    # Custom logic after user creation\n    frappe.sendmail(\n        recipients=doc.email,\n        subject='Welcome!',\n        message='Your account was created.'\n    )",
+              "title": "<strong>Hook into document lifecycle events</strong>"
             }
           }
         ]
@@ -615,8 +615,8 @@
             "emoji": "🧪",
             "title": "Testing Framework",
             "box": {
-              "content": "<strong>Built-in testing tools</strong>",
-              "code": "# Run all tests\nbench --site test.local run-tests\n\n# Run specific app tests\nbench --site test.local run-tests --app erpnext\n\n# Run specific module\nbench --site test.local run-tests --module erpnext.selling\n\n# Run specific test case\nbench --site test.local run-tests --test test_customer"
+              "code": "# Run all tests\nbench --site test.local run-tests\n\n# Run specific app tests\nbench --site test.local run-tests --app erpnext\n\n# Run specific module\nbench --site test.local run-tests --module erpnext.selling\n\n# Run specific test case\nbench --site test.local run-tests --test test_customer",
+              "title": "<strong>Built-in testing tools</strong>"
             },
             "list": [
               {

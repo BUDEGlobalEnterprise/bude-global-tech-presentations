@@ -1,0 +1,298 @@
+[
+  {
+    "file": "advanced-slides.json",
+    "count": 25
+  },
+  {
+    "file": "antigravity-deep-dive.json",
+    "count": 60
+  },
+  {
+    "file": "bootstrap-presentation.json",
+    "count": 45
+  },
+  {
+    "file": "erpnext-presentation.json",
+    "count": 42
+  },
+  {
+    "file": "ERPNext-Solutions-Catalog.json",
+    "count": 85
+  },
+  {
+    "file": "frappe-presentation.json",
+    "count": 44
+  },
+  {
+    "file": "intro-adminlte.json",
+    "count": 51
+  },
+  {
+    "file": "intro-aspnet-core.json",
+    "count": 54
+  },
+  {
+    "file": "intro-bash.json",
+    "count": 54
+  },
+  {
+    "file": "intro-bun-hono.json",
+    "count": 50
+  },
+  {
+    "file": "intro-cassandra.json",
+    "count": 51
+  },
+  {
+    "file": "intro-csharp.json",
+    "count": 59
+  },
+  {
+    "file": "intro-dart.json",
+    "count": 39
+  },
+  {
+    "file": "intro-django.json",
+    "count": 51
+  },
+  {
+    "file": "intro-docker.json",
+    "count": 98
+  },
+  {
+    "file": "intro-elasticsearch.json",
+    "count": 50
+  },
+  {
+    "file": "intro-expressjs.json",
+    "count": 28
+  },
+  {
+    "file": "intro-fastapi.json",
+    "count": 50
+  },
+  {
+    "file": "intro-flask.json",
+    "count": 50
+  },
+  {
+    "file": "intro-flutter.json",
+    "count": 48
+  },
+  {
+    "file": "intro-frappe-product-suite.json",
+    "count": 44
+  },
+  {
+    "file": "intro-ghost.json",
+    "count": 70
+  },
+  {
+    "file": "intro-git-github.json",
+    "count": 80
+  },
+  {
+    "file": "intro-gitea.json",
+    "count": 39
+  },
+  {
+    "file": "intro-go.json",
+    "count": 88
+  },
+  {
+    "file": "intro-graphql.json",
+    "count": 45
+  },
+  {
+    "file": "intro-grocy.json",
+    "count": 61
+  },
+  {
+    "file": "intro-imhex.json",
+    "count": 62
+  },
+  {
+    "file": "intro-ionic.json",
+    "count": 48
+  },
+  {
+    "file": "intro-ios-dev.json",
+    "count": 50
+  },
+  {
+    "file": "intro-js.json",
+    "count": 46
+  },
+  {
+    "file": "intro-keycloak.json",
+    "count": 45
+  },
+  {
+    "file": "intro-kotlin.json",
+    "count": 50
+  },
+  {
+    "file": "intro-kubernetes.json",
+    "count": 51
+  },
+  {
+    "file": "intro-laravel-inertia.json",
+    "count": 52
+  },
+  {
+    "file": "intro-laravel.json",
+    "count": 52
+  },
+  {
+    "file": "intro-linux.json",
+    "count": 51
+  },
+  {
+    "file": "intro-maui.json",
+    "count": 52
+  },
+  {
+    "file": "intro-metabase.json",
+    "count": 50
+  },
+  {
+    "file": "intro-mongodb.json",
+    "count": 58
+  },
+  {
+    "file": "intro-mysql.json",
+    "count": 57
+  },
+  {
+    "file": "intro-n8n.json",
+    "count": 58
+  },
+  {
+    "file": "intro-neo4j.json",
+    "count": 50
+  },
+  {
+    "file": "intro-nestjs-microservices.json",
+    "count": 50
+  },
+  {
+    "file": "intro-nextjs-fastify.json",
+    "count": 51
+  },
+  {
+    "file": "intro-nuxt-nitro.json",
+    "count": 54
+  },
+  {
+    "file": "intro-oss.json",
+    "count": 37
+  },
+  {
+    "file": "intro-php.json",
+    "count": 61
+  },
+  {
+    "file": "intro-postgresql.json",
+    "count": 58
+  },
+  {
+    "file": "intro-powertoys.json",
+    "count": 101
+  },
+  {
+    "file": "intro-python.json",
+    "count": 54
+  },
+  {
+    "file": "intro-qwik-express.json",
+    "count": 56
+  },
+  {
+    "file": "intro-redis.json",
+    "count": 51
+  },
+  {
+    "file": "intro-regex.json",
+    "count": 57
+  },
+  {
+    "file": "intro-remix-express.json",
+    "count": 56
+  },
+  {
+    "file": "intro-rest-api-swagger.json",
+    "count": 51
+  },
+  {
+    "file": "intro-ruby.json",
+    "count": 55
+  },
+  {
+    "file": "intro-rust.json",
+    "count": 75
+  },
+  {
+    "file": "intro-solidstart-hono.json",
+    "count": 57
+  },
+  {
+    "file": "intro-spring-boot.json",
+    "count": 50
+  },
+  {
+    "file": "intro-sql-databases.json",
+    "count": 81
+  },
+  {
+    "file": "intro-sqlite.json",
+    "count": 51
+  },
+  {
+    "file": "intro-stirling-pdf.json",
+    "count": 96
+  },
+  {
+    "file": "intro-sveltekit-elysia.json",
+    "count": 63
+  },
+  {
+    "file": "intro-swift.json",
+    "count": 58
+  },
+  {
+    "file": "intro-system-design.json",
+    "count": 72
+  },
+  {
+    "file": "intro-typescript.json",
+    "count": 54
+  },
+  {
+    "file": "intro-wsl.json",
+    "count": 97
+  },
+  {
+    "file": "nextjs-presentation.json",
+    "count": 47
+  },
+  {
+    "file": "nodejs-presentation.json",
+    "count": 63
+  },
+  {
+    "file": "react-presentation.json",
+    "count": 58
+  },
+  {
+    "file": "sample-presentation.json",
+    "count": 22
+  },
+  {
+    "file": "tailwind-css-presentation.json",
+    "count": 52
+  },
+  {
+    "file": "tamil-movie-quiz.json",
+    "count": 46
+  }
+]

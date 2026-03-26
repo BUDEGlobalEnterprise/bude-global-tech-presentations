@@ -8,8 +8,13 @@
           {
             "type": "title",
             "title": "SolidStart & Hono Mastery",
+            "subtitle": "Building Ultra-Fast, Fine-grained Full-stack Apps."
+          },
+          {
+            "type": "content",
+            "title": "Welcome",
             "box": {
-              "content": "Building Ultra-Fast, Fine-grained Full-stack Apps.",
+              "title": "🚀 Modern Web Foundations",
               "list": [
                 { "emoji": "🏎️", "text": "<strong>SolidStart:</strong> The future of Solid.js." },
                 { "emoji": "🔥", "text": "<strong>Hono:</strong> The fast, lightweight web framework." }
@@ -20,11 +25,17 @@
             "type": "content",
             "title": "Presenter",
             "box": {
-              "content": "Aravind Govindhasamy",
               "list": [
-                { "emoji": "👷", "text": "Elite Technical Architect" },
-                { "emoji": "🚀", "text": "Full-stack Performance Enthusiast" }
-              ]
+                {
+                  "emoji": "👷",
+                  "text": "Elite Technical Architect"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Full-stack Performance Enthusiast"
+                }
+              ],
+              "title": "Aravind Govindhasamy"
             }
           }
         ]
@@ -36,44 +47,56 @@
           {
             "type": "topic-title",
             "title": "1. SolidStart Basics",
-            "box": { "content": "File-routing, Islands, and the Zero-Config Dream." }
+            "subtitle": "File-routing, Islands, and the Zero-Config Dream."
           },
           {
             "type": "content",
             "title": "What is SolidStart?",
             "box": {
-              "content": "A meta-framework for Solid.js that provides a unified way to build full-stack applications with high performance.",
               "list": [
-                { "emoji": "📁", "text": "<strong>File-routing:</strong> Natural, intuitive structure." },
-                { "emoji": "🏝️", "text": "<strong>Islands:</strong> Partial hydration for maximum client speed." }
-              ]
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File-routing:</strong> Natural, intuitive structure."
+                },
+                {
+                  "emoji": "🏝️",
+                  "text": "<strong>Islands:</strong> Partial hydration for maximum client speed."
+                }
+              ],
+              "title": "A meta-framework for Solid.js that provides a unified way to build full-stack applications with high performance."
             }
           },
           {
             "type": "content",
             "title": "Project Structure",
             "box": {
-              "content": "SolidStart uses a `src/routes` directory for file-based routing, supporting both static and dynamic segments.",
-              "code": "src/\n  routes/\n    index.tsx\n    users/\n      [id].tsx"
+              "code": "src/\n  routes/\n    index.tsx\n    users/\n      [id].tsx",
+              "title": "SolidStart uses a `src/routes` directory for file-based routing, supporting both static and dynamic segments."
             }
           },
           {
             "type": "content",
             "title": "API Routes",
             "box": {
-              "content": "Easily define server-side endpoints within your routing structure using `.api.ts` files.",
-              "code": "// src/routes/api/health.ts\nexport function GET() {\n  return { status: 'ok' };\n}"
+              "code": "// src/routes/api/health.ts\nexport function GET() {\n  return { status: 'ok' };\n}",
+              "title": "Easily define server-side endpoints within your routing structure using `.api.ts` files."
             }
           },
           {
             "type": "content",
             "title": "Adapter Ecosystem",
             "box": {
-              "content": "SolidStart supports various deployment targets like Vercel, Netlify, Cloudflare, and Bun through specialized adapters.",
               "list": [
-                { "emoji": "☁️", "text": "<strong>Versatile:</strong> Deploy where your users are." },
-                { "emoji": "🔧", "text": "<strong>Simple Config:</strong> Define your adapter in `app.config.ts`." }
-              ]
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Versatile:</strong> Deploy where your users are."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Simple Config:</strong> Define your adapter in `app.config.ts`."
+                }
+              ],
+              "title": "SolidStart supports various deployment targets like Vercel, Netlify, Cloudflare, and Bun through specialized adapters."
             }
           }
         ]
@@ -85,41 +108,47 @@
           {
             "type": "topic-title",
             "title": "2. The Power of Signals",
-            "box": { "content": "Mastering Solid.js Reactivity." }
+            "subtitle": "Mastering Solid.js Reactivity."
           },
           {
             "type": "content",
             "title": "What are Signals?",
             "box": {
-              "content": "The fundamental atom of reactivity in Solid.js. They hold a value and track dependencies automatically.",
-              "code": "const [count, setCount] = createSignal(0);\nsetCount(c => c + 1);"
+              "code": "const [count, setCount] = createSignal(0);\nsetCount(c => c + 1);",
+              "title": "The fundamental atom of reactivity in Solid.js. They hold a value and track dependencies automatically."
             }
           },
           {
             "type": "content",
             "title": "createMemo()",
             "box": {
-              "content": "A derived signal that caches its value and only re-executes when its dependencies change.",
-              "code": "const doubleCount = createMemo(() => count() * 2);"
+              "code": "const doubleCount = createMemo(() => count() * 2);",
+              "title": "A derived signal that caches its value and only re-executes when its dependencies change."
             }
           },
           {
             "type": "content",
             "title": "createEffect()",
             "box": {
-              "content": "Handles side effects that synchronize with reactive state changes.",
-              "code": "createEffect(() => {\n  console.log('Count is:', count());\n});"
+              "code": "createEffect(() => {\n  console.log('Count is:', count());\n});",
+              "title": "Handles side effects that synchronize with reactive state changes."
             }
           },
           {
             "type": "content",
             "title": "Solid vs. Virtual DOM",
             "box": {
-              "content": "Solid compiles to direct DOM manipulations, avoiding the overhead of a Virtual DOM diffing process.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>Fast:</strong> Incredible performance benchmarks." },
-                { "emoji": "🧱", "text": "<strong>Predictable:</strong> No hidden reconciliation magic." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast:</strong> Incredible performance benchmarks."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Predictable:</strong> No hidden reconciliation magic."
+                }
+              ],
+              "title": "Solid compiles to direct DOM manipulations, avoiding the overhead of a Virtual DOM diffing process."
             }
           }
         ]
@@ -131,44 +160,56 @@
           {
             "type": "topic-title",
             "title": "3. Ultra-fast Routing",
-            "box": { "content": "The Hono framework on the Edge." }
+            "subtitle": "The Hono framework on the Edge."
           },
           {
             "type": "content",
             "title": "What is Hono?",
             "box": {
-              "content": "A small, fast, and runtime-agnostic web framework that runs anywhere: Bun, Node, Cloudflare Workers, etc.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Performant:</strong> One of the fastest routers in existence." },
-                { "emoji": "📦", "text": "<strong>Lightweight:</strong> Zero dependencies and tiny bundle size." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Performant:</strong> One of the fastest routers in existence."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Lightweight:</strong> Zero dependencies and tiny bundle size."
+                }
+              ],
+              "title": "A small, fast, and runtime-agnostic web framework that runs anywhere: Bun, Node, Cloudflare Workers, etc."
             }
           },
           {
             "type": "content",
             "title": "Basic Routing",
             "box": {
-              "content": "Clean, intuitive API for defining routes and extracting parameters.",
-              "code": "const app = new Hono();\napp.get('/user/:id', (c) => {\n  const id = c.req.param('id');\n  return c.text(`User: ${id}`);\n});"
+              "code": "const app = new Hono();\napp.get('/user/:id', (c) => {\n  const id = c.req.param('id');\n  return c.text(`User: ${id}`);\n});",
+              "title": "Clean, intuitive API for defining routes and extracting parameters."
             }
           },
           {
             "type": "content",
             "title": "Middleware System",
             "box": {
-              "content": "Composable middleware for logging, authentication, CORS, and more.",
-              "code": "app.use('/api/*', logger);\napp.use('/admin/*', basicAuth({ ... }));"
+              "code": "app.use('/api/*', logger);\napp.use('/admin/*', basicAuth({ ... }));",
+              "title": "Composable middleware for logging, authentication, CORS, and more."
             }
           },
           {
             "type": "content",
             "title": "Hono Context (c)",
             "box": {
-              "content": "The central object for handling requests, responses, environment variables, and more.",
               "list": [
-                { "emoji": "📥", "text": "<strong>Request:</strong> `c.req` for headers, params, body." },
-                { "emoji": "📤", "text": "<strong>Response:</strong> `c.json`, `c.text`, `c.html` helper methods." }
-              ]
+                {
+                  "emoji": "📥",
+                  "text": "<strong>Request:</strong> `c.req` for headers, params, body."
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>Response:</strong> `c.json`, `c.text`, `c.html` helper methods."
+                }
+              ],
+              "title": "The central object for handling requests, responses, environment variables, and more."
             }
           }
         ]
@@ -180,44 +221,56 @@
           {
             "type": "topic-title",
             "title": "4. Server-Side Logic",
-            "box": { "content": "Seamless Server Functions in SolidStart." }
+            "subtitle": "Seamless Server Functions in SolidStart."
           },
           {
             "type": "content",
             "title": "What are Server Functions?",
             "box": {
-              "content": "Functions that always run on the server, but can be called from the client as if they were local asynchronous functions.",
-              "code": "// server\nimport { createServerFn } from '@solidjs/start/server';\nconst getUser = createServerFn(async (id: string) => {\n  return await db.user.find(id);\n});"
+              "code": "// server\nimport { createServerFn } from '@solidjs/start/server';\nconst getUser = createServerFn(async (id: string) => {\n  return await db.user.find(id);\n});",
+              "title": "Functions that always run on the server, but can be called from the client as if they were local asynchronous functions."
             }
           },
           {
             "type": "content",
             "title": "Type Safety",
             "box": {
-              "content": "Server functions provide automatic type inference between the server implementation and the client call.",
               "list": [
-                { "emoji": "🛡️", "text": "<strong>Shared Types:</strong> No manual type definitions required." },
-                { "emoji": "🚦", "text": "<strong>Validation:</strong> Combined with Zod for robust input checking." }
-              ]
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Shared Types:</strong> No manual type definitions required."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Validation:</strong> Combined with Zod for robust input checking."
+                }
+              ],
+              "title": "Server functions provide automatic type inference between the server implementation and the client call."
             }
           },
           {
             "type": "content",
             "title": "Actions for Mutations",
             "box": {
-              "content": "Use `createAction` to handle form submissions and mutations with built-in loading states and feedback.",
-              "code": "const enroll = createAction(async (formData: FormData) => {\n  await api.save(formData);\n});"
+              "code": "const enroll = createAction(async (formData: FormData) => {\n  await api.save(formData);\n});",
+              "title": "Use `createAction` to handle form submissions and mutations with built-in loading states and feedback."
             }
           },
           {
             "type": "content",
             "title": "Transitions & UX",
             "box": {
-              "content": "SolidStart's use of `useTransition` and `useAction` ensures a smooth user experience during data mutations.",
               "list": [
-                { "emoji": "⏳", "text": "<strong>Pending States:</strong> Easy access to loading indicators." },
-                { "emoji": "🔄", "text": "<strong>Optimistic UI:</strong> Update state before the server responds." }
-              ]
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>Pending States:</strong> Easy access to loading indicators."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Optimistic UI:</strong> Update state before the server responds."
+                }
+              ],
+              "title": "SolidStart's use of `useTransition` and `useAction` ensures a smooth user experience during data mutations."
             }
           }
         ]
@@ -229,44 +282,56 @@
           {
             "type": "topic-title",
             "title": "5. Maximizing Speed",
-            "box": { "content": "Streaming SSR and Hydration Strategies." }
+            "subtitle": "Streaming SSR and Hydration Strategies."
           },
           {
             "type": "content",
             "title": "Streaming SSR",
             "box": {
-              "content": "Sending HTML in chunks as it's generated, allowing the browser to start rendering parts of the page earlier.",
               "list": [
-                { "emoji": "🌊", "text": "<strong>Low TTFB:</strong> Faster initial page load for users." },
-                { "emoji": "🧩", "text": "<strong>Progressive:</strong> Components render as soon as their data is ready." }
-              ]
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>Low TTFB:</strong> Faster initial page load for users."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Progressive:</strong> Components render as soon as their data is ready."
+                }
+              ],
+              "title": "Sending HTML in chunks as it's generated, allowing the browser to start rendering parts of the page earlier."
             }
           },
           {
             "type": "content",
             "title": "Islands Architecture",
             "box": {
-              "content": "Only hydrate the interactive parts of your page, keeping the rest as static HTML to minimize JavaScript.",
-              "code": "// Only this island is hydrated\n<Navbar /> \n<StaticContent />\n<InteractiveGallery />"
+              "code": "// Only this island is hydrated\n<Navbar /> \n<StaticContent />\n<InteractiveGallery />",
+              "title": "Only hydrate the interactive parts of your page, keeping the rest as static HTML to minimize JavaScript."
             }
           },
           {
             "type": "content",
             "title": "Partial Hydration",
             "box": {
-              "content": "Fine-tuning which components need hydration and when (e.g., on visible, on idle).",
               "list": [
-                { "emoji": "🤏", "text": "<strong>Minimal JS:</strong> Dramatically reduce the TTI (Time to Interactive)." },
-                { "emoji": "📈", "text": "<strong>Lighthouse:</strong> Boost your performance scores significantly." }
-              ]
+                {
+                  "emoji": "🤏",
+                  "text": "<strong>Minimal JS:</strong> Dramatically reduce the TTI (Time to Interactive)."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Lighthouse:</strong> Boost your performance scores significantly."
+                }
+              ],
+              "title": "Fine-tuning which components need hydration and when (e.g., on visible, on idle)."
             }
           },
           {
             "type": "content",
             "title": "Edge Caching",
             "box": {
-              "content": "Using Hono's weightless footprint to implement smart caching strategies at the network edge.",
-              "code": "app.get('/static/*', cache({ cacheName: 'my-cache', cacheControl: 'max-age=3600' }));"
+              "code": "app.get('/static/*', cache({ cacheName: 'my-cache', cacheControl: 'max-age=3600' }));",
+              "title": "Using Hono's weightless footprint to implement smart caching strategies at the network edge."
             }
           }
         ]
@@ -278,41 +343,47 @@
           {
             "type": "topic-title",
             "title": "6. End-to-End Type Safety",
-            "box": { "content": "Mastering Hono RPC and WebSockets." }
+            "subtitle": "Mastering Hono RPC and WebSockets."
           },
           {
             "type": "content",
             "title": "What is Hono RPC?",
             "box": {
-              "content": "A feature that allows you to share your API types with your frontend, providing full IDE autocompletion and type checking.",
-              "code": "// Client\nconst client = hc<AppType>('http://localhost:3000');\nconst res = await client.api.posts.$get();\nconst data = await res.json();"
+              "code": "// Client\nconst client = hc<AppType>('http://localhost:3000');\nconst res = await client.api.posts.$get();\nconst data = await res.json();",
+              "title": "A feature that allows you to share your API types with your frontend, providing full IDE autocompletion and type checking."
             }
           },
           {
             "type": "content",
             "title": "Dynamic Routing with RPC",
             "box": {
-              "content": "Hono RPC handles dynamic segments and query parameters with full type awareness.",
-              "code": "const res = await client.user[':id'].$get({ param: { id: '123' } });"
+              "code": "const res = await client.user[':id'].$get({ param: { id: '123' } });",
+              "title": "Hono RPC handles dynamic segments and query parameters with full type awareness."
             }
           },
           {
             "type": "content",
             "title": "WebSockets on the Edge",
             "box": {
-              "content": "Using Hono's WebSocket helpers to build real-time applications that scale globally.",
-              "code": "app.get('/ws', upgradeWebSocket((c) => ({\n  onMessage(evt, ws) { ws.send('Hello!'); }\n})));"
+              "code": "app.get('/ws', upgradeWebSocket((c) => ({\n  onMessage(evt, ws) { ws.send('Hello!'); }\n})));",
+              "title": "Using Hono's WebSocket helpers to build real-time applications that scale globally."
             }
           },
           {
             "type": "content",
             "title": "Reactive WebSocket Sync",
             "box": {
-              "content": "Connecting WebSocket events directly to Solid signals for instant UI updates.",
               "list": [
-                { "emoji": "📡", "text": "<strong>Live Updates:</strong> Push data from Hono to Solid components." },
-                { "emoji": "🔗", "text": "<strong>Shared State:</strong> Keeping the client and server in perfect sync." }
-              ]
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Live Updates:</strong> Push data from Hono to Solid components."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Shared State:</strong> Keeping the client and server in perfect sync."
+                }
+              ],
+              "title": "Connecting WebSocket events directly to Solid signals for instant UI updates."
             }
           }
         ]
@@ -324,41 +395,47 @@
           {
             "type": "topic-title",
             "title": "7. Global Delivery",
-            "box": { "content": "Adapters, Cloudflare, and Testing." }
+            "subtitle": "Adapters, Cloudflare, and Testing."
           },
           {
             "type": "content",
             "title": "Edge Adapters",
             "box": {
-              "content": "SolidStart's adapter system makes it easy to target edge runtimes like Cloudflare Workers and Vercel Edge.",
-              "code": "// app.config.ts\nexport default defineConfig({\n  server: { adapter: 'cloudflare-workers' }\n});"
+              "code": "// app.config.ts\nexport default defineConfig({\n  server: { adapter: 'cloudflare-workers' }\n});",
+              "title": "SolidStart's adapter system makes it easy to target edge runtimes like Cloudflare Workers and Vercel Edge."
             }
           },
           {
             "type": "content",
             "title": "Cloudflare Workers Integration",
             "box": {
-              "content": "Deploying your Hono backend and SolidStart frontend as a single, ultra-fast Worker.",
               "list": [
-                { "emoji": "👷", "text": "<strong>Wrangler:</strong> Use Cloudflare's CLI for seamless deployment." },
-                { "emoji": "⚡", "text": "<strong>Durable Objects:</strong> Handle stateful edge computing with ease." }
-              ]
+                {
+                  "emoji": "👷",
+                  "text": "<strong>Wrangler:</strong> Use Cloudflare's CLI for seamless deployment."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Durable Objects:</strong> Handle stateful edge computing with ease."
+                }
+              ],
+              "title": "Deploying your Hono backend and SolidStart frontend as a single, ultra-fast Worker."
             }
           },
           {
             "type": "content",
             "title": "Vitest for Solid",
             "box": {
-              "content": "Fast, Vite-native testing for your Solid components and reactive logic.",
-              "code": "import { render } from '@solidjs/testing-library';\ntest('renders signal', () => {\n  const { getByText } = render(() => <Counter />);\n});"
+              "code": "import { render } from '@solidjs/testing-library';\ntest('renders signal', () => {\n  const { getByText } = render(() => <Counter />);\n});",
+              "title": "Fast, Vite-native testing for your Solid components and reactive logic."
             }
           },
           {
             "type": "content",
             "title": "Testing Hono Handlers",
             "box": {
-              "content": "Isolated testing of your Hono API logic by calling route handlers directly in your test suite.",
-              "code": "const res = await app.request('/api/health');\nexpect(res.status).toBe(200);"
+              "code": "const res = await app.request('/api/health');\nexpect(res.status).toBe(200);",
+              "title": "Isolated testing of your Hono API logic by calling route handlers directly in your test suite."
             }
           }
         ]
@@ -370,41 +447,47 @@
           {
             "type": "topic-title",
             "title": "8. Managing Complexity",
-            "box": { "content": "Solid.js Global State and Context." }
+            "subtitle": "Solid.js Global State and Context."
           },
           {
             "type": "content",
             "title": "createContext()",
             "box": {
-              "content": "Providing state to deeply nested components without prop drilling, with full reactivity.",
-              "code": "const ThemeContext = createContext();\n<ThemeContext.Provider value={theme}>...</ThemeContext.Provider>"
+              "code": "const ThemeContext = createContext();\n<ThemeContext.Provider value={theme}>...</ThemeContext.Provider>",
+              "title": "Providing state to deeply nested components without prop drilling, with full reactivity."
             }
           },
           {
             "type": "content",
             "title": "createStore()",
             "box": {
-              "content": "A high-performance primitive for managing complex nested objects and arrays with fine-grained updates.",
-              "code": "const [state, setState] = createStore({ user: { name: 'Solid' } });\nsetState('user', 'name', 'New Name');"
+              "code": "const [state, setState] = createStore({ user: { name: 'Solid' } });\nsetState('user', 'name', 'New Name');",
+              "title": "A high-performance primitive for managing complex nested objects and arrays with fine-grained updates."
             }
           },
           {
             "type": "content",
             "title": "Global Signals",
             "box": {
-              "content": "Signals can be defined outside of components, making them ideal for simple global state sharing.",
-              "code": "// state.ts\nexport const [isLoggedIn, setIsLoggedIn] = createSignal(false);"
+              "code": "// state.ts\nexport const [isLoggedIn, setIsLoggedIn] = createSignal(false);",
+              "title": "Signals can be defined outside of components, making them ideal for simple global state sharing."
             }
           },
           {
             "type": "content",
             "title": "Reactivity as the Backbone",
             "box": {
-              "content": "How Solid's reactivity system eliminates the need for heavy state management libraries like Redux.",
               "list": [
-                { "emoji": "🧠", "text": "<strong>Intuitive:</strong> Logic and UI stay perfectly synced." },
-                { "emoji": "📦", "text": "<strong>Decoupled:</strong> Easy to move state logic into separate files." }
-              ]
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Intuitive:</strong> Logic and UI stay perfectly synced."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Decoupled:</strong> Easy to move state logic into separate files."
+                }
+              ],
+              "title": "How Solid's reactivity system eliminates the need for heavy state management libraries like Redux."
             }
           }
         ]
@@ -416,44 +499,56 @@
           {
             "type": "topic-title",
             "title": "9. Beautiful Interfaces",
-            "box": { "content": "UnoCSS, Tailwind, and Beyond." }
+            "subtitle": "UnoCSS, Tailwind, and Beyond."
           },
           {
             "type": "content",
             "title": "UnoCSS in SolidStart",
             "box": {
-              "content": "The atomic CSS engine that provides instant styling with zero runtime overhead.",
-              "code": "// app.config.ts\nimport UnoCSS from 'unocss/vite';\nexport default defineConfig({ vite: { plugins: [UnoCSS()] } });"
+              "code": "// app.config.ts\nimport UnoCSS from 'unocss/vite';\nexport default defineConfig({ vite: { plugins: [UnoCSS()] } });",
+              "title": "The atomic CSS engine that provides instant styling with zero runtime overhead."
             }
           },
           {
             "type": "content",
             "title": "Tailwind CSS Integration",
             "box": {
-              "content": "Standardized utility-first styling for consistent design systems.",
               "list": [
-                { "emoji": "🎨", "text": "<strong>Productive:</strong> Fast styling directly in your markup." },
-                { "emoji": "🏗️", "text": "<strong>Design System:</strong> Leverage Tailwind's robust ecosystem." }
-              ]
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Productive:</strong> Fast styling directly in your markup."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Design System:</strong> Leverage Tailwind's robust ecosystem."
+                }
+              ],
+              "title": "Standardized utility-first styling for consistent design systems."
             }
           },
           {
             "type": "content",
             "title": "CSS-in-JS (Compiled)",
             "box": {
-              "content": "Using libraries like `vanilla-extract` for type-safe CSS that compiles to static files.",
-              "code": "import { style } from '@vanilla-extract/css';\nexport const container = style({ padding: '20px' });"
+              "code": "import { style } from '@vanilla-extract/css';\nexport const container = style({ padding: '20px' });",
+              "title": "Using libraries like `vanilla-extract` for type-safe CSS that compiles to static files."
             }
           },
           {
             "type": "content",
             "title": "Themed Experiences",
             "box": {
-              "content": "Combining Solid's reactivity with CSS variables for dynamic, high-performance themes.",
               "list": [
-                { "emoji": "🌙", "text": "<strong>Dark Mode:</strong> Instant theme switching without refreshing." },
-                { "emoji": "🌈", "text": "<strong>Dynamic Styles:</strong> UI that responds to state changes instantly." }
-              ]
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Dark Mode:</strong> Instant theme switching without refreshing."
+                },
+                {
+                  "emoji": "🌈",
+                  "text": "<strong>Dynamic Styles:</strong> UI that responds to state changes instantly."
+                }
+              ],
+              "title": "Combining Solid's reactivity with CSS variables for dynamic, high-performance themes."
             }
           }
         ]
@@ -465,44 +560,56 @@
           {
             "type": "topic-title",
             "title": "10. Robust Utilities",
-            "box": { "content": "Validation and Shared Logic." }
+            "subtitle": "Validation and Shared Logic."
           },
           {
             "type": "content",
             "title": "Zod Validation",
             "box": {
-              "content": "The industry standard for schema-based validation, perfectly integrated with Hono and SolidStart.",
-              "code": "const UserSchema = z.object({ name: z.string() });\napp.post('/user', zValidator('json', UserSchema), (c) => { ... });"
+              "code": "const UserSchema = z.object({ name: z.string() });\napp.post('/user', zValidator('json', UserSchema), (c) => { ... });",
+              "title": "The industry standard for schema-based validation, perfectly integrated with Hono and SolidStart."
             }
           },
           {
             "type": "content",
             "title": "TypeBox Integration",
             "box": {
-              "content": "A high-performance alternative to Zod that provides ultra-fast runtime validation with TypeScript inference.",
-              "code": "const User = Type.Object({ name: Type.String() });"
+              "code": "const User = Type.Object({ name: Type.String() });",
+              "title": "A high-performance alternative to Zod that provides ultra-fast runtime validation with TypeScript inference."
             }
           },
           {
             "type": "content",
             "title": "Shared Logic Modules",
             "box": {
-              "content": "Structuring your project to share business logic and validation schemas across the full-stack boundary.",
               "list": [
-                { "emoji": "📁", "text": "<strong>Shared Folder:</strong> Centralize your schemas and types." },
-                { "emoji": "🔗", "text": "<strong>Consistency:</strong> Zero drift between client and server logic." }
-              ]
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Shared Folder:</strong> Centralize your schemas and types."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Consistency:</strong> Zero drift between client and server logic."
+                }
+              ],
+              "title": "Structuring your project to share business logic and validation schemas across the full-stack boundary."
             }
           },
           {
             "type": "content",
             "title": "Error Handling Patterns",
             "box": {
-              "content": "Unified error responses using Hono's `onError` hook and SolidStart's `ErrorBoundary` component.",
               "list": [
-                { "emoji": "🚦", "text": "<strong>Reliable:</strong> Catch and handle errors gracefully." },
-                { "emoji": "🛡️", "text": "<strong>Fallback UI:</strong> Keep your app functional even when things go wrong." }
-              ]
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Reliable:</strong> Catch and handle errors gracefully."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Fallback UI:</strong> Keep your app functional even when things go wrong."
+                }
+              ],
+              "title": "Unified error responses using Hono's `onError` hook and SolidStart's `ErrorBoundary` component."
             }
           }
         ]
@@ -514,40 +621,59 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "Your Solid + Hono Journey Begins." }
+            "subtitle": "Your Solid + Hono Journey Begins."
           },
           {
             "type": "content",
             "title": "Stack Summary",
             "box": {
-              "content": "The combination of SolidStart's reactive power and Hono's edge performance is a game-changer for modern web apps.",
               "list": [
-                { "emoji": "🚀", "text": "<strong>Speed:</strong> Near-instant interactions and pageloads." },
-                { "emoji": "🛡️", "text": "<strong>Safety:</strong> Types that flow from database to DOM." },
-                { "emoji": "🧱", "text": "<strong>Simplicity:</strong> A minimalist but powerful developer experience." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Speed:</strong> Near-instant interactions and pageloads."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Safety:</strong> Types that flow from database to DOM."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Simplicity:</strong> A minimalist but powerful developer experience."
+                }
+              ],
+              "title": "The combination of SolidStart's reactive power and Hono's edge performance is a game-changer for modern web apps."
             }
           },
           {
             "type": "content",
             "title": "Future Outcomes",
             "box": {
-              "content": "As the ecosystem grows, expect even better tooling, faster runtimes, and more seamless integrations.",
               "list": [
-                { "emoji": "📈", "text": "<strong>Growth:</strong> Solid.js continues to lead in performance." },
-                { "emoji": "🔧", "text": "<strong>Innovation:</strong> Hono is redefining how we think about web frameworks." }
-              ]
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Growth:</strong> Solid.js continues to lead in performance."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Innovation:</strong> Hono is redefining how we think about web frameworks."
+                }
+              ],
+              "title": "As the ecosystem grows, expect even better tooling, faster runtimes, and more seamless integrations."
             }
           },
           {
             "type": "content",
             "title": "Final Thoughts",
-            "box": { "content": "Think in signals. Deploy to the edge. Build with Solid and Hono." }
+            "box": {
+              "title": "Think in signals. Deploy to the edge. Build with Solid and Hono."
+            }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you! Any questions?" }
+            "box": {
+              "title": "Thank you! Any questions?"
+            }
           }
         ]
       }

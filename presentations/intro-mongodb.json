@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is MongoDB?",
             "box": {
-              "content": "<span class=\"highlight\">Document-oriented NoSQL database using JSON-like documents</span>",
               "list": [
                 {
                   "emoji": "🍃",
@@ -124,7 +123,8 @@
                   "emoji": "🚀",
                   "text": "<strong>Performance</strong> - Fast reads/writes, in-memory computing"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Document-oriented NoSQL database using JSON-like documents</span>"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> MongoDB is the most popular NoSQL database and powers companies like eBay, Adobe, and Google!"
@@ -295,8 +295,8 @@
             "emoji": "🔧",
             "title": "Document Structure Example",
             "box": {
-              "content": "<strong>Sample MongoDB Document</strong>",
-              "code": "{\n  \"_id\": ObjectId(\"507f1f77bcf86cd799439011\"),\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"john@example.com\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zipcode\": \"10001\"\n  },\n  \"hobbies\": [\"reading\", \"hiking\", \"coding\"],\n  \"created_at\": ISODate(\"2023-01-15T10:30:00Z\")\n}"
+              "code": "{\n  \"_id\": ObjectId(\"507f1f77bcf86cd799439011\"),\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"john@example.com\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zipcode\": \"10001\"\n  },\n  \"hobbies\": [\"reading\", \"hiking\", \"coding\"],\n  \"created_at\": ISODate(\"2023-01-15T10:30:00Z\")\n}",
+              "title": "<strong>Sample MongoDB Document</strong>"
             }
           }
         ]
@@ -343,8 +343,8 @@
             "emoji": "🐧",
             "title": "Ubuntu Installation Example",
             "box": {
-              "content": "<strong>Installing on Ubuntu/Debian</strong>",
-              "code": "# Import MongoDB public GPG key\nwget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -\n\n# Create list file for MongoDB\necho \"deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list\n\n# Update package list\nsudo apt update\n\n# Install MongoDB\nsudo apt install -y mongodb-org\n\n# Start MongoDB service\nsudo systemctl start mongod\nsudo systemctl enable mongod\n\n# Connect to MongoDB\nmongosh\n\n# Show databases\nshow dbs"
+              "code": "# Import MongoDB public GPG key\nwget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -\n\n# Create list file for MongoDB\necho \"deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list\n\n# Update package list\nsudo apt update\n\n# Install MongoDB\nsudo apt install -y mongodb-org\n\n# Start MongoDB service\nsudo systemctl start mongod\nsudo systemctl enable mongod\n\n# Connect to MongoDB\nmongosh\n\n# Show databases\nshow dbs",
+              "title": "<strong>Installing on Ubuntu/Debian</strong>"
             }
           }
         ]
@@ -405,8 +405,8 @@
             "emoji": "🏗️",
             "title": "MongoDB Architecture Overview",
             "box": {
-              "content": "<strong>Core Components</strong>",
-              "code": "MongoDB Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (Drivers, GUI) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  mongod/mongos  │\n│  (Query Router) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage Engine │\n│  (WiredTiger)   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Data Files     │\n│  (BSON Format)  │\n└─────────────────┘\n\nKey Components:\n• mongod - Primary daemon process\n• mongos - Query router for sharding\n• Config Servers - Metadata storage\n• Shards - Data storage nodes"
+              "code": "MongoDB Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (Drivers, GUI) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  mongod/mongos  │\n│  (Query Router) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage Engine │\n│  (WiredTiger)   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Data Files     │\n│  (BSON Format)  │\n└─────────────────┘\n\nKey Components:\n• mongod - Primary daemon process\n• mongos - Query router for sharding\n• Config Servers - Metadata storage\n• Shards - Data storage nodes",
+              "title": "<strong>Core Components</strong>"
             }
           }
         ]
@@ -453,8 +453,8 @@
             "emoji": "🔧",
             "title": "Working with Collections",
             "box": {
-              "content": "<strong>Collection Operations</strong>",
-              "code": "-- Switch to database\nuse mydatabase\n\n-- Create collection (implicit)\ndb.createCollection(\"users\")\n\n-- Show collections\nshow collections\n\n-- Insert document\ndb.users.insertOne({\n  name: \"Alice\",\n  age: 25,\n  email: \"alice@example.com\"\n})\n\n-- Drop collection\ndb.users.drop()\n\n-- Collection stats\ndb.users.stats()\n\n-- Create capped collection\ndb.createCollection(\"logs\", { capped: true, size: 100000 })"
+              "code": "-- Switch to database\nuse mydatabase\n\n-- Create collection (implicit)\ndb.createCollection(\"users\")\n\n-- Show collections\nshow collections\n\n-- Insert document\ndb.users.insertOne({\n  name: \"Alice\",\n  age: 25,\n  email: \"alice@example.com\"\n})\n\n-- Drop collection\ndb.users.drop()\n\n-- Collection stats\ndb.users.stats()\n\n-- Create capped collection\ndb.createCollection(\"logs\", { capped: true, size: 100000 })",
+              "title": "<strong>Collection Operations</strong>"
             }
           }
         ]
@@ -523,8 +523,8 @@
             "emoji": "📊",
             "title": "Basic CRUD Operations",
             "box": {
-              "content": "<strong>Create, Read, Update, Delete</strong>",
-              "code": "-- Insert documents\ndb.users.insertOne({\n  name: \"John\",\n  age: 30,\n  email: \"john@example.com\"\n})\n\ndb.users.insertMany([\n  { name: \"Alice\", age: 25 },\n  { name: \"Bob\", age: 35 }\n])\n\n-- Find documents\ndb.users.find()\ndb.users.findOne({ name: \"John\" })\ndb.users.find({ age: { $gt: 25 } })\n\n-- Update documents\ndb.users.updateOne(\n  { name: \"John\" },\n  { $set: { age: 31 } }\n)\n\ndb.users.updateMany(\n  { age: { $lt: 30 } },\n  { $set: { status: \"young\" } }\n)\n\n-- Delete documents\ndb.users.deleteOne({ name: \"John\" })\ndb.users.deleteMany({ age: { $gt: 40 } })"
+              "code": "-- Insert documents\ndb.users.insertOne({\n  name: \"John\",\n  age: 30,\n  email: \"john@example.com\"\n})\n\ndb.users.insertMany([\n  { name: \"Alice\", age: 25 },\n  { name: \"Bob\", age: 35 }\n])\n\n-- Find documents\ndb.users.find()\ndb.users.findOne({ name: \"John\" })\ndb.users.find({ age: { $gt: 25 } })\n\n-- Update documents\ndb.users.updateOne(\n  { name: \"John\" },\n  { $set: { age: 31 } }\n)\n\ndb.users.updateMany(\n  { age: { $lt: 30 } },\n  { $set: { status: \"young\" } }\n)\n\n-- Delete documents\ndb.users.deleteOne({ name: \"John\" })\ndb.users.deleteMany({ age: { $gt: 40 } })",
+              "title": "<strong>Create, Read, Update, Delete</strong>"
             }
           }
         ]
@@ -542,8 +542,8 @@
             "emoji": "🔍",
             "title": "Common Query Operators",
             "box": {
-              "content": "<strong>Powerful Filtering Capabilities</strong>",
-              "code": "-- Comparison operators\ndb.products.find({ price: { $gt: 100 } })        -- Greater than\ndb.products.find({ price: { $lt: 50 } })         -- Less than\ndb.products.find({ price: { $gte: 20, $lte: 100 } }) -- Between\n\n-- Logical operators\ndb.users.find({ $and: [\n  { age: { $gt: 25 } },\n  { age: { $lt: 40 } }\n]})\n\ndb.users.find({ $or: [\n  { status: \"active\" },\n  { age: { $gt: 30 } }\n]})\n\n-- Element operators\ndb.users.find({ email: { $exists: true } })      -- Field exists\ndb.users.find({ age: { $type: \"number\" } })      -- Field type\n\n-- Array operators\ndb.users.find({ hobbies: { $in: [\"reading\", \"hiking\"] } })\ndb.users.find({ hobbies: { $all: [\"reading\", \"coding\"] } })\ndb.users.find({ \"hobbies.0\": \"reading\" })        -- Positional\n\n-- Regex (pattern matching)\ndb.users.find({ name: { $regex: /^J/, $options: \"i\" } })"
+              "code": "-- Comparison operators\ndb.products.find({ price: { $gt: 100 } })        -- Greater than\ndb.products.find({ price: { $lt: 50 } })         -- Less than\ndb.products.find({ price: { $gte: 20, $lte: 100 } }) -- Between\n\n-- Logical operators\ndb.users.find({ $and: [\n  { age: { $gt: 25 } },\n  { age: { $lt: 40 } }\n]})\n\ndb.users.find({ $or: [\n  { status: \"active\" },\n  { age: { $gt: 30 } }\n]})\n\n-- Element operators\ndb.users.find({ email: { $exists: true } })      -- Field exists\ndb.users.find({ age: { $type: \"number\" } })      -- Field type\n\n-- Array operators\ndb.users.find({ hobbies: { $in: [\"reading\", \"hiking\"] } })\ndb.users.find({ hobbies: { $all: [\"reading\", \"coding\"] } })\ndb.users.find({ \"hobbies.0\": \"reading\" })        -- Positional\n\n-- Regex (pattern matching)\ndb.users.find({ name: { $regex: /^J/, $options: \"i\" } })",
+              "title": "<strong>Powerful Filtering Capabilities</strong>"
             }
           }
         ]
@@ -594,8 +594,8 @@
             "emoji": "🔧",
             "title": "Creating Indexes",
             "box": {
-              "content": "<strong>Index Management</strong>",
-              "code": "-- Create single field index\ndb.users.createIndex({ email: 1 })  -- 1 for ascending, -1 for descending\n\n-- Create compound index\ndb.orders.createIndex({ customer_id: 1, order_date: -1 })\n\n-- Create text index\ndb.articles.createIndex({ content: \"text\", title: \"text\" })\n\n-- Create TTL index (expire after 3600 seconds)\ndb.sessions.createIndex({ created_at: 1 }, { expireAfterSeconds: 3600 })\n\n-- Create unique index\ndb.users.createIndex({ email: 1 }, { unique: true })\n\n-- View indexes\ndb.users.getIndexes()\n\n-- Drop index\ndb.users.dropIndex(\"email_1\")\n\n-- Explain query\ndb.users.find({ email: \"test@example.com\" }).explain(\"executionStats\")"
+              "code": "-- Create single field index\ndb.users.createIndex({ email: 1 })  -- 1 for ascending, -1 for descending\n\n-- Create compound index\ndb.orders.createIndex({ customer_id: 1, order_date: -1 })\n\n-- Create text index\ndb.articles.createIndex({ content: \"text\", title: \"text\" })\n\n-- Create TTL index (expire after 3600 seconds)\ndb.sessions.createIndex({ created_at: 1 }, { expireAfterSeconds: 3600 })\n\n-- Create unique index\ndb.users.createIndex({ email: 1 }, { unique: true })\n\n-- View indexes\ndb.users.getIndexes()\n\n-- Drop index\ndb.users.dropIndex(\"email_1\")\n\n-- Explain query\ndb.users.find({ email: \"test@example.com\" }).explain(\"executionStats\")",
+              "title": "<strong>Index Management</strong>"
             }
           }
         ]
@@ -642,8 +642,8 @@
             "emoji": "🏗️",
             "title": "Schema Design Patterns",
             "box": {
-              "content": "<strong>Common Design Patterns</strong>",
-              "code": "-- Embedded pattern (user with addresses)\n{\n  _id: ObjectId(...),\n  name: \"John Doe\",\n  addresses: [\n    { type: \"home\", street: \"123 Main St\", city: \"NY\" },\n    { type: \"work\", street: \"456 Oak Ave\", city: \"NY\" }\n  ]\n}\n\n-- Referenced pattern (blog with comments)\n// Posts collection\n{\n  _id: ObjectId(\"post123\"),\n  title: \"MongoDB Guide\",\n  content: \"...\"\n}\n\n// Comments collection  \n{\n  _id: ObjectId(\"comment1\"),\n  post_id: ObjectId(\"post123\"),\n  author: \"Alice\",\n  text: \"Great post!\"\n}\n\n-- Polymorphic pattern (different product types)\n{\n  _id: ObjectId(...),\n  type: \"book\",\n  title: \"MongoDB in Action\",\n  author: \"John Doe\",\n  pages: 300\n}\n\n{\n  _id: ObjectId(...), \n  type: \"electronics\",\n  name: \"Smartphone\",\n  brand: \"Samsung\",\n  specs: { ram: \"8GB\", storage: \"128GB\" }\n}"
+              "code": "-- Embedded pattern (user with addresses)\n{\n  _id: ObjectId(...),\n  name: \"John Doe\",\n  addresses: [\n    { type: \"home\", street: \"123 Main St\", city: \"NY\" },\n    { type: \"work\", street: \"456 Oak Ave\", city: \"NY\" }\n  ]\n}\n\n-- Referenced pattern (blog with comments)\n// Posts collection\n{\n  _id: ObjectId(\"post123\"),\n  title: \"MongoDB Guide\",\n  content: \"...\"\n}\n\n// Comments collection  \n{\n  _id: ObjectId(\"comment1\"),\n  post_id: ObjectId(\"post123\"),\n  author: \"Alice\",\n  text: \"Great post!\"\n}\n\n-- Polymorphic pattern (different product types)\n{\n  _id: ObjectId(...),\n  type: \"book\",\n  title: \"MongoDB in Action\",\n  author: \"John Doe\",\n  pages: 300\n}\n\n{\n  _id: ObjectId(...), \n  type: \"electronics\",\n  name: \"Smartphone\",\n  brand: \"Samsung\",\n  specs: { ram: \"8GB\", storage: \"128GB\" }\n}",
+              "title": "<strong>Common Design Patterns</strong>"
             }
           }
         ]
@@ -698,8 +698,8 @@
             "emoji": "🔧",
             "title": "Aggregation Examples",
             "box": {
-              "content": "<strong>Practical Aggregation Pipelines</strong>",
-              "code": "-- Sales analysis by category\ndb.orders.aggregate([\n  { $match: { status: \"completed\" } },\n  { $unwind: \"$items\" },\n  { $group: {\n      _id: \"$items.category\",\n      totalSales: { $sum: \"$items.price\" },\n      avgOrder: { $avg: \"$items.price\" },\n      count: { $sum: 1 }\n  }},\n  { $sort: { totalSales: -1 } },\n  { $limit: 10 }\n])\n\n-- User activity with lookup\ndb.users.aggregate([\n  { $lookup: {\n      from: \"orders\",\n      localField: \"_id\", \n      foreignField: \"user_id\",\n      as: \"user_orders\"\n  }},\n  { $project: {\n      name: 1,\n      email: 1,\n      orderCount: { $size: \"$user_orders\" },\n      totalSpent: { $sum: \"$user_orders.total\" }\n  }},\n  { $match: { orderCount: { $gt: 0 } } }\n])\n\n-- Monthly revenue trend\ndb.orders.aggregate([\n  { $match: { order_date: { $gte: ISODate(\"2023-01-01\") } } },\n  { $group: {\n      _id: { \n        year: { $year: \"$order_date\" },\n        month: { $month: \"$order_date\" }\n      },\n      revenue: { $sum: \"$total\" },\n      orders: { $sum: 1 }\n  }},\n  { $sort: { \"_id.year\": 1, \"_id.month\": 1 } }\n])"
+              "code": "-- Sales analysis by category\ndb.orders.aggregate([\n  { $match: { status: \"completed\" } },\n  { $unwind: \"$items\" },\n  { $group: {\n      _id: \"$items.category\",\n      totalSales: { $sum: \"$items.price\" },\n      avgOrder: { $avg: \"$items.price\" },\n      count: { $sum: 1 }\n  }},\n  { $sort: { totalSales: -1 } },\n  { $limit: 10 }\n])\n\n-- User activity with lookup\ndb.users.aggregate([\n  { $lookup: {\n      from: \"orders\",\n      localField: \"_id\", \n      foreignField: \"user_id\",\n      as: \"user_orders\"\n  }},\n  { $project: {\n      name: 1,\n      email: 1,\n      orderCount: { $size: \"$user_orders\" },\n      totalSpent: { $sum: \"$user_orders.total\" }\n  }},\n  { $match: { orderCount: { $gt: 0 } } }\n])\n\n-- Monthly revenue trend\ndb.orders.aggregate([\n  { $match: { order_date: { $gte: ISODate(\"2023-01-01\") } } },\n  { $group: {\n      _id: { \n        year: { $year: \"$order_date\" },\n        month: { $month: \"$order_date\" }\n      },\n      revenue: { $sum: \"$total\" },\n      orders: { $sum: 1 }\n  }},\n  { $sort: { \"_id.year\": 1, \"_id.month\": 1 } }\n])",
+              "title": "<strong>Practical Aggregation Pipelines</strong>"
             }
           }
         ]
@@ -760,8 +760,8 @@
             "emoji": "🔄",
             "title": "Replica Set Architecture",
             "box": {
-              "content": "<strong>Automatic Failover & Data Redundancy</strong>",
-              "code": "Replica Set Structure:\n\n          ┌─────────────────┐\n          │   Application   │\n          └─────────┬───────┘\n                    │\n          ┌─────────▼───────┐\n          │   Primary Node  │\n          │   (Read/Write)  │\n          └─────────┬───────┘\n                    │\n    ┌───────────────┼───────────────┐\n    │               │               │\n┌───▼───┐       ┌───▼───┐       ┌───▼───┐\n│Secondary│     │Secondary│     │Secondary│\n│ (Read)  │     │ (Read)  │     │ (Read)  │\n└─────────┘     └─────────┘     └─────────┘\n\nKey Features:\n• Automatic failover\n• Data redundancy\n• Read scaling\n• Geographic distribution"
+              "code": "Replica Set Structure:\n\n          ┌─────────────────┐\n          │   Application   │\n          └─────────┬───────┘\n                    │\n          ┌─────────▼───────┐\n          │   Primary Node  │\n          │   (Read/Write)  │\n          └─────────┬───────┘\n                    │\n    ┌───────────────┼───────────────┐\n    │               │               │\n┌───▼───┐       ┌───▼───┐       ┌───▼───┐\n│Secondary│     │Secondary│     │Secondary│\n│ (Read)  │     │ (Read)  │     │ (Read)  │\n└─────────┘     └─────────┘     └─────────┘\n\nKey Features:\n• Automatic failover\n• Data redundancy\n• Read scaling\n• Geographic distribution",
+              "title": "<strong>Automatic Failover & Data Redundancy</strong>"
             }
           }
         ]
@@ -779,8 +779,8 @@
             "emoji": "📈",
             "title": "Sharding Architecture",
             "box": {
-              "content": "<strong>Distributing Data Across Multiple Servers</strong>",
-              "code": "Sharded Cluster:\n\n┌─────────────────┐\n│   Application   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│   mongos Router │\n└─────────┬───────┘\n          │\n    ┌─────┴─────┐\n    │           │\n┌───▼───┐   ┌───▼───┐\n│Config │   │Config │\n│Server │   │Server │\n└───────┘   └───────┘\n    │           │\n    └─────┬─────┘\n          │\n    ┌─────┴─────┐\n    │           │\n┌───▼───┐   ┌───▼───┐\n│ Shard │   │ Shard │\n│   A   │   │   B   │\n└───────┘   └───────┘\n\nSharding Strategies:\n• Range-based\n• Hash-based\n• Zone sharding"
+              "code": "Sharded Cluster:\n\n┌─────────────────┐\n│   Application   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│   mongos Router │\n└─────────┬───────┘\n          │\n    ┌─────┴─────┐\n    │           │\n┌───▼───┐   ┌───▼───┐\n│Config │   │Config │\n│Server │   │Server │\n└───────┘   └───────┘\n    │           │\n    └─────┬─────┘\n          │\n    ┌─────┴─────┐\n    │           │\n┌───▼───┐   ┌───▼───┐\n│ Shard │   │ Shard │\n│   A   │   │   B   │\n└───────┘   └───────┘\n\nSharding Strategies:\n• Range-based\n• Hash-based\n• Zone sharding",
+              "title": "<strong>Distributing Data Across Multiple Servers</strong>"
             }
           }
         ]
@@ -798,8 +798,8 @@
             "emoji": "🔗",
             "title": "MongoDB with Node.js",
             "box": {
-              "content": "<strong>Using Native Driver & Mongoose ODM</strong>",
-              "code": "// Using native MongoDB driver\nconst { MongoClient } = require('mongodb');\n\nconst client = new MongoClient(process.env.MONGODB_URI);\n\nasync function main() {\n  await client.connect();\n  const db = client.db('mydatabase');\n  \n  const users = db.collection('users');\n  \n  // Insert user\n  await users.insertOne({\n    name: 'John Doe',\n    email: 'john@example.com'\n  });\n  \n  // Find users\n  const result = await users.find({}).toArray();\n  console.log(result);\n}\n\n// Using Mongoose ODM\nconst mongoose = require('mongoose');\n\nconst userSchema = new mongoose.Schema({\n  name: String,\n  email: { type: String, unique: true },\n  age: Number\n});\n\nconst User = mongoose.model('User', userSchema);\n\nawait mongoose.connect(process.env.MONGODB_URI);\n\nconst user = new User({ name: 'Alice', email: 'alice@example.com' });\nawait user.save();\n\nconst users = await User.find({ age: { $gt: 25 } });"
+              "code": "// Using native MongoDB driver\nconst { MongoClient } = require('mongodb');\n\nconst client = new MongoClient(process.env.MONGODB_URI);\n\nasync function main() {\n  await client.connect();\n  const db = client.db('mydatabase');\n  \n  const users = db.collection('users');\n  \n  // Insert user\n  await users.insertOne({\n    name: 'John Doe',\n    email: 'john@example.com'\n  });\n  \n  // Find users\n  const result = await users.find({}).toArray();\n  console.log(result);\n}\n\n// Using Mongoose ODM\nconst mongoose = require('mongoose');\n\nconst userSchema = new mongoose.Schema({\n  name: String,\n  email: { type: String, unique: true },\n  age: Number\n});\n\nconst User = mongoose.model('User', userSchema);\n\nawait mongoose.connect(process.env.MONGODB_URI);\n\nconst user = new User({ name: 'Alice', email: 'alice@example.com' });\nawait user.save();\n\nconst users = await User.find({ age: { $gt: 25 } });",
+              "title": "<strong>Using Native Driver & Mongoose ODM</strong>"
             }
           }
         ]
@@ -895,8 +895,8 @@
             "emoji": "📋",
             "title": "MongoDB Command Cheat Sheet",
             "box": {
-              "content": "<strong>Essential commands quick reference</strong>",
-              "code": "# Connection & Database\nmongosh                          # Connect to MongoDB\nshow dbs                         # List databases\nuse dbname                       # Switch database\nshow collections                 # List collections\n\n# CRUD Operations\ndb.collection.insertOne({...})   # Insert one document\ndb.collection.insertMany([...])  # Insert multiple\ndb.collection.find()             # Find all documents\ndb.collection.findOne({...})     # Find one document\ndb.collection.updateOne({...})   # Update one document\ndb.collection.updateMany({...})  # Update multiple\ndb.collection.deleteOne({...})   # Delete one document\ndb.collection.deleteMany({...})  # Delete multiple\n\n# Index Management\ndb.collection.createIndex({...}) # Create index\ndb.collection.getIndexes()       # List indexes\ndb.collection.dropIndex(\"name\")  # Drop index\n\n# Aggregation\ndb.collection.aggregate([...])   # Run aggregation pipeline\n\n# Administration\ndb.stats()                       # Database statistics\ndb.collection.stats()            # Collection statistics\ndb.serverStatus()                # Server status\n\n# User Management\ndb.createUser({...})             # Create user\ndb.dropUser(\"username\")          # Delete user\nshow users                       # List users"
+              "code": "# Connection & Database\nmongosh                          # Connect to MongoDB\nshow dbs                         # List databases\nuse dbname                       # Switch database\nshow collections                 # List collections\n\n# CRUD Operations\ndb.collection.insertOne({...})   # Insert one document\ndb.collection.insertMany([...])  # Insert multiple\ndb.collection.find()             # Find all documents\ndb.collection.findOne({...})     # Find one document\ndb.collection.updateOne({...})   # Update one document\ndb.collection.updateMany({...})  # Update multiple\ndb.collection.deleteOne({...})   # Delete one document\ndb.collection.deleteMany({...})  # Delete multiple\n\n# Index Management\ndb.collection.createIndex({...}) # Create index\ndb.collection.getIndexes()       # List indexes\ndb.collection.dropIndex(\"name\")  # Drop index\n\n# Aggregation\ndb.collection.aggregate([...])   # Run aggregation pipeline\n\n# Administration\ndb.stats()                       # Database statistics\ndb.collection.stats()            # Collection statistics\ndb.serverStatus()                # Server status\n\n# User Management\ndb.createUser({...})             # Create user\ndb.dropUser(\"username\")          # Delete user\nshow users                       # List users",
+              "title": "<strong>Essential commands quick reference</strong>"
             }
           }
         ]

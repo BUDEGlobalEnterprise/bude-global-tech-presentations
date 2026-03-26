@@ -34,15 +34,12 @@
           {
             "type": "topic-title",
             "title": "1. Introduction & History",
-            "box": {
-              "content": "Why Go was created and what it stands for"
-            }
+            "subtitle": "Why Go was created and what it stands for"
           },
           {
             "type": "content",
             "title": "What is Go?",
             "box": {
-              "content": "Go (often called Golang) is a statically typed, compiled programming language designed at Google. It was created to address the challenges of large-scale software development: slow builds, uncontrolled dependencies, and difficult concurrency. Go combines the <span class=\"highlight\">performance</span> of low-level languages like C++ with the <span class=\"highlight\">readability</span> and productivity of high-level languages like Python.",
               "list": [
                 {
                   "emoji": "🏗️",
@@ -56,14 +53,14 @@
                   "emoji": "🚀",
                   "text": "<strong>Compiled</strong> - Direct translation to machine code means no virtual machine overhead, leading to blazing fast execution."
                 }
-              ]
+              ],
+              "title": "Go (often called Golang) is a statically typed, compiled programming language designed at Google. It was created to address the challenges of large-scale software development: slow builds, uncontrolled dependencies, and difficult concurrency. Go combines the <span class=\"highlight\">performance</span> of low-level languages like C++ with the <span class=\"highlight\">readability</span> and productivity of high-level languages like Python."
             }
           },
           {
             "type": "content",
             "title": "Origins of Go",
             "box": {
-              "content": "Created at Google in 2007 to solve real engineering problems",
               "list": [
                 {
                   "emoji": "👨‍💻",
@@ -77,15 +74,17 @@
                   "emoji": "👨‍💻",
                   "text": "<strong>Ken Thompson</strong> - B, C, Unix, Plan 9"
                 }
-              ]
+              ],
+              "title": "Created at Google in 2007 to solve real engineering problems"
             },
-            "note": { "text": "Released as open source in November 2009" }
+            "note": {
+              "text": "Released as open source in November 2009"
+            }
           },
           {
             "type": "content",
             "title": "The Design Philosophy",
             "box": {
-              "content": "Go's design philosophy is centered around the idea that <strong>clever code is harder to maintain than simple code</strong>. By providing a small number of orthogonal features that work well together, Go reduces the cognitive load on developers, making it easier to read and understand large codebases even years after they were written.",
               "list": [
                 {
                   "emoji": "🧩",
@@ -103,28 +102,40 @@
                   "emoji": "⚡",
                   "text": "<strong>Speed:</strong> Fast enough to feel like an interpreted language, but with the safety of static typing."
                 }
-              ]
+              ],
+              "title": "Go's design philosophy is centered around the idea that <strong>clever code is harder to maintain than simple code</strong>. By providing a small number of orthogonal features that work well together, Go reduces the cognitive load on developers, making it easier to read and understand large codebases even years after they were written."
             }
           },
           {
             "type": "content",
             "title": "Go's Type System",
             "box": {
-              "content": "Go features a pragmatic type system that balances the safety of static typing with the flexibility of dynamic languages. It is designed to be efficient during compilation while providing the power needed for modern software architecture.",
               "list": [
-                { "emoji": "🔒", "text": "<strong>Strongly Typed:</strong> No implicit type conversions (e.g., cannot add int to float64 directly)." },
-                { "emoji": "🏷️", "text": "<strong>Type Inference:</strong> The <code>:=</code> operator allows the compiler to infer types, reducing boilerplate." },
-                { "emoji": "🏗️", "text": "<strong>Structural Typing:</strong> Interfaces are satisfied implicitly, promoting decoupling." }
-              ]
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Strongly Typed:</strong> No implicit type conversions (e.g., cannot add int to float64 directly)."
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Type Inference:</strong> The <code>:=</code> operator allows the compiler to infer types, reducing boilerplate."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Structural Typing:</strong> Interfaces are satisfied implicitly, promoting decoupling."
+                }
+              ],
+              "title": "Go features a pragmatic type system that balances the safety of static typing with the flexibility of dynamic languages. It is designed to be efficient during compilation while providing the power needed for modern software architecture."
             }
           },
           {
             "type": "content",
             "title": "The Famous Mascot",
             "box": {
-              "content": "The <strong>Go Gopher</strong> is one of the most beloved mascots in tech",
               "list": [
-                { "emoji": "🐹", "text": "Designed by Renee French" },
+                {
+                  "emoji": "🐹",
+                  "text": "Designed by Renee French"
+                },
                 {
                   "emoji": "🎨",
                   "text": "Represents the language's friendly nature"
@@ -133,7 +144,8 @@
                   "emoji": "🌐",
                   "text": "Open source mascot (Creative Commons)"
                 }
-              ]
+              ],
+              "title": "The <strong>Go Gopher</strong> is one of the most beloved mascots in tech"
             }
           }
         ]
@@ -145,7 +157,7 @@
           {
             "type": "topic-title",
             "title": "2. Environment & Tooling",
-            "box": { "content": "Setting up your workspace for success" }
+            "subtitle": "Setting up your workspace for success"
           },
           {
             "type": "content",
@@ -154,12 +166,18 @@
             "box": {
               "title": "Quick Start",
               "list": [
-                { "emoji": "🌐", "text": "Visit <strong>go.dev/dl</strong>" },
+                {
+                  "emoji": "🌐",
+                  "text": "Visit <strong>go.dev/dl</strong>"
+                },
                 {
                   "emoji": "💻",
                   "text": "Select installer for Windows, Mac, or Linux"
                 },
-                { "emoji": "✅", "text": "Verify: <code>go version</code>" }
+                {
+                  "emoji": "✅",
+                  "text": "Verify: <code>go version</code>"
+                }
               ]
             }
           },
@@ -167,7 +185,6 @@
             "type": "content",
             "title": "GOPATH vs Go Modules",
             "box": {
-              "content": "Before version 1.11, projects had to live inside a single global workspace defined by the <code>GOPATH</code> environment variable. This was restrictive and made versioning difficult. <br><br> Modern Go uses <strong>Go Modules</strong> (introduced in 1.11 and default since 1.13), which allows you to place your project anywhere and manage dependencies precisely with a <code>go.mod</code> file.",
               "list": [
                 {
                   "emoji": "📜",
@@ -181,14 +198,14 @@
                   "emoji": "🏗️",
                   "text": "<strong>Command:</strong> Initialize with <code>go mod init <module-path></code> to start a new project."
                 }
-              ]
+              ],
+              "title": "Before version 1.11, projects had to live inside a single global workspace defined by the <code>GOPATH</code> environment variable. This was restrictive and made versioning difficult. <br><br> Modern Go uses <strong>Go Modules</strong> (introduced in 1.11 and default since 1.13), which allows you to place your project anywhere and manage dependencies precisely with a <code>go.mod</code> file."
             }
           },
           {
             "type": "content",
             "title": "The Go Command",
             "box": {
-              "content": "Go comes 'batteries included' with a powerful command-line tool that handles everything from building to testing and formatting. This 'one tool to rule them all' approach is a major factor in Go's developer productivity.",
               "list": [
                 {
                   "emoji": "▶️",
@@ -198,7 +215,10 @@
                   "emoji": "🏗️",
                   "text": "<code>go build</code> - Generates a single, statically-linked binary with no external dependencies."
                 },
-                { "emoji": "🧪", "text": "<code>go test</code> - Executes unit tests and benchmarks automatically." },
+                {
+                  "emoji": "🧪",
+                  "text": "<code>go test</code> - Executes unit tests and benchmarks automatically."
+                },
                 {
                   "emoji": "🧹",
                   "text": "<code>go fmt</code> - Re-formats your code according to official Go standards."
@@ -207,7 +227,8 @@
                   "emoji": "📦",
                   "text": "<code>go get</code> - Downloads and installs external dependencies."
                 }
-              ]
+              ],
+              "title": "Go comes 'batteries included' with a powerful command-line tool that handles everything from building to testing and formatting. This 'one tool to rule them all' approach is a major factor in Go's developer productivity."
             }
           },
           {
@@ -239,15 +260,15 @@
           {
             "type": "topic-title",
             "title": "3. Language Basics",
-            "box": { "content": "Variables, Types, and Syntax" }
+            "subtitle": "Variables, Types, and Syntax"
           },
           {
             "type": "content",
             "emoji": "👋",
             "title": "Hello World Explained",
             "box": {
-              "content": "Every Go file starts with a package declaration. The <code>main</code> package is a special name that tells the Go compiler that this file should compile as an executable, rather than a shared library. The <code>main</code> function inside this package is the entry point where execution begins.",
-              "code": "// main.go\npackage main\n\nimport \"fmt\" // Import the standard formatting library\n\n// The main function is where the program starts\nfunc main() {\n    // Println outputs text followed by a new line\n    fmt.Println(\"Hello, Bude Global!\")\n}"
+              "code": "// main.go\npackage main\n\nimport \"fmt\" // Import the standard formatting library\n\n// The main function is where the program starts\nfunc main() {\n    // Println outputs text followed by a new line\n    fmt.Println(\"Hello, Bude Global!\")\n}",
+              "title": "Every Go file starts with a package declaration. The <code>main</code> package is a special name that tells the Go compiler that this file should compile as an executable, rather than a shared library. The <code>main</code> function inside this package is the entry point where execution begins."
             },
             "list": [
               {
@@ -268,8 +289,8 @@
             "type": "content",
             "title": "Variables & Inference",
             "box": {
-              "content": "Go is strongly typed, but it offers several ways to declare variables to reduce verbosity. While <code>var</code> is used for general declarations, the short declaration operator <code>:=</code> is the most common way to initialize variables within functions.",
-              "code": "// 1. Explicit type declaration\nvar count int = 10 \n\n// 2. Type inference (Go figures it out)\nvar message = \"Hello Go\"\n\n// 3. Short declaration operator (most common inside functions)\nstatus := \"Success\"\n\n// 4. Multiple declarations\nvar a, b, c = 1, \"hi\", true\n\n// 5. Block declaration\nvar (\n    name    string = \"Bude\"\n    version int    = 1\n)"
+              "code": "// 1. Explicit type declaration\nvar count int = 10 \n\n// 2. Type inference (Go figures it out)\nvar message = \"Hello Go\"\n\n// 3. Short declaration operator (most common inside functions)\nstatus := \"Success\"\n\n// 4. Multiple declarations\nvar a, b, c = 1, \"hi\", true\n\n// 5. Block declaration\nvar (\n    name    string = \"Bude\"\n    version int    = 1\n)",
+              "title": "Go is strongly typed, but it offers several ways to declare variables to reduce verbosity. While <code>var</code> is used for general declarations, the short declaration operator <code>:=</code> is the most common way to initialize variables within functions."
             },
             "note": {
               "text": "Note: <code>:=</code> cannot be used outside of function bodies."
@@ -279,7 +300,6 @@
             "type": "content",
             "title": "Zero Values",
             "box": {
-              "content": "Unlike many languages where uninitialized variables hold 'garbage' data leading to unpredictable crashes, Go guarantees that every variable is initialized to a predictable <strong>zero value</strong>. This design choice enhances security and simplifies debugging by ensuring a clean state for every variable.",
               "list": [
                 {
                   "emoji": "0️⃣",
@@ -289,12 +309,16 @@
                   "emoji": "📭",
                   "text": "<strong>string:</strong> Initialized to \"\" (the empty string)."
                 },
-                { "emoji": "❌", "text": "<strong>bool:</strong> Initialized to false." },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>bool:</strong> Initialized to false."
+                },
                 {
                   "emoji": "👻",
                   "text": "<strong>Reference Types (pointers, slices, maps, channels):</strong> Initialized to <code>nil</code>."
                 }
-              ]
+              ],
+              "title": "Unlike many languages where uninitialized variables hold 'garbage' data leading to unpredictable crashes, Go guarantees that every variable is initialized to a predictable <strong>zero value</strong>. This design choice enhances security and simplifies debugging by ensuring a clean state for every variable."
             }
           },
           {
@@ -313,9 +337,18 @@
                   "emoji": "🔢",
                   "text": "Explicit sized: int8, int64, uint32"
                 },
-                { "emoji": "🌊", "text": "Floating: float32, float64" },
-                { "emoji": "🔡", "text": "Text: string, rune (int32)" },
-                { "emoji": "🤖", "text": "Complex: complex64, complex128" }
+                {
+                  "emoji": "🌊",
+                  "text": "Floating: float32, float64"
+                },
+                {
+                  "emoji": "🔡",
+                  "text": "Text: string, rune (int32)"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "Complex: complex64, complex128"
+                }
               ]
             }
           },
@@ -323,8 +356,8 @@
             "type": "content",
             "title": "Strings & Runes",
             "box": {
-              "content": "Go strings are UTF-8 encoded by default",
-              "code": "s := \"Hello 🌏\"\nfmt.Println(len(s)) // 10 bytes\n\nfor i, w := range s {\n    fmt.Printf(\"%d: %q\\n\", i, w)\n}"
+              "code": "s := \"Hello 🌏\"\nfmt.Println(len(s)) // 10 bytes\n\nfor i, w := range s {\n    fmt.Printf(\"%d: %q\\n\", i, w)\n}",
+              "title": "Go strings are UTF-8 encoded by default"
             },
             "note": {
               "text": "A <strong>rune</strong> is a Unicode code point"
@@ -334,17 +367,19 @@
             "type": "content",
             "title": "Pointers in Go",
             "box": {
-              "content": "Go supports pointers, allowing you to pass references to data rather than copies. However, unlike C/C++, Go pointers are <strong>safe</strong>: there is no pointer arithmetic, preventing a whole class of memory-related bugs. Pointers are essential for efficient data manipulation and for methods that need to modify their receiver.",
-              "code": "// Declare an integer\nx := 42\n\n// Get the memory address of x\np := &x      \n\n// Access the value stored at the address (dereferencing)\nfmt.Println(*p) // Outputs: 42\n\n// Modify the value at the address\n*p = 21      \nfmt.Println(x)  // x is now 21"
+              "code": "// Declare an integer\nx := 42\n\n// Get the memory address of x\np := &x      \n\n// Access the value stored at the address (dereferencing)\nfmt.Println(*p) // Outputs: 42\n\n// Modify the value at the address\n*p = 21      \nfmt.Println(x)  // x is now 21",
+              "title": "Go supports pointers, allowing you to pass references to data rather than copies. However, unlike C/C++, Go pointers are <strong>safe</strong>: there is no pointer arithmetic, preventing a whole class of memory-related bugs. Pointers are essential for efficient data manipulation and for methods that need to modify their receiver."
             },
-            "note": { "text": "Remember: <code>&</code> gets the address, <code>*</code> gets the value." }
+            "note": {
+              "text": "Remember: <code>&</code> gets the address, <code>*</code> gets the value."
+            }
           },
           {
             "type": "content",
             "title": "Type Conversions",
             "box": {
-              "content": "Go requires <strong>explicit</strong> conversion",
-              "code": "var i int = 42\nvar f float64 = float64(i)\nvar u uint = uint(f)\n\n// No implicit: float64(i) works, f = i fails"
+              "code": "var i int = 42\nvar f float64 = float64(i)\nvar u uint = uint(f)\n\n// No implicit: float64(i) works, f = i fails",
+              "title": "Go requires <strong>explicit</strong> conversion"
             }
           }
         ]
@@ -356,30 +391,31 @@
           {
             "type": "topic-title",
             "title": "4. Data Structures",
-            "box": { "content": "Arrays, Slices, and Maps" }
+            "subtitle": "Arrays, Slices, and Maps"
           },
           {
             "type": "content",
             "title": "Arrays",
             "box": {
-              "content": "Fixed size, part of the type",
-              "code": "var a [5]int\na[0] = 100\n\nb := [2]string{\"hello\", \"world\"}"
+              "code": "var a [5]int\na[0] = 100\n\nb := [2]string{\"hello\", \"world\"}",
+              "title": "Fixed size, part of the type"
             },
-            "note": { "text": "Arrays are rarely used directly; use slices!" }
+            "note": {
+              "text": "Arrays are rarely used directly; use slices!"
+            }
           },
           {
             "type": "content",
             "title": "Slices: The Heart of Go",
             "box": {
-              "content": "Slices are the most powerful and common data structure in Go. Unlike arrays, which have a fixed size, slices are dynamic and grow as needed. A slice is essentially a descriptor for a contiguous segment of an underlying array.",
-              "code": "// Create a slice with some values\ns := []int{1, 2, 3}\n\n// Add a new element (returns a new slice)\ns = append(s, 4)\n\n// Slicing an existing slice (half-open range [1, 3))\n// Includes index 1, but excludes index 3\nsub := s[1:3] // returns [2, 3]\n\n// Slicing from the start\nstart := s[:2] // [1, 2]\n\n// Slicing to the end\nend := s[2:] // [3, 4]"
+              "code": "// Create a slice with some values\ns := []int{1, 2, 3}\n\n// Add a new element (returns a new slice)\ns = append(s, 4)\n\n// Slicing an existing slice (half-open range [1, 3))\n// Includes index 1, but excludes index 3\nsub := s[1:3] // returns [2, 3]\n\n// Slicing from the start\nstart := s[:2] // [1, 2]\n\n// Slicing to the end\nend := s[2:] // [3, 4]",
+              "title": "Slices are the most powerful and common data structure in Go. Unlike arrays, which have a fixed size, slices are dynamic and grow as needed. A slice is essentially a descriptor for a contiguous segment of an underlying array."
             }
           },
           {
             "type": "content",
             "title": "Slice Internals: The Header",
             "box": {
-              "content": "Under the hood, a Go slice is a lightweight 24-byte 'header' (on 64-bit systems) that points to an underlying array. Because multiple slices can share the same array, understanding this structure is vital for avoiding unintended side effects when modifying data.",
               "list": [
                 {
                   "emoji": "📍",
@@ -393,15 +429,16 @@
                   "emoji": "🔋",
                   "text": "<strong>Capacity (cap):</strong> The maximum number of elements the slice can hold before a new, larger array must be allocated."
                 }
-              ]
+              ],
+              "title": "Under the hood, a Go slice is a lightweight 24-byte 'header' (on 64-bit systems) that points to an underlying array. Because multiple slices can share the same array, understanding this structure is vital for avoiding unintended side effects when modifying data."
             }
           },
           {
             "type": "content",
             "title": "Slice Reslicing & Sharing",
             "box": {
-              "content": "Slicing an existing slice does not copy the data; it creates a new header pointing to the <strong>same underlying array</strong>. This is extremely efficient but means that changing an element in a sub-slice will be visible in the parent slice.",
-              "code": "parent := []int{10, 20, 30, 40, 50}\nchild := parent[1:4] // [20, 30, 40]\n\nchild[0] = 99\nfmt.Println(parent[1]) // Outputs: 99!\n\n// To avoid sharing, use make() and copy()\nindependent := make([]int, len(child))\ncopy(independent, child)"
+              "code": "parent := []int{10, 20, 30, 40, 50}\nchild := parent[1:4] // [20, 30, 40]\n\nchild[0] = 99\nfmt.Println(parent[1]) // Outputs: 99!\n\n// To avoid sharing, use make() and copy()\nindependent := make([]int, len(child))\ncopy(independent, child)",
+              "title": "Slicing an existing slice does not copy the data; it creates a new header pointing to the <strong>same underlying array</strong>. This is extremely efficient but means that changing an element in a sub-slice will be visible in the parent slice."
             }
           },
           {
@@ -417,9 +454,18 @@
             "box": {
               "title": "How append() works",
               "list": [
-                { "emoji": "➕", "text": "Adds elements to the end" },
-                { "emoji": "🔄", "text": "Doubles capacity if full" },
-                { "emoji": "📜", "text": "May allocate a new underlying array" }
+                {
+                  "emoji": "➕",
+                  "text": "Adds elements to the end"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Doubles capacity if full"
+                },
+                {
+                  "emoji": "📜",
+                  "text": "May allocate a new underlying array"
+                }
               ]
             }
           },
@@ -427,24 +473,24 @@
             "type": "content",
             "title": "Maps",
             "box": {
-              "content": "A map is Go's built-in associative data structure (like a dictionary or hash table). It maps keys of one type to values of another. Keys must be 'comparable' types (integers, strings, etc.).",
-              "code": "/* Initialize a map */\nm := make(map[string]int)\n\n/* Insert/Update */\nm[\"Alice\"] = 30\nm[\"Bob\"] = 25\n\n/* Read and Check Existence */\nval, ok := m[\"Charlie\"] \nif !ok {\n    fmt.Println(\"Key not found\")\n}\n\n/* Delete a key */\ndelete(m, \"Alice\")"
+              "code": "/* Initialize a map */\nm := make(map[string]int)\n\n/* Insert/Update */\nm[\"Alice\"] = 30\nm[\"Bob\"] = 25\n\n/* Read and Check Existence */\nval, ok := m[\"Charlie\"] \nif !ok {\n    fmt.Println(\"Key not found\")\n}\n\n/* Delete a key */\ndelete(m, \"Alice\")",
+              "title": "A map is Go's built-in associative data structure (like a dictionary or hash table). It maps keys of one type to values of another. Keys must be 'comparable' types (integers, strings, etc.)."
             }
           },
           {
             "type": "content",
             "title": "Map Safety & Concurrency",
             "box": {
-              "content": "Go maps are not thread-safe. Concurrent read/write access to the same map will cause a fatal runtime crash. For multi-threaded scenarios, you must protect maps using a <code>sync.Mutex</code> or use the specialized <code>sync.Map</code> for specific high-contention use cases.",
-              "code": "// A common pattern for thread-safe maps\ntype SafeMap struct {\n    mu   sync.RWMutex\n    data map[string]string\n}\n\nfunc (s *SafeMap) Get(key string) string {\n    s.mu.RLock()         // Allow multiple readers\n    defer s.mu.RUnlock()\n    return s.data[key]\n}"
+              "code": "// A common pattern for thread-safe maps\ntype SafeMap struct {\n    mu   sync.RWMutex\n    data map[string]string\n}\n\nfunc (s *SafeMap) Get(key string) string {\n    s.mu.RLock()         // Allow multiple readers\n    defer s.mu.RUnlock()\n    return s.data[key]\n}",
+              "title": "Go maps are not thread-safe. Concurrent read/write access to the same map will cause a fatal runtime crash. For multi-threaded scenarios, you must protect maps using a <code>sync.Mutex</code> or use the specialized <code>sync.Map</code> for specific high-contention use cases."
             }
           },
           {
             "type": "content",
             "title": "Structs",
             "box": {
-              "content": "Collections of fields",
-              "code": "type Person struct {\n    Name string\n    Age  int\n}\n\np := Person{Name: \"Alice\", Age: 30}"
+              "code": "type Person struct {\n    Name string\n    Age  int\n}\n\np := Person{Name: \"Alice\", Age: 30}",
+              "title": "Collections of fields"
             }
           }
         ]
@@ -456,14 +502,14 @@
           {
             "type": "topic-title",
             "title": "5. Control Flow",
-            "box": { "content": "If, For, Switch" }
+            "subtitle": "If, For, Switch"
           },
           {
             "type": "content",
             "title": "If/Else",
             "box": {
-              "content": "Go's <code>if</code> statement is familiar but has a few unique features. Parentheses are not required around the condition, and you can include a short 'initialization' statement before the condition.",
-              "code": "/* 'If' with initialization */\nif val := calculate(); val > 100 {\n    fmt.Println(\"Value is huge!\", val)\n} else if val > 50 {\n    fmt.Println(\"Value is moderate\", val)\n} else {\n    fmt.Println(\"Value is small\")\n}\n\n// Note: 'val' is NOT accessible here (out of scope)"
+              "code": "/* 'If' with initialization */\nif val := calculate(); val > 100 {\n    fmt.Println(\"Value is huge!\", val)\n} else if val > 50 {\n    fmt.Println(\"Value is moderate\", val)\n} else {\n    fmt.Println(\"Value is small\")\n}\n\n// Note: 'val' is NOT accessible here (out of scope)",
+              "title": "Go's <code>if</code> statement is familiar but has a few unique features. Parentheses are not required around the condition, and you can include a short 'initialization' statement before the condition."
             },
             "note": {
               "text": "The initialization variable is often used for error checking: <code>if err := doTask(); err != nil</code>"
@@ -473,8 +519,8 @@
             "type": "content",
             "title": "For Loops",
             "box": {
-              "content": "The only loop construct in Go",
-              "code": "// 1. Standard\nfor i := 0; i < 5; i++ {}\n\n// 2. While equivalents\nfor condition {}\n\n// 3. Infinite\nfor {}"
+              "code": "// 1. Standard\nfor i := 0; i < 5; i++ {}\n\n// 2. While equivalents\nfor condition {}\n\n// 3. Infinite\nfor {}",
+              "title": "The only loop construct in Go"
             }
           },
           {
@@ -488,8 +534,8 @@
             "type": "content",
             "title": "Switch Statements: Beyond the Basics",
             "box": {
-              "content": "Go's <code>switch</code> is more flexible than in most languages. It does not require a 'break' statement because cases do not fall through by default. You can also write a 'switch without a condition', which acts as a cleaner alternative to long if-else-if chains.",
-              "code": "/* 1. Conditionless Switch */\nswitch {\ncase score >= 90:\n    fmt.Println(\"Elite\")\ncase score >= 70:\n    fmt.Println(\"Solid\")\ndefault:\n    fmt.Println(\"Needs Work\")\n}\n\n/* 2. Multiple values in one case */\nswitch day {\ncase \"Saturday\", \"Sunday\":\n    fmt.Println(\"Weekend!\")\n}"
+              "code": "/* 1. Conditionless Switch */\nswitch {\ncase score >= 90:\n    fmt.Println(\"Elite\")\ncase score >= 70:\n    fmt.Println(\"Solid\")\ndefault:\n    fmt.Println(\"Needs Work\")\n}\n\n/* 2. Multiple values in one case */\nswitch day {\ncase \"Saturday\", \"Sunday\":\n    fmt.Println(\"Weekend!\")\n}",
+              "title": "Go's <code>switch</code> is more flexible than in most languages. It does not require a 'break' statement because cases do not fall through by default. You can also write a 'switch without a condition', which acts as a cleaner alternative to long if-else-if chains."
             }
           },
           {
@@ -508,14 +554,14 @@
           {
             "type": "topic-title",
             "title": "6. Functions & Defer",
-            "box": { "content": "Reusable logic and deferred execution" }
+            "subtitle": "Reusable logic and deferred execution"
           },
           {
             "type": "content",
             "title": "Function Basics",
             "box": {
-              "content": "Functions are first-class citizens in Go. They can be passed as arguments, returned from other functions, and assigned to variables. A function is defined with the <code>func</code> keyword, followed by the name, parameters, and the return type.",
-              "code": "/* A simple function with parameters and return type */\nfunc add(x int, y int) int {\n    return x + y\n}\n\n/* Grouping parameters of the same type */\nfunc multiply(x, y int) int {\n    return x * y\n}"
+              "code": "/* A simple function with parameters and return type */\nfunc add(x int, y int) int {\n    return x + y\n}\n\n/* Grouping parameters of the same type */\nfunc multiply(x, y int) int {\n    return x * y\n}",
+              "title": "Functions are first-class citizens in Go. They can be passed as arguments, returned from other functions, and assigned to variables. A function is defined with the <code>func</code> keyword, followed by the name, parameters, and the return type."
             }
           },
           {
@@ -529,8 +575,8 @@
             "type": "content",
             "title": "Named & Naked Returns",
             "box": {
-              "content": "Go allows you to name the return variables in the function signature. While this can serve as documentation, it also allows for 'naked' returns. However, naked returns should be used sparingly in long functions as they can harm readability.",
-              "code": "// (x, y int) declares the return variables\nfunc getDimensions(area int) (length, width int) {\n    length = area / 10\n    width = 10\n    // 'return' implicitly returns length and width\n    return \n}\n\n// Usage\nl, w := getDimensions(200)"
+              "code": "// (x, y int) declares the return variables\nfunc getDimensions(area int) (length, width int) {\n    length = area / 10\n    width = 10\n    // 'return' implicitly returns length and width\n    return \n}\n\n// Usage\nl, w := getDimensions(200)",
+              "title": "Go allows you to name the return variables in the function signature. While this can serve as documentation, it also allows for 'naked' returns. However, naked returns should be used sparingly in long functions as they can harm readability."
             }
           },
           {
@@ -551,8 +597,8 @@
             "type": "content",
             "title": "The Defer Keyword: Modern Resource Management",
             "box": {
-              "content": "The <code>defer</code> statement is one of Go's most elegant features for resource management. It delays the execution of a function until the surrounding function returns. This ensures that cleanup logic is always executed, providing a robust 'finally' equivalent that scales with your code.",
-              "code": "func safeWrite() error {\n    f, _ := os.Create(\"data.txt\")\n    defer f.Close() // Guaranteed to run\n\n    mu.Lock()\n    defer mu.Unlock() // Lock/Unlock symmetry\n\n    return doWork(f)\n}"
+              "code": "func safeWrite() error {\n    f, _ := os.Create(\"data.txt\")\n    defer f.Close() // Guaranteed to run\n\n    mu.Lock()\n    defer mu.Unlock() // Lock/Unlock symmetry\n\n    return doWork(f)\n}",
+              "title": "The <code>defer</code> statement is one of Go's most elegant features for resource management. It delays the execution of a function until the surrounding function returns. This ensures that cleanup logic is always executed, providing a robust 'finally' equivalent that scales with your code."
             },
             "note": {
               "text": "<strong>LIFO:</strong> Deferred calls are executed in Last-In-First-Out order."
@@ -562,8 +608,8 @@
             "type": "content",
             "title": "Defer: Capture by Value",
             "box": {
-              "content": "A crucial detail: the arguments to a deferred function are evaluated <strong>immediately</strong>, when the defer statement is reached, not when the actual call is executed later.",
-              "code": "i := 0\ndefer fmt.Println(i) // Will print 0, not 1!\ni++"
+              "code": "i := 0\ndefer fmt.Println(i) // Will print 0, not 1!\ni++",
+              "title": "A crucial detail: the arguments to a deferred function are evaluated <strong>immediately</strong>, when the defer statement is reached, not when the actual call is executed later."
             }
           }
         ]
@@ -575,21 +621,20 @@
           {
             "type": "topic-title",
             "title": "7. Structs & Methods",
-            "box": { "content": "Defining behavior for types" }
+            "subtitle": "Defining behavior for types"
           },
           {
             "type": "content",
             "title": "Struct Methods",
             "box": {
-              "content": "Go does not have classes, but you can define 'methods' on any type (usually structs). A method is just a function with a special 'receiver' argument between the <code>func</code> keyword and the method name.",
-              "code": "type Rect struct {\n    Width, Height float64\n}\n\n/* Receiver (r Rect) makes this a method */\nfunc (r Rect) Area() float64 {\n    return r.Width * r.Height\n}\n\n/* Usage */\nrect := Rect{10.5, 20.0}\nfmt.Println(\"Area:\", rect.Area())"
+              "code": "type Rect struct {\n    Width, Height float64\n}\n\n/* Receiver (r Rect) makes this a method */\nfunc (r Rect) Area() float64 {\n    return r.Width * r.Height\n}\n\n/* Usage */\nrect := Rect{10.5, 20.0}\nfmt.Println(\"Area:\", rect.Area())",
+              "title": "Go does not have classes, but you can define 'methods' on any type (usually structs). A method is just a function with a special 'receiver' argument between the <code>func</code> keyword and the method name."
             }
           },
           {
             "type": "content",
             "title": "Value vs Pointer Receivers",
             "box": {
-              "content": "Choosing between a value and a pointer receiver is a fundamental Go decision. Use <strong>Pointer Receivers</strong> if you need to modify the data within the method or to avoid copying large structs on every call. Use <strong>Value Receivers</strong> for small, immutable types where thread safety and consistency are more important.",
               "list": [
                 {
                   "emoji": "📦",
@@ -603,15 +648,16 @@
                   "emoji": "⚡",
                   "text": "<strong>Performance:</strong> Pointer receivers avoid expensive stack copying for large structs."
                 }
-              ]
+              ],
+              "title": "Choosing between a value and a pointer receiver is a fundamental Go decision. Use <strong>Pointer Receivers</strong> if you need to modify the data within the method or to avoid copying large structs on every call. Use <strong>Value Receivers</strong> for small, immutable types where thread safety and consistency are more important."
             }
           },
           {
             "type": "content",
             "title": "Embedded Structs: Composition over Inheritance",
             "box": {
-              "content": "Go does not support class-based inheritance. Instead, it uses <strong>Struct Embedding</strong> to allow types to reuse fields and methods of other types. This is a cleaner, more flexible way to build complex data structures by composing smaller, focused components.",
-              "code": "type Person struct {\n    Name string\n}\n\nfunc (p Person) Greet() { fmt.Printf(\"Hi, I'm %s\\n\", p.Name) }\n\ntype Employee struct {\n    Person // Embedded anonymously\n    ID     int\n}\n\n// Usage: Employee 'has a' Person, but can access its fields directly\ne := Employee{Person: Person{Name: \"Bude\"}, ID: 1}\nfmt.Println(e.Name) // Promotion: accesses Person.Name\ne.Greet()           // Promotion: accesses Person.Greet()"
+              "code": "type Person struct {\n    Name string\n}\n\nfunc (p Person) Greet() { fmt.Printf(\"Hi, I'm %s\\n\", p.Name) }\n\ntype Employee struct {\n    Person // Embedded anonymously\n    ID     int\n}\n\n// Usage: Employee 'has a' Person, but can access its fields directly\ne := Employee{Person: Person{Name: \"Bude\"}, ID: 1}\nfmt.Println(e.Name) // Promotion: accesses Person.Name\ne.Greet()           // Promotion: accesses Person.Greet()",
+              "title": "Go does not support class-based inheritance. Instead, it uses <strong>Struct Embedding</strong> to allow types to reuse fields and methods of other types. This is a cleaner, more flexible way to build complex data structures by composing smaller, focused components."
             }
           },
           {
@@ -630,30 +676,30 @@
           {
             "type": "topic-title",
             "title": "8. Interfaces",
-            "box": { "content": "Polymorphism through implicit implementation" }
+            "subtitle": "Polymorphism through implicit implementation"
           },
           {
             "type": "content",
             "title": "Implicit Interfaces: Decoupling at Scale",
             "box": {
-              "content": "In many languages, you must explicitly state that a class 'implements' an interface. In Go, this is done <strong>implicitly</strong>. If a type provides all the methods declared in an interface, it is considered to implement that interface automatically. This allows you to define interfaces for code you don't even own, leading to highly decoupled systems.",
-              "code": "/* 1. Define an interface */\ntype Reader interface {\n    Read(b []byte) (n int, err error)\n}\n\n/* 2. Any type with this method signature automatically implements Reader */\ntype MyFile struct { ... }\n\nfunc (f MyFile) Read(b []byte) (int, error) {\n    // logic...\n    return len(b), nil\n}"
+              "code": "/* 1. Define an interface */\ntype Reader interface {\n    Read(b []byte) (n int, err error)\n}\n\n/* 2. Any type with this method signature automatically implements Reader */\ntype MyFile struct { ... }\n\nfunc (f MyFile) Read(b []byte) (int, error) {\n    // logic...\n    return len(b), nil\n}",
+              "title": "In many languages, you must explicitly state that a class 'implements' an interface. In Go, this is done <strong>implicitly</strong>. If a type provides all the methods declared in an interface, it is considered to implement that interface automatically. This allows you to define interfaces for code you don't even own, leading to highly decoupled systems."
             }
           },
           {
             "type": "content",
             "title": "Interface Composition",
             "box": {
-              "content": "Smaller interfaces are easier to implement and reuse. Go encourages this by allowing you to 'embed' interfaces into other interfaces to create more complex contracts.",
-              "code": "type Reader interface { Read(p []byte) (n int, err error) }\ntype Writer interface { Write(p []byte) (n int, err error) }\n\n// ReadWriter is the combination of both\ntype ReadWriter interface {\n    Reader\n    Writer\n}"
+              "code": "type Reader interface { Read(p []byte) (n int, err error) }\ntype Writer interface { Write(p []byte) (n int, err error) }\n\n// ReadWriter is the combination of both\ntype ReadWriter interface {\n    Reader\n    Writer\n}",
+              "title": "Smaller interfaces are easier to implement and reuse. Go encourages this by allowing you to 'embed' interfaces into other interfaces to create more complex contracts."
             }
           },
           {
             "type": "content",
             "title": "The Empty Interface",
             "box": {
-              "content": "<code>interface{}</code> (or <code>any</code>) can hold any value",
-              "code": "var i any\ni = 42\ni = \"hello\""
+              "code": "var i any\ni = 42\ni = \"hello\"",
+              "title": "<code>interface{}</code> (or <code>any</code>) can hold any value"
             }
           },
           {
@@ -696,37 +742,36 @@
           {
             "type": "topic-title",
             "title": "9. Error Handling",
-            "box": { "content": "Errors are values, not exceptions" }
+            "subtitle": "Errors are values, not exceptions"
           },
           {
             "type": "content",
             "title": "The Error Pattern",
             "box": {
-              "content": "Go encourages handling errors explicitly rather than catching exceptions. Errors are just values that implement the <code>error</code> interface. Functions that can fail usually return an error as their last return value, and it's the caller's responsibility to check it immediately.",
-              "code": "/* A function that may return an error */\nfunc divide(a, b float64) (float64, error) {\n    if b == 0 {\n        return 0, errors.New(\"cannot divide by zero\")\n    }\n    return a / b, nil\n}\n\n/* Usage */\nresult, err := divide(10, 0)\nif err != nil {\n    fmt.Println(\"Error:\", err)\n    return\n}"
+              "code": "/* A function that may return an error */\nfunc divide(a, b float64) (float64, error) {\n    if b == 0 {\n        return 0, errors.New(\"cannot divide by zero\")\n    }\n    return a / b, nil\n}\n\n/* Usage */\nresult, err := divide(10, 0)\nif err != nil {\n    fmt.Println(\"Error:\", err)\n    return\n}",
+              "title": "Go encourages handling errors explicitly rather than catching exceptions. Errors are just values that implement the <code>error</code> interface. Functions that can fail usually return an error as their last return value, and it's the caller's responsibility to check it immediately."
             }
           },
           {
             "type": "content",
             "title": "Error Wrapping (Go 1.13+)",
             "box": {
-              "content": "Since Go 1.13, you can wrap errors to provide more context while still allowing the caller to inspect the root cause. Using the <code>%w</code> verb with <code>fmt.Errorf</code> creates a wrapped error that can be inspected with <code>errors.Is</code> and <code>errors.As</code>.",
-              "code": "/* Wrapping an error */\nf, err := os.Open(\"config.json\")\nif err != nil {\n    return fmt.Errorf(\"opening config: %w\", err)\n}\n\n/* Inspecting wrapped errors */\nif errors.Is(err, os.ErrNotExist) {\n    fmt.Println(\"File not found\")\n}"
+              "code": "/* Wrapping an error */\nf, err := os.Open(\"config.json\")\nif err != nil {\n    return fmt.Errorf(\"opening config: %w\", err)\n}\n\n/* Inspecting wrapped errors */\nif errors.Is(err, os.ErrNotExist) {\n    fmt.Println(\"File not found\")\n}",
+              "title": "Since Go 1.13, you can wrap errors to provide more context while still allowing the caller to inspect the root cause. Using the <code>%w</code> verb with <code>fmt.Errorf</code> creates a wrapped error that can be inspected with <code>errors.Is</code> and <code>errors.As</code>."
             }
           },
           {
             "type": "content",
             "title": "Custom Errors with State",
             "box": {
-              "content": "Sometimes a simple string isn't enough. You can define custom error structs to carry structured data about the failure, which can then be extracted by the caller using <code>errors.As</code>.",
-              "code": "type QueryError struct {\n    Query string\n    Err   error\n}\n\nfunc (e *QueryError) Error() string { return e.Query + \": \" + e.Err.Error() }\n\n/* Extracting the error */\nvar qe *QueryError\nif errors.As(err, &qe) {\n    fmt.Println(\"Failed query:\", qe.Query)\n}"
+              "code": "type QueryError struct {\n    Query string\n    Err   error\n}\n\nfunc (e *QueryError) Error() string { return e.Query + \": \" + e.Err.Error() }\n\n/* Extracting the error */\nvar qe *QueryError\nif errors.As(err, &qe) {\n    fmt.Println(\"Failed query:\", qe.Query)\n}",
+              "title": "Sometimes a simple string isn't enough. You can define custom error structs to carry structured data about the failure, which can then be extracted by the caller using <code>errors.As</code>."
             }
           },
           {
             "type": "content",
             "title": "Panic & Recover",
             "box": {
-              "content": "Only for unrecoverable situations",
               "list": [
                 {
                   "emoji": "🚨",
@@ -736,7 +781,8 @@
                   "emoji": "🩹",
                   "text": "<strong>Recover:</strong> Regain control in a deferred function"
                 }
-              ]
+              ],
+              "title": "Only for unrecoverable situations"
             }
           }
         ]
@@ -748,13 +794,12 @@
           {
             "type": "topic-title",
             "title": "10. Concurrency",
-            "box": { "content": "Goroutines, Channels, and Select" }
+            "subtitle": "Goroutines, Channels, and Select"
           },
           {
             "type": "content",
             "title": "The Concurrency Mindset",
             "box": {
-              "content": "Concurrency is <strong>not</strong> Paralellism",
               "list": [
                 {
                   "emoji": "🔀",
@@ -764,79 +809,80 @@
                   "emoji": "🚀",
                   "text": "<strong>Parallelism:</strong> Doing many things at once"
                 }
-              ]
+              ],
+              "title": "Concurrency is <strong>not</strong> Paralellism"
             }
           },
           {
             "type": "content",
             "title": "Goroutines",
             "box": {
-              "content": "A goroutine is a lightweight thread of execution managed by the Go runtime. Unlike OS threads, which are heavy and have a large fixed stack size, goroutines start with very little memory (about 2KB) and are multiplexed onto a small number of OS threads. This allows you to run hundreds of thousands of goroutines simultaneously without exhausting system resources.",
-              "code": "// Launching a goroutine is simple\ngo doTask(\"Processing data\")\n\nfunc doTask(msg string) {\n    for i := 0; i < 3; i++ {\n        fmt.Println(msg, i)\n        time.Sleep(100 * time.Millisecond)\n    }\n}\n\n// Note: Execution continues here immediately"
+              "code": "// Launching a goroutine is simple\ngo doTask(\"Processing data\")\n\nfunc doTask(msg string) {\n    for i := 0; i < 3; i++ {\n        fmt.Println(msg, i)\n        time.Sleep(100 * time.Millisecond)\n    }\n}\n\n// Note: Execution continues here immediately",
+              "title": "A goroutine is a lightweight thread of execution managed by the Go runtime. Unlike OS threads, which are heavy and have a large fixed stack size, goroutines start with very little memory (about 2KB) and are multiplexed onto a small number of OS threads. This allows you to run hundreds of thousands of goroutines simultaneously without exhausting system resources."
             }
           },
           {
             "type": "content",
             "title": "Unbuffered Channels",
             "box": {
-              "content": "Channels are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another. By default, channels are <strong>unbuffered</strong>, meaning they require both the sender and receiver to be ready at the same time for the communication to occur. This provides a natural synchronization point.",
-              "code": "/* Create an unbuffered channel */\nch := make(chan string)\n\n/* Launch goroutine to send data */\ngo func() {\n    ch <- \"ping\" // Blocks until someone receives\n}()\n\n/* Receive in main */\nmsg := <-ch // Blocks until someone sends\nfmt.Println(\"Received:\", msg)"
+              "code": "/* Create an unbuffered channel */\nch := make(chan string)\n\n/* Launch goroutine to send data */\ngo func() {\n    ch <- \"ping\" // Blocks until someone receives\n}()\n\n/* Receive in main */\nmsg := <-ch // Blocks until someone sends\nfmt.Println(\"Received:\", msg)",
+              "title": "Channels are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another. By default, channels are <strong>unbuffered</strong>, meaning they require both the sender and receiver to be ready at the same time for the communication to occur. This provides a natural synchronization point."
             }
           },
           {
             "type": "content",
             "title": "Buffered Channels",
             "box": {
-              "content": "Asynchronous until capacity is reached",
-              "code": "ch := make(chan int, 2)\nch <- 1\nch <- 2\n// ch <- 3 would block"
+              "code": "ch := make(chan int, 2)\nch <- 1\nch <- 2\n// ch <- 3 would block",
+              "title": "Asynchronous until capacity is reached"
             }
           },
           {
             "type": "content",
             "title": "The Select Statement",
             "box": {
-              "content": "Waiting on multiple channel operations",
-              "code": "select {\ncase msg1 := <-c1:\n    fmt.Println(\"Received\", msg1)\ncase c2 <- 42:\n    fmt.Println(\"Sent to c2\")\ndefault:\n    fmt.Println(\"No activity\")\n}"
+              "code": "select {\ncase msg1 := <-c1:\n    fmt.Println(\"Received\", msg1)\ncase c2 <- 42:\n    fmt.Println(\"Sent to c2\")\ndefault:\n    fmt.Println(\"No activity\")\n}",
+              "title": "Waiting on multiple channel operations"
             }
           },
           {
             "type": "content",
             "title": "WaitGroups",
             "box": {
-              "content": "Synchronizing multiple goroutines",
-              "code": "var wg sync.WaitGroup\nfor i := 0; i < 5; i++ {\n    wg.Add(1)\n    go func() {\n        defer wg.Done()\n        // do work\n    }()\n}\nwg.Wait()"
+              "code": "var wg sync.WaitGroup\nfor i := 0; i < 5; i++ {\n    wg.Add(1)\n    go func() {\n        defer wg.Done()\n        // do work\n    }()\n}\nwg.Wait()",
+              "title": "Synchronizing multiple goroutines"
             }
           },
           {
             "type": "content",
             "title": "Mutexes",
             "box": {
-              "content": "Protecting shared state",
-              "code": "var mu sync.Mutex\nmu.Lock()\ncounter++\nmu.Unlock()"
+              "code": "var mu sync.Mutex\nmu.Lock()\ncounter++\nmu.Unlock()",
+              "title": "Protecting shared state"
             }
           },
           {
             "type": "content",
             "title": "Worker Pool Pattern",
             "box": {
-              "content": "A common Go pattern is the 'Worker Pool', where a fixed number of goroutines process tasks from a shared channel. This limits resource usage while maximizing throughput, as workers avoid the overhead of constant thread creation.",
-              "code": "func worker(id int, jobs <-chan int, results chan<- int) {\n    for j := range jobs {\n        fmt.Printf(\"worker %d processing job %d\\n\", id, j)\n        time.Sleep(time.Second)\n        results <- j * 2\n    }\n}\n\nfunc main() {\n    jobs := make(chan int, 100)\n    results := make(chan int, 100)\n\n    for w := 1; w <= 3; w++ { go worker(w, jobs, results) }\n\n    for j := 1; j <= 5; j++ { jobs <- j }\n    close(jobs)\n\n    for a := 1; a <= 5; a++ { <-results }\n}"
+              "code": "func worker(id int, jobs <-chan int, results chan<- int) {\n    for j := range jobs {\n        fmt.Printf(\"worker %d processing job %d\\n\", id, j)\n        time.Sleep(time.Second)\n        results <- j * 2\n    }\n}\n\nfunc main() {\n    jobs := make(chan int, 100)\n    results := make(chan int, 100)\n\n    for w := 1; w <= 3; w++ { go worker(w, jobs, results) }\n\n    for j := 1; j <= 5; j++ { jobs <- j }\n    close(jobs)\n\n    for a := 1; a <= 5; a++ { <-results }\n}",
+              "title": "A common Go pattern is the 'Worker Pool', where a fixed number of goroutines process tasks from a shared channel. This limits resource usage while maximizing throughput, as workers avoid the overhead of constant thread creation."
             }
           },
           {
             "type": "content",
             "title": "Graceful Shutdown with Select",
             "box": {
-              "content": "Using a 'quit' or 'done' channel with a <code>select</code> statement is the standard way to implement graceful shutdowns or cancellations in Go services.",
-              "code": "quit := make(chan bool)\ngo func() {\n    for {\n        select {\n        case <-quit:\n            return\n        default:\n            doWork()\n        }\n    }\n}()\n\n// Trigger shutdown\nquit <- true"
+              "code": "quit := make(chan bool)\ngo func() {\n    for {\n        select {\n        case <-quit:\n            return\n        default:\n            doWork()\n        }\n    }\n}()\n\n// Trigger shutdown\nquit <- true",
+              "title": "Using a 'quit' or 'done' channel with a <code>select</code> statement is the standard way to implement graceful shutdowns or cancellations in Go services."
             }
           },
           {
             "type": "content",
             "title": "Race Detector",
             "box": {
-              "content": "Find concurrency bugs easily",
-              "code": "go run -race main.go\ngo test -race ./..."
+              "code": "go run -race main.go\ngo test -race ./...",
+              "title": "Find concurrency bugs easily"
             }
           }
         ]
@@ -848,46 +894,46 @@
           {
             "type": "topic-title",
             "title": "11. Standard Library",
-            "box": { "content": "Built-in power without dependencies" }
+            "subtitle": "Built-in power without dependencies"
           },
           {
             "type": "content",
             "title": "Web Servers (net/http)",
             "box": {
-              "content": "Go's standard library includes a production-grade HTTP server. It is highly performant because every request is handled in its own goroutine automatically. This makes Go an excellent choice for building microservices and web APIs.",
-              "code": "package main\n\nimport \"net/http\"\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    w.Header().Set(\"Content-Type\", \"text/plain\")\n    w.Write([]byte(\"Hello from Bude!\"))\n}\n\nfunc main() {\n    http.HandleFunc(\"/\", handler)\n    http.ListenAndServe(\":8080\", nil)\n}"
+              "code": "package main\n\nimport \"net/http\"\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    w.Header().Set(\"Content-Type\", \"text/plain\")\n    w.Write([]byte(\"Hello from Bude!\"))\n}\n\nfunc main() {\n    http.HandleFunc(\"/\", handler)\n    http.ListenAndServe(\":8080\", nil)\n}",
+              "title": "Go's standard library includes a production-grade HTTP server. It is highly performant because every request is handled in its own goroutine automatically. This makes Go an excellent choice for building microservices and web APIs."
             }
           },
           {
             "type": "content",
             "title": "HTTP Middleware: The Handler Pattern",
             "box": {
-              "content": "Middleware is a powerful pattern in Go for wrapping HTTP handlers with shared logic like logging, authentication, or metrics. Because functions are first-class citizens, middleware is just a function that takes a <code>http.Handler</code> and returns a new <code>http.Handler</code>.",
-              "code": "func loggingMiddleware(next http.Handler) http.Handler {\n    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {\n        log.Printf(\"Received request: %s %s\", r.Method, r.URL.Path)\n        next.ServeHTTP(w, r)\n    })\n}\n\n// Usage\nhandler := http.HandlerFunc(myHandler)\nhttp.ListenAndServe(\":8080\", loggingMiddleware(handler))"
+              "code": "func loggingMiddleware(next http.Handler) http.Handler {\n    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {\n        log.Printf(\"Received request: %s %s\", r.Method, r.URL.Path)\n        next.ServeHTTP(w, r)\n    })\n}\n\n// Usage\nhandler := http.HandlerFunc(myHandler)\nhttp.ListenAndServe(\":8080\", loggingMiddleware(handler))",
+              "title": "Middleware is a powerful pattern in Go for wrapping HTTP handlers with shared logic like logging, authentication, or metrics. Because functions are first-class citizens, middleware is just a function that takes a <code>http.Handler</code> and returns a new <code>http.Handler</code>."
             }
           },
           {
             "type": "content",
             "title": "JSON Struct Tags & Validation",
             "box": {
-              "content": "Struct tags allow you to control exactly how your Go data maps to JSON. You can rename fields, hide sensitive data with <code>-</code>, or hide empty fields with <code>omitempty</code>. For more complex validation, many developers use third-party libraries alongside these tags.",
-              "code": "type Profile struct {\n    Username string `json:\"user_name\"` \n    Password string `json:\"-\"` // Never export\n    Bio      string `json:\"bio,omitempty\"`\n}\n\n// Marshal and Unmarshal are byte-oriented\ndata, _ := json.Marshal(p)\njson.Unmarshal(data, &p)"
+              "code": "type Profile struct {\n    Username string `json:\"user_name\"` \n    Password string `json:\"-\"` // Never export\n    Bio      string `json:\"bio,omitempty\"`\n}\n\n// Marshal and Unmarshal are byte-oriented\ndata, _ := json.Marshal(p)\njson.Unmarshal(data, &p)",
+              "title": "Struct tags allow you to control exactly how your Go data maps to JSON. You can rename fields, hide sensitive data with <code>-</code>, or hide empty fields with <code>omitempty</code>. For more complex validation, many developers use third-party libraries alongside these tags."
             }
           },
           {
             "type": "content",
             "title": "Files (os & io)",
             "box": {
-              "content": "Interacting with the file system is straightforward in Go. You can open files, read their content into memory or stream them, and write new data. Always remember to use <code>defer</code> to ensure files are closed, preventing resource leaks.",
-              "code": "/* Reading a whole file */\ncontent, err := os.ReadFile(\"config.json\")\nif err != nil {\n    log.Fatal(err)\n}\n\n/* Manual reading with a buffer */\nf, err := os.Open(\"data.txt\")\nif err != nil {\n    return err\n}\ndefer f.Close() \n\nb := make([]byte, 100)\nn, err := f.Read(b)"
+              "code": "/* Reading a whole file */\ncontent, err := os.ReadFile(\"config.json\")\nif err != nil {\n    log.Fatal(err)\n}\n\n/* Manual reading with a buffer */\nf, err := os.Open(\"data.txt\")\nif err != nil {\n    return err\n}\ndefer f.Close() \n\nb := make([]byte, 100)\nn, err := f.Read(b)",
+              "title": "Interacting with the file system is straightforward in Go. You can open files, read their content into memory or stream them, and write new data. Always remember to use <code>defer</code> to ensure files are closed, preventing resource leaks."
             }
           },
           {
             "type": "content",
             "title": "The Context Package",
             "box": {
-              "content": "The <code>context</code> package is essential for managing timeouts, deadlines, and cancellations across API boundaries and goroutines. It allows you to gracefully stop work when it's no longer needed or taking too long.",
-              "code": "/* Create a context that times out in 2 seconds */\nctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)\ndefer cancel()\n\nselect {\ncase <-time.After(1 * time.Second):\n    fmt.Println(\"Task completed\")\ncase <-ctx.Done():\n    fmt.Println(\"Timed out!\", ctx.Err())\n}"
+              "code": "/* Create a context that times out in 2 seconds */\nctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)\ndefer cancel()\n\nselect {\ncase <-time.After(1 * time.Second):\n    fmt.Println(\"Task completed\")\ncase <-ctx.Done():\n    fmt.Println(\"Timed out!\", ctx.Err())\n}",
+              "title": "The <code>context</code> package is essential for managing timeouts, deadlines, and cancellations across API boundaries and goroutines. It allows you to gracefully stop work when it's no longer needed or taking too long."
             }
           }
         ]
@@ -899,30 +945,30 @@
           {
             "type": "topic-title",
             "title": "12. Testing",
-            "box": { "content": "First-class testing support" }
+            "subtitle": "First-class testing support"
           },
           {
             "type": "content",
             "title": "Unit Tests: Table-Driven",
             "box": {
-              "content": "Go has testing built into the <code>go</code> command. The idiomatic way to write tests is 'Table-Driven Tests', which use a slice of structs to define multiple test cases, making it easy to add new scenarios without repeating logic.",
-              "code": "func TestAdd(t *testing.T) {\n    tests := []struct { a, b, want int }{\n        {1, 2, 3},\n        {0, 0, 0},\n        {-1, 1, 0},\n    }\n\n    for _, tt := range tests {\n        if got := Add(tt.a, tt.b); got != tt.want {\n            t.Errorf(\"Add(%d, %d) = %d; want %d\", tt.a, tt.b, got, tt.want)\n        }\n    }\n}"
+              "code": "func TestAdd(t *testing.T) {\n    tests := []struct { a, b, want int }{\n        {1, 2, 3},\n        {0, 0, 0},\n        {-1, 1, 0},\n    }\n\n    for _, tt := range tests {\n        if got := Add(tt.a, tt.b); got != tt.want {\n            t.Errorf(\"Add(%d, %d) = %d; want %d\", tt.a, tt.b, got, tt.want)\n        }\n    }\n}",
+              "title": "Go has testing built into the <code>go</code> command. The idiomatic way to write tests is 'Table-Driven Tests', which use a slice of structs to define multiple test cases, making it easy to add new scenarios without repeating logic."
             }
           },
           {
             "type": "content",
             "title": "Benchmarking & Performance",
             "box": {
-              "content": "Go provides top-tier benchmarking tools built into the testing package. You can measure the execution time and memory allocations of your functions, allowing for data-driven performance optimizations.",
-              "code": "func BenchmarkLargeSlice(b *testing.B) {\n    for i := 0; i < b.N; i++ {\n        // Measure allocation overhead\n        data := make([]int, 0, 1000)\n        _ = data\n    }\n}\n\n// Run with: go test -bench=. -benchmem"
+              "code": "func BenchmarkLargeSlice(b *testing.B) {\n    for i := 0; i < b.N; i++ {\n        // Measure allocation overhead\n        data := make([]int, 0, 1000)\n        _ = data\n    }\n}\n\n// Run with: go test -bench=. -benchmem",
+              "title": "Go provides top-tier benchmarking tools built into the testing package. You can measure the execution time and memory allocations of your functions, allowing for data-driven performance optimizations."
             }
           },
           {
             "type": "content",
             "title": "Fuzz Testing",
             "box": {
-              "content": "Introduced in Go 1.18, Fuzzing is a type of automated testing that continuously provides random data to your program to find edge cases or security vulnerabilities that might be missed by manual unit tests.",
-              "code": "func FuzzParseInt(f *testing.F) {\n    f.Add(\"123\") // Seed corpus\n    f.Fuzz(func(t *testing.T, s string) {\n        val, err := strconv.Atoi(s)\n        if err == nil {\n             // Verify symmetry or other properties\n             if strconv.Itoa(val) != s && !strings.HasPrefix(s, \"0\") {\n                 t.Errorf(\"Invalid conversion for %q\", s)\n             }\n        }\n    })\n}"
+              "code": "func FuzzParseInt(f *testing.F) {\n    f.Add(\"123\") // Seed corpus\n    f.Fuzz(func(t *testing.T, s string) {\n        val, err := strconv.Atoi(s)\n        if err == nil {\n             // Verify symmetry or other properties\n             if strconv.Itoa(val) != s && !strings.HasPrefix(s, \"0\") {\n                 t.Errorf(\"Invalid conversion for %q\", s)\n             }\n        }\n    })\n}",
+              "title": "Introduced in Go 1.18, Fuzzing is a type of automated testing that continuously provides random data to your program to find edge cases or security vulnerabilities that might be missed by manual unit tests."
             }
           }
         ]
@@ -934,47 +980,68 @@
           {
             "type": "topic-title",
             "title": "13. Modern Go & Conclusion",
-            "box": { "content": "Generics and beyond" }
+            "subtitle": "Generics and beyond"
           },
           {
             "type": "content",
             "title": "Generics: Real-World Use Cases",
             "box": {
-              "content": "Generics are perfect for building reusable data structures (Stacks, Queues, Linked Lists) and utility functions (Filter, Map, Reduce) that don't depend on the specific type of data they hold.",
-              "code": "/* A generic Stack data structure */\ntype Stack[T any] struct { items []T }\n\nfunc (s *Stack[T]) Push(v T) { s.items = append(s.items, v) }\nfunc (s *Stack[T]) Pop() T {\n    last := s.items[len(s.items)-1]\n    s.items = s.items[:len(s.items)-1]\n    return last\n}\n\n// Usage: stack := Stack[int]{}"
+              "code": "/* A generic Stack data structure */\ntype Stack[T any] struct { items []T }\n\nfunc (s *Stack[T]) Push(v T) { s.items = append(s.items, v) }\nfunc (s *Stack[T]) Pop() T {\n    last := s.items[len(s.items)-1]\n    s.items = s.items[:len(s.items)-1]\n    return last\n}\n\n// Usage: stack := Stack[int]{}",
+              "title": "Generics are perfect for building reusable data structures (Stacks, Queues, Linked Lists) and utility functions (Filter, Map, Reduce) that don't depend on the specific type of data they hold."
             }
           },
           {
             "type": "content",
             "title": "Type Constraints",
             "box": {
-              "content": "You can restrict generic types using interfaces. The <code>comparable</code> constraint is built-in for types that support <code>==</code> and <code>!=</code>, while custom interfaces allow for more specific requirements like 'anything that can be sorted'.",
-              "code": "// Only types that satisfy the 'Ordered' interface\nfunc Max[T constraints.Ordered](a, b T) T {\n    if a > b { return a }\n    return b\n}"
+              "code": "// Only types that satisfy the 'Ordered' interface\nfunc Max[T constraints.Ordered](a, b T) T {\n    if a > b { return a }\n    return b\n}",
+              "title": "You can restrict generic types using interfaces. The <code>comparable</code> constraint is built-in for types that support <code>==</code> and <code>!=</code>, while custom interfaces allow for more specific requirements like 'anything that can be sorted'."
             }
           },
           {
             "type": "content",
             "title": "Next Steps & Resources",
             "box": {
-              "content": "Continue your Go journey with these elite resources:",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Go Tour:</strong> tour.golang.org" },
-                { "emoji": "📖", "text": "<strong>Effective Go:</strong> go.dev/doc/effective_go" },
-                { "emoji": "🏎️", "text": "<strong>Go by Example:</strong> gobyexample.com" },
-                { "emoji": "🎧", "text": "<strong>Go Time Podcast:</strong> changelog.com/gotime" }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Go Tour:</strong> tour.golang.org"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Effective Go:</strong> go.dev/doc/effective_go"
+                },
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Go by Example:</strong> gobyexample.com"
+                },
+                {
+                  "emoji": "🎧",
+                  "text": "<strong>Go Time Podcast:</strong> changelog.com/gotime"
+                }
+              ],
+              "title": "Continue your Go journey with these elite resources:"
             }
           },
           {
             "type": "content",
             "title": "Conclusion",
             "box": {
-              "content": "Go is a pragmatic, powerful language designed for the cloud era. Its simplicity is its greatest strength, enabling teams to build reliable and scalable systems with ease.",
               "list": [
-                { "emoji": "✅", "text": "Built for scale and reliability" },
-                { "emoji": "✅", "text": "Unmatched concurrency model" },
-                { "emoji": "✅", "text": "Strong community and ecosystem" }
-              ]
+                {
+                  "emoji": "✅",
+                  "text": "Built for scale and reliability"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Unmatched concurrency model"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Strong community and ecosystem"
+                }
+              ],
+              "title": "Go is a pragmatic, powerful language designed for the cloud era. Its simplicity is its greatest strength, enabling teams to build reliable and scalable systems with ease."
             }
           }
         ]

@@ -34,36 +34,48 @@
           {
             "type": "topic-title",
             "title": "1. Foundations",
-            "box": { "content": "Modern .NET Hosting and Execution." }
+            "subtitle": "Modern .NET Hosting and Execution."
           },
           {
             "type": "content",
             "title": "Kestrel Web Server",
             "box": {
-              "content": "A cross-platform, high-performance web server for ASP.NET Core.",
               "list": [
-                { "emoji": "🚀", "text": "<strong>Speed:</strong> Optimized for high-throughput and low-latency." },
-                { "emoji": "💻", "text": "<strong>Cross-Platform:</strong> Runs identical everywhere (Windows, Linux, macOS)." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Speed:</strong> Optimized for high-throughput and low-latency."
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Cross-Platform:</strong> Runs identical everywhere (Windows, Linux, macOS)."
+                }
+              ],
+              "title": "A cross-platform, high-performance web server for ASP.NET Core."
             }
           },
           {
             "type": "content",
             "title": "Program.cs Evolution",
             "box": {
-              "content": "Consolidated Startup and Program logic into a unified entry point using Top-Level Statements.",
-              "code": "var builder = WebApplication.CreateBuilder(args);\nvar app = builder.Build();\napp.Run();"
+              "code": "var builder = WebApplication.CreateBuilder(args);\nvar app = builder.Build();\napp.Run();",
+              "title": "Consolidated Startup and Program logic into a unified entry point using Top-Level Statements."
             }
           },
           {
             "type": "content",
             "title": "The Generic Host",
             "box": {
-              "content": "Encapsulates resources like Dependency Injection, Logging, and Configuration for web and worker services.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>IHost:</strong> The core abstraction for managing application lifecycle." },
-                { "emoji": "🏗️", "text": "<strong>Universal:</strong> Same pattern for APIs, Web Apps, and Background Services." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>IHost:</strong> The core abstraction for managing application lifecycle."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Universal:</strong> Same pattern for APIs, Web Apps, and Background Services."
+                }
+              ],
+              "title": "Encapsulates resources like Dependency Injection, Logging, and Configuration for web and worker services."
             }
           }
         ]
@@ -75,33 +87,39 @@
           {
             "type": "topic-title",
             "title": "2. Pipeline",
-            "box": { "content": "The Request/Response Processing Chain." }
+            "subtitle": "The Request/Response Processing Chain."
           },
           {
             "type": "content",
             "title": "Middleware Concept",
             "box": {
-              "content": "Software that's assembled into an app pipeline to handle requests and responses.",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Chain of Responsibility:</strong> Each component chooses whether to pass the request to the next component." },
-                { "emoji": "🔄", "text": "<strong>Bidirectional:</strong> Handles both the incoming request and outgoing response." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Chain of Responsibility:</strong> Each component chooses whether to pass the request to the next component."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Bidirectional:</strong> Handles both the incoming request and outgoing response."
+                }
+              ],
+              "title": "Software that's assembled into an app pipeline to handle requests and responses."
             }
           },
           {
             "type": "content",
             "title": "The Pipeline Order",
             "box": {
-              "content": "Ordering is critical! Typical flow: Error Handling -> HSTS -> HTTPS Redirection -> Static Files -> Routing -> Auth -> Endpoints.",
-              "code": "app.UseExceptionHandler(\"/Error\");\napp.UseStaticFiles();\napp.UseRouting();\napp.UseAuthentication();\napp.UseAuthorization();"
+              "code": "app.UseExceptionHandler(\"/Error\");\napp.UseStaticFiles();\napp.UseRouting();\napp.UseAuthentication();\napp.UseAuthorization();",
+              "title": "Ordering is critical! Typical flow: Error Handling -> HSTS -> HTTPS Redirection -> Static Files -> Routing -> Auth -> Endpoints."
             }
           },
           {
             "type": "content",
             "title": "Custom Middleware",
             "box": {
-              "content": "Extend the pipeline logic with custom classes or inline delegates.",
-              "code": "app.Use(async (context, next) => {\n    // Logic before\n    await next.Invoke();\n    // Logic after\n});"
+              "code": "app.Use(async (context, next) => {\n    // Logic before\n    await next.Invoke();\n    // Logic after\n});",
+              "title": "Extend the pipeline logic with custom classes or inline delegates."
             }
           }
         ]
@@ -113,45 +131,60 @@
           {
             "type": "topic-title",
             "title": "3. Dependency Injection (DI)",
-            "box": { "content": "Modern Decoupling with Inbuilt DI." }
+            "subtitle": "Modern Decoupling with Inbuilt DI."
           },
           {
             "type": "content",
             "title": "The IServiceCollection",
             "box": {
-              "content": "Registration of services is done in the WebApplicationBuilder using the Services property.",
-              "code": "builder.Services.AddScoped<ITradeService, TradeService>();"
+              "code": "builder.Services.AddScoped<ITradeService, TradeService>();",
+              "title": "Registration of services is done in the WebApplicationBuilder using the Services property."
             }
           },
           {
             "type": "content",
             "title": "Service Lifetimes",
             "box": {
-              "content": "ASP.NET Core supports three primary lifetimes for managed services.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Transient:</strong> Created every time they are requested." },
-                { "emoji": "🔄", "text": "<strong>Scoped:</strong> Created once per client request (connection)." },
-                { "emoji": "🧊", "text": "<strong>Singleton:</strong> Created once and shared across the lifetime of the application." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Transient:</strong> Created every time they are requested."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Scoped:</strong> Created once per client request (connection)."
+                },
+                {
+                  "emoji": "🧊",
+                  "text": "<strong>Singleton:</strong> Created once and shared across the lifetime of the application."
+                }
+              ],
+              "title": "ASP.NET Core supports three primary lifetimes for managed services."
             }
           },
           {
             "type": "content",
             "title": "Constructor Injection",
             "box": {
-              "content": "The standard way to receive dependencies in controllers and other services.",
-              "code": "public class TradeController : ControllerBase {\n    private readonly ITradeService _service;\n    public TradeController(ITradeService service) => _service = service;\n}"
+              "code": "public class TradeController : ControllerBase {\n    private readonly ITradeService _service;\n    public TradeController(ITradeService service) => _service = service;\n}",
+              "title": "The standard way to receive dependencies in controllers and other services."
             }
           },
           {
             "type": "content",
             "title": "Service Provider (IServiceProvider)",
             "box": {
-              "content": "The container responsible for resolving services at runtime based on their registered lifetime.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Resolution:</strong> Automatically handles nested dependencies." },
-                { "emoji": "🧹", "text": "<strong>Disposal:</strong> Automatically disposes IDisposable services when their lifetime ends." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Resolution:</strong> Automatically handles nested dependencies."
+                },
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>Disposal:</strong> Automatically disposes IDisposable services when their lifetime ends."
+                }
+              ],
+              "title": "The container responsible for resolving services at runtime based on their registered lifetime."
             }
           }
         ]
@@ -163,52 +196,64 @@
           {
             "type": "topic-title",
             "title": "4. Persistence",
-            "box": { "content": "Entity Framework Core & LINQ." }
+            "subtitle": "Entity Framework Core & LINQ."
           },
           {
             "type": "content",
             "title": "Entity Framework Core (EF Core)",
             "box": {
-              "content": "A lightweight, extensible, and cross-platform version of the popular Entity Framework data access technology.",
               "list": [
-                { "emoji": "📦", "text": "<strong>ORM:</strong> Map POCO (Plain Old CLR Object) classes to database tables." },
-                { "emoji": "🌍", "text": "<strong>Providers:</strong> SQL Server, PostgreSQL, MySQL, SQLite, etc." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>ORM:</strong> Map POCO (Plain Old CLR Object) classes to database tables."
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Providers:</strong> SQL Server, PostgreSQL, MySQL, SQLite, etc."
+                }
+              ],
+              "title": "A lightweight, extensible, and cross-platform version of the popular Entity Framework data access technology."
             }
           },
           {
             "type": "content",
             "title": "The DbContext",
             "box": {
-              "content": "The central class for interacting with the database using EF Core.",
-              "code": "public class AppDbContext : DbContext {\n    public DbSet<Trade> Trades { get; set; }\n    public AppDbContext(DbContextOptions options) : base(options) { }\n}"
+              "code": "public class AppDbContext : DbContext {\n    public DbSet<Trade> Trades { get; set; }\n    public AppDbContext(DbContextOptions options) : base(options) { }\n}",
+              "title": "The central class for interacting with the database using EF Core."
             }
           },
           {
             "type": "content",
             "title": "LINQ (Language Integrated Query)",
             "box": {
-              "content": "Write type-safe queries directly in C# that are converted to SQL by EF Core.",
-              "code": "var trades = await context.Trades\n    .Where(t => t.Amount > 1000)\n    .ToListAsync();"
+              "code": "var trades = await context.Trades\n    .Where(t => t.Amount > 1000)\n    .ToListAsync();",
+              "title": "Write type-safe queries directly in C# that are converted to SQL by EF Core."
             }
           },
           {
             "type": "content",
             "title": "EF Core Migrations",
             "box": {
-              "content": "Evolve your database schema over time without losing data by using migration scripts.",
-              "code": "# shell\ndotnet ef migrations add InitialCreate\ndotnet ef database update"
+              "code": "# shell\ndotnet ef migrations add InitialCreate\ndotnet ef database update",
+              "title": "Evolve your database schema over time without losing data by using migration scripts."
             }
           },
           {
             "type": "content",
             "title": "Fluent API vs Data Annotations",
             "box": {
-              "content": "Two ways to configure model mapping: using attributes on classes or the ModelBuilder at the DbContext level.",
               "list": [
-                { "emoji": "📝", "text": "<strong>Annotations:</strong> Simple mapping like [Key] or [Required]." },
-                { "emoji": "🔌", "text": "<strong>Fluent API:</strong> Advanced configuration using modelBuilder.Entity<T>().Property(p => p.X)..." }
-              ]
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Annotations:</strong> Simple mapping like [Key] or [Required]."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Fluent API:</strong> Advanced configuration using modelBuilder.Entity<T>().Property(p => p.X)..."
+                }
+              ],
+              "title": "Two ways to configure model mapping: using attributes on classes or the ModelBuilder at the DbContext level."
             }
           }
         ]
@@ -220,52 +265,64 @@
           {
             "type": "topic-title",
             "title": "5. Web API",
-            "box": { "content": "Controllers vs Minimal APIs." }
+            "subtitle": "Controllers vs Minimal APIs."
           },
           {
             "type": "content",
             "title": "Controller-Based APIs",
             "box": {
-              "content": "Traditional approach using classes and attributes for routing and action results.",
-              "code": "[ApiController]\n[Route(\"api/[controller]\")]\npublic class UserController : ControllerBase { ... }"
+              "code": "[ApiController]\n[Route(\"api/[controller]\")]\npublic class UserController : ControllerBase { ... }",
+              "title": "Traditional approach using classes and attributes for routing and action results."
             }
           },
           {
             "type": "content",
             "title": "Minimal APIs",
             "box": {
-              "content": "A high-performance, lightweight approach to building APIs in .NET 6+ with minimal code.",
-              "code": "app.MapGet(\"/users\", () => new { Name = \"Aravind\" });"
+              "code": "app.MapGet(\"/users\", () => new { Name = \"Aravind\" });",
+              "title": "A high-performance, lightweight approach to building APIs in .NET 6+ with minimal code."
             }
           },
           {
             "type": "content",
             "title": "Model Binding & Validation",
             "box": {
-              "content": "Automatically map request data to C# objects and validate using Data Annotations or FluentValidation.",
-              "code": "public record UserDto([Required] string Name, [EmailAddress] string Email);"
+              "code": "public record UserDto([Required] string Name, [EmailAddress] string Email);",
+              "title": "Automatically map request data to C# objects and validate using Data Annotations or FluentValidation."
             }
           },
           {
             "type": "content",
             "title": "Routing & Endpoint Discovery",
             "box": {
-              "content": "Define complex routes with constraints and use OpenAPI/Swagger for discovery.",
               "list": [
-                { "emoji": "📍", "text": "<strong>Attribute Routing:</strong> Directly on controller methods." },
-                { "emoji": "📜", "text": "<strong>Swagger:</strong> Automatically generated documentation for your API." }
-              ]
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Attribute Routing:</strong> Directly on controller methods."
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Swagger:</strong> Automatically generated documentation for your API."
+                }
+              ],
+              "title": "Define complex routes with constraints and use OpenAPI/Swagger for discovery."
             }
           },
           {
             "type": "content",
             "title": "Action Results & Content Negotiation",
             "box": {
-              "content": "Return various data types (JSON, XML, File) and status codes using built-in helper methods.",
               "list": [
-                { "emoji": "✅", "text": "<strong>Ok():</strong> Returns 200 OK." },
-                { "emoji": "🚫", "text": "<strong>NotFound():</strong> Returns 404." }
-              ]
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Ok():</strong> Returns 200 OK."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>NotFound():</strong> Returns 404."
+                }
+              ],
+              "title": "Return various data types (JSON, XML, File) and status codes using built-in helper methods."
             }
           }
         ]
@@ -277,55 +334,73 @@
           {
             "type": "topic-title",
             "title": "6. Security",
-            "box": { "content": "Authentication & Authorization." }
+            "subtitle": "Authentication & Authorization."
           },
           {
             "type": "content",
             "title": "ASP.NET Core Identity",
             "box": {
-              "content": "A comprehensive membership system that handles users, passwords, profile data, roles, and more.",
               "list": [
-                { "emoji": "👤", "text": "<strong>UserManager:</strong> Manage users and their properties." },
-                { "emoji": "🔑", "text": "<strong>SignInManager:</strong> Handle login/logout flows." }
-              ]
+                {
+                  "emoji": "👤",
+                  "text": "<strong>UserManager:</strong> Manage users and their properties."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>SignInManager:</strong> Handle login/logout flows."
+                }
+              ],
+              "title": "A comprehensive membership system that handles users, passwords, profile data, roles, and more."
             }
           },
           {
             "type": "content",
             "title": "JWT Authentication",
             "box": {
-              "content": "Stateless authentication for APIs using JSON Web Tokens issued by IdentityServer or Microsoft Entra ID.",
-              "code": "builder.Services.AddAuthentication()\n    .AddJwtBearer(options => { ... });"
+              "code": "builder.Services.AddAuthentication()\n    .AddJwtBearer(options => { ... });",
+              "title": "Stateless authentication for APIs using JSON Web Tokens issued by IdentityServer or Microsoft Entra ID."
             }
           },
           {
             "type": "content",
             "title": "Policy-Based Authorization",
             "box": {
-              "content": "Define complex authorization requirements that go beyond simple roles.",
-              "code": "options.AddPolicy(\"AtLeast21\", policy => \n    policy.Requirements.Add(new MinimumAgeRequirement(21)));"
+              "code": "options.AddPolicy(\"AtLeast21\", policy => \n    policy.Requirements.Add(new MinimumAgeRequirement(21)));",
+              "title": "Define complex authorization requirements that go beyond simple roles."
             }
           },
           {
             "type": "content",
             "title": "Claims-Based Identity",
             "box": {
-              "content": "User information is stored as key-value pairs (claims) that can be used for granular access control.",
               "list": [
-                { "emoji": "🆔", "text": "<strong>Claim:</strong> A statement about the user (e.g., Email, DateOfBirth)." },
-                { "emoji": "🛡️", "text": "<strong>Identity:</strong> A collection of claims representing the authenticated user." }
-              ]
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>Claim:</strong> A statement about the user (e.g., Email, DateOfBirth)."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Identity:</strong> A collection of claims representing the authenticated user."
+                }
+              ],
+              "title": "User information is stored as key-value pairs (claims) that can be used for granular access control."
             }
           },
           {
             "type": "content",
             "title": "OAuth2 & OpenID Connect",
             "box": {
-              "content": "Deep integration with external providers like Google, GitHub, or Microsoft for shared authentication.",
               "list": [
-                { "emoji": "🌐", "text": "<strong>OIDC:</strong> Layer on top of OAuth2 for identity." },
-                { "emoji": "🤝", "text": "<strong>External Login:</strong> 'Login with...' functionality." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>OIDC:</strong> Layer on top of OAuth2 for identity."
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>External Login:</strong> 'Login with...' functionality."
+                }
+              ],
+              "title": "Deep integration with external providers like Google, GitHub, or Microsoft for shared authentication."
             }
           }
         ]
@@ -337,52 +412,64 @@
           {
             "type": "topic-title",
             "title": "7. Performance",
-            "box": { "content": "Caching, gRPC, and Optimization." }
+            "subtitle": "Caching, gRPC, and Optimization."
           },
           {
             "type": "content",
             "title": "Output Caching",
             "box": {
-              "content": "A new middleware in .NET 7+ that caches responses on the server to reduce database and CPU load.",
-              "code": "app.UseOutputCache();\napp.MapGet(\"/slow\", () => ...).CacheOutput();"
+              "code": "app.UseOutputCache();\napp.MapGet(\"/slow\", () => ...).CacheOutput();",
+              "title": "A new middleware in .NET 7+ that caches responses on the server to reduce database and CPU load."
             }
           },
           {
             "type": "content",
             "title": "gRPC in ASP.NET Core",
             "box": {
-              "content": "A high-performance RPC framework for contract-first, cross-platform microservice communication.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Protobuf:</strong> Binary serialization for speed and efficiency." },
-                { "emoji": "📜", "text": "<strong>IDL:</strong> Define services and messages in .proto files." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Protobuf:</strong> Binary serialization for speed and efficiency."
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>IDL:</strong> Define services and messages in .proto files."
+                }
+              ],
+              "title": "A high-performance RPC framework for contract-first, cross-platform microservice communication."
             }
           },
           {
             "type": "content",
             "title": "Response Compression",
             "box": {
-              "content": "Reduce the size of transmitted data using Gzip or Brotli compression middleware.",
-              "code": "builder.Services.AddResponseCompression();\napp.UseResponseCompression();"
+              "code": "builder.Services.AddResponseCompression();\napp.UseResponseCompression();",
+              "title": "Reduce the size of transmitted data using Gzip or Brotli compression middleware."
             }
           },
           {
             "type": "content",
             "title": "Rate Limiting",
             "box": {
-              "content": "Protect your application from abuse by limiting the number of requests a client can make.",
-              "code": "app.UseRateLimiter();"
+              "code": "app.UseRateLimiter();",
+              "title": "Protect your application from abuse by limiting the number of requests a client can make."
             }
           },
           {
             "type": "content",
             "title": "Native AOT (Ahead-of-Time)",
             "box": {
-              "content": "Publish your application as a native executable for ultra-fast startup and reduced memory usage.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>No JIT:</strong> Immediate execution without cold starts." },
-                { "emoji": "📉", "text": "<strong>Footprint:</strong> Significant reduction in memory consumption." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>No JIT:</strong> Immediate execution without cold starts."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Footprint:</strong> Significant reduction in memory consumption."
+                }
+              ],
+              "title": "Publish your application as a native executable for ultra-fast startup and reduced memory usage."
             }
           }
         ]
@@ -394,55 +481,73 @@
           {
             "type": "topic-title",
             "title": "8. Cloud Native",
-            "box": { "content": "Observability and Deployment." }
+            "subtitle": "Observability and Deployment."
           },
           {
             "type": "content",
             "title": "Health Checks",
             "box": {
-              "content": "Expose endpoints for orchestration tools (K8s) to monitor application availability.",
-              "code": "app.MapHealthChecks(\"/health\");"
+              "code": "app.MapHealthChecks(\"/health\");",
+              "title": "Expose endpoints for orchestration tools (K8s) to monitor application availability."
             }
           },
           {
             "type": "content",
             "title": "Dockerization (Containerization)",
             "box": {
-              "content": "ASP.NET Core is designed for containers with official lightweight images from Microsoft.",
-              "code": "FROM mcr.microsoft.com/dotnet/aspnet:8.0\nCOPY . /app\nWORKDIR /app\nENTRYPOINT [\"dotnet\", \"MyApi.dll\"]"
+              "code": "FROM mcr.microsoft.com/dotnet/aspnet:8.0\nCOPY . /app\nWORKDIR /app\nENTRYPOINT [\"dotnet\", \"MyApi.dll\"]",
+              "title": "ASP.NET Core is designed for containers with official lightweight images from Microsoft."
             }
           },
           {
             "type": "content",
             "title": "Configuration & Environment",
             "box": {
-              "content": "Support for multiple sources: JSON, Environment Variables, User Secrets, and Azure Key Vault.",
               "list": [
-                { "emoji": "🌍", "text": "<strong>Flexible:</strong> Override config per environment (Dev, Staging, Prod)." },
-                { "emoji": "🔐", "text": "<strong>Security:</strong> Use Key Vault for sensitive data in cloud." }
-              ]
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Flexible:</strong> Override config per environment (Dev, Staging, Prod)."
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Security:</strong> Use Key Vault for sensitive data in cloud."
+                }
+              ],
+              "title": "Support for multiple sources: JSON, Environment Variables, User Secrets, and Azure Key Vault."
             }
           },
           {
             "type": "content",
             "title": "OpenTelemetry & Observability",
             "box": {
-              "content": "Standardized metrics and distributed tracing for monitoring large-scale systems.",
               "list": [
-                { "emoji": "📊", "text": "<strong>Metrics:</strong> Track resource usage and performance." },
-                { "emoji": "🔗", "text": "<strong>Tracing:</strong> Follow requests across service boundaries." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Metrics:</strong> Track resource usage and performance."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Tracing:</strong> Follow requests across service boundaries."
+                }
+              ],
+              "title": "Standardized metrics and distributed tracing for monitoring large-scale systems."
             }
           },
           {
             "type": "content",
             "title": "Azure Integration",
             "box": {
-              "content": "Seamless deployment and integration with Azure App Service, Functions, and Cosmos DB.",
               "list": [
-                { "emoji": "☁️", "text": "<strong>App Service:</strong> Fully managed web hosting." },
-                { "emoji": "🚀", "text": "<strong>GitHub Actions:</strong> Automated CI/CD pipelines to Azure." }
-              ]
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>App Service:</strong> Fully managed web hosting."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>GitHub Actions:</strong> Automated CI/CD pipelines to Azure."
+                }
+              ],
+              "title": "Seamless deployment and integration with Azure App Service, Functions, and Cosmos DB."
             }
           }
         ]
@@ -454,46 +559,46 @@
           {
             "type": "topic-title",
             "title": "9. Testing",
-            "box": { "content": "Unit, Integration, and Load Testing." }
+            "subtitle": "Unit, Integration, and Load Testing."
           },
           {
             "type": "content",
             "title": "Unit Testing with xUnit",
             "box": {
-              "content": "The most popular testing framework for .NET, known for its extensibility and parallel execution.",
-              "code": "[Fact]\npublic void TradeAmount_ShouldBePositive() {\n    var trade = new Trade { Amount = 100 };\n    Assert.True(trade.Amount > 0);\n}"
+              "code": "[Fact]\npublic void TradeAmount_ShouldBePositive() {\n    var trade = new Trade { Amount = 100 };\n    Assert.True(trade.Amount > 0);\n}",
+              "title": "The most popular testing framework for .NET, known for its extensibility and parallel execution."
             }
           },
           {
             "type": "content",
             "title": "Mocking with Moq",
             "box": {
-              "content": "Simulate external dependencies like repositories or services for isolated unit testing.",
-              "code": "var mockRepo = new Mock<ITradeRepository>();\nmockRepo.Setup(r => r.GetById(1)).Returns(new Trade());"
+              "code": "var mockRepo = new Mock<ITradeRepository>();\nmockRepo.Setup(r => r.GetById(1)).Returns(new Trade());",
+              "title": "Simulate external dependencies like repositories or services for isolated unit testing."
             }
           },
           {
             "type": "content",
             "title": "Integration Testing",
             "box": {
-              "content": "Use WebApplicationFactory to bootstrap your entire application in-memory for end-to-end API testing.",
-              "code": "public class MyApiTests : IClassFixture<WebApplicationFactory<Program>> { ... }"
+              "code": "public class MyApiTests : IClassFixture<WebApplicationFactory<Program>> { ... }",
+              "title": "Use WebApplicationFactory to bootstrap your entire application in-memory for end-to-end API testing."
             }
           },
           {
             "type": "content",
             "title": "Slice Testing with EF Core",
             "box": {
-              "content": "Test your data layer in isolation using an In-Memory database or SQLite in-process.",
-              "code": "var options = new DbContextOptionsBuilder<AppDbContext>()\n    .UseInMemoryDatabase(\"TestDb\").Options;"
+              "code": "var options = new DbContextOptionsBuilder<AppDbContext>()\n    .UseInMemoryDatabase(\"TestDb\").Options;",
+              "title": "Test your data layer in isolation using an In-Memory database or SQLite in-process."
             }
           },
           {
             "type": "content",
             "title": "Continuous Testing (dotnet watch)",
             "box": {
-              "content": "Automatically run tests whenever code changes occur for rapid feedback loops.",
-              "code": "# shell\ndotnet watch test"
+              "code": "# shell\ndotnet watch test",
+              "title": "Automatically run tests whenever code changes occur for rapid feedback loops."
             }
           }
         ]
@@ -505,24 +610,35 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The Future of .NET Development." }
+            "subtitle": "The Future of .NET Development."
           },
           {
             "type": "content",
             "title": "Summary",
             "box": {
-              "content": "ASP.NET Core is a world-class, high-performance framework for building modern web applications.",
               "list": [
-                { "emoji": "🚀", "text": "Unrivaled performance with Kestrel and Native AOT." },
-                { "emoji": "🛠️", "text": "Modular, testable, and cloud-ready by design." },
-                { "emoji": "🌐", "text": "Unified ecosystem for Web, Cloud, and Microservices." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "Unrivaled performance with Kestrel and Native AOT."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "Modular, testable, and cloud-ready by design."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Unified ecosystem for Web, Cloud, and Microservices."
+                }
+              ],
+              "title": "ASP.NET Core is a world-class, high-performance framework for building modern web applications."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Any questions? Thank you!" }
+            "box": {
+              "title": "Any questions? Thank you!"
+            }
           }
         ]
       }

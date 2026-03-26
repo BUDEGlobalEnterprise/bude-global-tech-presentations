@@ -120,7 +120,6 @@
             "emoji": "🎯",
             "title": "What is n8n?",
             "box": {
-              "content": "<span class=\"highlight\">Fair-code licensed workflow automation tool</span>",
               "list": [
                 {
                   "emoji": "🔓",
@@ -142,7 +141,8 @@
                   "emoji": "🏠",
                   "text": "<strong>Deployment</strong> - Self-hosted or cloud"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Fair-code licensed workflow automation tool</span>"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> n8n stands for 'nodemation' - node-based automation!"
@@ -356,8 +356,8 @@
             "emoji": "🐳",
             "title": "Docker Installation",
             "box": {
-              "content": "<strong>Quick start with Docker</strong>",
-              "code": "# Basic Docker run\ndocker run -it --rm \\\n  --name n8n \\\n  -p 5678:5678 \\\n  -v ~/.n8n:/home/node/.n8n \\\n  n8nio/n8n\n\n# With Docker Compose\nversion: '3.8'\nservices:\n  n8n:\n    image: n8nio/n8n\n    ports:\n      - \"5678:5678\"\n    environment:\n      - N8N_BASIC_AUTH_ACTIVE=true\n      - N8N_BASIC_AUTH_USER=user\n      - N8N_BASIC_AUTH_PASSWORD=pass\n    volumes:\n      - n8n_data:/home/node/.n8n\n\nvolumes:\n  n8n_data:"
+              "code": "# Basic Docker run\ndocker run -it --rm \\\n  --name n8n \\\n  -p 5678:5678 \\\n  -v ~/.n8n:/home/node/.n8n \\\n  n8nio/n8n\n\n# With Docker Compose\nversion: '3.8'\nservices:\n  n8n:\n    image: n8nio/n8n\n    ports:\n      - \"5678:5678\"\n    environment:\n      - N8N_BASIC_AUTH_ACTIVE=true\n      - N8N_BASIC_AUTH_USER=user\n      - N8N_BASIC_AUTH_PASSWORD=pass\n    volumes:\n      - n8n_data:/home/node/.n8n\n\nvolumes:\n  n8n_data:",
+              "title": "<strong>Quick start with Docker</strong>"
             }
           }
         ]
@@ -414,8 +414,8 @@
             "emoji": "🐳",
             "title": "Docker with Database",
             "box": {
-              "content": "<strong>Production-ready Docker Compose</strong>",
-              "code": "version: '3.8'\nservices:\n  n8n:\n    image: n8nio/n8n\n    ports:\n      - \"5678:5678\"\n    environment:\n      - DB_TYPE=postgresdb\n      - DB_POSTGRESDB_HOST=postgres\n      - DB_POSTGRESDB_USER=n8n\n      - DB_POSTGRESDB_PASSWORD=password\n      - DB_POSTGRESDB_DATABASE=n8n\n      - N8N_BASIC_AUTH_ACTIVE=true\n    depends_on:\n      - postgres\n    volumes:\n      - n8n_data:/home/node/.n8n\n\n  postgres:\n    image: postgres:13\n    environment:\n      - POSTGRES_USER=n8n\n      - POSTGRES_PASSWORD=password\n      - POSTGRES_DB=n8n\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\nvolumes:\n  n8n_data:\n  postgres_data:"
+              "code": "version: '3.8'\nservices:\n  n8n:\n    image: n8nio/n8n\n    ports:\n      - \"5678:5678\"\n    environment:\n      - DB_TYPE=postgresdb\n      - DB_POSTGRESDB_HOST=postgres\n      - DB_POSTGRESDB_USER=n8n\n      - DB_POSTGRESDB_PASSWORD=password\n      - DB_POSTGRESDB_DATABASE=n8n\n      - N8N_BASIC_AUTH_ACTIVE=true\n    depends_on:\n      - postgres\n    volumes:\n      - n8n_data:/home/node/.n8n\n\n  postgres:\n    image: postgres:13\n    environment:\n      - POSTGRES_USER=n8n\n      - POSTGRES_PASSWORD=password\n      - POSTGRES_DB=n8n\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\nvolumes:\n  n8n_data:\n  postgres_data:",
+              "title": "<strong>Production-ready Docker Compose</strong>"
             }
           }
         ]
@@ -1010,8 +1010,8 @@
             "emoji": "📋",
             "title": "n8n Cheat Sheet",
             "box": {
-              "content": "<strong>Common Nodes Quick Reference</strong>",
-              "code": "Essential Nodes:\n• HTTP Request - Make API calls\n• Webhook - Receive webhook calls\n• Cron - Schedule workflows\n• Code - Custom JavaScript\n• IF - Conditional logic\n• Switch - Multiple conditions\n• Merge - Combine data streams\n• Wait - Pause execution\n\nData Nodes:\n• Spreadsheet File - Read/write CSV, Excel\n• Google Sheets - Spreadsheet integration\n• Database - SQL queries\n• XML - XML data processing\n• JSON - JSON manipulation\n\nCommunication Nodes:\n• Email - Send/receive emails\n• Slack - Team messaging\n• Telegram - Bot messages\n• Discord - Community notifications\n\nUtility Nodes:\n• Set - Assign variables\n• Function - Custom code\n• Date & Time - Time operations\n• Aggregate - Batch processing"
+              "code": "Essential Nodes:\n• HTTP Request - Make API calls\n• Webhook - Receive webhook calls\n• Cron - Schedule workflows\n• Code - Custom JavaScript\n• IF - Conditional logic\n• Switch - Multiple conditions\n• Merge - Combine data streams\n• Wait - Pause execution\n\nData Nodes:\n• Spreadsheet File - Read/write CSV, Excel\n• Google Sheets - Spreadsheet integration\n• Database - SQL queries\n• XML - XML data processing\n• JSON - JSON manipulation\n\nCommunication Nodes:\n• Email - Send/receive emails\n• Slack - Team messaging\n• Telegram - Bot messages\n• Discord - Community notifications\n\nUtility Nodes:\n• Set - Assign variables\n• Function - Custom code\n• Date & Time - Time operations\n• Aggregate - Batch processing",
+              "title": "<strong>Common Nodes Quick Reference</strong>"
             }
           }
         ]

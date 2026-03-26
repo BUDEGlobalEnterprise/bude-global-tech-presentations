@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is Gitea?",
             "box": {
-              "content": "<span class=\"highlight\">Lightweight, self-hosted Git service</span> written in Go",
               "list": [
                 {
                   "emoji": "🔓",
@@ -128,7 +127,8 @@
                   "emoji": "🎨",
                   "text": "<strong>GitHub-like UI</strong> - Familiar interface"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Lightweight, self-hosted Git service</span> written in Go"
             },
             "note": {
               "text": "<strong>First release:</strong> 2016<br><strong>Written in:</strong> Go<br><strong>Community:</strong> 500+ contributors"
@@ -250,8 +250,8 @@
             "emoji": "🐳",
             "title": "Docker Installation",
             "box": {
-              "content": "<strong>Quick start with Docker</strong>",
-              "code": "# Create volume for data\ndocker volume create gitea-data\n\n# Run Gitea container\ndocker run -d \\\n  --name gitea \\\n  -p 3000:3000 \\\n  -p 222:22 \\\n  -v gitea-data:/data \\\n  -v /etc/timezone:/etc/timezone:ro \\\n  -v /etc/localtime:/etc/localtime:ro \\\n  gitea/gitea:latest\n\n# Access at http://localhost:3000"
+              "code": "# Create volume for data\ndocker volume create gitea-data\n\n# Run Gitea container\ndocker run -d \\\n  --name gitea \\\n  -p 3000:3000 \\\n  -p 222:22 \\\n  -v gitea-data:/data \\\n  -v /etc/timezone:/etc/timezone:ro \\\n  -v /etc/localtime:/etc/localtime:ro \\\n  gitea/gitea:latest\n\n# Access at http://localhost:3000",
+              "title": "<strong>Quick start with Docker</strong>"
             }
           },
           {
@@ -259,8 +259,8 @@
             "emoji": "⚡",
             "title": "Binary Installation",
             "box": {
-              "content": "<strong>Direct binary execution</strong>",
-              "code": "# Download latest binary\nwget -O gitea https://dl.gitea.com/gitea/1.20.0/gitea-1.20.0-linux-amd64\nchmod +x gitea\n\n# Create user and directories\nsudo useradd \\\n  --system \\\n  --shell /bin/bash \\\n  --comment 'Gitea' \\\n  --create-home \\\n  --home-dir /home/gitea \\\n  gitea\n\n# Run Gitea\n./gitea web"
+              "code": "# Download latest binary\nwget -O gitea https://dl.gitea.com/gitea/1.20.0/gitea-1.20.0-linux-amd64\nchmod +x gitea\n\n# Create user and directories\nsudo useradd \\\n  --system \\\n  --shell /bin/bash \\\n  --comment 'Gitea' \\\n  --create-home \\\n  --home-dir /home/gitea \\\n  gitea\n\n# Run Gitea\n./gitea web",
+              "title": "<strong>Direct binary execution</strong>"
             }
           }
         ]
@@ -278,8 +278,8 @@
             "emoji": "⚙️",
             "title": "app.ini Configuration",
             "box": {
-              "content": "<strong>Main configuration file</strong>",
-              "code": "[server]\nDOMAIN = gitea.example.com\nROOT_URL = https://gitea.example.com/\nHTTP_PORT = 3000\nSSH_DOMAIN = gitea.example.com\nSSH_PORT = 22\n\n[database]\nDB_TYPE = sqlite3\nPATH = /data/gitea/gitea.db\n\n[repository]\nROOT = /data/git/repositories\n\n[session]\nPROVIDER = file\n\n[log]\nMODE = console\nLEVEL = Info"
+              "code": "[server]\nDOMAIN = gitea.example.com\nROOT_URL = https://gitea.example.com/\nHTTP_PORT = 3000\nSSH_DOMAIN = gitea.example.com\nSSH_PORT = 22\n\n[database]\nDB_TYPE = sqlite3\nPATH = /data/gitea/gitea.db\n\n[repository]\nROOT = /data/git/repositories\n\n[session]\nPROVIDER = file\n\n[log]\nMODE = console\nLEVEL = Info",
+              "title": "<strong>Main configuration file</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Configuration can be done via file, environment variables, or command line"
@@ -290,8 +290,8 @@
             "emoji": "🌐",
             "title": "Reverse Proxy Setup",
             "box": {
-              "content": "<strong>Nginx configuration example</strong>",
-              "code": "server {\n    listen 80;\n    server_name gitea.example.com;\n\n    location / {\n        proxy_pass http://localhost:3000;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}\n\n# Caddyfile (even simpler)\ngitea.example.com {\n    reverse_proxy localhost:3000\n}"
+              "code": "server {\n    listen 80;\n    server_name gitea.example.com;\n\n    location / {\n        proxy_pass http://localhost:3000;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}\n\n# Caddyfile (even simpler)\ngitea.example.com {\n    reverse_proxy localhost:3000\n}",
+              "title": "<strong>Nginx configuration example</strong>"
             }
           }
         ]
@@ -334,7 +334,6 @@
             "emoji": "🏢",
             "title": "Organizations & Teams",
             "box": {
-              "content": "<strong>Structured team management</strong>",
               "list": [
                 {
                   "emoji": "🏢",
@@ -348,7 +347,8 @@
                   "emoji": "🔒",
                   "text": "<strong>Fine-grained Access</strong> - Per-team repository permissions"
                 }
-              ]
+              ],
+              "title": "<strong>Structured team management</strong>"
             }
           }
         ]
@@ -399,8 +399,8 @@
             "emoji": "🔑",
             "title": "SSH & HTTPS Authentication",
             "box": {
-              "content": "<strong>Repository access methods</strong>",
-              "code": "# SSH Access (recommended)\ngit clone git@gitea.example.com:username/repo.git\n\n# HTTPS Access\ngit clone https://gitea.example.com/username/repo.git\n\n# With personal access token\ngit clone https://username:token@gitea.example.com/username/repo.git"
+              "code": "# SSH Access (recommended)\ngit clone git@gitea.example.com:username/repo.git\n\n# HTTPS Access\ngit clone https://gitea.example.com/username/repo.git\n\n# With personal access token\ngit clone https://username:token@gitea.example.com/username/repo.git",
+              "title": "<strong>Repository access methods</strong>"
             }
           }
         ]
@@ -490,8 +490,8 @@
             "emoji": "🚀",
             "title": "Gitea Actions",
             "box": {
-              "content": "<strong>Built-in CI/CD system</strong>",
-              "code": "# .gitea/workflows/ci.yml\nname: CI Pipeline\non: [push, pull_request]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v3\n    - name: Setup Node.js\n      uses: actions/setup-node@v3\n      with:\n        node-version: '18'\n    - name: Install dependencies\n      run: npm install\n    - name: Run tests\n      run: npm test\n    - name: Build project\n      run: npm run build"
+              "code": "# .gitea/workflows/ci.yml\nname: CI Pipeline\non: [push, pull_request]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v3\n    - name: Setup Node.js\n      uses: actions/setup-node@v3\n      with:\n        node-version: '18'\n    - name: Install dependencies\n      run: npm install\n    - name: Run tests\n      run: npm test\n    - name: Build project\n      run: npm run build",
+              "title": "<strong>Built-in CI/CD system</strong>"
             },
             "note": {
               "text": "<span class=\"emoji\">💡</span> Compatible with GitHub Actions syntax and marketplace"
@@ -527,8 +527,8 @@
             "emoji": "✈️",
             "title": "Gitea + Drone CI Example",
             "box": {
-              "content": "<strong>Native CI/CD pipeline</strong>",
-              "code": "# .drone.yml\nkind: pipeline\nname: default\n\nsteps:\n- name: build\n  image: mcr.microsoft.com/dotnet/sdk:8.0\n  commands:\n  - dotnet restore\n  - dotnet build\n  - dotnet test\n\n- name: publish\n  image: plugins/docker\n  settings:\n    repo: myregistry/app\n    tags: latest\n    username:\n      from_secret: docker_username\n    password:\n      from_secret: docker_password"
+              "code": "# .drone.yml\nkind: pipeline\nname: default\n\nsteps:\n- name: build\n  image: mcr.microsoft.com/dotnet/sdk:8.0\n  commands:\n  - dotnet restore\n  - dotnet build\n  - dotnet test\n\n- name: publish\n  image: plugins/docker\n  settings:\n    repo: myregistry/app\n    tags: latest\n    username:\n      from_secret: docker_username\n    password:\n      from_secret: docker_password",
+              "title": "<strong>Native CI/CD pipeline</strong>"
             }
           }
         ]
@@ -546,8 +546,8 @@
             "emoji": "🌐",
             "title": "REST API",
             "box": {
-              "content": "<strong>Complete API for automation</strong>",
-              "code": "# Get repository issues\nGET /api/v1/repos/{owner}/{repo}/issues\n\n# Create new issue\nPOST /api/v1/repos/{owner}/{repo}/issues\n{\n  \"title\": \"Bug report\",\n  \"body\": \"Description of the issue\"\n}\n\n# List user repositories\nGET /api/v1/user/repos\n\n# Create personal access token\nPOST /api/v1/users/{username}/tokens\n{\n  \"name\": \"my-token\"\n}\n\n# Using with curl\ncurl -H \"Authorization: token {token}\" \\\n  https://gitea.example.com/api/v1/user/repos"
+              "code": "# Get repository issues\nGET /api/v1/repos/{owner}/{repo}/issues\n\n# Create new issue\nPOST /api/v1/repos/{owner}/{repo}/issues\n{\n  \"title\": \"Bug report\",\n  \"body\": \"Description of the issue\"\n}\n\n# List user repositories\nGET /api/v1/user/repos\n\n# Create personal access token\nPOST /api/v1/users/{username}/tokens\n{\n  \"name\": \"my-token\"\n}\n\n# Using with curl\ncurl -H \"Authorization: token {token}\" \\\n  https://gitea.example.com/api/v1/user/repos",
+              "title": "<strong>Complete API for automation</strong>"
             }
           },
           {
@@ -555,7 +555,6 @@
             "emoji": "🔗",
             "title": "Webhooks",
             "box": {
-              "content": "<strong>Event-driven integrations</strong>",
               "list": [
                 {
                   "emoji": "📝",
@@ -573,7 +572,8 @@
                   "emoji": "🏷️",
                   "text": "<strong>Release Events</strong> - New versions"
                 }
-              ]
+              ],
+              "title": "<strong>Event-driven integrations</strong>"
             }
           }
         ]
@@ -620,8 +620,8 @@
             "emoji": "💾",
             "title": "Backup & Restore",
             "box": {
-              "content": "<strong>Data protection strategy</strong>",
-              "code": "# Create backup\ngitea dump -c /etc/gitea/app.ini\n\n# Output: gitea-dump-1640995200.zip\n\n# Restore from backup\nunzip gitea-dump-1640995200.zip\ncd gitea-dump-1640995200\ngitea restore -c /etc/gitea/app.ini\n\n# Automated backup script\n#!/bin/bash\ngitea dump -c /etc/gitea/app.ini -f /backups/gitea-$(date +%Y%m%d).zip"
+              "code": "# Create backup\ngitea dump -c /etc/gitea/app.ini\n\n# Output: gitea-dump-1640995200.zip\n\n# Restore from backup\nunzip gitea-dump-1640995200.zip\ncd gitea-dump-1640995200\ngitea restore -c /etc/gitea/app.ini\n\n# Automated backup script\n#!/bin/bash\ngitea dump -c /etc/gitea/app.ini -f /backups/gitea-$(date +%Y%m%d).zip",
+              "title": "<strong>Data protection strategy</strong>"
             }
           },
           {

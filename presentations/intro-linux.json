@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is Linux?",
             "box": {
-              "content": "<span class=\"highlight\">Open-source Unix-like operating system</span> kernel",
               "list": [
                 {
                   "emoji": "🐧",
@@ -124,7 +123,8 @@
                   "emoji": "💪",
                   "text": "<strong>Stability</strong> - Known for reliability and security"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Open-source Unix-like operating system</span> kernel"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Linux powers everything from tiny IoT devices to the International Space Station!"
@@ -332,8 +332,8 @@
             "emoji": "🔄",
             "title": "Creating Bootable USB",
             "box": {
-              "content": "<strong>Prepare installation media</strong>",
-              "code": "# Using dd command (Linux/macOS)\nsudo dd if=ubuntu.iso of=/dev/sdX bs=4M status=progress\n\n# Using Rufus (Windows)\n# 1. Download Rufus and ISO\n# 2. Select USB drive and ISO file\n# 3. Click Start\n\n# Using Etcher (Cross-platform)\n# 1. Download and install Etcher\n# 2. Select ISO and USB drive\n# 3. Click Flash!"
+              "code": "# Using dd command (Linux/macOS)\nsudo dd if=ubuntu.iso of=/dev/sdX bs=4M status=progress\n\n# Using Rufus (Windows)\n# 1. Download Rufus and ISO\n# 2. Select USB drive and ISO file\n# 3. Click Start\n\n# Using Etcher (Cross-platform)\n# 1. Download and install Etcher\n# 2. Select ISO and USB drive\n# 3. Click Flash!",
+              "title": "<strong>Prepare installation media</strong>"
             }
           }
         ]
@@ -394,8 +394,8 @@
             "emoji": "📁",
             "title": "Essential Directories",
             "box": {
-              "content": "<strong>Filesystem Hierarchy Standard</strong>",
-              "code": "/                 # Root directory\n├── bin/         # Essential user binaries\n├── boot/        # Boot loader files\n├── dev/         # Device files\n├── etc/         # Configuration files\n├── home/        # User home directories\n├── lib/         # Essential libraries\n├── media/       # Removable media mount points\n├── mnt/         # Temporary mount points\n├── opt/         # Optional software packages\n├── proc/        # Process information\n├── root/        # Root user's home\n├── sbin/        # System administration binaries\n├── tmp/         # Temporary files\n├── usr/         # User programs and data\n└── var/         # Variable data (logs, spool, etc.)"
+              "code": "/                 # Root directory\n├── bin/         # Essential user binaries\n├── boot/        # Boot loader files\n├── dev/         # Device files\n├── etc/         # Configuration files\n├── home/        # User home directories\n├── lib/         # Essential libraries\n├── media/       # Removable media mount points\n├── mnt/         # Temporary mount points\n├── opt/         # Optional software packages\n├── proc/        # Process information\n├── root/        # Root user's home\n├── sbin/        # System administration binaries\n├── tmp/         # Temporary files\n├── usr/         # User programs and data\n└── var/         # Variable data (logs, spool, etc.)",
+              "title": "<strong>Filesystem Hierarchy Standard</strong>"
             }
           }
         ]
@@ -413,8 +413,8 @@
             "emoji": "💻",
             "title": "Navigation & File Operations",
             "box": {
-              "content": "<strong>Fundamental commands</strong>",
-              "code": "# Navigation\npwd                     # Print working directory\nls                      # List files\nls -la                  # List all files with details\ncd /path                # Change directory\ncd ~                    # Go to home directory\ncd ..                   # Go up one level\n\n# File operations\ncat file.txt            # Display file content\nless file.txt           # View file page by page\ncp file1 file2          # Copy file\nmv file1 file2          # Move/rename file\nrm file.txt             # Remove file\nrm -r directory/        # Remove directory recursively\nmkdir newdir            # Create directory\nrmdir emptydir          # Remove empty directory\n\n# File viewing\nhead file.txt           # Show first 10 lines\ntail file.txt           # Show last 10 lines\ntail -f log.txt         # Follow log file updates"
+              "code": "# Navigation\npwd                     # Print working directory\nls                      # List files\nls -la                  # List all files with details\ncd /path                # Change directory\ncd ~                    # Go to home directory\ncd ..                   # Go up one level\n\n# File operations\ncat file.txt            # Display file content\nless file.txt           # View file page by page\ncp file1 file2          # Copy file\nmv file1 file2          # Move/rename file\nrm file.txt             # Remove file\nrm -r directory/        # Remove directory recursively\nmkdir newdir            # Create directory\nrmdir emptydir          # Remove empty directory\n\n# File viewing\nhead file.txt           # Show first 10 lines\ntail file.txt           # Show last 10 lines\ntail -f log.txt         # Follow log file updates",
+              "title": "<strong>Fundamental commands</strong>"
             }
           },
           {
@@ -422,8 +422,8 @@
             "emoji": "🔍",
             "title": "Search & Information",
             "box": {
-              "content": "<strong>Finding and examining files</strong>",
-              "code": "# Search commands\nfind /home -name \"*.txt\"          # Find files by name\ngrep \"pattern\" file.txt           # Search text in file\ngrep -r \"pattern\" /path           # Recursive search\nlocate filename                   # Fast file search\nwhich command                    # Show command path\n\n# System information\nuname -a                          # System information\nwhoami                           # Current user\nhostname                         # System hostname\ndf -h                            # Disk space usage\ndu -sh directory/                # Directory size\nfree -h                          # Memory usage\n\n# Help system\nman command                      # Manual pages\ncommand --help                   # Quick help\ninfo command                     # Detailed info"
+              "code": "# Search commands\nfind /home -name \"*.txt\"          # Find files by name\ngrep \"pattern\" file.txt           # Search text in file\ngrep -r \"pattern\" /path           # Recursive search\nlocate filename                   # Fast file search\nwhich command                    # Show command path\n\n# System information\nuname -a                          # System information\nwhoami                           # Current user\nhostname                         # System hostname\ndf -h                            # Disk space usage\ndu -sh directory/                # Directory size\nfree -h                          # Memory usage\n\n# Help system\nman command                      # Manual pages\ncommand --help                   # Quick help\ninfo command                     # Detailed info",
+              "title": "<strong>Finding and examining files</strong>"
             }
           }
         ]
@@ -441,8 +441,8 @@
             "emoji": "👤",
             "title": "User & Group Management",
             "box": {
-              "content": "<strong>Managing system users</strong>",
-              "code": "# User management\nwhoami                           # Current user\nwho                              # Logged in users\nsudo su -                        # Switch to root\nadduser john                     # Add new user\nusermod -aG sudo john           # Add user to sudo group\ndeluser john                     # Delete user\npasswd john                      # Change user password\n\n# Group management\ngroups                           # Current user's groups\naddgroup developers             # Create new group\nusermod -aG developers john     # Add user to group\ngroupdel developers              # Delete group"
+              "code": "# User management\nwhoami                           # Current user\nwho                              # Logged in users\nsudo su -                        # Switch to root\nadduser john                     # Add new user\nusermod -aG sudo john           # Add user to sudo group\ndeluser john                     # Delete user\npasswd john                      # Change user password\n\n# Group management\ngroups                           # Current user's groups\naddgroup developers             # Create new group\nusermod -aG developers john     # Add user to group\ngroupdel developers              # Delete group",
+              "title": "<strong>Managing system users</strong>"
             }
           },
           {
@@ -450,8 +450,8 @@
             "emoji": "🔒",
             "title": "File Permissions",
             "box": {
-              "content": "<strong>Understanding Linux permissions</strong>",
-              "code": "# View permissions\nls -l file.txt\n# Output: -rwxr-xr-- 1 user group 1234 Jan 1 12:00 file.txt\n#          │└┬┘└┬┘└┬┘\n#          │ │  │  │ Others: r--\n#          │ │  │  Group: r-x\n#          │ │  Owner: rwx\n#          │ Directory: d, File: -, Link: l\n\n# Permission types\nr = read (4)    w = write (2)    x = execute (1)\n\n# Change permissions\nchmod 755 script.sh              # rwxr-xr-x\nchmod +x script.sh               # Add execute permission\nchmod go-w file.txt              # Remove write from group & others\n\n# Change ownership\nchown user:group file.txt        # Change owner and group\nchown user file.txt              # Change owner only\nchgrp group file.txt             # Change group only"
+              "code": "# View permissions\nls -l file.txt\n# Output: -rwxr-xr-- 1 user group 1234 Jan 1 12:00 file.txt\n#          │└┬┘└┬┘└┬┘\n#          │ │  │  │ Others: r--\n#          │ │  │  Group: r-x\n#          │ │  Owner: rwx\n#          │ Directory: d, File: -, Link: l\n\n# Permission types\nr = read (4)    w = write (2)    x = execute (1)\n\n# Change permissions\nchmod 755 script.sh              # rwxr-xr-x\nchmod +x script.sh               # Add execute permission\nchmod go-w file.txt              # Remove write from group & others\n\n# Change ownership\nchown user:group file.txt        # Change owner and group\nchown user file.txt              # Change owner only\nchgrp group file.txt             # Change group only",
+              "title": "<strong>Understanding Linux permissions</strong>"
             }
           }
         ]
@@ -498,8 +498,8 @@
             "emoji": "⚡",
             "title": "APT Commands (Debian/Ubuntu)",
             "box": {
-              "content": "<strong>Advanced Package Tool</strong>",
-              "code": "# Update package lists\nsudo apt update\n\n# Upgrade installed packages\nsudo apt upgrade\n\n# Install new package\nsudo apt install package-name\n\n# Remove package\nsudo apt remove package-name\n\n# Remove package with configuration\nsudo apt purge package-name\n\n# Search for packages\napt search \"keyword\"\n\n# Show package information\napt show package-name\n\n# Clean up\nsudo apt autoremove\nsudo apt autoclean"
+              "code": "# Update package lists\nsudo apt update\n\n# Upgrade installed packages\nsudo apt upgrade\n\n# Install new package\nsudo apt install package-name\n\n# Remove package\nsudo apt remove package-name\n\n# Remove package with configuration\nsudo apt purge package-name\n\n# Search for packages\napt search \"keyword\"\n\n# Show package information\napt show package-name\n\n# Clean up\nsudo apt autoremove\nsudo apt autoclean",
+              "title": "<strong>Advanced Package Tool</strong>"
             }
           }
         ]
@@ -517,8 +517,8 @@
             "emoji": "⚙️",
             "title": "Process Commands",
             "box": {
-              "content": "<strong>Monitoring and controlling processes</strong>",
-              "code": "# View processes\nps aux                       # All processes\nps aux | grep nginx          # Filter processes\ntop                          # Interactive process viewer\nhtop                         # Enhanced top (install first)\n\n# Process management\nkill 1234                    # Terminate process by PID\nkill -9 1234                 # Force kill process\nkillall process-name         # Kill all processes by name\npkill pattern                # Kill processes by pattern\n\n# Background and foreground\ncommand &                    # Run command in background\njobs                         # List background jobs\nfg %1                        # Bring job 1 to foreground\nbg %1                        # Continue job in background\n\n# System monitoring\nuptime                       # System uptime and load\nfree -h                      # Memory usage\ndf -h                        # Disk space\niostat                      # I/O statistics"
+              "code": "# View processes\nps aux                       # All processes\nps aux | grep nginx          # Filter processes\ntop                          # Interactive process viewer\nhtop                         # Enhanced top (install first)\n\n# Process management\nkill 1234                    # Terminate process by PID\nkill -9 1234                 # Force kill process\nkillall process-name         # Kill all processes by name\npkill pattern                # Kill processes by pattern\n\n# Background and foreground\ncommand &                    # Run command in background\njobs                         # List background jobs\nfg %1                        # Bring job 1 to foreground\nbg %1                        # Continue job in background\n\n# System monitoring\nuptime                       # System uptime and load\nfree -h                      # Memory usage\ndf -h                        # Disk space\niostat                      # I/O statistics",
+              "title": "<strong>Monitoring and controlling processes</strong>"
             }
           }
         ]
@@ -536,8 +536,8 @@
             "emoji": "🌐",
             "title": "Network Commands",
             "box": {
-              "content": "<strong>Essential networking tools</strong>",
-              "code": "# Network configuration\nip addr show                 # Show IP addresses\nip route show                # Show routing table\nifconfig                    # Legacy interface config\n\n# Connectivity testing\nping google.com              # Test connectivity\ntraceroute google.com        # Trace network path\nnetstat -tulpn               # Show listening ports\nss -tulpn                    # Modern socket statistics\n\n# DNS and hosts\nnslookup google.com          # DNS lookup\ndig google.com               # Detailed DNS lookup\ncat /etc/hosts               # Local hostname resolution\n\n# Network services\nsystemctl status networking  # Network service status\nsystemctl restart networking # Restart network service"
+              "code": "# Network configuration\nip addr show                 # Show IP addresses\nip route show                # Show routing table\nifconfig                    # Legacy interface config\n\n# Connectivity testing\nping google.com              # Test connectivity\ntraceroute google.com        # Trace network path\nnetstat -tulpn               # Show listening ports\nss -tulpn                    # Modern socket statistics\n\n# DNS and hosts\nnslookup google.com          # DNS lookup\ndig google.com               # Detailed DNS lookup\ncat /etc/hosts               # Local hostname resolution\n\n# Network services\nsystemctl status networking  # Network service status\nsystemctl restart networking # Restart network service",
+              "title": "<strong>Essential networking tools</strong>"
             }
           },
           {
@@ -545,8 +545,8 @@
             "emoji": "🔗",
             "title": "SSH & Remote Access",
             "box": {
-              "content": "<strong>Secure remote connections</strong>",
-              "code": "# SSH connection\nssh username@hostname        # Basic SSH connection\nssh -p 2222 user@host        # Custom port\nssh -i key.pem user@host     # Use specific key file\n\n# SSH key generation\nssh-keygen -t rsa -b 4096    # Generate SSH key pair\nssh-copy-id user@host        # Copy public key to server\n\n# File transfer with SCP\nscp file.txt user@host:/path # Copy file to remote host\nscp user@host:/path/file.txt . # Copy file from remote host\n\n# File transfer with RSYNC\nrsync -avz /local/path/ user@host:/remote/path/ # Sync directories"
+              "code": "# SSH connection\nssh username@hostname        # Basic SSH connection\nssh -p 2222 user@host        # Custom port\nssh -i key.pem user@host     # Use specific key file\n\n# SSH key generation\nssh-keygen -t rsa -b 4096    # Generate SSH key pair\nssh-copy-id user@host        # Copy public key to server\n\n# File transfer with SCP\nscp file.txt user@host:/path # Copy file to remote host\nscp user@host:/path/file.txt . # Copy file from remote host\n\n# File transfer with RSYNC\nrsync -avz /local/path/ user@host:/remote/path/ # Sync directories",
+              "title": "<strong>Secure remote connections</strong>"
             }
           }
         ]
@@ -593,8 +593,8 @@
             "emoji": "🔧",
             "title": "Basic Vim Usage",
             "box": {
-              "content": "<strong>Essential Vim commands</strong>",
-              "code": "# Starting Vim\nvim filename.txt            # Open file in Vim\nvim                          # Start empty Vim\n\n# Modes\nESC                         # Normal mode (commands)\ni                           # Insert mode (typing)\n:                           # Command mode\n\n# Basic commands\n:w                          # Save file\n:q                          # Quit\n:wq                         # Save and quit\n:q!                         # Quit without saving\n\n# Navigation\nh j k l                     # Left, Down, Up, Right\n0                           # Beginning of line\n$                           # End of line\nG                           # End of file\ngg                          # Beginning of file\n\n# Editing\ndd                          # Delete line\nyy                          # Yank (copy) line\np                           # Paste\nu                           # Undo\nCtrl+r                      # Redo"
+              "code": "# Starting Vim\nvim filename.txt            # Open file in Vim\nvim                          # Start empty Vim\n\n# Modes\nESC                         # Normal mode (commands)\ni                           # Insert mode (typing)\n:                           # Command mode\n\n# Basic commands\n:w                          # Save file\n:q                          # Quit\n:wq                         # Save and quit\n:q!                         # Quit without saving\n\n# Navigation\nh j k l                     # Left, Down, Up, Right\n0                           # Beginning of line\n$                           # End of line\nG                           # End of file\ngg                          # Beginning of file\n\n# Editing\ndd                          # Delete line\nyy                          # Yank (copy) line\np                           # Paste\nu                           # Undo\nCtrl+r                      # Redo",
+              "title": "<strong>Essential Vim commands</strong>"
             }
           }
         ]
@@ -612,8 +612,8 @@
             "emoji": "🐚",
             "title": "Basic Bash Script",
             "box": {
-              "content": "<strong>Simple script example</strong>",
-              "code": "#!/bin/bash\n# This is a comment\n\n# Variables\nNAME=\"John\"\nAGE=30\n\n# Print variables\necho \"Hello, $NAME!\"\necho \"You are $AGE years old.\"\n\n# Command substitution\nCURRENT_DIR=$(pwd)\necho \"Current directory: $CURRENT_DIR\"\n\n# Conditional statements\nif [ $AGE -gt 18 ]; then\n    echo \"You are an adult.\"\nelse\n    echo \"You are a minor.\"\nfi\n\n# Loops\nfor i in {1..5}; do\n    echo \"Number: $i\"\ndone\n\n# Functions\ngreet() {\n    echo \"Hello, $1!\"\n}\n\ngreet \"Alice\""
+              "code": "#!/bin/bash\n# This is a comment\n\n# Variables\nNAME=\"John\"\nAGE=30\n\n# Print variables\necho \"Hello, $NAME!\"\necho \"You are $AGE years old.\"\n\n# Command substitution\nCURRENT_DIR=$(pwd)\necho \"Current directory: $CURRENT_DIR\"\n\n# Conditional statements\nif [ $AGE -gt 18 ]; then\n    echo \"You are an adult.\"\nelse\n    echo \"You are a minor.\"\nfi\n\n# Loops\nfor i in {1..5}; do\n    echo \"Number: $i\"\ndone\n\n# Functions\ngreet() {\n    echo \"Hello, $1!\"\n}\n\ngreet \"Alice\"",
+              "title": "<strong>Simple script example</strong>"
             }
           }
         ]
@@ -755,8 +755,8 @@
             "emoji": "📋",
             "title": "Linux Command Cheat Sheet",
             "box": {
-              "content": "<strong>Essential commands quick reference</strong>",
-              "code": "# File Operations\nls, cd, pwd, cp, mv, rm, mkdir, rmdir\ncat, less, head, tail, grep, find\n\n# System Information\nuname, whoami, hostname, df, du, free\ntop, ps, kill, systemctl, journalctl\n\n# Networking\nip, ping, traceroute, netstat, ss\nssh, scp, wget, curl, ifconfig\n\n# Package Management\napt update, apt install, apt remove\ndnf install, yum install, pacman -S\n\n# Permissions\nchmod, chown, chgrp, ls -l, sudo\n\n# Text Processing\ngrep, sed, awk, cut, sort, uniq\n\n# Archives\ntar -czf, tar -xzf, zip, unzip\n\n# Users & Groups\nadduser, deluser, passwd, groups, who"
+              "code": "# File Operations\nls, cd, pwd, cp, mv, rm, mkdir, rmdir\ncat, less, head, tail, grep, find\n\n# System Information\nuname, whoami, hostname, df, du, free\ntop, ps, kill, systemctl, journalctl\n\n# Networking\nip, ping, traceroute, netstat, ss\nssh, scp, wget, curl, ifconfig\n\n# Package Management\napt update, apt install, apt remove\ndnf install, yum install, pacman -S\n\n# Permissions\nchmod, chown, chgrp, ls -l, sudo\n\n# Text Processing\ngrep, sed, awk, cut, sort, uniq\n\n# Archives\ntar -czf, tar -xzf, zip, unzip\n\n# Users & Groups\nadduser, deluser, passwd, groups, who",
+              "title": "<strong>Essential commands quick reference</strong>"
             }
           }
         ]

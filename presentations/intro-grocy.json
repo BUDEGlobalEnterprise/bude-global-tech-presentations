@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is Grocy?",
             "box": {
-              "content": "<span class=\"highlight\">Open-source ERP system</span> for households and small businesses",
               "list": [
                 {
                   "emoji": "🔓",
@@ -124,7 +123,8 @@
                   "emoji": "🌐",
                   "text": "<strong>Community</strong> - Active development and plugins"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Open-source ERP system</span> for households and small businesses"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Grocy stands for 'GROcery CYcler' but evolved into full ERP!"
@@ -303,8 +303,8 @@
             "emoji": "⚡",
             "title": "Docker Quick Setup",
             "box": {
-              "content": "<strong>Fastest deployment method</strong>",
-              "code": "# Using Docker Compose\nversion: \"3.8\"\nservices:\n  grocy:\n    image: lscr.io/linuxserver/grocy:latest\n    container_name: grocy\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Europe/London\n    volumes:\n      - ./config:/config\n    ports:\n      - 9283:80\n    restart: unless-stopped\n\n# Run with:\ndocker-compose up -d\n\n# Access at: http://localhost:9283"
+              "code": "# Using Docker Compose\nversion: \"3.8\"\nservices:\n  grocy:\n    image: lscr.io/linuxserver/grocy:latest\n    container_name: grocy\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Europe/London\n    volumes:\n      - ./config:/config\n    ports:\n      - 9283:80\n    restart: unless-stopped\n\n# Run with:\ndocker-compose up -d\n\n# Access at: http://localhost:9283",
+              "title": "<strong>Fastest deployment method</strong>"
             }
           }
         ]
@@ -441,8 +441,8 @@
             "emoji": "🔄",
             "title": "Stock Operations",
             "box": {
-              "content": "<strong>Common inventory actions</strong>",
-              "code": "Stock Operations:\n- Purchase: Add new stock\n- Consume: Use/remove items\n- Transfer: Move between locations\n- Inventory: Stock count adjustment\n- Open: Start using a product\n- Spoiled: Mark as wasted\n\nAuto Calculations:\n- Stock value\n- Average shelf life\n- Next expiry date\n- Due products (soon to expire)"
+              "code": "Stock Operations:\n- Purchase: Add new stock\n- Consume: Use/remove items\n- Transfer: Move between locations\n- Inventory: Stock count adjustment\n- Open: Start using a product\n- Spoiled: Mark as wasted\n\nAuto Calculations:\n- Stock value\n- Average shelf life\n- Next expiry date\n- Due products (soon to expire)",
+              "title": "<strong>Common inventory actions</strong>"
             }
           }
         ]
@@ -751,8 +751,8 @@
             "emoji": "🐍",
             "title": "Python API Example",
             "box": {
-              "content": "<strong>Automated stock management</strong>",
-              "code": "import requests\n\nclass GrocyAPI:\n    def __init__(self, base_url, api_key):\n        self.base_url = base_url\n        self.headers = {\n            'GROCY-API-KEY': api_key,\n            'Accept': 'application/json'\n        }\n    \n    def get_stock(self):\n        response = requests.get(\n            f\"{self.base_url}/stock\",\n            headers=self.headers\n        )\n        return response.json()\n    \n    def add_product(self, product_id, amount):\n        data = {\n            \"amount\": amount,\n            \"transaction_type\": \"purchase\"\n        }\n        response = requests.post(\n            f\"{self.base_url}/stock/products/{product_id}/add\",\n            json=data,\n            headers=self.headers\n        )\n        return response.json()\n\n# Usage\ngrocy = GrocyAPI('http://localhost:9283/api', 'your-api-key')\nstock = grocy.get_stock()\nprint(f\"Current stock levels: {stock}\")"
+              "code": "import requests\n\nclass GrocyAPI:\n    def __init__(self, base_url, api_key):\n        self.base_url = base_url\n        self.headers = {\n            'GROCY-API-KEY': api_key,\n            'Accept': 'application/json'\n        }\n    \n    def get_stock(self):\n        response = requests.get(\n            f\"{self.base_url}/stock\",\n            headers=self.headers\n        )\n        return response.json()\n    \n    def add_product(self, product_id, amount):\n        data = {\n            \"amount\": amount,\n            \"transaction_type\": \"purchase\"\n        }\n        response = requests.post(\n            f\"{self.base_url}/stock/products/{product_id}/add\",\n            json=data,\n            headers=self.headers\n        )\n        return response.json()\n\n# Usage\ngrocy = GrocyAPI('http://localhost:9283/api', 'your-api-key')\nstock = grocy.get_stock()\nprint(f\"Current stock levels: {stock}\")",
+              "title": "<strong>Automated stock management</strong>"
             }
           }
         ]
@@ -932,8 +932,8 @@
             "emoji": "⚡",
             "title": "Nginx Reverse Proxy Example",
             "box": {
-              "content": "<strong>Secure proxy configuration</strong>",
-              "code": "server {\n    listen 80;\n    server_name grocy.yourdomain.com;\n    return 301 https://$server_name$request_uri;\n}\n\nserver {\n    listen 443 ssl http2;\n    server_name grocy.yourdomain.com;\n\n    ssl_certificate /path/to/cert.pem;\n    ssl_certificate_key /path/to/private.key;\n\n    location / {\n        proxy_pass http://localhost:9283;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n\n    # Basic authentication\n    auth_basic \"Grocy Access\";\n    auth_basic_user_file /etc/nginx/.htpasswd;\n}"
+              "code": "server {\n    listen 80;\n    server_name grocy.yourdomain.com;\n    return 301 https://$server_name$request_uri;\n}\n\nserver {\n    listen 443 ssl http2;\n    server_name grocy.yourdomain.com;\n\n    ssl_certificate /path/to/cert.pem;\n    ssl_certificate_key /path/to/private.key;\n\n    location / {\n        proxy_pass http://localhost:9283;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n\n    # Basic authentication\n    auth_basic \"Grocy Access\";\n    auth_basic_user_file /etc/nginx/.htpasswd;\n}",
+              "title": "<strong>Secure proxy configuration</strong>"
             }
           }
         ]
@@ -1152,8 +1152,8 @@
             "emoji": "📋",
             "title": "Grocy Quick Reference",
             "box": {
-              "content": "<strong>Essential shortcuts and API endpoints</strong>",
-              "code": "# Keyboard Shortcuts\nq - Quick consume\ns - Search products\nn - Add new product\nb - Barcode scan\n\n# Common API Endpoints\nGET /api/stock - Current stock\nPOST /api/stock/products/{id}/add - Add stock\nPOST /api/stock/products/{id}/consume - Consume stock\nGET /api/objects/shopping_list - Shopping list\nPOST /api/objects/shopping_list - Add to shopping list\n\n# Docker Commands\ndocker-compose up -d - Start Grocy\ndocker-compose down - Stop Grocy\ndocker-compose logs -f - View logs\n\n# Backup Command\nsqlite3 /config/grocy.db \".backup backup.db\""
+              "code": "# Keyboard Shortcuts\nq - Quick consume\ns - Search products\nn - Add new product\nb - Barcode scan\n\n# Common API Endpoints\nGET /api/stock - Current stock\nPOST /api/stock/products/{id}/add - Add stock\nPOST /api/stock/products/{id}/consume - Consume stock\nGET /api/objects/shopping_list - Shopping list\nPOST /api/objects/shopping_list - Add to shopping list\n\n# Docker Commands\ndocker-compose up -d - Start Grocy\ndocker-compose down - Stop Grocy\ndocker-compose logs -f - View logs\n\n# Backup Command\nsqlite3 /config/grocy.db \".backup backup.db\"",
+              "title": "<strong>Essential shortcuts and API endpoints</strong>"
             }
           }
         ]

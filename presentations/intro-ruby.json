@@ -110,7 +110,6 @@
             "emoji": "💎",
             "title": "What is Ruby?",
             "box": {
-              "content": "<span class=\"highlight\">Dynamic, open-source programming language</span> focused on simplicity and productivity",
               "list": [
                 {
                   "emoji": "👨‍💻",
@@ -132,7 +131,8 @@
                   "emoji": "🌐",
                   "text": "<strong>Usage</strong> - Web development, scripting, automation"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Dynamic, open-source programming language</span> focused on simplicity and productivity"
             },
             "note": {
               "text": "<strong>MINASWAN:</strong> Matz is nice and so we are nice - Ruby community philosophy"
@@ -268,8 +268,8 @@
             "emoji": "⚡",
             "title": "Installing with rbenv",
             "box": {
-              "content": "<strong>Recommended installation method</strong>",
-              "code": "# Install rbenv and ruby-build on macOS\nbrew install rbenv ruby-build\n\n# Add to shell configuration\necho 'eval \"$(rbenv init -)\"' >> ~/.zshrc\n\n# Install latest Ruby\nrbenv install 3.2.2\nrbenv global 3.2.2\n\n# Verify installation\nruby -v\n# => ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-darwin22]\n\n# Install bundler\ngem install bundler"
+              "code": "# Install rbenv and ruby-build on macOS\nbrew install rbenv ruby-build\n\n# Add to shell configuration\necho 'eval \"$(rbenv init -)\"' >> ~/.zshrc\n\n# Install latest Ruby\nrbenv install 3.2.2\nrbenv global 3.2.2\n\n# Verify installation\nruby -v\n# => ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-darwin22]\n\n# Install bundler\ngem install bundler",
+              "title": "<strong>Recommended installation method</strong>"
             }
           }
         ]
@@ -287,8 +287,8 @@
             "emoji": "🔤",
             "title": "Variables and Data Types",
             "box": {
-              "content": "<strong>Basic Ruby syntax</strong>",
-              "code": "# Variables (dynamic typing)\nname = \"Alice\"\nage = 30\nprice = 19.99\nis_admin = true\n\n# Strings\nfirst_name = \"John\"\nlast_name = 'Doe'\nfull_name = \"#{first_name} #{last_name}\"\n\n# Numbers\ninteger = 42\nfloat = 3.14\nbig_number = 1_000_000\n\n# Booleans\ntrue_value = true\nfalse_value = false\nnil_value = nil\n\n# Output\nputs \"Hello, #{name}!\"\nprint \"This doesn't add newline\"\np variable # Debug output with inspection"
+              "code": "# Variables (dynamic typing)\nname = \"Alice\"\nage = 30\nprice = 19.99\nis_admin = true\n\n# Strings\nfirst_name = \"John\"\nlast_name = 'Doe'\nfull_name = \"#{first_name} #{last_name}\"\n\n# Numbers\ninteger = 42\nfloat = 3.14\nbig_number = 1_000_000\n\n# Booleans\ntrue_value = true\nfalse_value = false\nnil_value = nil\n\n# Output\nputs \"Hello, #{name}!\"\nprint \"This doesn't add newline\"\np variable # Debug output with inspection",
+              "title": "<strong>Basic Ruby syntax</strong>"
             }
           },
           {
@@ -296,8 +296,8 @@
             "emoji": "💬",
             "title": "Comments and Conventions",
             "box": {
-              "content": "<strong>Ruby coding conventions</strong>",
-              "code": "# Single line comment\n\n=begin\nMulti-line comment\nThis is less common in practice\n=end\n\n# Naming conventions\nvariable_name = \"snake_case\"     # variables and methods\nCONSTANT_NAME = \"uppercase\"      # constants\nClassName = \"CamelCase\"          # classes and modules\n\n# Method names should be descriptive\ndef calculate_total_price\n  # method body\nend\n\n# Use ? for predicate methods (return boolean)\ndef admin?\n  @role == 'admin'\nend\n\n# Use ! for dangerous methods (modify receiver)\ndef save!\n  save || raise \"Failed to save!\"\nend"
+              "code": "# Single line comment\n\n=begin\nMulti-line comment\nThis is less common in practice\n=end\n\n# Naming conventions\nvariable_name = \"snake_case\"     # variables and methods\nCONSTANT_NAME = \"uppercase\"      # constants\nClassName = \"CamelCase\"          # classes and modules\n\n# Method names should be descriptive\ndef calculate_total_price\n  # method body\nend\n\n# Use ? for predicate methods (return boolean)\ndef admin?\n  @role == 'admin'\nend\n\n# Use ! for dangerous methods (modify receiver)\ndef save!\n  save || raise \"Failed to save!\"\nend",
+              "title": "<strong>Ruby coding conventions</strong>"
             }
           }
         ]
@@ -315,8 +315,8 @@
             "emoji": "🔀",
             "title": "Conditional Statements",
             "box": {
-              "content": "<strong>Ruby conditionals</strong>",
-              "code": "# if/elsif/else\nage = 20\nif age >= 18\n  puts \"Adult\"\nelsif age >= 13\n  puts \"Teenager\"\nelse\n  puts \"Child\"\nend\n\n# unless (opposite of if)\nunless user.logged_in?\n  redirect_to login_path\nend\n\n# case/when (switch statement)\ngrade = 'B'\ncase grade\nwhen 'A'\n  puts \"Excellent!\"\nwhen 'B'\n  puts \"Good job!\"\nwhen 'C'\n  puts \"You passed\"\nelse\n  puts \"See me after class\"\nend\n\n# Ternary operator\nresult = score > 50 ? \"Pass\" : \"Fail\"\n\n# Modifier form (if/unless at end)\nputs \"Hello\" if user.active?"
+              "code": "# if/elsif/else\nage = 20\nif age >= 18\n  puts \"Adult\"\nelsif age >= 13\n  puts \"Teenager\"\nelse\n  puts \"Child\"\nend\n\n# unless (opposite of if)\nunless user.logged_in?\n  redirect_to login_path\nend\n\n# case/when (switch statement)\ngrade = 'B'\ncase grade\nwhen 'A'\n  puts \"Excellent!\"\nwhen 'B'\n  puts \"Good job!\"\nwhen 'C'\n  puts \"You passed\"\nelse\n  puts \"See me after class\"\nend\n\n# Ternary operator\nresult = score > 50 ? \"Pass\" : \"Fail\"\n\n# Modifier form (if/unless at end)\nputs \"Hello\" if user.active?",
+              "title": "<strong>Ruby conditionals</strong>"
             }
           },
           {
@@ -324,8 +324,8 @@
             "emoji": "🔄",
             "title": "Loops and Iteration",
             "box": {
-              "content": "<strong>Looping in Ruby</strong>",
-              "code": "# Times loop (execute specific number of times)\n5.times { |i| puts \"Iteration #{i}\" }\n\n# Each loop (most common)\n[1, 2, 3].each { |num| puts num * 2 }\n\n# While loop\ncounter = 0\nwhile counter < 5\n  puts counter\n  counter += 1\nend\n\n# Until loop\ncounter = 0\nuntil counter >= 5\n  puts counter\n  counter += 1\nend\n\n# For loop (less common in Ruby)\nfor i in 1..5\n  puts i\nend\n\n# Loop control\nbreak    # exit loop\nnext     # skip to next iteration\nredo     # restart current iteration\nretry    # restart entire loop (in rescue)"
+              "code": "# Times loop (execute specific number of times)\n5.times { |i| puts \"Iteration #{i}\" }\n\n# Each loop (most common)\n[1, 2, 3].each { |num| puts num * 2 }\n\n# While loop\ncounter = 0\nwhile counter < 5\n  puts counter\n  counter += 1\nend\n\n# Until loop\ncounter = 0\nuntil counter >= 5\n  puts counter\n  counter += 1\nend\n\n# For loop (less common in Ruby)\nfor i in 1..5\n  puts i\nend\n\n# Loop control\nbreak    # exit loop\nnext     # skip to next iteration\nredo     # restart current iteration\nretry    # restart entire loop (in rescue)",
+              "title": "<strong>Looping in Ruby</strong>"
             }
           }
         ]
@@ -343,8 +343,8 @@
             "emoji": "📞",
             "title": "Method Definitions",
             "box": {
-              "content": "<strong>Creating and using methods</strong>",
-              "code": "# Basic method definition\ndef greet(name)\n  \"Hello, #{name}!\"\nend\n\nputs greet(\"Alice\")  # => \"Hello, Alice!\"\n\n# Method with default parameters\ndef greet(name = \"World\")\n  \"Hello, #{name}!\"\nend\n\n# Method with keyword arguments\ndef create_user(name:, email:, age: 0)\n  { name: name, email: email, age: age }\nend\n\ncreate_user(name: \"Bob\", email: \"bob@example.com\")\n\n# Return values (explicit or implicit)\ndef add(a, b)\n  a + b  # implicit return\nend\n\ndef find_even(numbers)\n  numbers.find { |n| n.even? }  # returns found element or nil\nend\n\n# Splat operator for variable arguments\ndef sum(*numbers)\n  numbers.sum\nend\n\nsum(1, 2, 3, 4, 5)  # => 15"
+              "code": "# Basic method definition\ndef greet(name)\n  \"Hello, #{name}!\"\nend\n\nputs greet(\"Alice\")  # => \"Hello, Alice!\"\n\n# Method with default parameters\ndef greet(name = \"World\")\n  \"Hello, #{name}!\"\nend\n\n# Method with keyword arguments\ndef create_user(name:, email:, age: 0)\n  { name: name, email: email, age: age }\nend\n\ncreate_user(name: \"Bob\", email: \"bob@example.com\")\n\n# Return values (explicit or implicit)\ndef add(a, b)\n  a + b  # implicit return\nend\n\ndef find_even(numbers)\n  numbers.find { |n| n.even? }  # returns found element or nil\nend\n\n# Splat operator for variable arguments\ndef sum(*numbers)\n  numbers.sum\nend\n\nsum(1, 2, 3, 4, 5)  # => 15",
+              "title": "<strong>Creating and using methods</strong>"
             }
           },
           {
@@ -352,8 +352,8 @@
             "emoji": "🔲",
             "title": "Blocks, Procs & Lambdas",
             "box": {
-              "content": "<strong>Ruby's closure types</strong>",
-              "code": "# Blocks (most common)\n[1, 2, 3].each { |n| puts n }      # single line block\n[1, 2, 3].each do |n|              # multi-line block\n  puts n\n  puts n * 2\nend\n\n# Yield and block_given?\ndef with_logging\n  puts \"Starting...\"\n  yield if block_given?\n  puts \"Completed!\"\nend\n\nwith_logging { puts \"Processing...\" }\n\n# Procs (reusable blocks)\nsquare = Proc.new { |x| x * x }\n[1, 2, 3].map(&square)  # => [1, 4, 9]\n\n# Lambdas (like procs with argument checking)\ndouble = ->(x) { x * 2 }\n[1, 2, 3].map(&double)  # => [2, 4, 6]\n\n# Differences:\n# - Lambdas check argument count\n# - return in lambda returns from lambda\n# - return in proc returns from enclosing method"
+              "code": "# Blocks (most common)\n[1, 2, 3].each { |n| puts n }      # single line block\n[1, 2, 3].each do |n|              # multi-line block\n  puts n\n  puts n * 2\nend\n\n# Yield and block_given?\ndef with_logging\n  puts \"Starting...\"\n  yield if block_given?\n  puts \"Completed!\"\nend\n\nwith_logging { puts \"Processing...\" }\n\n# Procs (reusable blocks)\nsquare = Proc.new { |x| x * x }\n[1, 2, 3].map(&square)  # => [1, 4, 9]\n\n# Lambdas (like procs with argument checking)\ndouble = ->(x) { x * 2 }\n[1, 2, 3].map(&double)  # => [2, 4, 6]\n\n# Differences:\n# - Lambdas check argument count\n# - return in lambda returns from lambda\n# - return in proc returns from enclosing method",
+              "title": "<strong>Ruby's closure types</strong>"
             }
           }
         ]
@@ -371,8 +371,8 @@
             "emoji": "📋",
             "title": "Arrays and Hashes",
             "box": {
-              "content": "<strong>Core data structures</strong>",
-              "code": "# Arrays\nfruits = [\"apple\", \"banana\", \"orange\"]\nnumbers = [1, 2, 3, 4, 5]\n\n# Array operations\nfruits[0]           # => \"apple\"\nfruits << \"grape\"   # add element\nfruits.push(\"kiwi\") # add element\nfruits.pop()        # remove last element\nfruits.length       # => 4\nfruits.include?(\"apple\") # => true\n\n# Hashes (key-value pairs)\nperson = {\n  name: \"Alice\",\n  age: 30,\n  city: \"New York\"\n}\n\n# Hash operations\nperson[:name] = \"Bob\"\nperson[:email] = \"bob@example.com\"\nperson.keys     # => [:name, :age, :city, :email]\nperson.values   # => [\"Bob\", 30, \"New York\", \"bob@example.com\"]\n\n# Symbols vs Strings\n:string_object  # same object each time\n\"string_object\" # different object each time"
+              "code": "# Arrays\nfruits = [\"apple\", \"banana\", \"orange\"]\nnumbers = [1, 2, 3, 4, 5]\n\n# Array operations\nfruits[0]           # => \"apple\"\nfruits << \"grape\"   # add element\nfruits.push(\"kiwi\") # add element\nfruits.pop()        # remove last element\nfruits.length       # => 4\nfruits.include?(\"apple\") # => true\n\n# Hashes (key-value pairs)\nperson = {\n  name: \"Alice\",\n  age: 30,\n  city: \"New York\"\n}\n\n# Hash operations\nperson[:name] = \"Bob\"\nperson[:email] = \"bob@example.com\"\nperson.keys     # => [:name, :age, :city, :email]\nperson.values   # => [\"Bob\", 30, \"New York\", \"bob@example.com\"]\n\n# Symbols vs Strings\n:string_object  # same object each time\n\"string_object\" # different object each time",
+              "title": "<strong>Core data structures</strong>"
             }
           },
           {
@@ -380,8 +380,8 @@
             "emoji": "🔄",
             "title": "Enumerables and Iteration",
             "box": {
-              "content": "<strong>Powerful iteration methods</strong>",
-              "code": "# Common enumerable methods\nnumbers = [1, 2, 3, 4, 5]\n\n# Transformation\nnumbers.map { |n| n * 2 }        # => [2, 4, 6, 8, 10]\nnumbers.select { |n| n.even? }   # => [2, 4]\nnumbers.reject { |n| n.even? }   # => [1, 3, 5]\nnumbers.find { |n| n > 3 }       # => 4\n\n# Aggregation\nnumbers.reduce(:+)               # => 15\nnumbers.sum                      # => 15\nnumbers.max                      # => 5\nnumbers.min                      # => 1\n\n# Querying\nnumbers.any? { |n| n > 3 }      # => true\nnumbers.all? { |n| n > 0 }      # => true\nnumbers.include?(3)             # => true\n\n# Sorting and grouping\n[3, 1, 4, 2].sort              # => [1, 2, 3, 4]\n[1, 2, 3, 4].group_by(&:even?) # => {false=>[1, 3], true=>[2, 4]}"
+              "code": "# Common enumerable methods\nnumbers = [1, 2, 3, 4, 5]\n\n# Transformation\nnumbers.map { |n| n * 2 }        # => [2, 4, 6, 8, 10]\nnumbers.select { |n| n.even? }   # => [2, 4]\nnumbers.reject { |n| n.even? }   # => [1, 3, 5]\nnumbers.find { |n| n > 3 }       # => 4\n\n# Aggregation\nnumbers.reduce(:+)               # => 15\nnumbers.sum                      # => 15\nnumbers.max                      # => 5\nnumbers.min                      # => 1\n\n# Querying\nnumbers.any? { |n| n > 3 }      # => true\nnumbers.all? { |n| n > 0 }      # => true\nnumbers.include?(3)             # => true\n\n# Sorting and grouping\n[3, 1, 4, 2].sort              # => [1, 2, 3, 4]\n[1, 2, 3, 4].group_by(&:even?) # => {false=>[1, 3], true=>[2, 4]}",
+              "title": "<strong>Powerful iteration methods</strong>"
             }
           }
         ]
@@ -399,8 +399,8 @@
             "emoji": "🏗️",
             "title": "Classes and Objects",
             "box": {
-              "content": "<strong>Ruby is purely object-oriented</strong>",
-              "code": "# Class definition\nclass Person\n  # Constructor\n  def initialize(name, age)\n    @name = name\n    @age = age\n  end\n\n  # Instance methods\n  def introduce\n    \"Hi, I'm #{@name} and I'm #{@age} years old.\"\n  end\n\n  # Attribute accessors\n  attr_reader :name    # getter\n  attr_writer :age     # setter\n  attr_accessor :city  # both getter and setter\n\n  # Class method\n  def self.species\n    \"Homo sapiens\"\n  end\nend\n\n# Creating objects\nalice = Person.new(\"Alice\", 30)\nputs alice.introduce  # => \"Hi, I'm Alice and I'm 30 years old.\"\nputs Person.species   # => \"Homo sapiens\"\n\n# Everything is an object\n5.class              # => Integer\n\"hello\".class        # => String\n[1, 2, 3].class      # => Array\nnil.class            # => NilClass"
+              "code": "# Class definition\nclass Person\n  # Constructor\n  def initialize(name, age)\n    @name = name\n    @age = age\n  end\n\n  # Instance methods\n  def introduce\n    \"Hi, I'm #{@name} and I'm #{@age} years old.\"\n  end\n\n  # Attribute accessors\n  attr_reader :name    # getter\n  attr_writer :age     # setter\n  attr_accessor :city  # both getter and setter\n\n  # Class method\n  def self.species\n    \"Homo sapiens\"\n  end\nend\n\n# Creating objects\nalice = Person.new(\"Alice\", 30)\nputs alice.introduce  # => \"Hi, I'm Alice and I'm 30 years old.\"\nputs Person.species   # => \"Homo sapiens\"\n\n# Everything is an object\n5.class              # => Integer\n\"hello\".class        # => String\n[1, 2, 3].class      # => Array\nnil.class            # => NilClass",
+              "title": "<strong>Ruby is purely object-oriented</strong>"
             }
           },
           {
@@ -408,8 +408,8 @@
             "emoji": "🧬",
             "title": "Inheritance and Modules",
             "box": {
-              "content": "<strong>Code organization and reuse</strong>",
-              "code": "# Inheritance\nclass Employee < Person\n  def initialize(name, age, position)\n    super(name, age)  # call parent constructor\n    @position = position\n  end\n\n  def work\n    \"#{@name} is working as #{@position}\"\n  end\nend\n\n# Modules as mixins\nmodule Loggable\n  def log(message)\n    puts \"[LOG] #{Time.now}: #{message}\"\n  end\nend\n\nclass Service\n  include Loggable\n  \n  def perform\n    log(\"Service started\")\n    # do work\n    log(\"Service completed\")\n  end\nend\n\n# Duck typing (focus on behavior, not type)\ndef process_item(item)\n  if item.respond_to?(:process)\n    item.process\n  else\n    \"Cannot process this item\"\n  end\nend"
+              "code": "# Inheritance\nclass Employee < Person\n  def initialize(name, age, position)\n    super(name, age)  # call parent constructor\n    @position = position\n  end\n\n  def work\n    \"#{@name} is working as #{@position}\"\n  end\nend\n\n# Modules as mixins\nmodule Loggable\n  def log(message)\n    puts \"[LOG] #{Time.now}: #{message}\"\n  end\nend\n\nclass Service\n  include Loggable\n  \n  def perform\n    log(\"Service started\")\n    # do work\n    log(\"Service completed\")\n  end\nend\n\n# Duck typing (focus on behavior, not type)\ndef process_item(item)\n  if item.respond_to?(:process)\n    item.process\n  else\n    \"Cannot process this item\"\n  end\nend",
+              "title": "<strong>Code organization and reuse</strong>"
             }
           }
         ]
@@ -427,8 +427,8 @@
             "emoji": "🚨",
             "title": "Exception Handling",
             "box": {
-              "content": "<strong>Managing errors in Ruby</strong>",
-              "code": "# Basic exception handling\nbegin\n  # Code that might raise an exception\n  result = 10 / 0\nrescue ZeroDivisionError => e\n  puts \"Cannot divide by zero: #{e.message}\"\nrescue StandardError => e\n  puts \"An error occurred: #{e.message}\"\nelse\n  # Runs if no exception was raised\n  puts \"Success: #{result}\"\nensure\n  # Always runs, for cleanup\n  puts \"Execution completed\"\nend\n\n# Raising exceptions\ndef divide(a, b)\n  raise ArgumentError, \"Divisor cannot be zero\" if b.zero?\n  a / b\nend\n\n# Custom exception classes\nclass ValidationError < StandardError\n  def initialize(field)\n    super(\"Invalid value for field: #{field}\")\n  end\nend\n\n# Using custom exceptions\nbegin\n  raise ValidationError.new(\"email\")\nrescue ValidationError => e\n  puts \"Validation failed: #{e.message}\"\nend"
+              "code": "# Basic exception handling\nbegin\n  # Code that might raise an exception\n  result = 10 / 0\nrescue ZeroDivisionError => e\n  puts \"Cannot divide by zero: #{e.message}\"\nrescue StandardError => e\n  puts \"An error occurred: #{e.message}\"\nelse\n  # Runs if no exception was raised\n  puts \"Success: #{result}\"\nensure\n  # Always runs, for cleanup\n  puts \"Execution completed\"\nend\n\n# Raising exceptions\ndef divide(a, b)\n  raise ArgumentError, \"Divisor cannot be zero\" if b.zero?\n  a / b\nend\n\n# Custom exception classes\nclass ValidationError < StandardError\n  def initialize(field)\n    super(\"Invalid value for field: #{field}\")\n  end\nend\n\n# Using custom exceptions\nbegin\n  raise ValidationError.new(\"email\")\nrescue ValidationError => e\n  puts \"Validation failed: #{e.message}\"\nend",
+              "title": "<strong>Managing errors in Ruby</strong>"
             }
           },
           {
@@ -436,8 +436,8 @@
             "emoji": "🔍",
             "title": "Debugging Tools",
             "box": {
-              "content": "<strong>Ruby debugging ecosystem</strong>",
-              "code": "# Built-in debugging\nputs \"Value: #{variable}\"        # Simple output\np variable                       # Inspect with .inspect\npp variable                      # Pretty print\n\n# Using byebug (add to Gemfile)\nrequire 'byebug'\n\ndef calculate_total\n  price = 100\n  tax = 20\n  byebug  # execution stops here\n  total = price + tax\n  total\nend\n\n# Using pry (more powerful)\nrequire 'pry'\n\ndef complex_method\n  data = fetch_data\n  binding.pry  # opens interactive console\n  process(data)\nend\n\n# Common pry commands\n# ls          - list methods\n# cd variable - navigate into object\n# whereami    - show current context\n# exit        - continue execution\n\n# Debugging tips:\n# 1. Use binding.pry for complex issues\n# 2. Use byebug for step-by-step debugging\n# 3. Use puts/p for quick inspection"
+              "code": "# Built-in debugging\nputs \"Value: #{variable}\"        # Simple output\np variable                       # Inspect with .inspect\npp variable                      # Pretty print\n\n# Using byebug (add to Gemfile)\nrequire 'byebug'\n\ndef calculate_total\n  price = 100\n  tax = 20\n  byebug  # execution stops here\n  total = price + tax\n  total\nend\n\n# Using pry (more powerful)\nrequire 'pry'\n\ndef complex_method\n  data = fetch_data\n  binding.pry  # opens interactive console\n  process(data)\nend\n\n# Common pry commands\n# ls          - list methods\n# cd variable - navigate into object\n# whereami    - show current context\n# exit        - continue execution\n\n# Debugging tips:\n# 1. Use binding.pry for complex issues\n# 2. Use byebug for step-by-step debugging\n# 3. Use puts/p for quick inspection",
+              "title": "<strong>Ruby debugging ecosystem</strong>"
             }
           }
         ]
@@ -484,8 +484,8 @@
             "emoji": "⚡",
             "title": "Using Bundler",
             "box": {
-              "content": "<strong>Managing dependencies</strong>",
-              "code": "# Gemfile example\nsource 'https://rubygems.org'\n\nruby '3.2.2'\n\ngem 'rails', '~> 7.0.0'\ngem 'pg', '~> 1.1'\ngem 'puma', '~> 5.0'\ngem 'redis', '~> 4.0'\n\n# Development and test gems\ngroup :development, :test do\n  gem 'debug', '~> 1.0'\n  gem 'rspec-rails', '~> 6.0'\nend\n\ngroup :test do\n  gem 'capybara', '~> 3.0'\nend\n\n# Bundler commands\nbundle install        # Install dependencies\nbundle update         # Update dependencies\nbundle exec command   # Run command in bundle context\nbundle info gem_name  # Show gem information\nbundle init           # Create new Gemfile"
+              "code": "# Gemfile example\nsource 'https://rubygems.org'\n\nruby '3.2.2'\n\ngem 'rails', '~> 7.0.0'\ngem 'pg', '~> 1.1'\ngem 'puma', '~> 5.0'\ngem 'redis', '~> 4.0'\n\n# Development and test gems\ngroup :development, :test do\n  gem 'debug', '~> 1.0'\n  gem 'rspec-rails', '~> 6.0'\nend\n\ngroup :test do\n  gem 'capybara', '~> 3.0'\nend\n\n# Bundler commands\nbundle install        # Install dependencies\nbundle update         # Update dependencies\nbundle exec command   # Run command in bundle context\nbundle info gem_name  # Show gem information\nbundle init           # Create new Gemfile",
+              "title": "<strong>Managing dependencies</strong>"
             }
           }
         ]
@@ -536,8 +536,8 @@
             "emoji": "🔧",
             "title": "IRB and RuboCop",
             "box": {
-              "content": "<strong>Interactive Ruby and Code Quality</strong>",
-              "code": "# IRB - Interactive Ruby Shell\n$ irb\nirb(main):001> 2 + 2\n=> 4\nirb(main):002> \"hello\".upcase\n=> \"HELLO\"\nirb(main):003> [1, 2, 3].map { |n| n * 2 }\n=> [2, 4, 6]\n\n# Enhanced IRB with pry\n$ gem install pry\n$ pry\n\n# RuboCop - Code style enforcement\n# .rubocop.yml configuration\nStyle/Documentation:\n  Enabled: false\n\nMetrics/LineLength:\n  Max: 120\n\n# Running RuboCop\nrubocop                    # Check all files\nrubocop app/models         # Check specific directory\nrubocop --auto-correct     # Auto-fix issues\nrubocop --format offenses  # Show summary"
+              "code": "# IRB - Interactive Ruby Shell\n$ irb\nirb(main):001> 2 + 2\n=> 4\nirb(main):002> \"hello\".upcase\n=> \"HELLO\"\nirb(main):003> [1, 2, 3].map { |n| n * 2 }\n=> [2, 4, 6]\n\n# Enhanced IRB with pry\n$ gem install pry\n$ pry\n\n# RuboCop - Code style enforcement\n# .rubocop.yml configuration\nStyle/Documentation:\n  Enabled: false\n\nMetrics/LineLength:\n  Max: 120\n\n# Running RuboCop\nrubocop                    # Check all files\nrubocop app/models         # Check specific directory\nrubocop --auto-correct     # Auto-fix issues\nrubocop --format offenses  # Show summary",
+              "title": "<strong>Interactive Ruby and Code Quality</strong>"
             }
           }
         ]
@@ -588,8 +588,8 @@
             "emoji": "🛠️",
             "title": "Creating a Rails App",
             "box": {
-              "content": "<strong>Getting started with Rails</strong>",
-              "code": "# Install Rails\ngem install rails\n\n# Create new application\nrails new my_app --database=postgresql\ncd my_app\n\n# Generate scaffold (CRUD operations)\nrails generate scaffold Product name:string price:decimal description:text\n\n# Run migrations\nrails db:create\nrails db:migrate\n\n# Start server\nrails server\n# Visit http://localhost:3000/products\n\n# Key directories\napp/           # Models, Views, Controllers\ndb/            # Database migrations and schema\nconfig/        # Application configuration\ntest/          # Test files\npublic/        # Static files"
+              "code": "# Install Rails\ngem install rails\n\n# Create new application\nrails new my_app --database=postgresql\ncd my_app\n\n# Generate scaffold (CRUD operations)\nrails generate scaffold Product name:string price:decimal description:text\n\n# Run migrations\nrails db:create\nrails db:migrate\n\n# Start server\nrails server\n# Visit http://localhost:3000/products\n\n# Key directories\napp/           # Models, Views, Controllers\ndb/            # Database migrations and schema\nconfig/        # Application configuration\ntest/          # Test files\npublic/        # Static files",
+              "title": "<strong>Getting started with Rails</strong>"
             }
           }
         ]
@@ -607,8 +607,8 @@
             "emoji": "🧪",
             "title": "Testing with RSpec",
             "box": {
-              "content": "<strong>Behavior-Driven Development</strong>",
-              "code": "# spec/models/user_spec.rb\nrequire 'rails_helper'\n\nRSpec.describe User, type: :model do\n  describe 'validations' do\n    it 'validates presence of email' do\n      user = User.new(email: nil)\n      expect(user).not_to be_valid\n      expect(user.errors[:email]).to include(\"can't be blank\")\n    end\n\n    it 'validates uniqueness of email' do\n      create(:user, email: 'test@example.com')\n      user = build(:user, email: 'test@example.com')\n      expect(user).not_to be_valid\n    end\n  end\n\n  describe '#full_name' do\n    it 'returns first and last name' do\n      user = build(:user, first_name: 'John', last_name: 'Doe')\n      expect(user.full_name).to eq('John Doe')\n    end\n  end\n\n  describe 'scopes' do\n    it 'returns active users' do\n      active_user = create(:user, active: true)\n      inactive_user = create(:user, active: false)\n      expect(User.active).to include(active_user)\n      expect(User.active).not_to include(inactive_user)\n    end\n  end\nend"
+              "code": "# spec/models/user_spec.rb\nrequire 'rails_helper'\n\nRSpec.describe User, type: :model do\n  describe 'validations' do\n    it 'validates presence of email' do\n      user = User.new(email: nil)\n      expect(user).not_to be_valid\n      expect(user.errors[:email]).to include(\"can't be blank\")\n    end\n\n    it 'validates uniqueness of email' do\n      create(:user, email: 'test@example.com')\n      user = build(:user, email: 'test@example.com')\n      expect(user).not_to be_valid\n    end\n  end\n\n  describe '#full_name' do\n    it 'returns first and last name' do\n      user = build(:user, first_name: 'John', last_name: 'Doe')\n      expect(user.full_name).to eq('John Doe')\n    end\n  end\n\n  describe 'scopes' do\n    it 'returns active users' do\n      active_user = create(:user, active: true)\n      inactive_user = create(:user, active: false)\n      expect(User.active).to include(active_user)\n      expect(User.active).not_to include(inactive_user)\n    end\n  end\nend",
+              "title": "<strong>Behavior-Driven Development</strong>"
             }
           }
         ]
@@ -784,8 +784,8 @@
             "emoji": "📋",
             "title": "Ruby Quick Reference",
             "box": {
-              "content": "<strong>Essential Ruby syntax</strong>",
-              "code": "# Variables & Methods\nname = \"Alice\"\ndef greet(name) = \"Hello, #{name}!\"\n\n# Arrays & Hashes\nnumbers = [1, 2, 3]\nperson = { name: \"John\", age: 30 }\n\n# Control Flow\nif condition; end\nunless condition; end\ncase value; when 1; end\n\n# Loops\n5.times { |i| puts i }\n[1,2,3].each { |n| puts n }\nwhile condition; end\n\n# Common Enumerables\nmap, select, reject, find, reduce\nsort, group_by, any?, all?, include?\n\n# Classes & Modules\nclass Person; end\nmodule Loggable; end\nattr_accessor :name\n\n# Error Handling\nbegin; rescue; ensure; end\nraise \"Error message\""
+              "code": "# Variables & Methods\nname = \"Alice\"\ndef greet(name) = \"Hello, #{name}!\"\n\n# Arrays & Hashes\nnumbers = [1, 2, 3]\nperson = { name: \"John\", age: 30 }\n\n# Control Flow\nif condition; end\nunless condition; end\ncase value; when 1; end\n\n# Loops\n5.times { |i| puts i }\n[1,2,3].each { |n| puts n }\nwhile condition; end\n\n# Common Enumerables\nmap, select, reject, find, reduce\nsort, group_by, any?, all?, include?\n\n# Classes & Modules\nclass Person; end\nmodule Loggable; end\nattr_accessor :name\n\n# Error Handling\nbegin; rescue; ensure; end\nraise \"Error message\"",
+              "title": "<strong>Essential Ruby syntax</strong>"
             }
           }
         ]

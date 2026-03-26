@@ -34,38 +34,56 @@
           {
             "type": "topic-title",
             "title": "1. Philosophy",
-            "box": { "content": "Developer Happiness (DX) is at the core of every design decision." }
+            "subtitle": "Developer Happiness (DX) is at the core of every design decision."
           },
           {
             "type": "content",
             "title": "What is Laravel?",
             "box": {
-              "content": "A web application framework with expressive, elegant syntax. It takes the pain out of development by easing common tasks.",
               "list": [
-                { "emoji": "🎨", "text": "<strong>Expressive:</strong> Code that reads like prose." },
-                { "emoji": "🛠️", "text": "<strong>Opinionated:</strong> Provides a sensible, powerful default for everything." },
-                { "emoji": "🚀", "text": "<strong>Fast-paced:</strong> Rapid prototyping to production-ready in record time." }
-              ]
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Expressive:</strong> Code that reads like prose."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Opinionated:</strong> Provides a sensible, powerful default for everything."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Fast-paced:</strong> Rapid prototyping to production-ready in record time."
+                }
+              ],
+              "title": "A web application framework with expressive, elegant syntax. It takes the pain out of development by easing common tasks."
             }
           },
           {
             "type": "content",
             "title": "The Artisan CLI",
             "box": {
-              "content": "Laravel's powerful command-line interface based on Symfony Console.",
-              "code": "# shell: php artisan list\n# shell: php artisan make:controller UserController\n# shell: php artisan migrate"
+              "code": "# shell: php artisan list\n# shell: php artisan make:controller UserController\n# shell: php artisan migrate",
+              "title": "Laravel's powerful command-line interface based on Symfony Console."
             }
           },
           {
             "type": "content",
             "title": "The Ecosystem",
             "box": {
-              "content": "Laravel isn't just a framework; it's a massive, cohesive ecosystem.",
               "list": [
-                { "emoji": "📦", "text": "<strong>Composer:</strong> Dependency management for PHP." },
-                { "emoji": "🔧", "text": "<strong>Forge/Vapor:</strong> Painless server and serverless deployment." },
-                { "emoji": "🛡️", "text": "<strong>Sanctum/Passport:</strong> Robust authentication solutions." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Composer:</strong> Dependency management for PHP."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Forge/Vapor:</strong> Painless server and serverless deployment."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Sanctum/Passport:</strong> Robust authentication solutions."
+                }
+              ],
+              "title": "Laravel isn't just a framework; it's a massive, cohesive ecosystem."
             }
           }
         ]
@@ -77,33 +95,39 @@
           {
             "type": "topic-title",
             "title": "2. Architecture",
-            "box": { "content": "The Service Container is the heart of Laravel." }
+            "subtitle": "The Service Container is the heart of Laravel."
           },
           {
             "type": "content",
             "title": "The Service Container",
             "box": {
-              "content": "A powerful tool for managing class dependencies and performing dependency injection.",
-              "code": "$this->app->bind('HelpSpot\\API', function ($app) {\n    return new HelpSpot\\API($app->make('HttpClient'));\n});"
+              "code": "$this->app->bind('HelpSpot\\API', function ($app) {\n    return new HelpSpot\\API($app->make('HttpClient'));\n});",
+              "title": "A powerful tool for managing class dependencies and performing dependency injection."
             }
           },
           {
             "type": "content",
             "title": "Service Providers",
             "box": {
-              "content": "The central place to configure and bootstrap all Laravel applications.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Register:</strong> Bind things into the service container." },
-                { "emoji": "🚦", "text": "<strong>Boot:</strong> Kick off logic once all services are registered." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Register:</strong> Bind things into the service container."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Boot:</strong> Kick off logic once all services are registered."
+                }
+              ],
+              "title": "The central place to configure and bootstrap all Laravel applications."
             }
           },
           {
             "type": "content",
             "title": "The Facade Pattern",
             "box": {
-              "content": "Facades provide a 'static' interface to classes that are available in the application's service container.",
-              "code": "use Illuminate\\Support\\Facades\\Cache;\n\n$value = Cache::get('key');"
+              "code": "use Illuminate\\Support\\Facades\\Cache;\n\n$value = Cache::get('key');",
+              "title": "Facades provide a 'static' interface to classes that are available in the application's service container."
             }
           }
         ]
@@ -115,30 +139,30 @@
           {
             "type": "topic-title",
             "title": "3. Eloquent ORM",
-            "box": { "content": "The most expressive ORM in the PHP ecosystem." }
+            "subtitle": "The most expressive ORM in the PHP ecosystem."
           },
           {
             "type": "content",
             "title": "Active Record Implementation",
             "box": {
-              "content": "Eloquent's Active Record implementation makes interacting with your database intuitive.",
-              "code": "$user = User::where('email', 'alice@example.com')->first();\n$user->name = 'Alice Smith';\n$user->save();"
+              "code": "$user = User::where('email', 'alice@example.com')->first();\n$user->name = 'Alice Smith';\n$user->save();",
+              "title": "Eloquent's Active Record implementation makes interacting with your database intuitive."
             }
           },
           {
             "type": "content",
             "title": "Expressive Relationships",
             "box": {
-              "content": "Define relationships using simple method calls.",
-              "code": "class Post extends Model {\n    public function comments() {\n        return $this->hasMany(Comment::class);\n    }\n}\n\n$comments = Post::find(1)->comments;"
+              "code": "class Post extends Model {\n    public function comments() {\n        return $this->hasMany(Comment::class);\n    }\n}\n\n$comments = Post::find(1)->comments;",
+              "title": "Define relationships using simple method calls."
             }
           },
           {
             "type": "content",
             "title": "Eloquent Collections",
             "box": {
-              "content": "Every multi-result set returned by Eloquent is a Collection instance, providing dozens of helper methods.",
-              "code": "$users = User::all();\n$names = $users->reject(fn($user) => $user->active)\n               ->map(fn($user) => $user->name);"
+              "code": "$users = User::all();\n$names = $users->reject(fn($user) => $user->active)\n               ->map(fn($user) => $user->name);",
+              "title": "Every multi-result set returned by Eloquent is a Collection instance, providing dozens of helper methods."
             }
           }
         ]
@@ -150,30 +174,30 @@
           {
             "type": "topic-title",
             "title": "4. Routing",
-            "box": { "content": "Defining the entry points to your application." }
+            "subtitle": "Defining the entry points to your application."
           },
           {
             "type": "content",
             "title": "Expressive Routing",
             "box": {
-              "content": "Routes are defined in the <code>routes/web.php</code> or <code>routes/api.php</code> files.",
-              "code": "Route::get('/user/{id}', [UserController::class, 'show']);\n\nRoute::middleware(['auth'])->group(function () {\n    Route::get('/profile', [ProfileController::class, 'edit']);\n});"
+              "code": "Route::get('/user/{id}', [UserController::class, 'show']);\n\nRoute::middleware(['auth'])->group(function () {\n    Route::get('/profile', [ProfileController::class, 'edit']);\n});",
+              "title": "Routes are defined in the <code>routes/web.php</code> or <code>routes/api.php</code> files."
             }
           },
           {
             "type": "content",
             "title": "Dependency Injection in Controllers",
             "box": {
-              "content": "Laravel automatically injects dependencies into your controller methods.",
-              "code": "public function store(Request $request, UserRepository $users) {\n    $users->create($request->all());\n    return redirect('/home');\n}"
+              "code": "public function store(Request $request, UserRepository $users) {\n    $users->create($request->all());\n    return redirect('/home');\n}",
+              "title": "Laravel automatically injects dependencies into your controller methods."
             }
           },
           {
             "type": "content",
             "title": "Resource Controllers",
             "box": {
-              "content": "Quickly create controllers that handle all CRUD operations.",
-              "code": "# shell: php artisan make:controller PhotoController --resource\n\nRoute::resource('photos', PhotoController::class);"
+              "code": "# shell: php artisan make:controller PhotoController --resource\n\nRoute::resource('photos', PhotoController::class);",
+              "title": "Quickly create controllers that handle all CRUD operations."
             }
           }
         ]
@@ -185,30 +209,30 @@
           {
             "type": "topic-title",
             "title": "5. Security",
-            "box": { "content": "Granular permissions and robust authentication." }
+            "subtitle": "Granular permissions and robust authentication."
           },
           {
             "type": "content",
             "title": "Authentication Guards",
             "box": {
-              "content": "Laravel supports multiple authentication 'guards', allowing you to authenticate against different user tables or token systems.",
-              "code": "Auth::guard('api')->user();"
+              "code": "Auth::guard('api')->user();",
+              "title": "Laravel supports multiple authentication 'guards', allowing you to authenticate against different user tables or token systems."
             }
           },
           {
             "type": "content",
             "title": "Gates & Policies",
             "box": {
-              "content": "Authorization logic simplified. Use Gates for simple checks and Policies for model-specific logic.",
-              "code": "Gate::define('update-post', function (User $user, Post $post) {\n    return $user->id === $post->user_id;\n});\n\n$this->authorize('update', $post);"
+              "code": "Gate::define('update-post', function (User $user, Post $post) {\n    return $user->id === $post->user_id;\n});\n\n$this->authorize('update', $post);",
+              "title": "Authorization logic simplified. Use Gates for simple checks and Policies for model-specific logic."
             }
           },
           {
             "type": "content",
             "title": "Laravel Sanctum",
             "box": {
-              "content": "A featherweight authentication system for SPAs and simple APIs using mobile tokens or session cookies.",
-              "code": "$user->createToken('token-name')->plainTextToken;"
+              "code": "$user->createToken('token-name')->plainTextToken;",
+              "title": "A featherweight authentication system for SPAs and simple APIs using mobile tokens or session cookies."
             }
           }
         ]
@@ -220,35 +244,47 @@
           {
             "type": "topic-title",
             "title": "6. Frontend",
-            "box": { "content": "Blade, Livewire, and the TALL stack." }
+            "subtitle": "Blade, Livewire, and the TALL stack."
           },
           {
             "type": "content",
             "title": "Blade Templating",
             "box": {
-              "content": "The powerful, aesthetic templating engine for Laravel.",
-              "code": "@if ($user->isActive())\n    Welcome, {{ $user->name }}!\n@endif\n\n<x-alert type=\"error\" :message=\"$message\" />"
+              "code": "@if ($user->isActive())\n    Welcome, {{ $user->name }}!\n@endif\n\n<x-alert type=\"error\" :message=\"$message\" />",
+              "title": "The powerful, aesthetic templating engine for Laravel."
             }
           },
           {
             "type": "content",
             "title": "Laravel Livewire",
             "box": {
-              "content": "Build dynamic interfaces using PHP. No complex JavaScript frameworks required.",
-              "code": "class Counter extends Component {\n    public $count = 0;\n    public function increment() { $this->count++; }\n}"
+              "code": "class Counter extends Component {\n    public $count = 0;\n    public function increment() { $this->count++; }\n}",
+              "title": "Build dynamic interfaces using PHP. No complex JavaScript frameworks required."
             }
           },
           {
             "type": "content",
             "title": "The TALL Stack",
             "box": {
-              "content": "The modern developer's choice for rapid, interactive Laravel applications.",
               "list": [
-                { "emoji": "🎨", "text": "<strong>Tailwind CSS:</strong> Utility-first styling." },
-                { "emoji": "🏔️", "text": "<strong>Alpine.js:</strong> Lightweight UI reactivity." },
-                { "emoji": "⚡", "text": "<strong>Livewire:</strong> Full-stack reactivity in PHP." },
-                { "emoji": "🏮", "text": "<strong>Laravel:</strong> The rock-solid foundation." }
-              ]
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Tailwind CSS:</strong> Utility-first styling."
+                },
+                {
+                  "emoji": "🏔️",
+                  "text": "<strong>Alpine.js:</strong> Lightweight UI reactivity."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Livewire:</strong> Full-stack reactivity in PHP."
+                },
+                {
+                  "emoji": "🏮",
+                  "text": "<strong>Laravel:</strong> The rock-solid foundation."
+                }
+              ],
+              "title": "The modern developer's choice for rapid, interactive Laravel applications."
             }
           }
         ]
@@ -260,34 +296,43 @@
           {
             "type": "topic-title",
             "title": "7. Logic & Flow",
-            "box": { "content": "Clean code with Form Requests and Middlewares." }
+            "subtitle": "Clean code with Form Requests and Middlewares."
           },
           {
             "type": "content",
             "title": "Form Request Validation",
             "box": {
-              "content": "Keep your controllers clean by offloading validation logic to dedicated Form Request classes.",
-              "code": "public function rules() {\n    return [\n        'title' => 'required|unique:posts|max:255',\n        'body' => 'required',\n    ];\n}"
+              "code": "public function rules() {\n    return [\n        'title' => 'required|unique:posts|max:255',\n        'body' => 'required',\n    ];\n}",
+              "title": "Keep your controllers clean by offloading validation logic to dedicated Form Request classes."
             }
           },
           {
             "type": "content",
             "title": "Validation Rules (Elite)",
             "box": {
-              "content": "Laravel includes over 90 validation rules out of the box, plus the ability to create custom ones.",
               "list": [
-                { "emoji": "📧", "text": "<code>email:rfc,dns</code> - Advanced email validation." },
-                { "emoji": "🛡️", "text": "<code>prohibited_if</code> - Conditional logic for complex forms." },
-                { "emoji": "🎨", "text": "<code>Rule::unique()</code> - Fluent rule builder." }
-              ]
+                {
+                  "emoji": "📧",
+                  "text": "<code>email:rfc,dns</code> - Advanced email validation."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<code>prohibited_if</code> - Conditional logic for complex forms."
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<code>Rule::unique()</code> - Fluent rule builder."
+                }
+              ],
+              "title": "Laravel includes over 90 validation rules out of the box, plus the ability to create custom ones."
             }
           },
           {
             "type": "content",
             "title": "Custom Middlewares",
             "box": {
-              "content": "Middlewares provide a convenient mechanism for inspecting and filtering HTTP requests entering your application.",
-              "code": "public function handle($request, Closure $next) {\n    if ($request->age <= 200) {\n        return redirect('home');\n    }\n    return $next($request);\n}"
+              "code": "public function handle($request, Closure $next) {\n    if ($request->age <= 200) {\n        return redirect('home');\n    }\n    return $next($request);\n}",
+              "title": "Middlewares provide a convenient mechanism for inspecting and filtering HTTP requests entering your application."
             }
           }
         ]
@@ -299,33 +344,39 @@
           {
             "type": "topic-title",
             "title": "8. Real-time",
-            "box": { "content": "Queues, Redis, and WebSockets." }
+            "subtitle": "Queues, Redis, and WebSockets."
           },
           {
             "type": "content",
             "title": "The Unified Queue API",
             "box": {
-              "content": "Offload heavy tasks to the background effortlessly. Supports Redis, Database, Amazon SQS, and more.",
-              "code": "ProcessPodcast::dispatch($podcast)->onQueue('emails');"
+              "code": "ProcessPodcast::dispatch($podcast)->onQueue('emails');",
+              "title": "Offload heavy tasks to the background effortlessly. Supports Redis, Database, Amazon SQS, and more."
             }
           },
           {
             "type": "content",
             "title": "Laravel Horizon",
             "box": {
-              "content": "A beautiful dashboard and code-driven configuration for your Redis-powered Laravel queues.",
               "list": [
-                { "emoji": "📊", "text": "<strong>Monitoring:</strong> Real-time throughput and error tracking." },
-                { "emoji": "🚦", "text": "<strong>Auto-scaling:</strong> Scalable based on queue workload." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring:</strong> Real-time throughput and error tracking."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Auto-scaling:</strong> Scalable based on queue workload."
+                }
+              ],
+              "title": "A beautiful dashboard and code-driven configuration for your Redis-powered Laravel queues."
             }
           },
           {
             "type": "content",
             "title": "Laravel Reverb",
             "box": {
-              "content": "The first-party, high-speed WebSocket server built specifically for Laravel applications.",
-              "code": "# shell: php artisan reverb:start"
+              "code": "# shell: php artisan reverb:start",
+              "title": "The first-party, high-speed WebSocket server built specifically for Laravel applications."
             }
           }
         ]
@@ -337,30 +388,30 @@
           {
             "type": "topic-title",
             "title": "9. Advanced Features",
-            "box": { "content": "Events, Observers, and Collections." }
+            "subtitle": "Events, Observers, and Collections."
           },
           {
             "type": "content",
             "title": "Events & Listeners",
             "box": {
-              "content": "Decouple your application logic by using Laravel's event system.",
-              "code": "OrderShipped::dispatch($order);\n\n// In EventServiceProvider\n'OrderShipped' => [\n    'SendShipmentNotification',\n]"
+              "code": "OrderShipped::dispatch($order);\n\n// In EventServiceProvider\n'OrderShipped' => [\n    'SendShipmentNotification',\n]",
+              "title": "Decouple your application logic by using Laravel's event system."
             }
           },
           {
             "type": "content",
             "title": "Eloquent Observers",
             "box": {
-              "content": "Group all of your Eloquent listeners into a single class.",
-              "code": "class UserObserver {\n    public function created(User $user) {\n        // Logic after user creation\n    }\n}"
+              "code": "class UserObserver {\n    public function created(User $user) {\n        // Logic after user creation\n    }\n}",
+              "title": "Group all of your Eloquent listeners into a single class."
             }
           },
           {
             "type": "content",
             "title": "Macroable Classes",
             "box": {
-              "content": "Many of Laravel's core classes are 'macroable', allowing you to add custom methods at runtime.",
-              "code": "Response::macro('caps', function ($value) {\n    return Response::make(strtoupper($value));\n});"
+              "code": "Response::macro('caps', function ($value) {\n    return Response::make(strtoupper($value));\n});",
+              "title": "Many of Laravel's core classes are 'macroable', allowing you to add custom methods at runtime."
             }
           }
         ]
@@ -372,30 +423,30 @@
           {
             "type": "topic-title",
             "title": "10. Testing",
-            "box": { "content": "Pest and PHPUnit integration." }
+            "subtitle": "Pest and PHPUnit integration."
           },
           {
             "type": "content",
             "title": "Pest PHP",
             "box": {
-              "content": "The elegant PHP testing framework that makes writing tests a joy.",
-              "code": "it('has a welcome page', function () {\n    get('/')->assertStatus(200);\n});"
+              "code": "it('has a welcome page', function () {\n    get('/')->assertStatus(200);\n});",
+              "title": "The elegant PHP testing framework that makes writing tests a joy."
             }
           },
           {
             "type": "content",
             "title": "Feature Testing",
             "box": {
-              "content": "Test the entire HTTP request lifecycle from end-to-end.",
-              "code": "$response = $this->post('/login', [\n    'email' => 'alice@example.com',\n    'password' => 'password',\n]);\n$response->assertRedirect('/home');"
+              "code": "$response = $this->post('/login', [\n    'email' => 'alice@example.com',\n    'password' => 'password',\n]);\n$response->assertRedirect('/home');",
+              "title": "Test the entire HTTP request lifecycle from end-to-end."
             }
           },
           {
             "type": "content",
             "title": "Mocking Dependencies",
             "box": {
-              "content": "Easily mock external services using Laravel's built-in mocking utilities.",
-              "code": "Http::fake([\n    'google.com/*' => Http::response('Hello World', 200),\n]);"
+              "code": "Http::fake([\n    'google.com/*' => Http::response('Hello World', 200),\n]);",
+              "title": "Easily mock external services using Laravel's built-in mocking utilities."
             }
           }
         ]
@@ -407,30 +458,30 @@
           {
             "type": "topic-title",
             "title": "11. Production",
-            "box": { "content": "Squeezing every drop of performance." }
+            "subtitle": "Squeezing every drop of performance."
           },
           {
             "type": "content",
             "title": "Config & Route Caching",
             "box": {
-              "content": "In production, you should cache your configuration and routes to significantly reduce bootstrap time.",
-              "code": "# shell: php artisan config:cache\n# shell: php artisan route:cache"
+              "code": "# shell: php artisan config:cache\n# shell: php artisan route:cache",
+              "title": "In production, you should cache your configuration and routes to significantly reduce bootstrap time."
             }
           },
           {
             "type": "content",
             "title": "Asset Compiling (Vite)",
             "box": {
-              "content": "Laravel uses Vite for lightning-fast asset bundling and HMR.",
-              "code": "# shell: npm run build"
+              "code": "# shell: npm run build",
+              "title": "Laravel uses Vite for lightning-fast asset bundling and HMR."
             }
           },
           {
             "type": "content",
             "title": "Optimizing Floquent",
             "box": {
-              "content": "Avoid the N+1 problem by using eager loading.",
-              "code": "$books = Book::with('author')->get();"
+              "code": "$books = Book::with('author')->get();",
+              "title": "Avoid the N+1 problem by using eager loading."
             }
           }
         ]
@@ -442,28 +493,40 @@
           {
             "type": "topic-title",
             "title": "12. Deployment",
-            "box": { "content": "Forge, Vapor, and Cloud Native Laravel." }
+            "subtitle": "Forge, Vapor, and Cloud Native Laravel."
           },
           {
             "type": "content",
             "title": "Laravel Forge",
             "box": {
-              "content": "Painless server management and deployment optimized for Laravel.",
               "list": [
-                { "emoji": "🚀", "text": "<strong>Zero downtime:</strong> Built-in deployment scripts." },
-                { "emoji": "🛠️", "text": "<strong>Provisioning:</strong> Installs PHP, Nginx, Redis, and more." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Zero downtime:</strong> Built-in deployment scripts."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Provisioning:</strong> Installs PHP, Nginx, Redis, and more."
+                }
+              ],
+              "title": "Painless server management and deployment optimized for Laravel."
             }
           },
           {
             "type": "content",
             "title": "Laravel Vapor",
             "box": {
-              "content": "A serverless deployment platform for Laravel, powered by AWS Lambda.",
               "list": [
-                { "emoji": "☁️", "text": "<strong>Infinite scale:</strong> No servers to manage." },
-                { "emoji": "💰", "text": "<strong>Cost-effective:</strong> Pay only for what you use." }
-              ]
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Infinite scale:</strong> No servers to manage."
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost-effective:</strong> Pay only for what you use."
+                }
+              ],
+              "title": "A serverless deployment platform for Laravel, powered by AWS Lambda."
             }
           }
         ]
@@ -475,24 +538,35 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "Building for the future with Laravel." }
+            "subtitle": "Building for the future with Laravel."
           },
           {
             "type": "content",
             "title": "Summary",
             "box": {
-              "content": "Laravel provides the best developer experience in the web world.",
               "list": [
-                { "emoji": "🔋", "text": "Batteries-included ecosystem." },
-                { "emoji": "🎨", "text": "Expressive, maintainable code." },
-                { "emoji": "⚙️", "text": "Production-ready scalability." }
-              ]
+                {
+                  "emoji": "🔋",
+                  "text": "Batteries-included ecosystem."
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Expressive, maintainable code."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "Production-ready scalability."
+                }
+              ],
+              "title": "Laravel provides the best developer experience in the web world."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Any questions? Thank you!" }
+            "box": {
+              "title": "Any questions? Thank you!"
+            }
           }
         ]
       }

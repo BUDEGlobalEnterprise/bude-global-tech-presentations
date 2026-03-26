@@ -19,18 +19,27 @@
           {
             "type": "topic-title",
             "title": "1. What is Elasticsearch?",
-            "box": { "content": "The Heart of the Elastic Stack." }
+            "subtitle": "The Heart of the Elastic Stack."
           },
           {
             "type": "content",
             "title": "Defining Features",
             "box": {
-              "content": "A distributed, RESTful search and analytics engine built on Apache Lucene.",
               "list": [
-                { "emoji": "🔍", "text": "<strong>Full-Text Search:</strong> Fast, relevant results." },
-                { "emoji": "📊", "text": "<strong>Analytics:</strong> Aggregations for real-time data insights." },
-                { "emoji": "🌐", "text": "<strong>Distributed:</strong> Horizontal scaling for petabytes of data." }
-              ]
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Full-Text Search:</strong> Fast, relevant results."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Analytics:</strong> Aggregations for real-time data insights."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Distributed:</strong> Horizontal scaling for petabytes of data."
+                }
+              ],
+              "title": "A distributed, RESTful search and analytics engine built on Apache Lucene."
             }
           }
         ]
@@ -42,28 +51,40 @@
           {
             "type": "topic-title",
             "title": "2. Apache Lucene",
-            "box": { "content": "The engine under the hood." }
+            "subtitle": "The engine under the hood."
           },
           {
             "type": "content",
             "title": "The Inverted Index",
             "box": {
-              "content": "How Lucene makes search so fast.",
               "list": [
-                { "emoji": "📑", "text": "<strong>Structure:</strong> A mapping of terms to the documents that contain them." },
-                { "emoji": "🏗️", "text": "<strong>Bkd-Trees:</strong> Used for numeric and geo-point data." }
-              ]
+                {
+                  "emoji": "📑",
+                  "text": "<strong>Structure:</strong> A mapping of terms to the documents that contain them."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Bkd-Trees:</strong> Used for numeric and geo-point data."
+                }
+              ],
+              "title": "How Lucene makes search so fast."
             }
           },
           {
             "type": "content",
             "title": "Segments & Immutability",
             "box": {
-              "content": "Lucene indices are composed of multiple segments.",
               "list": [
-                { "emoji": "🧱", "text": "<strong>Segments:</strong> Individual inverted indexes that are immutable." },
-                { "emoji": "🔄", "text": "<strong>Merging:</strong> Background tasks merge small segments into larger ones." }
-              ]
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Segments:</strong> Individual inverted indexes that are immutable."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Merging:</strong> Background tasks merge small segments into larger ones."
+                }
+              ],
+              "title": "Lucene indices are composed of multiple segments."
             }
           }
         ]
@@ -75,28 +96,40 @@
           {
             "type": "topic-title",
             "title": "3. Shards & Replicas",
-            "box": { "content": "Scaling storage and search throughput." }
+            "subtitle": "Scaling storage and search throughput."
           },
           {
             "type": "content",
             "title": "What is a Shard?",
             "box": {
-              "content": "A single Lucene index. An Elasticsearch index is a collection of shards.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Primary Shards:</strong> Original data home. Fixed at index creation time." },
-                { "emoji": "👥", "text": "<strong>Replica Shards:</strong> Copies for failover and read throughput." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Primary Shards:</strong> Original data home. Fixed at index creation time."
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Replica Shards:</strong> Copies for failover and read throughput."
+                }
+              ],
+              "title": "A single Lucene index. An Elasticsearch index is a collection of shards."
             }
           },
           {
             "type": "content",
             "title": "Cluster State & Master Node",
             "box": {
-              "content": "How nodes coordinate.",
               "list": [
-                { "emoji": "👑", "text": "<strong>Master Node:</strong> Manages index creation and node membership." },
-                { "emoji": "📡", "text": "<strong>Data Nodes:</strong> Store the shards and execute queries." }
-              ]
+                {
+                  "emoji": "👑",
+                  "text": "<strong>Master Node:</strong> Manages index creation and node membership."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Data Nodes:</strong> Store the shards and execute queries."
+                }
+              ],
+              "title": "How nodes coordinate."
             }
           }
         ]
@@ -108,16 +141,25 @@
           {
             "type": "topic-title",
             "title": "4. Writing Data",
-            "box": { "content": "How a document becomes searchable." }
+            "subtitle": "How a document becomes searchable."
           },
           {
             "type": "content",
             "title": "The Lifecycle of a Write",
             "box": {
               "list": [
-                { "emoji": "🗳️", "text": "<strong>Coordination:</strong> Request hits a node, which routes to the Primary Shard." },
-                { "emoji": "📝", "text": "<strong>Primary Write:</strong> Local write to Lucene + Translog." },
-                { "emoji": "📡", "text": "<strong>Replication:</strong> Parallel write to all replica shards." }
+                {
+                  "emoji": "🗳️",
+                  "text": "<strong>Coordination:</strong> Request hits a node, which routes to the Primary Shard."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Primary Write:</strong> Local write to Lucene + Translog."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Replication:</strong> Parallel write to all replica shards."
+                }
               ]
             }
           },
@@ -125,11 +167,17 @@
             "type": "content",
             "title": "The Refresh Mechanism",
             "box": {
-              "content": "Near Real-Time (NRT) search.",
               "list": [
-                { "emoji": "🔄", "text": "<strong>Refresh:</strong> Moving data from memory buffer to a new Lucene segment (default 1s)." },
-                { "emoji": "💾", "text": "<strong>Flush:</strong> Committing segments to disk and clearing the Translog." }
-              ]
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Refresh:</strong> Moving data from memory buffer to a new Lucene segment (default 1s)."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Flush:</strong> Committing segments to disk and clearing the Translog."
+                }
+              ],
+              "title": "Near Real-Time (NRT) search."
             }
           }
         ]
@@ -141,16 +189,25 @@
           {
             "type": "topic-title",
             "title": "5. Text Processing",
-            "box": { "content": "Turning raw text into searchable tokens." }
+            "subtitle": "Turning raw text into searchable tokens."
           },
           {
             "type": "content",
             "title": "The Analyzer Pipeline",
             "box": {
               "list": [
-                { "emoji": "✂️", "text": "<strong>Character Filters:</strong> Stripping HTML or regex." },
-                { "emoji": "🧩", "text": "<strong>Tokenizer:</strong> Splitting text into words (e.g., standard, whitespace)." },
-                { "emoji": "🛠️", "text": "<strong>Token Filters:</strong> Lowercasing, stemming, stop-words, synonyms." }
+                {
+                  "emoji": "✂️",
+                  "text": "<strong>Character Filters:</strong> Stripping HTML or regex."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Tokenizer:</strong> Splitting text into words (e.g., standard, whitespace)."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Token Filters:</strong> Lowercasing, stemming, stop-words, synonyms."
+                }
               ]
             }
           },
@@ -158,8 +215,8 @@
             "type": "content",
             "title": "Dynamic vs Static Mapping",
             "box": {
-              "content": "Defining your schema.",
-              "code": "PUT /users\n{\n  \"mappings\": {\n    \"properties\": {\n      \"bio\": { \"type\": \"text\", \"analyzer\": \"english\" }\n    }\n  }\n}"
+              "code": "PUT /users\n{\n  \"mappings\": {\n    \"properties\": {\n      \"bio\": { \"type\": \"text\", \"analyzer\": \"english\" }\n    }\n  }\n}",
+              "title": "Defining your schema."
             }
           }
         ]
@@ -171,15 +228,21 @@
           {
             "type": "topic-title",
             "title": "6. Query DSL",
-            "box": { "content": "The power of Boolean Search." }
+            "subtitle": "The power of Boolean Search."
           },
           {
             "type": "content",
             "title": "Match vs Term Query",
             "box": {
               "list": [
-                { "emoji": "🔤", "text": "<strong>Match:</strong> Full-text search (analyzed). Good for bios, descriptions." },
-                { "emoji": "🎯", "text": "<strong>Term:</strong> Exact value match (non-analyzed). Good for IDs, tags." }
+                {
+                  "emoji": "🔤",
+                  "text": "<strong>Match:</strong> Full-text search (analyzed). Good for bios, descriptions."
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Term:</strong> Exact value match (non-analyzed). Good for IDs, tags."
+                }
               ]
             }
           },
@@ -187,8 +250,8 @@
             "type": "content",
             "title": "Boolean Compound Queries",
             "box": {
-              "content": "Combining multiple criteria.",
-              "code": "GET /users/_search\n{\n  \"query\": {\n    \"bool\": {\n      \"must\": [{ \"match\": { \"bio\": \"developer\" }}],\n      \"filter\": [{ \"term\": { \"status\": \"active\" }}]\n    }\n  }\n}"
+              "code": "GET /users/_search\n{\n  \"query\": {\n    \"bool\": {\n      \"must\": [{ \"match\": { \"bio\": \"developer\" }}],\n      \"filter\": [{ \"term\": { \"status\": \"active\" }}]\n    }\n  }\n}",
+              "title": "Combining multiple criteria."
             }
           },
           {
@@ -196,8 +259,14 @@
             "title": "Range & Prefix Queries",
             "box": {
               "list": [
-                { "emoji": "📏", "text": "<strong>Range:</strong> Greater than, Less than (gt, gte, lt, lte)." },
-                { "emoji": "🔡", "text": "<strong>Prefix:</strong> Autocomplete-lite search." }
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Range:</strong> Greater than, Less than (gt, gte, lt, lte)."
+                },
+                {
+                  "emoji": "🔡",
+                  "text": "<strong>Prefix:</strong> Autocomplete-lite search."
+                }
               ]
             }
           },
@@ -205,10 +274,13 @@
             "type": "content",
             "title": "Fuzzy & Wildcard",
             "box": {
-              "content": "Handling typos and patterns.",
               "list": [
-                { "emoji": "🥴", "text": "<strong>Fuzzy:</strong> Levenshtein distance for spell correction." }
-              ]
+                {
+                  "emoji": "🥴",
+                  "text": "<strong>Fuzzy:</strong> Levenshtein distance for spell correction."
+                }
+              ],
+              "title": "Handling typos and patterns."
             }
           }
         ]
@@ -220,38 +292,53 @@
           {
             "type": "topic-title",
             "title": "7. Aggregations",
-            "box": { "content": "Real-time analytics at scale." }
+            "subtitle": "Real-time analytics at scale."
           },
           {
             "type": "content",
             "title": "Bucket Aggregations",
             "box": {
-              "content": "Grouping documents.",
               "list": [
-                { "emoji": "🪣", "text": "<strong>Terms:</strong> Most frequent values." },
-                { "emoji": "📅", "text": "<strong>Date Histogram:</strong> Time-series buckets." }
-              ]
+                {
+                  "emoji": "🪣",
+                  "text": "<strong>Terms:</strong> Most frequent values."
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date Histogram:</strong> Time-series buckets."
+                }
+              ],
+              "title": "Grouping documents."
             }
           },
           {
             "type": "content",
             "title": "Metric Aggregations",
             "box": {
-              "content": "Math over buckets.",
               "list": [
-                { "emoji": "📊", "text": "<strong>Average/Sum/Stats:</strong> Basic math." },
-                { "emoji": "📈", "text": "<strong>Percentiles:</strong> Understanding distribution." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Average/Sum/Stats:</strong> Basic math."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Percentiles:</strong> Understanding distribution."
+                }
+              ],
+              "title": "Math over buckets."
             }
           },
           {
             "type": "content",
             "title": "Pipeline Aggregations",
             "box": {
-              "content": "Aggregations on aggregations.",
               "list": [
-                { "emoji": "🚆", "text": "<strong>Derivative:</strong> Calculating Rate of Change." }
-              ]
+                {
+                  "emoji": "🚆",
+                  "text": "<strong>Derivative:</strong> Calculating Rate of Change."
+                }
+              ],
+              "title": "Aggregations on aggregations."
             }
           }
         ]
@@ -263,27 +350,36 @@
           {
             "type": "topic-title",
             "title": "8. Tuning",
-            "box": { "content": "Industrial-strength scaling." }
+            "subtitle": "Industrial-strength scaling."
           },
           {
             "type": "content",
             "title": "Index Lifecycle Management (ILM)",
             "box": {
-              "content": "Automating data growth.",
               "list": [
-                { "emoji": "🔥", "text": "<strong>Hot:</strong> Fast nodes for active data." },
-                { "emoji": "🧊", "text": "<strong>Cold:</strong> Cheap nodes for archival." }
-              ]
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>Hot:</strong> Fast nodes for active data."
+                },
+                {
+                  "emoji": "🧊",
+                  "text": "<strong>Cold:</strong> Cheap nodes for archival."
+                }
+              ],
+              "title": "Automating data growth."
             }
           },
           {
             "type": "content",
             "title": "Segment Merging",
             "box": {
-              "content": "Why disk space doesn't drop immediately after delete.",
               "list": [
-                { "emoji": "🧱", "text": "<strong>Mechanism:</strong> Background merges reclaim space by rebuilding segments." }
-              ]
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Mechanism:</strong> Background merges reclaim space by rebuilding segments."
+                }
+              ],
+              "title": "Why disk space doesn't drop immediately after delete."
             }
           },
           {
@@ -291,8 +387,14 @@
             "title": "Caching Strategies",
             "box": {
               "list": [
-                { "emoji": "🚄", "text": "<strong>Node Query Cache:</strong> Filter results caching." },
-                { "emoji": "🏗️", "text": "<strong>Shard Request Cache:</strong> Aggregation results caching." }
+                {
+                  "emoji": "🚄",
+                  "text": "<strong>Node Query Cache:</strong> Filter results caching."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Shard Request Cache:</strong> Aggregation results caching."
+                }
               ]
             }
           }
@@ -305,26 +407,32 @@
           {
             "type": "topic-title",
             "title": "9. Production Ready",
-            "box": { "content": "Safety and clusters." }
+            "subtitle": "Safety and clusters."
           },
           {
             "type": "content",
             "title": "Split-Brain Prevention",
             "box": {
-              "content": "Ensuring cluster consistency.",
               "list": [
-                { "emoji": "🧠", "text": "<strong>Quorum:</strong> Master node election logic (N/2 + 1)." }
-              ]
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Quorum:</strong> Master node election logic (N/2 + 1)."
+                }
+              ],
+              "title": "Ensuring cluster consistency."
             }
           },
           {
             "type": "content",
             "title": "RBAC Security",
             "box": {
-              "content": "Protecting the data.",
               "list": [
-                { "emoji": "🔐", "text": "<strong>Roles:</strong> Defining what users and apps can see/do." }
-              ]
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Roles:</strong> Defining what users and apps can see/do."
+                }
+              ],
+              "title": "Protecting the data."
             }
           }
         ]
@@ -336,25 +444,31 @@
           {
             "type": "topic-title",
             "title": "10. Relevance",
-            "box": { "content": "How the 'Best' results are determined." }
+            "subtitle": "How the 'Best' results are determined."
           },
           {
             "type": "content",
             "title": "TF-IDF vs BM25",
             "box": {
-              "content": "The evolution of scoring algorithms.",
               "list": [
-                { "emoji": "📊", "text": "<strong>TF-IDF:</strong> Term Frequency-Inverse Document Frequency (Legacy)." },
-                { "emoji": "🎯", "text": "<strong>BM25:</strong> Best Match 25 (Modern default, handles term saturation)." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>TF-IDF:</strong> Term Frequency-Inverse Document Frequency (Legacy)."
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>BM25:</strong> Best Match 25 (Modern default, handles term saturation)."
+                }
+              ],
+              "title": "The evolution of scoring algorithms."
             }
           },
           {
             "type": "content",
             "title": "The Coordinate System",
             "box": {
-              "content": "Lucene's Practical Scoring Function.",
-              "code": "score(q,d) = coord(q,d) * queryNorm(q) * ..."
+              "code": "score(q,d) = coord(q,d) * queryNorm(q) * ...",
+              "title": "Lucene's Practical Scoring Function."
             }
           }
         ]
@@ -366,27 +480,33 @@
           {
             "type": "topic-title",
             "title": "11. Vector Search",
-            "box": { "content": "Beyond keyword matching." }
+            "subtitle": "Beyond keyword matching."
           },
           {
             "type": "content",
             "title": "Dense Vectors",
             "box": {
-              "content": "Storing embeddings for semantic search.",
               "list": [
-                { "emoji": "🧠", "text": "<strong>Semantic:</strong> Searching for meaning, not just words." }
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Semantic:</strong> Searching for meaning, not just words."
+                }
               ],
-              "code": "{ \"type\": \"dense_vector\", \"dims\": 768 }"
+              "code": "{ \"type\": \"dense_vector\", \"dims\": 768 }",
+              "title": "Storing embeddings for semantic search."
             }
           },
           {
             "type": "content",
             "title": "kNN (k-Nearest Neighbors)",
             "box": {
-              "content": "Approximate Search (HNSW).",
               "list": [
-                { "emoji": "🚀", "text": "<strong>HNSW:</strong> Hierarchical Navigable Small World graphs for fast vector indexing." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>HNSW:</strong> Hierarchical Navigable Small World graphs for fast vector indexing."
+                }
+              ],
+              "title": "Approximate Search (HNSW)."
             }
           }
         ]
@@ -398,26 +518,32 @@
           {
             "type": "topic-title",
             "title": "12. Multi-Cluster",
-            "box": { "content": "Scaling across regions." }
+            "subtitle": "Scaling across regions."
           },
           {
             "type": "content",
             "title": "Cross-Cluster Search (CCS)",
             "box": {
-              "content": "Searching across multiple independent clusters.",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Federation:</strong> One query, many datacenters." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Federation:</strong> One query, many datacenters."
+                }
+              ],
+              "title": "Searching across multiple independent clusters."
             }
           },
           {
             "type": "content",
             "title": "Cross-Cluster Replication (CCR)",
             "box": {
-              "content": "Active-Active or HA across clusters.",
               "list": [
-                { "emoji": "🔄", "text": "<strong>Sync:</strong> Following index changes in real-time." }
-              ]
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Sync:</strong> Following index changes in real-time."
+                }
+              ],
+              "title": "Active-Active or HA across clusters."
             }
           }
         ]
@@ -429,15 +555,21 @@
           {
             "type": "topic-title",
             "title": "13. Internals",
-            "box": { "content": "Observing the cluster pulse." }
+            "subtitle": "Observing the cluster pulse."
           },
           {
             "type": "content",
             "title": "Thread Pools",
             "box": {
               "list": [
-                { "emoji": "🧵", "text": "<strong>Search:</strong> Dedicated threads for executing queries." },
-                { "emoji": "📥", "text": "<strong>Write:</strong> Threads for indexing and bulk operations." }
+                {
+                  "emoji": "🧵",
+                  "text": "<strong>Search:</strong> Dedicated threads for executing queries."
+                },
+                {
+                  "emoji": "📥",
+                  "text": "<strong>Write:</strong> Threads for indexing and bulk operations."
+                }
               ]
             }
           },
@@ -445,10 +577,13 @@
             "type": "content",
             "title": "Circuit Breakers",
             "box": {
-              "content": "Preventing OOM (Out of Memory).",
               "list": [
-                { "emoji": "🛑", "text": "<strong>Parent Breaker:</strong> Monitors global memory usage." }
-              ]
+                {
+                  "emoji": "🛑",
+                  "text": "<strong>Parent Breaker:</strong> Monitors global memory usage."
+                }
+              ],
+              "title": "Preventing OOM (Out of Memory)."
             }
           }
         ]
@@ -460,37 +595,49 @@
           {
             "type": "topic-title",
             "title": "14. Data Transformation",
-            "box": { "content": "Modern data processing in ES." }
+            "subtitle": "Modern data processing in ES."
           },
           {
             "type": "content",
             "title": "Ingest Pipelines",
             "box": {
-              "content": "ETL within Elasticsearch.",
               "list": [
-                { "emoji": "🚉", "text": "<strong>Processors:</strong> Rename, convert, dissect, geoip, script." }
-              ]
+                {
+                  "emoji": "🚉",
+                  "text": "<strong>Processors:</strong> Rename, convert, dissect, geoip, script."
+                }
+              ],
+              "title": "ETL within Elasticsearch."
             }
           },
           {
             "type": "content",
             "title": "Runtime Fields (Schema-on-read)",
             "box": {
-              "content": "Flexible schema without reindexing.",
               "list": [
-                { "emoji": "📐", "text": "<strong>Runtime:</strong> Calculated fields at query time via Painless scripts." }
-              ]
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Runtime:</strong> Calculated fields at query time via Painless scripts."
+                }
+              ],
+              "title": "Flexible schema without reindexing."
             }
           },
           {
             "type": "content",
             "title": "Search Tuning",
             "box": {
-              "content": "Optimizing for speed.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Request Circuit Breaker:</strong> Prevent long queries from crashing nodes." },
-                { "emoji": "📊", "text": "<strong>Slow Logs:</strong> Identifying and refactoring inefficient queries." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Request Circuit Breaker:</strong> Prevent long queries from crashing nodes."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Slow Logs:</strong> Identifying and refactoring inefficient queries."
+                }
+              ],
+              "title": "Optimizing for speed."
             }
           }
         ]
@@ -502,23 +649,34 @@
           {
             "type": "topic-title",
             "title": "Elasticsearch Mastery",
-            "box": { "content": "Mastering the world's leading search engine." }
+            "subtitle": "Mastering the world's leading search engine."
           },
           {
             "type": "content",
             "title": "Summary",
             "box": {
               "list": [
-                { "emoji": "✅", "text": "<strong>Distributed:</strong> Scale to petabytes." },
-                { "emoji": "✅", "text": "<strong>Real-time:</strong> Near real-time indexing." },
-                { "emoji": "✅", "text": "<strong>Versatile:</strong> Search, Analytics, Logs." }
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Distributed:</strong> Scale to petabytes."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Real-time:</strong> Near real-time indexing."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Versatile:</strong> Search, Analytics, Logs."
+                }
               ]
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you! Any questions?" }
+            "box": {
+              "title": "Thank you! Any questions?"
+            }
           }
         ]
       }

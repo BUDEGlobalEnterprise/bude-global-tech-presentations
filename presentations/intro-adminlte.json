@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is AdminLTE?",
             "box": {
-              "content": "<span class=\"highlight\">Free, open-source admin dashboard template</span> built on Bootstrap",
               "list": [
                 {
                   "emoji": "📊",
@@ -124,7 +123,8 @@
                   "emoji": "💼",
                   "text": "<strong>Use Cases</strong> - Admin panels, dashboards, CRM, ERP"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Free, open-source admin dashboard template</span> built on Bootstrap"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> AdminLTE has over 40k GitHub stars and powers thousands of admin dashboards worldwide!"
@@ -299,8 +299,8 @@
             "emoji": "⚡",
             "title": "npm Installation",
             "box": {
-              "content": "<strong>Using package manager</strong>",
-              "code": "# Using npm\nnpm install admin-lte@^3.2 --save\n\n# Using yarn\nyarn add admin-lte@^3.2\n\n# Using CDN in HTML\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css\"> <script src=\"https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js\"></script>\n\n# File structure after installation\nadmin-lte/\n├── dist/\n│   ├── css/\n│   ├── js/\n│   └── img/\n├── build/\n├── plugins/\n└── pages/"
+              "code": "# Using npm\nnpm install admin-lte@^3.2 --save\n\n# Using yarn\nyarn add admin-lte@^3.2\n\n# Using CDN in HTML\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css\"> <script src=\"https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js\"></script>\n\n# File structure after installation\nadmin-lte/\n├── dist/\n│   ├── css/\n│   ├── js/\n│   └── img/\n├── build/\n├── plugins/\n└── pages/",
+              "title": "<strong>Using package manager</strong>"
             }
           }
         ]
@@ -361,8 +361,8 @@
             "emoji": "🏗️",
             "title": "Basic Layout Structure",
             "box": {
-              "content": "<strong>Main layout components</strong>",
-              "code": "<body class=\"hold-transition sidebar-mini layout-fixed\">\n  <div class=\"wrapper\">\n    \n    <!--Navbar -->\n    <nav class=\"main-header navbar navbar-expand navbar-white navbar-light\">\n      <!-- Left navbar links -->\n      <!-- Right navbar links -->\n    </nav>\n    \n    <!-- Main Sidebar -->\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\n      <!-- Brand logo -->\n      <!-- Sidebar menu -->\n    </aside>\n    \n    <!-- Content Wrapper -->\n    <div class=\"content-wrapper\">\n      <!-- Content Header -->\n      <!-- Main content -->\n    </div>\n    \n    <!-- Footer -->\n    <footer class=\"main-footer\">\n      <!-- Footer content -->\n    </footer>\n    \n  </div>\n</body>"
+              "code": "<body class=\"hold-transition sidebar-mini layout-fixed\">\n  <div class=\"wrapper\">\n    \n    <!--Navbar -->\n    <nav class=\"main-header navbar navbar-expand navbar-white navbar-light\">\n      <!-- Left navbar links -->\n      <!-- Right navbar links -->\n    </nav>\n    \n    <!-- Main Sidebar -->\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\n      <!-- Brand logo -->\n      <!-- Sidebar menu -->\n    </aside>\n    \n    <!-- Content Wrapper -->\n    <div class=\"content-wrapper\">\n      <!-- Content Header -->\n      <!-- Main content -->\n    </div>\n    \n    <!-- Footer -->\n    <footer class=\"main-footer\">\n      <!-- Footer content -->\n    </footer>\n    \n  </div>\n</body>",
+              "title": "<strong>Main layout components</strong>"
             }
           }
         ]
@@ -413,8 +413,8 @@
             "emoji": "📋",
             "title": "Card Component Example",
             "box": {
-              "content": "<strong>Basic card with header and body</strong>",
-              "code": "<!-- Basic Card -->\n<div class=\"card\">\n  <div class=\"card-header\">\n    <h3 class=\"card-title\">Card Title</h3>\n    <div class=\"card-tools\">\n      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">\n        <i class=\"fas fa-minus\"></i>\n      </button>\n    </div>\n  </div>\n  <div class=\"card-body\">\n    Card content goes here\n  </div>\n  <div class=\"card-footer\">\n    Card footer\n  </div>\n</div>\n\n<!-- Solid Card -->\n<div class=\"card card-primary\">\n  <div class=\"card-header\">\n    <h3 class=\"card-title\">Primary Card</h3>\n  </div>\n  <div class=\"card-body\">\n    Solid primary card\n  </div>\n</div>"
+              "code": "<!-- Basic Card -->\n<div class=\"card\">\n  <div class=\"card-header\">\n    <h3 class=\"card-title\">Card Title</h3>\n    <div class=\"card-tools\">\n      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">\n        <i class=\"fas fa-minus\"></i>\n      </button>\n    </div>\n  </div>\n  <div class=\"card-body\">\n    Card content goes here\n  </div>\n  <div class=\"card-footer\">\n    Card footer\n  </div>\n</div>\n\n<!-- Solid Card -->\n<div class=\"card card-primary\">\n  <div class=\"card-header\">\n    <h3 class=\"card-title\">Primary Card</h3>\n  </div>\n  <div class=\"card-body\">\n    Solid primary card\n  </div>\n</div>",
+              "title": "<strong>Basic card with header and body</strong>"
             }
           }
         ]
@@ -465,8 +465,8 @@
             "emoji": "🎛️",
             "title": "Select2 Integration",
             "box": {
-              "content": "<strong>Enhanced select boxes</strong>",
-              "code": "<!-- Basic Select2 -->\n<select class=\"form-control select2\" style=\"width: 100%;\">\n  <option selected=\"selected\">Option 1</option>\n  <option>Option 2</option>\n  <option>Option 3</option>\n</select>\n\n<!-- Select2 with AJAX -->\n<select class=\"form-control select2\" id=\"user-select\"></select>\n\n<script>\n// Initialize Select2\n$('.select2').select2();\n\n// AJAX example\n$('#user-select').select2({\n  ajax: {\n    url: '/api/users',\n    dataType: 'json',\n    delay: 250,\n    data: function (params) {\n      return { q: params.term };\n    },\n    processResults: function (data) {\n      return { results: data };\n    }\n  }\n});\n</script>"
+              "code": "<!-- Basic Select2 -->\n<select class=\"form-control select2\" style=\"width: 100%;\">\n  <option selected=\"selected\">Option 1</option>\n  <option>Option 2</option>\n  <option>Option 3</option>\n</select>\n\n<!-- Select2 with AJAX -->\n<select class=\"form-control select2\" id=\"user-select\"></select>\n\n<script>\n// Initialize Select2\n$('.select2').select2();\n\n// AJAX example\n$('#user-select').select2({\n  ajax: {\n    url: '/api/users',\n    dataType: 'json',\n    delay: 250,\n    data: function (params) {\n      return { q: params.term };\n    },\n    processResults: function (data) {\n      return { results: data };\n    }\n  }\n});\n</script>",
+              "title": "<strong>Enhanced select boxes</strong>"
             }
           }
         ]
@@ -517,8 +517,8 @@
             "emoji": "🔄",
             "title": "DataTables Example",
             "box": {
-              "content": "<strong>Advanced table with DataTables</strong>",
-              "code": "<!-- HTML Table -->\n<table id=\"example1\" class=\"table table-bordered table-striped\">\n  <thead>\n    <tr>\n      <th>ID</th>\n      <th>Name</th>\n      <th>Email</th>\n      <th>Status</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>John Doe</td>\n      <td>john@example.com</td>\n      <td><span class=\"badge bg-success\">Active</span></td>\n    </tr>\n  </tbody>\n</table>\n\n<script>\n// Initialize DataTables\n$('#example1').DataTable({\n  \"paging\": true,\n  \"lengthChange\": false,\n  \"searching\": true,\n  \"ordering\": true,\n  \"info\": true,\n  \"autoWidth\": false,\n  \"responsive\": true\n});\n</script>"
+              "code": "<!-- HTML Table -->\n<table id=\"example1\" class=\"table table-bordered table-striped\">\n  <thead>\n    <tr>\n      <th>ID</th>\n      <th>Name</th>\n      <th>Email</th>\n      <th>Status</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>John Doe</td>\n      <td>john@example.com</td>\n      <td><span class=\"badge bg-success\">Active</span></td>\n    </tr>\n  </tbody>\n</table>\n\n<script>\n// Initialize DataTables\n$('#example1').DataTable({\n  \"paging\": true,\n  \"lengthChange\": false,\n  \"searching\": true,\n  \"ordering\": true,\n  \"info\": true,\n  \"autoWidth\": false,\n  \"responsive\": true\n});\n</script>",
+              "title": "<strong>Advanced table with DataTables</strong>"
             }
           }
         ]
@@ -569,8 +569,8 @@
             "emoji": "📊",
             "title": "Chart.js Example",
             "box": {
-              "content": "<strong>Creating charts with Chart.js</strong>",
-              "code": "<!-- Chart Container -->\n<canvas id=\"salesChart\" style=\"min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;\"></canvas>\n\n<script>\n// Sales Chart\nvar salesChartCanvas = document.getElementById('salesChart').getContext('2d');\nvar salesChartData = {\n  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n  datasets: [\n    {\n      label: 'Digital Goods',\n      backgroundColor: 'rgba(60,141,188,0.9)',\n      borderColor: 'rgba(60,141,188,0.8)',\n      data: [28, 48, 40, 19, 86, 27, 90]\n    },\n    {\n      label: 'Electronics',\n      backgroundColor: 'rgba(210, 214, 222, 1)',\n      borderColor: 'rgba(210, 214, 222, 1)',\n      data: [65, 59, 80, 81, 56, 55, 40]\n    }\n  ]\n};\n\nvar salesChartOptions = {\n  maintainAspectRatio: false,\n  responsive: true,\n  legend: {\n    display: false\n  }\n};\n\nvar salesChart = new Chart(salesChartCanvas, {\n  type: 'bar',\n  data: salesChartData,\n  options: salesChartOptions\n});\n</script>"
+              "code": "<!-- Chart Container -->\n<canvas id=\"salesChart\" style=\"min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;\"></canvas>\n\n<script>\n// Sales Chart\nvar salesChartCanvas = document.getElementById('salesChart').getContext('2d');\nvar salesChartData = {\n  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n  datasets: [\n    {\n      label: 'Digital Goods',\n      backgroundColor: 'rgba(60,141,188,0.9)',\n      borderColor: 'rgba(60,141,188,0.8)',\n      data: [28, 48, 40, 19, 86, 27, 90]\n    },\n    {\n      label: 'Electronics',\n      backgroundColor: 'rgba(210, 214, 222, 1)',\n      borderColor: 'rgba(210, 214, 222, 1)',\n      data: [65, 59, 80, 81, 56, 55, 40]\n    }\n  ]\n};\n\nvar salesChartOptions = {\n  maintainAspectRatio: false,\n  responsive: true,\n  legend: {\n    display: false\n  }\n};\n\nvar salesChart = new Chart(salesChartCanvas, {\n  type: 'bar',\n  data: salesChartData,\n  options: salesChartOptions\n});\n</script>",
+              "title": "<strong>Creating charts with Chart.js</strong>"
             }
           }
         ]
@@ -621,8 +621,8 @@
             "emoji": "🐘",
             "title": "Laravel Integration",
             "box": {
-              "content": "<strong>AdminLTE with Laravel</strong>",
-              "code": "<!-- Blade Template Structure -->\n<!-- resources/views/layouts/app.blade.php -->\n<!DOCTYPE html>\n<html lang=\"{{ str_replace('_', '-', app()->getLocale()) }}\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>@yield('title', 'AdminLTE 3')</title>\n  \n  <!-- AdminLTE CSS -->\n  <link rel=\"stylesheet\" href=\"{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}\">\n  <!-- Font Awesome -->\n  <link rel=\"stylesheet\" href=\"{{ asset('vendor/fontawesome-free/css/all.min.css') }}\">\n</head>\n\n<body class=\"hold-transition sidebar-mini\">\n<div class=\"wrapper\">\n  \n  <!-- Navbar -->\n  @include('layouts.navbar')\n  \n  <!-- Sidebar -->\n  @include('layouts.sidebar')\n  \n  <!-- Content -->\n  <div class=\"content-wrapper\">\n    @yield('content')\n  </div>\n  \n  <!-- Footer -->\n  @include('layouts.footer')\n  \n</div>\n\n<!-- AdminLTE JS -->\n<script src=\"{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}\"></script>\n</body>\n</html>"
+              "code": "<!-- Blade Template Structure -->\n<!-- resources/views/layouts/app.blade.php -->\n<!DOCTYPE html>\n<html lang=\"{{ str_replace('_', '-', app()->getLocale()) }}\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>@yield('title', 'AdminLTE 3')</title>\n  \n  <!-- AdminLTE CSS -->\n  <link rel=\"stylesheet\" href=\"{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}\">\n  <!-- Font Awesome -->\n  <link rel=\"stylesheet\" href=\"{{ asset('vendor/fontawesome-free/css/all.min.css') }}\">\n</head>\n\n<body class=\"hold-transition sidebar-mini\">\n<div class=\"wrapper\">\n  \n  <!-- Navbar -->\n  @include('layouts.navbar')\n  \n  <!-- Sidebar -->\n  @include('layouts.sidebar')\n  \n  <!-- Content -->\n  <div class=\"content-wrapper\">\n    @yield('content')\n  </div>\n  \n  <!-- Footer -->\n  @include('layouts.footer')\n  \n</div>\n\n<!-- AdminLTE JS -->\n<script src=\"{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}\"></script>\n</body>\n</html>",
+              "title": "<strong>AdminLTE with Laravel</strong>"
             }
           }
         ]
@@ -673,8 +673,8 @@
             "emoji": "🔧",
             "title": "SCSS Customization",
             "box": {
-              "content": "<strong>Customizing with SCSS variables</strong>",
-              "code": "// _custom-variables.scss\n\n// Color system\n$primary: #007bff !default;\n$secondary: #6c757d !default;\n$success: #28a745 !default;\n$info: #17a2b8 !default;\n$warning: #ffc107 !default;\n$danger: #dc3545 !default;\n\n// Body\n$body-bg: #f4f6f9 !default;\n$body-color: #343a40 !default;\n\n// Sidebar\n$sidebar-width: 250px !default;\n$sidebar-bg: #343a40 !default;\n$sidebar-color: #c2c7d0 !default;\n\n// Navbar\n$navbar-height: 57px !default;\n$navbar-bg: #fff !default;\n$navbar-color: #333 !default;\n\n// Import AdminLTE\n@import \"admin-lte/build/scss/adminlte\";"
+              "code": "// _custom-variables.scss\n\n// Color system\n$primary: #007bff !default;\n$secondary: #6c757d !default;\n$success: #28a745 !default;\n$info: #17a2b8 !default;\n$warning: #ffc107 !default;\n$danger: #dc3545 !default;\n\n// Body\n$body-bg: #f4f6f9 !default;\n$body-color: #343a40 !default;\n\n// Sidebar\n$sidebar-width: 250px !default;\n$sidebar-bg: #343a40 !default;\n$sidebar-color: #c2c7d0 !default;\n\n// Navbar\n$navbar-height: 57px !default;\n$navbar-bg: #fff !default;\n$navbar-color: #333 !default;\n\n// Import AdminLTE\n@import \"admin-lte/build/scss/adminlte\";",
+              "title": "<strong>Customizing with SCSS variables</strong>"
             }
           }
         ]
@@ -860,8 +860,8 @@
             "emoji": "📋",
             "title": "AdminLTE Quick Reference",
             "box": {
-              "content": "<strong>Essential classes and components</strong>",
-              "code": "<!-- Layout Classes -->\nsidebar-mini, layout-fixed, layout-navbar-fixed\nlayout-footer-fixed, layout-top-nav, text-sm\n\n<!-- Card Classes -->\ncard, card-primary, card-outline, card-success\ncard-header, card-body, card-footer, card-tools\n\n<!-- Button Classes -->\nbtn, btn-primary, btn-sm, btn-lg, btn-block\nbtn-app, btn-tool, btn-success, btn-warning\n\n<!-- Badge Classes -->\nbadge, badge-primary, badge-pill, bg-success\nbg-warning, bg-danger, bg-info, bg-secondary\n\n<!-- Table Classes -->\ntable, table-bordered, table-striped, table-hover\ntable-sm, table-responsive, dataTable\n\n<!-- Form Classes -->\nform-control, form-control-lg, form-control-sm\ncustom-control-input, custom-switch, input-group\n\n<!-- Utility Classes -->\nelevation-1 through elevation-25, bg-gradient-\ndirect-chat, info-box, small-box, products-list"
+              "code": "<!-- Layout Classes -->\nsidebar-mini, layout-fixed, layout-navbar-fixed\nlayout-footer-fixed, layout-top-nav, text-sm\n\n<!-- Card Classes -->\ncard, card-primary, card-outline, card-success\ncard-header, card-body, card-footer, card-tools\n\n<!-- Button Classes -->\nbtn, btn-primary, btn-sm, btn-lg, btn-block\nbtn-app, btn-tool, btn-success, btn-warning\n\n<!-- Badge Classes -->\nbadge, badge-primary, badge-pill, bg-success\nbg-warning, bg-danger, bg-info, bg-secondary\n\n<!-- Table Classes -->\ntable, table-bordered, table-striped, table-hover\ntable-sm, table-responsive, dataTable\n\n<!-- Form Classes -->\nform-control, form-control-lg, form-control-sm\ncustom-control-input, custom-switch, input-group\n\n<!-- Utility Classes -->\nelevation-1 through elevation-25, bg-gradient-\ndirect-chat, info-box, small-box, products-list",
+              "title": "<strong>Essential classes and components</strong>"
             }
           }
         ]

@@ -34,66 +34,93 @@
           {
             "type": "topic-title",
             "title": "1. Foundations",
-            "box": { "content": "Built on the shoulders of giants: Starlette and Pydantic." }
+            "subtitle": "Built on the shoulders of giants: Starlette and Pydantic."
           },
           {
             "type": "content",
             "title": "What is FastAPI?",
             "box": {
-              "content": "A high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>Fast:</strong> Very high performance, on par with NodeJS and Go (thanks to Starlette)." },
-                { "emoji": "🖋️", "text": "<strong>Type-Safe:</strong> Based on Python 3.8+ type hints for best editor support." },
-                { "emoji": "🛡️", "text": "<strong>Robust:</strong> Production-ready code with automatic interactive documentation." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast:</strong> Very high performance, on par with NodeJS and Go (thanks to Starlette)."
+                },
+                {
+                  "emoji": "🖋️",
+                  "text": "<strong>Type-Safe:</strong> Based on Python 3.8+ type hints for best editor support."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Robust:</strong> Production-ready code with automatic interactive documentation."
+                }
+              ],
+              "title": "A high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints."
             }
           },
           {
             "type": "content",
             "title": "The Core Pillars",
             "box": {
-              "content": "FastAPI isn't just a framework; it's an orchestration of modern Python standards.",
               "list": [
-                { "emoji": "📦", "text": "<strong>Pydantic v2:</strong> Data validation and settings management using python type annotations." },
-                { "emoji": "🧩", "text": "<strong>Starlette:</strong> A lightweight ASGI framework/toolkit, which is ideal for building high performance asyncio services." },
-                { "emoji": "🏗️", "text": "<strong>Uvicorn:</strong> A lightning-fast ASGI server implementation, using uvloop and httptools." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Pydantic v2:</strong> Data validation and settings management using python type annotations."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Starlette:</strong> A lightweight ASGI framework/toolkit, which is ideal for building high performance asyncio services."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Uvicorn:</strong> A lightning-fast ASGI server implementation, using uvloop and httptools."
+                }
+              ],
+              "title": "FastAPI isn't just a framework; it's an orchestration of modern Python standards."
             }
           },
           {
             "type": "content",
             "title": "Pydantic v2: Under the Hood",
             "box": {
-              "content": "Pydantic v2 is rewritten in Rust, making it up to 20x faster than v1.",
               "list": [
-                { "emoji": "🦀", "text": "<strong>Rust Core:</strong> Logic is offloaded to a high-performance Rust engine." },
-                { "emoji": "📦", "text": "<strong>Strict Mode:</strong> Enforce exact types without implicit conversion." },
-                { "emoji": "📋", "text": "<strong>JSON Schema:</strong> Native extraction of OpenAPI-compliant schemas." }
-              ]
+                {
+                  "emoji": "🦀",
+                  "text": "<strong>Rust Core:</strong> Logic is offloaded to a high-performance Rust engine."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Strict Mode:</strong> Enforce exact types without implicit conversion."
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>JSON Schema:</strong> Native extraction of OpenAPI-compliant schemas."
+                }
+              ],
+              "title": "Pydantic v2 is rewritten in Rust, making it up to 20x faster than v1."
             }
           },
           {
             "type": "content",
             "title": "Type Hints & Pydantic",
             "box": {
-              "content": "FastAPI uses standard Python types to define the structure of your data.",
-              "code": "from pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    price: float\n    is_offer: bool | None = None"
+              "code": "from pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    price: float\n    is_offer: bool | None = None",
+              "title": "FastAPI uses standard Python types to define the structure of your data."
             }
           },
           {
             "type": "content",
             "title": "Annotated Types (Python 3.9+)",
             "box": {
-              "content": "Using <code>Annotated</code> to add extra metadata to your type hints for FastAPI and Pydantic.",
-              "code": "from typing import Annotated\nfrom fastapi import Query\n\n@app.get(\"/\")\nasync def read_items(q: Annotated[str | None, Query(max_length=50)] = None): ..."
+              "code": "from typing import Annotated\nfrom fastapi import Query\n\n@app.get(\"/\")\nasync def read_items(q: Annotated[str | None, Query(max_length=50)] = None): ...",
+              "title": "Using <code>Annotated</code> to add extra metadata to your type hints for FastAPI and Pydantic."
             }
           },
           {
             "type": "content",
             "title": "Pydantic Validators",
             "box": {
-              "content": "Use <code>@field_validator</code> to add custom logic to your data models.",
-              "code": "from pydantic import field_validator\n\nclass User(BaseModel):\n    username: str\n\n    @field_validator('username')\n    def must_be_alphanumeric(cls, v):\n        if not v.isalnum(): raise ValueError('must be alphanumeric')\n        return v"
+              "code": "from pydantic import field_validator\n\nclass User(BaseModel):\n    username: str\n\n    @field_validator('username')\n    def must_be_alphanumeric(cls, v):\n        if not v.isalnum(): raise ValueError('must be alphanumeric')\n        return v",
+              "title": "Use <code>@field_validator</code> to add custom logic to your data models."
             }
           }
         ]
@@ -105,34 +132,43 @@
           {
             "type": "topic-title",
             "title": "2. Path Operations",
-            "box": { "content": "The logic behind your API endpoints." }
+            "subtitle": "The logic behind your API endpoints."
           },
           {
             "type": "content",
             "title": "The Path Operation Decorator",
             "box": {
-              "content": "Binding logic to URLs using standard HTTP methods.",
-              "code": "@app.get(\"/items/{item_id}\")\ndef read_item(item_id: int, q: str | None = None):\n    return {\"item_id\": item_id, \"q\": q}"
+              "code": "@app.get(\"/items/{item_id}\")\ndef read_item(item_id: int, q: str | None = None):\n    return {\"item_id\": item_id, \"q\": q}",
+              "title": "Binding logic to URLs using standard HTTP methods."
             }
           },
           {
             "type": "content",
             "title": "Request Body & Pydantic",
             "box": {
-              "content": "FastAPI uses Pydantic models to automatically validate incoming JSON bodies.",
-              "code": "@app.post(\"/items/\")\ndef create_item(item: Item):\n    return item"
+              "code": "@app.post(\"/items/\")\ndef create_item(item: Item):\n    return item",
+              "title": "FastAPI uses Pydantic models to automatically validate incoming JSON bodies."
             }
           },
           {
             "type": "content",
             "title": "Query & Path Parameters",
             "box": {
-              "content": "Declare parameters and their types directly in the function signature.",
               "list": [
-                { "emoji": "📍", "text": "<strong>Path Parameters:</strong> Extracted from the URL path." },
-                { "emoji": "🔍", "text": "<strong>Query Parameters:</strong> Extracted from the URL query string." },
-                { "emoji": "🛠️", "text": "<strong>Validation:</strong> Use <code>Query</code> and <code>Path</code> classes for extra metadata." }
-              ]
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Path Parameters:</strong> Extracted from the URL path."
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Query Parameters:</strong> Extracted from the URL query string."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Validation:</strong> Use <code>Query</code> and <code>Path</code> classes for extra metadata."
+                }
+              ],
+              "title": "Declare parameters and their types directly in the function signature."
             }
           }
         ]
@@ -144,24 +180,30 @@
           {
             "type": "topic-title",
             "title": "3. Automatic Docs",
-            "box": { "content": "Zero-effort API specifications." }
+            "subtitle": "Zero-effort API specifications."
           },
           {
             "type": "content",
             "title": "Swagger UI (OAS3)",
             "box": {
-              "content": "FastAPI generates a standard OpenAPI schema and serves a dedicated Swagger UI at <code>/docs</code>.",
               "list": [
-                { "emoji": "🧪", "text": "<strong>Live Testing:</strong> Send requests directly from the browser." },
-                { "emoji": "📜", "text": "<strong>Auto-Discovery:</strong> Every endpoint, model, and parameter is documented." }
-              ]
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Live Testing:</strong> Send requests directly from the browser."
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Auto-Discovery:</strong> Every endpoint, model, and parameter is documented."
+                }
+              ],
+              "title": "FastAPI generates a standard OpenAPI schema and serves a dedicated Swagger UI at <code>/docs</code>."
             }
           },
           {
             "type": "content",
             "title": "ReDoc Documentation",
             "box": {
-              "content": "An alternative, clean documentation format available at <code>/redoc</code>, perfect for developers."
+              "title": "An alternative, clean documentation format available at <code>/redoc</code>, perfect for developers."
             }
           }
         ]
@@ -173,34 +215,43 @@
           {
             "type": "topic-title",
             "title": "4. Dependency Injection",
-            "box": { "content": "Shared logic made simple." }
+            "subtitle": "Shared logic made simple."
           },
           {
             "type": "content",
             "title": "The 'Depends' System",
             "box": {
-              "content": "FastAPI has an extremely powerful but simple Dependency Injection system.",
-              "code": "from fastapi import Depends\n\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n\n@app.get(\"/users/\")\ndef read_users(db: Session = Depends(get_db)):\n    return db.query(User).all()"
+              "code": "from fastapi import Depends\n\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n\n@app.get(\"/users/\")\ndef read_users(db: Session = Depends(get_db)):\n    return db.query(User).all()",
+              "title": "FastAPI has an extremely powerful but simple Dependency Injection system."
             }
           },
           {
             "type": "content",
             "title": "DI Benefits (Elite)",
             "box": {
-              "content": "Why use Dependency Injection?",
               "list": [
-                { "emoji": "♻️", "text": "<strong>Code Reuse:</strong> Share database sessions, security, and more." },
-                { "emoji": "🧪", "text": "<strong>Testability:</strong> Easily override dependencies with mocks during testing." },
-                { "emoji": "🏗️", "text": "<strong>Hierarchy:</strong> Dependencies can depend on other dependencies." }
-              ]
+                {
+                  "emoji": "♻️",
+                  "text": "<strong>Code Reuse:</strong> Share database sessions, security, and more."
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Testability:</strong> Easily override dependencies with mocks during testing."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Hierarchy:</strong> Dependencies can depend on other dependencies."
+                }
+              ],
+              "title": "Why use Dependency Injection?"
             }
           },
           {
             "type": "content",
             "title": "Sub-dependencies and the Tree",
             "box": {
-              "content": "Dependencies can depend on other dependencies, creating a powerful tree of shared logic.",
-              "code": "def get_active_user(user: User = Depends(get_current_user)):\n    if not user.is_active:\n        raise HTTPException(status_code=400, detail=\"Inactive user\")\n    return user"
+              "code": "def get_active_user(user: User = Depends(get_current_user)):\n    if not user.is_active:\n        raise HTTPException(status_code=400, detail=\"Inactive user\")\n    return user",
+              "title": "Dependencies can depend on other dependencies, creating a powerful tree of shared logic."
             }
           }
         ]
@@ -212,25 +263,31 @@
           {
             "type": "topic-title",
             "title": "5. Async Power",
-            "box": { "content": "Concurrency vs. Parallelism." }
+            "subtitle": "Concurrency vs. Parallelism."
           },
           {
             "type": "content",
             "title": "Async & Await",
             "box": {
-              "content": "FastAPI supports <code>async def</code> natively. This is the key to its high performance.",
-              "code": "@app.get(\"/\")\nasync def read_results():\n    results = await some_async_db_call()\n    return results"
+              "code": "@app.get(\"/\")\nasync def read_results():\n    results = await some_async_db_call()\n    return results",
+              "title": "FastAPI supports <code>async def</code> natively. This is the key to its high performance."
             }
           },
           {
             "type": "content",
             "title": "Concurrency in Python",
             "box": {
-              "content": "FastAPI uses 'anyio' to handle both <code>async def</code> and regular <code>def</code> functions optimally.",
               "list": [
-                { "emoji": "🧵", "text": "<strong>Async Def:</strong> Runs in the main event loop (I/O non-blocking)." },
-                { "emoji": "🚀", "text": "<strong>Regular Def:</strong> Runs in an external threadpool (safely blocking)." }
-              ]
+                {
+                  "emoji": "🧵",
+                  "text": "<strong>Async Def:</strong> Runs in the main event loop (I/O non-blocking)."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Regular Def:</strong> Runs in an external threadpool (safely blocking)."
+                }
+              ],
+              "title": "FastAPI uses 'anyio' to handle both <code>async def</code> and regular <code>def</code> functions optimally."
             }
           }
         ]
@@ -242,33 +299,39 @@
           {
             "type": "topic-title",
             "title": "6. Security",
-            "box": { "content": "OAuth2, Scopes, and JWT mastery." }
+            "subtitle": "OAuth2, Scopes, and JWT mastery."
           },
           {
             "type": "content",
             "title": "OAuth2 with Password Flow",
             "box": {
-              "content": "FastAPI provides built-in tools for OAuth2, including integrated Swagger login.",
-              "code": "from fastapi.security import OAuth2PasswordBearer\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n\n@app.get(\"/users/me\")\ndef read_users_me(token: str = Depends(oauth2_scheme)):\n    return {\"token\": token}"
+              "code": "from fastapi.security import OAuth2PasswordBearer\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n\n@app.get(\"/users/me\")\ndef read_users_me(token: str = Depends(oauth2_scheme)):\n    return {\"token\": token}",
+              "title": "FastAPI provides built-in tools for OAuth2, including integrated Swagger login."
             }
           },
           {
             "type": "content",
             "title": "JWT Integration",
             "box": {
-              "content": "Secure your API with JSON Web Tokens. Decouple your auth logic from your business logic.",
               "list": [
-                { "emoji": "🔑", "text": "<strong>Signing:</strong> Use PyJWT or python-jose to sign tokens." },
-                { "emoji": "🛡️", "text": "<strong>Verification:</strong> Automatic token validation in your dependencies." }
-              ]
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Signing:</strong> Use PyJWT or python-jose to sign tokens."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Verification:</strong> Automatic token validation in your dependencies."
+                }
+              ],
+              "title": "Secure your API with JSON Web Tokens. Decouple your auth logic from your business logic."
             }
           },
           {
             "type": "content",
             "title": "Security Scopes (Elite)",
             "box": {
-              "content": "Granular permissions using OAuth2 Scopes. Define what each user can see and do.",
-              "code": "async def get_current_user(\n    security_scopes: SecurityScopes, \n    token: str = Depends(oauth2_scheme)\n): ..."
+              "code": "async def get_current_user(\n    security_scopes: SecurityScopes, \n    token: str = Depends(oauth2_scheme)\n): ...",
+              "title": "Granular permissions using OAuth2 Scopes. Define what each user can see and do."
             }
           }
         ]
@@ -280,30 +343,30 @@
           {
             "type": "topic-title",
             "title": "7. Databases",
-            "box": { "content": "SQLAlchemy, Tortoise, and Async ORMs." }
+            "subtitle": "SQLAlchemy, Tortoise, and Async ORMs."
           },
           {
             "type": "content",
             "title": "SQLAlchemy 2.0 (Async)",
             "box": {
-              "content": "FastAPI pairs perfectly with SQLAlchemy's new asynchronous API.",
-              "code": "async_engine = create_async_engine(DATABASE_URL)\nAsyncSessionLocal = sessionmaker(\n    async_engine, class_=AsyncSession, expire_on_commit=False\n)"
+              "code": "async_engine = create_async_engine(DATABASE_URL)\nAsyncSessionLocal = sessionmaker(\n    async_engine, class_=AsyncSession, expire_on_commit=False\n)",
+              "title": "FastAPI pairs perfectly with SQLAlchemy's new asynchronous API."
             }
           },
           {
             "type": "content",
             "title": "Alembic Migrations",
             "box": {
-              "content": "Use Alembic to manage your database schema changes over time.",
-              "code": "# shell: alembic revision --autogenerate -m \"Initial\"\n# shell: alembic upgrade head"
+              "code": "# shell: alembic revision --autogenerate -m \"Initial\"\n# shell: alembic upgrade head",
+              "title": "Use Alembic to manage your database schema changes over time."
             }
           },
           {
             "type": "content",
             "title": "Alternative: Tortoise ORM",
             "box": {
-              "content": "An easy-to-use asyncio ORM inspired by Django, designed specifically for FastAPI/Starlette.",
-              "code": "await Tortoise.init(db_url=\"sqlite://db.sqlite3\")"
+              "code": "await Tortoise.init(db_url=\"sqlite://db.sqlite3\")",
+              "title": "An easy-to-use asyncio ORM inspired by Django, designed specifically for FastAPI/Starlette."
             }
           }
         ]
@@ -315,41 +378,47 @@
           {
             "type": "topic-title",
             "title": "8. Advanced Features",
-            "box": { "content": "Lifecycle events and background work." }
+            "subtitle": "Lifecycle events and background work."
           },
           {
             "type": "content",
             "title": "Lifespan Events",
             "box": {
-              "content": "Define logic that should run before the application starts or after it finishes.",
-              "code": "@asynccontextmanager\nasync def lifespan(app: FastAPI):\n    # Startup logic (e.g., connect to DB)\n    yield\n    # Shutdown logic (e.g., disconnect)"
+              "code": "@asynccontextmanager\nasync def lifespan(app: FastAPI):\n    # Startup logic (e.g., connect to DB)\n    yield\n    # Shutdown logic (e.g., disconnect)",
+              "title": "Define logic that should run before the application starts or after it finishes."
             }
           },
           {
             "type": "content",
             "title": "Background Tasks",
             "box": {
-              "content": "Execute heavy tasks after returning a response, without blocking the client.",
-              "code": "@app.post(\"/send-notification/\")\nasync def send_notification(email: str, background_tasks: BackgroundTasks):\n    background_tasks.add_task(send_email_log, email)\n    return {\"message\": \"Notification sent in the background\"}"
+              "code": "@app.post(\"/send-notification/\")\nasync def send_notification(email: str, background_tasks: BackgroundTasks):\n    background_tasks.add_task(send_email_log, email)\n    return {\"message\": \"Notification sent in the background\"}",
+              "title": "Execute heavy tasks after returning a response, without blocking the client."
             }
           },
           {
             "type": "content",
             "title": "Custom Middlewares",
             "box": {
-              "content": "Intercept every request and response to add headers, logging, or timing info.",
-              "code": "@app.middleware(\"http\")\nasync def add_process_time_header(request, call_next):\n    start_time = time.time()\n    response = await call_next(request)\n    return response"
+              "code": "@app.middleware(\"http\")\nasync def add_process_time_header(request, call_next):\n    start_time = time.time()\n    response = await call_next(request)\n    return response",
+              "title": "Intercept every request and response to add headers, logging, or timing info."
             }
           },
           {
             "type": "content",
             "title": "Middleware Execution Order",
             "box": {
-              "content": "Middlewares are executed in reverse order of how they were added (LIFO) for the request, and then forward for the response.",
               "list": [
-                { "emoji": "📥", "text": "<strong>Request:</strong> Bottom to Top." },
-                { "emoji": "📤", "text": "<strong>Response:</strong> Top to Bottom." }
-              ]
+                {
+                  "emoji": "📥",
+                  "text": "<strong>Request:</strong> Bottom to Top."
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>Response:</strong> Top to Bottom."
+                }
+              ],
+              "title": "Middlewares are executed in reverse order of how they were added (LIFO) for the request, and then forward for the response."
             }
           }
         ]
@@ -361,33 +430,39 @@
           {
             "type": "topic-title",
             "title": "9. Production",
-            "box": { "content": "Scaling FastAPI in the real world." }
+            "subtitle": "Scaling FastAPI in the real world."
           },
           {
             "type": "content",
             "title": "Uvicorn & Gunicorn",
             "box": {
-              "content": "For production, use Gunicorn with the Uvicorn worker class for multi-process scalability.",
-              "code": "# shell: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"
+              "code": "# shell: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app",
+              "title": "For production, use Gunicorn with the Uvicorn worker class for multi-process scalability."
             }
           },
           {
             "type": "content",
             "title": "Dockerization",
             "box": {
-              "content": "Standardize your deployment with multi-stage Docker builds for minimal image size.",
-              "code": "FROM python:3.11-slim\nCOPY . /app\nRUN pip install -r requirements.txt\nCMD [\"uvicorn\", \"main:app\", \"--host\", \"0.0.0.0\"]"
+              "code": "FROM python:3.11-slim\nCOPY . /app\nRUN pip install -r requirements.txt\nCMD [\"uvicorn\", \"main:app\", \"--host\", \"0.0.0.0\"]",
+              "title": "Standardize your deployment with multi-stage Docker builds for minimal image size."
             }
           },
           {
             "type": "content",
             "title": "Cloud Native Patterns",
             "box": {
-              "content": "FastAPI is ideal for Kubernetes and Serverless (AWS Lambda, Google Cloud Run).",
               "list": [
-                { "emoji": "☸️", "text": "<strong>Liveness/Readiness:</strong> Easy healthcheck endpoints." },
-                { "emoji": "☁️", "text": "<strong>Stateless:</strong> Perfect for horizontal scaling." }
-              ]
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Liveness/Readiness:</strong> Easy healthcheck endpoints."
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Stateless:</strong> Perfect for horizontal scaling."
+                }
+              ],
+              "title": "FastAPI is ideal for Kubernetes and Serverless (AWS Lambda, Google Cloud Run)."
             }
           }
         ]
@@ -399,30 +474,30 @@
           {
             "type": "topic-title",
             "title": "10. Testing",
-            "box": { "content": "Fast, reliable, and type-safe tests." }
+            "subtitle": "Fast, reliable, and type-safe tests."
           },
           {
             "type": "content",
             "title": "The FastAPI TestClient",
             "box": {
-              "content": "Built on 'httpx', the TestClient allows you to test your API without running a server.",
-              "code": "from fastapi.testclient import TestClient\nclient = TestClient(app)\n\ndef test_read_main():\n    response = client.get(\"/\")\n    assert response.status_code == 200"
+              "code": "from fastapi.testclient import TestClient\nclient = TestClient(app)\n\ndef test_read_main():\n    response = client.get(\"/\")\n    assert response.status_code == 200",
+              "title": "Built on 'httpx', the TestClient allows you to test your API without running a server."
             }
           },
           {
             "type": "content",
             "title": "Overriding Dependencies",
             "box": {
-              "content": "Swap out real databases or external services for mocks during testing effortlessly.",
-              "code": "app.dependency_overrides[get_db] = override_get_db"
+              "code": "app.dependency_overrides[get_db] = override_get_db",
+              "title": "Swap out real databases or external services for mocks during testing effortlessly."
             }
           },
           {
             "type": "content",
             "title": "Asynchronous Testing",
             "box": {
-              "content": "Use 'pytest-asyncio' and 'httpx.AsyncClient' for testing async endpoints.",
-              "code": "async with AsyncClient(app=app) as ac:\n    response = await ac.get(\"/\")"
+              "code": "async with AsyncClient(app=app) as ac:\n    response = await ac.get(\"/\")",
+              "title": "Use 'pytest-asyncio' and 'httpx.AsyncClient' for testing async endpoints."
             }
           }
         ]
@@ -434,28 +509,40 @@
           {
             "type": "topic-title",
             "title": "11. Enterprise",
-            "box": { "content": "Architecting for complexity." }
+            "subtitle": "Architecting for complexity."
           },
           {
             "type": "content",
             "title": "Vertical Slice Architecture",
             "box": {
-              "content": "Organize code by feature, not by layer. Keep all logic for a feature in one place.",
               "list": [
-                { "emoji": "📁", "text": "<strong>Modules:</strong> users/, orders/, products/." },
-                { "emoji": "🔗", "text": "<strong>Decoupling:</strong> Use APIRouters to separate concerns." }
-              ]
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Modules:</strong> users/, orders/, products/."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Decoupling:</strong> Use APIRouters to separate concerns."
+                }
+              ],
+              "title": "Organize code by feature, not by layer. Keep all logic for a feature in one place."
             }
           },
           {
             "type": "content",
             "title": "FastAPI in Microservices",
             "box": {
-              "content": "Why FastAPI is the go-to for modern distributed systems.",
               "list": [
-                { "emoji": "🚀", "text": "<strong>Lightweight:</strong> Low memory footprint." },
-                { "emoji": "📡", "text": "<strong>Communication:</strong> Native support for JSON and gRPC (via extensions)." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Lightweight:</strong> Low memory footprint."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Communication:</strong> Native support for JSON and gRPC (via extensions)."
+                }
+              ],
+              "title": "Why FastAPI is the go-to for modern distributed systems."
             }
           }
         ]
@@ -467,24 +554,35 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The future of Python web APIs." }
+            "subtitle": "The future of Python web APIs."
           },
           {
             "type": "content",
             "title": "Summary",
             "box": {
-              "content": "FastAPI brings performance, type-safety, and developer joy to Python.",
               "list": [
-                { "emoji": "✅", "text": "Production-ready security and documentation." },
-                { "emoji": "✅", "text": "Asynchronous by default." },
-                { "emoji": "✅", "text": "Built on modern Python standards." }
-              ]
+                {
+                  "emoji": "✅",
+                  "text": "Production-ready security and documentation."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Asynchronous by default."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Built on modern Python standards."
+                }
+              ],
+              "title": "FastAPI brings performance, type-safety, and developer joy to Python."
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Any questions? Thank you for attending!" }
+            "box": {
+              "title": "Any questions? Thank you for attending!"
+            }
           }
         ]
       }

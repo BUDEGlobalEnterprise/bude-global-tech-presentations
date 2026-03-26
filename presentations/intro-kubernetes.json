@@ -110,7 +110,6 @@
             "emoji": "🎯",
             "title": "What is Kubernetes?",
             "box": {
-              "content": "<span class=\"highlight\">Open-source container orchestration system</span> for automating deployment, scaling, and management",
               "list": [
                 {
                   "emoji": "🐙",
@@ -132,7 +131,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Ecosystem</strong> - Rich set of tools and extensions"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Open-source container orchestration system</span> for automating deployment, scaling, and management"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Kubernetes means \"helmsman\" or \"pilot\" in Greek - k8s is the abbreviation!"
@@ -305,8 +305,8 @@
             "emoji": "🏢",
             "title": "Control Plane Components",
             "box": {
-              "content": "<strong>Master nodes that manage the cluster</strong>",
-              "code": "Control Plane (Master Node):\n├── kube-apiserver\n│   └── Frontend to control plane, REST API\n├── etcd\n│   └── Consistent, highly-available key-value store\n├── kube-scheduler\n│   └── Watches for new Pods, assigns to nodes\n├── kube-controller-manager\n│   └── Runs controller processes (Node, Replication, etc.)\n└── cloud-controller-manager\n    └── Cloud-specific control logic (optional)\n\nFeatures:\n• High availability with multiple master nodes\n• etcd cluster for distributed consensus\n• All communication via API server"
+              "code": "Control Plane (Master Node):\n├── kube-apiserver\n│   └── Frontend to control plane, REST API\n├── etcd\n│   └── Consistent, highly-available key-value store\n├── kube-scheduler\n│   └── Watches for new Pods, assigns to nodes\n├── kube-controller-manager\n│   └── Runs controller processes (Node, Replication, etc.)\n└── cloud-controller-manager\n    └── Cloud-specific control logic (optional)\n\nFeatures:\n• High availability with multiple master nodes\n• etcd cluster for distributed consensus\n• All communication via API server",
+              "title": "<strong>Master nodes that manage the cluster</strong>"
             }
           },
           {
@@ -314,8 +314,8 @@
             "emoji": "🖥️",
             "title": "Worker Node Components",
             "box": {
-              "content": "<strong>Nodes that run containerized applications</strong>",
-              "code": "Worker Node:\n├── kubelet\n│   └── Agent that communicates with control plane\n├── kube-proxy\n│   └── Network proxy maintaining network rules\n├── Container Runtime\n│   └── Docker, containerd, CRI-O\n└── Pods\n    └── Running application containers\n\nNode Communication:\n• kubelet registers node with API server\n• kube-proxy handles service networking\n• Container runtime pulls images and runs containers\n• Pods scheduled based on resource availability"
+              "code": "Worker Node:\n├── kubelet\n│   └── Agent that communicates with control plane\n├── kube-proxy\n│   └── Network proxy maintaining network rules\n├── Container Runtime\n│   └── Docker, containerd, CRI-O\n└── Pods\n    └── Running application containers\n\nNode Communication:\n• kubelet registers node with API server\n• kube-proxy handles service networking\n• Container runtime pulls images and runs containers\n• Pods scheduled based on resource availability",
+              "title": "<strong>Nodes that run containerized applications</strong>"
             }
           }
         ]
@@ -333,8 +333,8 @@
             "emoji": "🔧",
             "title": "Basic kubectl Commands",
             "box": {
-              "content": "<strong>Essential commands for cluster management</strong>",
-              "code": "# Cluster information\nkubectl cluster-info                    # Display cluster info\nkubectl get nodes                       # List all nodes\nkubectl version                         # Client and server version\n\n# Basic operations\nkubectl get pods                        # List pods in current namespace\nkubectl get pods -A                     # List all pods in all namespaces\nkubectl describe pod <pod-name>         # Detailed pod information\nkubectl logs <pod-name>                 # Pod logs\nkubectl exec -it <pod-name> -- bash     # Execute command in pod\n\n# Resource management\nkubectl apply -f manifest.yaml          # Create/update resources\nkubectl delete -f manifest.yaml         # Delete resources\nkubectl create deployment nginx --image=nginx  # Imperative create\n\n# Namespace operations\nkubectl get namespaces                  # List namespaces\nkubectl config set-context --current --namespace=my-namespace  # Switch namespace"
+              "code": "# Cluster information\nkubectl cluster-info                    # Display cluster info\nkubectl get nodes                       # List all nodes\nkubectl version                         # Client and server version\n\n# Basic operations\nkubectl get pods                        # List pods in current namespace\nkubectl get pods -A                     # List all pods in all namespaces\nkubectl describe pod <pod-name>         # Detailed pod information\nkubectl logs <pod-name>                 # Pod logs\nkubectl exec -it <pod-name> -- bash     # Execute command in pod\n\n# Resource management\nkubectl apply -f manifest.yaml          # Create/update resources\nkubectl delete -f manifest.yaml         # Delete resources\nkubectl create deployment nginx --image=nginx  # Imperative create\n\n# Namespace operations\nkubectl get namespaces                  # List namespaces\nkubectl config set-context --current --namespace=my-namespace  # Switch namespace",
+              "title": "<strong>Essential commands for cluster management</strong>"
             }
           },
           {
@@ -342,8 +342,8 @@
             "emoji": "🔍",
             "title": "Advanced kubectl Usage",
             "box": {
-              "content": "<strong>Powerful commands for debugging and management</strong>",
-              "code": "# Debugging and troubleshooting\nkubectl get events --sort-by=.metadata.creationTimestamp  # Recent events\nkubectl top nodes                        # Resource usage (nodes)\nkubectl top pods                         # Resource usage (pods)\nkubectl port-forward svc/my-service 8080:80  # Port forwarding\n\n# Configuration and context\nkubectl config get-contexts             # List contexts\nkubectl config use-context my-cluster   # Switch context\nkubectl config view                     # View kubeconfig\n\n# Batch operations\nkubectl get pods --selector app=nginx   # Filter by label\nkubectl delete pods --all               # Delete all pods in namespace\nkubectl scale deployment my-app --replicas=5  # Scale deployment\n\n# YAML operations\nkubectl get pod my-pod -o yaml          # Get resource as YAML\nkubectl explain pods                    # Documentation for resource\nkubectl api-resources                   # List all API resources"
+              "code": "# Debugging and troubleshooting\nkubectl get events --sort-by=.metadata.creationTimestamp  # Recent events\nkubectl top nodes                        # Resource usage (nodes)\nkubectl top pods                         # Resource usage (pods)\nkubectl port-forward svc/my-service 8080:80  # Port forwarding\n\n# Configuration and context\nkubectl config get-contexts             # List contexts\nkubectl config use-context my-cluster   # Switch context\nkubectl config view                     # View kubeconfig\n\n# Batch operations\nkubectl get pods --selector app=nginx   # Filter by label\nkubectl delete pods --all               # Delete all pods in namespace\nkubectl scale deployment my-app --replicas=5  # Scale deployment\n\n# YAML operations\nkubectl get pod my-pod -o yaml          # Get resource as YAML\nkubectl explain pods                    # Documentation for resource\nkubectl api-resources                   # List all API resources",
+              "title": "<strong>Powerful commands for debugging and management</strong>"
             }
           }
         ]
@@ -361,8 +361,8 @@
             "emoji": "📄",
             "title": "Basic Pod Manifest",
             "box": {
-              "content": "<strong>Simple Pod configuration</strong>",
-              "code": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: nginx-pod\n  labels:\n    app: nginx\n    environment: development\nspec:\n  containers:\n  - name: nginx-container\n    image: nginx:1.21\n    ports:\n    - containerPort: 80\n    env:\n    - name: ENVIRONMENT\n      value: \"development\"\n    resources:\n      requests:\n        memory: \"64Mi\"\n        cpu: \"250m\"\n      limits:\n        memory: \"128Mi\"\n        cpu: \"500m\"\n  restartPolicy: Always\n\nKey Fields:\n• apiVersion: Kubernetes API version\n• kind: Type of resource (Pod, Deployment, etc.)\n• metadata: Name, labels, annotations\n• spec: Desired state of the resource\n• containers: Container specifications\n• resources: CPU and memory requirements"
+              "code": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: nginx-pod\n  labels:\n    app: nginx\n    environment: development\nspec:\n  containers:\n  - name: nginx-container\n    image: nginx:1.21\n    ports:\n    - containerPort: 80\n    env:\n    - name: ENVIRONMENT\n      value: \"development\"\n    resources:\n      requests:\n        memory: \"64Mi\"\n        cpu: \"250m\"\n      limits:\n        memory: \"128Mi\"\n        cpu: \"500m\"\n  restartPolicy: Always\n\nKey Fields:\n• apiVersion: Kubernetes API version\n• kind: Type of resource (Pod, Deployment, etc.)\n• metadata: Name, labels, annotations\n• spec: Desired state of the resource\n• containers: Container specifications\n• resources: CPU and memory requirements",
+              "title": "<strong>Simple Pod configuration</strong>"
             }
           },
           {
@@ -370,8 +370,8 @@
             "emoji": "🚀",
             "title": "Deployment Manifest",
             "box": {
-              "content": "<strong>Deployment for managing Pod replicas</strong>",
-              "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment\n  labels:\n    app: nginx\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: nginx\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 1\n      maxUnavailable: 0\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: nginx:1.21\n        ports:\n        - containerPort: 80\n        livenessProbe:\n          httpGet:\n            path: /\n            port: 80\n          initialDelaySeconds: 5\n          periodSeconds: 10\n        readinessProbe:\n          httpGet:\n            path: /\n            port: 80\n          initialDelaySeconds: 5\n          periodSeconds: 10\n\nDeployment Benefits:\n• Maintains desired number of replicas\n• Rolling updates and rollbacks\n• Self-healing (replaces failed pods)\n• Scalable replica counts"
+              "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment\n  labels:\n    app: nginx\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: nginx\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 1\n      maxUnavailable: 0\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: nginx:1.21\n        ports:\n        - containerPort: 80\n        livenessProbe:\n          httpGet:\n            path: /\n            port: 80\n          initialDelaySeconds: 5\n          periodSeconds: 10\n        readinessProbe:\n          httpGet:\n            path: /\n            port: 80\n          initialDelaySeconds: 5\n          periodSeconds: 10\n\nDeployment Benefits:\n• Maintains desired number of replicas\n• Rolling updates and rollbacks\n• Self-healing (replaces failed pods)\n• Scalable replica counts",
+              "title": "<strong>Deployment for managing Pod replicas</strong>"
             }
           },
           {
@@ -379,8 +379,8 @@
             "emoji": "🌐",
             "title": "Service & Ingress Manifests",
             "box": {
-              "content": "<strong>Networking configuration</strong>",
-              "code": "# Service Manifest\napiVersion: v1\nkind: Service\nmetadata:\n  name: nginx-service\nspec:\n  selector:\n    app: nginx\n  ports:\n  - name: http\n    port: 80\n    targetPort: 80\n  type: ClusterIP  # Also: NodePort, LoadBalancer\n\n---\n\n# Ingress Manifest\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: nginx-ingress\n  annotations:\n    nginx.ingress.kubernetes.io/rewrite-target: /\nspec:\n  rules:\n  - host: myapp.example.com\n    http:\n      paths:\n      - path: /\n        pathType: Prefix\n        backend:\n          service:\n            name: nginx-service\n            port:\n              number: 80\n\nService Types:\n• ClusterIP: Internal cluster IP (default)\n• NodePort: Expose on node IPs\n• LoadBalancer: Cloud load balancer\n• ExternalName: External service reference"
+              "code": "# Service Manifest\napiVersion: v1\nkind: Service\nmetadata:\n  name: nginx-service\nspec:\n  selector:\n    app: nginx\n  ports:\n  - name: http\n    port: 80\n    targetPort: 80\n  type: ClusterIP  # Also: NodePort, LoadBalancer\n\n---\n\n# Ingress Manifest\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: nginx-ingress\n  annotations:\n    nginx.ingress.kubernetes.io/rewrite-target: /\nspec:\n  rules:\n  - host: myapp.example.com\n    http:\n      paths:\n      - path: /\n        pathType: Prefix\n        backend:\n          service:\n            name: nginx-service\n            port:\n              number: 80\n\nService Types:\n• ClusterIP: Internal cluster IP (default)\n• NodePort: Expose on node IPs\n• LoadBalancer: Cloud load balancer\n• ExternalName: External service reference",
+              "title": "<strong>Networking configuration</strong>"
             }
           }
         ]
@@ -398,8 +398,8 @@
             "emoji": "🔄",
             "title": "Rolling Update Strategy",
             "box": {
-              "content": "<strong>Gradual replacement of old pods with new ones</strong>",
-              "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-rolling\nspec:\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 25%        # Maximum additional pods during update\n      maxUnavailable: 25%  # Maximum unavailable pods during update\n  replicas: 4\n  template:\n    # ... pod template ...\n\nRolling Update Process:\n1. New ReplicaSet created with updated version\n2. Old pods gradually terminated, new pods created\n3. Service load balancer distributes traffic\n4. Process continues until all pods are updated\n\nBenefits:\n• Zero downtime deployment\n• Automatic rollback on failure\n• Gradual traffic migration\n• Health checks ensure stability\n\nCommands:\nkubectl rollout status deployment/myapp-rolling\nkubectl rollout history deployment/myapp-rolling\nkubectl rollout undo deployment/myapp-rolling"
+              "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-rolling\nspec:\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 25%        # Maximum additional pods during update\n      maxUnavailable: 25%  # Maximum unavailable pods during update\n  replicas: 4\n  template:\n    # ... pod template ...\n\nRolling Update Process:\n1. New ReplicaSet created with updated version\n2. Old pods gradually terminated, new pods created\n3. Service load balancer distributes traffic\n4. Process continues until all pods are updated\n\nBenefits:\n• Zero downtime deployment\n• Automatic rollback on failure\n• Gradual traffic migration\n• Health checks ensure stability\n\nCommands:\nkubectl rollout status deployment/myapp-rolling\nkubectl rollout history deployment/myapp-rolling\nkubectl rollout undo deployment/myapp-rolling",
+              "title": "<strong>Gradual replacement of old pods with new ones</strong>"
             }
           },
           {
@@ -407,8 +407,8 @@
             "emoji": "🔵🟢",
             "title": "Blue-Green Deployment",
             "box": {
-              "content": "<strong>Instant switch between two identical environments</strong>",
-              "code": "# Blue Environment (v1.0)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-blue\n  labels:\n    version: \"1.0\"\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: myapp\n      version: \"1.0\"\n  template:\n    metadata:\n      labels:\n        app: myapp\n        version: \"1.0\"\n    # ... container spec ...\n\n---\n\n# Green Environment (v1.1)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-green\n  labels:\n    version: \"1.1\"\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: myapp\n      version: \"1.1\"\n  template:\n    metadata:\n      labels:\n        app: myapp\n        version: \"1.1\"\n    # ... container spec ...\n\n---\n\n# Service pointing to current version\napiVersion: v1\nkind: Service\nmetadata:\n  name: myapp-service\nspec:\n  selector:\n    app: myapp\n    version: \"1.0\"  # Switch to \"1.1\" for green deployment\n  ports:\n  - port: 80\n\nProcess:\n1. Deploy new version alongside old (green)\n2. Test new version internally\n3. Update service selector to switch traffic\n4. Remove old deployment (blue)"
+              "code": "# Blue Environment (v1.0)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-blue\n  labels:\n    version: \"1.0\"\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: myapp\n      version: \"1.0\"\n  template:\n    metadata:\n      labels:\n        app: myapp\n        version: \"1.0\"\n    # ... container spec ...\n\n---\n\n# Green Environment (v1.1)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-green\n  labels:\n    version: \"1.1\"\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: myapp\n      version: \"1.1\"\n  template:\n    metadata:\n      labels:\n        app: myapp\n        version: \"1.1\"\n    # ... container spec ...\n\n---\n\n# Service pointing to current version\napiVersion: v1\nkind: Service\nmetadata:\n  name: myapp-service\nspec:\n  selector:\n    app: myapp\n    version: \"1.0\"  # Switch to \"1.1\" for green deployment\n  ports:\n  - port: 80\n\nProcess:\n1. Deploy new version alongside old (green)\n2. Test new version internally\n3. Update service selector to switch traffic\n4. Remove old deployment (blue)",
+              "title": "<strong>Instant switch between two identical environments</strong>"
             }
           }
         ]
@@ -426,8 +426,8 @@
             "emoji": "💾",
             "title": "Persistent Volumes & Claims",
             "box": {
-              "content": "<strong>Dynamic storage provisioning</strong>",
-              "code": "# PersistentVolumeClaim (User requests storage)\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: my-pvc\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 10Gi\n  storageClassName: fast-ssd\n\n---\n\n# Pod using PersistentVolumeClaim\napiVersion: v1\nkind: Pod\nmetadata:\n  name: app-with-storage\nspec:\n  containers:\n  - name: app\n    image: nginx\n    volumeMounts:\n    - name: storage-volume\n      mountPath: /data\n  volumes:\n  - name: storage-volume\n    persistentVolumeClaim:\n      claimName: my-pvc\n\nAccess Modes:\n• ReadWriteOnce (RWO): Single node read-write\n• ReadOnlyMany (ROX): Multiple nodes read-only\n• ReadWriteMany (RWX): Multiple nodes read-write\n\nStorage Classes:\n• fast-ssd: SSD storage\n• standard-hdd: HDD storage\n• cloud-specific: aws-ebs, azure-disk, gce-pd"
+              "code": "# PersistentVolumeClaim (User requests storage)\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: my-pvc\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 10Gi\n  storageClassName: fast-ssd\n\n---\n\n# Pod using PersistentVolumeClaim\napiVersion: v1\nkind: Pod\nmetadata:\n  name: app-with-storage\nspec:\n  containers:\n  - name: app\n    image: nginx\n    volumeMounts:\n    - name: storage-volume\n      mountPath: /data\n  volumes:\n  - name: storage-volume\n    persistentVolumeClaim:\n      claimName: my-pvc\n\nAccess Modes:\n• ReadWriteOnce (RWO): Single node read-write\n• ReadOnlyMany (ROX): Multiple nodes read-only\n• ReadWriteMany (RWX): Multiple nodes read-write\n\nStorage Classes:\n• fast-ssd: SSD storage\n• standard-hdd: HDD storage\n• cloud-specific: aws-ebs, azure-disk, gce-pd",
+              "title": "<strong>Dynamic storage provisioning</strong>"
             }
           },
           {
@@ -435,8 +435,8 @@
             "emoji": "🗄️",
             "title": "StatefulSets for Stateful Applications",
             "box": {
-              "content": "<strong>Managing stateful workloads</strong>",
-              "code": "apiVersion: apps/v1\nkind: StatefulSet\nmetadata:\n  name: mysql\nspec:\n  serviceName: \"mysql\"\n  replicas: 3\n  selector:\n    matchLabels:\n      app: mysql\n  template:\n    metadata:\n      labels:\n        app: mysql\n    spec:\n      containers:\n      - name: mysql\n        image: mysql:8.0\n        env:\n        - name: MYSQL_ROOT_PASSWORD\n          valueFrom:\n            secretKeyRef:\n              name: mysql-secret\n              key: password\n        volumeMounts:\n        - name: data\n          mountPath: /var/lib/mysql\n  volumeClaimTemplates:\n  - metadata:\n      name: data\n    spec:\n      accessModes: [ \"ReadWriteOnce\" ]\n      resources:\n        requests:\n          storage: 20Gi\n\nStatefulSet Characteristics:\n• Stable, unique network identifiers\n• Persistent storage for each replica\n• Ordered, graceful deployment and scaling\n• Ordered, graceful deletion and termination\n• Unique: mysql-0, mysql-1, mysql-2"
+              "code": "apiVersion: apps/v1\nkind: StatefulSet\nmetadata:\n  name: mysql\nspec:\n  serviceName: \"mysql\"\n  replicas: 3\n  selector:\n    matchLabels:\n      app: mysql\n  template:\n    metadata:\n      labels:\n        app: mysql\n    spec:\n      containers:\n      - name: mysql\n        image: mysql:8.0\n        env:\n        - name: MYSQL_ROOT_PASSWORD\n          valueFrom:\n            secretKeyRef:\n              name: mysql-secret\n              key: password\n        volumeMounts:\n        - name: data\n          mountPath: /var/lib/mysql\n  volumeClaimTemplates:\n  - metadata:\n      name: data\n    spec:\n      accessModes: [ \"ReadWriteOnce\" ]\n      resources:\n        requests:\n          storage: 20Gi\n\nStatefulSet Characteristics:\n• Stable, unique network identifiers\n• Persistent storage for each replica\n• Ordered, graceful deployment and scaling\n• Ordered, graceful deletion and termination\n• Unique: mysql-0, mysql-1, mysql-2",
+              "title": "<strong>Managing stateful workloads</strong>"
             }
           }
         ]
@@ -454,8 +454,8 @@
             "emoji": "🔐",
             "title": "RBAC & Service Accounts",
             "box": {
-              "content": "<strong>Role-Based Access Control</strong>",
-              "code": "# ServiceAccount for application\napiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: my-app-sa\n  namespace: default\n\n---\n\n# Role with specific permissions\napiVersion: rbac.authorization.k8s.io/v1\nkind: Role\nmetadata:\n  namespace: default\n  name: pod-reader\nrules:\n- apiGroups: [\"\"]\n  resources: [\"pods\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n\n---\n\n# RoleBinding to grant permissions\napiVersion: rbac.authorization.k8s.io/v1\nkind: RoleBinding\nmetadata:\n  name: read-pods\n  namespace: default\nsubjects:\n- kind: ServiceAccount\n  name: my-app-sa\n  namespace: default\nroleRef:\n  kind: Role\n  name: pod-reader\n  apiGroup: rbac.authorization.k8s.io\n\n---\n\n# Pod using ServiceAccount\napiVersion: v1\nkind: Pod\nmetadata:\n  name: my-pod\nspec:\n  serviceAccountName: my-app-sa\n  containers:\n  - name: app\n    image: my-app:latest\n\nRBAC Components:\n• ServiceAccount: Identity for processes in pods\n• Role: Namespace-scoped permissions\n• ClusterRole: Cluster-scoped permissions\n• RoleBinding: Grants permissions within namespace\n• ClusterRoleBinding: Grants cluster-wide permissions"
+              "code": "# ServiceAccount for application\napiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: my-app-sa\n  namespace: default\n\n---\n\n# Role with specific permissions\napiVersion: rbac.authorization.k8s.io/v1\nkind: Role\nmetadata:\n  namespace: default\n  name: pod-reader\nrules:\n- apiGroups: [\"\"]\n  resources: [\"pods\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n\n---\n\n# RoleBinding to grant permissions\napiVersion: rbac.authorization.k8s.io/v1\nkind: RoleBinding\nmetadata:\n  name: read-pods\n  namespace: default\nsubjects:\n- kind: ServiceAccount\n  name: my-app-sa\n  namespace: default\nroleRef:\n  kind: Role\n  name: pod-reader\n  apiGroup: rbac.authorization.k8s.io\n\n---\n\n# Pod using ServiceAccount\napiVersion: v1\nkind: Pod\nmetadata:\n  name: my-pod\nspec:\n  serviceAccountName: my-app-sa\n  containers:\n  - name: app\n    image: my-app:latest\n\nRBAC Components:\n• ServiceAccount: Identity for processes in pods\n• Role: Namespace-scoped permissions\n• ClusterRole: Cluster-scoped permissions\n• RoleBinding: Grants permissions within namespace\n• ClusterRoleBinding: Grants cluster-wide permissions",
+              "title": "<strong>Role-Based Access Control</strong>"
             }
           },
           {
@@ -463,8 +463,8 @@
             "emoji": "🔒",
             "title": "Secrets & Network Policies",
             "box": {
-              "content": "<strong>Securing data and network traffic</strong>",
-              "code": "# Secret for sensitive data\napiVersion: v1\nkind: Secret\nmetadata:\n  name: api-credentials\ntype: Opaque\ndata:\n  username: YWRtaW4=  # base64 encoded 'admin'\n  password: cGFzc3dvcmQ=  # base64 encoded 'password'\n\n---\n\n# NetworkPolicy for pod isolation\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: database-policy\n  namespace: default\nspec:\n  podSelector:\n    matchLabels:\n      app: database\n  policyTypes:\n  - Ingress\n  ingress:\n  - from:\n    - podSelector:\n        matchLabels:\n          app: webapp\n    ports:\n    - protocol: TCP\n      port: 5432\n\nSecurity Best Practices:\n• Use Secrets for sensitive data (encrypted at rest)\n• Implement Network Policies for traffic control\n• Use Pod Security Standards\n• Enable audit logging\n• Regular security scanning"
+              "code": "# Secret for sensitive data\napiVersion: v1\nkind: Secret\nmetadata:\n  name: api-credentials\ntype: Opaque\ndata:\n  username: YWRtaW4=  # base64 encoded 'admin'\n  password: cGFzc3dvcmQ=  # base64 encoded 'password'\n\n---\n\n# NetworkPolicy for pod isolation\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: database-policy\n  namespace: default\nspec:\n  podSelector:\n    matchLabels:\n      app: database\n  policyTypes:\n  - Ingress\n  ingress:\n  - from:\n    - podSelector:\n        matchLabels:\n          app: webapp\n    ports:\n    - protocol: TCP\n      port: 5432\n\nSecurity Best Practices:\n• Use Secrets for sensitive data (encrypted at rest)\n• Implement Network Policies for traffic control\n• Use Pod Security Standards\n• Enable audit logging\n• Regular security scanning",
+              "title": "<strong>Securing data and network traffic</strong>"
             }
           }
         ]
@@ -515,8 +515,8 @@
             "emoji": "🔧",
             "title": "Resource Monitoring Setup",
             "box": {
-              "content": "<strong>Monitoring stack installation</strong>",
-              "code": "# Install Prometheus Stack with Helm\nhelm repo add prometheus-community https://prometheus-community.github.io/helm-charts\nhelm repo update\n\nhelm install prometheus prometheus-community/kube-prometheus-stack \\\n  --namespace monitoring \\\n  --create-namespace \\\n  --set grafana.adminPassword=admin \\\n  --set prometheus.prometheusSpec.retentionSize=10GB\n\n# Access Grafana (port-forward)\nkubectl port-forward -n monitoring svc/prometheus-grafana 8080:80\n\n# Access Prometheus\nkubectl port-forward -n monitoring svc/prometheus-kube-prometheus-prometheus 9090:9090\n\nKey Metrics to Monitor:\n• Cluster: Node CPU/Memory, Pod capacity\n• Application: Request rate, error rate, latency\n• Kubernetes: Pod restarts, deployment status\n• Storage: Volume usage, IOPS\n\nAlerts to Configure:\n• Node down or not ready\n• Pod crash loops\n• High resource utilization\n• Persistent volume full"
+              "code": "# Install Prometheus Stack with Helm\nhelm repo add prometheus-community https://prometheus-community.github.io/helm-charts\nhelm repo update\n\nhelm install prometheus prometheus-community/kube-prometheus-stack \\\n  --namespace monitoring \\\n  --create-namespace \\\n  --set grafana.adminPassword=admin \\\n  --set prometheus.prometheusSpec.retentionSize=10GB\n\n# Access Grafana (port-forward)\nkubectl port-forward -n monitoring svc/prometheus-grafana 8080:80\n\n# Access Prometheus\nkubectl port-forward -n monitoring svc/prometheus-kube-prometheus-prometheus 9090:9090\n\nKey Metrics to Monitor:\n• Cluster: Node CPU/Memory, Pod capacity\n• Application: Request rate, error rate, latency\n• Kubernetes: Pod restarts, deployment status\n• Storage: Volume usage, IOPS\n\nAlerts to Configure:\n• Node down or not ready\n• Pod crash loops\n• High resource utilization\n• Persistent volume full",
+              "title": "<strong>Monitoring stack installation</strong>"
             }
           }
         ]
@@ -567,8 +567,8 @@
             "emoji": "📦",
             "title": "Helm Package Manager",
             "box": {
-              "content": "<strong>Managing Kubernetes applications</strong>",
-              "code": "# Helm Chart Structure\nmy-chart/\n├── Chart.yaml          # Chart metadata\n├── values.yaml         # Default configuration\n├── charts/             # Dependent charts\n├── templates/          # Kubernetes manifest templates\n│   ├── deployment.yaml\n│   ├── service.yaml\n│   └── configmap.yaml\n└── README.md\n\n# Common Helm Commands\nhelm repo add bitnami https://charts.bitnami.com/bitnami  # Add repository\nhelm repo update                                          # Update repo info\nhelm search repo nginx                                    # Search charts\nhelm install my-nginx bitnami/nginx                       # Install chart\nhelm upgrade my-nginx bitnami/nginx --version 1.0.0       # Upgrade release\nhelm uninstall my-nginx                                   # Remove release\nhelm list                                                 # List releases\n\n# Create your own chart\nhelm create my-app                                        # Create new chart\nhelm package my-app                                       # Package chart\nhelm install my-app ./my-app-1.0.0.tgz                   # Install local chart\n\nBenefits:\n• Template-driven manifest generation\n• Versioning and release management\n• Dependency management\n• Easy upgrades and rollbacks"
+              "code": "# Helm Chart Structure\nmy-chart/\n├── Chart.yaml          # Chart metadata\n├── values.yaml         # Default configuration\n├── charts/             # Dependent charts\n├── templates/          # Kubernetes manifest templates\n│   ├── deployment.yaml\n│   ├── service.yaml\n│   └── configmap.yaml\n└── README.md\n\n# Common Helm Commands\nhelm repo add bitnami https://charts.bitnami.com/bitnami  # Add repository\nhelm repo update                                          # Update repo info\nhelm search repo nginx                                    # Search charts\nhelm install my-nginx bitnami/nginx                       # Install chart\nhelm upgrade my-nginx bitnami/nginx --version 1.0.0       # Upgrade release\nhelm uninstall my-nginx                                   # Remove release\nhelm list                                                 # List releases\n\n# Create your own chart\nhelm create my-app                                        # Create new chart\nhelm package my-app                                       # Package chart\nhelm install my-app ./my-app-1.0.0.tgz                   # Install local chart\n\nBenefits:\n• Template-driven manifest generation\n• Versioning and release management\n• Dependency management\n• Easy upgrades and rollbacks",
+              "title": "<strong>Managing Kubernetes applications</strong>"
             }
           }
         ]

@@ -1,492 +1,856 @@
 {
   "presentation": {
-    "info": {
-      "title": "System Design: The Complete Encyclopedia",
-      "subtitle": "From First Principles to Billion-User Architectures",
-      "author": "Aravind Govindhasamy",
-      "version": "4.0.0",
-      "description": "Comprehensive guide to designing, scaling, and maintaining distributed systems. Covers 500+ concepts across 30 modules with real-world case studies.",
-      "duration": "15 hours",
-      "audience": "Senior Engineers, Architects, Engineering Managers, Tech Leads",
-      "prerequisites": ["Computer Science fundamentals", "Basic networking", "Database concepts"],
-      "generated_at": "2025-12-31",
-      "total_slides": 512,
-      "modules": 30
-    },
-    "modules": [
+    "topics": [
       {
         "id": "module_1",
         "title": "Module 1: Foundations of Scalable Systems",
-        "duration": "45 minutes",
         "slides": [
           {
-            "id": "1.1",
-            "type": "keynote",
+            "type": "content",
             "title": "The Three Pillars of System Design",
             "subtitle": "Reliability, Scalability, Maintainability in the Age of Cloud",
-            "pillars": [
-              {
-                "pillar": "Reliability",
-                "definition": "System continues to work correctly despite faults",
-                "metrics": ["Availability (uptime)", "Durability (data loss)", "Fault tolerance"],
-                "targets": ["99.9% (3 nines) = 8.76h downtime/year", "99.99% (4 nines) = 52.56m downtime/year", "99.999% (5 nines) = 5.26m downtime/year"]
-              },
-              {
-                "pillar": "Scalability",
-                "definition": "System can handle growth in load without degradation",
-                "dimensions": ["Load (requests/sec)", "Data (TB/PB)", "Complexity (features)"],
-                "patterns": ["Horizontal scaling", "Vertical scaling", "Sharding"]
-              },
-              {
-                "pillar": "Maintainability",
-                "definition": "System can be operated, maintained, and evolved efficiently",
-                "aspects": ["Operability (monitoring)", "Simplicity (reduced complexity)", "Evolvability (easy changes)"],
-                "costs": ["Mean Time To Recovery (MTTR)", "Cost of change", "On-call burden"]
-              }
-            ],
-            "statistics": {
-              "google_search_queries": "99,000/second",
-              "facebook_active_users": "2.9 billion",
-              "aws_s3_objects": "350+ trillion",
-              "kafka_messages": "7+ trillion/day"
+            "box": {
+              "title": "The Three Pillars",
+              "list": [
+                "<strong>Reliability</strong>: System continues to work correctly despite faults",
+                "<strong>Scalability</strong>: System can handle growth in load without degradation",
+                "<strong>Maintainability</strong>: System can be operated, maintained, and evolved efficiently"
+              ]
             },
-            "script": [
-              "Welcome to the most comprehensive system design course ever created.",
-              "We're not here to memorize buzzwords or draw pretty boxes. We're here to understand how the world's most scalable systems actually work.",
-              "Every system design decision involves trade-offs between three fundamental pillars.",
-              "Reliability: Will your system work when it matters? A banking system must be reliable. A social media feed can tolerate occasional failures.",
-              "Scalability: Can your system grow? Instagram grew from 10 to 100 million users in 2 years. Could your architecture handle that?",
-              "Maintainability: Can your engineers understand and modify the system? Complex systems become legacy systems when they can't be changed."
-            ]
+            "note": {
+              "text": "Reliability, Scalability, and Maintainability are fundamental."
+            }
           },
           {
-            "id": "1.2",
-            "type": "workloads",
+            "type": "content",
             "title": "Understanding Load: From Request Patterns to Data Volumes",
-            "load_characteristics": [
-              {
-                "pattern": "Read-Heavy",
-                "examples": ["Social media feeds", "News websites", "Product catalogs"],
-                "read_write_ratio": "100:1 to 1000:1",
-                "optimization": ["Caching (Redis, CDN)", "Read replicas", "Materialized views"]
-              },
-              {
-                "pattern": "Write-Heavy",
-                "examples": ["IoT sensor data", "Log aggregation", "Financial transactions"],
-                "read_write_ratio": "1:100 to 1:1000",
-                "optimization": ["Write-optimized DBs (Cassandra)", "Batching", "Asynchronous processing"]
-              },
-              {
-                "pattern": "Mixed Workload",
-                "examples": ["E-commerce", "SaaS applications", "Collaboration tools"],
-                "read_write_ratio": "10:1 to 1:10",
-                "optimization": ["Separate read/write paths", "Database tuning", "Queue-based processing"]
-              }
-            ],
-            "load_parameters": {
-              "throughput": "Requests per second (RPS)",
-              "latency": "Response time (p50, p95, p99, p999)",
-              "data_volume": "GB/day, TB/day, PB/day",
-              "concurrent_users": "Peak vs average"
-            },
-            "real_world_examples": {
-              "twitter_timeline": {
-                "rps": "1,000,000+",
-                "p99_latency": "< 200ms",
-                "data_growth": "500+ million tweets/day"
-              },
-              "uber_matching": {
-                "rps": "50,000+",
-                "p99_latency": "< 100ms",
-                "data_points": "10+ billion/day (GPS)"
-              },
-              "netflix_streaming": {
-                "throughput": "100+ Tbps",
-                "p99_latency": "< 50ms",
-                "storage": "100+ PB"
-              }
-            },
-            "script": [
-              "Before you design anything, understand the load.",
-              "Is your system read-heavy (like Twitter)? Or write-heavy (like IoT sensors)? Or both (like Uber)?",
-              "The numbers matter. 100 RPS is trivial. 100,000 RPS requires serious engineering. 1,000,000 RPS requires Google-level architecture.",
-              "Latency isn't just average response time. The p99 (99th percentile) tells you about user experience. The p999 (99.9th percentile) tells you about edge cases.",
-              "Data volume determines everything. 1GB/day fits in Excel. 1TB/day requires Hadoop. 1PB/day requires distributed file systems."
-            ]
+            "box": {
+              "title": "Load Characteristics",
+              "list": [
+                "<strong>Read-Heavy</strong>: 100:1 to 1000:1 (Social media feeds, News websites, Product catalogs)",
+                "<strong>Write-Heavy</strong>: 1:100 to 1:1000 (IoT sensor data, Log aggregation, Financial transactions)",
+                "<strong>Mixed Workload</strong>: 10:1 to 1:10 (E-commerce, SaaS applications, Collaboration tools)"
+              ]
+            }
           },
           {
-            "id": "1.3",
-            "type": "principles",
+            "type": "content",
             "title": "Design Principles: From Theory to Practice",
-            "principles": [
-              {
-                "principle": "Simplicity",
-                "description": "The simplest solution that meets requirements",
-                "manifesto": "Delete code, not write it",
-                "patterns": ["YAGNI (You Ain't Gonna Need It)", "KISS (Keep It Simple, Stupid)", "Rule of Three"]
-              },
-              {
-                "principle": "Loose Coupling",
-                "description": "Components interact through well-defined interfaces",
-                "benefits": ["Independent scaling", "Independent deployment", "Independent failure"],
-                "patterns": ["Message queues", "API gateways", "Event-driven architecture"]
-              },
-              {
-                "principle": "Idempotency",
-                "description": "Operations can be applied multiple times without changing result",
-                "importance": "Enables safe retries in distributed systems",
-                "implementation": ["Idempotency keys", "CAS operations", "Deduplication"]
-              },
-              {
-                "principle": "Graceful Degradation",
-                "description": "System maintains partial functionality during failures",
-                "examples": ["Twitter shows cached tweets when backend fails", "Netflix reduces video quality during congestion", "Google returns partial search results"],
-                "implementation": ["Circuit breakers", "Fallbacks", "Cached responses"]
-              }
-            ],
-            "tradeoff_framework": {
-              "dimensions": ["Performance vs Complexity", "Consistency vs Availability", "Cost vs Reliability", "Time to Market vs Scalability"],
-              "decision_making": "Every choice has consequences. Document trade-offs.",
-              "evolution": "Requirements change. Design for change."
-            },
-            "script": [
-              "These principles aren't academic. They're battle-tested.",
-              "Simplicity: Google's first version was a single Python script. Facebook's first version was PHP. Start simple, evolve.",
-              "Loose Coupling: Amazon's move to microservices (2002) enabled their scale. Teams deploy independently.",
-              "Idempotency: PayPal processes billions in payments. Without idempotency, retries would cause double charges.",
-              "Graceful Degradation: When AWS US-East-1 failed in 2017, Netflix continued streaming because they designed for regional failures.",
-              "Remember: Perfect is the enemy of good. Build what's needed today, but design for what might be needed tomorrow."
-            ]
+            "box": {
+              "title": "Core Design Principles",
+              "list": [
+                "<strong>Simplicity</strong>: The simplest solution that meets requirements",
+                "<strong>Loose Coupling</strong>: Components interact through well-defined interfaces",
+                "<strong>Idempotency</strong>: Operations can be applied multiple times without changing result",
+                "<strong>Graceful Degradation</strong>: System maintains partial functionality during failures"
+              ]
+            }
           },
           {
-            "id": "1.4",
             "type": "quiz",
-            "title": "Foundations Quiz",
-            "questions": [
-              {
-                "question": "What does 99.99% availability mean in minutes of downtime per year?",
-                "options": ["8.76 hours", "52.56 minutes", "5.26 minutes", "31.5 seconds"],
-                "answer": "52.56 minutes",
-                "explanation": "99.99% availability = 0.01% downtime = 0.0001 * 525,600 minutes/year = 52.56 minutes"
-              },
-              {
-                "question": "Which pillar focuses on reducing operational complexity?",
-                "options": ["Reliability", "Scalability", "Maintainability", "All of them"],
-                "answer": "Maintainability",
-                "explanation": "Maintainability includes operability (ease of operation) and simplicity (reduced complexity)"
-              },
-              {
-                "question": "What does p99 latency represent?",
-                "options": ["Average latency", "Median latency", "99th percentile latency", "Worst-case latency"],
-                "answer": "99th percentile latency",
-                "explanation": "p99 means 99% of requests are faster than this value. It captures tail latency."
-              }
+            "question": "What does 99.99% availability mean in minutes of downtime per year?",
+            "options": [
+              "8.76 hours",
+              "52.56 minutes",
+              "5.26 minutes",
+              "31.5 seconds"
             ],
-            "script": [
-              "Let's test our foundational knowledge.",
-              "These questions separate theoretical understanding from practical application."
-            ]
+            "correctAnswer": 1,
+            "explanation": "99.99% availability = 0.01% downtime = 0.0001 * 525,600 minutes/year = 52.56 minutes"
+          },
+          {
+            "type": "quiz",
+            "question": "Which pillar focuses on reducing operational complexity?",
+            "options": [
+              "Reliability",
+              "Scalability",
+              "Maintainability",
+              "All of them"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Maintainability includes operability (ease of operation) and simplicity (reduced complexity)"
+          },
+          {
+            "type": "quiz",
+            "question": "What does p99 latency represent?",
+            "options": [
+              "Average latency",
+              "Median latency",
+              "99th percentile latency",
+              "Worst-case latency"
+            ],
+            "correctAnswer": 2,
+            "explanation": "p99 means 99% of requests are faster than this value. It captures tail latency."
           }
-        ],
-        "key_takeaways": [
-          "Reliability, Scalability, Maintainability are the three pillars",
-          "Understand load characteristics before designing",
-          "Design principles guide trade-off decisions",
-          "Numbers matter: measure everything"
         ]
       },
       {
         "id": "module_2",
         "title": "Module 2: CAP Theorem and Beyond",
-        "duration": "60 minutes",
         "slides": [
           {
-            "id": "2.1",
-            "type": "theorem",
+            "type": "content",
             "title": "CAP Theorem: The Fundamental Constraint",
-            "definition": "In a distributed system, you can have at most two of: Consistency, Availability, Partition Tolerance",
-            "historical_context": {
-              "proposed": "Eric Brewer (2000)",
-              "proven": "Nancy Lynch & Seth Gilbert (2002)",
-              "significance": "First formal proof of distributed system limitations"
+            "box": {
+              "title": "Technical Details",
+              "list": []
             },
-            "tradeoffs": [
-              {
-                "choice": "CP (Consistency + Partition Tolerance)",
-                "characteristics": ["System becomes unavailable during partitions", "Strong consistency guaranteed", "Data is always correct"],
-                "examples": ["Traditional databases (PostgreSQL, MySQL)", "ZooKeeper", "etcd"],
-                "use_case": "Financial systems, coordination services"
-              },
-              {
-                "choice": "AP (Availability + Partition Tolerance)",
-                "characteristics": ["System remains available during partitions", "Eventual consistency", "May return stale data"],
-                "examples": ["Cassandra", "DynamoDB", "Riak"],
-                "use_case": "Social media, content delivery"
-              },
-              {
-                "choice": "CA (Consistency + Availability)",
-                "characteristics": ["Impossible in distributed systems", "Requires no network partitions", "Single-node systems only"],
-                "examples": ["Single PostgreSQL instance", "SQLite", "In-memory cache"],
-                "reality": "Not practical for internet-scale systems"
-              }
-            ],
-            "script": [
-              "The CAP theorem is the most misunderstood concept in distributed systems.",
-              "Let's be clear: Network partitions WILL happen. Cables get cut. Switches fail. Data centers go dark.",
-              "Therefore, you cannot choose CA for internet-scale systems. The real choice is CP vs AP.",
-              "CP systems (like etcd) choose consistency over availability. During a partition, they become unavailable rather than return inconsistent data.",
-              "AP systems (like Cassandra) choose availability over consistency. During a partition, they continue serving requests, even if data might be stale.",
-              "The choice depends on your business requirements. Banking: CP. Social media: AP."
-            ]
+            "note": null
           },
           {
-            "id": "2.2",
-            "type": "evolution",
+            "type": "content",
             "title": "Beyond CAP: PACELC Theorem",
-            "definition": "If there is a Partition (P), choose between Availability (A) and Consistency (C); Else (E), choose between Latency (L) and Consistency (C)",
-            "formula": "PACELC = PA/ELC",
-            "implications": [
-              {
-                "scenario": "During partitions (PA)",
-                "choices": "Same as CAP: Availability vs Consistency"
-              },
-              {
-                "scenario": "Normal operation (ELC)",
-                "choices": "Latency vs Consistency",
-                "examples": ["Synchronous replication (high consistency, high latency)", "Asynchronous replication (lower consistency, lower latency)"]
-              }
-            ],
-            "real_world_choices": [
-              {
-                "system": "Google Spanner",
-                "approach": "PC/EL (Consistency during partitions, Low latency + Consistency normally)",
-                "implementation": "Synchronous replication across datacenters with TrueTime"
-              },
-              {
-                "system": "Amazon DynamoDB",
-                "approach": "PA/EC (Availability during partitions, Consistency normally)",
-                "implementation": "Quorum reads/writes with tunable consistency"
-              },
-              {
-                "system": "Apache Cassandra",
-                "approach": "PA/EL (Availability during partitions, Low latency normally)",
-                "implementation": "Eventual consistency with tunable consistency levels"
-              }
-            ],
-            "script": [
-              "CAP theorem tells us what happens during failures. But what about normal operation?",
-              "The PACELC theorem extends CAP by considering the latency-consistency trade-off during normal operation.",
-              "This explains why different systems make different design choices.",
-              "Google Spanner chooses strong consistency (C) during both partitions and normal operation, which increases latency but provides strict guarantees.",
-              "Amazon DynamoDB lets you choose: strong consistency when you need it (higher latency), eventual consistency when you don't (lower latency).",
-              "Apache Cassandra prioritizes low latency and availability, accepting eventual consistency."
-            ]
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
           },
           {
-            "id": "2.3",
-            "type": "consistency",
+            "type": "content",
             "title": "Consistency Models: From Strong to Eventual",
-            "spectrum": [
-              {
-                "model": "Linearizability",
-                "description": "Strongest model. All operations appear to execute atomically in some order",
-                "guarantee": "Once a write completes, all subsequent reads see it",
-                "use_case": "Distributed locks, leader election",
-                "performance": "High latency (cross-datacenter coordination)"
-              },
-              {
-                "model": "Sequential Consistency",
-                "description": "All operations appear to execute in some total order consistent with program order",
-                "guarantee": "Operations from each process appear in program order",
-                "use_case": "Distributed shared memory",
-                "performance": "Better than linearizability"
-              },
-              {
-                "model": "Causal Consistency",
-                "description": "Preserves causal relationships between operations",
-                "guarantee": "If operation A causally affects operation B, all processes see A before B",
-                "use_case": "Social networks, collaborative editing",
-                "performance": "Efficient implementation possible"
-              },
-              {
-                "model": "Eventual Consistency",
-                "description": "If no new updates, eventually all accesses return last updated value",
-                "guarantee": "No guarantee on when consistency is achieved",
-                "use_case": "DNS, CDN replication",
-                "performance": "Lowest latency"
-              }
-            ],
-            "implementation_patterns": {
-              "strong_consistency": ["Two-phase commit", "Paxos/Raft consensus", "Quorum reads/writes"],
-              "eventual_consistency": ["Anti-entropy protocols", "Read repair", "Hinted handoff", "Vector clocks"]
+            "box": {
+              "title": "Technical Details",
+              "list": []
             },
-            "case_study": {
-              "system": "Amazon Shopping Cart",
-              "problem": "Users add items from multiple devices",
-              "solution": "Eventual consistency with conflict resolution",
-              "reasoning": "Better user experience (cart always available) than strong consistency (cart sometimes unavailable)"
-            },
-            "script": [
-              "Consistency isn't binary. It's a spectrum.",
-              "Linearizability is the gold standard but expensive. It requires global coordination.",
-              "Causal consistency is often 'good enough' for human-facing applications. If Alice comments on Bob's post, then Charlie should see the comment after the post.",
-              "Eventual consistency is the most practical for global scale. DNS updates take hours to propagate worldwide, but that's acceptable.",
-              "The key insight: Choose the weakest consistency model that satisfies your requirements. Stronger consistency means higher latency and lower availability.",
-              "Amazon's shopping cart uses eventual consistency. Why? Because a temporarily inconsistent cart (showing duplicate items) is better than an unavailable cart during checkout."
-            ]
+            "note": null
           },
           {
-            "id": "2.4",
-            "type": "patterns",
+            "type": "content",
             "title": "Achieving Consistency in AP Systems",
-            "techniques": [
-              {
-                "technique": "Conflict-free Replicated Data Types (CRDTs)",
-                "concept": "Data structures that can be merged without conflict",
-                "examples": ["G-Counter (grow-only counter)", "PN-Counter (positive-negative counter)", "LWW-Register (last-write-wins register)", "OR-Set (observed-remove set)"],
-                "use_case": "Collaborative editing (Google Docs), counters, sets"
-              },
-              {
-                "technique": "Operational Transformation (OT)",
-                "concept": "Transform operations to resolve conflicts",
-                "examples": ["Google Docs", "Etherpad", "Confluence"],
-                "use_case": "Real-time collaborative editing"
-              },
-              {
-                "technique": "Version Vectors",
-                "concept": "Track causality between replicas",
-                "implementation": "Vector of (replica, version) pairs",
-                "use_case": "Dynamo-style systems, detecting conflicts"
-              },
-              {
-                "technique": "Mergeable Persistent Data Structures",
-                "concept": "Immutable data structures with merge operations",
-                "examples": ["Git (merge commits)", "Riemannian state-based CRDTs"],
-                "use_case": "Version control, configuration management"
-              }
-            ],
-            "conflict_resolution_strategies": [
-              "Last Write Wins (LWW) - simple but can lose data",
-              "Application-specific resolution - business logic decides",
-              "Manual resolution - present conflict to user",
-              "Multi-value registers - keep all conflicting values"
-            ],
-            "script": [
-              "AP systems don't mean 'no consistency'. They mean 'eventual consistency with conflict resolution'.",
-              "CRDTs are mathematical magic. They guarantee convergence without coordination. Google Docs uses CRDTs for real-time collaboration.",
-              "Operational Transformation is another approach. It transforms concurrent operations to achieve consistency.",
-              "Version vectors track causality. They help detect whether one update happened before another.",
-              "Conflict resolution is where business logic matters. Should the last write win? Or should we merge values? Or ask the user?",
-              "These techniques make AP systems practical for real applications."
-            ]
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
           }
-        ],
-        "key_takeaways": [
-          "CAP theorem: During partitions, choose CP or AP",
-          "PACELC extends CAP to include latency-consistency trade-off",
-          "Consistency models form a spectrum from linearizable to eventual",
-          "AP systems use CRDTs, OT, and conflict resolution for consistency"
         ]
       },
       {
         "id": "module_3",
         "title": "Module 3: Data Replication Strategies",
-        "duration": "50 minutes",
         "slides": [
           {
-            "id": "3.1",
-            "type": "patterns",
+            "type": "content",
             "title": "Replication Models: Single vs Multi vs Leaderless",
-            "comparison": {
-              "single_leader": {
-                "architecture": "One leader handles writes, replicas handle reads",
-                "consistency": "Strong (read-after-write consistency from leader)",
-                "failure_handling": "Failover required on leader failure",
-                "examples": ["MySQL replication", "PostgreSQL streaming replication", "MongoDB replica sets"],
-                "write_throughput": "Limited by single leader"
-              },
-              "multi_leader": {
-                "architecture": "Multiple leaders accept writes, asynchronously sync",
-                "consistency": "Eventual (write conflicts possible)",
-                "failure_handling": "Continues with other leaders",
-                "examples": ["Google Spanner", "CockroachDB", "MySQL multi-source replication"],
-                "write_throughput": "Scales with number of leaders"
-              },
-              "leaderless": {
-                "architecture": "Any node can accept writes, quorum consistency",
-                "consistency": "Configurable (quorum-based)",
-                "failure_handling": "Continues with available nodes",
-                "examples": ["Amazon DynamoDB", "Apache Cassandra", "Riak"],
-                "write_throughput": "Scales linearly with nodes"
-              }
+            "box": {
+              "title": "Technical Details",
+              "list": []
             },
-            "selection_criteria": {
-              "choose_single_leader": "Strong consistency required, write volume moderate",
-              "choose_multi_leader": "Multiple datacenters, write scaling needed",
-              "choose_leaderless": "Maximum availability, write scaling critical"
-            },
-            "script": [
-              "Replication is how we achieve durability and availability. But how we replicate matters.",
-              "Single-leader replication is the classic model. Simple, strong consistency, but the leader is a bottleneck and single point of failure.",
-              "Multi-leader replication handles multiple datacenters beautifully. Each datacenter has its own leader. But now you have to handle write conflicts.",
-              "Leaderless replication (Dynamo-style) is the most robust. Any node can take writes. But you need quorums and conflict resolution.",
-              "The choice depends on your requirements: consistency, availability, latency, and complexity tolerance."
-            ]
+            "note": null
           },
           {
-            "id": "3.2",
-            "type": "implementation",
+            "type": "content",
             "title": "Replication Implementation: Synchronous vs Asynchronous",
-            "comparison": {
-              "synchronous": {
-                "process": "Leader waits for replicas to acknowledge before confirming write",
-                "durability": "High (data on multiple nodes)",
-                "latency": "High (waits for slowest replica)",
-                "availability": "Low (fails if any replica unavailable)",
-                "use_case": "Financial transactions, critical data"
-              },
-              "asynchronous": {
-                "process": "Leader confirms write immediately, replicates in background",
-                "durability": "Medium (data loss if leader fails)",
-                "latency": "Low (responds immediately)",
-                "availability": "High (continues if replicas fail)",
-                "use_case": "Social media, non-critical data"
-              },
-              "semi_synchronous": {
-                "process": "Leader waits for at least one replica",
-                "durability": "Medium-high",
-                "latency": "Medium",
-                "availability": "Medium",
-                "use_case": "Balanced requirements"
-              }
+            "box": {
+              "title": "Technical Details",
+              "list": []
             },
-            "failure_scenarios": [
-              {
-                "scenario": "Synchronous replication with replica failure",
-                "result": "Write blocks until replica recovers or is removed",
-                "solution": "Automatic failover, replica removal"
-              },
-              {
-                "scenario": "Asynchronous replication with leader failure",
-                "result": "Recent writes may be lost",
-                "solution": "Delayed failover, write-ahead logs"
-              }
-            ],
-            "script": [
-              "The replication timing decision is critical.",
-              "Synchronous replication guarantees durability but kills performance. If one replica is slow, all writes wait.",
-              "Asynchronous replication is fast but risks data loss. If the leader crashes before replicating, recent writes disappear.",
-              "Most real systems use a hybrid: synchronous to some replicas (for durability), asynchronous to others (for performance).",
-              "Kafka uses asynchronous replication with configurable acknowledgement levels (acks=0,1,all).",
-              "PostgreSQL offers synchronous_commit with multiple sync replicas."
-            ]
+            "note": null
           }
-        ],
-        "key_takeaways": [
-          "Single-leader: simple, consistent, but limited scaling",
-          "Multi-leader: handles multiple DCs, but conflicts",
-          "Leaderless: maximum availability, quorum-based",
-          "Sync vs async: durability vs performance trade-off"
+        ]
+      },
+      {
+        "id": "module_4",
+        "title": "Module 4: Load Balancing & Traffic Management",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Load Balancer: Traffic Cop of Distributed Systems",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Load Balancing Algorithms: Choosing the Destination",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Health Checks & Failover Mastery",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Global Server Load Balancing (GSLB) & Anycast",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>GSLB (DNS-based)</strong>: undefined",
+                "<strong>Anycast Routing</strong>: undefined"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Modern Load Balancing: Ingress & Service Mesh",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_5",
+        "title": "Module 5: Caching Strategies & Content Delivery",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Power of Caching: Why, Where, and How?",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Caching Patterns: Managing Data Flow",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Eviction Policies: Deciding What to Forget",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Distributed Caching: Redis vs Memcached",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Content Delivery Networks (CDN): Caching at the Edge",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_6",
+        "title": "Module 6: Database Sharding & Partitioning",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Scaling the Database: Vertical vs Horizontal",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Partitioning Strategies: How to Split the Data",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: Split tables by columns (e.g., move BLOBs to a separate table)",
+                "<strong>undefined</strong>: Split tables by rows based on a key"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Shard Key: The Most Important Decision",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Consistent Hashing: The Scaling Secret",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>mechanism</strong>: Map keys and nodes onto a logical ring (0 to 2^32-1)",
+                "<strong>assignment</strong>: A key is assigned to the first node encountered moving clockwise",
+                "<strong>node_addition</strong>: Only keys between the new node and its predecessor need to move",
+                "<strong>virtual_nodes</strong>: Map one physical node to multiple points on the ring to improve balance"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Price of Sharding: New Challenges",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_7",
+        "title": "Module 7: Communication Protocols (HTTP, gRPC, WebSockets)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Networking Fundamentals: The Baseline",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "HTTP Evolution: From 1.1 to 3",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Real-time Communication: WebSockets vs Long Polling",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "gRPC: High-Performance Internal APIs",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Message Queues: Asynchronous Communication",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Point-to-Point (Queue)</strong>: undefined",
+                "<strong>Pub/Sub (Topic)</strong>: undefined"
+              ]
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_8",
+        "title": "Module 8: Microservices & Service Discovery",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Monolith vs Microservices: The Trade-off",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "API Gateway: The Entry Point",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Service Discovery: Finding the IP in a Fluid World",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Distributed Data & The Saga Pattern",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>name</strong>: Saga Pattern",
+                "<strong>mechanism</strong>: Sequence of local transactions. Each step has a 'compensating transaction' if it fails.",
+                "<strong>types</strong>: [object Object],[object Object]"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Sidecar & Service Mesh: Offloading Complexity",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_9",
+        "title": "Module 9: Observability & Monitoring",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Three Pillars of Observability",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Four Golden Signals & SLIs/SLOs",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Metrics & Logging at Scale",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Distributed Tracing: The Invisible Thread",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: Unique ID for the entire user request across all services",
+                "<strong>undefined</strong>: Unique ID for a single operation within a service",
+                "<strong>undefined</strong>: Passing IDs through HTTP headers to link spans together"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Alerting & Incident Response",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_10",
+        "title": "Module 10: Fault Tolerance & Resilience Patterns",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Embracing Failure: Designing for the Inevitable",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Retries, Backoff, and Jitter",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Retries</strong>: ",
+                "<strong>Exponential Backoff</strong>: ",
+                "<strong>Jitter</strong>: "
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Circuit Breaker Pattern",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Bulkheads & Dead Letter Queues",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: Isolating resources (thread pools, connections) for different operations",
+                "<strong>undefined</strong>: A secondary queue for messages that couldn't be processed after N retries",
+                "<strong>undefined</strong>: Always set a maximum time to wait for a response"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Idempotency: The Key to Safe Retries",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_11",
+        "title": "Module 11: Case Study - URL Shortener (TinyURL)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Problem Statement & Quantitative Analysis",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "API Design & Data Modeling",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>type</strong>: NoSQL (Key-Value) or Wide-Column",
+                "<strong>reason</strong>: Simple key-value lookup, high write throughput, horizontal scale",
+                "<strong>tools</strong>: DynamoDB,Cassandra,Redis (for hot URLs)"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Core Algorithm: Short Link Generation",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Scalability & Caching Strategy",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Analytics & High-Volume Redirects",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": {
+              "text": "TinyURL is about balancing read speed and unique key management."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_12",
+        "title": "Module 12: Case Study - Twitter News Feed",
+        "slides": [
+          {
+            "type": "content",
+            "title": "News Feed: The Scale Challenge",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Fan-out: Push vs Pull Models",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Hybrid Approach: Solving for Celebrities",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>common_users</strong>: Use the Push model (write to followers' caches)",
+                "<strong>celebrities</strong>: Use the Pull model (followers pull from the celebrity's tweet list on-demand)",
+                "<strong>mechanism</strong>: Use a toggle bit in the 'Follow' relationship to decide which strategy to use",
+                "<strong>tool</strong>: Redis / Memcached",
+                "<strong>structure</strong>: List of Tweet IDs for each user's feed",
+                "<strong>limit</strong>: Store top 1000 IDs per user"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Data Modeling & Storage",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>User/Follower DB</strong> (Relational (PostgreSQL/MySQL)): Consistency for user profiles and follow graph",
+                "<strong>Tweet DB</strong> (NoSQL Wide-Column (Cassandra/DynamoDB)): High write throughput, partition by user_id",
+                "<strong>Feed Cache</strong> (In-memory (Redis)): Blazing fast timeline retrieval",
+                "<strong>Media Store</strong> (Object Storage (S3) + CDN): Storing images/videos"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Feed Optimization & Ranking",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Chronological vs Algorithmic</strong>: undefined",
+                "<strong>Graph Service</strong>: undefined",
+                "<strong>Social Graph Cache</strong>: undefined"
+              ]
+            },
+            "note": {
+              "text": "Building a news feed is about managing massive write-amplification."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_13",
+        "title": "Module 13: Case Study - WhatsApp Real-time Messaging",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Real-time Messaging: Requirements",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Connection Management: WebSockets & Gateway",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Chat Service</strong>: Manages persistent WebSocket connections with clients",
+                "<strong>Presence Service</strong>: Tracks user online/offline status via heartbeats",
+                "<strong>Message Service</strong>: Handles message storage and retrieval for offline users",
+                "<strong>Push Notification Service</strong>: Alerts offline users (Apple APNs / Google FCM)"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Message Delivery Flow",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "1. User A sends message to Chat Server via WebSocket",
+                "2. Chat Server stores message in DB (Delivery status: Sent)",
+                "3. Chat Server asks Connection Map: 'Where is User B?'",
+                "4a. If User B is Online: Forward message to User B's Chat Server",
+                "4b. If User B is Offline: Send Push Notification via APNs/FCM",
+                "5. User B acknowledges: Send 'Delivered' receipt back to User A",
+                "<strong>type</strong>: NoSQL Wide-column (Cassandra/HBase)",
+                "<strong>reason</strong>: Sequential writes are very fast, handling millions of small messages/sec, easy to partition by conversation_id"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Presence Service: Are you there?",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>heartbeat</strong>: Client sends 'I am here' ping every 30s to Redis/Keep-alive store",
+                "<strong>timeout</strong>: If no ping for 1 min, mark as Offline",
+                "<strong>fan_out</strong>: When status changes, push update to all friends' chat screens"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Encryption & Security (Signal Protocol)",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>End-to-End Encryption (E2EE)</strong>: undefined",
+                "<strong>Diffie-Hellman Key Exchange</strong>: undefined",
+                "<strong>Double Ratchet Algorithm</strong>: undefined"
+              ]
+            },
+            "note": {
+              "text": "WhatsApp is a masterclass in managing persistent state and high-frequency events."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_14",
+        "title": "Module 14: Case Study - Uber (Geospatial & Dynamic Pricing)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Geospatial Scale: The Problem",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Geospatial Indexing: QuadTrees vs S2 cells",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "High-Level Architecture",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Driver Dispatch Service</strong>: Receives location updates and updates the Geo-Index (Redis S2)",
+                "<strong>Rider Demand Service</strong>: Receives ride requests and queries the Geo-Index for nearby drivers",
+                "<strong>Matching Service</strong>: Algorithmically pairs riders and drivers (The Matchmaker)",
+                "<strong>Dynamic Pricing Engine</strong>: Analyzes supply vs demand in real-time to set Surge Pricing"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Dynamic Pricing (Surge): Real-time Analytics",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>input</strong>: Kafka streams of (Location, Request_Type, Demand_Count, Supply_Count)",
+                "<strong>processing</strong>: Flink / Spark Streaming calculates multiplier per S2 cell every minute",
+                "<strong>output</strong>: Update the price multiplier for riders in that cell"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Matching & Distributed Locking",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>mechanism</strong>: Distributed transaction or Atomic lock in Redis",
+                "<strong>process</strong>: 1. Find best driver. 2. Attempt to 'Lock' driver in Redis for 30s. 3. If success, notify driver. 4. If driver accepts, finalize match. 5. If driver rejects, release lock and find next best."
+              ]
+            },
+            "note": {
+              "text": "Uber is a mix of high-frequency geospatial state and real-time economic processing."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_15",
+        "title": "Module 15: Case Study - Netflix (CDN & Chaos Engineering)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Netflix: The Streaming Data Plane",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Open Connect: Netflix's Private CDN",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Video Encoding & Transcoding Pipeline",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Chaos Engineering: The Simian Army",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Personalization Engine",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": {
+              "text": "Netflix is a masterclass in global distribution and extreme resilience."
+            }
+          }
         ]
       }
     ]

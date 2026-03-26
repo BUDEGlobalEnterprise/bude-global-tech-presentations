@@ -1,462 +1,804 @@
 {
-    "presentation": {
-        "topics": [
-            {
-                "id": "title",
-                "title": "Title Slide",
-                "slides": [
-                    {
-                        "type": "title",
-                        "title": "Express.js Deep Dive",
-                        "subtitle": "Node.js Web Framework<br>Middleware, Routing, and REST API Development"
-                    }
-                ]
-            },
-            {
-                "id": "presenter",
-                "title": "Presenter Slide",
-                "slides": [
-                    {
-                        "type": "presenter",
-                        "name": "Saurabh Singh",
-                        "title": "Full Stack Developer",
-                        "experience": "Software Developer specializing in Node.js and Express.js",
-                        "oss_experience": "Open Source Contributor",
-                        "github": "https://github.com/saurabh24thakur",
-                        "website": "https://github.com/saurabh24thakur"
-                    }
-                ]
-            },
-            {
-                "id": "agenda",
-                "title": "Agenda",
-                "slides": [
-                    {
-                        "type": "content",
-                        "title": "What We'll Cover",
-                        "box": {
-                            "list": [
-                                {
-                                    "emoji": "🎯",
-                                    "text": "<strong>What is Express.js?</strong> - Framework Overview"
-                                },
-                                {
-                                    "emoji": "🚀",
-                                    "text": "<strong>Getting Started</strong> - Installation & Setup"
-                                },
-                                {
-                                    "emoji": "🔧",
-                                    "text": "<strong>Middleware</strong> - Core Concept & Custom Middleware"
-                                },
-                                {
-                                    "emoji": "🛣️",
-                                    "text": "<strong>Routing</strong> - Routes, Parameters & Router"
-                                },
-                                {
-                                    "emoji": "🔗",
-                                    "text": "<strong>REST API</strong> - Building RESTful Services"
-                                },
-                                {
-                                    "emoji": "📝",
-                                    "text": "<strong>Request & Response</strong> - Handling HTTP"
-                                },
-                                {
-                                    "emoji": "🔒",
-                                    "text": "<strong>Error Handling</strong> - Best Practices"
-                                },
-                                {
-                                    "emoji": "🗄️",
-                                    "text": "<strong>Database Integration</strong> - MongoDB & SQL"
-                                },
-                                {
-                                    "emoji": "🧪",
-                                    "text": "<strong>Testing</strong> - Unit & Integration Tests"
-                                },
-                                {
-                                    "emoji": "🚢",
-                                    "text": "<strong>Deployment</strong> - Production Ready Apps"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "what-is-express",
-                "title": "What is Express.js?",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Understanding Express.js"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🎯",
-                        "title": "What is Express.js?",
-                        "box": {
-                            "content": "<span class=\"highlight\">Fast, unopinionated, minimalist web framework for Node.js</span>",
-                            "list": [
-                                {
-                                    "emoji": "⚡",
-                                    "text": "<strong>Minimal & Flexible</strong> - Thin layer on top of Node.js"
-                                },
-                                {
-                                    "emoji": "🔧",
-                                    "text": "<strong>Middleware-based</strong> - Modular request handling"
-                                },
-                                {
-                                    "emoji": "🛣️",
-                                    "text": "<strong>Robust Routing</strong> - Powerful URL routing system"
-                                },
-                                {
-                                    "emoji": "🌐",
-                                    "text": "<strong>HTTP Utilities</strong> - Simplified HTTP operations"
-                                },
-                                {
-                                    "emoji": "📦",
-                                    "text": "<strong>Large Ecosystem</strong> - Thousands of middleware packages"
-                                }
-                            ]
-                        },
-                        "note": {
-                            "text": "<strong>Fun fact:</strong> Express.js powers major companies like Uber, Accenture, and IBM. It's the most popular Node.js framework!"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "installation",
-                "title": "Installation & Setup",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Getting Started"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "💻",
-                        "title": "Installing Express.js",
-                        "box": {
-                            "content": "<strong>Quick Setup</strong>",
-                            "code": "# Initialize a new Node.js project\nnpm init -y\n\n# Install Express.js\nnpm install express\n\n# Install development dependencies\nnpm install --save-dev nodemon\n\n# Create basic server file\n# app.js\nconst express = require('express');\nconst app = express();\nconst PORT = 3000;\n\napp.get('/', (req, res) => {\n  res.send('Hello Express!');\n});\n\napp.listen(PORT, () => {\n  console.log(`Server running on port ${PORT}`);\n});\n\n# Run the server\nnode app.js\n# Or with nodemon for auto-reload\nnodemon app.js"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "middleware",
-                "title": "Middleware Concept",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Understanding Middleware"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🔧",
-                        "title": "What is Middleware?",
-                        "box": {
-                            "content": "<strong>Functions that have access to request, response, and next</strong>",
-                            "list": [
-                                {
-                                    "emoji": "🔄",
-                                    "text": "<strong>Request Processing</strong> - Modify request before route handler"
-                                },
-                                {
-                                    "emoji": "✅",
-                                    "text": "<strong>Response Modification</strong> - Transform response data"
-                                },
-                                {
-                                    "emoji": "🔗",
-                                    "text": "<strong>Chaining</strong> - Execute multiple middleware in sequence"
-                                },
-                                {
-                                    "emoji": "🛑",
-                                    "text": "<strong>Control Flow</strong> - End request-response cycle or pass to next"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "💡",
-                        "title": "Middleware Examples",
-                        "box": {
-                            "content": "<strong>Built-in & Custom Middleware</strong>",
-                            "code": "const express = require('express');\nconst app = express();\n\n// Built-in middleware\napp.use(express.json()); // Parse JSON bodies\napp.use(express.urlencoded({ extended: true })); // Parse URL-encoded\napp.use(express.static('public')); // Serve static files\n\n// Custom logging middleware\napp.use((req, res, next) => {\n  console.log(`${req.method} ${req.url} - ${new Date().toISOString()}`);\n  next(); // Pass to next middleware\n});\n\n// Authentication middleware\nconst authenticate = (req, res, next) => {\n  const token = req.headers.authorization;\n  if (!token) {\n    return res.status(401).json({ error: 'Unauthorized' });\n  }\n  // Verify token logic here\n  req.user = { id: 1, name: 'John' };\n  next();\n};\n\n// Route-specific middleware\napp.get('/protected', authenticate, (req, res) => {\n  res.json({ message: 'Protected data', user: req.user });\n});"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "routing",
-                "title": "Routing in Express",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "URL Routing"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🛣️",
-                        "title": "Basic Routing",
-                        "box": {
-                            "content": "<strong>HTTP Methods & Routes</strong>",
-                            "code": "const express = require('express');\nconst app = express();\n\n// GET request\napp.get('/', (req, res) => {\n  res.send('Home Page');\n});\n\n// POST request\napp.post('/users', (req, res) => {\n  const user = req.body;\n  res.status(201).json({ message: 'User created', user });\n});\n\n// PUT request\napp.put('/users/:id', (req, res) => {\n  const { id } = req.params;\n  res.json({ message: `User ${id} updated` });\n});\n\n// DELETE request\napp.delete('/users/:id', (req, res) => {\n  const { id } = req.params;\n  res.json({ message: `User ${id} deleted` });\n});\n\n// Route parameters\napp.get('/users/:id', (req, res) => {\n  const { id } = req.params;\n  res.json({ userId: id });\n});\n\n// Query parameters\napp.get('/search', (req, res) => {\n  const { q, page } = req.query;\n  res.json({ query: q, page: page || 1 });\n});"
-                        }
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "📁",
-                        "title": "Express Router",
-                        "box": {
-                            "content": "<strong>Modular Route Handlers</strong>",
-                            "code": "// routes/users.js\nconst express = require('express');\nconst router = express.Router();\n\n// Middleware for this router\nrouter.use((req, res, next) => {\n  console.log('User route accessed');\n  next();\n});\n\nrouter.get('/', (req, res) => {\n  res.json({ message: 'Get all users' });\n});\n\nrouter.get('/:id', (req, res) => {\n  res.json({ message: `Get user ${req.params.id}` });\n});\n\nrouter.post('/', (req, res) => {\n  res.status(201).json({ message: 'User created' });\n});\n\nmodule.exports = router;\n\n// app.js\nconst userRoutes = require('./routes/users');\napp.use('/api/users', userRoutes);\n\n// Routes become:\n// GET /api/users\n// GET /api/users/:id\n// POST /api/users"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "rest-api",
-                "title": "Building REST APIs",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "RESTful API Development"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🔗",
-                        "title": "Complete CRUD API",
-                        "box": {
-                            "content": "<strong>RESTful Endpoints</strong>",
-                            "code": "const express = require('express');\nconst app = express();\napp.use(express.json());\n\nlet users = [\n  { id: 1, name: 'John', email: 'john@example.com' },\n  { id: 2, name: 'Jane', email: 'jane@example.com' }\n];\n\n// GET /api/users - List all users\napp.get('/api/users', (req, res) => {\n  res.json(users);\n});\n\n// GET /api/users/:id - Get single user\napp.get('/api/users/:id', (req, res) => {\n  const user = users.find(u => u.id === parseInt(req.params.id));\n  if (!user) return res.status(404).json({ error: 'User not found' });\n  res.json(user);\n});\n\n// POST /api/users - Create user\napp.post('/api/users', (req, res) => {\n  const { name, email } = req.body;\n  if (!name || !email) {\n    return res.status(400).json({ error: 'Name and email required' });\n  }\n  const newUser = { id: users.length + 1, name, email };\n  users.push(newUser);\n  res.status(201).json(newUser);\n});\n\n// PUT /api/users/:id - Update user\napp.put('/api/users/:id', (req, res) => {\n  const user = users.find(u => u.id === parseInt(req.params.id));\n  if (!user) return res.status(404).json({ error: 'User not found' });\n  \n  const { name, email } = req.body;\n  if (name) user.name = name;\n  if (email) user.email = email;\n  res.json(user);\n});\n\n// DELETE /api/users/:id - Delete user\napp.delete('/api/users/:id', (req, res) => {\n  const index = users.findIndex(u => u.id === parseInt(req.params.id));\n  if (index === -1) return res.status(404).json({ error: 'User not found' });\n  \n  users.splice(index, 1);\n  res.status(204).send();\n});"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "error-handling",
-                "title": "Error Handling",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Handling Errors"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🔒",
-                        "title": "Error Handling Middleware",
-                        "box": {
-                            "content": "<strong>Centralized Error Management</strong>",
-                            "code": "// Custom error class\nclass AppError extends Error {\n  constructor(message, statusCode) {\n    super(message);\n    this.statusCode = statusCode;\n    this.isOperational = true;\n  }\n}\n\n// Async error wrapper\nconst asyncHandler = (fn) => (req, res, next) => {\n  Promise.resolve(fn(req, res, next)).catch(next);\n};\n\n// Route with error handling\napp.get('/users/:id', asyncHandler(async (req, res, next) => {\n  const user = await User.findById(req.params.id);\n  if (!user) {\n    throw new AppError('User not found', 404);\n  }\n  res.json(user);\n}));\n\n// 404 handler\napp.use((req, res, next) => {\n  res.status(404).json({ error: 'Route not found' });\n});\n\n// Global error handler (must be last)\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  \n  const statusCode = err.statusCode || 500;\n  const message = err.isOperational \n    ? err.message \n    : 'Internal Server Error';\n  \n  res.status(statusCode).json({\n    error: message,\n    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })\n  });\n});"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "database",
-                "title": "Database Integration",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Connecting Databases"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🗄️",
-                        "title": "MongoDB with Mongoose",
-                        "box": {
-                            "content": "<strong>NoSQL Integration</strong>",
-                            "code": "const express = require('express');\nconst mongoose = require('mongoose');\nconst app = express();\n\n// Connect to MongoDB\nmongoose.connect('mongodb://localhost:27017/myapp', {\n  useNewUrlParser: true,\n  useUnifiedTopology: true\n});\n\n// Define schema\nconst userSchema = new mongoose.Schema({\n  name: { type: String, required: true },\n  email: { type: String, required: true, unique: true },\n  createdAt: { type: Date, default: Date.now }\n});\n\nconst User = mongoose.model('User', userSchema);\n\n// CRUD operations\napp.get('/api/users', async (req, res) => {\n  try {\n    const users = await User.find();\n    res.json(users);\n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\napp.post('/api/users', async (req, res) => {\n  try {\n    const user = new User(req.body);\n    await user.save();\n    res.status(201).json(user);\n  } catch (error) {\n    res.status(400).json({ error: error.message });\n  }\n});"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "testing",
-                "title": "Testing Express Apps",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Testing Strategies"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🧪",
-                        "title": "Testing with Jest & Supertest",
-                        "box": {
-                            "content": "<strong>API Testing</strong>",
-                            "code": "// Install: npm install --save-dev jest supertest\n\n// app.test.js\nconst request = require('supertest');\nconst app = require('./app');\n\ndescribe('User API', () => {\n  describe('GET /api/users', () => {\n    it('should return all users', async () => {\n      const response = await request(app)\n        .get('/api/users')\n        .expect(200);\n      \n      expect(Array.isArray(response.body)).toBe(true);\n    });\n  });\n\n  describe('POST /api/users', () => {\n    it('should create a new user', async () => {\n      const newUser = {\n        name: 'Test User',\n        email: 'test@example.com'\n      };\n\n      const response = await request(app)\n        .post('/api/users')\n        .send(newUser)\n        .expect(201);\n\n      expect(response.body).toHaveProperty('id');\n      expect(response.body.name).toBe(newUser.name);\n    });\n\n    it('should return 400 for invalid data', async () => {\n      await request(app)\n        .post('/api/users')\n        .send({ name: '' })\n        .expect(400);\n    });\n  });\n});"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "deployment",
-                "title": "Deployment",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Production Deployment"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🚢",
-                        "title": "Deployment Best Practices",
-                        "box": {
-                            "list": [
-                                {
-                                    "emoji": "🔐",
-                                    "text": "<strong>Environment Variables</strong> - Use .env for configuration"
-                                },
-                                {
-                                    "emoji": "🔒",
-                                    "text": "<strong>Security</strong> - Helmet.js, CORS, rate limiting"
-                                },
-                                {
-                                    "emoji": "📊",
-                                    "text": "<strong>Logging</strong> - Morgan, Winston for production logs"
-                                },
-                                {
-                                    "emoji": "⚡",
-                                    "text": "<strong>Performance</strong> - Compression, caching"
-                                },
-                                {
-                                    "emoji": "🐳",
-                                    "text": "<strong>Containerization</strong> - Docker for consistent deployment"
-                                },
-                                {
-                                    "emoji": "☁️",
-                                    "text": "<strong>Cloud Platforms</strong> - Heroku, AWS, DigitalOcean"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "best-practices",
-                "title": "Best Practices",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Express.js Best Practices"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "🎯",
-                        "title": "Production Guidelines",
-                        "box": {
-                            "list": [
-                                {
-                                    "emoji": "📁",
-                                    "text": "<strong>Project Structure</strong> - Organize routes, controllers, models"
-                                },
-                                {
-                                    "emoji": "🔧",
-                                    "text": "<strong>Middleware Order</strong> - Proper middleware sequencing"
-                                },
-                                {
-                                    "emoji": "✅",
-                                    "text": "<strong>Input Validation</strong> - Validate all user inputs"
-                                },
-                                {
-                                    "emoji": "🚨",
-                                    "text": "<strong>Error Handling</strong> - Centralized error management"
-                                },
-                                {
-                                    "emoji": "🔒",
-                                    "text": "<strong>Security</strong> - Implement security headers and practices"
-                                },
-                                {
-                                    "emoji": "📝",
-                                    "text": "<strong>Documentation</strong> - API documentation with Swagger"
-                                },
-                                {
-                                    "emoji": "🧪",
-                                    "text": "<strong>Testing</strong> - Write comprehensive tests"
-                                },
-                                {
-                                    "emoji": "📊",
-                                    "text": "<strong>Monitoring</strong> - Use APM tools for performance"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "resources",
-                "title": "Resources",
-                "slides": [
-                    {
-                        "type": "topic-title",
-                        "title": "Learning Resources"
-                    },
-                    {
-                        "type": "content",
-                        "emoji": "📚",
-                        "title": "Further Learning",
-                        "box": {
-                            "list": [
-                                {
-                                    "emoji": "📖",
-                                    "text": "<strong>Official Docs</strong> - expressjs.com"
-                                },
-                                {
-                                    "emoji": "🎓",
-                                    "text": "<strong>MDN Web Docs</strong> - Express tutorials"
-                                },
-                                {
-                                    "emoji": "💻",
-                                    "text": "<strong>GitHub</strong> - expressjs/express repository"
-                                },
-                                {
-                                    "emoji": "🎥",
-                                    "text": "<strong>Video Courses</strong> - Udemy, freeCodeCamp"
-                                },
-                                {
-                                    "emoji": "📝",
-                                    "text": "<strong>Blogs</strong> - Medium, Dev.to Express articles"
-                                },
-                                {
-                                    "emoji": "🔧",
-                                    "text": "<strong>Middleware</strong> - expressjs.com/en/resources/middleware.html"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "thank-you",
-                "title": "Thank You",
-                "slides": [
-                    {
-                        "type": "content",
-                        "emoji": "🙏",
-                        "title": "Thank You!",
-                        "box": {
-                            "content": "<strong>Questions?</strong>",
-                            "list": [
-                                {
-                                    "emoji": "💬",
-                                    "text": "Feel free to ask any questions"
-                                },
-                                {
-                                    "emoji": "🔗",
-                                    "text": "Connect on GitHub: github.com/saurabh24thakur"
-                                },
-                                {
-                                    "emoji": "📧",
-                                    "text": "Happy coding with Express.js!"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Express.js Deep Dive",
+            "subtitle": "Node.js Web Framework<br>Middleware, Routing, and REST API Development"
+          }
         ]
-    }
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Saurabh Singh",
+            "title": "Full Stack Developer",
+            "experience": "Software Developer specializing in Node.js and Express.js",
+            "oss_experience": "Open Source Contributor",
+            "github": "https://github.com/saurabh24thakur",
+            "website": "https://github.com/saurabh24thakur"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Express.js?</strong> - Framework Overview"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Getting Started</strong> - Installation & Setup"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Middleware</strong> - Core Concept & Custom Middleware"
+                },
+                {
+                  "emoji": "🛣️",
+                  "text": "<strong>Routing</strong> - Routes, Parameters & Router"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>REST API</strong> - Building RESTful Services"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Request & Response</strong> - Handling HTTP"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Error Handling</strong> - Best Practices"
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>Database Integration</strong> - MongoDB & SQL"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Testing</strong> - Unit & Integration Tests"
+                },
+                {
+                  "emoji": "🚢",
+                  "text": "<strong>Deployment</strong> - Production Ready Apps"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "internals",
+        "title": "Module 1: Express.js Internals",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Deep Dive into the Core"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "The Node.js Wrapper",
+            "box": {
+              "list": [
+                "Overrides default request and response objects",
+                "Implements a custom EventEmitter architecture",
+                "Handles stream orchestration automatically",
+                "Abstracts complex socket management into simple APIs"
+              ],
+              "title": "Express is a thin layer on top of the built-in HTTP module."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "The Middleware Pipeline",
+            "box": {
+              "title": "Request Lifecycle",
+              "list": [
+                "Socket Connection Established",
+                "Request Headers Parsed",
+                "Middleware Chain Execution (next())",
+                "Route Handler Logic",
+                "Response Stream Completion"
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Understanding next()",
+            "box": {
+              "code": "// next() is a recursive function call\napp.use((req, res, next) => {\n  // Pre-processing\n  next(); // Pass to next in stack\n  // Post-processing (rarely used in Express)\n});",
+              "title": "The engine of Express flow control."
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Native HTTP vs Express",
+            "leftTitle": "Native Node.js",
+            "leftPoints": [
+              "Manual URL parsing",
+              "Buffer stream management",
+              "No built-in routing",
+              "Complex error handling"
+            ],
+            "rightTitle": "Express.js",
+            "rightPoints": [
+              "Intuitive URL routing",
+              "Automated body parsing",
+              "Built-in middleware stack",
+              "Centralized error logic"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "advanced-middleware",
+        "title": "Module 2: Advanced Middleware & Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Hardening the Stack"
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Enterprise Security with Helmet",
+            "box": {
+              "list": [
+                "Content-Security-Policy (CSP)",
+                "Strict-Transport-Security (HSTS)",
+                "X-Content-Type-Options: nosniff",
+                "X-Frame-Options: DENY"
+              ],
+              "title": "Sets 15+ critical HTTP headers for defense."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚦",
+            "title": "Rate Limiting & DoS Protection",
+            "box": {
+              "code": "const rateLimit = require('express-rate-limit');\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 mins\n  max: 100, // limit each IP\n  message: 'Too many requests'\n});\n\napp.use('/api/', limiter);"
+            }
+          },
+          {
+            "id": "cors-logic",
+            "type": "content",
+            "title": "CORS: The Preflight Puzzle",
+            "box": {
+              "list": [
+                "Handle OPTIONS preflight calls",
+                "Whitelist specific domains",
+                "Configure allowed methods & headers",
+                "Expose custom response headers"
+              ],
+              "title": "Managing cross-origin resource sharing securely."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Payload Orchestration",
+            "box": {
+              "title": "Standard Middlewares",
+              "list": [
+                "Compression (Brotli/Gzip)",
+                "Morgan (HTTP Logging)",
+                "Cookie-Parser",
+                "Body-Parser (v4+ built-in)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-express",
+        "title": "What is Express.js?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Express.js"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Express.js?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Minimal & Flexible</strong> - Thin layer on top of Node.js"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Middleware-based</strong> - Modular request handling"
+                },
+                {
+                  "emoji": "🛣️",
+                  "text": "<strong>Robust Routing</strong> - Powerful URL routing system"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>HTTP Utilities</strong> - Simplified HTTP operations"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Large Ecosystem</strong> - Thousands of middleware packages"
+                }
+              ],
+              "title": "<span class=\"highlight\">Fast, unopinionated, minimalist web framework for Node.js</span>"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Express.js powers major companies like Uber, Accenture, and IBM. It's the most popular Node.js framework!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installing Express.js",
+            "box": {
+              "code": "# Initialize a new Node.js project\nnpm init -y\n\n# Install Express.js\nnpm install express\n\n# Install development dependencies\nnpm install --save-dev nodemon\n\n# Create basic server file\n# app.js\nconst express = require('express');\nconst app = express();\nconst PORT = 3000;\n\napp.get('/', (req, res) => {\n  res.send('Hello Express!');\n});\n\napp.listen(PORT, () => {\n  console.log(`Server running on port ${PORT}`);\n});\n\n# Run the server\nnode app.js\n# Or with nodemon for auto-reload\nnodemon app.js",
+              "title": "<strong>Quick Setup</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "middleware",
+        "title": "Middleware Concept",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Middleware"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "What is Middleware?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Request Processing</strong> - Modify request before route handler"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Response Modification</strong> - Transform response data"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Chaining</strong> - Execute multiple middleware in sequence"
+                },
+                {
+                  "emoji": "🛑",
+                  "text": "<strong>Control Flow</strong> - End request-response cycle or pass to next"
+                }
+              ],
+              "title": "<strong>Functions that have access to request, response, and next</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Middleware Examples",
+            "box": {
+              "code": "const express = require('express');\nconst app = express();\n\n// Built-in middleware\napp.use(express.json()); // Parse JSON bodies\napp.use(express.urlencoded({ extended: true })); // Parse URL-encoded\napp.use(express.static('public')); // Serve static files\n\n// Custom logging middleware\napp.use((req, res, next) => {\n  console.log(`${req.method} ${req.url} - ${new Date().toISOString()}`);\n  next(); // Pass to next middleware\n});\n\n// Authentication middleware\nconst authenticate = (req, res, next) => {\n  const token = req.headers.authorization;\n  if (!token) {\n    return res.status(401).json({ error: 'Unauthorized' });\n  }\n  // Verify token logic here\n  req.user = { id: 1, name: 'John' };\n  next();\n};\n\n// Route-specific middleware\napp.get('/protected', authenticate, (req, res) => {\n  res.json({ message: 'Protected data', user: req.user });\n});",
+              "title": "<strong>Built-in & Custom Middleware</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "routing",
+        "title": "Routing in Express",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "URL Routing"
+          },
+          {
+            "type": "content",
+            "emoji": "🛣️",
+            "title": "Basic Routing",
+            "box": {
+              "code": "const express = require('express');\nconst app = express();\n\n// GET request\napp.get('/', (req, res) => {\n  res.send('Home Page');\n});\n\n// POST request\napp.post('/users', (req, res) => {\n  const user = req.body;\n  res.status(201).json({ message: 'User created', user });\n});\n\n// PUT request\napp.put('/users/:id', (req, res) => {\n  const { id } = req.params;\n  res.json({ message: `User ${id} updated` });\n});\n\n// DELETE request\napp.delete('/users/:id', (req, res) => {\n  const { id } = req.params;\n  res.json({ message: `User ${id} deleted` });\n});\n\n// Route parameters\napp.get('/users/:id', (req, res) => {\n  const { id } = req.params;\n  res.json({ userId: id });\n});\n\n// Query parameters\napp.get('/search', (req, res) => {\n  const { q, page } = req.query;\n  res.json({ query: q, page: page || 1 });\n});",
+              "title": "<strong>HTTP Methods & Routes</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Express Router",
+            "box": {
+              "code": "// routes/users.js\nconst express = require('express');\nconst router = express.Router();\n\n// Middleware for this router\nrouter.use((req, res, next) => {\n  console.log('User route accessed');\n  next();\n});\n\nrouter.get('/', (req, res) => {\n  res.json({ message: 'Get all users' });\n});\n\nrouter.get('/:id', (req, res) => {\n  res.json({ message: `Get user ${req.params.id}` });\n});\n\nrouter.post('/', (req, res) => {\n  res.status(201).json({ message: 'User created' });\n});\n\nmodule.exports = router;\n\n// app.js\nconst userRoutes = require('./routes/users');\napp.use('/api/users', userRoutes);\n\n// Routes become:\n// GET /api/users\n// GET /api/users/:id\n// POST /api/users",
+              "title": "<strong>Modular Route Handlers</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "rest-api",
+        "title": "Building REST APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "RESTful API Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Complete CRUD API",
+            "box": {
+              "code": "const express = require('express');\nconst app = express();\napp.use(express.json());\n\nlet users = [\n  { id: 1, name: 'John', email: 'john@example.com' },\n  { id: 2, name: 'Jane', email: 'jane@example.com' }\n];\n\n// GET /api/users - List all users\napp.get('/api/users', (req, res) => {\n  res.json(users);\n});\n\n// GET /api/users/:id - Get single user\napp.get('/api/users/:id', (req, res) => {\n  const user = users.find(u => u.id === parseInt(req.params.id));\n  if (!user) return res.status(404).json({ error: 'User not found' });\n  res.json(user);\n});\n\n// POST /api/users - Create user\napp.post('/api/users', (req, res) => {\n  const { name, email } = req.body;\n  if (!name || !email) {\n    return res.status(400).json({ error: 'Name and email required' });\n  }\n  const newUser = { id: users.length + 1, name, email };\n  users.push(newUser);\n  res.status(201).json(newUser);\n});\n\n// PUT /api/users/:id - Update user\napp.put('/api/users/:id', (req, res) => {\n  const user = users.find(u => u.id === parseInt(req.params.id));\n  if (!user) return res.status(404).json({ error: 'User not found' });\n  \n  const { name, email } = req.body;\n  if (name) user.name = name;\n  if (email) user.email = email;\n  res.json(user);\n});\n\n// DELETE /api/users/:id - Delete user\napp.delete('/api/users/:id', (req, res) => {\n  const index = users.findIndex(u => u.id === parseInt(req.params.id));\n  if (index === -1) return res.status(404).json({ error: 'User not found' });\n  \n  users.splice(index, 1);\n  res.status(204).send();\n});",
+              "title": "<strong>RESTful Endpoints</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "error-handling",
+        "title": "Error Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Handling Errors"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Error Handling Middleware",
+            "box": {
+              "code": "// Custom error class\nclass AppError extends Error {\n  constructor(message, statusCode) {\n    super(message);\n    this.statusCode = statusCode;\n    this.isOperational = true;\n  }\n}\n\n// Async error wrapper\nconst asyncHandler = (fn) => (req, res, next) => {\n  Promise.resolve(fn(req, res, next)).catch(next);\n};\n\n// Route with error handling\napp.get('/users/:id', asyncHandler(async (req, res, next) => {\n  const user = await User.findById(req.params.id);\n  if (!user) {\n    throw new AppError('User not found', 404);\n  }\n  res.json(user);\n}));\n\n// 404 handler\napp.use((req, res, next) => {\n  res.status(404).json({ error: 'Route not found' });\n});\n\n// Global error handler (must be last)\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  \n  const statusCode = err.statusCode || 500;\n  const message = err.isOperational \n    ? err.message \n    : 'Internal Server Error';\n  \n  res.status(statusCode).json({\n    error: message,\n    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })\n  });\n});",
+              "title": "<strong>Centralized Error Management</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "title": "Database Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Connecting Databases"
+          },
+          {
+            "type": "content",
+            "emoji": "🗄️",
+            "title": "MongoDB with Mongoose",
+            "box": {
+              "code": "const express = require('express');\nconst mongoose = require('mongoose');\nconst app = express();\n\n// Connect to MongoDB\nmongoose.connect('mongodb://localhost:27017/myapp', {\n  useNewUrlParser: true,\n  useUnifiedTopology: true\n});\n\n// Define schema\nconst userSchema = new mongoose.Schema({\n  name: { type: String, required: true },\n  email: { type: String, required: true, unique: true },\n  createdAt: { type: Date, default: Date.now }\n});\n\nconst User = mongoose.model('User', userSchema);\n\n// CRUD operations\napp.get('/api/users', async (req, res) => {\n  try {\n    const users = await User.find();\n    res.json(users);\n  } catch (error) {\n    res.status(500).json({ error: error.message });\n  }\n});\n\napp.post('/api/users', async (req, res) => {\n  try {\n    const user = new User(req.body);\n    await user.save();\n    res.status(201).json(user);\n  } catch (error) {\n    res.status(400).json({ error: error.message });\n  }\n});",
+              "title": "<strong>NoSQL Integration</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing",
+        "title": "Testing Express Apps",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Testing Strategies"
+          },
+          {
+            "type": "content",
+            "emoji": "🧪",
+            "title": "Testing with Jest & Supertest",
+            "box": {
+              "code": "// Install: npm install --save-dev jest supertest\n\n// app.test.js\nconst request = require('supertest');\nconst app = require('./app');\n\ndescribe('User API', () => {\n  describe('GET /api/users', () => {\n    it('should return all users', async () => {\n      const response = await request(app)\n        .get('/api/users')\n        .expect(200);\n      \n      expect(Array.isArray(response.body)).toBe(true);\n    });\n  });\n\n  describe('POST /api/users', () => {\n    it('should create a new user', async () => {\n      const newUser = {\n        name: 'Test User',\n        email: 'test@example.com'\n      };\n\n      const response = await request(app)\n        .post('/api/users')\n        .send(newUser)\n        .expect(201);\n\n      expect(response.body).toHaveProperty('id');\n      expect(response.body.name).toBe(newUser.name);\n    });\n\n    it('should return 400 for invalid data', async () => {\n      await request(app)\n        .post('/api/users')\n        .send({ name: '' })\n        .expect(400);\n    });\n  });\n});",
+              "title": "<strong>API Testing</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment",
+        "title": "Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🚢",
+            "title": "Deployment Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Environment Variables</strong> - Use .env for configuration"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Helmet.js, CORS, rate limiting"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Logging</strong> - Morgan, Winston for production logs"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Compression, caching"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Containerization</strong> - Docker for consistent deployment"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud Platforms</strong> - Heroku, AWS, DigitalOcean"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Module 3: Performance & Scalability",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optimizing for High Traffic"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "The Cluster Module",
+            "box": {
+              "code": "const cluster = require('cluster');\nconst totalCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  for (let i = 0; i < totalCPUs; i++) {\n    cluster.fork();\n  }\n} else {\n  app.listen(3000);\n}",
+              "title": "Scaling Express to multiple CPU cores."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Response Caching with Redis",
+            "box": {
+              "list": [
+                "Cache standard API responses",
+                "Set TTL (Time To Live) for freshness",
+                "Implement Cache-Aside pattern",
+                "Atomic increments for rate limiting"
+              ],
+              "title": "Offload database pressure for hot keys."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗜️",
+            "title": "High-Efficiency Compression",
+            "box": {
+              "list": [
+                "Better compression ratios (15-20% smaller)",
+                "Reduced payload latency",
+                "Dynamic vs Static compression"
+              ],
+              "title": "Using Brotli over Gzip for modern browsers."
+            }
+          },
+          {
+            "type": "chart",
+            "title": "Impact of Caching",
+            "chartType": "line",
+            "labels": [
+              "Direct DB",
+              "Memcached",
+              "Redis Cluster"
+            ],
+            "data": [
+              450,
+              120,
+              45
+            ],
+            "note": {
+              "text": "Latency in milliseconds (Lower is better)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "enterprise-patterns",
+        "title": "Module 4: Enterprise Design Patterns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Leveling Up Your Code"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Layered Architecture",
+            "box": {
+              "title": "Folder Structure",
+              "list": [
+                "Controllers: Logic for handling req/res",
+                "Services: Reusable business logic",
+                "Models: Data structure & DB schemas",
+                "Config: Envs and secret management"
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Robust Schema Validation",
+            "box": {
+              "code": "const { body, validationResult } = require('express-validator');\n\napp.post('/user', \n  body('email').isEmail(),\n  body('password').isLength({ min: 5 }),\n  (req, res) => {\n    const errors = validationResult(req);\n    if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });\n    // Proceed...\n  }\n);",
+              "title": "Using Joi or express-validator."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛑",
+            "title": "Graceful Shutdown",
+            "box": {
+              "list": [
+                "Close database connections",
+                "Clear timeouts and intervals",
+                "Stop accepting new requests",
+                "Finish in-flight requests before exit"
+              ],
+              "title": "Never kill a server abruptly."
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Express.js Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Production Guidelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Project Structure</strong> - Organize routes, controllers, models"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Middleware Order</strong> - Proper middleware sequencing"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Input Validation</strong> - Validate all user inputs"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Error Handling</strong> - Centralized error management"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Implement security headers and practices"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Documentation</strong> - API documentation with Swagger"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Testing</strong> - Write comprehensive tests"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring</strong> - Use APM tools for performance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "modern-api-best-practices",
+        "title": "Module 5: Modern API Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Designing for the Future"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Streaming with Express",
+            "box": {
+              "code": "const fs = require('fs');\n\napp.get('/video', (req, res) => {\n  const stream = fs.createReadStream('./movie.mp4');\n  stream.pipe(res);\n});\n\n// Use 'busboy' or 'multer' for stream-based uploads",
+              "title": "Scale massive uploads and downloads without memory spikes."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📅",
+            "title": "Versioning Strategies",
+            "box": {
+              "list": [
+                "URI Versioning: /v1/users, /v2/users",
+                "Header Versioning: Accept-Version: 1.0.0",
+                "Content Negotiation",
+                "Deprecation logic and warnings"
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Advanced Query Parsing",
+            "box": {
+              "list": [
+                "Filtering: /api/v1/tours?duration[gte]=5",
+                "Sorting: /api/v1/tours?sort=-price,ratingsAverage",
+                "Pagination: /api/v1/tours?page=2&limit=10"
+              ],
+              "title": "Implementing Filtering, Sorting, and Pagination."
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "REST vs GraphQL in Express",
+            "leftTitle": "REST API",
+            "leftPoints": [
+              "Multiple endpoints",
+              "Over-fetching data",
+              "Fixed data structures",
+              "Standard HTTP caching"
+            ],
+            "rightTitle": "GraphQL (Apollo/Elysia)",
+            "rightPoints": [
+              "Single endpoint",
+              "Client-defined payload",
+              "Strongly typed schema",
+              "Complex server-side caching"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "case-study-microservices",
+        "title": "Module 6: Case Study - High-Traffic Microservices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Putting it all Together"
+          },
+          {
+            "type": "content",
+            "emoji": "🚢",
+            "title": "Scenario: E-commerce Engine",
+            "box": {
+              "title": "Architecture Overview",
+              "list": [
+                "Express Gateway for rate limiting & auth",
+                "Service A: Order Management (Relational)",
+                "Service B: Inventory (NoSQL/Redis)",
+                "Kafka for async event-driven syncing"
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Microservices Communication Flow",
+            "content": "        [Client] \n           | \n    [Express Gateway] \n     /     |     \\ \n[Order] [User] [Payment] \n     \\     |     / \n      [Kafka Bus] \n           | \n    [Inventory Sync]"
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Lessons from Scale",
+            "box": {
+              "list": [
+                "Circuit Breakers (opossum) are mandatory",
+                "Distributed Tracing (OpenTelemetry) for debugging",
+                "Centralized Logging (ELK Stack)",
+                "Stateful vs Stateless service design"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Resources",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Learning Resources"
+          },
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Further Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Official Docs</strong> - expressjs.com"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>MDN Web Docs</strong> - Express tutorials"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>GitHub</strong> - expressjs/express repository"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>Video Courses</strong> - Udemy, freeCodeCamp"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Blogs</strong> - Medium, Dev.to Express articles"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Middleware</strong> - expressjs.com/en/resources/middleware.html"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "thank-you",
+        "title": "Thank You",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🙏",
+            "title": "Thank You!",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💬",
+                  "text": "Feel free to ask any questions"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "Connect on GitHub: github.com/saurabh24thakur"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "Happy coding with Express.js!"
+                }
+              ],
+              "title": "<strong>Questions?</strong>"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

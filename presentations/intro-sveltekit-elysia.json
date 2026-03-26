@@ -34,44 +34,56 @@
           {
             "type": "topic-title",
             "title": "1. SvelteKit foundations",
-            "box": { "content": "The Modern Meta-framework." }
+            "subtitle": "The Modern Meta-framework."
           },
           {
             "type": "content",
             "title": "Filesystem-based Routing",
             "box": {
-              "content": "SvelteKit uses a directory-based router where folders define routes and files like +page.svelte define content.",
               "list": [
-                { "emoji": "📂", "text": "<strong>Predictable:</strong> Structure clearly maps to URLs." },
-                { "emoji": "⚡", "text": "<strong>Dynamic:</strong> Folders with [brackets] handle dynamic parameters." }
-              ]
+                {
+                  "emoji": "📂",
+                  "text": "<strong>Predictable:</strong> Structure clearly maps to URLs."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Dynamic:</strong> Folders with [brackets] handle dynamic parameters."
+                }
+              ],
+              "title": "SvelteKit uses a directory-based router where folders define routes and files like +page.svelte define content."
             }
           },
           {
             "type": "content",
             "title": "Load Functions (+page.js/ts)",
             "box": {
-              "content": "Fetch data before the page renders, supporting both server-side and client-side execution.",
-              "code": "export const load = async ({ fetch }) => {\n  const res = await fetch('/api/data');\n  return { item: await res.json() };\n};"
+              "code": "export const load = async ({ fetch }) => {\n  const res = await fetch('/api/data');\n  return { item: await res.json() };\n};",
+              "title": "Fetch data before the page renders, supporting both server-side and client-side execution."
             }
           },
           {
             "type": "content",
             "title": "Form Actions (+page.server.js)",
             "box": {
-              "content": "The standard way to handle form submissions without manual fetch calls, using native HTML forms with progressive enhancement.",
-              "code": "export const actions = {\n  default: async ({ request }) => {\n    const data = await request.formData();\n    // Handle logic\n  }\n};"
+              "code": "export const actions = {\n  default: async ({ request }) => {\n    const data = await request.formData();\n    // Handle logic\n  }\n};",
+              "title": "The standard way to handle form submissions without manual fetch calls, using native HTML forms with progressive enhancement."
             }
           },
           {
             "type": "content",
             "title": "Adapters & Deployment",
             "box": {
-              "content": "SvelteKit is runtime-agnostic through its adapter system (Vercel, Netlify, Cloudflare, Node).",
               "list": [
-                { "emoji": "🚢", "text": "<strong>Flexibility:</strong> Build once, deploy to any cloud provider." },
-                { "emoji": "🌐", "text": "<strong>Edge:</strong> Optimized for edge runtimes with adapter-cloudflare." }
-              ]
+                {
+                  "emoji": "🚢",
+                  "text": "<strong>Flexibility:</strong> Build once, deploy to any cloud provider."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Edge:</strong> Optimized for edge runtimes with adapter-cloudflare."
+                }
+              ],
+              "title": "SvelteKit is runtime-agnostic through its adapter system (Vercel, Netlify, Cloudflare, Node)."
             }
           }
         ]
@@ -83,49 +95,55 @@
           {
             "type": "topic-title",
             "title": "2. New Svelte Power",
-            "box": { "content": "Mastering Svelte 5 Runes." }
+            "subtitle": "Mastering Svelte 5 Runes."
           },
           {
             "type": "content",
             "title": "What are Runes?",
             "box": {
-              "content": "Runes are a set of primitives that provide universal reactivity, replacing top-level variables and stores in many cases.",
               "list": [
-                { "emoji": "🧬", "text": "<strong>Signal-based:</strong> Efficient fine-grained updates." },
-                { "emoji": "🛠️", "text": "<strong>Simplified:</strong> Use reactivity anywhere, not just in .svelte files." }
-              ]
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>Signal-based:</strong> Efficient fine-grained updates."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Simplified:</strong> Use reactivity anywhere, not just in .svelte files."
+                }
+              ],
+              "title": "Runes are a set of primitives that provide universal reactivity, replacing top-level variables and stores in many cases."
             }
           },
           {
             "type": "content",
             "title": "$state()",
             "box": {
-              "content": "Declares reactive state in a way that is modern, explicit, and highly performant.",
-              "code": "let count = $state(0);\nconst increment = () => count += 1;"
+              "code": "let count = $state(0);\nconst increment = () => count += 1;",
+              "title": "Declares reactive state in a way that is modern, explicit, and highly performant."
             }
           },
           {
             "type": "content",
             "title": "$derived()",
             "box": {
-              "content": "Computed values that automatically update when their dependencies change.",
-              "code": "let count = $state(0);\nlet doubled = $derived(count * 2);"
+              "code": "let count = $state(0);\nlet doubled = $derived(count * 2);",
+              "title": "Computed values that automatically update when their dependencies change."
             }
           },
           {
             "type": "content",
             "title": "$effect()",
             "box": {
-              "content": "Handles side effects, replacing the old $: syntax with more control and better performance.",
-              "code": "$effect(() => {\n  console.log('Count changed:', count);\n});"
+              "code": "$effect(() => {\n  console.log('Count changed:', count);\n});",
+              "title": "Handles side effects, replacing the old $: syntax with more control and better performance."
             }
           },
           {
             "type": "content",
             "title": "$props()",
             "box": {
-              "content": "The new way to define component props with full TypeScript support and cleaner syntax.",
-              "code": "let { name, age } = $props();"
+              "code": "let { name, age } = $props();",
+              "title": "The new way to define component props with full TypeScript support and cleaner syntax."
             }
           }
         ]
@@ -137,44 +155,56 @@
           {
             "type": "topic-title",
             "title": "3. Elysia.js",
-            "box": { "content": "The High-Performance API Machine." }
+            "subtitle": "The High-Performance API Machine."
           },
           {
             "type": "content",
             "title": "What is Elysia?",
             "box": {
-              "content": "A high-performance Bun-native framework focusing on developer experience and type safety.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Fast:</strong> Outperforms Express and Fastify in Bun." },
-                { "emoji": "🛡️", "text": "<strong>Safe:</strong> Built-in end-to-end type safety." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Fast:</strong> Outperforms Express and Fastify in Bun."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Safe:</strong> Built-in end-to-end type safety."
+                }
+              ],
+              "title": "A high-performance Bun-native framework focusing on developer experience and type safety."
             }
           },
           {
             "type": "content",
             "title": "Static Analysis",
             "box": {
-              "content": "Elysia uses static analysis to optimize route execution and generate OpenAPI schemas automatically.",
               "list": [
-                { "emoji": "🔍", "text": "<strong>Efficient:</strong> Predictable performance at scale." },
-                { "emoji": "📝", "text": "<strong>Swagger:</strong> Instant documentation with easy-to-use plugins." }
-              ]
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Efficient:</strong> Predictable performance at scale."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Swagger:</strong> Instant documentation with easy-to-use plugins."
+                }
+              ],
+              "title": "Elysia uses static analysis to optimize route execution and generate OpenAPI schemas automatically."
             }
           },
           {
             "type": "content",
             "title": "Elysia Context",
             "box": {
-              "content": "A unified object containing request, response, set (headers/status), and more.",
-              "code": "app.get('/', ({ set, query }) => {\n  set.status = 201;\n  return 'Success';\n});"
+              "code": "app.get('/', ({ set, query }) => {\n  set.status = 201;\n  return 'Success';\n});",
+              "title": "A unified object containing request, response, set (headers/status), and more."
             }
           },
           {
             "type": "content",
             "title": "Bun-First APIs",
             "box": {
-              "content": "Elysia leverages Bun's native features like `Bun.file` and `Bun.serve` for maximum throughput.",
-              "code": "app.get('/video', () => Bun.file('movie.mp4'));"
+              "code": "app.get('/video', () => Bun.file('movie.mp4'));",
+              "title": "Elysia leverages Bun's native features like `Bun.file` and `Bun.serve` for maximum throughput."
             }
           }
         ]
@@ -186,44 +216,56 @@
           {
             "type": "topic-title",
             "title": "4. Eden Connector",
-            "box": { "content": "End-to-End Type Safety Simplified." }
+            "subtitle": "End-to-End Type Safety Simplified."
           },
           {
             "type": "content",
             "title": "What is Eden?",
             "box": {
-              "content": "A high-performance client for Elysia that provides full type safety without code generation or heavy dependencies.",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Seamless:</strong> Shares types directly from your Elysia server." },
-                { "emoji": "🏗️", "text": "<strong>Zero-Config:</strong> No need for tRPC-style boilerplate." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Seamless:</strong> Shares types directly from your Elysia server."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Zero-Config:</strong> No need for tRPC-style boilerplate."
+                }
+              ],
+              "title": "A high-performance client for Elysia that provides full type safety without code generation or heavy dependencies."
             }
           },
           {
             "type": "content",
             "title": "Eden Treaty",
             "box": {
-              "content": "The standard client that allows you to call your API using object property access, with full IDE autocompletion.",
-              "code": "// Client\nconst app = edenTreaty<App>('http://localhost:3000');\nconst { data } = await app.blog.post({ id: 5 }).get();"
+              "code": "// Client\nconst app = edenTreaty<App>('http://localhost:3000');\nconst { data } = await app.blog.post({ id: 5 }).get();",
+              "title": "The standard client that allows you to call your API using object property access, with full IDE autocompletion."
             }
           },
           {
             "type": "content",
             "title": "Eden Fetch",
             "box": {
-              "content": "A lightweight fetch wrapper that provides type safety for standard fetch-like calls.",
-              "code": "const fetch = edenFetch<App>('http://localhost:3000');\nconst data = await fetch('/user/:id', { params: { id: '1' } });"
+              "code": "const fetch = edenFetch<App>('http://localhost:3000');\nconst data = await fetch('/user/:id', { params: { id: '1' } });",
+              "title": "A lightweight fetch wrapper that provides type safety for standard fetch-like calls."
             }
           },
           {
             "type": "content",
             "title": "Runtime Validation Integration",
             "box": {
-              "content": "Eden automatically extracts validation schemas (Zod, TypeBox) and reflects them in the client types.",
               "list": [
-                { "emoji": "🛡️", "text": "<strong>Reliable:</strong> If the schema changes, the client type changes instantly." },
-                { "emoji": "🚦", "text": "<strong>Safety:</strong> Prevents sending invalid data to the server." }
-              ]
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Reliable:</strong> If the schema changes, the client type changes instantly."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Safety:</strong> Prevents sending invalid data to the server."
+                }
+              ],
+              "title": "Eden automatically extracts validation schemas (Zod, TypeBox) and reflects them in the client types."
             }
           }
         ]
@@ -235,44 +277,56 @@
           {
             "type": "topic-title",
             "title": "5. Full-stack Architecture",
-            "box": { "content": "Bridging SvelteKit and Elysia." }
+            "subtitle": "Bridging SvelteKit and Elysia."
           },
           {
             "type": "content",
             "title": "Hybrid Rendering Flow",
             "box": {
-              "content": "Strategy for combining SvelteKit's SSR with Elysia's high-speed API logic.",
               "list": [
-                { "emoji": "🌩️", "text": "<strong>SSR Loaders:</strong> Fetch initial data from Elysia during server-side render." },
-                { "emoji": "🌊", "text": "<strong>Hydration:</strong> Eden client takes over for interactive client-side updates." }
-              ]
+                {
+                  "emoji": "🌩️",
+                  "text": "<strong>SSR Loaders:</strong> Fetch initial data from Elysia during server-side render."
+                },
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>Hydration:</strong> Eden client takes over for interactive client-side updates."
+                }
+              ],
+              "title": "Strategy for combining SvelteKit's SSR with Elysia's high-speed API logic."
             }
           },
           {
             "type": "content",
             "title": "Form Actions to API",
             "box": {
-              "content": "Best practices for proxying SvelteKit form actions to an Elysia backend for specialized processing.",
-              "code": "// +page.server.ts\nexport const actions = {\n  default: async ({ request }) => {\n    const data = await request.formData();\n    return await elysiaClient.process.post(data);\n  }\n};"
+              "code": "// +page.server.ts\nexport const actions = {\n  default: async ({ request }) => {\n    const data = await request.formData();\n    return await elysiaClient.process.post(data);\n  }\n};",
+              "title": "Best practices for proxying SvelteKit form actions to an Elysia backend for specialized processing."
             }
           },
           {
             "type": "content",
             "title": "Edge Synchronization",
             "box": {
-              "content": "Running both SvelteKit and Elysia on the edge (e.g., Cloudflare Workers) for global performance.",
               "list": [
-                { "emoji": "🌍", "text": "<strong>Low Latency:</strong> Compute happens near the user." },
-                { "emoji": "📏", "text": "<strong>Unified Runtime:</strong> Shared Bun environment simplifies configuration." }
-              ]
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Low Latency:</strong> Compute happens near the user."
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Unified Runtime:</strong> Shared Bun environment simplifies configuration."
+                }
+              ],
+              "title": "Running both SvelteKit and Elysia on the edge (e.g., Cloudflare Workers) for global performance."
             }
           },
           {
             "type": "content",
             "title": "Real-time Sync with Eden",
             "box": {
-              "content": "Using Eden for reactive WebSocket or SSE connections that update Svelte state in real-time.",
-              "code": "// Svelte Component\napp.chat.subscribe((msg) => {\n  messages = [...messages, msg];\n});"
+              "code": "// Svelte Component\napp.chat.subscribe((msg) => {\n  messages = [...messages, msg];\n});",
+              "title": "Using Eden for reactive WebSocket or SSE connections that update Svelte state in real-time."
             }
           }
         ]
@@ -284,42 +338,51 @@
           {
             "type": "topic-title",
             "title": "6. Extending Elysia",
-            "box": { "content": "Elysia's Modular Plugin System." }
+            "subtitle": "Elysia's Modular Plugin System."
           },
           {
             "type": "content",
             "title": "The Plugin Model",
             "box": {
-              "content": "Elysia follows a 'composable' plugin model where any instance can be used as a plugin for another instance.",
-              "code": "const plugin = new Elysia().get('/p', () => 'Ping');\nconst app = new Elysia().use(plugin);"
+              "code": "const plugin = new Elysia().get('/p', () => 'Ping');\nconst app = new Elysia().use(plugin);",
+              "title": "Elysia follows a 'composable' plugin model where any instance can be used as a plugin for another instance."
             }
           },
           {
             "type": "content",
             "title": "Life-cycle Hooks",
             "box": {
-              "content": "Hook into request execution at various stages: `onRequest`, `beforeHandle`, `afterHandle`, `onResponse`, and `onError`.",
-              "code": "app.onBeforeHandle(({ set }) => {\n  console.log('Incoming request...');\n});"
+              "code": "app.onBeforeHandle(({ set }) => {\n  console.log('Incoming request...');\n});",
+              "title": "Hook into request execution at various stages: `onRequest`, `beforeHandle`, `afterHandle`, `onResponse`, and `onError`."
             }
           },
           {
             "type": "content",
             "title": "Official Plugins",
             "box": {
-              "content": "Elysia provides a rich set of official plugins for common tasks.",
               "list": [
-                { "emoji": "📖", "text": "<strong>Swagger:</strong> Interactive API documentation." },
-                { "emoji": "🔒", "text": "<strong>JWT:</strong> Token-based authentication." },
-                { "emoji": "🔄", "text": "<strong>CORS:</strong> Cross-Origin Resource Sharing." }
-              ]
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Swagger:</strong> Interactive API documentation."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>JWT:</strong> Token-based authentication."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CORS:</strong> Cross-Origin Resource Sharing."
+                }
+              ],
+              "title": "Elysia provides a rich set of official plugins for common tasks."
             }
           },
           {
             "type": "content",
             "title": "Custom Plugins",
             "box": {
-              "content": "Creating reusable plugins is easy with the `.use()` method and type inference.",
-              "code": "const auth = (app) => app.onBeforeHandle(...) \napp.use(auth);"
+              "code": "const auth = (app) => app.onBeforeHandle(...) \napp.use(auth);",
+              "title": "Creating reusable plugins is easy with the `.use()` method and type inference."
             }
           }
         ]
@@ -331,44 +394,56 @@
           {
             "type": "topic-title",
             "title": "7. Modern State",
-            "box": { "content": "Managing Data in SvelteKit." }
+            "subtitle": "Managing Data in SvelteKit."
           },
           {
             "type": "content",
             "title": "SvelteKit Stores (Legacy/Classic)",
             "box": {
-              "content": "A look at the traditional `writable`, `readable`, and `derived` stores for global state management.",
-              "code": "import { writable } from 'svelte/store';\nexport const theme = writable('light');"
+              "code": "import { writable } from 'svelte/store';\nexport const theme = writable('light');",
+              "title": "A look at the traditional `writable`, `readable`, and `derived` stores for global state management."
             }
           },
           {
             "type": "content",
             "title": "Global State Refresh with Runes",
             "box": {
-              "content": "How Runes simplify global state and cross-component communication without explicit stores.",
               "list": [
-                { "emoji": "🧠", "text": "<strong>Intuitive:</strong> Regular classes can now be reactive." },
-                { "emoji": "🔗", "text": "<strong>Decoupled:</strong> Better separation of concerns." }
-              ]
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Intuitive:</strong> Regular classes can now be reactive."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Decoupled:</strong> Better separation of concerns."
+                }
+              ],
+              "title": "How Runes simplify global state and cross-component communication without explicit stores."
             }
           },
           {
             "type": "content",
             "title": "Optimistic Updates",
             "box": {
-              "content": "Implementing smooth UX by updating the UI before the server responds, using SvelteKit's `enhance` action.",
-              "code": "<form use:enhance={(...) => {\n  // Preliminary state update\n  return async ({ update }) => { ... };\n}}>"
+              "code": "<form use:enhance={(...) => {\n  // Preliminary state update\n  return async ({ update }) => { ... };\n}}>",
+              "title": "Implementing smooth UX by updating the UI before the server responds, using SvelteKit's `enhance` action."
             }
           },
           {
             "type": "content",
             "title": "Real-time Sync Chains",
             "box": {
-              "content": "Connecting Elysia's real-time events to Svelte's reactive variables for instant feedback loops.",
               "list": [
-                { "emoji": "🛰️", "text": "<strong>Socket to Rune:</strong> Direct mapping of event data to $state." },
-                { "emoji": "🔄", "text": "<strong>Feedback:</strong> User actions reflected immediately across all clients." }
-              ]
+                {
+                  "emoji": "🛰️",
+                  "text": "<strong>Socket to Rune:</strong> Direct mapping of event data to $state."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Feedback:</strong> User actions reflected immediately across all clients."
+                }
+              ],
+              "title": "Connecting Elysia's real-time events to Svelte's reactive variables for instant feedback loops."
             }
           }
         ]
@@ -380,44 +455,56 @@
           {
             "type": "topic-title",
             "title": "8. Beyond the Basics",
-            "box": { "content": "Custom Preprocessors & Elysia Macros." }
+            "subtitle": "Custom Preprocessors & Elysia Macros."
           },
           {
             "type": "content",
             "title": "Svelte Preprocessors",
             "box": {
-              "content": "Customizing the compilation step. How to use tools like `svelte-preprocess` or `vite-plugin-svelte` for specialized syntax.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>PostCSS/SCSS:</strong> Advanced styling techniques." },
-                { "emoji": "📦", "text": "<strong>Custom Logic:</strong> Injecting code or transforming markup at build time." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>PostCSS/SCSS:</strong> Advanced styling techniques."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Custom Logic:</strong> Injecting code or transforming markup at build time."
+                }
+              ],
+              "title": "Customizing the compilation step. How to use tools like `svelte-preprocess` or `vite-plugin-svelte` for specialized syntax."
             }
           },
           {
             "type": "content",
             "title": "Elysia Macros",
             "box": {
-              "content": "Define custom route properties that can inject logic and metadata automatically, improving code reuse and safety.",
-              "code": "const app = new Elysia()\n  .macro(({ onBeforeHandle }) => ({\n    user: (role) => {\n      onBeforeHandle(() => checkAuth(role));\n    }\n  }))\n  .get('/', () => 'OK', { user: 'admin' });"
+              "code": "const app = new Elysia()\n  .macro(({ onBeforeHandle }) => ({\n    user: (role) => {\n      onBeforeHandle(() => checkAuth(role));\n    }\n  }))\n  .get('/', () => 'OK', { user: 'admin' });",
+              "title": "Define custom route properties that can inject logic and metadata automatically, improving code reuse and safety."
             }
           },
           {
             "type": "content",
             "title": "Advanced Type Inference",
             "box": {
-              "content": "Pushing TypeScript to the limit. Inferring complex nested structures and union types across the full-stack boundary.",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Deep Types:</strong> Navigating complex API responses with ease." },
-                { "emoji": "🛡️", "text": "<strong>Strictness:</strong> Catching subtle type mismatches during development." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Deep Types:</strong> Navigating complex API responses with ease."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Strictness:</strong> Catching subtle type mismatches during development."
+                }
+              ],
+              "title": "Pushing TypeScript to the limit. Inferring complex nested structures and union types across the full-stack boundary."
             }
           },
           {
             "type": "content",
             "title": "Custom Svelte Directives",
             "box": {
-              "content": "Extending Svelte's capabilities with custom `use:action` directives for DOM manipulation or third-party library integration.",
-              "code": "<div use:tooltip={{ text: 'Hello!' }}>Hover me</div>"
+              "code": "<div use:tooltip={{ text: 'Hello!' }}>Hover me</div>",
+              "title": "Extending Svelte's capabilities with custom `use:action` directives for DOM manipulation or third-party library integration."
             }
           }
         ]
@@ -429,41 +516,47 @@
           {
             "type": "topic-title",
             "title": "9. Reliable Data",
-            "box": { "content": "Drizzle ORM & Turso Integration." }
+            "subtitle": "Drizzle ORM & Turso Integration."
           },
           {
             "type": "content",
             "title": "Why Drizzle?",
             "box": {
-              "content": "The standard choice for Bun-first apps: Type-safe, lightweight, and focused on predictable SQL performance.",
-              "code": "import { drizzle } from 'drizzle-orm/libsql';\nimport { createClient } from '@libsql/client';\n\nconst client = createClient({ url: 'libsql://...' });\nconst db = drizzle(client);"
+              "code": "import { drizzle } from 'drizzle-orm/libsql';\nimport { createClient } from '@libsql/client';\n\nconst client = createClient({ url: 'libsql://...' });\nconst db = drizzle(client);",
+              "title": "The standard choice for Bun-first apps: Type-safe, lightweight, and focused on predictable SQL performance."
             }
           },
           {
             "type": "content",
             "title": "Turso: The Edge Database",
             "box": {
-              "content": "A distributed SQLite database built on LibSQL, perfect for low-latency global applications.",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Global Replication:</strong> Data stays close to your compute." },
-                { "emoji": "⚡", "text": "<strong>Scale:</strong> Handle millions of databases with ease." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Global Replication:</strong> Data stays close to your compute."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Scale:</strong> Handle millions of databases with ease."
+                }
+              ],
+              "title": "A distributed SQLite database built on LibSQL, perfect for low-latency global applications."
             }
           },
           {
             "type": "content",
             "title": "Schema Management",
             "box": {
-              "content": "Using Drizzle Kit to generate and push migrations, staying in sync with your TypeScript schemas.",
-              "code": "# shell\nbun drizzle-kit generate:sqlite"
+              "code": "# shell\nbun drizzle-kit generate:sqlite",
+              "title": "Using Drizzle Kit to generate and push migrations, staying in sync with your TypeScript schemas."
             }
           },
           {
             "type": "content",
             "title": "Reactive Data Flow",
             "box": {
-              "content": "Connecting database updates to Svelte state. Using SvelteKit's `invalidate` or `invalidateAll` to refresh data from Elysia.",
-              "code": "import { invalidateAll } from '$app/navigation';\n// After successful mutation\nawait invalidateAll();"
+              "code": "import { invalidateAll } from '$app/navigation';\n// After successful mutation\nawait invalidateAll();",
+              "title": "Connecting database updates to Svelte state. Using SvelteKit's `invalidate` or `invalidateAll` to refresh data from Elysia."
             }
           }
         ]
@@ -475,44 +568,56 @@
           {
             "type": "topic-title",
             "title": "10. Deploying the Stack",
-            "box": { "content": "Multi-runtime Flexibility." }
+            "subtitle": "Multi-runtime Flexibility."
           },
           {
             "type": "content",
             "title": "Bun-First Deployment",
             "box": {
-              "content": "Running the entire stack on a single Bun instance for maximum simplicity and performance.",
-              "code": "bun index.ts // Servant both SvelteKit and Elysia"
+              "code": "bun index.ts // Servant both SvelteKit and Elysia",
+              "title": "Running the entire stack on a single Bun instance for maximum simplicity and performance."
             }
           },
           {
             "type": "content",
             "title": "Cloudflare Workers & Pages",
             "box": {
-              "content": "Leveraging Cloudflare's edge infrastructure. Elysia handles the backend logic while SvelteKit manages the frontend.",
               "list": [
-                { "emoji": "☁️", "text": "<strong>Pages:</strong> Host the SvelteKit frontend." },
-                { "emoji": "👷", "text": "<strong>Workers:</strong> Run the Elysia API." }
-              ]
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Pages:</strong> Host the SvelteKit frontend."
+                },
+                {
+                  "emoji": "👷",
+                  "text": "<strong>Workers:</strong> Run the Elysia API."
+                }
+              ],
+              "title": "Leveraging Cloudflare's edge infrastructure. Elysia handles the backend logic while SvelteKit manages the frontend."
             }
           },
           {
             "type": "content",
             "title": "Dockerization",
             "box": {
-              "content": "Creating a lightweight Bun-based Docker image for consistent deployment across any cloud provider.",
-              "code": "FROM oven/bun:latest\nCOPY . .\nCMD [\"bun\", \"src/index.ts\"]"
+              "code": "FROM oven/bun:latest\nCOPY . .\nCMD [\"bun\", \"src/index.ts\"]",
+              "title": "Creating a lightweight Bun-based Docker image for consistent deployment across any cloud provider."
             }
           },
           {
             "type": "content",
             "title": "Hybrid Hosting",
             "box": {
-              "content": "Hosting the frontend on a CDN (Vercel/Netlify) and the Elysia API on a dedicated VPS or serverless platform.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Optimized:</strong> Each part is hosted where it performs best." },
-                { "emoji": "📏", "text": "<strong>Scalable:</strong> Scale your API independently of your frontend." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Optimized:</strong> Each part is hosted where it performs best."
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Scalable:</strong> Scale your API independently of your frontend."
+                }
+              ],
+              "title": "Hosting the frontend on a CDN (Vercel/Netlify) and the Elysia API on a dedicated VPS or serverless platform."
             }
           }
         ]
@@ -524,41 +629,47 @@
           {
             "type": "topic-title",
             "title": "11. Quality Assurance",
-            "box": { "content": "Vitest & Elysia Handler Testing." }
+            "subtitle": "Vitest & Elysia Handler Testing."
           },
           {
             "type": "content",
             "title": "Vitest for Svelte",
             "box": {
-              "content": "Fast, Vite-native unit testing for Svelte components and logic with full Rune support.",
-              "code": "import { render } from '@testing-library/svelte';\ntest('renders welcome', () => {\n  const { getByText } = render(Welcome);\n});"
+              "code": "import { render } from '@testing-library/svelte';\ntest('renders welcome', () => {\n  const { getByText } = render(Welcome);\n});",
+              "title": "Fast, Vite-native unit testing for Svelte components and logic with full Rune support."
             }
           },
           {
             "type": "content",
             "title": "Testing Elysia Handlers",
             "box": {
-              "content": "Isolated testing of Elysia routes by directly calling the `app.handle()` method with simulated requests.",
-              "code": "const res = await app.handle(new Request('http://localhost/'));\nexpect(await res.text()).toBe('Hello');"
+              "code": "const res = await app.handle(new Request('http://localhost/'));\nexpect(await res.text()).toBe('Hello');",
+              "title": "Isolated testing of Elysia routes by directly calling the `app.handle()` method with simulated requests."
             }
           },
           {
             "type": "content",
             "title": "End-to-End Type Checking",
             "box": {
-              "content": "Ensuring that your tests reflect the same type safety as your production code via Eden.",
               "list": [
-                { "emoji": "🛡️", "text": "<strong>Type-safe tests:</strong> Catch API breaks at compile time." },
-                { "emoji": "🚦", "text": "<strong>Reliability:</strong> Tests and code stay perfectly in sync." }
-              ]
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Type-safe tests:</strong> Catch API breaks at compile time."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Reliability:</strong> Tests and code stay perfectly in sync."
+                }
+              ],
+              "title": "Ensuring that your tests reflect the same type safety as your production code via Eden."
             }
           },
           {
             "type": "content",
             "title": "Playwright for E2E",
             "box": {
-              "content": "Automating real user interactions across the entire stack to ensure seamless integration.",
-              "code": "await page.goto('/');\nawait expect(page.locator('h1')).toHaveText('Welcome');"
+              "code": "await page.goto('/');\nawait expect(page.locator('h1')).toHaveText('Welcome');",
+              "title": "Automating real user interactions across the entire stack to ensure seamless integration."
             }
           }
         ]
@@ -570,40 +681,59 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The Future of Full-stack." }
+            "subtitle": "The Future of Full-stack."
           },
           {
             "type": "content",
             "title": "Stack Summary",
             "box": {
-              "content": "SvelteKit and Elysia represent a powerful, type-safe, and high-performance combination for modern web apps.",
               "list": [
-                { "emoji": "🚀", "text": "<strong>Speed:</strong> Bun-native performance everywhere." },
-                { "emoji": "🛡️", "text": "<strong>Safety:</strong> End-to-end type safety with Eden." },
-                { "emoji": "🧠", "text": "<strong>Experience:</strong> Reactive UI with a minimalist API." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Speed:</strong> Bun-native performance everywhere."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Safety:</strong> End-to-end type safety with Eden."
+                },
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Experience:</strong> Reactive UI with a minimalist API."
+                }
+              ],
+              "title": "SvelteKit and Elysia represent a powerful, type-safe, and high-performance combination for modern web apps."
             }
           },
           {
             "type": "content",
             "title": "Evolving Ecosystem",
             "box": {
-              "content": "Keep an eye on Svelte 5 stable release, Elysia 1.0+ core improvements, and the growth of the Bun ecosystem.",
               "list": [
-                { "emoji": "🧬", "text": "<strong>Runes:</strong> The future of reactive programming." },
-                { "emoji": "🔧", "text": "<strong>Tooling:</strong> Faster builds and better DX with Vite." }
-              ]
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>Runes:</strong> The future of reactive programming."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tooling:</strong> Faster builds and better DX with Vite."
+                }
+              ],
+              "title": "Keep an eye on Svelte 5 stable release, Elysia 1.0+ core improvements, and the growth of the Bun ecosystem."
             }
           },
           {
             "type": "content",
             "title": "Final Thoughts",
-            "box": { "content": "Master the runes. Bridge the stack with Eden. Build the next generation of web apps." }
+            "box": {
+              "title": "Master the runes. Bridge the stack with Eden. Build the next generation of web apps."
+            }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you! Any questions?" }
+            "box": {
+              "title": "Thank you! Any questions?"
+            }
           }
         ]
       }

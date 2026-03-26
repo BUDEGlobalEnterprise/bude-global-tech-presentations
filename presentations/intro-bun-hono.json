@@ -34,44 +34,56 @@
           {
             "type": "topic-title",
             "title": "1. Bun Runtime",
-            "box": { "content": "The Zig-powered Speed Demon." }
+            "subtitle": "The Zig-powered Speed Demon."
           },
           {
             "type": "content",
             "title": "What is Bun?",
             "box": {
-              "content": "A fast, all-in-one JavaScript runtime, package manager, and bundler written in Zig.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>Built for Speed:</strong> Starts nearly instantaneously." },
-                { "emoji": "🛠️", "text": "<strong>All-in-one:</strong> Replaces Node.js, npm, npx, and Webpack/esbuild." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Built for Speed:</strong> Starts nearly instantaneously."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>All-in-one:</strong> Replaces Node.js, npm, npx, and Webpack/esbuild."
+                }
+              ],
+              "title": "A fast, all-in-one JavaScript runtime, package manager, and bundler written in Zig."
             }
           },
           {
             "type": "content",
             "title": "The Zig Advantage",
             "box": {
-              "content": "Why Zig? It allows for manual memory management and low-level optimizations that V8 (C++) can't match easily.",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Zero-overhead:</strong> Minimal garbage collection interference." },
-                { "emoji": "🧵", "text": "<strong>Compact:</strong> Small binary size with massive performance." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Zero-overhead:</strong> Minimal garbage collection interference."
+                },
+                {
+                  "emoji": "🧵",
+                  "text": "<strong>Compact:</strong> Small binary size with massive performance."
+                }
+              ],
+              "title": "Why Zig? It allows for manual memory management and low-level optimizations that V8 (C++) can't match easily."
             }
           },
           {
             "type": "content",
             "title": "Native Bun APIs",
             "box": {
-              "content": "Forget slow polyfills. Bun provides high-performance native APIs for common tasks.",
-              "code": "// Bun.serve is much faster than Node's http module\nBun.serve({\n  fetch(req) {\n    return new Response(\"Hello Bun!\");\n  },\n});"
+              "code": "// Bun.serve is much faster than Node's http module\nBun.serve({\n  fetch(req) {\n    return new Response(\"Hello Bun!\");\n  },\n});",
+              "title": "Forget slow polyfills. Bun provides high-performance native APIs for common tasks."
             }
           },
           {
             "type": "content",
             "title": "Bun.sqlite",
             "box": {
-              "content": "The fastest SQLite driver in the JavaScript ecosystem, built directly into the runtime.",
-              "code": "import { Database } from \"bun:sqlite\";\nconst db = new Database(\":memory:\");\nconst query = db.query(\"SELECT 'hello' as message\");\nconsole.log(query.get());"
+              "code": "import { Database } from \"bun:sqlite\";\nconst db = new Database(\":memory:\");\nconst query = db.query(\"SELECT 'hello' as message\");\nconsole.log(query.get());",
+              "title": "The fastest SQLite driver in the JavaScript ecosystem, built directly into the runtime."
             }
           }
         ]
@@ -83,25 +95,31 @@
           {
             "type": "topic-title",
             "title": "2. Fast Dependency Management",
-            "box": { "content": "Bun Install: The end of coffee breaks." }
+            "subtitle": "Bun Install: The end of coffee breaks."
           },
           {
             "type": "content",
             "title": "Bun install Performance",
             "box": {
-              "content": "Up to 30x faster than npm. Uses syscalls, zero-copy, and hardlinks for peak efficiency.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Blazing:</strong> Installs thousands of packages in seconds." },
-                { "emoji": "📦", "text": "<strong>Global Cache:</strong> Shared across all your projects." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Blazing:</strong> Installs thousands of packages in seconds."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Global Cache:</strong> Shared across all your projects."
+                }
+              ],
+              "title": "Up to 30x faster than npm. Uses syscalls, zero-copy, and hardlinks for peak efficiency."
             }
           },
           {
             "type": "content",
             "title": "Binary Lockfiles",
             "box": {
-              "content": "Bun uses a binary `bun.lockb` for faster parsing and smaller disk footprint compared to JSON lockfiles.",
-              "code": "# shell\nbun install # Generates bun.lockb"
+              "code": "# shell\nbun install # Generates bun.lockb",
+              "title": "Bun uses a binary `bun.lockb` for faster parsing and smaller disk footprint compared to JSON lockfiles."
             }
           }
         ]
@@ -113,39 +131,57 @@
           {
             "type": "topic-title",
             "title": "3. Hono Framework",
-            "box": { "content": "The Ultra-Fast Web Machine." }
+            "subtitle": "The Ultra-Fast Web Machine."
           },
           {
             "type": "content",
             "title": "What is Hono?",
             "box": {
-              "content": "A small, fast, and runtime-agnostic web framework for the edge.",
               "list": [
-                { "emoji": "🥋", "text": "<strong>Lightweight:</strong> Under 15KB minified and gzipped." },
-                { "emoji": "🏎️", "text": "<strong>Blazing Fast:</strong> Zero-dependency router tuned for speed." }
-              ]
+                {
+                  "emoji": "🥋",
+                  "text": "<strong>Lightweight:</strong> Under 15KB minified and gzipped."
+                },
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Blazing Fast:</strong> Zero-dependency router tuned for speed."
+                }
+              ],
+              "title": "A small, fast, and runtime-agnostic web framework for the edge."
             }
           },
           {
             "type": "content",
             "title": "Runtime Agnostic",
             "box": {
-              "content": "Write once, run anywhere. Hono works seamlessly on Bun, Deno, Node, Cloudflare, and more.",
               "list": [
-                { "emoji": "🌍", "text": "<strong>Edge Ready:</strong> Perfect for Cloudflare Workers and Lambda@Edge." },
-                { "emoji": "🔌", "text": "<strong>Adapter System:</strong> Easy to switch between hosting providers." }
-              ]
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Edge Ready:</strong> Perfect for Cloudflare Workers and Lambda@Edge."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Adapter System:</strong> Easy to switch between hosting providers."
+                }
+              ],
+              "title": "Write once, run anywhere. Hono works seamlessly on Bun, Deno, Node, Cloudflare, and more."
             }
           },
           {
             "type": "content",
             "title": "Zero Dependencies",
             "box": {
-              "content": "Hono doesn't rely on `node:*` modules, making it extremely portable and fast to boot.",
               "list": [
-                { "emoji": "📦", "text": "<strong>No bloat:</strong> Everything is built-in or pluggable." },
-                { "emoji": "🛡️", "text": "<strong>Secure:</strong> Fewer dependencies mean reduced attack surface." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>No bloat:</strong> Everything is built-in or pluggable."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Secure:</strong> Fewer dependencies mean reduced attack surface."
+                }
+              ],
+              "title": "Hono doesn't rely on `node:*` modules, making it extremely portable and fast to boot."
             }
           }
         ]
@@ -157,52 +193,64 @@
           {
             "type": "topic-title",
             "title": "4. Effective Routing",
-            "box": { "content": "Express-like simplicity, Edge performance." }
+            "subtitle": "Express-like simplicity, Edge performance."
           },
           {
             "type": "content",
             "title": "The Hono Router",
             "box": {
-              "content": "Uses a highly optimized trie-based router for O(1) route discovery.",
-              "code": "const app = new Hono();\napp.get('/user/:id', (c) => {\n  const id = c.req.param('id');\n  return c.text(`User ID: ${id}`);\n});"
+              "code": "const app = new Hono();\napp.get('/user/:id', (c) => {\n  const id = c.req.param('id');\n  return c.text(`User ID: ${id}`);\n});",
+              "title": "Uses a highly optimized trie-based router for O(1) route discovery."
             }
           },
           {
             "type": "content",
             "title": "Middleware Concept",
             "box": {
-              "content": "Hono's middleware follows the standard 'onion model' (like Koa or Express).",
               "list": [
-                { "emoji": "🧩", "text": "<strong>Modular:</strong> Apply middleware globally or to specific routes." },
-                { "emoji": "🔄", "text": "<strong>Sequential:</strong> Execution flows through the chain." }
-              ]
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Modular:</strong> Apply middleware globally or to specific routes."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Sequential:</strong> Execution flows through the chain."
+                }
+              ],
+              "title": "Hono's middleware follows the standard 'onion model' (like Koa or Express)."
             }
           },
           {
             "type": "content",
             "title": "Built-in Middleware",
             "box": {
-              "content": "Batteries included! Includes Logger, CORS, Basic Auth, JWT, and more.",
-              "code": "import { logger } from 'hono/logger';\nimport { cors } from 'hono/cors';\n\napp.use('*', logger());\napp.use('/api/*', cors());"
+              "code": "import { logger } from 'hono/logger';\nimport { cors } from 'hono/cors';\n\napp.use('*', logger());\napp.use('/api/*', cors());",
+              "title": "Batteries included! Includes Logger, CORS, Basic Auth, JWT, and more."
             }
           },
           {
             "type": "content",
             "title": "Custom Middleware",
             "box": {
-              "content": "Crafting custom logic is straightforward with the `Context` object.",
-              "code": "app.use('/admin/*', async (c, next) => {\n  if (!isAdmin(c)) return c.text('Forbidden', 403);\n  await next();\n});"
+              "code": "app.use('/admin/*', async (c, next) => {\n  if (!isAdmin(c)) return c.text('Forbidden', 403);\n  await next();\n});",
+              "title": "Crafting custom logic is straightforward with the `Context` object."
             }
           },
           {
             "type": "content",
             "title": "The Context (c) Object",
             "box": {
-              "content": "Bundles request, response, and helper methods into a single unified object.",
               "list": [
-                { "emoji": "📬", "text": "<strong>Request:</strong> `c.req` access params, headers, and body." },
-                { "emoji": "📤", "text": "<strong>Response:</strong> `c.json`, `c.text`, `c.html` helpers." }
-              ]
+                {
+                  "emoji": "📬",
+                  "text": "<strong>Request:</strong> `c.req` access params, headers, and body."
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>Response:</strong> `c.json`, `c.text`, `c.html` helpers."
+                }
+              ],
+              "title": "Bundles request, response, and helper methods into a single unified object."
             }
           }
         ]
@@ -214,41 +262,47 @@
           {
             "type": "topic-title",
             "title": "5. Robust Validation",
-            "box": { "content": "Zod Integration & End-to-End Type Safety." }
+            "subtitle": "Zod Integration & End-to-End Type Safety."
           },
           {
             "type": "content",
             "title": "Why Zod?",
             "box": {
-              "content": "A TypeScript-first schema declaration and validation library with focus on developer experience.",
               "list": [
-                { "emoji": "🖋️", "text": "<strong>Declarative:</strong> Define schemas once, use them for validation and types." },
-                { "emoji": "🛡️", "text": "<strong>Reliable:</strong> Catch errors at the edge before they hit your logic." }
-              ]
+                {
+                  "emoji": "🖋️",
+                  "text": "<strong>Declarative:</strong> Define schemas once, use them for validation and types."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Reliable:</strong> Catch errors at the edge before they hit your logic."
+                }
+              ],
+              "title": "A TypeScript-first schema declaration and validation library with focus on developer experience."
             }
           },
           {
             "type": "content",
             "title": "Hono Zod Validator",
             "box": {
-              "content": "Official middleware to validate request data (body, query, params) using Zod schemas.",
-              "code": "import { z } from 'zod';\nimport { zValidator } from '@hono/zod-validator';\n\nconst schema = z.object({ id: z.string() });\napp.post('/user', zValidator('json', schema), (c) => { ... });"
+              "code": "import { z } from 'zod';\nimport { zValidator } from '@hono/zod-validator';\n\nconst schema = z.object({ id: z.string() });\napp.post('/user', zValidator('json', schema), (c) => { ... });",
+              "title": "Official middleware to validate request data (body, query, params) using Zod schemas."
             }
           },
           {
             "type": "content",
             "title": "End-to-End Type Safety",
             "box": {
-              "content": "Infer TypeScript types directly from your Zod schemas to ensure consistency across your app.",
-              "code": "type User = z.infer<typeof schema>;\n// User is now { id: string }"
+              "code": "type User = z.infer<typeof schema>;\n// User is now { id: string }",
+              "title": "Infer TypeScript types directly from your Zod schemas to ensure consistency across your app."
             }
           },
           {
             "type": "content",
             "title": "Complex Schemas",
             "box": {
-              "content": "Zod supports nested objects, arrays, refinements, and custom error messages.",
-              "code": "const complex = z.object({\n  email: z.string().email(),\n  age: z.number().min(18),\n});"
+              "code": "const complex = z.object({\n  email: z.string().email(),\n  age: z.number().min(18),\n});",
+              "title": "Zod supports nested objects, arrays, refinements, and custom error messages."
             }
           }
         ]
@@ -260,38 +314,38 @@
           {
             "type": "topic-title",
             "title": "6. Advanced Features",
-            "box": { "content": "WebSockets, SSE, and RPC." }
+            "subtitle": "WebSockets, SSE, and RPC."
           },
           {
             "type": "content",
             "title": "WebSockets in Hono & Bun",
             "box": {
-              "content": "High-performance full-duplex communication using Bun's native WebSocket support.",
-              "code": "app.get('/ws', upgradeWebSocket((c) => ({\n  onMessage(evt, ws) {\n    ws.send('Hello from Hono!');\n  },\n})));"
+              "code": "app.get('/ws', upgradeWebSocket((c) => ({\n  onMessage(evt, ws) {\n    ws.send('Hello from Hono!');\n  },\n})));",
+              "title": "High-performance full-duplex communication using Bun's native WebSocket support."
             }
           },
           {
             "type": "content",
             "title": "Server-Sent Events (SSE)",
             "box": {
-              "content": "Push updates from server to client over HTTP without the complexity of WebSockets.",
-              "code": "app.get('/sse', (c) => {\n  return streamSSE(c, async (stream) => {\n    await stream.writeSSE({ data: 'Message 1' });\n  });\n});"
+              "code": "app.get('/sse', (c) => {\n  return streamSSE(c, async (stream) => {\n    await stream.writeSSE({ data: 'Message 1' });\n  });\n});",
+              "title": "Push updates from server to client over HTTP without the complexity of WebSockets."
             }
           },
           {
             "type": "content",
             "title": "Hono RPC",
             "box": {
-              "content": "The killer feature: Share your API's type definitions with your frontend for zero-configuration RPC.",
-              "code": "// Server\nconst route = app.get('/hello', ...) \nexport type AppType = typeof route;\n\n// Client\nconst client = hc<AppType>('http://localhost:3000');\nconst res = await client.hello.$get();"
+              "code": "// Server\nconst route = app.get('/hello', ...) \nexport type AppType = typeof route;\n\n// Client\nconst client = hc<AppType>('http://localhost:3000');\nconst res = await client.hello.$get();",
+              "title": "The killer feature: Share your API's type definitions with your frontend for zero-configuration RPC."
             }
           },
           {
             "type": "content",
             "title": "Streaming Responses",
             "box": {
-              "content": "Stream data (like ChatGPT responses) directly to the client for lower perceived latency.",
-              "code": "app.get('/stream', (c) => {\n  return stream(c, async (stream) => {\n    await stream.write('Loading...');\n  });\n});"
+              "code": "app.get('/stream', (c) => {\n  return stream(c, async (stream) => {\n    await stream.write('Loading...');\n  });\n});",
+              "title": "Stream data (like ChatGPT responses) directly to the client for lower perceived latency."
             }
           }
         ]
@@ -303,47 +357,65 @@
           {
             "type": "topic-title",
             "title": "7. Data at the Edge",
-            "box": { "content": "Bun.sqlite & Drizzle ORM." }
+            "subtitle": "Bun.sqlite & Drizzle ORM."
           },
           {
             "type": "content",
             "title": "Bun:sqlite Refined",
             "box": {
-              "content": "Deep dive into Bun's native SQLite driver. No bindings, no bloat, just pure speed.",
               "list": [
-                { "emoji": "📊", "text": "<strong>Prepared Statements:</strong> High-performance reuse of queries." },
-                { "emoji": "📁", "text": "<strong>Zero Config:</strong> Local file or :memory: databases ready in milliseconds." }
-              ]
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Prepared Statements:</strong> High-performance reuse of queries."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Zero Config:</strong> Local file or :memory: databases ready in milliseconds."
+                }
+              ],
+              "title": "Deep dive into Bun's native SQLite driver. No bindings, no bloat, just pure speed."
             }
           },
           {
             "type": "content",
             "title": "Drizzle ORM",
             "box": {
-              "content": "The perfect companion for Bun & Hono: Headless, type-safe, and focuses on SQL-like syntax.",
-              "code": "import { drizzle } from 'drizzle-orm/bun-sqlite';\nconst db = drizzle(sqlite);\nconst result = await db.select().from(users);"
+              "code": "import { drizzle } from 'drizzle-orm/bun-sqlite';\nconst db = drizzle(sqlite);\nconst result = await db.select().from(users);",
+              "title": "The perfect companion for Bun & Hono: Headless, type-safe, and focuses on SQL-like syntax."
             }
           },
           {
             "type": "content",
             "title": "Type-Safe Migrations",
             "box": {
-              "content": "Generate and run migrations with ease while maintaining full TypeScript inference.",
               "list": [
-                { "emoji": "📜", "text": "<strong>Drizzle Kit:</strong> CLI tool for migrations and schema introspection." },
-                { "emoji": "🔄", "text": "<strong>Schema Sync:</strong> Keep your DB in sync with your code automatically." }
-              ]
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Drizzle Kit:</strong> CLI tool for migrations and schema introspection."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Schema Sync:</strong> Keep your DB in sync with your code automatically."
+                }
+              ],
+              "title": "Generate and run migrations with ease while maintaining full TypeScript inference."
             }
           },
           {
             "type": "content",
             "title": "Edge-Ready DBs",
             "box": {
-              "content": "Connecting to distributed databases like Turso (LibSQL), Cloudflare D1, or Neon (Postgres).",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Turso:</strong> SQLite on the edge with LibSQL." },
-                { "emoji": "🐘", "text": "<strong>Neon:</strong> Serverless Postgres with branching capabilities." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Turso:</strong> SQLite on the edge with LibSQL."
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Neon:</strong> Serverless Postgres with branching capabilities."
+                }
+              ],
+              "title": "Connecting to distributed databases like Turso (LibSQL), Cloudflare D1, or Neon (Postgres)."
             }
           }
         ]
@@ -355,44 +427,56 @@
           {
             "type": "topic-title",
             "title": "8. Deploying to the Edge",
-            "box": { "content": "Beyond Traditional Servers." }
+            "subtitle": "Beyond Traditional Servers."
           },
           {
             "type": "content",
             "title": "Cloudflare Workers",
             "box": {
-              "content": "Deploy Hono apps to 300+ global data centers with almost zero cold start time.",
-              "code": "// wrangler.toml\nmain = \"src/index.ts\"\ncompatibility_date = \"2023-01-01\""
+              "code": "// wrangler.toml\nmain = \"src/index.ts\"\ncompatibility_date = \"2023-01-01\"",
+              "title": "Deploy Hono apps to 300+ global data centers with almost zero cold start time."
             }
           },
           {
             "type": "content",
             "title": "Vercel Edge Functions",
             "box": {
-              "content": "Seamless integration with the Vercel ecosystem for low-latency frontend/backend co-location.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>Edge Runtime:</strong> Optimized for streaming and fast execution." },
-                { "emoji": "🛠️", "text": "<strong>Middleware:</strong> Run logic before reaching your main app." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Edge Runtime:</strong> Optimized for streaming and fast execution."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Middleware:</strong> Run logic before reaching your main app."
+                }
+              ],
+              "title": "Seamless integration with the Vercel ecosystem for low-latency frontend/backend co-location."
             }
           },
           {
             "type": "content",
             "title": "AWS Lambda@Edge",
             "box": {
-              "content": "Execute Hono logic at AWS CloudFront edge locations for global performance.",
               "list": [
-                { "emoji": "🏭", "text": "<strong>Scalability:</strong> Handle millions of requests with ease." },
-                { "emoji": "📐", "text": "<strong>Isolation:</strong> Secure, isolated execution environments." }
-              ]
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Scalability:</strong> Handle millions of requests with ease."
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Isolation:</strong> Secure, isolated execution environments."
+                }
+              ],
+              "title": "Execute Hono logic at AWS CloudFront edge locations for global performance."
             }
           },
           {
             "type": "content",
             "title": "GitHub Actions CI/CD",
             "box": {
-              "content": "Automating your edge deployments with modern DevOps workflows.",
-              "code": "jobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: oven-sh/setup-bun@v1\n      - run: bun install && bun run deploy"
+              "code": "jobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: oven-sh/setup-bun@v1\n      - run: bun install && bun run deploy",
+              "title": "Automating your edge deployments with modern DevOps workflows."
             }
           }
         ]
@@ -404,41 +488,47 @@
           {
             "type": "topic-title",
             "title": "9. Native Testing",
-            "box": { "content": "Fast, In-Memory, and Reliable." }
+            "subtitle": "Fast, In-Memory, and Reliable."
           },
           {
             "type": "content",
             "title": "Bun Test Runner",
             "box": {
-              "content": "A Jest-compatible test runner built directly into Bun for maximum performance.",
-              "code": "import { test, expect } from \"bun:test\";\n\ntest(\"adds 1 + 2\", () => {\n  expect(1 + 2).toBe(3);\n});"
+              "code": "import { test, expect } from \"bun:test\";\n\ntest(\"adds 1 + 2\", () => {\n  expect(1 + 2).toBe(3);\n});",
+              "title": "A Jest-compatible test runner built directly into Bun for maximum performance."
             }
           },
           {
             "type": "content",
             "title": "Mocks & Spies",
             "box": {
-              "content": "Simple but powerful mocking utilities to isolate your units under test.",
-              "code": "import { mock } from \"bun:test\";\nconst random = mock(() => 42);\nexpect(random()).toBe(42);"
+              "code": "import { mock } from \"bun:test\";\nconst random = mock(() => 42);\nexpect(random()).toBe(42);",
+              "title": "Simple but powerful mocking utilities to isolate your units under test."
             }
           },
           {
             "type": "content",
             "title": "Snapshots & CI",
             "box": {
-              "content": "Support for component snapshots and easy integration with CI pipelines.",
               "list": [
-                { "emoji": "📸", "text": "<strong>Snapshots:</strong> Ensure UI or complex data doesn't change unexpectedly." },
-                { "emoji": "🏗️", "text": "<strong>CI Integration:</strong> Fast execution means faster merge times." }
-              ]
+                {
+                  "emoji": "📸",
+                  "text": "<strong>Snapshots:</strong> Ensure UI or complex data doesn't change unexpectedly."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>CI Integration:</strong> Fast execution means faster merge times."
+                }
+              ],
+              "title": "Support for component snapshots and easy integration with CI pipelines."
             }
           },
           {
             "type": "content",
             "title": "Testing Hono Apps",
             "box": {
-              "content": "Test your Hono routes by simulating requests using the `app.request()` helper.",
-              "code": "test('GET /hello', async () => {\n  const res = await app.request('/hello');\n  expect(res.status).toBe(200);\n});"
+              "code": "test('GET /hello', async () => {\n  const res = await app.request('/hello');\n  expect(res.status).toBe(200);\n});",
+              "title": "Test your Hono routes by simulating requests using the `app.request()` helper."
             }
           }
         ]
@@ -450,40 +540,59 @@
           {
             "type": "topic-title",
             "title": "Conclusion",
-            "box": { "content": "The Future is Fast." }
+            "subtitle": "The Future is Fast."
           },
           {
             "type": "content",
             "title": "Summary",
             "box": {
-              "content": "Bun and Hono represent the next evolution of JavaScript development on the edge.",
               "list": [
-                { "emoji": "🚀", "text": "Unmatched speed and developer experience." },
-                { "emoji": "🛠️", "text": "Integrated toolchain for modern workflows." },
-                { "emoji": "🌍", "text": "Ready for the distributed, edge-first world." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "Unmatched speed and developer experience."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "Integrated toolchain for modern workflows."
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "Ready for the distributed, edge-first world."
+                }
+              ],
+              "title": "Bun and Hono represent the next evolution of JavaScript development on the edge."
             }
           },
           {
             "type": "content",
             "title": "Modern Ecosystem Trends",
             "box": {
-              "content": "Keep an eye on Biome, Drizzle, and the growing collection of Hono middleware.",
               "list": [
-                { "emoji": "🧬", "text": "<strong>Biome:</strong> High-performance linter and formatter." },
-                { "emoji": "📦", "text": "<strong>Hono Middleware:</strong> Community-driven ecosystem expansion." }
-              ]
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>Biome:</strong> High-performance linter and formatter."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Hono Middleware:</strong> Community-driven ecosystem expansion."
+                }
+              ],
+              "title": "Keep an eye on Biome, Drizzle, and the growing collection of Hono middleware."
             }
           },
           {
             "type": "content",
             "title": "Final Thoughts",
-            "box": { "content": "Embrace the speed. Build for the edge. Master Bun and Hono." }
+            "box": {
+              "title": "Embrace the speed. Build for the edge. Master Bun and Hono."
+            }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Any questions? Thank you!" }
+            "box": {
+              "title": "Any questions? Thank you!"
+            }
           }
         ]
       }

@@ -688,9 +688,9 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-expressjs.json",
-    title: "Express.js Deep Dive",
+    title: "Express.js Masterclass (Elite)",
     description:
-      "Node.js web framework - middleware, routing, and REST API development",
+      "Deep dive from middleware internals to high-traffic enterprise architectures. Covers performance, security, and microservices.",
     keywords: [
       "express",
       "nodejs",
@@ -701,9 +701,12 @@ const PRESENTATIONS_CONFIG = [
       "rest",
       "backend",
       "web-framework",
+      "elite",
+      "performance",
+      "security",
     ],
     category: ["backend"],
-    difficulty: "intermediate",
+    difficulty: "advanced",
   },
   {
     file: "presentations/intro-rest-api-swagger.json",
@@ -1019,20 +1022,26 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-system-design.json",
-    title: "System Design Fundamentals",
+    title: "System Design Masterclass (Elite)",
     description:
-      "Designing scalable systems - from basics to production architecture",
+      "The definitive guide to designing and scaling massive distributed systems. Covers Load Balancing, Caching, Sharding, Microservices, and Elite Case Studies (Netflix, Uber, Twitter).",
     keywords: [
       "system-design",
+      "elite",
       "architecture",
       "scalability",
       "databases",
       "caching",
       "load-balancing",
       "microservices",
+      "sharding",
+      "consistent-hashing",
+      "fault-tolerance",
+      "observability",
+      "case-studies",
     ],
-    category: ["devops"],
-    difficulty: "intermediate",
+    category: ["backend", "devops"],
+    difficulty: "advanced",
   },
 
   // ============= BUSINESS & ENTERPRISE SOLUTIONS (INTERMEDIATE TO ADVANCED) =============

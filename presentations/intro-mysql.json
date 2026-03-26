@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is MySQL?",
             "box": {
-              "content": "<span class=\"highlight\">World's most popular open-source relational database</span>",
               "list": [
                 {
                   "emoji": "🐬",
@@ -124,7 +123,8 @@
                   "emoji": "🚀",
                   "text": "<strong>Performance</strong> - Fast reads, web-optimized"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">World's most popular open-source relational database</span>"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> MySQL powers websites like Facebook, Twitter, YouTube, and Wikipedia!"
@@ -295,8 +295,8 @@
             "emoji": "🐧",
             "title": "Ubuntu Installation Example",
             "box": {
-              "content": "<strong>Installing on Ubuntu/Debian</strong>",
-              "code": "# Update package list\nsudo apt update\n\n# Install MySQL server\nsudo apt install mysql-server\n\n# Secure installation\nsudo mysql_secure_installation\n\n# Start MySQL service\nsudo systemctl start mysql\nsudo systemctl enable mysql\n\n# Connect to MySQL\nsudo mysql -u root -p\n\n# Create a new user and database\nCREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';\nCREATE DATABASE mydatabase;\nGRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';\nFLUSH PRIVILEGES;"
+              "code": "# Update package list\nsudo apt update\n\n# Install MySQL server\nsudo apt install mysql-server\n\n# Secure installation\nsudo mysql_secure_installation\n\n# Start MySQL service\nsudo systemctl start mysql\nsudo systemctl enable mysql\n\n# Connect to MySQL\nsudo mysql -u root -p\n\n# Create a new user and database\nCREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';\nCREATE DATABASE mydatabase;\nGRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';\nFLUSH PRIVILEGES;",
+              "title": "<strong>Installing on Ubuntu/Debian</strong>"
             }
           }
         ]
@@ -357,8 +357,8 @@
             "emoji": "🏗️",
             "title": "MySQL Architecture Overview",
             "box": {
-              "content": "<strong>Core Components</strong>",
-              "code": "MySQL Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (Apps, Tools)  │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Connection     │\n│   Pool & Threads│\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  SQL Interface  │\n│  Parser & Cache │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Optimizer &    │\n│  Query Engine   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage Engine │\n│  (InnoDB, etc.) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  File System    │\n│   (Data Files)  │\n└─────────────────┘"
+              "code": "MySQL Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (Apps, Tools)  │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Connection     │\n│   Pool & Threads│\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  SQL Interface  │\n│  Parser & Cache │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Optimizer &    │\n│  Query Engine   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage Engine │\n│  (InnoDB, etc.) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  File System    │\n│   (Data Files)  │\n└─────────────────┘",
+              "title": "<strong>Core Components</strong>"
             }
           }
         ]
@@ -376,8 +376,8 @@
             "emoji": "📊",
             "title": "CRUD Operations",
             "box": {
-              "content": "<strong>Create, Read, Update, Delete</strong>",
-              "code": "-- Create a table\nCREATE TABLE users (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\n-- Insert data\nINSERT INTO users (username, email) \nVALUES ('john_doe', 'john@example.com');\n\n-- Read data\nSELECT * FROM users;\nSELECT username, email FROM users WHERE id = 1;\n\n-- Update data\nUPDATE users SET email = 'new_email@example.com' \nWHERE username = 'john_doe';\n\n-- Delete data\nDELETE FROM users WHERE id = 1;"
+              "code": "-- Create a table\nCREATE TABLE users (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\n-- Insert data\nINSERT INTO users (username, email) \nVALUES ('john_doe', 'john@example.com');\n\n-- Read data\nSELECT * FROM users;\nSELECT username, email FROM users WHERE id = 1;\n\n-- Update data\nUPDATE users SET email = 'new_email@example.com' \nWHERE username = 'john_doe';\n\n-- Delete data\nDELETE FROM users WHERE id = 1;",
+              "title": "<strong>Create, Read, Update, Delete</strong>"
             }
           }
         ]
@@ -442,8 +442,8 @@
             "emoji": "🔗",
             "title": "SQL Join Types",
             "box": {
-              "content": "<strong>Joining Multiple Tables</strong>",
-              "code": "-- Sample tables\nCREATE TABLE departments (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL\n);\n\nCREATE TABLE employees (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    department_id INT,\n    FOREIGN KEY (department_id) REFERENCES departments(id)\n);\n\n-- INNER JOIN (only matching records)\nSELECT e.name, d.name as department\nFROM employees e\nINNER JOIN departments d ON e.department_id = d.id;\n\n-- LEFT JOIN (all employees, even without department)\nSELECT e.name, d.name as department\nFROM employees e\nLEFT JOIN departments d ON e.department_id = d.id;\n\n-- RIGHT JOIN (all departments, even without employees)\nSELECT e.name, d.name as department\nFROM employees e\nRIGHT JOIN departments d ON e.department_id = d.id;\n\n-- CROSS JOIN (cartesian product)\nSELECT e.name, d.name as department\nFROM employees e\nCROSS JOIN departments d;"
+              "code": "-- Sample tables\nCREATE TABLE departments (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL\n);\n\nCREATE TABLE employees (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    department_id INT,\n    FOREIGN KEY (department_id) REFERENCES departments(id)\n);\n\n-- INNER JOIN (only matching records)\nSELECT e.name, d.name as department\nFROM employees e\nINNER JOIN departments d ON e.department_id = d.id;\n\n-- LEFT JOIN (all employees, even without department)\nSELECT e.name, d.name as department\nFROM employees e\nLEFT JOIN departments d ON e.department_id = d.id;\n\n-- RIGHT JOIN (all departments, even without employees)\nSELECT e.name, d.name as department\nFROM employees e\nRIGHT JOIN departments d ON e.department_id = d.id;\n\n-- CROSS JOIN (cartesian product)\nSELECT e.name, d.name as department\nFROM employees e\nCROSS JOIN departments d;",
+              "title": "<strong>Joining Multiple Tables</strong>"
             }
           }
         ]
@@ -490,8 +490,8 @@
             "emoji": "🔧",
             "title": "Creating Indexes",
             "box": {
-              "content": "<strong>Index Management</strong>",
-              "code": "-- Basic index\nCREATE INDEX idx_users_email ON users(email);\n\n-- Unique index\nCREATE UNIQUE INDEX idx_users_username ON users(username);\n\n-- Composite index\nCREATE INDEX idx_orders_user_date ON orders(user_id, order_date);\n\n-- Fulltext index\nCREATE FULLTEXT INDEX idx_products_description ON products(description);\n\n-- View existing indexes\nSHOW INDEX FROM users;\n\n-- Explain query plan\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Drop index\nDROP INDEX idx_users_email ON users;"
+              "code": "-- Basic index\nCREATE INDEX idx_users_email ON users(email);\n\n-- Unique index\nCREATE UNIQUE INDEX idx_users_username ON users(username);\n\n-- Composite index\nCREATE INDEX idx_orders_user_date ON orders(user_id, order_date);\n\n-- Fulltext index\nCREATE FULLTEXT INDEX idx_products_description ON products(description);\n\n-- View existing indexes\nSHOW INDEX FROM users;\n\n-- Explain query plan\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Drop index\nDROP INDEX idx_users_email ON users;",
+              "title": "<strong>Index Management</strong>"
             }
           }
         ]
@@ -509,8 +509,8 @@
             "emoji": "📝",
             "title": "Stored Procedures & Functions",
             "box": {
-              "content": "<strong>Creating Reusable Logic</strong>",
-              "code": "-- Simple stored procedure\nDELIMITER //\nCREATE PROCEDURE GetUserCount()\nBEGIN\n    SELECT COUNT(*) as total_users FROM users;\nEND //\nDELIMITER ;\n\n-- Call procedure\nCALL GetUserCount();\n\n-- Procedure with parameters\nDELIMITER //\nCREATE PROCEDURE GetUserByEmail(IN user_email VARCHAR(100))\nBEGIN\n    SELECT * FROM users WHERE email = user_email;\nEND //\nDELIMITER ;\n\n-- Call with parameter\nCALL GetUserByEmail('john@example.com');\n\n-- Function example\nDELIMITER //\nCREATE FUNCTION CalculateDiscount(price DECIMAL(10,2), discount_rate DECIMAL(3,2))\nRETURNS DECIMAL(10,2)\nDETERMINISTIC\nBEGIN\n    RETURN price * (1 - discount_rate);\nEND //\nDELIMITER ;\n\n-- Use function\nSELECT name, price, CalculateDiscount(price, 0.1) as discounted_price FROM products;"
+              "code": "-- Simple stored procedure\nDELIMITER //\nCREATE PROCEDURE GetUserCount()\nBEGIN\n    SELECT COUNT(*) as total_users FROM users;\nEND //\nDELIMITER ;\n\n-- Call procedure\nCALL GetUserCount();\n\n-- Procedure with parameters\nDELIMITER //\nCREATE PROCEDURE GetUserByEmail(IN user_email VARCHAR(100))\nBEGIN\n    SELECT * FROM users WHERE email = user_email;\nEND //\nDELIMITER ;\n\n-- Call with parameter\nCALL GetUserByEmail('john@example.com');\n\n-- Function example\nDELIMITER //\nCREATE FUNCTION CalculateDiscount(price DECIMAL(10,2), discount_rate DECIMAL(3,2))\nRETURNS DECIMAL(10,2)\nDETERMINISTIC\nBEGIN\n    RETURN price * (1 - discount_rate);\nEND //\nDELIMITER ;\n\n-- Use function\nSELECT name, price, CalculateDiscount(price, 0.1) as discounted_price FROM products;",
+              "title": "<strong>Creating Reusable Logic</strong>"
             }
           }
         ]
@@ -553,8 +553,8 @@
             "emoji": "💳",
             "title": "Transaction Examples",
             "box": {
-              "content": "<strong>Bank Transfer Example</strong>",
-              "code": "START TRANSACTION;\n\n-- Deduct from account 1\nUPDATE accounts SET balance = balance - 100 \nWHERE id = 1 AND balance >= 100;\n\n-- Check if deduction was successful\nIF ROW_COUNT() = 0 THEN\n    ROLLBACK;\n    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient funds';\nEND IF;\n\n-- Add to account 2\nUPDATE accounts SET balance = balance + 100 \nWHERE id = 2;\n\n-- Commit if both operations succeeded\nCOMMIT;\n\n-- Transaction isolation levels\nSET TRANSACTION ISOLATION LEVEL READ COMMITTED;\nSET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;\n\n-- Check current isolation level\nSELECT @@transaction_isolation;"
+              "code": "START TRANSACTION;\n\n-- Deduct from account 1\nUPDATE accounts SET balance = balance - 100 \nWHERE id = 1 AND balance >= 100;\n\n-- Check if deduction was successful\nIF ROW_COUNT() = 0 THEN\n    ROLLBACK;\n    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient funds';\nEND IF;\n\n-- Add to account 2\nUPDATE accounts SET balance = balance + 100 \nWHERE id = 2;\n\n-- Commit if both operations succeeded\nCOMMIT;\n\n-- Transaction isolation levels\nSET TRANSACTION ISOLATION LEVEL READ COMMITTED;\nSET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;\n\n-- Check current isolation level\nSELECT @@transaction_isolation;",
+              "title": "<strong>Bank Transfer Example</strong>"
             }
           }
         ]
@@ -601,8 +601,8 @@
             "emoji": "🔧",
             "title": "Storage Engine Management",
             "box": {
-              "content": "<strong>Working with Storage Engines</strong>",
-              "code": "-- Check available storage engines\nSHOW ENGINES;\n\n-- Create table with specific engine\nCREATE TABLE my_table (\n    id INT PRIMARY KEY,\n    data VARCHAR(100)\n) ENGINE=InnoDB;\n\n-- Change storage engine of existing table\nALTER TABLE my_table ENGINE=MyISAM;\n\n-- Check table engine\nSHOW TABLE STATUS LIKE 'my_table';\n\n-- Default storage engine\nSELECT @@default_storage_engine;\n\n-- Set default storage engine\nSET default_storage_engine = InnoDB;\n\n-- Important InnoDB settings\nSHOW VARIABLES LIKE 'innodb_buffer_pool_size';\nSHOW VARIABLES LIKE 'innodb_log_file_size';"
+              "code": "-- Check available storage engines\nSHOW ENGINES;\n\n-- Create table with specific engine\nCREATE TABLE my_table (\n    id INT PRIMARY KEY,\n    data VARCHAR(100)\n) ENGINE=InnoDB;\n\n-- Change storage engine of existing table\nALTER TABLE my_table ENGINE=MyISAM;\n\n-- Check table engine\nSHOW TABLE STATUS LIKE 'my_table';\n\n-- Default storage engine\nSELECT @@default_storage_engine;\n\n-- Set default storage engine\nSET default_storage_engine = InnoDB;\n\n-- Important InnoDB settings\nSHOW VARIABLES LIKE 'innodb_buffer_pool_size';\nSHOW VARIABLES LIKE 'innodb_log_file_size';",
+              "title": "<strong>Working with Storage Engines</strong>"
             }
           }
         ]
@@ -620,8 +620,8 @@
             "emoji": "🔒",
             "title": "User & Role Management",
             "box": {
-              "content": "<strong>Managing Users and Permissions</strong>",
-              "code": "-- Create a new user\nCREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';\n\n-- Create user with specific host\nCREATE USER 'remote_user'@'192.168.1.%' IDENTIFIED BY 'password';\n\n-- Grant privileges\nGRANT SELECT, INSERT, UPDATE ON mydatabase.* TO 'app_user'@'localhost';\n\n-- Grant all privileges on specific database\nGRANT ALL PRIVILEGES ON mydatabase.* TO 'admin_user'@'localhost';\n\n-- Create role (MySQL 8.0+)\nCREATE ROLE 'read_only';\nGRANT SELECT ON mydatabase.* TO 'read_only';\nGRANT 'read_only' TO 'app_user'@'localhost';\n\n-- View users and privileges\nSELECT user, host FROM mysql.user;\nSHOW GRANTS FOR 'app_user'@'localhost';\n\n-- Revoke privileges\nREVOKE DELETE ON mydatabase.* FROM 'app_user'@'localhost';\n\n-- Remove user\nDROP USER 'app_user'@'localhost';"
+              "code": "-- Create a new user\nCREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';\n\n-- Create user with specific host\nCREATE USER 'remote_user'@'192.168.1.%' IDENTIFIED BY 'password';\n\n-- Grant privileges\nGRANT SELECT, INSERT, UPDATE ON mydatabase.* TO 'app_user'@'localhost';\n\n-- Grant all privileges on specific database\nGRANT ALL PRIVILEGES ON mydatabase.* TO 'admin_user'@'localhost';\n\n-- Create role (MySQL 8.0+)\nCREATE ROLE 'read_only';\nGRANT SELECT ON mydatabase.* TO 'read_only';\nGRANT 'read_only' TO 'app_user'@'localhost';\n\n-- View users and privileges\nSELECT user, host FROM mysql.user;\nSHOW GRANTS FOR 'app_user'@'localhost';\n\n-- Revoke privileges\nREVOKE DELETE ON mydatabase.* FROM 'app_user'@'localhost';\n\n-- Remove user\nDROP USER 'app_user'@'localhost';",
+              "title": "<strong>Managing Users and Permissions</strong>"
             }
           }
         ]
@@ -668,8 +668,8 @@
             "emoji": "🔧",
             "title": "Backup Commands",
             "box": {
-              "content": "<strong>Using mysqldump</strong>",
-              "code": "# Backup a single database\nmysqldump -u username -p database_name > backup.sql\n\n# Backup all databases\nmysqldump -u username -p --all-databases > alldb_backup.sql\n\n# Backup with compression\nmysqldump -u username -p database_name | gzip > backup.sql.gz\n\n# Backup specific tables\nmysqldump -u username -p database_name table1 table2 > tables_backup.sql\n\n# Restore from backup\nmysql -u username -p database_name < backup.sql\n\n# Restore from compressed backup\ngunzip -c backup.sql.gz | mysql -u username -p database_name\n\n# Create backup with timestamp\nmysqldump -u username -p database_name > backup_$(date +%Y%m%d).sql\n\n# Backup with consistent data\nmysqldump -u username -p --single-transaction database_name > backup.sql"
+              "code": "# Backup a single database\nmysqldump -u username -p database_name > backup.sql\n\n# Backup all databases\nmysqldump -u username -p --all-databases > alldb_backup.sql\n\n# Backup with compression\nmysqldump -u username -p database_name | gzip > backup.sql.gz\n\n# Backup specific tables\nmysqldump -u username -p database_name table1 table2 > tables_backup.sql\n\n# Restore from backup\nmysql -u username -p database_name < backup.sql\n\n# Restore from compressed backup\ngunzip -c backup.sql.gz | mysql -u username -p database_name\n\n# Create backup with timestamp\nmysqldump -u username -p database_name > backup_$(date +%Y%m%d).sql\n\n# Backup with consistent data\nmysqldump -u username -p --single-transaction database_name > backup.sql",
+              "title": "<strong>Using mysqldump</strong>"
             }
           }
         ]
@@ -687,8 +687,8 @@
             "emoji": "⚡",
             "title": "EXPLAIN and Query Analysis",
             "box": {
-              "content": "<strong>Query Performance Analysis</strong>",
-              "code": "-- Basic explain\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Explain with format options\nEXPLAIN FORMAT=JSON SELECT * FROM orders WHERE order_date > '2023-01-01';\n\n-- Analyze a query\nEXPLAIN ANALYZE SELECT * FROM products WHERE price > 1000;\n\n-- Sample output interpretation:\n-- type: ALL = Full table scan (may need index)\n-- type: ref = Using index (good)\n-- key: NULL = No index used\n-- rows: Estimated rows to examine\n\n-- Common performance tips:\n-- 1. Use EXPLAIN to analyze query plans\n-- 2. Look for full table scans on large tables\n-- 3. Ensure indexes are used for WHERE clauses\n-- 4. Monitor slow queries\n-- 5. Optimize database configuration\n\n-- Enable slow query log\nSET GLOBAL slow_query_log = 1;\nSET GLOBAL long_query_time = 2;\n\n-- Check performance schema\nSELECT * FROM performance_schema.events_statements_summary_by_digest\nORDER BY sum_timer_wait DESC LIMIT 10;"
+              "code": "-- Basic explain\nEXPLAIN SELECT * FROM users WHERE email = 'test@example.com';\n\n-- Explain with format options\nEXPLAIN FORMAT=JSON SELECT * FROM orders WHERE order_date > '2023-01-01';\n\n-- Analyze a query\nEXPLAIN ANALYZE SELECT * FROM products WHERE price > 1000;\n\n-- Sample output interpretation:\n-- type: ALL = Full table scan (may need index)\n-- type: ref = Using index (good)\n-- key: NULL = No index used\n-- rows: Estimated rows to examine\n\n-- Common performance tips:\n-- 1. Use EXPLAIN to analyze query plans\n-- 2. Look for full table scans on large tables\n-- 3. Ensure indexes are used for WHERE clauses\n-- 4. Monitor slow queries\n-- 5. Optimize database configuration\n\n-- Enable slow query log\nSET GLOBAL slow_query_log = 1;\nSET GLOBAL long_query_time = 2;\n\n-- Check performance schema\nSELECT * FROM performance_schema.events_statements_summary_by_digest\nORDER BY sum_timer_wait DESC LIMIT 10;",
+              "title": "<strong>Query Performance Analysis</strong>"
             }
           }
         ]
@@ -788,8 +788,8 @@
             "emoji": "🔗",
             "title": "Connecting from Applications",
             "box": {
-              "content": "<strong>Connection Strings and Drivers</strong>",
-              "code": "# Python with mysql-connector\nimport mysql.connector\n\nconn = mysql.connector.connect(\n    host=\"localhost\",\n    database=\"mydb\",\n    user=\"myuser\",\n    password=\"mypassword\"\n)\n\n# Node.js with mysql2\nconst mysql = require('mysql2');\nconst connection = mysql.createConnection({\n    host: 'localhost',\n    user: 'myuser',\n    password: 'mypassword',\n    database: 'mydb'\n});\n\n# PHP with PDO\n$pdo = new PDO('mysql:host=localhost;dbname=mydb', 'myuser', 'mypassword');\n\n# Connection string format\nmysql://username:password@hostname:port/database\n\n# Environment variables (recommended)\nDATABASE_URL=mysql://user:pass@host:3306/db"
+              "code": "# Python with mysql-connector\nimport mysql.connector\n\nconn = mysql.connector.connect(\n    host=\"localhost\",\n    database=\"mydb\",\n    user=\"myuser\",\n    password=\"mypassword\"\n)\n\n# Node.js with mysql2\nconst mysql = require('mysql2');\nconst connection = mysql.createConnection({\n    host: 'localhost',\n    user: 'myuser',\n    password: 'mypassword',\n    database: 'mydb'\n});\n\n# PHP with PDO\n$pdo = new PDO('mysql:host=localhost;dbname=mydb', 'myuser', 'mypassword');\n\n# Connection string format\nmysql://username:password@hostname:port/database\n\n# Environment variables (recommended)\nDATABASE_URL=mysql://user:pass@host:3306/db",
+              "title": "<strong>Connection Strings and Drivers</strong>"
             }
           }
         ]
@@ -846,8 +846,8 @@
             "emoji": "📋",
             "title": "MySQL Command Cheat Sheet",
             "box": {
-              "content": "<strong>Essential commands quick reference</strong>",
-              "code": "# Connection & Info\nmysql -u username -p               # Connect to MySQL\nSHOW DATABASES;                    # List databases\nUSE database_name;                 # Switch database\nSHOW TABLES;                       # List tables\nDESCRIBE table_name;               # Describe table structure\nSHOW CREATE TABLE table_name;      # Show table creation SQL\n\n# User Management\nCREATE USER 'user'@'host';        # Create user\nGRANT privileges ON db.table TO user; # Grant privileges\nSHOW GRANTS FOR user;              # Show user privileges\n\n# Database Operations\nCREATE DATABASE dbname;            # Create database\nDROP DATABASE dbname;              # Remove database\nSOURCE filename.sql;               # Execute SQL file\n\n# Table Operations\nCREATE TABLE table_name (...);     # Create table\nALTER TABLE table_name ...         # Modify table\nDROP TABLE table_name;             # Remove table\nTRUNCATE TABLE table_name;         # Empty table\n\n# Data Operations\nSELECT * FROM table;               # Query data\nINSERT INTO table VALUES (...);    # Insert data\nUPDATE table SET col=val;          # Update data\nDELETE FROM table WHERE ...;       # Delete data\n\n# Performance & Maintenance\nEXPLAIN SELECT ...;                # Analyze query\nSHOW INDEX FROM table;             # Show indexes\nOPTIMIZE TABLE table;              # Optimize table\nANALYZE TABLE table;               # Update table statistics"
+              "code": "# Connection & Info\nmysql -u username -p               # Connect to MySQL\nSHOW DATABASES;                    # List databases\nUSE database_name;                 # Switch database\nSHOW TABLES;                       # List tables\nDESCRIBE table_name;               # Describe table structure\nSHOW CREATE TABLE table_name;      # Show table creation SQL\n\n# User Management\nCREATE USER 'user'@'host';        # Create user\nGRANT privileges ON db.table TO user; # Grant privileges\nSHOW GRANTS FOR user;              # Show user privileges\n\n# Database Operations\nCREATE DATABASE dbname;            # Create database\nDROP DATABASE dbname;              # Remove database\nSOURCE filename.sql;               # Execute SQL file\n\n# Table Operations\nCREATE TABLE table_name (...);     # Create table\nALTER TABLE table_name ...         # Modify table\nDROP TABLE table_name;             # Remove table\nTRUNCATE TABLE table_name;         # Empty table\n\n# Data Operations\nSELECT * FROM table;               # Query data\nINSERT INTO table VALUES (...);    # Insert data\nUPDATE table SET col=val;          # Update data\nDELETE FROM table WHERE ...;       # Delete data\n\n# Performance & Maintenance\nEXPLAIN SELECT ...;                # Analyze query\nSHOW INDEX FROM table;             # Show indexes\nOPTIMIZE TABLE table;              # Optimize table\nANALYZE TABLE table;               # Update table statistics",
+              "title": "<strong>Essential commands quick reference</strong>"
             }
           }
         ]

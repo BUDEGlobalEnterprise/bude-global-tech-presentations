@@ -102,7 +102,6 @@
             "emoji": "👻",
             "title": "What is Ghost?",
             "box": {
-              "content": "<span class=\"highlight\">Modern, open-source publishing platform</span> built for professional writers",
               "list": [
                 {
                   "emoji": "⚡",
@@ -124,7 +123,8 @@
                   "emoji": "💼",
                   "text": "<strong>Users</strong> - Bloggers, publishers, content creators"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Modern, open-source publishing platform</span> built for professional writers"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> Ghost started as a Kickstarter project in 2013 and has grown into a popular alternative to WordPress!"
@@ -404,8 +404,8 @@
             "emoji": "⚡",
             "title": "Quick Local Setup",
             "box": {
-              "content": "<strong>Using Ghost CLI</strong>",
-              "code": "# Install Ghost CLI globally\nnpm install ghost-cli@latest -g\n\n# Create and navigate to directory\nmkdir my-ghost-site\ncd my-ghost-site\n\n# Install Ghost locally\nghost install local\n\n# Start Ghost\nghost start\n\n# Access your site at http://localhost:2368\n# Admin panel at http://localhost:2368/ghost"
+              "code": "# Install Ghost CLI globally\nnpm install ghost-cli@latest -g\n\n# Create and navigate to directory\nmkdir my-ghost-site\ncd my-ghost-site\n\n# Install Ghost locally\nghost install local\n\n# Start Ghost\nghost start\n\n# Access your site at http://localhost:2368\n# Admin panel at http://localhost:2368/ghost",
+              "title": "<strong>Using Ghost CLI</strong>"
             }
           },
           {
@@ -413,8 +413,8 @@
             "emoji": "🐳",
             "title": "Docker Installation",
             "box": {
-              "content": "<strong>Using Docker Compose</strong>",
-              "code": "# docker-compose.yml\nversion: '3.3'\nservices:\n  ghost:\n    image: ghost:5-alpine\n    restart: always\n    ports:\n      - \"2368:2368\"\n    environment:\n      url: http://localhost:2368\n      database__client: mysql\n      database__connection__host: mysql\n      database__connection__user: root\n      database__connection__password: password\n      database__connection__database: ghost\n    depends_on:\n      - mysql\n\n  mysql:\n    image: mysql:8.0\n    restart: always\n    environment:\n      MYSQL_ROOT_PASSWORD: password\n      MYSQL_DATABASE: ghost\n\n# Run with: docker-compose up -d"
+              "code": "# docker-compose.yml\nversion: '3.3'\nservices:\n  ghost:\n    image: ghost:5-alpine\n    restart: always\n    ports:\n      - \"2368:2368\"\n    environment:\n      url: http://localhost:2368\n      database__client: mysql\n      database__connection__host: mysql\n      database__connection__user: root\n      database__connection__password: password\n      database__connection__database: ghost\n    depends_on:\n      - mysql\n\n  mysql:\n    image: mysql:8.0\n    restart: always\n    environment:\n      MYSQL_ROOT_PASSWORD: password\n      MYSQL_DATABASE: ghost\n\n# Run with: docker-compose up -d",
+              "title": "<strong>Using Docker Compose</strong>"
             }
           }
         ]
@@ -461,8 +461,8 @@
             "emoji": "📁",
             "title": "Theme Structure",
             "box": {
-              "content": "<strong>Basic theme directory structure</strong>",
-              "code": "my-custom-theme/\n├── package.json          # Theme metadata\n├── index.hbs             # Homepage template\n├── post.hbs              # Single post template\n├── page.hbs              # Static page template\n├── tag.hbs               # Tag archive template\n├── author.hbs            # Author archive template\n├── default.hbs           # Default layout wrapper\n├── error.hbs             # Error page template\n├── assets/\n│   ├── css/\n│   │   └── screen.css    # Main stylesheet\n│   └── js/\n│       └── app.js        # JavaScript files\n└── partials/\n    ├── header.hbs        # Header partial\n    ├── footer.hbs        # Footer partial\n    └── navigation.hbs    # Navigation partial"
+              "code": "my-custom-theme/\n├── package.json          # Theme metadata\n├── index.hbs             # Homepage template\n├── post.hbs              # Single post template\n├── page.hbs              # Static page template\n├── tag.hbs               # Tag archive template\n├── author.hbs            # Author archive template\n├── default.hbs           # Default layout wrapper\n├── error.hbs             # Error page template\n├── assets/\n│   ├── css/\n│   │   └── screen.css    # Main stylesheet\n│   └── js/\n│       └── app.js        # JavaScript files\n└── partials/\n    ├── header.hbs        # Header partial\n    ├── footer.hbs        # Footer partial\n    └── navigation.hbs    # Navigation partial",
+              "title": "<strong>Basic theme directory structure</strong>"
             }
           }
         ]
@@ -585,8 +585,8 @@
             "emoji": "⚡",
             "title": "Koenig Editor",
             "box": {
-              "content": "<strong>Ghost's rich text editor</strong>",
-              "code": "<!-- Example of editor cards -->\n📝 **Markdown Card**\n```markdown\n# Heading 1\n## Heading 2\n**Bold text** and *italic text*\n- List item 1\n- List item 2\n```\n\n🖼️ **Image Card**\n![Alt text](image.jpg \"Optional title\")\n\n💻 **Code Card**\n```javascript\nfunction hello() {\n  console.log(\"Hello, Ghost!\");\n}\n```\n\n🔗 **Embed Card**\n{{> \"youtube\" url=\"https://www.youtube.com/watch?v=abc123\"}}\n\n📚 **Bookmark Card**\n{{> \"bookmark\" url=\"https://ghost.org\"}}"
+              "code": "<!-- Example of editor cards -->\n📝 **Markdown Card**\n```markdown\n# Heading 1\n## Heading 2\n**Bold text** and *italic text*\n- List item 1\n- List item 2\n```\n\n🖼️ **Image Card**\n![Alt text](image.jpg \"Optional title\")\n\n💻 **Code Card**\n```javascript\nfunction hello() {\n  console.log(\"Hello, Ghost!\");\n}\n```\n\n🔗 **Embed Card**\n{{> \"youtube\" url=\"https://www.youtube.com/watch?v=abc123\"}}\n\n📚 **Bookmark Card**\n{{> \"bookmark\" url=\"https://ghost.org\"}}",
+              "title": "<strong>Ghost's rich text editor</strong>"
             }
           }
         ]
@@ -676,8 +676,8 @@
             "emoji": "💳",
             "title": "Stripe Configuration",
             "box": {
-              "content": "<strong>Setting up payments</strong>",
-              "code": "// Ghost Admin → Settings → Membership\n\n1. Enable members\n2. Connect Stripe account\n3. Configure subscription plans:\n   - Free tier: Basic access\n   - Monthly: $5/month\n   - Yearly: $50/year (save 16%)\n\n4. Set up payment methods:\n   - Credit cards\n   - Apple Pay / Google Pay\n\n5. Configure tax settings\n6. Set up webhooks for payment events\n\n// Webhook events:\n- customer.subscription.created\n- invoice.payment_succeeded\n- customer.subscription.deleted"
+              "code": "// Ghost Admin → Settings → Membership\n\n1. Enable members\n2. Connect Stripe account\n3. Configure subscription plans:\n   - Free tier: Basic access\n   - Monthly: $5/month\n   - Yearly: $50/year (save 16%)\n\n4. Set up payment methods:\n   - Credit cards\n   - Apple Pay / Google Pay\n\n5. Configure tax settings\n6. Set up webhooks for payment events\n\n// Webhook events:\n- customer.subscription.created\n- invoice.payment_succeeded\n- customer.subscription.deleted",
+              "title": "<strong>Setting up payments</strong>"
             }
           }
         ]
@@ -796,8 +796,8 @@
             "emoji": "🔗",
             "title": "Content API Example",
             "box": {
-              "content": "<strong>Fetching content via API</strong>",
-              "code": "// Fetch recent posts\nfetch('https://yourblog.com/ghost/api/content/posts/?key=API_KEY')\n  .then(response => response.json())\n  .then(data => {\n    console.log(data.posts);\n  });\n\n// Get specific post\nfetch('https://yourblog.com/ghost/api/content/posts/slug/hello-world/?key=API_KEY')\n  .then(response => response.json())\n  .then(data => {\n    console.log(data.posts[0]);\n  });\n\n// Include authors and tags\nfetch('https://yourblog.com/ghost/api/content/posts/?key=API_KEY&include=authors,tags')\n  .then(response => response.json())\n  .then(data => {\n    data.posts.forEach(post => {\n      console.log(post.title, post.authors, post.tags);\n    });\n  });"
+              "code": "// Fetch recent posts\nfetch('https://yourblog.com/ghost/api/content/posts/?key=API_KEY')\n  .then(response => response.json())\n  .then(data => {\n    console.log(data.posts);\n  });\n\n// Get specific post\nfetch('https://yourblog.com/ghost/api/content/posts/slug/hello-world/?key=API_KEY')\n  .then(response => response.json())\n  .then(data => {\n    console.log(data.posts[0]);\n  });\n\n// Include authors and tags\nfetch('https://yourblog.com/ghost/api/content/posts/?key=API_KEY&include=authors,tags')\n  .then(response => response.json())\n  .then(data => {\n    data.posts.forEach(post => {\n      console.log(post.title, post.authors, post.tags);\n    });\n  });",
+              "title": "<strong>Fetching content via API</strong>"
             }
           }
         ]
@@ -1082,8 +1082,8 @@
             "emoji": "📋",
             "title": "Ghost CLI Commands",
             "box": {
-              "content": "<strong>Essential Ghost CLI commands</strong>",
-              "code": "# Installation & Setup\nghost install local          # Local development\nghost install production     # Production setup\n\n# Management\nghost start                  # Start Ghost\nghost stop                   # Stop Ghost\nghost restart                # Restart Ghost\nghost update                 # Update Ghost\nghost update --force         # Force update\n\n# Content Operations\nghost backup                 # Backup content\nghost restore <file>         # Restore from backup\nghost doctor                 # System health check\n\n# Development\nghost ls                     # List running instances\nghost log                    # View logs\nghost run                    # Run directly (dev)\n\n# Configuration\nghost setup <command>        # Setup various components\nghost config                 # View configuration"
+              "code": "# Installation & Setup\nghost install local          # Local development\nghost install production     # Production setup\n\n# Management\nghost start                  # Start Ghost\nghost stop                   # Stop Ghost\nghost restart                # Restart Ghost\nghost update                 # Update Ghost\nghost update --force         # Force update\n\n# Content Operations\nghost backup                 # Backup content\nghost restore <file>         # Restore from backup\nghost doctor                 # System health check\n\n# Development\nghost ls                     # List running instances\nghost log                    # View logs\nghost run                    # Run directly (dev)\n\n# Configuration\nghost setup <command>        # Setup various components\nghost config                 # View configuration",
+              "title": "<strong>Essential Ghost CLI commands</strong>"
             }
           },
           {
@@ -1091,8 +1091,8 @@
             "emoji": "🔑",
             "title": "API Key Management",
             "box": {
-              "content": "<strong>Creating and managing API keys</strong>",
-              "code": "# In Ghost Admin → Integrations → Add custom integration\n\n# Content API Key - Read only access\nKey: 1234567890abcdef1234567890\nURL: https://yoursite.com/ghost/api/content/posts/?key=API_KEY\n\n# Admin API Key - Full access\nKey: a1b2c3d4e5f67890abcdef123456\nURL: https://yoursite.com/ghost/api/admin/posts/\n\n# Using with cURL\ncurl -H \"Authorization: Ghost [API_KEY]\" \\\n     https://yoursite.com/ghost/api/admin/posts/\n\n# Using with fetch\nfetch('https://yoursite.com/ghost/api/content/posts/?key=API_KEY')"
+              "code": "# In Ghost Admin → Integrations → Add custom integration\n\n# Content API Key - Read only access\nKey: 1234567890abcdef1234567890\nURL: https://yoursite.com/ghost/api/content/posts/?key=API_KEY\n\n# Admin API Key - Full access\nKey: a1b2c3d4e5f67890abcdef123456\nURL: https://yoursite.com/ghost/api/admin/posts/\n\n# Using with cURL\ncurl -H \"Authorization: Ghost [API_KEY]\" \\\n     https://yoursite.com/ghost/api/admin/posts/\n\n# Using with fetch\nfetch('https://yoursite.com/ghost/api/content/posts/?key=API_KEY')",
+              "title": "<strong>Creating and managing API keys</strong>"
             }
           }
         ]

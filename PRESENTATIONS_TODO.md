@@ -93,7 +93,7 @@
 - [x] #89 Appsmith / ToolJet - [View](presentations/intro-appsmith-tooljet.json)
 - [x] #90 Retool - [View](presentations/intro-retool.json)
 - [x] #91 AWS Cloud - [View](presentations/intro-aws.json)
-- [x] #92 System Design - [View](presentations/intro-system-design.json)
+- [x] #92 System Design Masterclass (Elite) - [View](presentations/intro-system-design.json)
 - [x] #93 Express.js Deep Dive - [View](presentations/intro-expressjs.json)
 - [x] #94 Antigravity Deep Dive - [View](presentations/antigravity-deep-dive.json)
 - [x] #108 Go (Golang) - [View](presentations/intro-go.json)

@@ -19,18 +19,27 @@
           {
             "type": "topic-title",
             "title": "1. What is Apache Cassandra?",
-            "box": { "content": "A high-performance, distributed NoSQL database." }
+            "subtitle": "A high-performance, distributed NoSQL database."
           },
           {
             "type": "content",
             "title": "Core Philosophy",
             "box": {
-              "content": "Designed to handle massive amounts of data across many servers without a single point of failure.",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Decentralized:</strong> Every node in the cluster is identical." },
-                { "emoji": "📈", "text": "<strong>Elastic Scalability:</strong> Add more nodes to increase throughput linearly." },
-                { "emoji": "🛠️", "text": "<strong>Fault Tolerant:</strong> Data is replicated across multiple nodes." }
-              ]
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Decentralized:</strong> Every node in the cluster is identical."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Elastic Scalability:</strong> Add more nodes to increase throughput linearly."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Fault Tolerant:</strong> Data is replicated across multiple nodes."
+                }
+              ],
+              "title": "Designed to handle massive amounts of data across many servers without a single point of failure."
             }
           }
         ]
@@ -42,17 +51,23 @@
           {
             "type": "topic-title",
             "title": "2. The CAP Theorem",
-            "box": { "content": "Understanding the trade-offs of distributed systems." }
+            "subtitle": "Understanding the trade-offs of distributed systems."
           },
           {
             "type": "content",
             "title": "CAP: Consistency, Availability, Partition Tolerance",
             "box": {
-              "content": "You can only have two out of three in a network partition.",
               "list": [
-                { "emoji": "⚡", "text": "<strong>Cassandra Choice:</strong> AP (Availability + Partition Tolerance)." },
-                { "emoji": "⚖️", "text": "<strong>Tunable Consistency:</strong> You can choose consistency level per query." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Cassandra Choice:</strong> AP (Availability + Partition Tolerance)."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Tunable Consistency:</strong> You can choose consistency level per query."
+                }
+              ],
+              "title": "You can only have two out of three in a network partition."
             }
           }
         ]
@@ -64,27 +79,36 @@
           {
             "type": "topic-title",
             "title": "3. Cluster State",
-            "box": { "content": "How nodes talk to each other." }
+            "subtitle": "How nodes talk to each other."
           },
           {
             "type": "content",
             "title": "Peer-to-Peer Communication",
             "box": {
-              "content": "Every node periodically chats with a few other nodes to share state.",
               "list": [
-                { "emoji": "🗣️", "text": "<strong>Epidemic Protocol:</strong> Information spreads like a virus through the cluster." },
-                { "emoji": "⏱️", "text": "<strong>Convergence:</strong> State reaches all nodes in log(N) time." }
-              ]
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Epidemic Protocol:</strong> Information spreads like a virus through the cluster."
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Convergence:</strong> State reaches all nodes in log(N) time."
+                }
+              ],
+              "title": "Every node periodically chats with a few other nodes to share state."
             }
           },
           {
             "type": "content",
             "title": "Phi Accrual Failure Detector",
             "box": {
-              "content": "How Cassandra knows if a node is 'down'.",
               "list": [
-                { "emoji": "📉", "text": "<strong>Adaptive:</strong> Uses historical heartbeat data to predict if a node is likely dead." }
-              ]
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Adaptive:</strong> Uses historical heartbeat data to predict if a node is likely dead."
+                }
+              ],
+              "title": "How Cassandra knows if a node is 'down'."
             }
           }
         ]
@@ -96,27 +120,33 @@
           {
             "type": "topic-title",
             "title": "4. Dividing Data",
-            "box": { "content": "The Ring and the Hash." }
+            "subtitle": "The Ring and the Hash."
           },
           {
             "type": "content",
             "title": "Consistent Hashing",
             "box": {
-              "content": "Partition keys are hashed into a 128-bit range (The Ring).",
               "list": [
-                { "emoji": "⭕", "text": "<strong>Token Ring:</strong> Each node is responsible for a range of tokens." }
+                {
+                  "emoji": "⭕",
+                  "text": "<strong>Token Ring:</strong> Each node is responsible for a range of tokens."
+                }
               ],
-              "code": "PartitionKey -> Murmur3 Hash -> Token"
+              "code": "PartitionKey -> Murmur3 Hash -> Token",
+              "title": "Partition keys are hashed into a 128-bit range (The Ring)."
             }
           },
           {
             "type": "content",
             "title": "Virtual Nodes (vnodes)",
             "box": {
-              "content": "Splitting a node's token range into many small pieces.",
               "list": [
-                { "emoji": "🍕", "text": "<strong>Load Balancing:</strong> Helps in rebalancing when adding/removing nodes." }
-              ]
+                {
+                  "emoji": "🍕",
+                  "text": "<strong>Load Balancing:</strong> Helps in rebalancing when adding/removing nodes."
+                }
+              ],
+              "title": "Splitting a node's token range into many small pieces."
             }
           }
         ]
@@ -128,36 +158,45 @@
           {
             "type": "topic-title",
             "title": "5. Writing Data",
-            "box": { "content": "Designing for extreme write-throughput." }
+            "subtitle": "Designing for extreme write-throughput."
           },
           {
             "type": "content",
             "title": "The CommitLog",
             "box": {
-              "content": "Sequential, append-only log for durability.",
               "list": [
-                { "emoji": "🗒️", "text": "<strong>Safety first:</strong> Write returns success only after the CommitLog is flushed." }
-              ]
+                {
+                  "emoji": "🗒️",
+                  "text": "<strong>Safety first:</strong> Write returns success only after the CommitLog is flushed."
+                }
+              ],
+              "title": "Sequential, append-only log for durability."
             }
           },
           {
             "type": "content",
             "title": "The MemTable",
             "box": {
-              "content": "In-memory sorted buffer (LSM-Tree head).",
               "list": [
-                { "emoji": "🧠", "text": "<strong>Speed:</strong> Updates are handled in memory before disk flush." }
-              ]
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Speed:</strong> Updates are handled in memory before disk flush."
+                }
+              ],
+              "title": "In-memory sorted buffer (LSM-Tree head)."
             }
           },
           {
             "type": "content",
             "title": "SSTable Flush",
             "box": {
-              "content": "When MemTable is full, it's flushed to disk as an SSTable.",
               "list": [
-                { "emoji": "📑", "text": "<strong>Immutability:</strong> SSTables are never edited; only compacted later." }
-              ]
+                {
+                  "emoji": "📑",
+                  "text": "<strong>Immutability:</strong> SSTables are never edited; only compacted later."
+                }
+              ],
+              "title": "When MemTable is full, it's flushed to disk as an SSTable."
             }
           }
         ]
@@ -169,26 +208,32 @@
           {
             "type": "topic-title",
             "title": "6. Reading Data",
-            "box": { "content": "How Cassandra finds data across multiple files." }
+            "subtitle": "How Cassandra finds data across multiple files."
           },
           {
             "type": "content",
             "title": "The Multi-File Search",
             "box": {
-              "content": "Cassandra might need to check multiple SSTables for a single row.",
               "list": [
-                { "emoji": "🔍", "text": "<strong>Process:</strong> Check MemTable -> Check Row Cache -> Check Bloom Filters -> Check SSTables." }
-              ]
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Process:</strong> Check MemTable -> Check Row Cache -> Check Bloom Filters -> Check SSTables."
+                }
+              ],
+              "title": "Cassandra might need to check multiple SSTables for a single row."
             }
           },
           {
             "type": "content",
             "title": "Bloom Filters",
             "box": {
-              "content": "Probabilistic exclusion of SSTables.",
               "list": [
-                { "emoji": "🔬", "text": "<strong>Benefit:</strong> Drastically reduces expensive disk I/O." }
-              ]
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>Benefit:</strong> Drastically reduces expensive disk I/O."
+                }
+              ],
+              "title": "Probabilistic exclusion of SSTables."
             }
           }
         ]
@@ -200,16 +245,25 @@
           {
             "type": "topic-title",
             "title": "7. Consistency Levels",
-            "box": { "content": "The power of the CAP theorem in your hands." }
+            "subtitle": "The power of the CAP theorem in your hands."
           },
           {
             "type": "content",
             "title": "Read & Write Levels",
             "box": {
               "list": [
-                { "emoji": "1️⃣", "text": "<strong>ONE:</strong> Fast, but risk of stale data." },
-                { "emoji": "⚖️", "text": "<strong>QUORUM:</strong> Majority response; ensures linearizability if W+R > N." },
-                { "emoji": "♾️", "text": "<strong>ALL:</strong> Highest consistency, lowest availability." }
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>ONE:</strong> Fast, but risk of stale data."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>QUORUM:</strong> Majority response; ensures linearizability if W+R > N."
+                },
+                {
+                  "emoji": "♾️",
+                  "text": "<strong>ALL:</strong> Highest consistency, lowest availability."
+                }
               ]
             }
           }
@@ -222,16 +276,19 @@
           {
             "type": "topic-title",
             "title": "8. Compaction",
-            "box": { "content": "Managing the proliferation of SSTables." }
+            "subtitle": "Managing the proliferation of SSTables."
           },
           {
             "type": "content",
             "title": "Why Compact?",
             "box": {
-              "content": "Merging multiple SSTables into one to improve read performance and reclaim space.",
               "list": [
-                { "emoji": "🧹", "text": "<strong>Garbage Collection:</strong> Removing tombstoned (deleted) data." }
-              ]
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>Garbage Collection:</strong> Removing tombstoned (deleted) data."
+                }
+              ],
+              "title": "Merging multiple SSTables into one to improve read performance and reclaim space."
             }
           },
           {
@@ -239,8 +296,14 @@
             "title": "STCS vs LCS",
             "box": {
               "list": [
-                { "emoji": "📈", "text": "<strong>STCS:</strong> SizeTiered Compaction Strategy (Optimized for writes)." },
-                { "emoji": "🏗️", "text": "<strong>LCS:</strong> Leveled Compaction Strategy (Optimized for reads)." }
+                {
+                  "emoji": "📈",
+                  "text": "<strong>STCS:</strong> SizeTiered Compaction Strategy (Optimized for writes)."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>LCS:</strong> Leveled Compaction Strategy (Optimized for reads)."
+                }
               ]
             }
           }
@@ -253,36 +316,45 @@
           {
             "type": "topic-title",
             "title": "9. Cluster Healing",
-            "box": { "content": "Ensuring all replicas are in sync." }
+            "subtitle": "Ensuring all replicas are in sync."
           },
           {
             "type": "content",
             "title": "Hinted Handoff",
             "box": {
-              "content": "Storing writes locally for a node that is temporarily down.",
               "list": [
-                { "emoji": "📦", "text": "<strong>Recovery:</strong> When the node comes back, the hints are delivered." }
-              ]
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Recovery:</strong> When the node comes back, the hints are delivered."
+                }
+              ],
+              "title": "Storing writes locally for a node that is temporarily down."
             }
           },
           {
             "type": "content",
             "title": "Read Repair",
             "box": {
-              "content": "Repairing stale replicas during a read query.",
               "list": [
-                { "emoji": "🚑", "text": "<strong>Mechanism:</strong> If replicas differ, the latest data is written to the stale nodes." }
-              ]
+                {
+                  "emoji": "🚑",
+                  "text": "<strong>Mechanism:</strong> If replicas differ, the latest data is written to the stale nodes."
+                }
+              ],
+              "title": "Repairing stale replicas during a read query."
             }
           },
           {
             "type": "content",
             "title": "Merkle Trees",
             "box": {
-              "content": "Comparing data across nodes efficiently using hash trees.",
               "list": [
-                { "emoji": "🌳", "text": "<strong>Validation:</strong> Used during full cluster repair ('nodetool repair')." }
-              ]
+                {
+                  "emoji": "🌳",
+                  "text": "<strong>Validation:</strong> Used during full cluster repair ('nodetool repair')."
+                }
+              ],
+              "title": "Comparing data across nodes efficiently using hash trees."
             }
           }
         ]
@@ -294,15 +366,21 @@
           {
             "type": "topic-title",
             "title": "10. Data Modeling",
-            "box": { "content": "The NoSQL way: Query-First Design." }
+            "subtitle": "The NoSQL way: Query-First Design."
           },
           {
             "type": "content",
             "title": "Partition Key vs Clustering Key",
             "box": {
               "list": [
-                { "emoji": "🔑", "text": "<strong>Partition Key:</strong> Determines which node stores the data." },
-                { "emoji": "📁", "text": "<strong>Clustering Key:</strong> Determines the sort order within the partition." }
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Partition Key:</strong> Determines which node stores the data."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Clustering Key:</strong> Determines the sort order within the partition."
+                }
               ],
               "code": "PRIMARY KEY (user_id, posted_at)"
             }
@@ -311,10 +389,13 @@
             "type": "content",
             "title": "The Golden Rule",
             "box": {
-              "content": "One Table Per Query.",
               "list": [
-                { "emoji": "🚫", "text": "<strong>No Joins:</strong> Denormalize data to avoid cross-node communication." }
-              ]
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>No Joins:</strong> Denormalize data to avoid cross-node communication."
+                }
+              ],
+              "title": "One Table Per Query."
             }
           }
         ]
@@ -326,14 +407,17 @@
           {
             "type": "topic-title",
             "title": "11. Topology",
-            "box": { "content": "How Cassandra understands your data center." }
+            "subtitle": "How Cassandra understands your data center."
           },
           {
             "type": "content",
             "title": "Replication Strategies",
             "box": {
               "list": [
-                { "emoji": "🏢", "text": "<strong>NetworkTopologyStrategy:</strong> Multi-DC aware replication." }
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>NetworkTopologyStrategy:</strong> Multi-DC aware replication."
+                }
               ]
             }
           },
@@ -341,10 +425,13 @@
             "type": "content",
             "title": "The Snitch",
             "box": {
-              "content": "Determines relative node proximity for routing queries.",
               "list": [
-                { "emoji": "📡", "text": "<strong>GossipingPropertyFileSnitch:</strong> Best for production cloud environments." }
-              ]
+                {
+                  "emoji": "📡",
+                  "text": "<strong>GossipingPropertyFileSnitch:</strong> Best for production cloud environments."
+                }
+              ],
+              "title": "Determines relative node proximity for routing queries."
             }
           }
         ]
@@ -356,17 +443,23 @@
           {
             "type": "topic-title",
             "title": "12. Operations",
-            "box": { "content": "Keeping the clusters healthy." }
+            "subtitle": "Keeping the clusters healthy."
           },
           {
             "type": "content",
             "title": "Nodetool",
             "box": {
-              "content": "The swiss army knife for Cassandra operators.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>status:</strong> Check node health." },
-                { "emoji": "🔄", "text": "<strong>repair:</strong> Perform full cluster sync." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>status:</strong> Check node health."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>repair:</strong> Perform full cluster sync."
+                }
+              ],
+              "title": "The swiss army knife for Cassandra operators."
             }
           }
         ]
@@ -378,14 +471,14 @@
           {
             "type": "topic-title",
             "title": "13. Strong Consistency",
-            "box": { "content": "How Cassandra achieves 'Linearizability'." }
+            "subtitle": "How Cassandra achieves 'Linearizability'."
           },
           {
             "type": "content",
             "title": "What are LWTs?",
             "box": {
-              "content": "Compare-and-Set (CAS) operations using the Paxos consensus protocol.",
-              "code": "INSERT INTO users (...) IF NOT EXISTS;"
+              "code": "INSERT INTO users (...) IF NOT EXISTS;",
+              "title": "Compare-and-Set (CAS) operations using the Paxos consensus protocol."
             }
           },
           {
@@ -393,9 +486,18 @@
             "title": "The Paxos Phases",
             "box": {
               "list": [
-                { "emoji": "🏁", "text": "<strong>Prepare/Promise:</strong> Propose a change to the cluster." },
-                { "emoji": "🗳️", "text": "<strong>Accept/Acknowledge:</strong> Agreement on the proposal." },
-                { "emoji": "🚀", "text": "<strong>Commit/Learn:</strong> Finalizing the change." }
+                {
+                  "emoji": "🏁",
+                  "text": "<strong>Prepare/Promise:</strong> Propose a change to the cluster."
+                },
+                {
+                  "emoji": "🗳️",
+                  "text": "<strong>Accept/Acknowledge:</strong> Agreement on the proposal."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Commit/Learn:</strong> Finalizing the change."
+                }
               ]
             }
           }
@@ -408,17 +510,20 @@
           {
             "type": "topic-title",
             "title": "14. Secondary Indexing",
-            "box": { "content": "Querying non-partition keys efficiently." }
+            "subtitle": "Querying non-partition keys efficiently."
           },
           {
             "type": "content",
             "title": "Storage Attached Indexing (SAI)",
             "box": {
-              "content": "The modern way to index in Cassandra 4.0+.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Efficiency:</strong> Highly space-efficient, decoupled from the storage engine." }
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Efficiency:</strong> Highly space-efficient, decoupled from the storage engine."
+                }
               ],
-              "code": "CREATE INDEX ON users(email) USING 'sai';"
+              "code": "CREATE INDEX ON users(email) USING 'sai';",
+              "title": "The modern way to index in Cassandra 4.0+."
             }
           }
         ]
@@ -430,17 +535,23 @@
           {
             "type": "topic-title",
             "title": "15. Tuning",
-            "box": { "content": "Squeezing every drop of throughput." }
+            "subtitle": "Squeezing every drop of throughput."
           },
           {
             "type": "content",
             "title": "JVM Tuning (G1GC)",
             "box": {
-              "content": "Why garbage collection matters for NoSQL latency.",
               "list": [
-                { "emoji": "🧹", "text": "<strong>G1GC:</strong> The standard collector for large Cassandra heaps." },
-                { "emoji": "🧠", "text": "<strong>Off-heap:</strong> Moving caches outside the JVM to reduce GC pressure." }
-              ]
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>G1GC:</strong> The standard collector for large Cassandra heaps."
+                },
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Off-heap:</strong> Moving caches outside the JVM to reduce GC pressure."
+                }
+              ],
+              "title": "Why garbage collection matters for NoSQL latency."
             }
           },
           {
@@ -448,8 +559,14 @@
             "title": "Disk I/O Strategies",
             "box": {
               "list": [
-                { "emoji": "⚡", "text": "<strong>SSD Optimization:</strong> Cassandra is designed to leverage random access speed." },
-                { "emoji": "🗜️", "text": "<strong>Compression:</strong> LZ4 is the default for a reason." }
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>SSD Optimization:</strong> Cassandra is designed to leverage random access speed."
+                },
+                {
+                  "emoji": "🗜️",
+                  "text": "<strong>Compression:</strong> LZ4 is the default for a reason."
+                }
               ]
             }
           }
@@ -462,14 +579,17 @@
           {
             "type": "topic-title",
             "title": "16. Operations",
-            "box": { "content": "Monitoring and scaling a production cluster." }
+            "subtitle": "Monitoring and scaling a production cluster."
           },
           {
             "type": "content",
             "title": "Monitoring (JMX/OpenTelemetry)",
             "box": {
               "list": [
-                { "emoji": "📊", "text": "<strong>Metrics:</strong> Dropped messages, Pending tasks, SSTable count." }
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Metrics:</strong> Dropped messages, Pending tasks, SSTable count."
+                }
               ]
             }
           },
@@ -477,22 +597,34 @@
             "type": "content",
             "title": "Modern Cassandra (4.0/5.0)",
             "box": {
-              "content": "The latest innovations in distributed storage.",
               "list": [
-                { "emoji": "🏎️", "text": "<strong>Zero Copy Streaming:</strong> 5x faster data movement during rebalancing." },
-                { "emoji": "🏗️", "text": "<strong>SAI:</strong> Storage Attached Indexing for high-performance secondary queries." },
-                { "emoji": "🔍", "text": "<strong>Guardrails:</strong> Prevent dangerous queries from crashing nodes." }
-              ]
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Zero Copy Streaming:</strong> 5x faster data movement during rebalancing."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>SAI:</strong> Storage Attached Indexing for high-performance secondary queries."
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Guardrails:</strong> Prevent dangerous queries from crashing nodes."
+                }
+              ],
+              "title": "The latest innovations in distributed storage."
             }
           },
           {
             "type": "content",
             "title": "Cassandra on Kubernetes",
             "box": {
-              "content": "Running stateful workloads @ scale.",
               "list": [
-                { "emoji": "☸️", "text": "<strong>K8ssandra:</strong> The operator-driven approach to Cassandra on K8s." }
-              ]
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>K8ssandra:</strong> The operator-driven approach to Cassandra on K8s."
+                }
+              ],
+              "title": "Running stateful workloads @ scale."
             }
           }
         ]
@@ -504,17 +636,23 @@
           {
             "type": "topic-title",
             "title": "Cassandra Mastery",
-            "box": { "content": "The architecture of scale." }
+            "subtitle": "The architecture of scale."
           },
           {
             "type": "content",
             "title": "Scaling Considerations",
             "box": {
-              "content": "When to scale up vs. scale out.",
               "list": [
-                { "emoji": "🏗️", "text": "<strong>Scale Out:</strong> Adding more nodes for data capacity/throughput." },
-                { "emoji": "⚡", "text": "<strong>Scale Up:</strong> Vertical scaling for higher per-node query rates." }
-              ]
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Scale Out:</strong> Adding more nodes for data capacity/throughput."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Scale Up:</strong> Vertical scaling for higher per-node query rates."
+                }
+              ],
+              "title": "When to scale up vs. scale out."
             }
           },
           {
@@ -522,15 +660,23 @@
             "title": "Summary",
             "box": {
               "list": [
-                { "emoji": "✅", "text": "<strong>Scale:</strong> From 3 nodes to 3000." },
-                { "emoji": "✅", "text": "<strong>Speed:</strong> Designed for high write-availability." }
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Scale:</strong> From 3 nodes to 3000."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Speed:</strong> Designed for high write-availability."
+                }
               ]
             }
           },
           {
             "type": "content",
             "title": "Q&A",
-            "box": { "content": "Thank you! Any questions?" }
+            "box": {
+              "title": "Thank you! Any questions?"
+            }
           }
         ]
       }

@@ -34,43 +34,65 @@
           {
             "type": "topic-title",
             "title": "1. Introduction & History",
-            "box": {
-              "content": "From a toolmaker's project to the preferred language for Android"
-            }
+            "subtitle": "From a toolmaker's project to the preferred language for Android"
           },
           {
             "type": "content",
             "title": "What is Kotlin?",
             "box": {
-              "content": "Kotlin is a modern, cross-platform, statically typed programming language developed by **JetBrains**. It is designed to be fully interoperable with Java while providing a more concise, safer, and more expressive developer experience. Since Google's endorsement in 2017, it has become the gold standard for Android development and a powerful choice for server-side and multiplatform projects.",
               "list": [
-                { "emoji": "🔗", "text": "<strong>Interoperable:</strong> Use any existing Java library and call Kotlin from Java seamlessly." },
-                { "emoji": "🛡️", "text": "<strong>Safe:</strong> Null safety is built into the type system, preventing the 'billion-dollar mistake'." },
-                { "emoji": "📉", "text": "<strong>Concise:</strong> Drastically reduces boilerplate code compared to Java (up to 40% reduction)." }
-              ]
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Interoperable:</strong> Use any existing Java library and call Kotlin from Java seamlessly."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Safe:</strong> Null safety is built into the type system, preventing the 'billion-dollar mistake'."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Concise:</strong> Drastically reduces boilerplate code compared to Java (up to 40% reduction)."
+                }
+              ],
+              "title": "Kotlin is a modern, cross-platform, statically typed programming language developed by **JetBrains**. It is designed to be fully interoperable with Java while providing a more concise, safer, and more expressive developer experience. Since Google's endorsement in 2017, it has become the gold standard for Android development and a powerful choice for server-side and multiplatform projects."
             }
           },
           {
             "type": "content",
             "title": "The JetBrains Origins",
             "box": {
-              "content": "Unlike many languages born in research labs or large corporations to solve specific product needs, Kotlin was created by **JetBrains** (the creators of IntelliJ IDEA) to solve their own internal developer productivity issues. They needed a language that was as fast as Java but more modern and easier to tool.",
               "list": [
-                { "emoji": "📅", "text": "<strong>2011:</strong> JetBrains unveils Project Kotlin." },
-                { "emoji": "📅", "text": "<strong>2016:</strong> Kotlin 1.0 is released." },
-                { "emoji": "📅", "text": "<strong>2019:</strong> Google announces Kotlin as the preferred language for Android." }
-              ]
+                {
+                  "emoji": "📅",
+                  "text": "<strong>2011:</strong> JetBrains unveils Project Kotlin."
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>2016:</strong> Kotlin 1.0 is released."
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>2019:</strong> Google announces Kotlin as the preferred language for Android."
+                }
+              ],
+              "title": "Unlike many languages born in research labs or large corporations to solve specific product needs, Kotlin was created by **JetBrains** (the creators of IntelliJ IDEA) to solve their own internal developer productivity issues. They needed a language that was as fast as Java but more modern and easier to tool."
             }
           },
           {
             "type": "content",
             "title": "Design Philosophy",
             "box": {
-              "content": "Kotlin's design focuses on **Pragmatism**. It doesn't try to be a purely functional or purely object-oriented language; instead, it adopts the best features from many paradigms to solve real-world engineering problems efficiently.",
               "list": [
-                { "emoji": "🛠️", "text": "<strong>Tool-First:</strong> Designed alongside the compiler and IDE for the best developer experience." },
-                { "emoji": "🤝", "text": "<strong>Practical:</strong> Focuses on readability and maintainability over clever syntax." }
-              ]
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Tool-First:</strong> Designed alongside the compiler and IDE for the best developer experience."
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Practical:</strong> Focuses on readability and maintainability over clever syntax."
+                }
+              ],
+              "title": "Kotlin's design focuses on **Pragmatism**. It doesn't try to be a purely functional or purely object-oriented language; instead, it adopts the best features from many paradigms to solve real-world engineering problems efficiently."
             }
           }
         ]
@@ -82,38 +104,38 @@
           {
             "type": "topic-title",
             "title": "2. Language Basics",
-            "box": { "content": "Variables, Types, and Expressions" }
+            "subtitle": "Variables, Types, and Expressions"
           },
           {
             "type": "content",
             "title": "Variables: val vs var",
             "box": {
-              "content": "Kotlin distinguishes between read-only and mutable variables. Encouraging **immutability** by default makes code more predictable and easier to debug, especially in concurrent environments.",
-              "code": "/* 'val' is read-only (like final in Java) */\nval name = \"Kotlin\"\n// name = \"Java\" // Compile Error!\n\n/* 'var' is mutable */\nvar version = 1.9\nversion = 2.0 // OK"
+              "code": "/* 'val' is read-only (like final in Java) */\nval name = \"Kotlin\"\n// name = \"Java\" // Compile Error!\n\n/* 'var' is mutable */\nvar version = 1.9\nversion = 2.0 // OK",
+              "title": "Kotlin distinguishes between read-only and mutable variables. Encouraging **immutability** by default makes code more predictable and easier to debug, especially in concurrent environments."
             }
           },
           {
             "type": "content",
             "title": "Type Inference",
             "box": {
-              "content": "Kotlin has a sophisticated type system but doesn't force you to be verbose. Most of the time, the compiler can infer the type of a variable from its initializer.",
-              "code": "val x = 10     // Inferred as Int\nval y = \"Hello\" // Inferred as String\n\n/* Explicit types (when needed) */\nvar score: Double = 0.0"
+              "code": "val x = 10     // Inferred as Int\nval y = \"Hello\" // Inferred as String\n\n/* Explicit types (when needed) */\nvar score: Double = 0.0",
+              "title": "Kotlin has a sophisticated type system but doesn't force you to be verbose. Most of the time, the compiler can infer the type of a variable from its initializer."
             }
           },
           {
             "type": "content",
             "title": "String Templates",
             "box": {
-              "content": "Kotlin makes string manipulation intuitive with templates. You can include variable values or even complex expressions directly inside a string using the <code>$</code> sign.",
-              "code": "val items = 5\nprintln(\"You have $items items.\")\n\nval price = 10.5\nprintln(\"Total: ${items * price}\")"
+              "code": "val items = 5\nprintln(\"You have $items items.\")\n\nval price = 10.5\nprintln(\"Total: ${items * price}\")",
+              "title": "Kotlin makes string manipulation intuitive with templates. You can include variable values or even complex expressions directly inside a string using the <code>$</code> sign."
             }
           },
           {
             "type": "content",
             "title": "The 'when' Expression",
             "box": {
-              "content": "The <code>when</code> expression is a more powerful and flexible version of the traditional <code>switch</code>. It can be used as a statement or an expression, and its branches can contain complex logic or range checks.",
-              "code": "val result = when (score) {\n    in 90..100 -> \"A\"\n    in 80..89  -> \"B\"\n    is String  -> \"Invalid type\"\n    else       -> \"F\"\n}\n\n// Exhaustiveness is checked by the compiler!"
+              "code": "val result = when (score) {\n    in 90..100 -> \"A\"\n    in 80..89  -> \"B\"\n    is String  -> \"Invalid type\"\n    else       -> \"F\"\n}\n\n// Exhaustiveness is checked by the compiler!",
+              "title": "The <code>when</code> expression is a more powerful and flexible version of the traditional <code>switch</code>. It can be used as a statement or an expression, and its branches can contain complex logic or range checks."
             }
           }
         ]
@@ -125,30 +147,30 @@
           {
             "type": "topic-title",
             "title": "3. Null Safety",
-            "box": { "content": "Eliminating NullPointerExceptions" }
+            "subtitle": "Eliminating NullPointerExceptions"
           },
           {
             "type": "content",
             "title": "The Billion Dollar Mistake",
             "box": {
-              "content": "In many languages (like Java), any object reference can be <code>null</code>, leading to the dreaded <code>NullPointerException</code> at runtime. Kotlin solves this by making nullability part of the **Type System**.",
-              "code": "var nonNullable: String = \"Hello\"\n// nonNullable = null // COMPILE ERROR\n\nvar nullable: String? = \"Hello\"\nnullable = null // OK"
+              "code": "var nonNullable: String = \"Hello\"\n// nonNullable = null // COMPILE ERROR\n\nvar nullable: String? = \"Hello\"\nnullable = null // OK",
+              "title": "In many languages (like Java), any object reference can be <code>null</code>, leading to the dreaded <code>NullPointerException</code> at runtime. Kotlin solves this by making nullability part of the **Type System**."
             }
           },
           {
             "type": "content",
             "title": "Safe Calls & Elvis Operator",
             "box": {
-              "content": "To access properties of a nullable type, you must use safe operators. The **Safe Call** returns null instead of crashing, and the **Elvis Operator** provides a default value.",
-              "code": "val length = nullable?.length // Returns Int?\n\n/* Elvis Operator (?:) */\nval safeLength = nullable?.length ?: 0\n\n/* Not-null Assertion (!!) - DANGEROUS */\nval forcedLength = nullable!!.length // Crashes if null"
+              "code": "val length = nullable?.length // Returns Int?\n\n/* Elvis Operator (?:) */\nval safeLength = nullable?.length ?: 0\n\n/* Not-null Assertion (!!) - DANGEROUS */\nval forcedLength = nullable!!.length // Crashes if null",
+              "title": "To access properties of a nullable type, you must use safe operators. The **Safe Call** returns null instead of crashing, and the **Elvis Operator** provides a default value."
             }
           },
           {
             "type": "content",
             "title": "Smart Casts",
             "box": {
-              "content": "The Kotlin compiler is smart enough to track your null checks. Once you've checked that a variable is not null, the compiler 'smart casts' it to a non-nullable type within that scope.",
-              "code": "if (nullable != null) {\n    // In this block, 'nullable' is treated as non-nullable\n    println(nullable.length) // No ?. needed!\n}"
+              "code": "if (nullable != null) {\n    // In this block, 'nullable' is treated as non-nullable\n    println(nullable.length) // No ?. needed!\n}",
+              "title": "The Kotlin compiler is smart enough to track your null checks. Once you've checked that a variable is not null, the compiler 'smart casts' it to a non-nullable type within that scope."
             }
           }
         ]
@@ -160,38 +182,38 @@
           {
             "type": "topic-title",
             "title": "4. Classes & Objects",
-            "box": { "content": "Concise and expressive Object-Oriented patterns" }
+            "subtitle": "Concise and expressive Object-Oriented patterns"
           },
           {
             "type": "content",
             "title": "Data Classes: Boilerplate Reduction",
             "box": {
-              "content": "One of Kotlin's most loved features. By simply adding the <code>data</code> keyword to a class, the compiler automatically generates <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and a <code>copy()</code> function.",
-              "code": "data class User(val name: String, val age: Int)\n\nval user1 = User(\"Alice\", 25)\nval user2 = user1.copy(age = 26) // Easily create modified copies\n\nprintln(user1) // User(name=Alice, age=25)"
+              "code": "data class User(val name: String, val age: Int)\n\nval user1 = User(\"Alice\", 25)\nval user2 = user1.copy(age = 26) // Easily create modified copies\n\nprintln(user1) // User(name=Alice, age=25)",
+              "title": "One of Kotlin's most loved features. By simply adding the <code>data</code> keyword to a class, the compiler automatically generates <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and a <code>copy()</code> function."
             }
           },
           {
             "type": "content",
             "title": "Constructors and Init",
             "box": {
-              "content": "Kotlin simplifies class definitions by merging the header and primary constructor. Any initialization logic can be placed in an <code>init</code> block.",
-              "code": "class Person(val name: String) {\n    init {\n        println(\"Initializing $name\")\n    }\n    \n    /* Secondary constructor */\n    constructor(name: String, email: String) : this(name) {\n        // additional setup\n    }\n}"
+              "code": "class Person(val name: String) {\n    init {\n        println(\"Initializing $name\")\n    }\n    \n    /* Secondary constructor */\n    constructor(name: String, email: String) : this(name) {\n        // additional setup\n    }\n}",
+              "title": "Kotlin simplifies class definitions by merging the header and primary constructor. Any initialization logic can be placed in an <code>init</code> block."
             }
           },
           {
             "type": "content",
             "title": "The 'object' Keyword: Singletons",
             "box": {
-              "content": "Kotlin has no 'static' keyword. Instead, it uses the <code>object</code> keyword to define a **Singleton**—a class that has only one instance, created lazily when first accessed.",
-              "code": "object DatabaseConfig {\n    val url = \"jdbc:mysql://localhost/test\"\n    fun connect() { /* ... */ }\n}\n\n// Usage\nDatabaseConfig.connect()"
+              "code": "object DatabaseConfig {\n    val url = \"jdbc:mysql://localhost/test\"\n    fun connect() { /* ... */ }\n}\n\n// Usage\nDatabaseConfig.connect()",
+              "title": "Kotlin has no 'static' keyword. Instead, it uses the <code>object</code> keyword to define a **Singleton**—a class that has only one instance, created lazily when first accessed."
             }
           },
           {
             "type": "content",
             "title": "Sealed Classes & Interfaces",
             "box": {
-              "content": "Sealed hierarchies allow you to restrict inheritance to a known set of subclasses. This is incredible for representing state and ensures that <code>when</code> expressions covering a sealed type are exhaustive.",
-              "code": "sealed class Result {\n    data class Success(val data: String) : Result()\n    data class Error(val message: String) : Result()\n    object Loading : Result()\n}\n\nfun handle(result: Result) = when(result) {\n    is Result.Success -> println(result.data)\n    is Result.Error   -> println(result.message)\n    Result.Loading    -> println(\"Loading...\")\n}"
+              "code": "sealed class Result {\n    data class Success(val data: String) : Result()\n    data class Error(val message: String) : Result()\n    object Loading : Result()\n}\n\nfun handle(result: Result) = when(result) {\n    is Result.Success -> println(result.data)\n    is Result.Error   -> println(result.message)\n    Result.Loading    -> println(\"Loading...\")\n}",
+              "title": "Sealed hierarchies allow you to restrict inheritance to a known set of subclasses. This is incredible for representing state and ensures that <code>when</code> expressions covering a sealed type are exhaustive."
             }
           }
         ]
@@ -203,30 +225,30 @@
           {
             "type": "topic-title",
             "title": "5. Functional Programming",
-            "box": { "content": "First-class functions and expressive transforms" }
+            "subtitle": "First-class functions and expressive transforms"
           },
           {
             "type": "content",
             "title": "Extension Functions",
             "box": {
-              "content": "Kotlin allows you to extend a class with new functionality without having to inherit from it. This 'Extension' pattern is used throughout the standard library to make APIs more intuitive.",
-              "code": "/* Extend the built-in String class */\nfun String.isEmail(): Boolean {\n    return this.contains(\"@\")\n}\n\n// Usage\nif (\"test@bude.io\".isEmail()) {\n    println(\"Valid email\")\n}"
+              "code": "/* Extend the built-in String class */\nfun String.isEmail(): Boolean {\n    return this.contains(\"@\")\n}\n\n// Usage\nif (\"test@bude.io\".isEmail()) {\n    println(\"Valid email\")\n}",
+              "title": "Kotlin allows you to extend a class with new functionality without having to inherit from it. This 'Extension' pattern is used throughout the standard library to make APIs more intuitive."
             }
           },
           {
             "type": "content",
             "title": "Higher-Order Functions & Lambdas",
             "box": {
-              "content": "Functions in Kotlin are first-class citizens. You can pass functions as arguments, return them from other functions, and use concise lambda syntax with the <code>it</code> shorthand for single parameters.",
-              "code": "fun perform(action: (String) -> Unit) {\n    action(\"Hello from Bude!\")\n}\n\n/* Lambda with shorthand 'it' */\nperform { println(it) }"
+              "code": "fun perform(action: (String) -> Unit) {\n    action(\"Hello from Bude!\")\n}\n\n/* Lambda with shorthand 'it' */\nperform { println(it) }",
+              "title": "Functions in Kotlin are first-class citizens. You can pass functions as arguments, return them from other functions, and use concise lambda syntax with the <code>it</code> shorthand for single parameters."
             }
           },
           {
             "type": "content",
             "title": "Collections API: Power Transforms",
             "box": {
-              "content": "Kotlin's standard library provides a rich set of functional operators for collections, allowing you to process data pipelines clearly and efficiently.",
-              "code": "val numbers = listOf(1, 2, 3, 4, 5)\n\nval doubledEvens = numbers\n    .filter { it % 2 == 0 } // [2, 4]\n    .map { it * 2 }        // [4, 8]\n    .sum()                 // 12"
+              "code": "val numbers = listOf(1, 2, 3, 4, 5)\n\nval doubledEvens = numbers\n    .filter { it % 2 == 0 } // [2, 4]\n    .map { it * 2 }        // [4, 8]\n    .sum()                 // 12",
+              "title": "Kotlin's standard library provides a rich set of functional operators for collections, allowing you to process data pipelines clearly and efficiently."
             }
           }
         ]
@@ -238,42 +260,51 @@
           {
             "type": "topic-title",
             "title": "6. Coroutines",
-            "box": { "content": "Lightweight, non-blocking asynchronous programming" }
+            "subtitle": "Lightweight, non-blocking asynchronous programming"
           },
           {
             "type": "content",
             "title": "Lightweight Threads",
             "box": {
-              "content": "Coroutines are essentially lightweight threads. You can run hundreds of thousands of coroutines on a single thread without exhausting system resources. They are **non-blocking**, meaning a coroutine can be 'suspended' while waiting for a task, freeing up the thread for other work.",
-              "code": "import kotlinx.coroutines.*\n\nfun main() = runBlocking {\n    launch {\n        delay(1000L)\n        println(\"World!\")\n    }\n    println(\"Hello\")\n}"
+              "code": "import kotlinx.coroutines.*\n\nfun main() = runBlocking {\n    launch {\n        delay(1000L)\n        println(\"World!\")\n    }\n    println(\"Hello\")\n}",
+              "title": "Coroutines are essentially lightweight threads. You can run hundreds of thousands of coroutines on a single thread without exhausting system resources. They are **non-blocking**, meaning a coroutine can be 'suspended' while waiting for a task, freeing up the thread for other work."
             }
           },
           {
             "type": "content",
             "title": "Suspending Functions",
             "box": {
-              "content": "Functions marked with <code>suspend</code> can suspend the execution of a coroutine without blocking the underlying thread. They can only be called from other suspend functions or from a coroutine builder.",
-              "code": "suspend fun fetchUserData(): User {\n    delay(500) // Simulate network call\n    return User(\"Alice\", 25)\n}"
+              "code": "suspend fun fetchUserData(): User {\n    delay(500) // Simulate network call\n    return User(\"Alice\", 25)\n}",
+              "title": "Functions marked with <code>suspend</code> can suspend the execution of a coroutine without blocking the underlying thread. They can only be called from other suspend functions or from a coroutine builder."
             }
           },
           {
             "type": "content",
             "title": "Scopes & Dispatchers",
             "box": {
-              "content": "Kotlin uses **Structured Concurrency**. Coroutines must be launched within a scope, ensuring that parent tasks track and manage their children. Dispatchers control which thread pool the coroutine runs on.",
               "list": [
-                { "emoji": "🧵", "text": "<strong>Main:</strong> Optimized for UI interactions." },
-                { "emoji": "💾", "text": "<strong>IO:</strong> Optimized for network or disk operations." },
-                { "emoji": "⚙️", "text": "<strong>Default:</strong> Targeted for CPU-intensive work." }
-              ]
+                {
+                  "emoji": "🧵",
+                  "text": "<strong>Main:</strong> Optimized for UI interactions."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>IO:</strong> Optimized for network or disk operations."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Default:</strong> Targeted for CPU-intensive work."
+                }
+              ],
+              "title": "Kotlin uses **Structured Concurrency**. Coroutines must be launched within a scope, ensuring that parent tasks track and manage their children. Dispatchers control which thread pool the coroutine runs on."
             }
           },
           {
             "type": "content",
             "title": "Asynchronous Streams: Flow",
             "box": {
-              "content": "<code>Flow</code> is an asynchronous stream of values that are computed sequentially. It is similar to a <code>Sequence</code> but for asynchronous values, providing a rich set of operators for transformation and collection.",
-              "code": "fun simpleFlow(): Flow<Int> = flow {\n    for (i in 1..3) {\n        delay(100)\n        emit(i)\n    }\n}\n\n// Collection\nsimpleFlow().collect { println(it) }"
+              "code": "fun simpleFlow(): Flow<Int> = flow {\n    for (i in 1..3) {\n        delay(100)\n        emit(i)\n    }\n}\n\n// Collection\nsimpleFlow().collect { println(it) }",
+              "title": "<code>Flow</code> is an asynchronous stream of values that are computed sequentially. It is similar to a <code>Sequence</code> but for asynchronous values, providing a rich set of operators for transformation and collection."
             }
           }
         ]
@@ -285,34 +316,43 @@
           {
             "type": "topic-title",
             "title": "7. The Modern Ecosystem",
-            "box": { "content": "Beyond the JVM: Android, Cloud, and Multiplatform" }
+            "subtitle": "Beyond the JVM: Android, Cloud, and Multiplatform"
           },
           {
             "type": "content",
             "title": "Android & Jetpack Compose",
             "box": {
-              "content": "Kotlin is the language of choice for Android. **Jetpack Compose** is Android's modern toolkit for building native UI using a declarative approach, powered entirely by Kotlin.",
-              "code": "@Composable\nfun Greeting(name: String) {\n    Text(text = \"Hello $name!\")\n}"
+              "code": "@Composable\nfun Greeting(name: String) {\n    Text(text = \"Hello $name!\")\n}",
+              "title": "Kotlin is the language of choice for Android. **Jetpack Compose** is Android's modern toolkit for building native UI using a declarative approach, powered entirely by Kotlin."
             }
           },
           {
             "type": "content",
             "title": "Server-Side Kotlin",
             "box": {
-              "content": "Ktor is a lightweight, asynchronous framework for building connected applications, while Spring Boot has first-class Kotlin support.",
-              "code": "/* A simple Ktor route */\nrouting {\n    get(\"/\") {\n        call.respondText(\"Hello, Bude!\")\n    }\n}"
+              "code": "/* A simple Ktor route */\nrouting {\n    get(\"/\") {\n        call.respondText(\"Hello, Bude!\")\n    }\n}",
+              "title": "Ktor is a lightweight, asynchronous framework for building connected applications, while Spring Boot has first-class Kotlin support."
             }
           },
           {
             "type": "content",
             "title": "Kotlin Multiplatform (KMP)",
             "box": {
-              "content": "KMP allows you to share core business logic across iOS, Android, Desktop, and Web while keeping the UI layer native to each platform.",
               "list": [
-                { "emoji": "🍎", "text": "<strong>iOS:</strong> Generates native frameworks." },
-                { "emoji": "🤖", "text": "<strong>Android:</strong> Compiles to JVM bytecode." },
-                { "emoji": "🌐", "text": "<strong>Web:</strong> Compiles to JavaScript/WebAssembly." }
-              ]
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>iOS:</strong> Generates native frameworks."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Android:</strong> Compiles to JVM bytecode."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web:</strong> Compiles to JavaScript/WebAssembly."
+                }
+              ],
+              "title": "KMP allows you to share core business logic across iOS, Android, Desktop, and Web while keeping the UI layer native to each platform."
             }
           }
         ]
@@ -324,34 +364,43 @@
           {
             "type": "topic-title",
             "title": "8. Advanced Features",
-            "box": { "content": "Type-safe builders and delegation" }
+            "subtitle": "Type-safe builders and delegation"
           },
           {
             "type": "content",
             "title": "Type-Safe Builders (DSLs)",
             "box": {
-              "content": "Kotlin allows you to create your own Domain Specific Languages (DSLs) using function literals with receivers. This is how libraries like Ktor and Jetpack Compose achieve their clean syntax.",
-              "code": "fun html(init: HTML.() -> Unit): HTML {\n    val html = HTML()\n    html.init()\n    return html\n}\n\n// Usage\nhtml {\n    head { title { +\"XML encoding with Kotlin\" } }\n    body { p { +\"This is a custom DSL\" } }\n}"
+              "code": "fun html(init: HTML.() -> Unit): HTML {\n    val html = HTML()\n    html.init()\n    return html\n}\n\n// Usage\nhtml {\n    head { title { +\"XML encoding with Kotlin\" } }\n    body { p { +\"This is a custom DSL\" } }\n}",
+              "title": "Kotlin allows you to create your own Domain Specific Languages (DSLs) using function literals with receivers. This is how libraries like Ktor and Jetpack Compose achieve their clean syntax."
             }
           },
           {
             "type": "content",
             "title": "Delegated Properties",
             "box": {
-              "content": "Kotlin provides a way to delegate the getter and setter of a property to another object. Common built-in delegates include <code>lazy</code> (for lazy initialization) and <code>observable</code>.",
-              "code": "val lazyValue: String by lazy {\n    println(\"Computed!\")\n    \"Hello\"\n}\n\nprintln(lazyValue) // Prints \"Computed!\" then \"Hello\"\nprintln(lazyValue) // Only prints \"Hello\""
+              "code": "val lazyValue: String by lazy {\n    println(\"Computed!\")\n    \"Hello\"\n}\n\nprintln(lazyValue) // Prints \"Computed!\" then \"Hello\"\nprintln(lazyValue) // Only prints \"Hello\"",
+              "title": "Kotlin provides a way to delegate the getter and setter of a property to another object. Common built-in delegates include <code>lazy</code> (for lazy initialization) and <code>observable</code>."
             }
           },
           {
             "type": "content",
             "title": "Conclusion",
             "box": {
-              "content": "Kotlin is a pragmatic, versatile language that empowers developers to build safer and more expressive applications across all platforms.",
               "list": [
-                { "emoji": "✅", "text": "Modern and concise syntax" },
-                { "emoji": "✅", "text": "Robust null safety" },
-                { "emoji": "✅", "text": "Powerful multiplatform capabilities" }
-              ]
+                {
+                  "emoji": "✅",
+                  "text": "Modern and concise syntax"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Robust null safety"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "Powerful multiplatform capabilities"
+                }
+              ],
+              "title": "Kotlin is a pragmatic, versatile language that empowers developers to build safer and more expressive applications across all platforms."
             }
           }
         ]
@@ -363,30 +412,30 @@
           {
             "type": "topic-title",
             "title": "9. Testing & Quality",
-            "box": { "content": "Building robust and verifiable applications" }
+            "subtitle": "Building robust and verifiable applications"
           },
           {
             "type": "content",
             "title": "JUnit 5 & Kotlin",
             "box": {
-              "content": "Kotlin works out of the box with JUnit 5. You can use backticks for descriptive test names, making your test results much easier to read.",
-              "code": "@Test\nfun `should return success when data is valid`() {\n    val result = process(\"valid data\")\n    assertEquals(Status.SUCCESS, result.status)\n}"
+              "code": "@Test\nfun `should return success when data is valid`() {\n    val result = process(\"valid data\")\n    assertEquals(Status.SUCCESS, result.status)\n}",
+              "title": "Kotlin works out of the box with JUnit 5. You can use backticks for descriptive test names, making your test results much easier to read."
             }
           },
           {
             "type": "content",
             "title": "MockK: Idiomatic Mocking",
             "box": {
-              "content": "While Mockito is common in Java, **MockK** is built specifically for Kotlin. It supports mocking of final classes, extension functions, and co-routines with a clean, functional DSL.",
-              "code": "val repository = mockk<UserRepository>()\nevery { repository.findById(1) } returns User(\"Alice\")\n\nval user = service.getUser(1)\nverify { repository.findById(1) }"
+              "code": "val repository = mockk<UserRepository>()\nevery { repository.findById(1) } returns User(\"Alice\")\n\nval user = service.getUser(1)\nverify { repository.findById(1) }",
+              "title": "While Mockito is common in Java, **MockK** is built specifically for Kotlin. It supports mocking of final classes, extension functions, and co-routines with a clean, functional DSL."
             }
           },
           {
             "type": "content",
             "title": "Kotest: Powerful Assertions",
             "box": {
-              "content": "Kotest is a multiplatform testing framework that provides a rich set of assertion styles (like <code>shouldBe</code>) and support for Property-Based Testing.",
-              "code": "user.name shouldBe \"Alice\"\nuser.age shouldBeGreaterThan 18\n\n/* Property-based test */\ncheckAll<String> { s ->\n    s.reversed().reversed() shouldBe s\n}"
+              "code": "user.name shouldBe \"Alice\"\nuser.age shouldBeGreaterThan 18\n\n/* Property-based test */\ncheckAll<String> { s ->\n    s.reversed().reversed() shouldBe s\n}",
+              "title": "Kotest is a multiplatform testing framework that provides a rich set of assertion styles (like <code>shouldBe</code>) and support for Property-Based Testing."
             }
           }
         ]
@@ -398,30 +447,30 @@
           {
             "type": "topic-title",
             "title": "10. Standard Library Deep Dive",
-            "box": { "content": "Mastering Scope Functions and Sequences" }
+            "subtitle": "Mastering Scope Functions and Sequences"
           },
           {
             "type": "content",
             "title": "Scope Functions: let and run",
             "box": {
-              "content": "Kotlin's scope functions execute a block of code within the context of an object. **let** is mostly used for null checks, while **run** is for initialization and computing a result.",
-              "code": "/* let: transform and handle nulls */\nval nameLen = nullableName?.let { it.length } ?: 0\n\n/* run: execute logic on 'this' */\nval result = service.run {\n    initialize()\n    getData()\n}"
+              "code": "/* let: transform and handle nulls */\nval nameLen = nullableName?.let { it.length } ?: 0\n\n/* run: execute logic on 'this' */\nval result = service.run {\n    initialize()\n    getData()\n}",
+              "title": "Kotlin's scope functions execute a block of code within the context of an object. **let** is mostly used for null checks, while **run** is for initialization and computing a result."
             }
           },
           {
             "type": "content",
             "title": "Scope Functions: apply and also",
             "box": {
-              "content": "**apply** returns the object itself and is used for configuration. **also** is used for additional actions (like logging) that don't modify the object.",
-              "code": "/* apply: configure object */\nval intent = Intent().apply {\n    action = ACTION_VIEW\n    data = Uri.parse(url)\n}\n\n/* also: side effects */\nval user = fetchUser().also { println(\"Fetched $it\") }"
+              "code": "/* apply: configure object */\nval intent = Intent().apply {\n    action = ACTION_VIEW\n    data = Uri.parse(url)\n}\n\n/* also: side effects */\nval user = fetchUser().also { println(\"Fetched $it\") }",
+              "title": "**apply** returns the object itself and is used for configuration. **also** is used for additional actions (like logging) that don't modify the object."
             }
           },
           {
             "type": "content",
             "title": "Sequences: Lazy Evaluation",
             "box": {
-              "content": "Standard collection operations are **eager** (each step creates a new list). **Sequences** allow for **lazy** evaluation, processing elements one by one through the entire pipeline, which is far more efficient for large datasets.",
-              "code": "val sequence = words.asSequence()\n    .filter { it.length > 5 }\n    .map { it.uppercase() }\n    .take(10)\n    .toList()"
+              "code": "val sequence = words.asSequence()\n    .filter { it.length > 5 }\n    .map { it.uppercase() }\n    .take(10)\n    .toList()",
+              "title": "Standard collection operations are **eager** (each step creates a new list). **Sequences** allow for **lazy** evaluation, processing elements one by one through the entire pipeline, which is far more efficient for large datasets."
             }
           }
         ]
@@ -433,45 +482,60 @@
           {
             "type": "topic-title",
             "title": "11. The Future: Kotlin 2.0 & Beyond",
-            "box": { "content": "K2 Compiler, Wasm, and Context Receivers" }
+            "subtitle": "K2 Compiler, Wasm, and Context Receivers"
           },
           {
             "type": "content",
             "title": "The K2 Compiler",
             "box": {
-              "content": "Kotlin 2.0 introduces the **K2 Compiler**, a ground-up rewrite that significantly improves compilation speed and enables more powerful language features by unifying the frontend for all platforms.",
               "list": [
-                { "emoji": "⚡", "text": "Up to 2x faster compilation." },
-                { "emoji": "🏗️", "text": "Cleaner architecture for future language evolution." }
-              ]
+                {
+                  "emoji": "⚡",
+                  "text": "Up to 2x faster compilation."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "Cleaner architecture for future language evolution."
+                }
+              ],
+              "title": "Kotlin 2.0 introduces the **K2 Compiler**, a ground-up rewrite that significantly improves compilation speed and enables more powerful language features by unifying the frontend for all platforms."
             }
           },
           {
             "type": "content",
             "title": "Kotlin/Wasm",
             "box": {
-              "content": "Kotlin is embracing **WebAssembly** to bring native-like performance to the browser. Kotlin/Wasm allows Jetpack Compose to run directly on the web with incredible speed.",
-              "code": "/* Compile Kotlin directly to .wasm binary */"
+              "code": "/* Compile Kotlin directly to .wasm binary */",
+              "title": "Kotlin is embracing **WebAssembly** to bring native-like performance to the browser. Kotlin/Wasm allows Jetpack Compose to run directly on the web with incredible speed."
             }
           },
           {
             "type": "content",
             "title": "Context Receivers",
             "box": {
-              "content": "A new way to manage dependencies and context. Instead of passing loggers or database connections as parameters, you can declare that a function requires a specific context to run.",
-              "code": "context(LoggingContext, TransactionContext)\nfun transferMoney() {\n    log(\"Transferring...\")\n    executeTransaction { /* ... */ }\n}"
+              "code": "context(LoggingContext, TransactionContext)\nfun transferMoney() {\n    log(\"Transferring...\")\n    executeTransaction { /* ... */ }\n}",
+              "title": "A new way to manage dependencies and context. Instead of passing loggers or database connections as parameters, you can declare that a function requires a specific context to run."
             }
           },
           {
             "type": "content",
             "title": "Summary & Q&A",
             "box": {
-              "content": "Kotlin is a pragmatic, versatile language that continues to bridge the gap between Java's legacy and the future of multiplatform development.",
               "list": [
-                { "emoji": "🚀", "text": "Safe by default (Null Safety)." },
-                { "emoji": "📱", "text": "Powering millions of Android apps." },
-                { "emoji": "🌐", "text": "The future of cross-platform (KMP)." }
-              ]
+                {
+                  "emoji": "🚀",
+                  "text": "Safe by default (Null Safety)."
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Powering millions of Android apps."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "The future of cross-platform (KMP)."
+                }
+              ],
+              "title": "Kotlin is a pragmatic, versatile language that continues to bridge the gap between Java's legacy and the future of multiplatform development."
             }
           }
         ]

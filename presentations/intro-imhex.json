@@ -102,7 +102,6 @@
             "emoji": "🎯",
             "title": "What is ImHex?",
             "box": {
-              "content": "<span class=\"highlight\">Advanced open-source hex editor</span> for reverse engineers and security researchers",
               "list": [
                 {
                   "emoji": "🐙",
@@ -124,7 +123,8 @@
                   "emoji": "🔧",
                   "text": "<strong>Customization</strong> - Plugins, themes, scripting"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Advanced open-source hex editor</span> for reverse engineers and security researchers"
             },
             "note": {
               "text": "<strong>Fun fact:</strong> ImHex can analyze files larger than available RAM using memory mapping!"
@@ -291,8 +291,8 @@
             "emoji": "⚡",
             "title": "Quick Installation Commands",
             "box": {
-              "content": "<strong>Package manager installation</strong>",
-              "code": "# Windows (winget)\nwinget install WerWolv.ImHex\n\n# macOS (Homebrew)\nbrew install imhex\n\n# Linux (AppImage)\nwget https://github.com/WerWolv/ImHex/releases/latest/download/imhex-*-x86_64.AppImage\nchmod +x imhex-*.AppImage\n./imhex-*.AppImage\n\n# Linux (Flatpak)\nflatpak install flathub io.github.WerWolv.ImHex\nflatpak run io.github.WerWolv.ImHex"
+              "code": "# Windows (winget)\nwinget install WerWolv.ImHex\n\n# macOS (Homebrew)\nbrew install imhex\n\n# Linux (AppImage)\nwget https://github.com/WerWolv/ImHex/releases/latest/download/imhex-*-x86_64.AppImage\nchmod +x imhex-*.AppImage\n./imhex-*.AppImage\n\n# Linux (Flatpak)\nflatpak install flathub io.github.WerWolv.ImHex\nflatpak run io.github.WerWolv.ImHex",
+              "title": "<strong>Package manager installation</strong>"
             }
           }
         ]
@@ -382,8 +382,8 @@
             "emoji": "🔄",
             "title": "Endianness Examples",
             "box": {
-              "content": "<strong>Understanding byte order</strong>",
-              "code": "Value: 0x12345678 (4 bytes)\n\nLittle Endian (x86, ARM LE):\n78 56 34 12  (LSB first)\n\nBig Endian (Network, Motorola):\n12 34 56 78  (MSB first)"
+              "code": "Value: 0x12345678 (4 bytes)\n\nLittle Endian (x86, ARM LE):\n78 56 34 12  (LSB first)\n\nBig Endian (Network, Motorola):\n12 34 56 78  (MSB first)",
+              "title": "<strong>Understanding byte order</strong>"
             }
           }
         ]
@@ -401,7 +401,6 @@
             "emoji": "🔤",
             "title": "What is Pattern Language?",
             "box": {
-              "content": "<span class=\"highlight\">Domain-specific language</span> for defining binary structures",
               "list": [
                 {
                   "emoji": "📝",
@@ -419,7 +418,8 @@
                   "emoji": "📚",
                   "text": "<strong>Sharing</strong> - Community patterns repository available"
                 }
-              ]
+              ],
+              "title": "<span class=\"highlight\">Domain-specific language</span> for defining binary structures"
             }
           },
           {
@@ -427,8 +427,8 @@
             "emoji": "📝",
             "title": "Basic Pattern Syntax",
             "box": {
-              "content": "<strong>Simple structure definition</strong>",
-              "code": "// Simple file header pattern\nstruct Header {\n    u32 magic;           // 4-byte magic number\n    u16 version;         // 2-byte version\n    u16 entry_count;     // 2-byte count\n    u32 data_offset;     // 4-byte offset\n};\n\n// Usage\nHeader header @ 0x00;\n\n// Conditional based on magic\nif (header.magic == 0x464C457F) { // ELF magic\n    // ELF-specific parsing\n}"
+              "code": "// Simple file header pattern\nstruct Header {\n    u32 magic;           // 4-byte magic number\n    u16 version;         // 2-byte version\n    u16 entry_count;     // 2-byte count\n    u32 data_offset;     // 4-byte offset\n};\n\n// Usage\nHeader header @ 0x00;\n\n// Conditional based on magic\nif (header.magic == 0x464C457F) { // ELF magic\n    // ELF-specific parsing\n}",
+              "title": "<strong>Simple structure definition</strong>"
             }
           }
         ]
@@ -446,8 +446,8 @@
             "emoji": "📦",
             "title": "ELF File Pattern",
             "box": {
-              "content": "<strong>Executable and Linkable Format</strong>",
-              "code": "struct ELF_Header {\n    u32 magic          : magic == 0x464C457F; // .ELF\n    u8  class;         // 1=32-bit, 2=64-bit\n    u8  data;          // 1=LE, 2=BE\n    u8  version;\n    u8  os_abi;\n    u64 padding;\n    u16 type;\n    u16 machine;\n    u32 version2;\n    u64 entry;\n    u64 phoff;         // Program header offset\n    u64 shoff;         // Section header offset\n    u32 flags;\n    u16 ehsize;\n    u16 phentsize;\n    u16 phnum;         // Program header count\n    u16 shentsize;\n    u16 shnum;         // Section header count\n    u16 shstrndx;\n};\n\nELF_Header header @ 0x00;"
+              "code": "struct ELF_Header {\n    u32 magic          : magic == 0x464C457F; // .ELF\n    u8  class;         // 1=32-bit, 2=64-bit\n    u8  data;          // 1=LE, 2=BE\n    u8  version;\n    u8  os_abi;\n    u64 padding;\n    u16 type;\n    u16 machine;\n    u32 version2;\n    u64 entry;\n    u64 phoff;         // Program header offset\n    u64 shoff;         // Section header offset\n    u32 flags;\n    u16 ehsize;\n    u16 phentsize;\n    u16 phnum;         // Program header count\n    u16 shentsize;\n    u16 shnum;         // Section header count\n    u16 shstrndx;\n};\n\nELF_Header header @ 0x00;",
+              "title": "<strong>Executable and Linkable Format</strong>"
             }
           },
           {
@@ -455,8 +455,8 @@
             "emoji": "🖼️",
             "title": "PNG File Pattern",
             "box": {
-              "content": "<strong>Portable Network Graphics</strong>",
-              "code": "struct PNG_Header {\n    u64 signature : signature == 0x89504E470D0A1A0A; // PNG signature\n};\n\nstruct Chunk {\n    u32 length;\n    char type[4];\n    u8 data[length];\n    u32 crc;\n};\n\nPNG_Header header @ 0x00;\nChunk ihdr_chunk @ 0x08;\n\n// Validate IHDR chunk\nif (std::string(ihdr_chunk.type, 4) == \"IHDR\") {\n    // Parse IHDR data\n    u32 width = readUnsignedBigEndian(ihdr_chunk.data, 0, 4);\n    u32 height = readUnsignedBigEndian(ihdr_chunk.data, 4, 4);\n}"
+              "code": "struct PNG_Header {\n    u64 signature : signature == 0x89504E470D0A1A0A; // PNG signature\n};\n\nstruct Chunk {\n    u32 length;\n    char type[4];\n    u8 data[length];\n    u32 crc;\n};\n\nPNG_Header header @ 0x00;\nChunk ihdr_chunk @ 0x08;\n\n// Validate IHDR chunk\nif (std::string(ihdr_chunk.type, 4) == \"IHDR\") {\n    // Parse IHDR data\n    u32 width = readUnsignedBigEndian(ihdr_chunk.data, 0, 4);\n    u32 height = readUnsignedBigEndian(ihdr_chunk.data, 4, 4);\n}",
+              "title": "<strong>Portable Network Graphics</strong>"
             }
           }
         ]
@@ -542,8 +542,8 @@
             "emoji": "🔗",
             "title": "Checksum & Hashing",
             "box": {
-              "content": "<strong>Integrity and identification</strong>",
-              "code": "// Supported hash algorithms\n- CRC16, CRC32\n- MD5, SHA1, SHA256, SHA512\n- BLAKE2, BLAKE3\n- Custom CRC polynomials\n\n// Usage examples\n- Verify file integrity\n- Identify known malware hashes\n- Validate firmware updates\n- Detect modified sections"
+              "code": "// Supported hash algorithms\n- CRC16, CRC32\n- MD5, SHA1, SHA256, SHA512\n- BLAKE2, BLAKE3\n- Custom CRC polynomials\n\n// Usage examples\n- Verify file integrity\n- Identify known malware hashes\n- Validate firmware updates\n- Detect modified sections",
+              "title": "<strong>Integrity and identification</strong>"
             }
           }
         ]
@@ -722,8 +722,8 @@
             "emoji": "📝",
             "title": "Built-in Scripting Engine",
             "box": {
-              "content": "<strong>Automation and custom analysis</strong>",
-              "code": "// Example: Automated string extraction\nfn extract_strings(min_length) {\n    let strings = [];\n    let current_string = \"\";\n    \n    for (let i = 0; i < $size; i++) {\n        let byte = read(i);\n        if (byte >= 0x20 && byte <= 0x7E) {\n            current_string += char(byte);\n        } else {\n            if (current_string.length >= min_length) {\n                strings.append(current_string);\n            }\n            current_string = \"\";\n        }\n    }\n    \n    return strings;\n}\n\n// Usage\nlet found_strings = extract_strings(4);"
+              "code": "// Example: Automated string extraction\nfn extract_strings(min_length) {\n    let strings = [];\n    let current_string = \"\";\n    \n    for (let i = 0; i < $size; i++) {\n        let byte = read(i);\n        if (byte >= 0x20 && byte <= 0x7E) {\n            current_string += char(byte);\n        } else {\n            if (current_string.length >= min_length) {\n                strings.append(current_string);\n            }\n            current_string = \"\";\n        }\n    }\n    \n    return strings;\n}\n\n// Usage\nlet found_strings = extract_strings(4);",
+              "title": "<strong>Automation and custom analysis</strong>"
             }
           }
         ]
@@ -1018,8 +1018,8 @@
             "emoji": "📋",
             "title": "ImHex Quick Reference",
             "box": {
-              "content": "<strong>Essential shortcuts and commands</strong>",
-              "code": "# Navigation\nCtrl+F - Search\nCtrl+G - Go to offset\nCtrl+B - Bookmark position\n\n# Editing\nCtrl+C/V - Copy/Paste hex\nCtrl+Z/Y - Undo/Redo\nCtrl+S - Save file\n\n# View\nF5 - Reload patterns\nF6 - Toggle pattern view\nF7 - Toggle data inspector\nF8 - Toggle tools\n\n# Analysis\nCtrl+Shift+F - Advanced search\nCtrl+E - Entropy analysis\nCtrl+Shift+S - String search\n\n# Patterns\nCtrl+Space - Pattern autocomplete\nCtrl+Shift+P - Load pattern\nCtrl+Shift+E - Export pattern"
+              "code": "# Navigation\nCtrl+F - Search\nCtrl+G - Go to offset\nCtrl+B - Bookmark position\n\n# Editing\nCtrl+C/V - Copy/Paste hex\nCtrl+Z/Y - Undo/Redo\nCtrl+S - Save file\n\n# View\nF5 - Reload patterns\nF6 - Toggle pattern view\nF7 - Toggle data inspector\nF8 - Toggle tools\n\n# Analysis\nCtrl+Shift+F - Advanced search\nCtrl+E - Entropy analysis\nCtrl+Shift+S - String search\n\n# Patterns\nCtrl+Space - Pattern autocomplete\nCtrl+Shift+P - Load pattern\nCtrl+Shift+E - Export pattern",
+              "title": "<strong>Essential shortcuts and commands</strong>"
             }
           }
         ]
