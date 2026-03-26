@@ -262,9 +262,11 @@ html[data-theme="dark"] .search-icon {
 }
 
 .stat-card:hover {
-  background: var(--text-primary);
-  color: var(--bg-primary);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .stat-number {
@@ -459,10 +461,11 @@ html[data-theme="dark"] .search-icon {
 }
 
 .presentation-card:hover {
-  background: var(--text-primary);
-  color: var(--bg-primary);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   border-color: var(--text-primary);
   transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .presentation-card .icon {
