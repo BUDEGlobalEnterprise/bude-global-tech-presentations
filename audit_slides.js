@@ -30,12 +30,13 @@ files.forEach(f => {
 
 results.sort((a, b) => a.count - b.count);
 
-console.log('--- Presentations needing Elite Upgrade (< 50 slides) ---');
+console.log('--- Presentations needing Upgrade (< 50 slides) ---');
 results.filter(r => r.count < 50).forEach(r => {
     console.log(`${r.file}: ${r.count} slides`);
 });
 
-console.log('\n--- Already Elite (>= 50 slides) ---');
+console.log('\n--- Already (>= 50 slides) ---');
 results.filter(r => r.count >= 50).forEach(r => {
     console.log(`${r.file}: ${r.count} slides`);
 });
+

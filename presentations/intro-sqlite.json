@@ -7,7 +7,7 @@
         "slides": [
           {
             "type": "title",
-            "title": "SQLite Architecture (Elite)",
+            "title": "SQLite Architecture ()",
             "subtitle": "Engineering the World's Most Deployed Database <br> Internal Mechanics, VFS, and Performance Engineering"
           }
         ]
@@ -208,7 +208,7 @@
           },
           {
             "type": "content",
-            "title": "WAL Mode (Elite)",
+            "title": "WAL Mode ()",
             "box": {
               "list": [
                 {
@@ -449,7 +449,7 @@
           },
           {
             "type": "content",
-            "title": "Session Extension (Elite)",
+            "title": "Session Extension ()",
             "box": {
               "list": [
                 {

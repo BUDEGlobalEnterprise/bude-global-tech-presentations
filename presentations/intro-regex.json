@@ -8,7 +8,7 @@
           {
             "type": "title",
             "title": "Mastering Regular Expressions",
-            "subtitle": "The Universal Language of Pattern Matching <br> From Fundamentals to Elite Data Processing"
+            "subtitle": "The Universal Language of Pattern Matching <br> From Fundamentals to  Data Processing"
           }
         ]
       },
@@ -209,7 +209,7 @@
           },
           {
             "type": "content",
-            "title": "Possessive Quantifiers (Elite)",
+            "title": "Possessive Quantifiers ()",
             "box": {
               "code": "/.*+a/ # If applied to \"aaaaa\", it matches all 'a's and then fails because there's no 'a' left to match.",
               "title": "Available in PCRE and Java, possessive quantifiers (<code>*+</code>, <code>++</code>) are like greedy ones but they **never give back** characters even if it means the whole match fails. This provides massive performance benefits and prevents catastrophic backtracking."
@@ -289,7 +289,7 @@
       },
       {
         "id": "lookarounds",
-        "title": "6. Lookarounds (Elite Mode)",
+        "title": "6. Lookarounds ( Mode)",
         "slides": [
           {
             "type": "topic-title",
@@ -344,7 +344,7 @@
             "title": "Atomic Grouping",
             "box": {
               "code": "/(?>a+)b/ # Safer alternative to nested quantifiers",
-              "title": "Atomic groups <code>(?>...)</code> prevent the engine from backtracking into the group once it has matched. This is a critical 'Elite' technique for performance optimization."
+              "title": "Atomic groups <code>(?>...)</code> prevent the engine from backtracking into the group once it has matched. This is a critical '' technique for performance optimization."
             }
           },
           {
@@ -414,12 +414,12 @@
         ]
       },
       {
-        "id": "elite-features",
-        "title": "9. Elite Features",
+        "id": "-features",
+        "title": "9.  Features",
         "slides": [
           {
             "type": "topic-title",
-            "title": "9. Elite Features",
+            "title": "9.  Features",
             "subtitle": "Going beyond standard matching"
           },
           {
@@ -496,7 +496,7 @@
           },
           {
             "type": "content",
-            "title": "Log Parsing: The 'Elite' Way",
+            "title": "Log Parsing: The '' Way",
             "box": {
               "code": "/^(?<ip>\\S+)\\s\\S+\\s\\S+\\s\\[(?<time>.*?)\\]\\s\"(?<request>.*?)\"\\s(?<status>\\d{3})\\s(?<size>\\d+)/",
               "title": "Parsing a standard Apache access log to extract IP, Timestamp, and Request status."

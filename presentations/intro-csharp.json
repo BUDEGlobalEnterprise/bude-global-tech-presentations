@@ -232,7 +232,7 @@
             "emoji": "🎯",
             "title": "Variable Declaration",
             "box": {
-              "code": "/* 1. Explicit Typing */\nint studentCount = 50;\nstring projectName = \"Elite Docs\";\n\n/* 2. Implicit Typing (compiler infers the type) */\nvar score = 95.5; // inferred as double\nvar user = new User(); // inferred as User\n\n/* 3. Constants (immutable) */\nconst decimal TaxRate = 0.15m;\n\n/* 4. Multiple Initializers */\nint x = 1, y = 2, z = 3;",
+              "code": "/* 1. Explicit Typing */\nint studentCount = 50;\nstring projectName = \" Docs\";\n\n/* 2. Implicit Typing (compiler infers the type) */\nvar score = 95.5; // inferred as double\nvar user = new User(); // inferred as User\n\n/* 3. Constants (immutable) */\nconst decimal TaxRate = 0.15m;\n\n/* 4. Multiple Initializers */\nint x = 1, y = 2, z = 3;",
               "title": "C# provides multiple ways to declare variables. While explicit typing is traditional, modern C# heavily uses <code>var</code> for local variables to keep code clean without losing type safety. Once assigned, the type of a <code>var</code> variable is locked and cannot change."
             }
           }
@@ -251,7 +251,7 @@
             "emoji": "🔀",
             "title": "Conditional Logic: If/Else",
             "box": {
-              "code": "/* Standard If/Else */\nif (age >= 18) {\n    Console.WriteLine(\"Welcome, Elite User!\");\n} else {\n    Console.WriteLine(\"Access Denied.\");\n}\n\n/* Inline Ternary Operator */\nstring status = (isAdmin) ? \"Administrator\" : \"Client\";\n\n/* Null-Coalescing Operator */\nstring name = inputName ?? \"Anonymous User\";",
+              "code": "/* Standard If/Else */\nif (age >= 18) {\n    Console.WriteLine(\"Welcome,  User!\");\n} else {\n    Console.WriteLine(\"Access Denied.\");\n}\n\n/* Inline Ternary Operator */\nstring status = (isAdmin) ? \"Administrator\" : \"Client\";\n\n/* Null-Coalescing Operator */\nstring name = inputName ?? \"Anonymous User\";",
               "title": "Conditional statements allow your code to take different paths based on Boolean logic. C# supports standard <code>if/else</code> constructs, along with the 'ternary operator' for simple inline decisions. Modern C# also emphasizes patterns that reduce nested logic."
             }
           },
@@ -471,7 +471,7 @@
             "emoji": "🎯",
             "title": "Record Types: Immutable Data",
             "box": {
-              "code": "/* Primary Constructor Record */\npublic record User(string Name, string Email);\n\nvar u1 = new User(\"Bude\", \"dev@bude.com\");\nvar u2 = u1 with { Name = \"Elite Dev\" }; // Immutable copy\n\nConsole.WriteLine(u1 == u2); // False (Value check)",
+              "code": "/* Primary Constructor Record */\npublic record User(string Name, string Email);\n\nvar u1 = new User(\"Bude\", \"dev@bude.com\");\nvar u2 = u1 with { Name = \" Dev\" }; // Immutable copy\n\nConsole.WriteLine(u1 == u2); // False (Value check)",
               "title": "C# Records are ideal for data-centric objects. They provide built-in functionality for value-based equality and non-destructive mutation using the <code>with</code> expression. They are concise, thread-safe, and highly readable."
             }
           },
@@ -675,7 +675,7 @@
             "emoji": "🗄️",
             "title": "Entity Framework Core",
             "box": {
-              "code": "public class AppDbContext : DbContext {\n    public DbSet<User> Users { get; set; }\n}\n\n// Querying with LINQ\nvar eliteUsers = await dbContext.Users\n    .Where(u => u.IsPremium)\n    .ToListAsync();",
+              "code": "public class AppDbContext : DbContext {\n    public DbSet<User> Users { get; set; }\n}\n\n// Querying with LINQ\nvar Users = await dbContext.Users\n    .Where(u => u.IsPremium)\n    .ToListAsync();",
               "title": "Entity Framework (EF) Core is the recommended Object-Relational Mapper (ORM) for .NET. It allows you to work with a database using C# objects, eliminating the need for most of the data-access code that you usually need to write."
             }
           }

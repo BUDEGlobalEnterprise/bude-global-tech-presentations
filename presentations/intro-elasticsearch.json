@@ -7,7 +7,7 @@
         "slides": [
           {
             "type": "title",
-            "title": "Elasticsearch & Search Architecture (Elite)",
+            "title": "Elasticsearch & Search Architecture ()",
             "subtitle": "Distributed Search, Analytics, and Internal Mechanics <br> Mastering Lucene, Inverted Indexes, and Sharding"
           }
         ]

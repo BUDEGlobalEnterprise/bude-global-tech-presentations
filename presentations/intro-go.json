@@ -534,7 +534,7 @@
             "type": "content",
             "title": "Switch Statements: Beyond the Basics",
             "box": {
-              "code": "/* 1. Conditionless Switch */\nswitch {\ncase score >= 90:\n    fmt.Println(\"Elite\")\ncase score >= 70:\n    fmt.Println(\"Solid\")\ndefault:\n    fmt.Println(\"Needs Work\")\n}\n\n/* 2. Multiple values in one case */\nswitch day {\ncase \"Saturday\", \"Sunday\":\n    fmt.Println(\"Weekend!\")\n}",
+              "code": "/* 1. Conditionless Switch */\nswitch {\ncase score >= 90:\n    fmt.Println(\"\")\ncase score >= 70:\n    fmt.Println(\"Solid\")\ndefault:\n    fmt.Println(\"Needs Work\")\n}\n\n/* 2. Multiple values in one case */\nswitch day {\ncase \"Saturday\", \"Sunday\":\n    fmt.Println(\"Weekend!\")\n}",
               "title": "Go's <code>switch</code> is more flexible than in most languages. It does not require a 'break' statement because cases do not fall through by default. You can also write a 'switch without a condition', which acts as a cleaner alternative to long if-else-if chains."
             }
           },
@@ -1020,7 +1020,7 @@
                   "text": "<strong>Go Time Podcast:</strong> changelog.com/gotime"
                 }
               ],
-              "title": "Continue your Go journey with these elite resources:"
+              "title": "Continue your Go journey with these  resources:"
             }
           },
           {

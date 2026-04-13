@@ -227,7 +227,7 @@
           },
           {
             "type": "content",
-            "title": "DI Benefits (Elite)",
+            "title": "DI Benefits ()",
             "box": {
               "list": [
                 {
@@ -328,7 +328,7 @@
           },
           {
             "type": "content",
-            "title": "Security Scopes (Elite)",
+            "title": "Security Scopes ()",
             "box": {
               "code": "async def get_current_user(\n    security_scopes: SecurityScopes, \n    token: str = Depends(oauth2_scheme)\n): ...",
               "title": "Granular permissions using OAuth2 Scopes. Define what each user can see and do."

@@ -243,7 +243,7 @@
           },
           {
             "type": "content",
-            "title": "Pluggable Views (Elite)",
+            "title": "Pluggable Views ()",
             "box": {
               "code": "from flask.views import View\n\nclass UserView(View):\n    def dispatch_request(self):\n        return render_template('users.html')",
               "title": "Class-based views for Flask that allow for better code reuse and inheritance patterns."
@@ -331,7 +331,7 @@
           },
           {
             "type": "content",
-            "title": "Context Locals (Elite)",
+            "title": "Context Locals ()",
             "box": {
               "code": "from flask import current_app\n# Works even if multiple app instances exist",
               "title": "Flask uses <code>werkzeug.local</code> to ensure that 'current_app' and 'request' always point to the correct instance even in multi-threaded environments."
@@ -357,7 +357,7 @@
           },
           {
             "type": "content",
-            "title": "Signals (Elite)",
+            "title": "Signals ()",
             "box": {
               "code": "from flask import template_rendered\n\n@template_rendered.connect_with(app)\ndef log_template(sender, template, context, **extra):\n    print(f'Rendered: {template.name}')",
               "title": "Flask supports signals via the Blinker library. Decouple your app logic by subscribing to events."
@@ -493,7 +493,7 @@
           },
           {
             "type": "content",
-            "title": "Scalability Patterns (Elite)",
+            "title": "Scalability Patterns ()",
             "box": {
               "list": [
                 {

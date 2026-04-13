@@ -17,7 +17,7 @@
               "list": [
                 {
                   "emoji": "👷",
-                  "text": "Elite Technical Architect"
+                  "text": " Technical Architect"
                 },
                 {
                   "emoji": "🚀",
@@ -83,7 +83,7 @@
                 },
                 {
                   "emoji": "📏",
-                  "text": "<strong>Predictable:</strong> Performance remains elite as the app grows."
+                  "text": "<strong>Predictable:</strong> Performance remains  as the app grows."
                 }
               ],
               "title": "Qwik's performance is constant relative to the size of the application. More components don't mean slower starts."

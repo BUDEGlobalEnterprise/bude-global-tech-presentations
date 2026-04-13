@@ -17,7 +17,7 @@
               "list": [
                 {
                   "emoji": "👷",
-                  "text": "Elite Technical Architect"
+                  "text": " Technical Architect"
                 },
                 {
                   "emoji": "🚀",
@@ -185,7 +185,7 @@
           },
           {
             "type": "content",
-            "title": "Pino: Elite Logging",
+            "title": "Pino:  Logging",
             "box": {
               "list": [
                 {
@@ -646,7 +646,7 @@
               "list": [
                 {
                   "emoji": "🏗️",
-                  "text": "<strong>Elite Architecture:</strong> Built on React Server Components."
+                  "text": "<strong> Architecture:</strong> Built on React Server Components."
                 },
                 {
                   "emoji": "⚡",
@@ -691,7 +691,7 @@
                   "text": "<strong>Learn:</strong> Explore the official documentation and community resources."
                 }
               ],
-              "title": "Build your first elite app with this stack today."
+              "title": "Build your first  app with this stack today."
             }
           },
           {

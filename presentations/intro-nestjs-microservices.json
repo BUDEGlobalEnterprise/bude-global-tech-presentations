@@ -3,553 +3,673 @@
     "topics": [
       {
         "id": "intro",
-        "title": "NestJS & Microservices",
+        "title": "NestJS & Microservices ",
         "slides": [
           {
             "type": "title",
-            "title": "NestJS & Microservices",
-            "subtitle": "Enterprise-grade Node.js Architecture."
+            "title": "NestJS & Microservices ",
+            "subtitle": "Building Resilient, Scalable, Enterprise-Grade Architectures.",
+            "backgroundImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          },
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Enterprise Technical Architect | OSS Advocate",
+            "experience": "12+ Years in Distributed Systems Architecture",
+            "oss_experience": "Lead Contributor to Bude Global Tech Frameworks",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://budeglobal.in"
           },
           {
             "type": "content",
-            "title": "Presenter",
+            "title": "The 2026 Microservices Landscape",
             "box": {
-              "list": [
-                {
-                  "emoji": "🏗️",
-                  "text": "Elite Technical Architect"
-                },
-                {
-                  "emoji": "🚀",
-                  "text": "Enterprise Backend Expert"
-                }
-              ],
-              "title": "Aravind Govindhasamy"
+              "title": "🚀 Why Microservices Now?",
+              "content": "<h4>🏗️ Beyond Simple Decomposition</h4><p>In 2026, microservices are no longer just about splitting a monolith. It is about <strong>Organizational Scalability</strong>, <strong>Technological Diversity</strong>, and <strong>Fault Isolation</strong>. As businesses demand faster time-to-market, the ability to deploy individual capabilities independently becomes the ultimate competitive advantage.</p><p>However, with great power comes great complexity—distributed transactions, network reliability, and data consistency are the new challenges every  Architect must master.</p>"
+            },
+            "note": {
+              "text": "Start by setting the stage for why we moved from Monoliths to Microservices and what the current challenges are."
             }
+          },
+          {
+            "type": "comparison",
+            "title": "Monolith vs Microservices in 2026",
+            "leftTitle": "Modern Monolith",
+            "leftPoints": [
+              "🏛️ Unified codebase, simplified deployment.",
+              "⚡ Zero network latency for inter-module calls.",
+              "🔒 Strong ACID transactions across modules.",
+              "🔧 Easier debugging and end-to-end testing.",
+              "📉 Scaling requires duplicating the entire app.",
+              "🏗️ Best for: Initial MVP, small teams, low complexity."
+            ],
+            "rightTitle": "Microservices",
+            "rightPoints": [
+              "🧩 Decentralized data and independent scaling.",
+              "🎯 Tech stack variety (Nest, Go, Rust per service).",
+              "🚀 Continuous, independent deployment cycles.",
+              "🛡️ Fault isolation - one crash doesn't stop the system.",
+              "📈 Handles extreme load and massive dev teams.",
+              "🏗️ Best for: Enterprise scale, complex domains."
+            ],
+            "note": {
+              "text": "Use this slide to emphasize that Microservices are not always the answer—it's a trade-off."
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What is the primary trade-off when moving from a Monolith to Microservices?",
+            "options": [
+              "Reduced hardware costs",
+              "Increased operational and architectural complexity",
+              "Faster performance for single requests",
+              "Simpler debugging workflows"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Microservices introduce distributed system challenges like network latency, partial failures, and data consistency issues, drastically increasing complexity."
           }
         ]
       },
       {
         "id": "nestjs-foundations",
-        "title": "1. NestJS Foundations",
+        "title": "1. NestJS Foundations Deep Dive",
         "slides": [
           {
             "type": "topic-title",
             "title": "1. Solid Grounding",
-            "subtitle": "The philosophy and core concepts of NestJS."
+            "subtitle": "The philosophy and under-the-hood core concepts of NestJS."
+          },
+          {
+            "type": "imageText",
+            "title": "The Power of TypeScript & Nest",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>📜 Type-Safe Architecture</h4><p>NestJS brings the power of <strong>Enterprise Design Patterns</strong> to Node.js. Built with TypeScript, it provides native support for decorators, interfaces, and metadata reflection. This allows for a declarative programming style that reduces boilerplate and increases readability.</p><p>By leveraging <strong>Express</strong> or <strong>Fastify</strong> as the underlying engine, Nest gives you the speed of Node with the structure of Angular or Spring Boot.</p>",
+            "caption": "NestJS: The Angular of the Backend"
           },
           {
             "type": "content",
-            "title": "What is NestJS?",
+            "title": "The Dependency Injection (DI) Engine",
             "box": {
-              "list": [
-                {
-                  "emoji": "📜",
-                  "text": "<strong>TypeScript:</strong> Built with and for TypeScript."
-                },
-                {
-                  "emoji": "🧩",
-                  "text": "<strong>Modular:</strong> Encourages encapsulation and separation of concerns."
-                }
-              ],
-              "title": "Nest is built on top of Express or Fastify, providing an out-of-the-box application architecture."
+              "title": "Inversion of Control (IoC)",
+              "code": "@Injectable({ scope: Scope.REQUEST })\nexport class UsersService {\n  constructor(\n    @InjectRepository(User) private repo: Repository<User>\n  ) {}\n}",
+              "content": "<p>Nest's IoC container is the heart of the framework. It manages the lifecycle and instantiation of your providers. Understanding <strong>Scopes</strong> is critical: <em>DEFAULT</em> (singleton), <em>REQUEST</em> (per-request instance), and <em>TRANSIENT</em> (new instance every time).</p>"
+            },
+            "note": {
+              "text": "Explain that DI makes the code highly testable by allowing easy mocking of dependencies."
             }
           },
           {
             "type": "content",
-            "title": "Dependency Injection (DI)",
+            "title": "The Modular System Architecture",
             "box": {
-              "code": "@Injectable()\nexport class UsersService { ... }",
-              "title": "A core architectural pattern for managing object creation and lifecycle."
-            }
+              "title": "Encapsulation & Reusability",
+              "code": "@Module({\n  imports: [TypeOrmModule.forFeature([User])],\n  providers: [UsersService],\n  exports: [UsersService],\n})\nexport class UsersModule {}"
+            },
+            "content": "<h4>🏗️ Domain Bounded Contexts</h4><p>Modules in NestJS are not just organizational tools; they are the implementation of <strong>Bounded Contexts</strong> from DDD. Each module should encapsulate related logic, models, and providers, exporting only what is necessary for the rest of the application.</p><p>This modularity is what enables the easy transition from a Monolith to Microservices later.</p>"
           },
           {
-            "type": "content",
-            "title": "Decorators",
-            "box": {
-              "code": "@Controller('users')\nexport class UsersController { ... }",
-              "title": "Using TypeScript decorators for clean, declarative meta-programming."
-            }
+            "type": "quiz",
+            "question": "Which DI Scope creates a new instance of a provider for every incoming request?",
+            "options": ["Scope.DEFAULT", "Scope.TRANSIENT", "Scope.REQUEST", "Scope.GLOBAL"],
+            "correctAnswer": 2,
+            "explanation": "Scope.REQUEST ensures that the provider is instantiated once per request lifecycle, allowing it to store request-specific data like auth tokens or logging IDs."
           },
           {
-            "type": "content",
-            "title": "The Modular System",
-            "box": {
-              "code": "@Module({\n    controllers: [UsersController],\n    providers: [UsersService],\n})\nexport class UsersModule {}",
-              "title": "Every Nest application has at least one module (the root module)."
-            }
+            "type": "imageText",
+            "title": "Custom Decorators & Metadata",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>✨ Meta-Programming with Nest</h4><p>Decorators allow you to attach metadata to classes, methods, and parameters. This metadata is then used by <strong>Guards</strong>, <strong>Interceptors</strong>, and <strong>Pipes</strong> to modify behavior at runtime without cluttering your business logic.</p><p>Using `Reflector`, you can create sophisticated logic that reacts to these decorators throughout your application pipeline.</p>"
           }
         ]
       },
       {
-        "id": "nestjs-architecture",
-        "title": "2. Architecture Patterns",
+        "id": "nestjs-architecture-deep",
+        "title": "2. Architecture Patterns & DDD",
         "slides": [
           {
             "type": "topic-title",
             "title": "2. Inside the Box",
-            "subtitle": "Mastering Controllers, Providers, and Pipes."
+            "subtitle": "Mastering Layered Architecture and Hexagonal Design."
           },
           {
-            "type": "content",
-            "title": "Controllers",
-            "box": {
-              "code": "@Get()\nfindAll(@Query() query: ListAllEntities) {\n    return `This action returns all cats (limit: ${query.limit} items)`;\n}",
-              "title": "Responsible for handling incoming requests and returning responses to the client."
+            "type": "diagram",
+            "title": "Hexagonal (Ports & Adapters) Architecture",
+            "content": "      ┌───────────────────────────────────────────────┐\n      │               Infrastructure Layer            │\n      │  (HTTP Controllers, CLI, Message Listeners)   │\n      └───────────────────────┬───────────────────────┘\n                              │\n      ┌───────────────────────▼───────────────────────┐\n      │               Application Layer               │\n      │         (Use Cases, DTOs, Services)           │\n      └───────────────────────┬───────────────────────┘\n                              │\n      ┌───────────────────────▼───────────────────────┐\n      │                 Domain Layer                  │\n      │         (Entities, Value Objects, Logic)      │\n      └───────────────────────────────────────────────┘\n                              ▲\n                              │\n      ┌───────────────────────┴───────────────────────┐\n      │               Persistence Layer               │\n      │          (Repositories, DB Adapters)          │\n      └───────────────────────────────────────────────┘",
+            "note": {
+              "text": "Hexagonal architecture decouples business logic from external dependencies like databases or APIs."
             }
           },
           {
             "type": "content",
-            "title": "Providers",
+            "title": "The Controller - Application Gateway",
             "box": {
-              "list": [
-                {
-                  "emoji": "💉",
-                  "text": "<strong>Injected:</strong> Can be injected into other classes via constructors."
-                },
-                {
-                  "emoji": "🔄",
-                  "text": "<strong>Lifecycle:</strong> Managed by the Nest IoC container."
-                }
-              ],
-              "title": "Almost everything in Nest is a provider: services, repositories, factories, helpers, etc."
+              "title": "Handling HTTP & RPC",
+              "code": "@Controller('orders')\nexport class OrdersController {\n  @Post()\n  @UseGuards(RolesGuard)\n  create(@Body() dto: CreateOrderDto) {\n    return this.service.process(dto);\n  }\n}",
+              "content": "<h4>🎯 Responsibility: Orchestration only</h4><p>The Controller should be <strong>THIN</strong>. Its only jobs are: payload validation (via Pipes), security (via Guards), and delegating to the Application Service. Never put business logic here.</p>"
             }
           },
           {
             "type": "content",
-            "title": "Pipes & Validation",
+            "title": "Domain Services & Entities",
             "box": {
-              "code": "@Post()\n@UsePipes(new ValidationPipe())\ncreate(@Body() createCatDto: CreateCatDto) { ... }",
-              "title": "Use pipes for transformation and validation of input data."
+              "title": "The Core Logic",
+              "content": "<h4>🧠 Domain-Driven Logic</h4><p>Entities should be more than just 'Anemic Models' with getters/setters. They should contain self-validation and business rules. For example, an <code>Order</code> entity should have a <code>calculateTotal()</code> method that encapsulates the tax and discount logic.</p><p>Domain Services handle logic that doesn't naturally fit into a single entity, such as coordinating multiple domain models for a single task.</p>"
             }
+          },
+          {
+            "type": "comparison",
+            "title": "Anemic vs Rich Domain Models",
+            "leftTitle": "Anemic Model",
+            "leftPoints": [
+              "❌ Entities are just data containers.",
+              "❌ Logic is scattered in services.",
+              "❌ Hard to maintain invariants.",
+              "❌ Logic duplication across services.",
+              "✅ Simpler for basic CRUD apps."
+            ],
+            "rightTitle": "Rich Domain Model",
+            "rightPoints": [
+              "✅ Entities hold data AND behavior.",
+              "✅ Invariants are strictly enforced.",
+              "✅ Business logic is encapsulated.",
+              "✅ Highly reusable and testable.",
+              "❌ Higher initial learning curve."
+            ]
+          },
+          {
+            "type": "quiz",
+            "question": "In Hexagonal Architecture, what is the role of the 'Port'?",
+            "options": [
+              "The physical network port (e.g. 3000)",
+              "A technical interface used to communicate with external tools",
+              "A database table definition",
+              "A specific HTTP route"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Ports represent the interfaces (contracts) that define how the Domain interacts with the outside world, while Adapters are the concrete implementations."
           }
         ]
       },
       {
-        "id": "nestjs-microservices",
-        "title": "3. Microservice Fundamentals",
+        "id": "microservice-transports",
+        "title": "3. Microservice Transport Layers",
         "slides": [
           {
             "type": "topic-title",
             "title": "3. Distributed Power",
-            "subtitle": "Understanding transport layers and message patterns."
+            "subtitle": "Choosing the right communication protocol for your ecosystem."
+          },
+          {
+            "type": "imageText",
+            "title": "Transport Layers Overview",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>📡 Connectivity Styles</h4><p>NestJS Microservices can communicate via multiple protocols. Choosing the correct one is a foundational decision. <strong>TCP/IP</strong> is the default but lacks a broker. <strong>Redis</strong> uses Pub/Sub but lacks persistence. <strong>gRPC</strong> is king for performance, while <strong>Kafka</strong> and <strong>RabbitMQ</strong> are the gold standards for reliable messaging.</p>"
+          },
+          {
+            "type": "comparison",
+            "title": "gRPC vs RabbitMQ vs Kafka",
+            "leftTitle": "gRPC (Sync/Direct)",
+            "leftPoints": [
+              "🚀 Ultra-fast (Protobuf + HTTP/2).",
+              "🎯 Bi-directional streaming.",
+              "🛡️ Strong Type Safety.",
+              "❌ Tightly coupled service-to-service.",
+              "❌ No message queuing by default."
+            ],
+            "rightTitle": "Kafka/RabbitMQ (Async)",
+            "rightPoints": [
+              "🧩 Fully decoupled (broker-based).",
+              "📈 Massive scale and persistence.",
+              "🛡️ Guaranteed delivery (Outbox/ACK).",
+              "✅ Perfect for event-driven flows.",
+              "❌ Higher latency than gRPC."
+            ]
           },
           {
             "type": "content",
-            "title": "What is a Nest Microservice?",
+            "title": "gRPC Architecture in NestJS",
             "box": {
-              "list": [
-                {
-                  "emoji": "📡",
-                  "text": "<strong>Transport:</strong> TCP, Redis, gRPC, RabbitMQ, MQTT, NATS."
-                },
-                {
-                  "emoji": "🏗️",
-                  "text": "<strong>ClientProxy:</strong> Used to communicate with external microservices."
-                }
-              ],
-              "title": "An application that uses a different transport layer than HTTP."
+              "title": "Protobuf & Dynamic Clients",
+              "code": "options: {\n  package: 'hero',\n  protoPath: join(__dirname, 'hero/hero.proto'),\n}",
+              "content": "<h4>⚡ High Performance RPC</h4><p>gRPC (Google Remote Procedure Call) uses <strong>Protocol Buffers</strong> for serialization, which is significantly faster and smaller than JSON. NestJS provides a seamless decorator-based implementation where you can map Proto services to class methods easily.</p>"
             }
           },
           {
             "type": "content",
-            "title": "The gRPC Transport",
+            "title": "Mastering RabbitMQ (AMQP)",
             "box": {
-              "code": "options: {\n    package: 'hero',\n    protoPath: join(__dirname, 'hero/hero.proto'),\n}",
-              "title": "High-performance, cross-language communication using Protocol Buffers."
+              "title": "Exchanges & Queues",
+              "content": "<h4>🐇 Reliable Messaging</h4><p>RabbitMQ is a sophisticated message broker that supports complex routing patterns: <strong>Direct</strong>, <strong>Fanout</strong>, <strong>Topic</strong>, and <strong>Headers</strong>. Use it when you need guaranteed message delivery and durability but don't need the massive throughput of Kafka.</p><p>Key concept: <em>Acknowledgements</em> ensure that if a worker crashes, the message is returned to the queue.</p>"
             }
           },
           {
             "type": "content",
-            "title": "RabbitMQ & Messaging",
+            "title": "Event Streaming with Apache Kafka",
             "box": {
-              "list": [
-                {
-                  "emoji": "🐇",
-                  "text": "<strong>Reliable:</strong> Guaranteed delivery and message queuing."
-                },
-                {
-                  "emoji": "🧩",
-                  "text": "<strong>Scalable:</strong> Easily add more consumers to handle load."
-                }
-              ],
-              "title": "Asynchronous communication using message brokers for decoupled systems."
-            }
-          }
-        ]
-      },
-      {
-        "id": "nestjs-hybrid",
-        "title": "4. Hybrid Applications",
-        "slides": [
-          {
-            "type": "topic-title",
-            "title": "4. The Best of Both Worlds",
-            "subtitle": "Combining HTTP and Microservice transport layers."
-          },
-          {
-            "type": "content",
-            "title": "What is a Hybrid App?",
-            "box": {
-              "code": "const app = await NestFactory.create(AppModule);\nconst microservice = app.connectMicroservice({ ... });\nawait app.startAllMicroservices();\nawait app.listen(3000);",
-              "title": "An application that listens on multiple ports or uses multiple transport layers simultaneously."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Request-Response Pattern",
-            "box": {
-              "code": "@MessagePattern({ cmd: 'sum' })\naccumulate(data: number[]): number {\n    return (data || []).reduce((a, b) => a + b);\n}",
-              "title": "Synchronous communication where the caller waits for a response."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Event-based Pattern",
-            "box": {
-              "code": "@EventPattern('user_created')\nasync handleUserCreated(data: Record<string, unknown>) {\n    // handle event\n}",
-              "title": "Asynchronous communication for 'fire and forget' operations."
+              "title": "The Unified Log",
+              "content": "<h4>📊 High-Throughput Streams</h4><p>Kafka is more than a message broker; it's a distributed commit log. Use it for <strong>Event Sourcing</strong> or when your system needs to handle millions of events per second. Kafka allows you to 'replay' events, making it indispensable for data analytics and auditing.</p>"
             }
           }
         ]
       },
       {
-        "id": "nestjs-security-persistence",
-        "title": "5. Security & Persistence",
+        "id": "distributed-consistency",
+        "title": "4. Distributed Consistency & Sagas",
         "slides": [
           {
             "type": "topic-title",
-            "title": "5. Data and Protection",
-            "subtitle": "Mastering TypeORM, Prisma, and JWT."
+            "title": "4. The Consistency Challenge",
+            "subtitle": "Managing state across distributed boundaries."
           },
           {
             "type": "content",
-            "title": "ORM Integration",
+            "title": "The Dual-Write Problem",
             "box": {
-              "code": "@Module({\n    imports: [TypeOrmModule.forRoot({ ... })],\n})",
-              "title": "Nest provides official modules for TypeORM, Prisma, and Mongoose."
+              "title": "Database vs Message Broker",
+              "content": "<h4>⚠️ The Atomic Nightmare</h4><p>What happens if you update your database but the message broker is down? Or vice versa? You end up with inconsistent state. This is exactly why <strong>Transactional Outbox Pattern</strong> is essential for any production microservice.</p>"
             }
           },
           {
-            "type": "content",
-            "title": "Authentication with Passport",
-            "box": {
-              "code": "@UseGuards(JwtAuthGuard)\n@Get('profile')\ngetProfile(@Request() req) {\n    return req.user;\n}",
-              "title": "Using the @nestjs/passport and @nestjs/jwt modules for secure session management."
+            "type": "imageText",
+            "title": "Transactional Outbox Pattern",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>🛡️ Atomic Consistency</h4><p>Instead of publishing a message directly, save it in an <code>Outbox</code> table in the <strong>same database transaction</strong> as your business logic. A separate 'Messenger' process then polls the table and publishes messages to the broker. This ensures 100% reliable delivery.</p>",
+            "caption": "Reliable Messaging workflow"
+          },
+          {
+            "type": "diagram",
+            "title": "Saga Pattern: Choreography vs Orchestration",
+            "content": "Choreography (Event-Driven):\n┌──────────┐  Event A  ┌──────────┐  Event B  ┌──────────┐\n│ Service 1│─────────►│ Service 2│─────────►│ Service 3│\n└──────────┘           └──────────┘           └──────────┘\n\nOrchestration (Controller):\n       ┌────────────────────┐\n       │  Saga Orchestrator │\n       └─────────┬──────────┘\n         ▲       │       ▲\n         │       ▼       │\n   ┌─────┴──┐┌───┴────┐┌─┴─────┐\n   │Service 1││Service 2││Service 3│\n   └────────┘└────────┘└───────┘",
+            "note": {
+              "text": "Sagas manage long-running transactions spanning multiple services."
             }
           },
           {
+            "type": "comparison",
+            "title": "Saga Orchestration vs Choreography",
+            "leftTitle": "Choreography",
+            "leftPoints": [
+              "✅ Simple to start, no single orchestrator.",
+              "✅ Natural decoupling between services.",
+              "❌ Hard to maintain and visualize flow.",
+              "❌ Risk of cyclic dependency chains.",
+              "❌ Complex to implement timeouts/rollbacks."
+            ],
+            "rightTitle": "Orchestration",
+            "rightPoints": [
+              "✅ Centralized control and visibility.",
+              "✅ Easier to implement complex flows.",
+              "✅ Simple handling of rollbacks.",
+              "❌ Risk of single point of failure.",
+              "❌ Orchestrator becomes a bottleneck."
+            ]
+          },
+          {
             "type": "content",
-            "title": "RBAC and Guards",
+            "title": "Compensating Transactions",
             "box": {
-              "code": "@Roles(Role.Admin)\n@UseGuards(RolesGuard)",
-              "title": "Implementing Role-Based Access Control using custom decorators and guards."
+              "title": "Undoing Errors",
+              "content": "<h4>🔄 Eventual Consistency</h4><p>In the world of Sagas, there are no 'rollbacks' in the traditional sense. Instead, we use <strong>Compensating Transactions</strong>. If Step 2 fails, we must trigger an 'Undo' for Step 1. For example, if Payment fails, we must trigger <code>RESTORE_INVENTORY</code>.</p>"
             }
           }
         ]
       },
       {
-        "id": "nestjs-observability",
-        "title": "6. Observability",
+        "id": "cqrs-nestjs",
+        "title": "5. CQRS: High Performance NestJS",
         "slides": [
           {
             "type": "topic-title",
-            "title": "6. Maintenance & Monitoring",
-            "subtitle": "Logging, health checks, and metrics."
+            "title": "5. Separation of Concerns",
+            "subtitle": "Implementing CQRS with @nestjs/cqrs."
+          },
+          {
+            "type": "imageText",
+            "title": "What is CQRS?",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>📡 Commands vs Queries</h4><p><strong>Command Query Responsibility Segregation</strong> separates read and write operations. The write side (Commands) focuses on business rules and state changes, while the read side (Queries) is optimized for UI presentation, often using different data models entirely.</p>"
           },
           {
             "type": "content",
-            "title": "OpenTelemetry Integration",
+            "title": "Commands & Handlers",
             "box": {
-              "list": [
-                {
-                  "emoji": "🕵️",
-                  "text": "<strong>Tracing:</strong> Track requests across service boundaries."
-                },
-                {
-                  "emoji": "📊",
-                  "text": "<strong>Visibility:</strong> Identify bottlenecks in complex distributed flows."
-                }
-              ],
-              "title": "Distributed tracing for microservices using OpenTelemetry and Jaeger."
+              "title": "@CommandHandler()",
+              "code": "@CommandHandler(CreateOrderCommand)\nexport class CreateOrderHandler implements ICommandHandler<CreateOrderCommand> {\n  async execute(command: CreateOrderCommand) { ... }\n}",
+              "content": "<p>Commands are instructions to change state. They are handled by specialized classes that encapsulate the execution logic. This keeps your services clean and focused on orchestration.</p>"
             }
           },
           {
             "type": "content",
-            "title": "Logger Integration",
+            "title": "Queries & Read Optimization",
             "box": {
-              "code": "private readonly logger = new Logger(MyService.name);",
-              "title": "Using the built-in Logger class or integrating Pino for high-performance logging."
+              "title": "Reading with Performance",
+              "content": "<h4>📊 Read Side Excellence</h4><p>On the query side, you don't need business logic—you need <strong>SPEED</strong>. You can bypass your ORM, use raw SQL, or even read from a denormalized database like MongoDB or Elasticsearch. The Query Bus facilitates this separation perfectly.</p>"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "The NestJS CQRS Lifecycle",
+            "content": "Client ──► Controller ──► Command Bus ──► Command Handler\n                                              │\n                                              ▼\n                                        Domain Entity ──► Database\n                                              │\n                                              ▼\n   Read Client ◄── Query Resolver ◄── Query Bus ◄── Query Handler",
+            "note": {
+              "text": "CQRS is often combined with Event Sourcing for ultimate scalability."
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What is the primary benefit of separating Queries from Commands in CQRS?",
+            "options": [
+              "Fewer lines of code",
+              "Independent scaling and optimization of Read/Write operations",
+              "Simplified database schema",
+              "Removed need for authentication"
+            ],
+            "correctAnswer": 1,
+            "explanation": "CQRS allows you to optimize your read side for complex UI queries without impacting the write side's data integrity rules."
+          }
+        ]
+      },
+      {
+        "id": "reliability-resilience",
+        "title": "6. Reliability & Resilience Patterns",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. The Unbreakable System",
+            "subtitle": "Circuit Breakers, Retries, and Rate Limiting."
+          },
+          {
+            "type": "content",
+            "title": "The Circuit Breaker Pattern",
+            "box": {
+              "title": "Preventing Cascading Failures",
+              "content": "<h4>🔌 Stop the Bleeding</h4><p>When a downstream service is down, don't keep hammering it—you'll exhaust your own resources. Use a <strong>Circuit Breaker</strong>. If failure threshold is reached, the circuit <strong>OPENS</strong>, and all requests fail immediately (or use a fallback). After some time, it goes to <strong>HALF-OPEN</strong> to test the waters.</p>"
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Retry with Exponential Backoff",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>⏳ Smart Retries</h4><p>Don't just retry every second. Use <strong>Exponential Backoff with Jitter</strong>. This prevents a 'thundering herd' problem where all your services retry at the exact same moment, causing a secondary DDOS on your infrastructure.</p>",
+            "caption": "Resilience in Distributed Systems"
+          },
+          {
+            "type": "comparison",
+            "title": "Retry Strategies",
+            "leftTitle": "Linear Retry",
+            "leftPoints": [
+              "❌ Predictable, constant load.",
+              "❌ Easy to overwhelm servers.",
+              "❌ Lacks randomness (jitter).",
+              "✅ Simple to implement."
+            ],
+            "rightTitle": "Exponential Backoff",
+            "rightPoints": [
+              "✅ Reduces load over time.",
+              "✅ Natural jitter prevents peaks.",
+              "✅ Higher success rate.",
+              "❌ Slightly more complex logic."
+            ]
+          },
+          {
+            "type": "content",
+            "title": "Distributed Rate Limiting",
+            "box": {
+              "title": "Protecting the Perimeter",
+              "content": "<h4>🛡️ Resource Preservation</h4><p>Use <code>@nestjs/throttler</code> to protect your system from abuse. In a microservices environment, use a centralized store (like Redis) for your throttler state to ensure limits are enforced across multiple instances of your service.</p>"
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What happens when a Circuit Breaker is in the 'OPEN' state?",
+            "options": [
+              "It allows all requests through.",
+              "It immediately fails all incoming requests without calling the target.",
+              "It retries the request indefinitely.",
+              "It closes the server connection."
+            ],
+            "correctAnswer": 1,
+            "explanation": "In 'OPEN' state, the breaker prevents calls to the failing downstream service to allow it time to recover and to protect caller resources."
+          }
+        ]
+      },
+      {
+        "id": "observability-tracing",
+        "title": "7. Advanced Observability",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Distributed Visibility",
+            "subtitle": "Distributed Tracing with OpenTelemetry."
+          },
+          {
+            "type": "imageText",
+            "title": "The Three Pillars of Observability",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>📊 Metrics, Logs, and Traces</h4><p>Observability is not just monitoring. It's about asking your system 'Why is this happening?'. <strong>Logs</strong> tell you what happened. <strong>Metrics</strong> tell you how much of it happened. <strong>Traces</strong> show you how a request traveled through multiple services.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Distributed Tracing with OpenTelemetry",
+            "box": {
+              "title": "The Global Trace ID",
+              "content": "<h4>🕵️ Context Propagation</h4><p>By injecting a <code>traceparent</code> header into every request (HTTP or Message), you can stitch together a single operation as it moves from Gateway ──► Order Service ──► Inventory ──► Payment. <strong>Jaeger</strong> or <strong>Tempo</strong> are best for visualization.</p>"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Distributed Trace Visualization",
+            "content": "Order Request [TraceID: 154a2]\n│\n├─► [Gateway] ..................... 50ms\n│    └─► [User Auth] .............. 20ms\n│\n├─► [Order Service] ............... 200ms\n│    ├─► [Inventory Check] ........ 40ms\n│    └─► [RabbitMQ Publish] ....... 10ms\n│\n└──► [Payment Service] (Async) .... 150ms",
+            "note": {
+              "text": "Traces help identify exactly which microservice is causing a performance bottleneck."
             }
           },
           {
             "type": "content",
-            "title": "Terminus Health Checks",
+            "title": "Health Check Hierarchy",
             "box": {
-              "code": "@Get('health')\n@HealthCheck()\ncheck() {\n    return this.health.check([ ... ]);\n}",
-              "title": "Providing endpoints for Kubernetes liveness and readiness probes."
+              "title": "Terminus & K8s Probes",
+              "content": "<h4>🏥 Self-Healing Readiness</h4><p>A simple 'status 200' is not enough. You need <strong>Liveness Probes</strong> (is the app crashed?) and <strong>Readiness Probes</strong> (can it handle traffic?). NestJS Terminus allows you to check DB connectivity, memory usage, and third-party API availability dynamically.</p>"
             }
           },
           {
+            "type": "quiz",
+            "question": "What is the primary purpose of a Distributed Trace in a Microservices architecture?",
+            "options": [
+              "To store user passwords across services",
+              "To track the end-to-end path of a single request across multiple services",
+              "To measure the CPU usage of a physical server",
+              "To encrypt database records automatically"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Distributed tracing is essential for debugging performance issues and errors in complex request flows across service boundaries."
+          }
+        ]
+      },
+      {
+        "id": "nestjs-security-gateways",
+        "title": "8. Security & API Gateways",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Fortress Architecture",
+            "subtitle": "NestJS as an Intelligent API Gateway."
+          },
+          {
             "type": "content",
-            "title": "Custom Health Indicators",
+            "title": "API Gateway Responsibilities",
             "box": {
-              "code": "export class MyHealthIndicator extends HealthIndicator { ... }",
-              "title": "Creating custom checks for external dependencies like third-party APIs."
+              "title": "The Entry Point",
+              "content": "<h4>🛡️ Defense in Depth</h4><p>An API Gateway handles unified <strong>Authentication</strong>, <strong>Authorization</strong>, <strong>Rate Limiting</strong>, and <strong>Request Transformation</strong>. In 2026, we also use it for <strong>Protocol Translation</strong> (e.g., converting HTTP requests to internal gRPC calls).</p>"
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Modern Authentication (OAuth2/JWT)",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>🔐 Stateless Security</h4><p>Using <code>@nestjs/passport</code> and <code>@nestjs/jwt</code>, we implement stateless authentication. The Gateway validates the JWT signatures from providers like Keycloak or Auth0 and propagates the 'User Identity' to internal services via headers or Protobuf metadata.</p>",
+            "caption": "Gateway-level Authorization"
+          },
+          {
+            "type": "content",
+            "title": "RBAC vs ABAC",
+            "box": {
+              "title": "Advanced Access Control",
+              "content": "<h4>🎭 granular Permissions</h4><p><strong>Role-Based Access Control (RBAC)</strong> is simple: 'Admin' can do anything. <strong>Attribute-Based Access Control (ABAC)</strong> is : 'Managers' can only view orders 'from their department' during 'business hours'. Use custom Nest Guards to implement ABAC logic.</p>"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "RBAC vs ABAC Comparison",
+            "leftTitle": "RBAC (Standard)",
+            "leftPoints": [
+              "✅ Easy to setup and understand.",
+              "✅ Less overhead on every request.",
+              "❌ Hard to handle exceptions.",
+              "❌ Permission inflation over time.",
+              "🏗️ Good for internal enterprise tools."
+            ],
+            "rightTitle": "ABAC ()",
+            "rightPoints": [
+              "✅ Extremely flexible policy logic.",
+              "✅ No need for new roles for exceptions.",
+              "❌ Complex implementation logic.",
+              "❌ Higher performance cost per check.",
+              "🏗️ Best for security-critical HIPAA/FinTech apps."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deployment-k8s-enterprise",
+        "title": "9. Production Deployment & K8s",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Scaling in Production",
+            "subtitle": "Docker, Kubernetes, and Helm Mastery."
+          },
+          {
+            "type": "content",
+            "title": " Docker: Multi-stage Builds",
+            "box": {
+              "title": "Small, Secure Images",
+              "code": "FROM node:23-alpine AS build\n...\nFROM node:23-alpine AS runtime\nCOPY --from=build /app/dist ./dist\nCMD [\"node\", \"dist/main\"]",
+              "content": "<p>Don't ship your dev dependencies or source code. Multi-stage builds create images that are <strong>80% smaller</strong> and significantly more secure by isolating the runtime environment.</p>"
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Kubernetes: The Operating System for Microservices",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1667372393119-3d4410ebc2fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>☸️ Orchestration Reality</h4><p>Kubernetes handles <strong>Service Discovery</strong>, <strong>Load Balancing</strong>, <strong>Scaling</strong>, and <strong>Self-Healing</strong>. In an '' setup, use <em>Horizontal Pod Autoscaling</em> based on custom metrics (like RabbitMQ queue length) rather than just CPU usage.</p>"
+          },
+          {
+            "type": "content",
+            "title": "GitOps & Helm",
+            "box": {
+              "title": "Infrastructure as Code",
+              "content": "<h4>🚢 Deploying with Confidence</h4><p>Use <strong>Helm</strong> to package your NestJS applications as versioned charts. Combine with <strong>ArgoCD</strong> for a GitOps workflow: your Git repo is the single source of truth for the cluster state. Simply push code to master, and K8s syncs automatically.</p>"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Production CI/CD Workflow",
+            "content": "Code Push ──► GitHub Actions ──► Unit Tests & Lint\n                                     │\n                                     ▼\n  K8s Deployment ◄── ArgoCD ◄── Build Docker Image\n       │                             │\n       ▼                             ▼\n  Monitoring  ◄── Prometheus ◄── Docker Registry",
+            "note": {
+              "text": "The transition from code to production should be entirely automated."
             }
           }
         ]
       },
       {
-        "id": "nestjs-testing",
-        "title": "7. Testing Enterprise Apps",
+        "id": "advanced-nestjs-internals",
+        "title": "10. Advanced NestJS Internals",
         "slides": [
           {
             "type": "topic-title",
-            "title": "7. Quality First",
-            "subtitle": "Unit, Integration, and E2E testing with Jest."
+            "title": "10. Mastering the Machine",
+            "subtitle": "Dynamic Modules, Scopes, and circular Dependencies."
           },
           {
             "type": "content",
-            "title": "The Testing Module",
+            "title": "Dynamic Modules & Configuration",
             "box": {
-              "code": "const module: TestingModule = await Test.createTestingModule({ ... }).compile();",
-              "title": "Using Test.createTestingModule() to mock dependencies and isolate tests."
+              "title": "Reclaim Module Flexibility",
+              "code": "static forRoot(options: DatabaseOptions): DynamicModule {\n  return {\n    module: DatabaseModule,\n    providers: [\n      { provide: 'OPTIONS', useValue: options },\n      DatabaseService,\n    ],\n  };\n}",
+              "content": "<h4>🏗️ Universal Configurable Modules</h4><p>Dynamic modules allow you to export modules that can be configured by the importing module. This is the pattern behind <code>TypeOrmModule.forRoot()</code>. It enables creating highly reusable library modules.</p>"
             }
           },
           {
             "type": "content",
-            "title": "E2E Testing",
+            "title": "The Circular Dependency Trap",
             "box": {
-              "code": "return request(app.getHttpServer()).get('/cats').expect(200);",
-              "title": "Testing the full request-response cycle using SuperTest."
+              "title": "forwardRef() to the Rescue",
+              "code": "constructor(\n  @Inject(forwardRef(() => AuthService)) \n  private authService: AuthService\n) {}",
+              "content": "<p>When Service A depends on Service B, and Service B depends on Service A, the DI container fails. Use <code>forwardRef()</code> to break the cycle. However, extensive use of this pattern suggests your modules are too tightly coupled.</p>"
             }
+          },
+          {
+            "type": "imageText",
+            "title": "Request Lifecycle Mastery",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "content": "<h4>🔄 The Pipeline Order</h4><p>Understanding the exact execution order is critical for debugging: <strong>Middleware</strong> ──► <strong>Guards</strong> ──► <strong>Interceptors (Pre)</strong> ──► <strong>Pipes</strong> ──► <strong>Handler</strong> ──► <strong>Interceptors (Post)</strong> ──► <strong>Filters</strong>. Mastering this flow allows you to place logic precisely where it belongs.</p>",
+            "caption": "NestJS Request Context"
           }
         ]
       },
       {
-        "id": "nestjs-deployment",
-        "title": "8. Enterprise Deployment",
+        "id": "conclusion-enterprise",
+        "title": " Conclusion",
         "slides": [
           {
             "type": "topic-title",
-            "title": "8. Scaling in Production",
-            "subtitle": "Docker, Kubernetes, and Serverless."
+            "title": "Thinking Like an Architect",
+            "subtitle": "The Path to Enterprise Mastery."
+          },
+          {
+            "type": "comparison",
+            "title": "Junior vs  Microservices Architect",
+            "leftTitle": "Junior Approach",
+            "leftPoints": [
+              "❌ Focuses on split services only.",
+              "❌ Ignores distributed transactions.",
+              "❌ Minimal observability.",
+              "❌ Bullet points in presentations.",
+              "❌ Deploying manually."
+            ],
+            "rightTitle": " Approach",
+            "rightPoints": [
+              "✅ Focuses on Bounded Contexts.",
+              "✅ Uses Saga and Outbox patterns.",
+              "✅ 100% Observability first.",
+              "✅ High-density technical content.",
+              "✅ 100% Automated GitOps/K8s."
+            ]
           },
           {
             "type": "content",
-            "title": "Multi-stage Docker Builds",
+            "title": "Final Words of Wisdom",
             "box": {
-              "list": [
-                {
-                  "emoji": "🐳",
-                  "text": "<strong>Small:</strong> Drastically reduce image size."
-                },
-                {
-                  "emoji": "🔒",
-                  "text": "<strong>Secure:</strong> Only include production dependencies."
-                }
-              ],
-              "title": "Creating lean production images by separating build and runtime environments."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Kubernetes Orchestration",
-            "box": {
-              "list": [
-                {
-                  "emoji": "☸️",
-                  "text": "<strong>Self-healing:</strong> Auto-restart failed containers."
-                },
-                {
-                  "emoji": "⚖️",
-                  "text": "<strong>Auto-scaling:</strong> Scale based on CPU/Memory usage."
-                }
-              ],
-              "title": "Deploying NestJS microservices as stateless pods in a K8s cluster."
-            }
-          }
-        ]
-      },
-      {
-        "id": "nestjs-conclusion",
-        "title": "Conclusion",
-        "slides": [
-          {
-            "type": "topic-title",
-            "title": "Conclusion",
-            "subtitle": "Building for the Future with NestJS."
-          },
-          {
-            "type": "content",
-            "title": "The Modular Advantage",
-            "box": {
-              "list": [
-                {
-                  "emoji": "🏗️",
-                  "text": "<strong>Scalable:</strong> Handles complex codebase growth."
-                },
-                {
-                  "emoji": "🤝",
-                  "text": "<strong>Collaborative:</strong> Enforces consistent patterns across teams."
-                },
-                {
-                  "emoji": "🚀",
-                  "text": "<strong>Performance:</strong> Fast and lightweight runtime."
-                }
-              ],
-              "title": "Why NestJS is the preferred choice for enterprise Node.js development."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Final Thoughts",
-            "box": {
-              "list": [
-                {
-                  "emoji": "🛠️",
-                  "text": "<strong>Build:</strong> Use `nest new project-name` to get started."
-                },
-                {
-                  "emoji": "📚",
-                  "text": "<strong>Learn:</strong> Explore the official documentation and community tutorials."
-                }
-              ],
-              "title": "Start building enterprise-grade applications today."
+              "title": "Keep Shipping",
+              "content": "<p>Architecture is not about making 'perfect' decisions. It's about making 'reversible' decisions and managing trade-offs. The systems you build today with <strong>NestJS</strong> will be the foundation of tomorrow's enterprise scale.</p><h4>🚀 Go Build Something Great!</h4>"
             }
           },
           {
             "type": "content",
             "title": "Q&A",
             "box": {
-              "title": "Thank you for your time! Any questions?"
-            }
-          }
-        ]
-      },
-      {
-        "id": "nestjs-advanced-features",
-        "title": "9. Advanced NestJS Features",
-        "slides": [
-          {
-            "type": "topic-title",
-            "title": "9. Beyond the Basics",
-            "subtitle": "Mastering Interceptors, Filters, and Middlewares."
-          },
-          {
-            "type": "content",
-            "title": "Interceptors",
-            "box": {
-              "code": "@Injectable()\nexport class TransformInterceptor implements NestInterceptor { ... }",
-              "title": "Bind extra logic before or after method execution, transform results, or wrap functions."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Exception Filters",
-            "box": {
-              "code": "@Catch(HttpException)\nexport class HttpErrorFilter implements ExceptionFilter { ... }",
-              "title": "Responsible for processing all unhandled exceptions across an application."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Middlewares",
-            "box": {
-              "code": "export function logger(req: Request, res: Response, next: NextFunction) { ... }",
-              "title": "Functions called before the route handler, perfect for logging or request manipulation."
-            }
-          }
-        ]
-      },
-      {
-        "id": "nestjs-dynamic-modules",
-        "title": "10. Dynamic Modules",
-        "slides": [
-          {
-            "type": "topic-title",
-            "title": "10. Scalable Configuration",
-            "subtitle": "Creating flexible, configurable modules."
-          },
-          {
-            "type": "content",
-            "title": "What are Dynamic Modules?",
-            "box": {
-              "code": "static register(options: ConfigOptions): DynamicModule { ... }",
-              "title": "Modules that can be configured dynamically at runtime."
-            }
-          },
-          {
-            "type": "content",
-            "title": "The ConfigModule Pattern",
-            "box": {
-              "code": "ConfigModule.forRoot({ isGlobal: true })",
-              "title": "Using the official ConfigModule for managing application environment variables."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Custom Providers",
-            "box": {
-              "code": "{\n    provide: 'CONNECTION',\n    useValue: connection,\n}",
-              "title": "Defining your own providers using useValue, useClass, or useFactory."
-            }
-          }
-        ]
-      },
-      {
-        "id": "nestjs-conclusion",
-        "title": "Conclusion",
-        "slides": [
-          {
-            "type": "topic-title",
-            "title": "Conclusion",
-            "subtitle": "The Future of Enterprise Node.js."
-          },
-          {
-            "type": "content",
-            "title": "Why NestJS & Microservices?",
-            "box": {
-              "list": [
-                {
-                  "emoji": "🏢",
-                  "text": "<strong>Enterprise:</strong> Scalable and maintainable codebase."
-                },
-                {
-                  "emoji": "🏗️",
-                  "text": "<strong>Architectural:</strong> Decoupled and modular design."
-                },
-                {
-                  "emoji": "⚡",
-                  "text": "<strong>Performance:</strong> Fast and reliable distributed systems."
-                }
-              ],
-              "title": "The ultimate architecture for building large-scale, resilient systems with TypeScript."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Next Steps",
-            "box": {
-              "list": [
-                {
-                  "emoji": "🛠️",
-                  "text": "<strong>Build:</strong> Create a new project with `nest new`."
-                },
-                {
-                  "emoji": "📚",
-                  "text": "<strong>Learn:</strong> Explore the NestJS documentation and microservice samples."
-                }
-              ],
-              "title": "Start your NestJS journey today."
-            }
-          },
-          {
-            "type": "content",
-            "title": "Q&A",
-            "box": {
-              "title": "Thank you for your time! Any questions?"
+              "title": "The Floor is Yours",
+              "content": "<h4>💬 Any Questions?</h4><p>Scan the code to join our community or reach out for architecture reviews.</p>"
             }
           }
         ]

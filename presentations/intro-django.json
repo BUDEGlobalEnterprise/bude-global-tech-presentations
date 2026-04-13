@@ -211,7 +211,7 @@
           },
           {
             "type": "content",
-            "title": "Advanced: Custom Managers (Elite)",
+            "title": "Advanced: Custom Managers ()",
             "box": {
               "code": "class PostManager(models.Manager):\n    def published(self):\n        return self.filter(status='published')\n\nclass Post(models.Model):\n    # ... fields ...\n    objects = PostManager() # Custom manager usage",
               "title": "Personalize how records are fetched by overriding <code>get_queryset</code> or adding custom methods."
@@ -219,7 +219,7 @@
           },
           {
             "type": "content",
-            "title": "QuerySet Optimization (Elite)",
+            "title": "QuerySet Optimization ()",
             "box": {
               "list": [
                 {
@@ -297,7 +297,7 @@
           },
           {
             "type": "content",
-            "title": "Elite: Custom Mixins",
+            "title": ": Custom Mixins",
             "box": {
               "code": "class LoggingMixin:\n    def dispatch(self, request, *args, **kwargs):\n        print(f\"Accessing {self.__class__.__name__}\")\n        return super().dispatch(request, *args, **kwargs)",
               "title": "Create your own mixins to encapsulate common cross-cutting concerns like logging or data filtering."
@@ -445,7 +445,7 @@
           },
           {
             "type": "content",
-            "title": "Django Signals (Elite)",
+            "title": "Django Signals ()",
             "box": {
               "code": "from django.db.models.signals import post_save\nfrom django.dispatch import receiver\n\n@receiver(post_save, sender=User)\ndef create_profile(sender, instance, created, **kwargs):\n    if created:\n        Profile.objects.create(user=instance)",
               "title": "Signals allow certain senders to notify a set of receivers that some action has taken place. Perfect for decoupling."
@@ -453,7 +453,7 @@
           },
           {
             "type": "content",
-            "title": "Signal Performance (Elite)",
+            "title": "Signal Performance ()",
             "box": {
               "list": [
                 {

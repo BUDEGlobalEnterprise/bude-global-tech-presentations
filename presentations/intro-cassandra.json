@@ -7,7 +7,7 @@
         "slides": [
           {
             "type": "title",
-            "title": "Cassandra & Distributed Systems (Elite)",
+            "title": "Cassandra & Distributed Systems ()",
             "subtitle": "Mastering Availability, Scalability, and Consensus <br> The Architecture of NoSQL at Scale"
           }
         ]

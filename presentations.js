@@ -213,7 +213,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-bash.json",
-    title: "Bash Scripting (Elite)",
+    title: "Bash Scripting",
     description:
       "Professional shell scripting, process management, and POSIX compliance mastery.",
     keywords: [
@@ -230,7 +230,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-regex.json",
-    title: "Regex Mastery (Elite)",
+    title: "Regex Mastery",
     description:
       "Pattern matching excellence from basic tokens to backtracking optimization and PCRE.",
     keywords: ["regex", "regular-expressions", "patterns", "parsing", "automation"],
@@ -400,7 +400,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-redis.json",
-    title: "Redis Masterclass (Elite)",
+    title: "Redis Masterclass",
     description:
       "High-performance in-memory systems, distributed patterns, and internals beyond simple caching.",
     keywords: [
@@ -417,7 +417,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-cassandra.json",
-    title: "Cassandra & Distributed Systems (Elite)",
+    title: "Cassandra & Distributed Systems",
     description:
       "Mastering write-optimized distributed databases, tunable consistency, and gossip protocols.",
     keywords: [
@@ -433,7 +433,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-elasticsearch.json",
-    title: "Elasticsearch & Search Architecture (Elite)",
+    title: "Elasticsearch & Search Architecture",
     description:
       "Deep dive into Lucene internals, vector search, and horizontal search scaling.",
     keywords: [
@@ -449,7 +449,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-neo4j.json",
-    title: "Neo4j & Graph Data Modeling (Elite)",
+    title: "Neo4j & Graph Data Modeling",
     description:
       "Exploring index-free adjacency, Cypher query optimization, and GDS algorithms.",
     keywords: [
@@ -465,7 +465,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-sqlite.json",
-    title: "SQLite Mastery (Elite)",
+    title: "SQLite Mastery",
     description:
       "From embedded database basics to WAL mode, VFS, and advanced indexing internals.",
     keywords: ["sqlite", "database", "embedded", "sql", "performance", "acid"],
@@ -688,7 +688,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-expressjs.json",
-    title: "Express.js Masterclass (Elite)",
+    title: "Express.js Masterclass",
     description:
       "Deep dive from middleware internals to high-traffic enterprise architectures. Covers performance, security, and microservices.",
     keywords: [
@@ -701,7 +701,7 @@ const PRESENTATIONS_CONFIG = [
       "rest",
       "backend",
       "web-framework",
-      "elite",
+      "",
       "performance",
       "security",
     ],
@@ -731,7 +731,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-spring-boot.json",
-    title: "Spring Boot Architecture (Elite)",
+    title: "Spring Boot Architecture",
     description:
       "Enterprise-grade Java development with Spring Boot, Microservices, and Cloud-Native patterns.",
     keywords: [
@@ -747,7 +747,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-django.json",
-    title: "Django Fundamentals (Elite)",
+    title: "Django Fundamentals",
     description:
       "Deep dive into the batteries-included Python framework, ORM optimization, and security hardening.",
     keywords: ["django", "python", "orm", "backend", "web-framework", "security"],
@@ -756,7 +756,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-nestjs-microservices.json",
-    title: "NestJS & Microservices Proficiency (Elite)",
+    title: "NestJS & Microservices Proficiency",
     description:
       "Scalable Node.js architectures with TypeScript, gRPC, RabbitMQ, and Domain-Driven Design.",
     keywords: ["nestjs", "typescript", "microservices", "grpc", "rabbitmq", "ddd"],
@@ -765,7 +765,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-aspnet-core.json",
-    title: "ASP.NET Core Architecture (Elite)",
+    title: "ASP.NET Core Architecture",
     description:
       "Building high-performance cross-platform APIs and microservices with .NET 8.",
     keywords: [
@@ -781,7 +781,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-flask.json",
-    title: "Flask Fundamentals (Elite)",
+    title: "Flask Fundamentals",
     description:
       "Micro-framework mastery, extension ecosystems, and production deployment strategies.",
     keywords: [
@@ -797,7 +797,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-fastapi.json",
-    title: "FastAPI Essentials (Elite)",
+    title: "FastAPI Essentials",
     description:
       "Building modern, high-performance APIs with Python, Pydantic, and Asynchronous I/O.",
     keywords: ["fastapi", "python", "async", "pydantic", "api", "swagger"],
@@ -806,7 +806,7 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-laravel.json",
-    title: "Laravel 11 Mastery (Elite)",
+    title: "Laravel 11 Mastery",
     description: "Eloquent ORM, Blade, and modern PHP ecosystem excellence.",
     keywords: ["laravel", "php", "backend", "mvc", "eloquent"],
     category: ["backend"],
@@ -1022,12 +1022,12 @@ const PRESENTATIONS_CONFIG = [
   },
   {
     file: "presentations/intro-system-design.json",
-    title: "System Design Masterclass (Elite)",
+    title: "System Design Masterclass",
     description:
-      "The definitive guide to designing and scaling massive distributed systems. Covers Load Balancing, Caching, Sharding, Microservices, and Elite Case Studies (Netflix, Uber, Twitter).",
+      "The definitive guide to designing and scaling massive distributed systems. Covers Load Balancing, Caching, Sharding, Microservices, and Case Studies (Netflix, Uber, Twitter).",
     keywords: [
       "system-design",
-      "elite",
+      "",
       "architecture",
       "scalability",
       "databases",
@@ -1331,3 +1331,4 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "advanced",
   },
 ];
+

@@ -149,7 +149,7 @@
         ]
       },
       {
-        "id": "intro-docker-elite",
+        "id": "intro-docker-",
         "title": "1.1 Deep Dive: Why Containers?",
         "slides": [
           {
@@ -197,7 +197,7 @@
         ]
       },
       {
-        "id": "intro-docker-elite",
+        "id": "intro-docker-",
         "title": "1.1 Deep Dive: Why Containers?",
         "slides": [
           {
@@ -362,7 +362,7 @@
         ]
       },
       {
-        "id": "docker-architecture-elite",
+        "id": "docker-architecture-",
         "title": "2.1 Deep Dive: Linux Kernel Magic",
         "slides": [
           {
@@ -389,7 +389,7 @@
         ]
       },
       {
-        "id": "docker-architecture-elite",
+        "id": "docker-architecture-",
         "title": "2.1 Deep Dive: Linux Kernel Magic",
         "slides": [
           {
@@ -674,7 +674,7 @@
           },
           {
             "type": "content",
-            "title": "Multi-stage Builds (Elite)",
+            "title": "Multi-stage Builds ()",
             "box": {
               "code": "# Stage 1: Build\nFROM golang:1.21-alpine AS builder\nCOPY . .\nRUN go build -o app\n\n# Stage 2: Production\nFROM alpine:latest\nCOPY --from=builder /app /app\nCMD [\"/app\"]",
               "title": "Multi-stage builds allow you to use multiple <code>FROM</code> statements in a single Dockerfile. You can compile your code in one stage and copy only the binary to a smaller production image."
@@ -858,7 +858,7 @@
         ]
       },
       {
-        "id": "docker-compose-elite",
+        "id": "docker-compose-",
         "title": "7. Multi-Container with Compose",
         "slides": [
           {

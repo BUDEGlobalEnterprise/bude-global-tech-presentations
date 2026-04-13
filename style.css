@@ -6,7 +6,7 @@
 }
 
 :root {
-  /* Elite Monochromatic Palette */
+  /* Monochromatic Palette */
   --bude-primary: #0f172a; /* Deep Slate */
   --bude-secondary: #334155;
   --bude-accent: #000000;
@@ -35,7 +35,7 @@
   /* Transitions - Faster & More Precise */
   --transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 
-  /* Elite Themes */
+  /* Themes */
   --light-bg-primary: #ffffff;
   --light-bg-secondary: #f8fafc;
   --light-bg-tertiary: #f1f5f9;
@@ -144,7 +144,7 @@ html[data-theme="dark"] body {
 /* Header */
 .header {
   text-align: center;
-  padding: 1rem 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem; /* Reduced top/bottom padding */
   position: relative;
   z-index: 1;
   color: var(--text-primary);
@@ -443,8 +443,8 @@ html[data-theme="dark"] .search-icon {
 
 .presentations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* More cards per row */
+  gap: 1.2rem; /* Tighter gap */
   margin-top: 1rem;
   justify-content: center;
 }
@@ -995,8 +995,16 @@ html[data-theme="light"] footer p {
 }
 
 .reveal h3 {
-  font-size: 1.6em;
-  opacity: 0.6;
+  font-size: 1.8em;
+  opacity: 1 !important;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--bude-primary), var(--bude-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .reveal p {
@@ -1103,22 +1111,26 @@ body.hide-watermark::before {
 }
 
 .reveal li {
-  margin-bottom: 0.5em;
-  font-size: 1em;
+  margin-bottom: 0.6em;
+  font-size: 0.95em; /* Slightly smaller for compactness */
   color: var(--text-primary);
-  line-height: 1.5;
-  padding: 1em;
+  line-height: 1.4;
+  padding: 0.6em 1.25em; /* Reduced from 1em */
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
+  border-radius: 8px;
+  transition: all 0.25s ease;
   position: relative;
+  text-align: left; /* Ensure left alignment inside columns */
+  width: 100%;
 }
 
 .reveal li:hover {
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  transform: translateX(10px);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--bude-purple);
+  transform: translateX(5px); /* Subtler movement */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 html[data-theme="dark"] .reveal li:hover {
@@ -2183,9 +2195,9 @@ body.presentation-mode .reveal .slides {
 /* Slides - Full screen, centered content */
 .reveal .slides section {
   text-align: center !important;
-  padding: 40px 80px !important;
+  padding: 20px 40px !important;
   background-color: transparent;
-  line-height: 1.6;
+  line-height: 1.4; /* Slightly tighter line height */
   font-size: 20px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2197,9 +2209,9 @@ body.presentation-mode .reveal .slides {
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
+  padding: 100px 40px !important; /* Major top buffer to prevent cropping */
   align-items: center !important;
-  padding-top: 100px !important;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s ease;
   overflow-y: auto !important;
 }
 
@@ -2235,20 +2247,25 @@ body.hide-watermark::before {
 
 /* Lists - Centered with proper contrast */
 .reveal ul {
-  display: inline-block;
+  display: block;
   text-align: left !important;
-  margin-left: 0;
+  margin: 1.5rem auto;
   color: var(--text-primary) !important;
-  list-style-position: inside;
-  list-style-type: disc;
+  list-style: none !important;
   padding-left: 0;
 }
 
 .reveal li {
-  margin-bottom: 0.8em;
-  font-size: 1.3em !important;
+  margin-bottom: 0.6em;
+  font-size: 1.1em !important;
   color: var(--text-primary) !important;
-  line-height: 1.6;
+  line-height: 1.4;
+  list-style: none !important;
+}
+
+.reveal li::before {
+  content: none !important; /* Force remove Reveal.js theme bullets */
+  display: none !important;
 }
 
 /* Highlight and special elements */
@@ -2262,19 +2279,21 @@ body.hide-watermark::before {
 }
 
 .box {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 96, 160, 0.12) 0%,
-    rgba(111, 66, 193, 0.08) 100%
-  );
-  backdrop-filter: blur(10px);
-  padding: 1.5em 2em;
-  margin: 1.5em auto;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  padding: 1.25rem 1.75rem;
+  margin: 1rem auto;
   border-radius: 16px;
   font-size: 1.1em;
-  max-width: 90%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 96%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  border-color: var(--bude-primary);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.06);
 }
 
 .small-text {
@@ -2388,3 +2407,4 @@ html[data-theme="light"] .reveal .progress {
 .reveal .slides > section {
   transition: transform 0.3s ease !important;
 }
+

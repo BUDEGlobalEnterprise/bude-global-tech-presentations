@@ -252,7 +252,7 @@
           },
           {
             "type": "content",
-            "title": "Redis Streams (Elite)",
+            "title": "Redis Streams ()",
             "box": {
               "list": [
                 {
@@ -297,12 +297,12 @@
         ]
       },
       {
-        "id": "elite-patterns",
-        "title": "5. Elite Redis Patterns",
+        "id": "-patterns",
+        "title": "5.  Redis Patterns",
         "slides": [
           {
             "type": "topic-title",
-            "title": "5. Elite Patterns",
+            "title": "5.  Patterns",
             "subtitle": "Solving real-world architecture challenges."
           },
           {
@@ -525,7 +525,7 @@
           },
           {
             "type": "content",
-            "title": "Redis Functions (Elite)",
+            "title": "Redis Functions ()",
             "box": {
               "list": [
                 {

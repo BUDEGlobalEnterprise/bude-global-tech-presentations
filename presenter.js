@@ -1057,28 +1057,61 @@ function addEnhancedStyles() {
             50% { transform: scale(1.2); }
         }
 
-        /* Comparison Slides */
+        /* Comparison Slides - Look */
         .comparison-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
+            gap: 2.5rem;
+            margin: 1.5rem 0;
+            width: 100%;
         }
 
         .comparison-column {
-            background: linear-gradient(135deg, rgba(0, 96, 160, 0.08) 0%, rgba(111, 66, 193, 0.05) 100%);
-            border-left: 4px solid #0060a0;
-            padding: 1.5rem;
-            border-radius: 8px;
-            animation: slideInColumn 0.6s ease-out both;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 1.25rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            animation: slideInColumn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .comparison-column::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 5px;
+            background: linear-gradient(90deg, var(--bude-primary), var(--bude-purple));
+            opacity: 0.8;
         }
 
-        .comparison-column:nth-child(1) { animation-delay: 0.2s; }
-        .comparison-column:nth-child(2) { animation-delay: 0.4s; }
+        .comparison-column h4 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0.5rem 0 1.25rem 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 1.5px solid rgba(111, 66, 193, 0.1);
+            color: var(--bude-primary);
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .comparison-column ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .comparison-column:nth-child(1) { animation-delay: 0.1s; }
+        .comparison-column:nth-child(2) { animation-delay: 0.25s; }
 
         @keyframes slideInColumn {
-            0% { transform: translateY(30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+            0% { transform: scale(0.95) translateY(20px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
         }
 
         /* Image/Text Layout */
@@ -1442,12 +1475,15 @@ async function renderSlides(data) {
     const revealConfig = {
         controls: true,
         progress: true,
-        center: false,
+        center: true, /* Changed to true for better vertical fit */
         hash: true,
-        transition: 'none', // Disable transition effects (removes sparkle/circle)
+        transition: 'none',
         transitionSpeed: 'fast',
-        backgroundTransition: 'none', // Disable background transitions
+        backgroundTransition: 'none',
         slideNumber: true,
+        margin: 0.05, /* Reduced margin for more space */
+        minScale: 0.5,
+        maxScale: 2.0,
         keyboard: {
             40: () => { Reveal.down(); },
             38: () => { Reveal.up(); },
@@ -1469,8 +1505,8 @@ async function renderSlides(data) {
         revealConfig.height = window.innerHeight;
         revealConfig.margin = 0.02;
     } else {
-        revealConfig.width = 1920;
-        revealConfig.height = 1080;
+        revealConfig.width = 1600; /* Slightly reduced for better fit */
+        revealConfig.height = 900;
     }
 
     Reveal.initialize(revealConfig);
@@ -2323,3 +2359,4 @@ document.addEventListener('visibilitychange', function() {
 // ============================================================================
 // END OF BUDE PRESENTATION ENGINE v3.0
 // ============================================================================
+

@@ -130,7 +130,7 @@
             "title": "When to Quote Everything",
             "box": {
               "code": "file=\"Daily Report.txt\"\n\n# WRONG: Looks for 'Daily' and 'Report.txt'\nrm $file \n\n# CORRECT: Treats as one file\nrm \"$file\"",
-              "title": "The 'Elite' rule of Bash: **Always wrap variable usages in double quotes.** This prevents the shell from breaking your variable into multiple arguments if it contains spaces."
+              "title": "The '' rule of Bash: **Always wrap variable usages in double quotes.** This prevents the shell from breaking your variable into multiple arguments if it contains spaces."
             }
           }
         ]
@@ -362,7 +362,7 @@
             "type": "content",
             "title": "Bash Strict Mode",
             "box": {
-              "code": "# The 'Elite' Header\nset -euo pipefail\n\n/* \n -e: Exit on error\n -u: Exit on unset variables\n -o pipefail: Pipeline fails if any command fails\n*/",
+              "code": "# The '' Header\nset -euo pipefail\n\n/* \n -e: Exit on error\n -u: Exit on unset variables\n -o pipefail: Pipeline fails if any command fails\n*/",
               "title": "Most Bash scripts fail silently or continue after errors. The 'Strict Mode' is a set of flags that turn Bash into a much more predictable and safer environment."
             }
           },

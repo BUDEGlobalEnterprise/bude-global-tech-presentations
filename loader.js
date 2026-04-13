@@ -587,7 +587,7 @@ async function loadPresentation(file) {
         await renderSlides(data);
 
         // Update document title
-        document.title = `${presentation.title} | Elite Tech Docs`;
+        document.title = `${presentation.title} | Tech Docs`;
 
     } catch (error) {
         console.error("Error loading presentation:", error);
@@ -621,7 +621,7 @@ async function loadPresentation(file) {
 function returnToHomepage() {
     document.body.classList.remove('presentation-mode');
     document.querySelector('.reveal').classList.remove('active');
-    document.title = 'Elite Tech Docs | Enterprise Knowledge Platform';
+    document.title = 'Tech Docs | Enterprise Knowledge Platform';
     location.reload();
 }
 

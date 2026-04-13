@@ -60,7 +60,7 @@
 - [x] #16 PostgreSQL - [View](presentations/intro-postgresql.json)
 - [x] #17 MySQL - [View](presentations/intro-mysql.json)
 - [x] #18 Redis - [View](presentations/intro-redis.json)
-- [x] #19 SQLite (Elite) - [View](presentations/intro-sqlite.json)
+- [x] #19 SQLite - [View](presentations/intro-sqlite.json)
 - [x] #70 SQL & Databases - [View](presentations/intro-sql-databases.json)
 
 ### DevOps & Cloud
@@ -93,14 +93,14 @@
 - [x] #89 Appsmith / ToolJet - [View](presentations/intro-appsmith-tooljet.json)
 - [x] #90 Retool - [View](presentations/intro-retool.json)
 - [x] #91 AWS Cloud - [View](presentations/intro-aws.json)
-- [x] #92 System Design Masterclass (Elite) - [View](presentations/intro-system-design.json)
+- [x] #92 System Design Masterclass - [View](presentations/intro-system-design.json)
 - [x] #93 Express.js Deep Dive - [View](presentations/intro-expressjs.json)
 - [x] #94 Antigravity Deep Dive - [View](presentations/antigravity-deep-dive.json)
 - [x] #108 Go (Golang) - [View](presentations/intro-go.json)
 - [x] #5 Swift - [View](presentations/intro-swift.json)
 - [x] #6 Kotlin - [View](presentations/intro-kotlin.json)
-- [x] #8 Bash Scripting (Elite) - [View](presentations/intro-bash.json)
-- [x] #9 Regex (Elite) - [View](presentations/intro-regex.json)
+- [x] #8 Bash Scripting - [View](presentations/intro-bash.json)
+- [x] #9 Regex - [View](presentations/intro-regex.json)
 - [x] #10 Docker Fundamentals - [View](presentations/intro-docker.json)
 - [x] #11 Flask - [View](presentations/intro-flask.json)
 - [x] #12 FastAPI - [View](presentations/intro-fastapi.json)
@@ -113,7 +113,7 @@
 - [x] #20 Qwik / Express - [View](presentations/intro-qwik-express.json)
 - [x] #21 Remix / Express - [View](presentations/intro-remix-express.json)
 - [x] #22 Next.js 15 / Fastify - [View](presentations/intro-nextjs-fastify.json)
-- [x] #26 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
+- [x] #26 Django Fundamentals - [View](presentations/intro-django.json)
 - [x] Frappe Product Suite - [View](presentations/intro-frappe-product-suite.json)
 
 </details>
@@ -124,18 +124,18 @@
 
 ### 🔵 Programming Languages & Core Tech (8)
 - [ ] [#66 Angular](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66)
-- [x] #8 Bash Scripting (Elite) - [View](presentations/intro-bash.json)
-- [x] #26 Django Fundamentals (Elite) - [View](presentations/intro-django.json)
+- [x] #8 Bash Scripting - [View](presentations/intro-bash.json)
+- [x] #26 Django Fundamentals - [View](presentations/intro-django.json)
 
 ### 🔴 Databases & Storage (8)
-- [x] #18 Redis (Elite) - [View](presentations/intro-redis.json)
-- [x] #19 SQLite (Elite) - [View](presentations/intro-sqlite.json)
-- [x] #20 Cassandra (Elite) - [View](presentations/intro-cassandra.json)
-- [x] #21 Neo4j (Elite) - [View](presentations/intro-neo4j.json)
+- [x] #18 Redis - [View](presentations/intro-redis.json)
+- [x] #19 SQLite - [View](presentations/intro-sqlite.json)
+- [x] #20 Cassandra - [View](presentations/intro-cassandra.json)
+- [x] #21 Neo4j - [View](presentations/intro-neo4j.json)
 - [ ] [#22 Supabase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/22) - Open-source Firebase alternative
 - [ ] [#23 Firebase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/23) - Google's mobile platform
 - [ ] [#24 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/24) - Next-generation ORM
-- [x] #25 Elasticsearch (Elite) - [View](presentations/intro-elasticsearch.json)
+- [x] #25 Elasticsearch - [View](presentations/intro-elasticsearch.json)
 
 ### 🟠 DevOps, Infrastructure & Cloud (13)
 - [ ] [#75 DevOps – CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75)
@@ -274,3 +274,4 @@ Have a topic not on this list? [Open a feature request](https://github.com/BUDEG
 [View All Issues](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues) • [Contribute](CONTRIBUTING.md) • [Report Bug](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/new)
 
 </div>
+

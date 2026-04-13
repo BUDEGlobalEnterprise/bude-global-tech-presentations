@@ -17,7 +17,7 @@
               "list": [
                 {
                   "emoji": "👷",
-                  "text": "Elite Technical Architect"
+                  "text": " Technical Architect"
                 },
                 {
                   "emoji": "🚀",
@@ -553,7 +553,7 @@
             "type": "content",
             "title": "SEO & Meta Tags",
             "box": {
-              "code": "export const meta = () => {\n  return [\n    { title: \"Mastering Remix\" },\n    { name: \"description\", content: \"Elite guide to Remix and Express.\" }\n  ];\n};",
+              "code": "export const meta = () => {\n  return [\n    { title: \"Mastering Remix\" },\n    { name: \"description\", content: \" guide to Remix and Express.\" }\n  ];\n};",
               "title": "Using the `meta` function to ensure every page is perfectly indexed by search engines."
             }
           },
