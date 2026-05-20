@@ -1,0 +1,972 @@
+{
+  "category": "business",
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to ERPNext",
+            "subtitle": "World's Best Open Source ERP<br>Complete Business Management Solution"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is ERPNext?</strong> - History & Evolution"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>ERPNext vs Traditional ERPs</strong> - Comparison"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Frappe Framework</strong> - Technical Foundation"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Core Modules</strong> - Complete Feature Overview"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Industry Solutions</strong> - Healthcare, Education, Manufacturing"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Permissions</strong> - Role-Based Access"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Business Processes</strong> - Sales, Purchase, Manufacturing"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Customization</strong> - Forms, Fields, Workflows"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Reports & Dashboards</strong> - Business Intelligence"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Integration & API</strong> - REST API & Webhooks"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Deployment</strong> - Self-Hosted vs Cloud"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile & Extensions</strong> - Ecosystem"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Real-World Use Cases</strong> - Success Stories"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-erpnext",
+        "title": "What is ERPNext?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding ERPNext"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is ERPNext?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>100% Open Source</strong> - GPL v3 License"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Full-Stack System</strong> - UI + Database + API"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Multi-Company</strong> - Multiple business entities"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Multi-Currency</strong> - Global business support"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Role-Based Access</strong> - Granular permissions"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Highly Customizable</strong> - No-code customization"
+                }
+              ],
+              "title": "Fully <span class=\"highlight\">open-source, modular ERP</span> built on Frappe Framework"
+            },
+            "note": {
+              "text": "<strong>Founded:</strong> 2008<br><strong>Company:</strong> Frappe Technologies<br><strong>Used by:</strong> 10,000+ companies worldwide"
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "ERPNext vs Traditional ERP",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why Choose ERPNext?"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Advantages Over Traditional ERP",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Faster Setup</strong> - Running in hours, not months"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Lower Cost</strong> - No licensing fees, lower TCO"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>No Vendor Lock-in</strong> - Full control over data"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Community-Driven</strong> - User-driven roadmap"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Deployment Choice</strong> - Self-hosted or cloud"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Continuous Updates</strong> - Regular feature releases"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "frappe-relationship",
+        "title": "Technical Foundation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Built on Frappe Framework"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Frappe Framework Relationship",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Foundation</strong> - Frappe provides the platform"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Applications</strong> - ERPNext provides business logic"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>DocTypes</strong> - Unified data model for everything"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Auto APIs</strong> - REST APIs generated automatically"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Auto UI</strong> - Forms and lists generated from models"
+                }
+              ],
+              "title": "<strong>ERPNext = Frappe Framework + Business Applications</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Same technology powers thousands of custom apps beyond ERPNext"
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-modules",
+        "title": "Core Modules",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Complete Business Suite"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Core ERP Modules",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Accounting & Finance</strong> - GL, AR, AP, Assets"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Sales & Purchase</strong> - Orders, Invoices, Payments"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Inventory & Stock</strong> - Warehouses, Batches, Serial"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Manufacturing</strong> - BOM, Work Orders, Planning"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>CRM</strong> - Leads, Opportunities, Campaigns"
+                },
+                {
+                  "emoji": "👨‍💼",
+                  "text": "<strong>HR & Payroll</strong> - Employees, Attendance, Salary"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Projects</strong> - Tasks, Timesheets, Budgets"
+                },
+                {
+                  "emoji": "🛟",
+                  "text": "<strong>Support / Helpdesk</strong> - Tickets, SLA, Knowledge Base"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "industry-modules",
+        "title": "Industry Solutions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Industry-Specific Modules"
+          },
+          {
+            "type": "content",
+            "emoji": "🏥",
+            "title": "Vertical Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Healthcare</strong> - Patient, Appointment, Lab"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Education</strong> - Student, Course, Attendance"
+                },
+                {
+                  "emoji": "🌾",
+                  "text": "<strong>Agriculture</strong> - Crop, Land, Harvest"
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Non-Profit</strong> - Members, Donations, Grants"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>Retail & POS</strong> - Point of Sale, Retail Operations"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Construction</strong> - Project, Site, Material"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "doctypes",
+        "title": "Data Model",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "DocTypes - Core Data Model"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Everything is a DocType",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Customer</strong> - Business partners"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Item</strong> - Products and services"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Sales Order</strong> - Customer orders"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Work Order</strong> - Manufacturing orders"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Employee</strong> - Staff records"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Project</strong> - Job tracking"
+                }
+              ],
+              "title": "<strong>Every form, report, and process powered by DocTypes</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> 500+ built-in DocTypes covering all business processes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sales-workflow",
+        "title": "Sales Process",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Sales Cycle Walkthrough"
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Complete Sales Workflow",
+            "box": {
+              "code": "Lead → Opportunity → Quotation →\nSales Order → Delivery Note →\nSales Invoice → Payment Entry",
+              "title": "<strong>End-to-end sales process automation</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🎯",
+                "text": "<strong>Lead Management</strong> - Capture and qualify"
+              },
+              {
+                "emoji": "💰",
+                "text": "<strong>Quotation</strong> - Pricing and proposals"
+              },
+              {
+                "emoji": "📦",
+                "text": "<strong>Order Management</strong> - Order processing"
+              },
+              {
+                "emoji": "🚚",
+                "text": "<strong>Delivery</strong> - Shipping and fulfillment"
+              },
+              {
+                "emoji": "🧾",
+                "text": "<strong>Invoicing</strong> - Billing and collections"
+              },
+              {
+                "emoji": "💳",
+                "text": "<strong>Payment</strong> - Receipts and reconciliation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "title": "Manufacturing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🏭",
+            "title": "Manufacturing Flow",
+            "box": {
+              "code": "BOM → Work Order → Material Transfer →\nProduction → Finished Goods → Stock Update",
+              "title": "<strong>Complete production lifecycle</strong>"
+            },
+            "list": [
+              {
+                "emoji": "📋",
+                "text": "<strong>BOM (Bill of Materials)</strong> - Recipe for products"
+              },
+              {
+                "emoji": "🔄",
+                "text": "<strong>Routing</strong> - Production steps and operations"
+              },
+              {
+                "emoji": "⚙️",
+                "text": "<strong>Work Order</strong> - Production instructions"
+              },
+              {
+                "emoji": "📦",
+                "text": "<strong>Material Transfer</strong> - Raw material issue"
+              },
+              {
+                "emoji": "🔧",
+                "text": "<strong>Production</strong> - Manufacturing execution"
+              },
+              {
+                "emoji": "✅",
+                "text": "<strong>Finished Goods</strong> - Product completion"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "customization",
+        "title": "Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Customization Options"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "No-Code Customization",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Custom Fields</strong> - Add new fields to forms"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Custom Scripts</strong> - Client and server scripts"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Print Formats</strong> - Custom invoice templates"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Custom Apps</strong> - Extend with new modules"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Report Builder</strong> - Create custom reports"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Workflows</strong> - Business process automation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-integration",
+        "title": "API & Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "REST API & Integrations"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "ERPNext REST API",
+            "box": {
+              "code": "# GET all items\nGET /api/resource/Item\n\n# GET specific customer\nGET /api/resource/Customer/CUST-001\n\n# CREATE new customer\nPOST /api/resource/Customer\n{\n    \"customer_name\": \"ABC Corp\",\n    \"customer_type\": \"Company\",\n    \"territory\": \"India\"\n}\n\n# UPDATE customer\nPUT /api/resource/Customer/CUST-001\n{\n    \"mobile_no\": \"9876543210\"\n}\n\n# DELETE customer\nDELETE /api/resource/Customer/CUST-001",
+              "title": "<strong>Auto-generated REST endpoints for all DocTypes</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment",
+        "title": "Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Deployment Options"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Installation Methods",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Bench</strong> - Manual installation (recommended)"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker / Kubernetes</strong> - Containerized deployment"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>ERPNext Cloud</strong> - Official hosted solution"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Third-party Hosting</strong> - Partner solutions"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Backup & Restore",
+            "box": {
+              "code": "# Create backup\nbench backup\n\n# Restore from backup\nbench restore filename.sql.gz\n\n# Scheduled backups\nbench setup backups",
+              "title": "<strong>Data protection and migration</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Updates & Maintenance",
+            "box": {
+              "code": "# Update to latest version\nbench update\n\n# Apply specific patches\nbench update --patch\n\n# Update specific app\nbench update --apps erpnext",
+              "title": "<strong>Keeping ERPNext updated</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "marketplace",
+        "title": "Ecosystem",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Extensions & Marketplace"
+          },
+          {
+            "type": "content",
+            "emoji": "🛒",
+            "title": "ERPNext Marketplace",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💳",
+                  "text": "<strong>POS Enhancements</strong> - Advanced point of sale"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>HRMS Add-ons</strong> - Advanced HR features"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Payment Gateways</strong> - Online payment integration"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>WhatsApp/SMS</strong> - Communication integration"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Advanced Analytics</strong> - Enhanced reporting"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>EDI Integration</strong> - Electronic data interchange"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "mobile",
+        "title": "Mobile & Web",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Mobile App & Portal",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile App</strong> - iOS and Android apps"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Customer Portal</strong> - Self-service portal"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Supplier Portal</strong> - Vendor collaboration"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Student Portal</strong> - Education module"
+                },
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Patient Portal</strong> - Healthcare module"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Real World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "ERPNext in Action"
+          },
+          {
+            "type": "content",
+            "emoji": "🏭",
+            "title": "Manufacturing Companies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Discrete Manufacturing</strong> - Assembly lines"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Process Manufacturing</strong> - Chemical, food"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Job Shops</strong> - Custom manufacturing"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏥",
+            "title": "Healthcare Organizations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Hospitals</strong> - Patient management"
+                },
+                {
+                  "emoji": "💊",
+                  "text": "<strong>Clinics</strong> - Practice management"
+                },
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>Labs</strong> - Diagnostic centers"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎓",
+            "title": "Educational Institutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏫",
+                  "text": "<strong>Schools</strong> - K-12 management"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Colleges</strong> - Higher education"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Training Centers</strong> - Professional courses"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🤝",
+            "title": "Non-Profit Organizations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>NGOs</strong> - Non-governmental organizations"
+                },
+                {
+                  "emoji": "🙏",
+                  "text": "<strong>Charities</strong> - Donation management"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Associations</strong> - Member management"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "demo",
+        "title": "Live Demo",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🎬",
+            "title": "Live Demo Checklist",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Show dashboard and navigation"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create a new customer"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Add products to inventory"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Process a sales order"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Generate sales invoice"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Show accounting impact"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Demonstrate reporting"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Custom field addition"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Implementation Guidelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Start Small</strong> - Begin with core modules"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>User Training</strong> - Train before going live"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Customize Wisely</strong> - Use standard features first"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Regular Backups</strong> - Automated backup strategy"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Stay Updated</strong> - Regular version updates"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Engage Community</strong> - Leverage community support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "community",
+        "title": "Community & License",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "Open Source Community",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>GPL v3 License</strong> - True open source"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Global Community</strong> - 10,000+ contributors"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Active Forums</strong> - Community support"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Development</strong> - Transparent development"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Free to Use</strong> - No hidden costs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>ERPNext Documentation</strong> - erpnext.com/docs"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Frappe School</strong> - Free video courses"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/frappe/erpnext"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community Forum</strong> - discuss.erpnext.com"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Implementation guides"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Books & Guides</strong> - Comprehensive references"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏆",
+                  "text": "ERPNext = World's best open source ERP"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "Built on Frappe Framework (Python/JS)"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "40+ modules covering all business functions"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Highly customizable without coding"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "Used by 10,000+ companies globally"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Significant cost savings vs proprietary ERP"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss ERPNext implementation, modules, or specific business use cases!<br><span class=\"gradient-accent\">All ERP questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🏆</span> Ready to transform your business?<br><span class=\"gradient-accent\">Start your ERPNext journey today!</span>",
+              "note": "Open Source • Comprehensive • Cost-Effective"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering businesses worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

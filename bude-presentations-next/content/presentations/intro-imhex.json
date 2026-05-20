@@ -1,0 +1,1255 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to ImHex",
+            "subtitle": "Advanced Hex Editor for Reverse Engineering<br>From Beginner to Professional Analyst"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is ImHex?</strong> - Advanced Hex Editor Overview"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>ImHex vs Alternatives</strong> - HxD, 010 Editor, Ghidra"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Installation & Setup</strong> - Cross-platform Installation"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>User Interface</strong> - Hex View, Pattern View, Inspector"
+                },
+                {
+                  "emoji": "🔤",
+                  "text": "<strong>Pattern Language</strong> - Core Feature Deep Dive"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Visualization</strong> - Graphs, Entropy, Strings"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Search & Analysis</strong> - Regex, Diffing, Hashing"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Real-world Use Cases</strong> - Firmware, Malware, Games"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Advanced Features</strong> - Plugins, Scripting, Integration"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Hands-on Demo</strong> - Complete Workflow Example"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Best Practices</strong> - Reverse Engineering Workflow"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Career Applications</strong> - Security, Forensics, Embedded"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-imhex",
+        "title": "What is ImHex?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding ImHex"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is ImHex?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>Created by</strong> - WerWolv (GitHub)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - GNU GPLv2 (Free and open source)"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Handles GB+ files efficiently"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Features</strong> - Pattern language, data inspection, visualization"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Customization</strong> - Plugins, themes, scripting"
+                }
+              ],
+              "title": "<span class=\"highlight\">Advanced open-source hex editor</span> for reverse engineers and security researchers"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> ImHex can analyze files larger than available RAM using memory mapping!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Project Background",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "ImHex History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Project Timeline",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>2020</strong> - Initial development by WerWolv"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2021</strong> - Pattern language introduction"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2022</strong> - Plugin system and major UI overhaul"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2023</strong> - Performance improvements, large file support"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2024</strong> - Advanced analysis features, community growth"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-imhex",
+        "title": "Why Use ImHex?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Key Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Why Choose ImHex?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Completely Free</strong> - No licensing costs"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>High Performance</strong> - Fast even with large files"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Modern UI</strong> - Dark theme, customizable interface"
+                },
+                {
+                  "emoji": "🔤",
+                  "text": "<strong>Pattern Language</strong> - Powerful structure definition"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Data Visualization</strong> - Built-in graphs and analysis"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Extensible</strong> - Plugin system and scripting"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Tool Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "ImHex vs Alternatives"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Hex Editor Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>ImHex</strong> - Free, modern, pattern language, open source"
+                },
+                {
+                  "emoji": "📗",
+                  "text": "<strong>HxD</strong> - Free, simple, Windows-only, basic features"
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>010 Editor</strong> - Commercial, templates, powerful but expensive"
+                },
+                {
+                  "emoji": "🦖",
+                  "text": "<strong>Ghidra Hex View</strong> - Free, integrated with disassembler, complex"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Hex Fiend</strong> - Free, macOS-only, fast, basic"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting ImHex"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - Installer, Portable ZIP, Winget"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - AppImage, Flatpak, Package Managers"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - DMG, Homebrew"
+                },
+                {
+                  "emoji": "🔨",
+                  "text": "<strong>Source Build</strong> - From GitHub repository"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Quick Installation Commands",
+            "box": {
+              "code": "# Windows (winget)\nwinget install WerWolv.ImHex\n\n# macOS (Homebrew)\nbrew install imhex\n\n# Linux (AppImage)\nwget https://github.com/WerWolv/ImHex/releases/latest/download/imhex-*-x86_64.AppImage\nchmod +x imhex-*.AppImage\n./imhex-*.AppImage\n\n# Linux (Flatpak)\nflatpak install flathub io.github.WerWolv.ImHex\nflatpak run io.github.WerWolv.ImHex",
+              "title": "<strong>Package manager installation</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ui-overview",
+        "title": "User Interface",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "ImHex Interface Overview"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Main Interface Components",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Hex View</strong> - Traditional hex/ASCII display"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Pattern View</strong> - Structure visualization"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Data Inspector</strong> - Real-time value interpretation"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Tools Panel</strong> - Hashing, entropy, diffing tools"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Visualization</strong> - Graphs, byte distribution"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Bookmarks</strong> - Annotation and navigation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hex-basics",
+        "title": "Hex Editing Basics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Hexadecimal Fundamentals"
+          },
+          {
+            "type": "content",
+            "emoji": "💡",
+            "title": "Core Concepts",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Offsets</strong> - File position in hexadecimal"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Bytes</strong> - Fundamental data unit (0x00-0xFF)"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Endianness</strong> - Byte order (Little/Big Endian)"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Data Types</strong> - Integers, floats, strings, structs"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Magic Bytes</strong> - File signature identification"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Endianness Examples",
+            "box": {
+              "code": "Value: 0x12345678 (4 bytes)\n\nLittle Endian (x86, ARM LE):\n78 56 34 12  (LSB first)\n\nBig Endian (Network, Motorola):\n12 34 56 78  (MSB first)",
+              "title": "<strong>Understanding byte order</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pattern-language",
+        "title": "Pattern Language",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Pattern Language - Core Feature"
+          },
+          {
+            "type": "content",
+            "emoji": "🔤",
+            "title": "What is Pattern Language?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Purpose</strong> - Describe file formats and data structures"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Benefits</strong> - Automatic parsing, validation, visualization"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Comparison</strong> - Similar to 010 Editor templates but more powerful"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Sharing</strong> - Community patterns repository available"
+                }
+              ],
+              "title": "<span class=\"highlight\">Domain-specific language</span> for defining binary structures"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Basic Pattern Syntax",
+            "box": {
+              "code": "// Simple file header pattern\nstruct Header {\n    u32 magic;           // 4-byte magic number\n    u16 version;         // 2-byte version\n    u16 entry_count;     // 2-byte count\n    u32 data_offset;     // 4-byte offset\n};\n\n// Usage\nHeader header @ 0x00;\n\n// Conditional based on magic\nif (header.magic == 0x464C457F) { // ELF magic\n    // ELF-specific parsing\n}",
+              "title": "<strong>Simple structure definition</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pattern-examples",
+        "title": "Pattern Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Real-world Pattern Examples"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "ELF File Pattern",
+            "box": {
+              "code": "struct ELF_Header {\n    u32 magic          : magic == 0x464C457F; // .ELF\n    u8  class;         // 1=32-bit, 2=64-bit\n    u8  data;          // 1=LE, 2=BE\n    u8  version;\n    u8  os_abi;\n    u64 padding;\n    u16 type;\n    u16 machine;\n    u32 version2;\n    u64 entry;\n    u64 phoff;         // Program header offset\n    u64 shoff;         // Section header offset\n    u32 flags;\n    u16 ehsize;\n    u16 phentsize;\n    u16 phnum;         // Program header count\n    u16 shentsize;\n    u16 shnum;         // Section header count\n    u16 shstrndx;\n};\n\nELF_Header header @ 0x00;",
+              "title": "<strong>Executable and Linkable Format</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🖼️",
+            "title": "PNG File Pattern",
+            "box": {
+              "code": "struct PNG_Header {\n    u64 signature : signature == 0x89504E470D0A1A0A; // PNG signature\n};\n\nstruct Chunk {\n    u32 length;\n    char type[4];\n    u8 data[length];\n    u32 crc;\n};\n\nPNG_Header header @ 0x00;\nChunk ihdr_chunk @ 0x08;\n\n// Validate IHDR chunk\nif (std::string(ihdr_chunk.type, 4) == \"IHDR\") {\n    // Parse IHDR data\n    u32 width = readUnsignedBigEndian(ihdr_chunk.data, 0, 4);\n    u32 height = readUnsignedBigEndian(ihdr_chunk.data, 4, 4);\n}",
+              "title": "<strong>Portable Network Graphics</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-visualization",
+        "title": "Data Visualization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Visual Analysis Tools"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Visualization Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Entropy View</strong> - Detect encryption/compression"
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Byte Distribution</strong> - Visual byte frequency"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Strings View</strong> - Extract and analyze strings"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Color Mapping</strong> - Visual pattern recognition"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Data Size Graph</strong> - File structure overview"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-analysis",
+        "title": "Search & Analysis",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Search Capabilities"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Search Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Hex Search</strong> - Raw byte sequences"
+                },
+                {
+                  "emoji": "🔤",
+                  "text": "<strong>String Search</strong> - Text with encodings"
+                },
+                {
+                  "emoji": ".*",
+                  "text": "<strong>Regex Search</strong> - Pattern matching"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Pattern Search</strong> - Structure-based search"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Diff Search</strong> - Find differences between files"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Checksum & Hashing",
+            "box": {
+              "code": "// Supported hash algorithms\n- CRC16, CRC32\n- MD5, SHA1, SHA256, SHA512\n- BLAKE2, BLAKE3\n- Custom CRC polynomials\n\n// Usage examples\n- Verify file integrity\n- Identify known malware hashes\n- Validate firmware updates\n- Detect modified sections",
+              "title": "<strong>Integrity and identification</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "diffing",
+        "title": "File Diffing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Binary Comparison"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Diffing Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Side-by-Side View</strong> - Visual difference highlighting"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Difference Map</strong> - Overview of changed regions"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Byte-level Comparison</strong> - Exact difference analysis"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Patch Generation</strong> - Create modification patches"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Use Cases</strong> - Firmware updates, malware variants, file versions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-use-cases",
+        "title": "Real-world Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Practical Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Firmware Reverse Engineering",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>MCU Firmware</strong> - ARM, AVR, RISC-V analysis"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Embedded Systems</strong> - IoT devices, routers"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Extraction</strong> - Read from flash, memory dumps"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Analysis</strong> - Structure discovery, string extraction"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Modification</strong> - Patch vulnerabilities, add features"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎮",
+            "title": "Game Hacking & Modding",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Save File Editing</strong> - Modify game progress"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Memory Editing</strong> - Cheat development"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Asset Extraction</strong> - Game resource analysis"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Mod Development</strong> - File format reverse engineering"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🦠",
+            "title": "Malware Analysis & Forensics",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Static Analysis</strong> - Without execution"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Entropy Analysis</strong> - Detect packed/encrypted code"
+                },
+                {
+                  "emoji": "🔤",
+                  "text": "<strong>String Analysis</strong> - Extract indicators"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Structure Analysis</strong> - PE/ELF header inspection"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Memory Forensics</strong> - RAM dump analysis"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "plugins-scripting",
+        "title": "Plugins & Scripting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Extending ImHex"
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "Plugin System",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>C++ Plugins</strong> - High-performance native extensions"
+                },
+                {
+                  "emoji": "🦀",
+                  "text": "<strong>Rust Plugins</strong> - Memory-safe extensions"
+                },
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Lua Scripting</strong> - Quick automation scripts"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Community Plugins</strong> - Shared on GitHub"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Official Plugins</strong> - Built-in powerful features"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Built-in Scripting Engine",
+            "box": {
+              "code": "// Example: Automated string extraction\nfn extract_strings(min_length) {\n    let strings = [];\n    let current_string = \"\";\n    \n    for (let i = 0; i < $size; i++) {\n        let byte = read(i);\n        if (byte >= 0x20 && byte <= 0x7E) {\n            current_string += char(byte);\n        } else {\n            if (current_string.length >= min_length) {\n                strings.append(current_string);\n            }\n            current_string = \"\";\n        }\n    }\n    \n    return strings;\n}\n\n// Usage\nlet found_strings = extract_strings(4);",
+              "title": "<strong>Automation and custom analysis</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "integration",
+        "title": "Tool Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Working with Other Tools"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Common Workflows",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🦖",
+                  "text": "<strong>Ghidra Integration</strong> - Export structures, share findings"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>IDA Pro</strong> - Complementary binary analysis"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Radare2/r2</strong> - Command-line workflow integration"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Python Scripts</strong> - Automated analysis pipelines"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Wireshark</strong> - Network capture file analysis"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Performance & Large Files",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Handling Large Data"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Large File Support",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Memory Mapping</strong> - Access files larger than RAM"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Lazy Loading</strong> - Load data on demand"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Efficient Search</strong> - Optimized algorithms"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Progressive Analysis</strong> - Work while loading"
+                },
+                {
+                  "emoji": "💽",
+                  "text": "<strong>Multi-GB Files</strong> - Tested with 50GB+ files"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "bookmarks-notes",
+        "title": "Bookmarks & Annotation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Organization Features"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Bookmarking System",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Region Bookmarks</strong> - Mark important areas"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Annotations</strong> - Add notes and comments"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Color Coding</strong> - Visual organization"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Quick Navigation</strong> - Jump between bookmarks"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Export</strong> - Save analysis session"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "customization",
+        "title": "UI Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Themes & Preferences"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Customization Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌙",
+                  "text": "<strong>Dark/Light Themes</strong> - Built-in and custom"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Color Schemes</strong> - Syntax highlighting"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Layout</strong> - Panel arrangement"
+                },
+                {
+                  "emoji": "⌨️",
+                  "text": "<strong>Shortcuts</strong> - Custom key bindings"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Preferences</strong> - Behavior customization"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "portable-mode",
+        "title": "Portable & Forensic Use",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Field Analysis"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Portable Mode",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>USB Deployment</strong> - Run from portable drive"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Forensic Use</strong> - Minimal system modification"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Quick Deployment</strong> - No installation required"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Configuration</strong> - Portable settings"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Incident Response</strong> - Rapid analysis toolkit"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reverse Engineering Workflow"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Effective Analysis Strategy",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>Start with Entropy</strong> - Identify packed/encrypted regions"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>Search Magic Bytes</strong> - Identify file format"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>Extract Strings</strong> - Find text clues"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>Apply Patterns</strong> - Use existing or create new"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>Bookmark Findings</strong> - Organize discoveries"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>Validate Assumptions</strong> - Cross-reference findings"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "<strong>Document</strong> - Record analysis process"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-practices",
+        "title": "Security Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Safe Analysis"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Considerations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Isolated Environment</strong> - Use VMs for malware"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Backup Originals</strong> - Preserve evidence"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Hash Verification</strong> - Ensure file integrity"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Documentation</strong> - Maintain analysis trail"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Legal Compliance</strong> - Follow regulations"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "ImHex Quick Reference",
+            "box": {
+              "code": "# Navigation\nCtrl+F - Search\nCtrl+G - Go to offset\nCtrl+B - Bookmark position\n\n# Editing\nCtrl+C/V - Copy/Paste hex\nCtrl+Z/Y - Undo/Redo\nCtrl+S - Save file\n\n# View\nF5 - Reload patterns\nF6 - Toggle pattern view\nF7 - Toggle data inspector\nF8 - Toggle tools\n\n# Analysis\nCtrl+Shift+F - Advanced search\nCtrl+E - Entropy analysis\nCtrl+Shift+S - String search\n\n# Patterns\nCtrl+Space - Pattern autocomplete\nCtrl+Shift+P - Load pattern\nCtrl+Shift+E - Export pattern",
+              "title": "<strong>Essential shortcuts and commands</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-demo",
+        "title": "Hands-On Demo",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Live Demo Workflow",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Open sample firmware file"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Apply ELF pattern for structure"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Analyze entropy for packed code"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Extract and analyze strings"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Search for specific magic bytes"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Bookmark important findings"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Create custom pattern for unknown structure"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Export modified file"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - imhex.werwolv.net/docs"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/WerWolv/ImHex"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Discord Community</strong> - Active user community"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Pattern Library</strong> - Community patterns repository"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Live demo videos"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Sample Files</strong> - Practice with real binaries"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "career-paths",
+        "title": "Career Applications",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Professional Opportunities"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Relevant Job Roles",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Malware Analyst</strong> - Reverse engineer malicious software"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Firmware Engineer</strong> - Embedded systems development"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Digital Forensics</strong> - Evidence analysis"
+                },
+                {
+                  "emoji": "🎮",
+                  "text": "<strong>Game Security</strong> - Anti-cheat development"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>IoT Security</strong> - Device firmware analysis"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud Security</strong> - Binary analysis at scale"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What is the main advantage of Pattern Language?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How does ImHex handle files larger than RAM?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the difference between hex search and pattern search?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How can you detect encrypted regions in a file?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What are common use cases for binary diffing?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "ImHex = Advanced open-source hex editor"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Free alternative to commercial tools"
+                },
+                {
+                  "emoji": "🔤",
+                  "text": "Pattern Language enables automatic structure parsing"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "High performance with large files"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Rich visualization and analysis features"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential tool for reverse engineering"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss ImHex features, reverse engineering, or binary analysis!<br><span class=\"gradient-accent\">All technical questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔷</span> Ready to master binary analysis?<br><span class=\"gradient-accent\">Start your reverse engineering journey today!</span>",
+              "note": "Open Source • Powerful • Professional"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering security researchers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

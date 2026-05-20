@@ -1,0 +1,353 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Advanced Slide Components",
+            "subtitle": "Building Engaging Technical Presentations with BUDE",
+            "backgroundImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "comparison-examples",
+        "title": "Comparison Slides",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Comparison Slide Examples",
+            "subtitle": "Side-by-side analysis for clear decision making"
+          },
+          {
+            "type": "comparison",
+            "title": "React vs Vue.js - Framework Comparison",
+            "leftTitle": "React",
+            "leftPoints": [
+              "⚛️ Developed by Facebook/Meta (2013)",
+              "💻 JSX syntax - JavaScript + HTML",
+              "📦 2M+ weekly npm downloads",
+              "⚡ Virtual DOM for optimized updates",
+              "🔗 One-way data flow (props down, events up)",
+              "🛠️ Rich ecosystem (Redux, React Router)",
+              "🏢 Enterprise adoption: Facebook, Netflix, Airbnb"
+            ],
+            "rightTitle": "Vue.js",
+            "rightPoints": [
+              "🎯 Independent open-source project (2014)",
+              "📝 Template-based with single-file components",
+              "🚀 Progressive framework design",
+              "🔮 Reactive data system with proxies",
+              "🔄 Two-way binding with v-model",
+              "📚 Built-in routing and state management",
+              "🏢 Adoption: Alibaba, GitLab, BMW"
+            ],
+            "note": {
+              "text": "Both frameworks have excellent performance - choice depends on project requirements and team expertise"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "SQL vs NoSQL Database Architectures",
+            "leftTitle": "SQL Databases",
+            "leftPoints": [
+              "🏗️ Structured schema with tables and relations",
+              "🔒 ACID compliance for data integrity",
+              "📈 Vertical scaling (more powerful hardware)",
+              "🔍 Complex queries with JOIN operations",
+              "💰 Mature with extensive tooling",
+              "🎯 Best for: Banking, e-commerce, ERP systems"
+            ],
+            "rightTitle": "NoSQL Databases",
+            "rightPoints": [
+              "🔄 Flexible, schema-less design",
+              "⚖️ BASE properties (Basically Available)",
+              "🌐 Horizontal scaling (more servers)",
+              "🚀 Fast read/write for simple queries",
+              "📊 Various types: Document, Key-Value, Graph",
+              "🎯 Best for: Social media, IoT, real-time analytics"
+            ],
+            "note": {
+              "text": "Modern applications often use both - SQL for transactions, NoSQL for scalability"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Microservices vs Monolith Architecture",
+            "leftTitle": "Monolithic Architecture",
+            "leftPoints": [
+              "🏛️ Single, unified codebase",
+              "🔧 Simplified development and testing",
+              "🚀 Easy deployment (one artifact)",
+              "💾 Shared memory for inter-process communication",
+              "🔄 Tightly coupled components",
+              "⚡ Performance benefits for local calls"
+            ],
+            "rightTitle": "Microservices",
+            "rightPoints": [
+              "🧩 Loosely coupled, independent services",
+              "🎯 Technology diversity per service",
+              "📈 Independent scaling capabilities",
+              "🔗 Network calls for communication",
+              "🛡️ Fault isolation between services",
+              "🚢 Continuous deployment enabled"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "image-text-examples",
+        "title": "Image/Text Layouts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Image and Text Layouts",
+            "subtitle": "Visual storytelling with technical content"
+          },
+          {
+            "type": "imageText",
+            "title": "Docker Container Architecture",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Docker containers visualization",
+            "caption": "Container isolation and resource management",
+            "content": "<h4>🏗️ Container Technology Revolution</h4><p>Docker containers package applications with all dependencies, ensuring consistent behavior across environments from development to production.</p><ul><li>⚡ <strong>Lightweight</strong> - Shares host OS kernel, minimal overhead</li><li>🔒 <strong>Isolation</strong> - Process and filesystem separation</li><li>📦 <strong>Portability</strong> - Run anywhere with Docker runtime</li><li>🔄 <strong>Version Control</strong> - Image layers and tags</li><li>🏗️ <strong>Microservices</strong> - Perfect for distributed architectures</li></ul><p><em>Containers start in milliseconds vs minutes for VMs</em></p>"
+          },
+          {
+            "type": "imageText",
+            "title": "Kubernetes Cluster Orchestration",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Kubernetes cluster management",
+            "caption": "Automated container deployment and scaling",
+            "content": "<h4>🎛️ Production-Grade Container Orchestration</h4><p>Kubernetes automates deployment, scaling, and operations of application containers across clusters of hosts.</p><ul><li>📈 <strong>Auto-scaling</strong> - Horizontal and vertical pod scaling</li><li>🛡️ <strong>Self-healing</strong> - Automatic restarts and replacements</li><li>🔄 <strong>Rolling updates</strong> - Zero-downtime deployments</li><li>🔍 <strong>Service discovery</strong> - DNS-based load balancing</li><li>💾 <strong>Storage orchestration</strong> - Mount storage systems automatically</li></ul>"
+          },
+          {
+            "type": "imageText",
+            "title": "CI/CD Pipeline Automation",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Continuous Integration and Deployment pipeline",
+            "caption": "Automated software delivery lifecycle",
+            "content": "<h4>🚀 Continuous Integration & Deployment</h4><p>Modern DevOps practices enable teams to deliver software rapidly and reliably through automated pipelines.</p><ul><li>🔨 <strong>Continuous Integration</strong> - Merge code changes frequently</li><li>✅ <strong>Automated Testing</strong> - Unit, integration, and E2E tests</li><li>📦 <strong>Artifact Generation</strong> - Build and store deployable packages</li><li>🚀 <strong>Continuous Deployment</strong> - Automatic production releases</li><li>📊 <strong>Monitoring</strong> - Real-time performance tracking</li></ul>"
+          }
+        ]
+      },
+      {
+        "id": "quiz-examples",
+        "title": "Interactive Quizzes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Interactive Quiz Examples",
+            "subtitle": "Engage your audience with knowledge checks"
+          },
+          {
+            "type": "quiz",
+            "question": "What does REST stand for in web API design?",
+            "options": [
+              "Relational Exchange State Transfer",
+              "Representational State Transfer",
+              "Remote Execution State Transaction",
+              "Resource Exchange System Transfer"
+            ],
+            "correctAnswer": 1,
+            "explanation": "REST stands for Representational State Transfer. It's an architectural style that uses stateless communication and standard HTTP methods. RESTful APIs are resource-based and support caching, layering, and uniform interfaces."
+          },
+          {
+            "type": "quiz",
+            "question": "Which data structure operates on LIFO (Last In, First Out) principle?",
+            "options": ["Queue", "Array", "Stack", "Linked List"],
+            "correctAnswer": 2,
+            "explanation": "A Stack operates on LIFO principle - the last element added is the first removed. Used in function call stacks, browser history, undo operations, and expression evaluation. Time complexity: O(1) for push/pop operations."
+          },
+          {
+            "type": "quiz",
+            "question": "What is the time complexity of binary search in a sorted array?",
+            "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+            "correctAnswer": 1,
+            "explanation": "Binary search has O(log n) complexity. Each iteration halves the search space. For 1 million elements, it takes only 20 comparisons (2^20 ≈ 1 million). Much faster than linear search O(n)."
+          },
+          {
+            "type": "quiz",
+            "question": "Which protocol provides secure communication over computer networks?",
+            "options": ["HTTP", "FTP", "SSL/TLS", "SMTP"],
+            "correctAnswer": 2,
+            "explanation": "SSL/TLS (Secure Sockets Layer/Transport Layer Security) provides encrypted communication, authentication, and data integrity. Used in HTTPS to secure web traffic, APIs, and sensitive data transmission."
+          }
+        ]
+      },
+      {
+        "id": "video-examples",
+        "title": "Video Embeds",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Embedded Video Examples",
+            "subtitle": "Multimedia content for enhanced learning"
+          },
+          {
+            "type": "video",
+            "title": "Introduction to Git Version Control",
+            "videoUrl": "https://www.youtube.com/watch?v=USjZcfj8yxE",
+            "caption": "Learn Git fundamentals in 15 minutes",
+            "note": {
+              "text": "Git is essential for modern software development and collaboration"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Video Integration Features",
+            "box": {
+              "title": "🎬 Supported Video Platforms",
+              "list": [
+                {
+                  "emoji": "▶️",
+                  "text": "YouTube - Full embed support with controls"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "Vimeo - High-quality professional hosting"
+                },
+                {
+                  "emoji": "📹",
+                  "text": "Self-hosted MP4/WebM - Direct file uploads"
+                },
+                {
+                  "emoji": "🔊",
+                  "text": "Autoplay controls - Configurable settings"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "Mobile responsive - Adapts to screen size"
+                }
+              ]
+            },
+            "note": {
+              "text": "Videos automatically scale to maintain 16:9 aspect ratio across all devices"
+            }
+          }
+        ]
+      },
+
+      {
+        "id": "diagram-examples",
+        "title": "Diagrams",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Diagram Examples",
+            "subtitle": "Architecture and workflow visualization"
+          },
+          {
+            "type": "diagram",
+            "title": "Three-Tier Web Application Architecture",
+            "content": "┌─────────────────────────────────────────────────────────────┐\n│                    Presentation Layer                       │\n│              (Client-Side / Frontend)                       │\n├─────────────────────────────────────────────────────────────┤\n│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │\n│  │   React     │  │   Vue.js    │  │    Mobile Apps      │  │\n│  │   App       │  │   App       │  │  (iOS/Android)      │  │\n│  └─────────────┘  └─────────────┘  └─────────────────────┘  │\n└─────────────────────────┬───────────────────────────────────┘\n                          │ HTTP/HTTPS\n                          │\n┌─────────────────────────▼───────────────────────────────────┐\n│                    Application Layer                       │\n│               (Server-Side / Backend)                      │\n├─────────────────────────────────────────────────────────────┤\n│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │\n│  │  API Gateway│  │  Auth       │  │   Business Logic    │  │\n│  │  & Routing  │  │  Service    │  │   (Microservices)   │  │\n│  └─────────────┘  └─────────────┘  └─────────────────────┘  │\n└─────────────────────────┬───────────────────────────────────┘\n                          │\n                          │ Database Queries\n                          │\n┌─────────────────────────▼───────────────────────────────────┐\n│                    Data Layer                              │\n│                (Persistence)                               │\n├─────────────────────────────────────────────────────────────┤\n│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │\n│  │  PostgreSQL │  │   Redis     │  │    MongoDB          │  │\n│  │  (SQL)      │  │  (Cache)    │  │    (NoSQL)          │  │\n│  └─────────────┘  └─────────────┘  └─────────────────────┘  │\n└─────────────────────────────────────────────────────────────┘",
+            "note": {
+              "text": "Separation of concerns allows independent scaling and maintenance of each layer"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Git Feature Branch Workflow",
+            "content": "Main Branch Timeline:\n\nmain:    A───B───C───D───E───F───M───N\n          \\              /        \\\n           \\            /          \\\nfeature-1:  G───H───I─┘            \\\n                                    \\\nfeature-2:                          J───K───L\n\n\nWorkflow Steps:\n1. 🏗️  Create feature branch from main\n2. 💻  Make commits (G, H, I) on feature-1\n3. 🔄  Regularly merge main into feature branch\n4. 📝  Open Pull Request for code review\n5. 👀  Team review and approval\n6. ✅  Automated CI/CD pipeline runs\n7. 🚀  Merge to main (M, N)\n8. 🗑️  Delete feature branch after merge\n\nBest Practices:\n• Keep features small and focused\n• Write meaningful commit messages\n• Review code thoroughly before merging\n• Ensure all tests pass in CI pipeline",
+            "note": {
+              "text": "Feature branches enable parallel development while maintaining stable main branch"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Microservices Communication Patterns",
+            "content": "Service Discovery & Communication:\n\n┌─────────────┐    HTTP/REST     ┌─────────────┐\n│   API       │◄────────────────►│   User      │\n│  Gateway    │                  │  Service    │\n└─────────────┘                  └─────────────┘\n        │                              │\n        │                              │\n        ▼                              ▼\n┌─────────────┐    gRPC/Protobuf ┌─────────────┐\n│  Service    │◄────────────────►│  Order      │\n│ Discovery   │                  │  Service    │\n│ (Consul)    │                  └─────────────┘\n└─────────────┘                         │\n        │                              │ Message Queue\n        │                              ▼\n        │                      ┌─────────────┐\n        │                      │   RabbitMQ  │\n        │                      │   / Kafka   │\n        ▼                      └─────────────┘\n┌─────────────┐    Database        │\n│  Config     │   Connections     ▼\n│  Server     │◄────────────────┌─────────────┐\n│ (Git repo)  │                 │ Payment     │\n└─────────────┘                 │ Service     │\n                                └─────────────┘",
+            "note": {
+              "text": "Multiple communication patterns used based on latency, reliability, and data volume requirements"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mixed-content",
+        "title": "Combined Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Combining Multiple Components",
+            "subtitle": "Creating rich, engaging presentation experiences"
+          },
+          {
+            "type": "content",
+            "title": "Comprehensive Feature Overview",
+            "box": {
+              "title": "🚀 Enhanced Slide Components",
+              "list": [
+                {
+                  "emoji": "↔️",
+                  "text": "Comparison Slides - Side-by-side analysis"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "Image/Text Layouts - Visual storytelling"
+                },
+                {
+                  "emoji": "❓",
+                  "text": "Interactive Quizzes - Audience engagement"
+                },
+                { "emoji": "🎥", "text": "Video Embeds - Multimedia content" },
+                {
+                  "emoji": "📊",
+                  "text": "Data Charts - Bar, line, pie visualizations"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "Architecture Diagrams - System design"
+                },
+                { "emoji": "🎨", "text": "Custom Styling - Brand consistency" },
+                {
+                  "emoji": "📱",
+                  "text": "Mobile Responsive - Cross-device compatibility"
+                }
+              ]
+            },
+            "note": {
+              "text": "All components are accessibility-friendly and support keyboard navigation"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Presentation Engine Evolution",
+            "leftTitle": "Version 1.0 (Basic)",
+            "leftPoints": [
+              "📄 Simple content slides only",
+              "🎨 Limited layout options",
+              "📊 Static images and text",
+              "🔇 No interactive elements",
+              "📱 Basic mobile support",
+              "⚡ Manual content updates"
+            ],
+            "rightTitle": "Version 2.0 (Enhanced)",
+            "rightPoints": [
+              "🎭 10+ specialized slide types",
+              "🏗️ Flexible grid and responsive layouts",
+              "📹 Rich media integration",
+              "🎯 Interactive quizzes and polls",
+              "📱 Progressive Web App capabilities",
+              "⚡ Real-time content updates"
+            ]
+          },
+          {
+            "type": "imageText",
+            "title": "Building Modern Presentations",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Modern presentation design",
+            "caption": "Create engaging technical presentations",
+            "content": "<h4>🎨 Design Principles</h4><p>Effective technical presentations combine clear information architecture with engaging visual design.</p><ul><li>🎯 <strong>Audience Focus</strong> - Tailor content to technical level</li><li>📖 <strong>Storytelling</strong> - Create narrative flow</li><li>🔄 <strong>Interactivity</strong> - Engage with quizzes and polls</li><li>📊 <strong>Data Visualization</strong> - Make complex data understandable</li><li>🚀 <strong>Performance</strong> - Fast loading and smooth animations</li></ul>"
+          }
+        ]
+      }
+    ]
+  }
+}

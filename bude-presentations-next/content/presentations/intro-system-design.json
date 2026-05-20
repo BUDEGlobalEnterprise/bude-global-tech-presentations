@@ -1,0 +1,858 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "module_1",
+        "title": "Module 1: Foundations of Scalable Systems",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Three Pillars of System Design",
+            "subtitle": "Reliability, Scalability, Maintainability in the Age of Cloud",
+            "box": {
+              "title": "The Three Pillars",
+              "list": [
+                "<strong>Reliability</strong>: System continues to work correctly despite faults",
+                "<strong>Scalability</strong>: System can handle growth in load without degradation",
+                "<strong>Maintainability</strong>: System can be operated, maintained, and evolved efficiently"
+              ]
+            },
+            "note": {
+              "text": "Reliability, Scalability, and Maintainability are fundamental."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Understanding Load: From Request Patterns to Data Volumes",
+            "box": {
+              "title": "Load Characteristics",
+              "list": [
+                "<strong>Read-Heavy</strong>: 100:1 to 1000:1 (Social media feeds, News websites, Product catalogs)",
+                "<strong>Write-Heavy</strong>: 1:100 to 1:1000 (IoT sensor data, Log aggregation, Financial transactions)",
+                "<strong>Mixed Workload</strong>: 10:1 to 1:10 (E-commerce, SaaS applications, Collaboration tools)"
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Design Principles: From Theory to Practice",
+            "box": {
+              "title": "Core Design Principles",
+              "list": [
+                "<strong>Simplicity</strong>: The simplest solution that meets requirements",
+                "<strong>Loose Coupling</strong>: Components interact through well-defined interfaces",
+                "<strong>Idempotency</strong>: Operations can be applied multiple times without changing result",
+                "<strong>Graceful Degradation</strong>: System maintains partial functionality during failures"
+              ]
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What does 99.99% availability mean in minutes of downtime per year?",
+            "options": [
+              "8.76 hours",
+              "52.56 minutes",
+              "5.26 minutes",
+              "31.5 seconds"
+            ],
+            "correctAnswer": 1,
+            "explanation": "99.99% availability = 0.01% downtime = 0.0001 * 525,600 minutes/year = 52.56 minutes"
+          },
+          {
+            "type": "quiz",
+            "question": "Which pillar focuses on reducing operational complexity?",
+            "options": [
+              "Reliability",
+              "Scalability",
+              "Maintainability",
+              "All of them"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Maintainability includes operability (ease of operation) and simplicity (reduced complexity)"
+          },
+          {
+            "type": "quiz",
+            "question": "What does p99 latency represent?",
+            "options": [
+              "Average latency",
+              "Median latency",
+              "99th percentile latency",
+              "Worst-case latency"
+            ],
+            "correctAnswer": 2,
+            "explanation": "p99 means 99% of requests are faster than this value. It captures tail latency."
+          }
+        ]
+      },
+      {
+        "id": "module_2",
+        "title": "Module 2: CAP Theorem and Beyond",
+        "slides": [
+          {
+            "type": "content",
+            "title": "CAP Theorem: The Fundamental Constraint",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Beyond CAP: PACELC Theorem",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Consistency Models: From Strong to Eventual",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Achieving Consistency in AP Systems",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_3",
+        "title": "Module 3: Data Replication Strategies",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Replication Models: Single vs Multi vs Leaderless",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Replication Implementation: Synchronous vs Asynchronous",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_4",
+        "title": "Module 4: Load Balancing & Traffic Management",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Load Balancer: Traffic Cop of Distributed Systems",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Load Balancing Algorithms: Choosing the Destination",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Health Checks & Failover Mastery",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Global Server Load Balancing (GSLB) & Anycast",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>GSLB (DNS-based)</strong>: undefined",
+                "<strong>Anycast Routing</strong>: undefined"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Modern Load Balancing: Ingress & Service Mesh",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_5",
+        "title": "Module 5: Caching Strategies & Content Delivery",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Power of Caching: Why, Where, and How?",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Caching Patterns: Managing Data Flow",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Eviction Policies: Deciding What to Forget",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Distributed Caching: Redis vs Memcached",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Content Delivery Networks (CDN): Caching at the Edge",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_6",
+        "title": "Module 6: Database Sharding & Partitioning",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Scaling the Database: Vertical vs Horizontal",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Partitioning Strategies: How to Split the Data",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: Split tables by columns (e.g., move BLOBs to a separate table)",
+                "<strong>undefined</strong>: Split tables by rows based on a key"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Shard Key: The Most Important Decision",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Consistent Hashing: The Scaling Secret",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>mechanism</strong>: Map keys and nodes onto a logical ring (0 to 2^32-1)",
+                "<strong>assignment</strong>: A key is assigned to the first node encountered moving clockwise",
+                "<strong>node_addition</strong>: Only keys between the new node and its predecessor need to move",
+                "<strong>virtual_nodes</strong>: Map one physical node to multiple points on the ring to improve balance"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Price of Sharding: New Challenges",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_7",
+        "title": "Module 7: Communication Protocols (HTTP, gRPC, WebSockets)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Networking Fundamentals: The Baseline",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "HTTP Evolution: From 1.1 to 3",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Real-time Communication: WebSockets vs Long Polling",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "gRPC: High-Performance Internal APIs",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Message Queues: Asynchronous Communication",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Point-to-Point (Queue)</strong>: undefined",
+                "<strong>Pub/Sub (Topic)</strong>: undefined"
+              ]
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_8",
+        "title": "Module 8: Microservices & Service Discovery",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Monolith vs Microservices: The Trade-off",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "API Gateway: The Entry Point",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Service Discovery: Finding the IP in a Fluid World",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Distributed Data & The Saga Pattern",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>name</strong>: Saga Pattern",
+                "<strong>mechanism</strong>: Sequence of local transactions. Each step has a 'compensating transaction' if it fails.",
+                "<strong>types</strong>: [object Object],[object Object]"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Sidecar & Service Mesh: Offloading Complexity",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_9",
+        "title": "Module 9: Observability & Monitoring",
+        "slides": [
+          {
+            "type": "content",
+            "title": "The Three Pillars of Observability",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Four Golden Signals & SLIs/SLOs",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Metrics & Logging at Scale",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Distributed Tracing: The Invisible Thread",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: Unique ID for the entire user request across all services",
+                "<strong>undefined</strong>: Unique ID for a single operation within a service",
+                "<strong>undefined</strong>: Passing IDs through HTTP headers to link spans together"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Alerting & Incident Response",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_10",
+        "title": "Module 10: Fault Tolerance & Resilience Patterns",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Embracing Failure: Designing for the Inevitable",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Retries, Backoff, and Jitter",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Retries</strong>: ",
+                "<strong>Exponential Backoff</strong>: ",
+                "<strong>Jitter</strong>: "
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Circuit Breaker Pattern",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Bulkheads & Dead Letter Queues",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: Isolating resources (thread pools, connections) for different operations",
+                "<strong>undefined</strong>: A secondary queue for messages that couldn't be processed after N retries",
+                "<strong>undefined</strong>: Always set a maximum time to wait for a response"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Idempotency: The Key to Safe Retries",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": "module_11",
+        "title": "Module 11: Case Study - URL Shortener (TinyURL)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Problem Statement & Quantitative Analysis",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "API Design & Data Modeling",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>type</strong>: NoSQL (Key-Value) or Wide-Column",
+                "<strong>reason</strong>: Simple key-value lookup, high write throughput, horizontal scale",
+                "<strong>tools</strong>: DynamoDB,Cassandra,Redis (for hot URLs)"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Core Algorithm: Short Link Generation",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Scalability & Caching Strategy",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Analytics & High-Volume Redirects",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": {
+              "text": "TinyURL is about balancing read speed and unique key management."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_12",
+        "title": "Module 12: Case Study - Twitter News Feed",
+        "slides": [
+          {
+            "type": "content",
+            "title": "News Feed: The Scale Challenge",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Fan-out: Push vs Pull Models",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Hybrid Approach: Solving for Celebrities",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>common_users</strong>: Use the Push model (write to followers' caches)",
+                "<strong>celebrities</strong>: Use the Pull model (followers pull from the celebrity's tweet list on-demand)",
+                "<strong>mechanism</strong>: Use a toggle bit in the 'Follow' relationship to decide which strategy to use",
+                "<strong>tool</strong>: Redis / Memcached",
+                "<strong>structure</strong>: List of Tweet IDs for each user's feed",
+                "<strong>limit</strong>: Store top 1000 IDs per user"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Data Modeling & Storage",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>User/Follower DB</strong> (Relational (PostgreSQL/MySQL)): Consistency for user profiles and follow graph",
+                "<strong>Tweet DB</strong> (NoSQL Wide-Column (Cassandra/DynamoDB)): High write throughput, partition by user_id",
+                "<strong>Feed Cache</strong> (In-memory (Redis)): Blazing fast timeline retrieval",
+                "<strong>Media Store</strong> (Object Storage (S3) + CDN): Storing images/videos"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Feed Optimization & Ranking",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Chronological vs Algorithmic</strong>: undefined",
+                "<strong>Graph Service</strong>: undefined",
+                "<strong>Social Graph Cache</strong>: undefined"
+              ]
+            },
+            "note": {
+              "text": "Building a news feed is about managing massive write-amplification."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_13",
+        "title": "Module 13: Case Study - WhatsApp Real-time Messaging",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Real-time Messaging: Requirements",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Connection Management: WebSockets & Gateway",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Chat Service</strong>: Manages persistent WebSocket connections with clients",
+                "<strong>Presence Service</strong>: Tracks user online/offline status via heartbeats",
+                "<strong>Message Service</strong>: Handles message storage and retrieval for offline users",
+                "<strong>Push Notification Service</strong>: Alerts offline users (Apple APNs / Google FCM)"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Message Delivery Flow",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "1. User A sends message to Chat Server via WebSocket",
+                "2. Chat Server stores message in DB (Delivery status: Sent)",
+                "3. Chat Server asks Connection Map: 'Where is User B?'",
+                "4a. If User B is Online: Forward message to User B's Chat Server",
+                "4b. If User B is Offline: Send Push Notification via APNs/FCM",
+                "5. User B acknowledges: Send 'Delivered' receipt back to User A",
+                "<strong>type</strong>: NoSQL Wide-column (Cassandra/HBase)",
+                "<strong>reason</strong>: Sequential writes are very fast, handling millions of small messages/sec, easy to partition by conversation_id"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Presence Service: Are you there?",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>heartbeat</strong>: Client sends 'I am here' ping every 30s to Redis/Keep-alive store",
+                "<strong>timeout</strong>: If no ping for 1 min, mark as Offline",
+                "<strong>fan_out</strong>: When status changes, push update to all friends' chat screens"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Encryption & Security (Signal Protocol)",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>End-to-End Encryption (E2EE)</strong>: undefined",
+                "<strong>Diffie-Hellman Key Exchange</strong>: undefined",
+                "<strong>Double Ratchet Algorithm</strong>: undefined"
+              ]
+            },
+            "note": {
+              "text": "WhatsApp is a masterclass in managing persistent state and high-frequency events."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_14",
+        "title": "Module 14: Case Study - Uber (Geospatial & Dynamic Pricing)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Geospatial Scale: The Problem",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Geospatial Indexing: QuadTrees vs S2 cells",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "High-Level Architecture",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>Driver Dispatch Service</strong>: Receives location updates and updates the Geo-Index (Redis S2)",
+                "<strong>Rider Demand Service</strong>: Receives ride requests and queries the Geo-Index for nearby drivers",
+                "<strong>Matching Service</strong>: Algorithmically pairs riders and drivers (The Matchmaker)",
+                "<strong>Dynamic Pricing Engine</strong>: Analyzes supply vs demand in real-time to set Surge Pricing"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Dynamic Pricing (Surge): Real-time Analytics",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>undefined</strong>: undefined",
+                "<strong>input</strong>: Kafka streams of (Location, Request_Type, Demand_Count, Supply_Count)",
+                "<strong>processing</strong>: Flink / Spark Streaming calculates multiplier per S2 cell every minute",
+                "<strong>output</strong>: Update the price multiplier for riders in that cell"
+              ]
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Matching & Distributed Locking",
+            "box": {
+              "title": "Technical Details",
+              "list": [
+                "<strong>mechanism</strong>: Distributed transaction or Atomic lock in Redis",
+                "<strong>process</strong>: 1. Find best driver. 2. Attempt to 'Lock' driver in Redis for 30s. 3. If success, notify driver. 4. If driver accepts, finalize match. 5. If driver rejects, release lock and find next best."
+              ]
+            },
+            "note": {
+              "text": "Uber is a mix of high-frequency geospatial state and real-time economic processing."
+            }
+          }
+        ]
+      },
+      {
+        "id": "module_15",
+        "title": "Module 15: Case Study - Netflix (CDN & Chaos Engineering)",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Netflix: The Streaming Data Plane",
+            "box": {
+              "title": "Key Concepts",
+              "list": []
+            }
+          },
+          {
+            "type": "content",
+            "title": "Open Connect: Netflix's Private CDN",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Video Encoding & Transcoding Pipeline",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "Chaos Engineering: The Simian Army",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": null
+          },
+          {
+            "type": "content",
+            "title": "The Personalization Engine",
+            "box": {
+              "title": "Technical Details",
+              "list": []
+            },
+            "note": {
+              "text": "Netflix is a masterclass in global distribution and extreme resilience."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

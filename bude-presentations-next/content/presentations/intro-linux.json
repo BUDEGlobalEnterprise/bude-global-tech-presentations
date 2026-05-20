@@ -1,0 +1,949 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Linux",
+            "subtitle": "Complete Operating System Guide<br>From Beginner to Power User"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Linux?</strong> - History & Open Source"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>Linux vs Windows vs macOS</strong> - Comparison"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Linux Distributions</strong> - Ubuntu, Debian, Fedora, Arch"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Installation</strong> - Dual Boot, VM, Live USB"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Desktop Environments</strong> - GNOME, KDE, XFCE"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>File System</strong> - Directory Structure & Navigation"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Basic Commands</strong> - Essential Terminal Usage"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>System Administration</strong> - Users, Permissions, Processes"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Package Management</strong> - apt, yum, pacman"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Networking</strong> - SSH, Remote Access, Services"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Advanced Topics</strong> - Scripting, DevOps, Containers"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Career Paths</strong> - Certifications & Opportunities"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-linux",
+        "title": "What is Linux?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Linux"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Linux?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Created by</strong> - Linus Torvalds (1991)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - GNU GPL (Free and open source)"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Usage</strong> - 100% of supercomputers, 90% of cloud"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Platforms</strong> - Servers, desktops, mobile (Android), embedded"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Stability</strong> - Known for reliability and security"
+                }
+              ],
+              "title": "<span class=\"highlight\">Open-source Unix-like operating system</span> kernel"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Linux powers everything from tiny IoT devices to the International Space Station!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>1991</strong> - Linus Torvalds announces Linux kernel"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>1992</strong> - Licensed under GNU GPL"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>1993</strong> - Debian and Red Hat founded"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>1996</strong> - Linux 2.0 with SMP support"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2007</strong> - Android based on Linux kernel"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>Today</strong> - Dominates cloud and enterprise"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "OS Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux vs Windows vs macOS"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Operating System Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - Free, open source, highly customizable"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - Commercial, user-friendly, gaming"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - Unix-based, premium hardware, creative"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Linux</strong> - Superior security and stability"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Linux</strong> - No licensing costs"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Linux</strong> - Ultimate control and flexibility"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "distributions",
+        "title": "Linux Distributions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Popular Linux Distributions"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Major Distribution Families",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Ubuntu</strong> - User-friendly, great for beginners"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Debian</strong> - Stable, reliable, Ubuntu's parent"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Red Hat Enterprise Linux</strong> - Enterprise-grade"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Fedora</strong> - Cutting-edge features"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Arch Linux</strong> - DIY, minimal, rolling release"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Kali Linux</strong> - Security and penetration testing"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Choosing Your Distribution",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👶",
+                  "text": "<strong>Beginners</strong> - Ubuntu, Linux Mint"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Developers</strong> - Ubuntu, Fedora, Pop!_OS"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Enterprise</strong> - RHEL, CentOS, Ubuntu Server"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Advanced Users</strong> - Arch, Gentoo"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Embedded</strong> - Raspberry Pi OS, Yocto"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Linux"
+          },
+          {
+            "type": "content",
+            "emoji": "💿",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Dual Boot</strong> - Linux alongside Windows/macOS"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Virtual Machine</strong> - VirtualBox, VMware, Hyper-V"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Live USB</strong> - Try without installing"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud</strong> - AWS, Azure, Google Cloud"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>WSL</strong> - Windows Subsystem for Linux"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Creating Bootable USB",
+            "box": {
+              "code": "# Using dd command (Linux/macOS)\nsudo dd if=ubuntu.iso of=/dev/sdX bs=4M status=progress\n\n# Using Rufus (Windows)\n# 1. Download Rufus and ISO\n# 2. Select USB drive and ISO file\n# 3. Click Start\n\n# Using Etcher (Cross-platform)\n# 1. Download and install Etcher\n# 2. Select ISO and USB drive\n# 3. Click Flash!",
+              "title": "<strong>Prepare installation media</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "desktop-environments",
+        "title": "Desktop Environments",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux GUI Options"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Popular Desktop Environments",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>GNOME</strong> - Modern, clean, default for many distros"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>KDE Plasma</strong> - Highly customizable, feature-rich"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>XFCE</strong> - Lightweight, fast, stable"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Cinnamon</strong> - Traditional, Windows-like"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>MATE</strong> - GNOME 2 continuation, lightweight"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Pantheon</strong> - macOS-like, elementary OS"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "file-system",
+        "title": "File System Structure",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux Directory Hierarchy"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Essential Directories",
+            "box": {
+              "code": "/                 # Root directory\n├── bin/         # Essential user binaries\n├── boot/        # Boot loader files\n├── dev/         # Device files\n├── etc/         # Configuration files\n├── home/        # User home directories\n├── lib/         # Essential libraries\n├── media/       # Removable media mount points\n├── mnt/         # Temporary mount points\n├── opt/         # Optional software packages\n├── proc/        # Process information\n├── root/        # Root user's home\n├── sbin/        # System administration binaries\n├── tmp/         # Temporary files\n├── usr/         # User programs and data\n└── var/         # Variable data (logs, spool, etc.)",
+              "title": "<strong>Filesystem Hierarchy Standard</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "basic-commands",
+        "title": "Basic Commands",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential Linux Commands"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Navigation & File Operations",
+            "box": {
+              "code": "# Navigation\npwd                     # Print working directory\nls                      # List files\nls -la                  # List all files with details\ncd /path                # Change directory\ncd ~                    # Go to home directory\ncd ..                   # Go up one level\n\n# File operations\ncat file.txt            # Display file content\nless file.txt           # View file page by page\ncp file1 file2          # Copy file\nmv file1 file2          # Move/rename file\nrm file.txt             # Remove file\nrm -r directory/        # Remove directory recursively\nmkdir newdir            # Create directory\nrmdir emptydir          # Remove empty directory\n\n# File viewing\nhead file.txt           # Show first 10 lines\ntail file.txt           # Show last 10 lines\ntail -f log.txt         # Follow log file updates",
+              "title": "<strong>Fundamental commands</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Search & Information",
+            "box": {
+              "code": "# Search commands\nfind /home -name \"*.txt\"          # Find files by name\ngrep \"pattern\" file.txt           # Search text in file\ngrep -r \"pattern\" /path           # Recursive search\nlocate filename                   # Fast file search\nwhich command                    # Show command path\n\n# System information\nuname -a                          # System information\nwhoami                           # Current user\nhostname                         # System hostname\ndf -h                            # Disk space usage\ndu -sh directory/                # Directory size\nfree -h                          # Memory usage\n\n# Help system\nman command                      # Manual pages\ncommand --help                   # Quick help\ninfo command                     # Detailed info",
+              "title": "<strong>Finding and examining files</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-permissions",
+        "title": "Users & Permissions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "User Management & Security"
+          },
+          {
+            "type": "content",
+            "emoji": "👤",
+            "title": "User & Group Management",
+            "box": {
+              "code": "# User management\nwhoami                           # Current user\nwho                              # Logged in users\nsudo su -                        # Switch to root\nadduser john                     # Add new user\nusermod -aG sudo john           # Add user to sudo group\ndeluser john                     # Delete user\npasswd john                      # Change user password\n\n# Group management\ngroups                           # Current user's groups\naddgroup developers             # Create new group\nusermod -aG developers john     # Add user to group\ngroupdel developers              # Delete group",
+              "title": "<strong>Managing system users</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "File Permissions",
+            "box": {
+              "code": "# View permissions\nls -l file.txt\n# Output: -rwxr-xr-- 1 user group 1234 Jan 1 12:00 file.txt\n#          │└┬┘└┬┘└┬┘\n#          │ │  │  │ Others: r--\n#          │ │  │  Group: r-x\n#          │ │  Owner: rwx\n#          │ Directory: d, File: -, Link: l\n\n# Permission types\nr = read (4)    w = write (2)    x = execute (1)\n\n# Change permissions\nchmod 755 script.sh              # rwxr-xr-x\nchmod +x script.sh               # Add execute permission\nchmod go-w file.txt              # Remove write from group & others\n\n# Change ownership\nchown user:group file.txt        # Change owner and group\nchown user file.txt              # Change owner only\nchgrp group file.txt             # Change group only",
+              "title": "<strong>Understanding Linux permissions</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "package-management",
+        "title": "Package Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Software Installation"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Package Managers by Distribution",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Debian/Ubuntu</strong> - apt, dpkg"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>Red Hat/CentOS/Fedora</strong> - yum, dnf, rpm"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Arch Linux</strong> - pacman, yay"
+                },
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>openSUSE</strong> - zypper"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Universal</strong> - Snap, Flatpak, AppImage"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "APT Commands (Debian/Ubuntu)",
+            "box": {
+              "code": "# Update package lists\nsudo apt update\n\n# Upgrade installed packages\nsudo apt upgrade\n\n# Install new package\nsudo apt install package-name\n\n# Remove package\nsudo apt remove package-name\n\n# Remove package with configuration\nsudo apt purge package-name\n\n# Search for packages\napt search \"keyword\"\n\n# Show package information\napt show package-name\n\n# Clean up\nsudo apt autoremove\nsudo apt autoclean",
+              "title": "<strong>Advanced Package Tool</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "process-management",
+        "title": "Process Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Managing System Processes"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Process Commands",
+            "box": {
+              "code": "# View processes\nps aux                       # All processes\nps aux | grep nginx          # Filter processes\ntop                          # Interactive process viewer\nhtop                         # Enhanced top (install first)\n\n# Process management\nkill 1234                    # Terminate process by PID\nkill -9 1234                 # Force kill process\nkillall process-name         # Kill all processes by name\npkill pattern                # Kill processes by pattern\n\n# Background and foreground\ncommand &                    # Run command in background\njobs                         # List background jobs\nfg %1                        # Bring job 1 to foreground\nbg %1                        # Continue job in background\n\n# System monitoring\nuptime                       # System uptime and load\nfree -h                      # Memory usage\ndf -h                        # Disk space\niostat                      # I/O statistics",
+              "title": "<strong>Monitoring and controlling processes</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "networking",
+        "title": "Networking",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Network Configuration"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Network Commands",
+            "box": {
+              "code": "# Network configuration\nip addr show                 # Show IP addresses\nip route show                # Show routing table\nifconfig                    # Legacy interface config\n\n# Connectivity testing\nping google.com              # Test connectivity\ntraceroute google.com        # Trace network path\nnetstat -tulpn               # Show listening ports\nss -tulpn                    # Modern socket statistics\n\n# DNS and hosts\nnslookup google.com          # DNS lookup\ndig google.com               # Detailed DNS lookup\ncat /etc/hosts               # Local hostname resolution\n\n# Network services\nsystemctl status networking  # Network service status\nsystemctl restart networking # Restart network service",
+              "title": "<strong>Essential networking tools</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "SSH & Remote Access",
+            "box": {
+              "code": "# SSH connection\nssh username@hostname        # Basic SSH connection\nssh -p 2222 user@host        # Custom port\nssh -i key.pem user@host     # Use specific key file\n\n# SSH key generation\nssh-keygen -t rsa -b 4096    # Generate SSH key pair\nssh-copy-id user@host        # Copy public key to server\n\n# File transfer with SCP\nscp file.txt user@host:/path # Copy file to remote host\nscp user@host:/path/file.txt . # Copy file from remote host\n\n# File transfer with RSYNC\nrsync -avz /local/path/ user@host:/remote/path/ # Sync directories",
+              "title": "<strong>Secure remote connections</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "text-editors",
+        "title": "Text Editors",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux Text Editors"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Popular Text Editors",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Vim</strong> - Powerful, modal, steep learning curve"
+                },
+                {
+                  "emoji": "👶",
+                  "text": "<strong>Nano</strong> - Simple, beginner-friendly"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>VS Code</strong> - Modern, feature-rich, extensions"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Emacs</strong> - Extensible, Lisp-based"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Neovim</strong> - Modern Vim fork"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Basic Vim Usage",
+            "box": {
+              "code": "# Starting Vim\nvim filename.txt            # Open file in Vim\nvim                          # Start empty Vim\n\n# Modes\nESC                         # Normal mode (commands)\ni                           # Insert mode (typing)\n:                           # Command mode\n\n# Basic commands\n:w                          # Save file\n:q                          # Quit\n:wq                         # Save and quit\n:q!                         # Quit without saving\n\n# Navigation\nh j k l                     # Left, Down, Up, Right\n0                           # Beginning of line\n$                           # End of line\nG                           # End of file\ngg                          # Beginning of file\n\n# Editing\ndd                          # Delete line\nyy                          # Yank (copy) line\np                           # Paste\nu                           # Undo\nCtrl+r                      # Redo",
+              "title": "<strong>Essential Vim commands</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scripting",
+        "title": "Bash Scripting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Shell Scripting Basics"
+          },
+          {
+            "type": "content",
+            "emoji": "🐚",
+            "title": "Basic Bash Script",
+            "box": {
+              "code": "#!/bin/bash\n# This is a comment\n\n# Variables\nNAME=\"John\"\nAGE=30\n\n# Print variables\necho \"Hello, $NAME!\"\necho \"You are $AGE years old.\"\n\n# Command substitution\nCURRENT_DIR=$(pwd)\necho \"Current directory: $CURRENT_DIR\"\n\n# Conditional statements\nif [ $AGE -gt 18 ]; then\n    echo \"You are an adult.\"\nelse\n    echo \"You are a minor.\"\nfi\n\n# Loops\nfor i in {1..5}; do\n    echo \"Number: $i\"\ndone\n\n# Functions\ngreet() {\n    echo \"Hello, $1!\"\n}\n\ngreet \"Alice\"",
+              "title": "<strong>Simple script example</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-topics",
+        "title": "Advanced Topics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux in Modern Computing"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Linux & Containers",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Docker</strong> - Application containerization"
+                },
+                {
+                  "emoji": "☸️",
+                  "text": "<strong>Kubernetes</strong> - Container orchestration"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Podman</strong> - Docker alternative"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>LXC/LXD</strong> - System containerization"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Linux in Cloud & DevOps",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>AWS EC2</strong> - Linux cloud instances"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Configuration Management</strong> - Ansible, Puppet, Chef"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CI/CD</strong> - Jenkins, GitLab CI, GitHub Actions"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring</strong> - Prometheus, Grafana"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "career-paths",
+        "title": "Career Paths",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Linux Career Opportunities"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Linux Certifications",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Linux+</strong> - CompTIA entry-level certification"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>RHCSA</strong> - Red Hat Certified System Administrator"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>RHCE</strong> - Red Hat Certified Engineer"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>LFCS</strong> - Linux Foundation Certified System Administrator"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>LPIC</strong> - Linux Professional Institute Certification"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Job Roles",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Linux System Administrator</strong>"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>DevOps Engineer</strong>"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security Engineer</strong>"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Site Reliability Engineer (SRE)</strong>"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Cloud Engineer</strong>"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Linux Command Cheat Sheet",
+            "box": {
+              "code": "# File Operations\nls, cd, pwd, cp, mv, rm, mkdir, rmdir\ncat, less, head, tail, grep, find\n\n# System Information\nuname, whoami, hostname, df, du, free\ntop, ps, kill, systemctl, journalctl\n\n# Networking\nip, ping, traceroute, netstat, ss\nssh, scp, wget, curl, ifconfig\n\n# Package Management\napt update, apt install, apt remove\ndnf install, yum install, pacman -S\n\n# Permissions\nchmod, chown, chgrp, ls -l, sudo\n\n# Text Processing\ngrep, sed, awk, cut, sort, uniq\n\n# Archives\ntar -czf, tar -xzf, zip, unzip\n\n# Users & Groups\nadduser, deluser, passwd, groups, who",
+              "title": "<strong>Essential commands quick reference</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Linux Journey</strong> - Free interactive tutorial"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>The Linux Command Line</strong> - Free book by William Shotts"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Linux Foundation Training</strong> - Official courses"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>OverTheWire</strong> - Linux security wargames"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - NetworkChuck, LearnLinuxTV"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Arch Wiki</strong> - Excellent documentation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Setup Linux Server",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Install Ubuntu Server in VM"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Configure network and SSH"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Create user accounts with sudo access"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Install and configure web server (nginx)"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Deploy simple HTML website"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Set up firewall rules"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Configure automatic updates"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Monitor system resources"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What command shows disk space usage?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you change file permissions to rwxr-xr--?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the difference between apt update and apt upgrade?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you search for a pattern in files recursively?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the purpose of /etc directory?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐧",
+                  "text": "Linux = Open source, Unix-like OS kernel"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Free to use, modify, and distribute"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "Powers 90% of cloud infrastructure"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "Multiple distributions for different needs"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "Command line is powerful and essential"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential skill for IT careers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Linux concepts, commands, or specific use cases!<br><span class=\"gradient-accent\">All Linux questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐧</span> Ready to master Linux?<br><span class=\"gradient-accent\">Start your Linux journey today!</span>",
+              "note": "Open Source • Powerful • Essential"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

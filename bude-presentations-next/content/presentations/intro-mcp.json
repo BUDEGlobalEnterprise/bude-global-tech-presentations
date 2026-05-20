@@ -1,0 +1,708 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Model Context Protocol",
+            "subtitle": "The open standard that lets AI talk to everything else"
+          },
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "Several years across .NET, Python, IoT, RFID, and modern JavaScript.",
+            "oss_experience": "Building MCP servers since the spec dropped in late 2024.",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          },
+          {
+            "type": "topic-title",
+            "title": "Why MCP exists",
+            "subtitle": "A short story about a long-standing pain.",
+            "emoji": "🤔"
+          }
+        ]
+      },
+      {
+        "id": "the-problem",
+        "title": "The N×M problem",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "The N×M problem",
+            "subtitle": "Every AI app, every tool, every integration — written from scratch.",
+            "emoji": "🧩"
+          },
+          {
+            "type": "content",
+            "title": "Before MCP",
+            "emoji": "💢",
+            "box": {
+              "content": "<p>If you wanted Claude to read your filesystem, you wrote a Claude-specific integration. If you wanted GPT-4 to do the same, you wrote a GPT-specific one. If you wanted both to use the same Postgres database — two more integrations.</p><p><strong>N models × M tools = N × M one-off integrations.</strong> The whole industry was rewriting the same code with slightly different shapes.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The pattern was getting expensive",
+            "emoji": "💸",
+            "box": {
+              "list": [
+                { "emoji": "🪛", "text": "Every vendor had a slightly different tool-calling API" },
+                { "emoji": "🧪", "text": "Every team rebuilt auth, errors, schemas, streaming separately" },
+                { "emoji": "🔁", "text": "Switching models meant rewriting every integration" },
+                { "emoji": "🛑", "text": "Sharing integrations across companies was impossible" },
+                { "emoji": "🏚️", "text": "The ecosystem was siloed before it even matured" }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Before vs After MCP",
+            "leftTitle": "Without MCP",
+            "leftPoints": [
+              "🔌 Custom adapter per (model, tool) pair",
+              "🧱 Auth, errors, schemas reinvented each time",
+              "🔒 Integrations locked to one vendor",
+              "🐌 Updating a tool means redeploying every client",
+              "💔 No shared community of reusable connectors"
+            ],
+            "rightTitle": "With MCP",
+            "rightPoints": [
+              "🔄 One protocol, any model talks to any server",
+              "📦 Auth, errors, schemas — all standardised",
+              "🌍 Vendor-neutral by design",
+              "⚡ Add a server once, every MCP client gets it",
+              "🤝 A growing ecosystem of community servers"
+            ],
+            "note": {
+              "text": "Anthropic called MCP \"the USB-C port of AI applications\" — and it stuck."
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-mcp",
+        "title": "What is MCP?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "What is MCP?",
+            "subtitle": "An open, vendor-neutral protocol for AI ↔ tool integrations.",
+            "emoji": "📡"
+          },
+          {
+            "type": "content",
+            "title": "The one-line definition",
+            "emoji": "📖",
+            "box": {
+              "content": "<p>MCP is an <strong>open protocol</strong> that standardises how applications provide context to LLMs.</p><p>Think of it like LSP (Language Server Protocol) — but for AI tools. One spec, many clients, many servers, no vendor lock-in.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Where it came from",
+            "emoji": "📅",
+            "box": {
+              "list": [
+                { "emoji": "🚀", "text": "<strong>November 2024:</strong> Anthropic released MCP as an open standard" },
+                { "emoji": "🐙", "text": "<strong>Open source from day one</strong> — MIT licensed, on GitHub" },
+                { "emoji": "📈", "text": "<strong>2025:</strong> OpenAI, Microsoft, Google all announced MCP support" },
+                { "emoji": "🌐", "text": "<strong>The spec lives at:</strong> modelcontextprotocol.io" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "title": "Core concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Core concepts",
+            "subtitle": "Five words you'll see everywhere: client, server, resources, tools, prompts.",
+            "emoji": "🧠"
+          },
+          {
+            "type": "content",
+            "title": "Clients and servers",
+            "emoji": "🔗",
+            "box": {
+              "content": "<p>MCP is a <strong>client-server protocol</strong>. The terminology is precise:</p>",
+              "list": [
+                { "emoji": "🖥️", "text": "<strong>Host</strong> — the AI app a user interacts with (Claude Desktop, Cursor, etc.)" },
+                { "emoji": "📞", "text": "<strong>Client</strong> — the connection inside a host that talks to one server" },
+                { "emoji": "🔌", "text": "<strong>Server</strong> — exposes resources, tools, and prompts over MCP" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The three primitives",
+            "emoji": "🎯",
+            "box": {
+              "title": "Everything an MCP server exposes falls into one of three buckets:",
+              "list": [
+                { "emoji": "📄", "text": "<strong>Resources</strong> — read-only data the model can pull in (files, DB rows, API responses)" },
+                { "emoji": "🛠️", "text": "<strong>Tools</strong> — executable functions the model can invoke (with side effects)" },
+                { "emoji": "📝", "text": "<strong>Prompts</strong> — reusable interaction templates the user can trigger" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Resources in one minute",
+            "emoji": "📄",
+            "box": {
+              "content": "<p>Resources are <em>read-only</em>. They're how a server exposes <strong>context</strong> to the model — files, rows, configuration, anything addressable by a URI.</p><p>The host decides which resources to attach to the conversation. The model never invokes them directly; the user (via the host) does.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Tools in one minute",
+            "emoji": "🛠️",
+            "box": {
+              "content": "<p>Tools are <em>functions with side effects</em>. They can write to a database, send an email, run a command — anything.</p><p>The model decides when to call a tool, the host gates execution (often requiring user approval), and the server actually runs it.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Prompts in one minute",
+            "emoji": "📝",
+            "box": {
+              "content": "<p>Prompts are <strong>user-triggered templates</strong>. A server can expose curated, parameterised prompts (\"summarise this PR\", \"plan a sprint from these issues\") that the user picks from a menu.</p><p>They keep complex workflows out of the user's head and inside the integration.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Architecture",
+            "subtitle": "How a request actually travels from user to LLM to tool and back.",
+            "emoji": "🏗️"
+          },
+          {
+            "type": "diagram",
+            "title": "The full picture",
+            "content": "┌──────────────────────────┐       JSON-RPC 2.0        ┌─────────────────────────┐\n│       MCP Host           │ ◄──────────────────────► │       MCP Server         │\n│  (Claude Desktop, Cursor,│        stdio / HTTP+SSE   │  (filesystem, github,    │\n│   Zed, Cline, custom...) │                           │   postgres, slack, ...)  │\n└────────────┬─────────────┘                           └────────────┬────────────┘\n             │                                                       │\n             │ calls LLM with                                        │ exposes\n             │ tool results + context                                │ resources / tools / prompts\n             ▼                                                       ▼\n       ┌──────────┐                                          ┌────────────────┐\n       │   LLM    │                                          │    Backend     │\n       │ (Claude, │                                          │  (DB, API,     │\n       │  GPT-4,  │                                          │   files, SaaS) │\n       │  Gemini) │                                          └────────────────┘\n       └──────────┘\n\nOne host can connect to many servers. One server can be reused across many hosts.\nThe LLM never talks to the server directly — the host orchestrates everything.",
+            "note": {
+              "text": "The host is the trust boundary. The server doesn't trust the model; the model doesn't trust the server; the user trusts the host."
+            }
+          },
+          {
+            "type": "content",
+            "title": "JSON-RPC 2.0 is the wire format",
+            "emoji": "📨",
+            "box": {
+              "content": "<p>Every MCP message is a JSON-RPC 2.0 request, response, or notification. Familiar, boring, well-tooled — exactly what you want for a protocol.</p>",
+              "code": "// Request example\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"read_file\",\n    \"arguments\": { \"path\": \"/etc/hosts\" }\n  }\n}\n\n// Response example\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"content\": [{ \"type\": \"text\", \"text\": \"127.0.0.1 localhost\\n\" }]\n  }\n}",
+              "language": "json"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Capability negotiation",
+            "emoji": "🤝",
+            "box": {
+              "content": "<p>The first thing a client and server do is <strong>negotiate capabilities</strong>. The client tells the server what it supports; the server tells the client what it offers.</p><p>This is how MCP stays forward-compatible: optional features (sampling, subscriptions, progress) are only enabled when both sides agree.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Lifecycle in three phases",
+            "emoji": "♻️",
+            "box": {
+              "list": [
+                { "emoji": "1️⃣", "text": "<strong>Initialize</strong> — exchange protocol version, server info, capabilities" },
+                { "emoji": "2️⃣", "text": "<strong>Operate</strong> — list/read resources, list/call tools, list/get prompts" },
+                { "emoji": "3️⃣", "text": "<strong>Shutdown</strong> — graceful close on either side" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "transports",
+        "title": "Transports",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Transports",
+            "subtitle": "MCP is transport-agnostic. Pick the one that matches your deployment.",
+            "emoji": "🚇"
+          },
+          {
+            "type": "content",
+            "title": "stdio — local subprocess",
+            "emoji": "🖥️",
+            "box": {
+              "content": "<p>The host launches the server as a child process and talks to it over stdin/stdout. Newline-delimited JSON-RPC messages.</p><p><strong>Use it when</strong> the server runs on the user's machine — filesystem access, local databases, CLI tools, anything with strong local-trust assumptions.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "HTTP + Server-Sent Events",
+            "emoji": "🌐",
+            "box": {
+              "content": "<p>The server runs as a long-lived HTTP service. The host POSTs requests; the server streams responses via SSE.</p><p><strong>Use it when</strong> the server is a hosted service, when one server needs to serve many users, or when you want centralised logging/auth.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Streamable HTTP (the modern variant)",
+            "emoji": "🌊",
+            "box": {
+              "content": "<p>Introduced in 2025, Streamable HTTP combines request/response and server-push into a single HTTP endpoint. Simpler to deploy than SSE, friendlier to load balancers, and what most new remote servers use.</p>"
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "stdio vs HTTP — which to pick",
+            "leftTitle": "Reach for stdio when…",
+            "leftPoints": [
+              "💻 The server runs on the user's machine",
+              "📁 You need local filesystem / OS access",
+              "🔒 Auth is just \"the user launched this process\"",
+              "🚀 Zero-config setup matters most",
+              "🧪 You're prototyping a server"
+            ],
+            "rightTitle": "Reach for HTTP when…",
+            "rightPoints": [
+              "☁️ The server is a hosted service",
+              "👥 Many users share one server",
+              "🔑 You need real auth (OAuth, API keys)",
+              "📊 You want centralised observability",
+              "🌍 The server is internet-facing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "resources-deep",
+        "title": "Resources deep dive",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Resources — deeper look",
+            "subtitle": "Read-only context the user attaches to a conversation.",
+            "emoji": "📄"
+          },
+          {
+            "type": "content",
+            "title": "Discovering and reading",
+            "emoji": "🔍",
+            "box": {
+              "content": "<p>Two primary endpoints:</p>",
+              "list": [
+                { "emoji": "📋", "text": "<strong>resources/list</strong> — server returns the menu of available resources (with URIs, MIME types, names)" },
+                { "emoji": "📖", "text": "<strong>resources/read</strong> — given a URI, server returns the content (text, blob, or binary)" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Subscriptions",
+            "emoji": "📡",
+            "box": {
+              "content": "<p>Servers can optionally support <strong>resources/subscribe</strong>. When the underlying data changes, the server pushes a notification to the client — which can re-read.</p><p>This is how a live document or a streaming log feels real-time to the model, without polling.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools-deep",
+        "title": "Tools deep dive",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Tools — deeper look",
+            "subtitle": "The model can call these. The user approves them. The server runs them.",
+            "emoji": "🛠️"
+          },
+          {
+            "type": "content",
+            "title": "Tool discovery",
+            "emoji": "🧭",
+            "box": {
+              "content": "<p><strong>tools/list</strong> returns every tool the server offers, each with a name, a human-readable description, and a JSON Schema describing its inputs.</p><p>The host hands that schema to the LLM. The model uses standard tool-calling to decide when to invoke a tool — but goes through MCP to actually do it.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Defining a tool",
+            "emoji": "✍️",
+            "box": {
+              "code": "// TypeScript MCP SDK — defining a \"read_file\" tool\nserver.tool(\n  \"read_file\",\n  \"Read the contents of a file at the given path\",\n  {\n    path: z.string().describe(\"Absolute path to the file\"),\n  },\n  async ({ path }) => ({\n    content: [{ type: \"text\", text: await fs.readFile(path, \"utf8\") }],\n  }),\n);",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Calling a tool",
+            "emoji": "🎯",
+            "box": {
+              "content": "<p>The model emits a tool call. The host validates the user has consented. The host sends <strong>tools/call</strong> to the server with the tool name + arguments. The server runs the work, returns content, and the host hands it back to the model as the next turn.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "prompts-deep",
+        "title": "Prompts deep dive",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Prompts — deeper look",
+            "subtitle": "Slash-commands for AI: curated workflows the server exposes.",
+            "emoji": "📝"
+          },
+          {
+            "type": "content",
+            "title": "Why prompts exist",
+            "emoji": "💡",
+            "box": {
+              "content": "<p>Tools are model-driven. Resources are user-driven. <strong>Prompts are user-triggered but server-authored</strong> — the integration packages a complex interaction into a one-click flow.</p><p>Examples: \"Summarise this PR\", \"Plan a sprint from these tickets\", \"Audit this Postgres query for safety\".</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "A prompt definition",
+            "emoji": "📦",
+            "box": {
+              "code": "server.prompt(\n  \"summarise_pr\",\n  \"Summarise a GitHub PR with risks and ask reviewers what to focus on\",\n  {\n    owner: z.string(),\n    repo: z.string(),\n    number: z.number(),\n  },\n  async ({ owner, repo, number }) => ({\n    messages: [\n      {\n        role: \"user\",\n        content: {\n          type: \"text\",\n          text: `Summarise ${owner}/${repo}#${number}. Highlight risk hotspots.`,\n        },\n      },\n    ],\n  }),\n);",
+              "language": "typescript"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sampling",
+        "title": "Sampling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Sampling",
+            "subtitle": "The server-side superpower most people miss.",
+            "emoji": "✨"
+          },
+          {
+            "type": "content",
+            "title": "What is sampling?",
+            "emoji": "🔁",
+            "box": {
+              "content": "<p>Normally, only the host calls the LLM. <strong>Sampling reverses that direction</strong>: an MCP server can ask the host's LLM to complete a prompt on the server's behalf.</p><p>The host stays in control — it sees the request, can deny it, can transform it. But the server gets to use the model as part of its own logic.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "When sampling is useful",
+            "emoji": "🎯",
+            "box": {
+              "list": [
+                { "emoji": "🤖", "text": "An agent server that wants to do multi-step reasoning between tool calls" },
+                { "emoji": "📚", "text": "A research server that asks the LLM to summarise a long doc before returning it" },
+                { "emoji": "🪄", "text": "A code server that wants the LLM's help generating a patch" },
+                { "emoji": "🔐", "text": "Anywhere the server needs LLM capability without bringing its own API key" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz-break",
+        "title": "Quiz break",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Quick check",
+            "subtitle": "Three questions to make sure the model is loaded into your context.",
+            "emoji": "🧪"
+          },
+          {
+            "type": "quiz",
+            "question": "Which MCP primitive is read-only and user-attached, not model-invoked?",
+            "options": [
+              "Tools",
+              "Prompts",
+              "Resources",
+              "Sampling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Resources are read-only context. The user (via the host) decides what to attach. Tools are model-invoked, prompts are user-triggered templates, sampling is server → host LLM calls."
+          },
+          {
+            "type": "quiz",
+            "question": "Which transport is best for a server that runs locally on the user's machine?",
+            "options": [
+              "HTTP + SSE",
+              "stdio",
+              "WebSocket",
+              "gRPC"
+            ],
+            "correctAnswer": 1,
+            "explanation": "stdio is the standard local transport — the host launches the server as a child process. HTTP+SSE is for hosted/remote servers. WebSocket and gRPC are not first-class MCP transports."
+          },
+          {
+            "type": "quiz",
+            "question": "What does \"sampling\" mean in MCP?",
+            "options": [
+              "The server returns a random subset of resources",
+              "The model picks a tool at random",
+              "An MCP server asks the host's LLM to complete a prompt on its behalf",
+              "The protocol samples bytes for compression"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Sampling reverses the usual direction — instead of the host calling the LLM, the server can request an LLM completion through the host. The host stays in control of policy and cost."
+          }
+        ]
+      },
+      {
+        "id": "build-server",
+        "title": "Building a server",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Building your first server",
+            "subtitle": "From npm install to working tool in under 30 lines.",
+            "emoji": "🛠️"
+          },
+          {
+            "type": "content",
+            "title": "Pick an SDK",
+            "emoji": "📦",
+            "box": {
+              "content": "<p>Anthropic and the community maintain official SDKs in:</p>",
+              "list": [
+                { "emoji": "🟦", "text": "<strong>TypeScript</strong> — <code>@modelcontextprotocol/sdk</code> (most popular)" },
+                { "emoji": "🟨", "text": "<strong>Python</strong> — <code>mcp</code>" },
+                { "emoji": "☕", "text": "<strong>Java</strong> — official, used by Spring AI" },
+                { "emoji": "🟪", "text": "<strong>Kotlin</strong>, <strong>C#</strong>, <strong>Swift</strong>, <strong>Rust</strong> — all maintained" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Hello world (TypeScript)",
+            "emoji": "👋",
+            "box": {
+              "code": "import { McpServer } from \"@modelcontextprotocol/sdk/server/mcp.js\";\nimport { StdioServerTransport } from \"@modelcontextprotocol/sdk/server/stdio.js\";\nimport { z } from \"zod\";\n\nconst server = new McpServer({\n  name: \"hello-mcp\",\n  version: \"1.0.0\",\n});\n\nserver.tool(\n  \"greet\",\n  \"Greet someone warmly\",\n  { name: z.string() },\n  async ({ name }) => ({\n    content: [{ type: \"text\", text: `Hello, ${name}!` }],\n  }),\n);\n\nawait server.connect(new StdioServerTransport());",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Adding a resource",
+            "emoji": "📄",
+            "box": {
+              "code": "server.resource(\n  \"config\",\n  \"config://app\",\n  { mimeType: \"application/json\" },\n  async () => ({\n    contents: [\n      {\n        uri: \"config://app\",\n        mimeType: \"application/json\",\n        text: JSON.stringify({ theme: \"dark\", region: \"in-south-1\" }),\n      },\n    ],\n  }),\n);",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Adding a prompt",
+            "emoji": "📝",
+            "box": {
+              "code": "server.prompt(\n  \"review_my_code\",\n  \"Review code with a focus on production-readiness\",\n  { language: z.string(), code: z.string() },\n  async ({ language, code }) => ({\n    messages: [\n      {\n        role: \"user\",\n        content: {\n          type: \"text\",\n          text: `Review this ${language} for prod-readiness:\\n\\n${code}`,\n        },\n      },\n    ],\n  }),\n);",
+              "language": "typescript"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ecosystem",
+        "title": "Ecosystem",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "The ecosystem",
+            "subtitle": "Who's already shipping with MCP, and which servers you can plug in today.",
+            "emoji": "🌍"
+          },
+          {
+            "type": "content",
+            "title": "Official reference servers",
+            "emoji": "📚",
+            "box": {
+              "title": "Maintained by Anthropic and the core team:",
+              "list": [
+                { "emoji": "📁", "text": "<strong>filesystem</strong> — read/write files inside a sandboxed root" },
+                { "emoji": "🐙", "text": "<strong>github</strong> — issues, PRs, files, search" },
+                { "emoji": "🐘", "text": "<strong>postgres</strong> — schema introspection + read-only queries" },
+                { "emoji": "💬", "text": "<strong>slack</strong> — channels, messages, users" },
+                { "emoji": "🧠", "text": "<strong>memory</strong> — a persistent knowledge graph the agent maintains" },
+                { "emoji": "🔍", "text": "<strong>brave-search</strong> — web search" },
+                { "emoji": "🌐", "text": "<strong>puppeteer / browser</strong> — page navigation and scraping" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Hosts that speak MCP",
+            "emoji": "🖥️",
+            "box": {
+              "list": [
+                { "emoji": "💬", "text": "<strong>Claude Desktop</strong> — the original and reference host" },
+                { "emoji": "🖱️", "text": "<strong>Cursor</strong>, <strong>Cline</strong>, <strong>Zed</strong>, <strong>Continue.dev</strong> — IDE integrations" },
+                { "emoji": "🤖", "text": "<strong>OpenAI</strong> — added MCP support in 2025" },
+                { "emoji": "🪟", "text": "<strong>Microsoft Copilot Studio</strong> — MCP-compatible since 2025" },
+                { "emoji": "🛠️", "text": "<strong>Claude Code</strong> — the CLI you may be reading this in" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Community-built servers (a tiny sample)",
+            "emoji": "🤝",
+            "box": {
+              "list": [
+                { "emoji": "📊", "text": "Notion, Linear, Jira, ClickUp, Airtable" },
+                { "emoji": "🗄️", "text": "MySQL, MongoDB, SQLite, Snowflake, BigQuery" },
+                { "emoji": "☁️", "text": "AWS, GCP, Azure read-only inspectors" },
+                { "emoji": "📨", "text": "Gmail, Outlook, Discord, Telegram" },
+                { "emoji": "🧰", "text": "Docker, Kubernetes, Stripe, Cloudflare" }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Production users",
+            "emoji": "🏢",
+            "box": {
+              "content": "<p>Companies that have publicly talked about MCP in production:</p>",
+              "list": [
+                { "emoji": "💸", "text": "Block (Square) — internal coding assistants" },
+                { "emoji": "✈️", "text": "Apollo — research workflows" },
+                { "emoji": "📐", "text": "Replit — agent infrastructure" },
+                { "emoji": "🧑‍💻", "text": "Sourcegraph — Cody integrations" },
+                { "emoji": "🛠️", "text": "Codeium, Zed, Cursor — IDE tool integration" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security & user consent",
+            "subtitle": "The host is the trust boundary. Design accordingly.",
+            "emoji": "🔐"
+          },
+          {
+            "type": "content",
+            "title": "The consent model",
+            "emoji": "✋",
+            "box": {
+              "content": "<p>MCP doesn't let servers do silent side-effects. The protocol assumes the host will <strong>prompt the user before any tool runs</strong> — at least the first time.</p>",
+              "list": [
+                { "emoji": "👀", "text": "Hosts surface tool descriptions to the user" },
+                { "emoji": "🛑", "text": "Hosts can block dangerous tools by policy" },
+                { "emoji": "🔁", "text": "Users can revoke a server's permissions at any time" },
+                { "emoji": "🪪", "text": "Auth (OAuth, API keys) is the server's responsibility, not the protocol's" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparisons",
+        "title": "Comparisons",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MCP vs the alternatives",
+            "subtitle": "There's a reason MCP is winning. Two reasons. Three reasons.",
+            "emoji": "⚖️"
+          },
+          {
+            "type": "comparison",
+            "title": "MCP vs vendor function calling",
+            "leftTitle": "Vendor-specific function calling",
+            "leftPoints": [
+              "🔒 Tied to one model provider (OpenAI, Anthropic, Google)",
+              "🧱 Schemas defined per app, not shared across apps",
+              "🚫 No standard for resources or prompts — tools only",
+              "🪨 You rebuild integrations when you switch models",
+              "🤷 No community library of reusable connectors"
+            ],
+            "rightTitle": "MCP",
+            "rightPoints": [
+              "🌐 Vendor-neutral — works with any model that supports tool use",
+              "📦 One schema, every MCP host understands it",
+              "🎯 Tools, resources, and prompts as first-class primitives",
+              "♻️ Switch models without rewriting your integrations",
+              "🤝 Growing ecosystem of community servers"
+            ]
+          },
+          {
+            "type": "comparison",
+            "title": "MCP vs framework-level tool libraries",
+            "leftTitle": "LangChain / LlamaIndex tools",
+            "leftPoints": [
+              "🐍 Python-first, often library-specific",
+              "🧪 Tools live inside your app's process",
+              "🔗 Hard to share tools across teams or apps",
+              "🪦 Tied to one framework's lifecycle",
+              "🧱 Not a protocol — an SDK"
+            ],
+            "rightTitle": "MCP",
+            "rightPoints": [
+              "🌍 Polyglot — TypeScript, Python, Java, Kotlin, C#, etc.",
+              "🚪 Servers run as separate processes — clean trust boundary",
+              "♻️ Same server reusable across every MCP-aware app",
+              "📜 A spec, not a library — survives framework churn",
+              "🤝 Designed for multi-vendor, multi-process worlds"
+            ],
+            "note": {
+              "text": "LangChain and MCP aren't mutually exclusive — many MCP servers are built using LangChain internally."
+            }
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting started today",
+            "subtitle": "Three things you can do this afternoon.",
+            "emoji": "🚀"
+          },
+          {
+            "type": "content",
+            "title": "Your weekend project",
+            "emoji": "🧰",
+            "box": {
+              "list": [
+                { "emoji": "1️⃣", "text": "<strong>Install Claude Desktop</strong> and configure one official server (filesystem is the easiest)" },
+                { "emoji": "2️⃣", "text": "<strong>Clone the SDK examples</strong> at github.com/modelcontextprotocol — run a hello-world server" },
+                { "emoji": "3️⃣", "text": "<strong>Build your own server</strong> for whatever tool you wish your AI could already use. Publish it." }
+              ]
+            }
+          },
+          {
+            "type": "qa",
+            "title": "Questions?"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank you",
+            "message": "MCP is one of those rare moments where the standard arrived early enough to actually matter. Get in on it."
+          }
+        ]
+      }
+    ]
+  }
+}

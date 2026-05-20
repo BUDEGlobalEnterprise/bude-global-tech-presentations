@@ -1,0 +1,1089 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to MongoDB",
+            "subtitle": "Complete NoSQL Database Guide<br>From Beginner to Production Ready"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & UI Framework Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is MongoDB?</strong> - NoSQL & Document Model"
+                },
+                {
+                  "emoji": "🆚",
+                  "text": "<strong>MongoDB vs SQL Databases</strong> - Use Cases"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Installation & Setup</strong> - Local & Cloud (Atlas)"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Tools & Compass</strong> - GUI & Management"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Architecture</strong> - Collections & Documents"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>CRUD Operations</strong> - Basic Data Operations"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Query Operators</strong> - Advanced Filtering"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Indexes & Performance</strong> - Optimization"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Aggregation Framework</strong> - Data Processing"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>MongoDB Atlas</strong> - Cloud Database"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security & Scaling</strong> - Production Ready"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Application Integration</strong> - Drivers & ODMs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-mongodb",
+        "title": "What is MongoDB?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding MongoDB"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is MongoDB?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🍃",
+                  "text": "<strong>Created by</strong> - MongoDB Inc. (2007)"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - SSPL (Server Side Public License)"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "<strong>Features</strong> - Flexible schema, horizontal scaling, rich queries"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Usage</strong> - Big data, real-time apps, content management"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performance</strong> - Fast reads/writes, in-memory computing"
+                }
+              ],
+              "title": "<span class=\"highlight\">Document-oriented NoSQL database using JSON-like documents</span>"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> MongoDB is the most popular NoSQL database and powers companies like eBay, Adobe, and Google!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MongoDB History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>2007</strong> - MongoDB developed by 10gen (now MongoDB Inc.)"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2009</strong> - First public release"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2013</strong> - MongoDB 2.4 with aggregation framework"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2015</strong> - WiredTiger storage engine"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2016</strong> - MongoDB Atlas cloud service launched"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>2018</strong> - Multi-document ACID transactions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-nosql",
+        "title": "Why NoSQL? Why MongoDB?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "NoSQL Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "🤔",
+            "title": "When to Choose MongoDB",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Flexible Schema</strong> - Evolve data model without migrations"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Horizontal Scaling</strong> - Sharding for massive scale"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>High Performance</strong> - Fast read/write operations"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Rich Queries</strong> - Powerful query language"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Developer Friendly</strong> - JSON-like documents"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Real-time Analytics</strong> - Aggregation framework"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Database Comparison",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "MongoDB vs SQL Databases"
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Database System Comparison",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🍃",
+                  "text": "<strong>MongoDB</strong> - Document model, flexible schema, horizontal scaling"
+                },
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Relational, structured schema, vertical scaling"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Advanced SQL, JSON support, ACID"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Cassandra</strong> - Column-family, write-optimized"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Elasticsearch</strong> - Search engine, text search focus"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "document-concepts",
+        "title": "Document Database Concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "JSON/BSON Documents"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "BSON vs JSON",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>JSON</strong> - Human-readable, text-based"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>BSON</strong> - Binary JSON, efficient storage"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>BSON Advantages</strong> - Faster parsing, richer types"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Compatibility</strong> - BSON extends JSON types"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Document Structure Example",
+            "box": {
+              "code": "{\n  \"_id\": ObjectId(\"507f1f77bcf86cd799439011\"),\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"john@example.com\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zipcode\": \"10001\"\n  },\n  \"hobbies\": [\"reading\", \"hiking\", \"coding\"],\n  \"created_at\": ISODate(\"2023-01-15T10:30:00Z\")\n}",
+              "title": "<strong>Sample MongoDB Document</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Methods",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Installing MongoDB"
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Installation Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Windows</strong> - MSI installer, chocolatey"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Linux</strong> - apt, yum, pacman packages"
+                },
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>macOS</strong> - Homebrew, DMG installer"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Official MongoDB image"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>MongoDB Atlas</strong> - Cloud database service"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐧",
+            "title": "Ubuntu Installation Example",
+            "box": {
+              "code": "# Import MongoDB public GPG key\nwget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -\n\n# Create list file for MongoDB\necho \"deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list\n\n# Update package list\nsudo apt update\n\n# Install MongoDB\nsudo apt install -y mongodb-org\n\n# Start MongoDB service\nsudo systemctl start mongod\nsudo systemctl enable mongod\n\n# Connect to MongoDB\nmongosh\n\n# Show databases\nshow dbs",
+              "title": "<strong>Installing on Ubuntu/Debian</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "MongoDB Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Tools & Clients"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Popular MongoDB Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💻",
+                  "text": "<strong>mongosh</strong> - MongoDB Shell (replaces mongo)"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Compass</strong> - GUI for MongoDB"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Atlas UI</strong> - Web-based cloud management"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Studio 3T</strong> - Advanced GUI client"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Robo 3T</strong> - Lightweight GUI (free)"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>MongoDB Charts</strong> - Data visualization"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "MongoDB Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "System Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "MongoDB Architecture Overview",
+            "box": {
+              "code": "MongoDB Architecture:\n\n┌─────────────────┐\n│   Client Apps   │\n│  (Drivers, GUI) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  mongod/mongos  │\n│  (Query Router) │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Storage Engine │\n│  (WiredTiger)   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│  Data Files     │\n│  (BSON Format)  │\n└─────────────────┘\n\nKey Components:\n• mongod - Primary daemon process\n• mongos - Query router for sharding\n• Config Servers - Metadata storage\n• Shards - Data storage nodes",
+              "title": "<strong>Core Components</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "collections-documents",
+        "title": "Collections & Documents",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Organization"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "MongoDB Hierarchy",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Database</strong> - Container for collections"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Collection</strong> - Group of documents (like table)"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Document</strong> - BSON record (like row)"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Field</strong> - Key-value pair (like column)"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>_id</strong> - Primary key, auto-generated ObjectId"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Working with Collections",
+            "box": {
+              "code": "-- Switch to database\nuse mydatabase\n\n-- Create collection (implicit)\ndb.createCollection(\"users\")\n\n-- Show collections\nshow collections\n\n-- Insert document\ndb.users.insertOne({\n  name: \"Alice\",\n  age: 25,\n  email: \"alice@example.com\"\n})\n\n-- Drop collection\ndb.users.drop()\n\n-- Collection stats\ndb.users.stats()\n\n-- Create capped collection\ndb.createCollection(\"logs\", { capped: true, size: 100000 })",
+              "title": "<strong>Collection Operations</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "bson-types",
+        "title": "BSON Data Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "BSON Data Types"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Common BSON Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Numeric</strong> - Int32, Int64, Double, Decimal128"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>String</strong> - UTF-8 encoded"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Boolean</strong> - true/false"
+                },
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date</strong> - ISODate, Timestamp"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>ObjectId</strong> - 12-byte unique identifier"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Binary</strong> - BSON binary data"
+                },
+                {
+                  "emoji": "🧮",
+                  "text": "<strong>Array</strong> - Ordered list of values"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Object</strong> - Embedded document"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "crud-operations",
+        "title": "CRUD Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Create, Read, Update, Delete"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Basic CRUD Operations",
+            "box": {
+              "code": "-- Insert documents\ndb.users.insertOne({\n  name: \"John\",\n  age: 30,\n  email: \"john@example.com\"\n})\n\ndb.users.insertMany([\n  { name: \"Alice\", age: 25 },\n  { name: \"Bob\", age: 35 }\n])\n\n-- Find documents\ndb.users.find()\ndb.users.findOne({ name: \"John\" })\ndb.users.find({ age: { $gt: 25 } })\n\n-- Update documents\ndb.users.updateOne(\n  { name: \"John\" },\n  { $set: { age: 31 } }\n)\n\ndb.users.updateMany(\n  { age: { $lt: 30 } },\n  { $set: { status: \"young\" } }\n)\n\n-- Delete documents\ndb.users.deleteOne({ name: \"John\" })\ndb.users.deleteMany({ age: { $gt: 40 } })",
+              "title": "<strong>Create, Read, Update, Delete</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "query-operators",
+        "title": "Query Operators",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Querying"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Common Query Operators",
+            "box": {
+              "code": "-- Comparison operators\ndb.products.find({ price: { $gt: 100 } })        -- Greater than\ndb.products.find({ price: { $lt: 50 } })         -- Less than\ndb.products.find({ price: { $gte: 20, $lte: 100 } }) -- Between\n\n-- Logical operators\ndb.users.find({ $and: [\n  { age: { $gt: 25 } },\n  { age: { $lt: 40 } }\n]})\n\ndb.users.find({ $or: [\n  { status: \"active\" },\n  { age: { $gt: 30 } }\n]})\n\n-- Element operators\ndb.users.find({ email: { $exists: true } })      -- Field exists\ndb.users.find({ age: { $type: \"number\" } })      -- Field type\n\n-- Array operators\ndb.users.find({ hobbies: { $in: [\"reading\", \"hiking\"] } })\ndb.users.find({ hobbies: { $all: [\"reading\", \"coding\"] } })\ndb.users.find({ \"hobbies.0\": \"reading\" })        -- Positional\n\n-- Regex (pattern matching)\ndb.users.find({ name: { $regex: /^J/, $options: \"i\" } })",
+              "title": "<strong>Powerful Filtering Capabilities</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "indexes",
+        "title": "Indexes & Performance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Index Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Single Field</strong> - Index on one field"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Compound</strong> - Multiple fields"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Text</strong> - Full-text search"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Geospatial</strong> - Location data"
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>TTL</strong> - Automatic expiration"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Hashed</strong> - Sharding support"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Creating Indexes",
+            "box": {
+              "code": "-- Create single field index\ndb.users.createIndex({ email: 1 })  -- 1 for ascending, -1 for descending\n\n-- Create compound index\ndb.orders.createIndex({ customer_id: 1, order_date: -1 })\n\n-- Create text index\ndb.articles.createIndex({ content: \"text\", title: \"text\" })\n\n-- Create TTL index (expire after 3600 seconds)\ndb.sessions.createIndex({ created_at: 1 }, { expireAfterSeconds: 3600 })\n\n-- Create unique index\ndb.users.createIndex({ email: 1 }, { unique: true })\n\n-- View indexes\ndb.users.getIndexes()\n\n-- Drop index\ndb.users.dropIndex(\"email_1\")\n\n-- Explain query\ndb.users.find({ email: \"test@example.com\" }).explain(\"executionStats\")",
+              "title": "<strong>Index Management</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "schema-design",
+        "title": "Schema Design",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Modeling"
+          },
+          {
+            "type": "content",
+            "emoji": "📐",
+            "title": "Embedding vs Referencing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Embedding</strong> - Related data in same document"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Referencing</strong> - Related data in separate documents"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Embedding Use Cases</strong> - One-to-few, data accessed together"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Referencing Use Cases</strong> - Many-to-many, large datasets"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Rule of Thumb</strong> - Embed what you query together"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Schema Design Patterns",
+            "box": {
+              "code": "-- Embedded pattern (user with addresses)\n{\n  _id: ObjectId(...),\n  name: \"John Doe\",\n  addresses: [\n    { type: \"home\", street: \"123 Main St\", city: \"NY\" },\n    { type: \"work\", street: \"456 Oak Ave\", city: \"NY\" }\n  ]\n}\n\n-- Referenced pattern (blog with comments)\n// Posts collection\n{\n  _id: ObjectId(\"post123\"),\n  title: \"MongoDB Guide\",\n  content: \"...\"\n}\n\n// Comments collection  \n{\n  _id: ObjectId(\"comment1\"),\n  post_id: ObjectId(\"post123\"),\n  author: \"Alice\",\n  text: \"Great post!\"\n}\n\n-- Polymorphic pattern (different product types)\n{\n  _id: ObjectId(...),\n  type: \"book\",\n  title: \"MongoDB in Action\",\n  author: \"John Doe\",\n  pages: 300\n}\n\n{\n  _id: ObjectId(...), \n  type: \"electronics\",\n  name: \"Smartphone\",\n  brand: \"Samsung\",\n  specs: { ram: \"8GB\", storage: \"128GB\" }\n}",
+              "title": "<strong>Common Design Patterns</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aggregation",
+        "title": "Aggregation Framework",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Processing Pipeline"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Aggregation Stages",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>$match</strong> - Filter documents (like WHERE)"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>$group</strong> - Group by field and calculate"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>$project</strong> - Select fields (like SELECT)"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>$lookup</strong> - Join collections (like JOIN)"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>$sort</strong> - Sort results"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>$limit</strong> - Limit result count"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>$unwind</strong> - Deconstruct array"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Aggregation Examples",
+            "box": {
+              "code": "-- Sales analysis by category\ndb.orders.aggregate([\n  { $match: { status: \"completed\" } },\n  { $unwind: \"$items\" },\n  { $group: {\n      _id: \"$items.category\",\n      totalSales: { $sum: \"$items.price\" },\n      avgOrder: { $avg: \"$items.price\" },\n      count: { $sum: 1 }\n  }},\n  { $sort: { totalSales: -1 } },\n  { $limit: 10 }\n])\n\n-- User activity with lookup\ndb.users.aggregate([\n  { $lookup: {\n      from: \"orders\",\n      localField: \"_id\", \n      foreignField: \"user_id\",\n      as: \"user_orders\"\n  }},\n  { $project: {\n      name: 1,\n      email: 1,\n      orderCount: { $size: \"$user_orders\" },\n      totalSpent: { $sum: \"$user_orders.total\" }\n  }},\n  { $match: { orderCount: { $gt: 0 } } }\n])\n\n-- Monthly revenue trend\ndb.orders.aggregate([\n  { $match: { order_date: { $gte: ISODate(\"2023-01-01\") } } },\n  { $group: {\n      _id: { \n        year: { $year: \"$order_date\" },\n        month: { $month: \"$order_date\" }\n      },\n      revenue: { $sum: \"$total\" },\n      orders: { $sum: 1 }\n  }},\n  { $sort: { \"_id.year\": 1, \"_id.month\": 1 } }\n])",
+              "title": "<strong>Practical Aggregation Pipelines</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "atlas",
+        "title": "MongoDB Atlas",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Cloud Database Service"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Atlas Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Fully Managed</strong> - No operations overhead"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Automated Backups</strong> - Point-in-time recovery"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Auto-scaling</strong> - Dynamic resource allocation"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Global Clusters</strong> - Multi-region deployment"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring</strong> - Real-time performance metrics"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Security</strong> - Encryption, VPC peering, compliance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "replication",
+        "title": "Replica Sets",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "High Availability"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Replica Set Architecture",
+            "box": {
+              "code": "Replica Set Structure:\n\n          ┌─────────────────┐\n          │   Application   │\n          └─────────┬───────┘\n                    │\n          ┌─────────▼───────┐\n          │   Primary Node  │\n          │   (Read/Write)  │\n          └─────────┬───────┘\n                    │\n    ┌───────────────┼───────────────┐\n    │               │               │\n┌───▼───┐       ┌───▼───┐       ┌───▼───┐\n│Secondary│     │Secondary│     │Secondary│\n│ (Read)  │     │ (Read)  │     │ (Read)  │\n└─────────┘     └─────────┘     └─────────┘\n\nKey Features:\n• Automatic failover\n• Data redundancy\n• Read scaling\n• Geographic distribution",
+              "title": "<strong>Automatic Failover & Data Redundancy</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sharding",
+        "title": "Sharding & Scaling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Horizontal Scaling"
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Sharding Architecture",
+            "box": {
+              "code": "Sharded Cluster:\n\n┌─────────────────┐\n│   Application   │\n└─────────┬───────┘\n          │\n┌─────────▼───────┐\n│   mongos Router │\n└─────────┬───────┘\n          │\n    ┌─────┴─────┐\n    │           │\n┌───▼───┐   ┌───▼───┐\n│Config │   │Config │\n│Server │   │Server │\n└───────┘   └───────┘\n    │           │\n    └─────┬─────┘\n          │\n    ┌─────┴─────┐\n    │           │\n┌───▼───┐   ┌───▼───┐\n│ Shard │   │ Shard │\n│   A   │   │   B   │\n└───────┘   └───────┘\n\nSharding Strategies:\n• Range-based\n• Hash-based\n• Zone sharding",
+              "title": "<strong>Distributing Data Across Multiple Servers</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "nodejs-integration",
+        "title": "Node.js Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Application Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "MongoDB with Node.js",
+            "box": {
+              "code": "// Using native MongoDB driver\nconst { MongoClient } = require('mongodb');\n\nconst client = new MongoClient(process.env.MONGODB_URI);\n\nasync function main() {\n  await client.connect();\n  const db = client.db('mydatabase');\n  \n  const users = db.collection('users');\n  \n  // Insert user\n  await users.insertOne({\n    name: 'John Doe',\n    email: 'john@example.com'\n  });\n  \n  // Find users\n  const result = await users.find({}).toArray();\n  console.log(result);\n}\n\n// Using Mongoose ODM\nconst mongoose = require('mongoose');\n\nconst userSchema = new mongoose.Schema({\n  name: String,\n  email: { type: String, unique: true },\n  age: Number\n});\n\nconst User = mongoose.model('User', userSchema);\n\nawait mongoose.connect(process.env.MONGODB_URI);\n\nconst user = new User({ name: 'Alice', email: 'alice@example.com' });\nawait user.save();\n\nconst users = await User.find({ age: { $gt: 25 } });",
+              "title": "<strong>Using Native Driver & Mongoose ODM</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Authentication</strong> - SCRAM, x.509, LDAP"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Authorization</strong> - Role-based access control"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Encryption</strong> - TLS, at-rest encryption"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Network Security</strong> - IP whitelisting, VPC peering"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Auditing</strong> - Track database operations"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Guidelines"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "MongoDB Best Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Use appropriate data types</strong> - Store data in proper BSON types"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Create strategic indexes</strong> - Cover common queries"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitor performance</strong> - Use Atlas metrics, slow query log"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Implement security</strong> - Authentication, encryption, backups"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Design for scale</strong> - Consider sharding early"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Use aggregation framework</strong> - For complex data processing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "MongoDB Command Cheat Sheet",
+            "box": {
+              "code": "# Connection & Database\nmongosh                          # Connect to MongoDB\nshow dbs                         # List databases\nuse dbname                       # Switch database\nshow collections                 # List collections\n\n# CRUD Operations\ndb.collection.insertOne({...})   # Insert one document\ndb.collection.insertMany([...])  # Insert multiple\ndb.collection.find()             # Find all documents\ndb.collection.findOne({...})     # Find one document\ndb.collection.updateOne({...})   # Update one document\ndb.collection.updateMany({...})  # Update multiple\ndb.collection.deleteOne({...})   # Delete one document\ndb.collection.deleteMany({...})  # Delete multiple\n\n# Index Management\ndb.collection.createIndex({...}) # Create index\ndb.collection.getIndexes()       # List indexes\ndb.collection.dropIndex(\"name\")  # Drop index\n\n# Aggregation\ndb.collection.aggregate([...])   # Run aggregation pipeline\n\n# Administration\ndb.stats()                       # Database statistics\ndb.collection.stats()            # Collection statistics\ndb.serverStatus()                # Server status\n\n# User Management\ndb.createUser({...})             # Create user\ndb.dropUser(\"username\")          # Delete user\nshow users                       # List users",
+              "title": "<strong>Essential commands quick reference</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>MongoDB University</strong> - Free online courses"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>MongoDB Documentation</strong> - docs.mongodb.com"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>MongoDB Tutorial</strong> - mongodbtutorial.org"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>MongoDB Exercises</strong> - Learn by doing"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - MongoDB channel, Web Dev Simplified"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>MongoDB Blog</strong> - Latest features and best practices"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: E-Commerce Database",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Design document schema for online store"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Create collections: users, products, orders"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Implement embedded vs referenced relationships"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Insert sample e-commerce data"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Write queries for product search and filtering"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Create aggregation pipelines for analytics"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Add indexes for performance"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Implement user authentication system"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between embedding and referencing?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you create a compound index?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What aggregation stage is used for filtering?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you enable text search in MongoDB?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the purpose of a replica set?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🍃",
+                  "text": "MongoDB = Popular document-oriented NoSQL database"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "Flexible schema, easy to evolve data models"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "Horizontal scaling through sharding"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "Rich query language and aggregation framework"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "High performance for read/write operations"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Essential for modern web and mobile applications"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss MongoDB concepts, queries, or specific use cases!<br><span class=\"gradient-accent\">All NoSQL questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🍃</span> Ready to master MongoDB?<br><span class=\"gradient-accent\">Start building scalable applications today!</span>",
+              "note": "Flexible • Scalable • Developer Friendly"
+            },
+            "footer": {
+              "org": "Modern Applications Community",
+              "tagline": "Empowering developers with NoSQL knowledge"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

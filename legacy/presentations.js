@@ -1002,6 +1002,26 @@ const PRESENTATIONS_CONFIG = [
     difficulty: "advanced",
   },
   {
+    file: "presentations/intro-terraform.json",
+    title: "Terraform Deep Dive",
+    description:
+      "Infrastructure as Code - Learn to provision and manage cloud infrastructure with Terraform",
+    keywords: [
+      "terraform",
+      "iac",
+      "infrastructure",
+      "devops",
+      "cloud",
+      "aws",
+      "azure",
+      "gcp",
+      "hashicorp",
+      "hcl",
+    ],
+    category: ["devops", "cloud"],
+    difficulty: "intermediate",
+  },
+  {
     file: "presentations/intro-aws.json",
     title: "Introduction to AWS Cloud",
     description:

@@ -1,0 +1,655 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "SQLite Architecture ()",
+            "subtitle": "Engineering the World's Most Deployed Database <br> Internal Mechanics, VFS, and Performance Engineering"
+          }
+        ]
+      },
+      {
+        "id": "sqlite-introduction",
+        "title": "1. Introduction to SQLite",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. What is SQLite?",
+            "subtitle": "The Zero-Configuration, Serverless Storage Engine."
+          },
+          {
+            "type": "content",
+            "title": "Defining Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Self-Contained:</strong> No external dependencies."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Serverless:</strong> No separate server process."
+                },
+                {
+                  "emoji": "📑",
+                  "text": "<strong>Single File:</strong> The entire database is a single disk file."
+                }
+              ],
+              "title": "A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Ubiquity",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile:</strong> Android, iOS, and IoT."
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Desktop:</strong> Browsers (Chrome, Firefox), macOS, Windows."
+                },
+                {
+                  "emoji": "🚗",
+                  "text": "<strong>Automotive:</strong> Infotainment systems."
+                }
+              ],
+              "title": "SQLite is found in nearly every modern electronic device."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sqlite-internals",
+        "title": "2. Inside the Black Box",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. Internal Architecture",
+            "subtitle": "How SQLite processes a query."
+          },
+          {
+            "type": "content",
+            "title": "The Big Picture",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Front-End:</strong> Tokenizer, Parser, Code Generator."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Back-End:</strong> B-Tree, Pager, VFS (Virtual File System)."
+                }
+              ],
+              "title": "A stack of layers from the Tokenizer to the OS interface."
+            }
+          }
+        ]
+      },
+      {
+        "id": "vdbe",
+        "title": "3. The VDBE (Virtual Database Engine)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. The VDBE",
+            "subtitle": "SQLite's internal bytecode processor."
+          },
+          {
+            "type": "content",
+            "title": "Bytecode Architecture",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Instructions:</strong> Opcode + P1, P2, P3, P4, P5 parameters."
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Execution:</strong> The Virtual Machine runs this bytecode to fetch/modify data."
+                }
+              ],
+              "code": "EXPLAIN SELECT * FROM users WHERE id = 10;",
+              "title": "SQLite doesn't interpret SQL directly; it compiles it to bytecode."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Registers & Stack",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>Efficiency:</strong> Less data movement between memory locations."
+                }
+              ],
+              "title": "The VDBE is a register-based VM (unlike JVM which is stack-based)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "pager-btree",
+        "title": "4. B-Tree & Pager Layer",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. Storage Engine",
+            "subtitle": "How data is organized on disk."
+          },
+          {
+            "type": "content",
+            "title": "The B-Tree",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌳",
+                  "text": "<strong>Table B-Trees:</strong> Key is the RowID, data in leaves."
+                },
+                {
+                  "emoji": "🌲",
+                  "text": "<strong>Index B-Trees:</strong> Key is the index value + RowID."
+                }
+              ],
+              "title": "Organizes data into hierarchical pages for fast lookup."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Pager",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📟",
+                  "text": "<strong>Caching:</strong> The pager keeps frequently used pages in memory."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Locking:</strong> Coordinates access between multiple processes."
+                }
+              ],
+              "title": "Manages reading/writing fixed-size pages (usually 4KB)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "concurrency-wal",
+        "title": "5. Concurrency & WAL",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Concurrency",
+            "subtitle": "How SQLite handles multi-process access."
+          },
+          {
+            "type": "content",
+            "title": "Legacy Journaling",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>DELETE/TRUNCATE:</strong> Original pages are stored in a journal file."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Locking:</strong> Writers block all readers (Limited concurrency)."
+                }
+              ],
+              "title": "Original Rollback Journal mechanism."
+            }
+          },
+          {
+            "type": "content",
+            "title": "WAL Mode ()",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Features:</strong> Readers don't block writers. Very fast commits."
+                },
+                {
+                  "emoji": "📂",
+                  "text": "<strong>Mechanism:</strong> Changes go to a -wal file; periodic checkpoints move them to the DB."
+                }
+              ],
+              "code": "PRAGMA journal_mode=WAL;",
+              "title": "Write-Ahead Logging transforms performance."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Shared-Memory Files",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Fast IPC:</strong> Uses mmap() for lightning-fast synchronization between processes."
+                }
+              ],
+              "title": "The -shm file coordinates connections in WAL mode."
+            }
+          }
+        ]
+      },
+      {
+        "id": "vfs-layer",
+        "title": "6. The VFS Layer",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. OS Abstraction",
+            "subtitle": "The secret to SQLite's portability."
+          },
+          {
+            "type": "content",
+            "title": "Virtual File System",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌉",
+                  "text": "<strong>Standard:</strong> unix-dotkf, unix-excl, win32-longpath."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Custom:</strong> You can write a VFS to store data in a ZIP file or across a network."
+                }
+              ],
+              "title": "SQLite doesn't talk to the OS directly; it uses a VFS object."
+            }
+          }
+        ]
+      },
+      {
+        "id": "manifest-typing",
+        "title": "7. Manifest Typing & Flex-Type",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Type System",
+            "subtitle": "SQLite's unique 'Typeless' architecture."
+          },
+          {
+            "type": "content",
+            "title": "Manifest vs Static Typing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🤯",
+                  "text": "<strong>Flexibility:</strong> You can store a string in an INTEGER column."
+                },
+                {
+                  "emoji": "🗜️",
+                  "text": "<strong>Storage:</strong> SQLite automatically uses the smallest storage class for each value."
+                }
+              ],
+              "title": "In SQLite, the datatype is a property of the value itself, not the column."
+            }
+          },
+          {
+            "type": "content",
+            "title": "STRICT Tables (since 3.37.0)",
+            "box": {
+              "code": "CREATE TABLE users (id INT PRIMARY KEY) STRICT;",
+              "title": "For developers who want traditional rigid typing."
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-sql",
+        "title": "8. Advanced SQL Power",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. Modern SQL",
+            "subtitle": "Pro-level SQL features in 1MB of C code."
+          },
+          {
+            "type": "content",
+            "title": "Recursive CTEs",
+            "box": {
+              "code": "WITH RECURSIVE cnt(x) AS (\n  SELECT 1 UNION ALL SELECT x+1 FROM cnt\n  LIMIT 100\n) SELECT * FROM cnt;",
+              "title": "Solving graph problems and generating sequences."
+            }
+          },
+          {
+            "type": "content",
+            "title": "JSON functions",
+            "box": {
+              "code": "SELECT json_extract(data, '$.user.id') FROM logs;",
+              "title": "High-performance JSON document support."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Generated Columns",
+            "box": {
+              "code": "full_name TEXT GENERATED ALWAYS AS (first || ' ' || last)",
+              "title": "Computed values stored or calculated on-the-fly."
+            }
+          }
+        ]
+      },
+      {
+        "id": "distributed-sqlite",
+        "title": "9. Distributed SQLite & The Future",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. The Edge",
+            "subtitle": "Taking SQLite beyond a single node."
+          },
+          {
+            "type": "content",
+            "title": "LiteFS (Fly.io)",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚢",
+                  "text": "<strong>Replication:</strong> Streams changes to replicas globally."
+                }
+              ],
+              "title": "FUSE-based replication for SQLite."
+            }
+          },
+          {
+            "type": "content",
+            "title": "LibSQL / Turso",
+            "box": {
+              "list": [
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Serverless:</strong> HTTP interface, multi-tenancy."
+                }
+              ],
+              "title": "The SQLite fork designed for the cloud."
+            }
+          }
+        ]
+      },
+      {
+        "id": "optimization",
+        "title": "10. Performance Tuning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Tuning",
+            "subtitle": "Squeezing every drop of performance."
+          },
+          {
+            "type": "content",
+            "title": "PRAGMA Power",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💨",
+                  "text": "<strong>synchronous=OFF:</strong> Extreme speed (at risk of corruption)."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>cache_size:</strong> controlling the pager cache."
+                },
+                {
+                  "emoji": "⏲️",
+                  "text": "<strong>busy_timeout:</strong> Handling lock contention."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "EXPLAIN QUERY PLAN",
+            "box": {
+              "code": "EXPLAIN QUERY PLAN SELECT * FROM orders WHERE cid = 5;",
+              "title": "Reading the VDBE optimization paths."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Incremental Vacuum",
+            "box": {
+              "code": "PRAGMA auto_vacuum = INCREMENTAL;\nPRAGMA incremental_vacuum(100); # Reclaim up to 100 pages",
+              "title": "Reclaiming space without locking the whole database."
+            }
+          }
+        ]
+      },
+      {
+        "id": "extensions",
+        "title": "11. SQLite Extensions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Extensions",
+            "subtitle": "Expanding the core with modular features."
+          },
+          {
+            "type": "content",
+            "title": "FTS5 (Full-Text Search)",
+            "box": {
+              "code": "CREATE VIRTUAL TABLE docs USING fts5(title, body);",
+              "title": "Professional-grade search engine built into SQLite."
+            }
+          },
+          {
+            "type": "content",
+            "title": "R-Tree & Geospatial",
+            "box": {
+              "code": "CREATE VIRTUAL TABLE spatial_idx USING rtree(id, minX, maxX, minY, maxY);",
+              "title": "Efficient spatial queries for maps and sensors."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Session Extension ()",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Changeset:</strong> Capture all changes made to a database."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Sync:</strong> Send the changeset to another node to merge."
+                }
+              ],
+              "title": "Extracting changesets for offline sync."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Loadable Extensions",
+            "box": {
+              "code": ".load ./uuid.so",
+              "title": "Loading C-shared libraries at runtime."
+            }
+          }
+        ]
+      },
+      {
+        "id": "compilation-amalgamation",
+        "title": "12. The Amalgamation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Build Process",
+            "subtitle": "Why SQLite is just two files."
+          },
+          {
+            "type": "content",
+            "title": "The Amalgamation",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Benefits:</strong> Easier to embed. Compiler can optimize across the whole engine (Inter-procedural optimization)."
+                }
+              ],
+              "title": "All 100+ source files combined into one giant `sqlite3.c` file."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Compile-Time Options",
+            "box": {
+              "code": "-DSQLITE_THREADSAFE=0 # Single-threaded mode for 5% speed boost",
+              "title": "Stripping features or enabling optimizations at compile time."
+            }
+          }
+        ]
+      },
+      {
+        "id": "corruption-prevention",
+        "title": "13. Data Integrity & Corruption",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Reliability",
+            "subtitle": "How SQLite protects your data."
+          },
+          {
+            "type": "content",
+            "title": "Atomic Commit",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚛️",
+                  "text": "<strong>Commit Record:</strong> The single bit flip that marks a transaction as final."
+                }
+              ],
+              "title": "Ensuring transactions are all-or-nothing even during power loss."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Corruption Causes",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Hardware:</strong> Disk failures or memory bit-flips."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>User Error:</strong> Opening a database file in a text editor."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>OS Bugs:</strong> Faulty file locking or sync implementations."
+                }
+              ],
+              "title": "How databases die (and how to avoid it)."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Self-Testing (Thoroughness)",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Coverage:</strong> 100% of the code is tested by the public test suite."
+                }
+              ],
+              "title": "The famous SQLite test suite."
+            }
+          }
+        ]
+      },
+      {
+        "id": "maintenance",
+        "title": "14. Database Maintenance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "14. Maintenance",
+            "subtitle": "Keeping the file healthy."
+          },
+          {
+            "type": "content",
+            "title": "VACUUM",
+            "box": {
+              "code": "VACUUM;",
+              "title": "Rebuilding the database to reclaim space and defragment."
+            }
+          },
+          {
+            "type": "content",
+            "title": "ANALYZE",
+            "box": {
+              "code": "ANALYZE;",
+              "title": "Updating statistics for the query optimizer."
+            }
+          },
+          {
+            "type": "content",
+            "title": "CLI Power Tricks",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>.mode box:</strong> Beautifully formatted output tables."
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>.timer on:</strong> Measure execution time for every query."
+                },
+                {
+                  "emoji": "📂",
+                  "text": "<strong>.import:</strong> Fast CSV/TSV loading."
+                }
+              ],
+              "title": "Pro-tips for the sqlite3 terminal."
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "SQLite Mastery",
+            "subtitle": "The engine that runs the world."
+          },
+          {
+            "type": "content",
+            "title": "Summary",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Reliability:</strong> 100% branch coverage tests."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Scalability:</strong> Up to 281 Terabytes."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Deployment:</strong> Everywhere."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": {
+              "title": "Thank you! Any questions?"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

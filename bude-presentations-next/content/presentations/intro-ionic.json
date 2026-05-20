@@ -1,0 +1,933 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Ionic – Cross-Platform Hybrid Mobile App Development",
+            "subtitle": "Build High-Performance Mobile Apps with Web Technologies<br>One Codebase, Multiple Platforms"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Full Stack & Mobile Developer",
+            "experience": "4 years in Cross-Platform Development & Web Technologies",
+            "oss_experience": "Hybrid App Development & PWA Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Ionic?</strong> - Framework Overview & History"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Why Choose Ionic?</strong> - Benefits & Use Cases"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Architecture</strong> - Capacitor vs Cordova"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Getting Started</strong> - Setup & First App"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>UI Components</strong> - Buttons, Inputs, Navigation"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Framework Integration</strong> - Angular, React, Vue"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Native Features</strong> - Camera, GPS, Notifications"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Data Management</strong> - State, Storage, APIs"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Building & Deployment</strong> - iOS, Android, PWA"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance & Optimization</strong> - Best Practices"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Backend Integration</strong> - Firebase, Node.js, APIs"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Real World Applications</strong> - Case Studies"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-ionic",
+        "title": "What is Ionic?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Introduction to Ionic"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "What is Ionic?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Technology</strong> - Web technologies (HTML, CSS, JavaScript)"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Platforms</strong> - iOS, Android, Web (PWA), Desktop"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Approach</strong> - Hybrid mobile app development"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>UI</strong> - Native-looking components"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Runtime</strong> - Capacitor (modern) or Cordova"
+                }
+              ],
+              "title": "<span class=\"highlight\">Open-source UI toolkit</span> for building cross-platform mobile, web, and desktop apps"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Ionic powers apps for millions of users including NASA, Amtrak, and Burger King!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ionic History"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>2013</strong> - Ionic 1 launched with AngularJS"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2016</strong> - Ionic 2 with Angular 2+"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2018</strong> - Ionic 4 with framework-agnostic approach"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2019</strong> - Capacitor introduced"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2020</strong> - Ionic React & Vue support"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>2023</strong> - Ionic 7 with improved performance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-ionic",
+        "title": "Why Choose Ionic?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Benefits of Ionic"
+          },
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Advantages of Ionic",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Rapid Development</strong> - Single codebase for all platforms"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Effective</strong> - No need for separate iOS/Android teams"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Skills</strong> - Use existing HTML, CSS, JS knowledge"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Rich Ecosystem</strong> - 100+ UI components & plugins"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Beautiful UI</strong> - Material Design & iOS styling"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Near-native with modern browsers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Ionic Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Technical Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Ionic App Structure",
+            "box": {
+              "code": "┌─────────────────────────────────────────┐\n│           Native Shell (Container)       │\n│  ┌─────────────────────────────────────┐ │\n│  │           WebView                   │ │\n│  │  ┌─────────────────────────────┐    │ │\n│  │  │      Ionic App              │    │ │\n│  │  │  ┌─────────────────────┐    │    │ │\n│  │  │  │   UI Components     │    │    │ │\n│  │  │  └─────────────────────┘    │    │ │\n│  │  │  ┌─────────────────────┐    │    │ │\n│  │  │  │   Framework         │    │    │ │\n│  │  │  │  (Angular/React/Vue)│    │    │ │\n│  │  │  └─────────────────────┘    │    │ │\n│  │  └─────────────────────────────┘    │ │\n│  │                                     │ │\n│  │  ┌─────────────────────────────┐    │ │\n│  │  │     Capacitor Bridge        │    │ │\n│  │  │   (Native API Access)       │    │ │\n│  │  └─────────────────────────────┘    │ │\n│  └─────────────────────────────────────┘ │\n└─────────────────────────────────────────┘",
+              "title": "<strong>Hybrid App Architecture</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Capacitor vs Cordova",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Capacitor</strong> - Modern, better performance, native-first"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Cordova</strong> - Legacy, larger plugin ecosystem"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Capacitor</strong> - Official Ionic recommendation"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Cordova</strong> - More mature, but declining"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "getting-started",
+        "title": "Getting Started",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Setup & Installation"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Installing Ionic CLI",
+            "box": {
+              "code": "# Install Node.js (prerequisite)\n# Download from nodejs.org\n\n# Install Ionic CLI globally\nnpm install -g @ionic/cli\n\n# Check installation\nionic --version\n\n# Create new Ionic app\nionic start myApp tabs --type=angular\n# or\nionic start myApp blank --type=react\nionic start myApp sidemenu --type=vue\n\n# Navigate to project\ncd myApp\n\n# Run development server\nionic serve",
+              "title": "<strong>Setup Development Environment</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Project Structure",
+            "box": {
+              "code": "myApp/\n├── src/\n│   ├── app/\n│   │   ├── app.component.ts     # Root component\n│   │   ├── app.module.ts        # App module (Angular)\n│   │   └── app-routing.module.ts # Routing configuration\n│   ├── pages/\n│   │   ├── home/\n│   │   │   ├── home.page.html\n│   │   │   ├── home.page.scss\n│   │   │   └── home.page.ts\n│   │   └── ...\n│   ├── assets/                  # Static files\n│   ├── theme/                   # Global styles\n│   └── environments/            # Environment configs\n├── capacitor.config.ts          # Capacitor configuration\n├── package.json\n└── ionic.config.json",
+              "title": "<strong>Ionic App Directory Structure</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ui-components",
+        "title": "UI Components",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ionic UI Components"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Core UI Components",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Navigation</strong> - ion-nav, ion-router-outlet"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Layout</strong> - ion-grid, ion-row, ion-col"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Forms</strong> - ion-input, ion-select, ion-checkbox"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Buttons</strong> - ion-button, ion-fab"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Content</strong> - ion-card, ion-list, ion-item"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Modals</strong> - ion-modal, ion-popover"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Component Examples",
+            "box": {
+              "code": "<!-- Angular/React/Vue Template -->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>My App</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-header>\n      <ion-card-title>Welcome</ion-card-title>\n    </ion-card-header>\n    <ion-card-content>\n      <ion-item>\n        <ion-label position=\"stacked\">Email</ion-label>\n        <ion-input type=\"email\" [(ngModel)]=\"email\"></ion-input>\n      </ion-item>\n      \n      <ion-button expand=\"block\" (click)=\"login()\">\n        <ion-icon slot=\"start\" name=\"log-in\"></ion-icon>\n        Login\n      </ion-button>\n      \n      <ion-list>\n        <ion-item>\n          <ion-icon slot=\"start\" name=\"heart\"></ion-icon>\n          <ion-label>Favorites</ion-label>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>",
+              "title": "<strong>Ionic Component Code</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "navigation",
+        "title": "Navigation System",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ionic Navigation"
+          },
+          {
+            "type": "content",
+            "emoji": "🧭",
+            "title": "Navigation Patterns",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Stack Navigation</strong> - Push/pop pages like native apps"
+                },
+                {
+                  "emoji": "📑",
+                  "text": "<strong>Tabs</strong> - Bottom or top tab navigation"
+                },
+                {
+                  "emoji": "🍔",
+                  "text": "<strong>Side Menu</strong> - Hamburger menu pattern"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Router Integration</strong> - Framework-specific routing"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Navigation Example",
+            "box": {
+              "code": "// app-routing.module.ts\nconst routes: Routes = [\n  {\n    path: '',\n    redirectTo: 'home',\n    pathMatch: 'full'\n  },\n  {\n    path: 'home',\n    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)\n  },\n  {\n    path: 'details/:id',\n    loadChildren: () => import('./details/details.module').then(m => m.DetailsPageModule)\n  }\n];\n\n// home.page.ts\nimport { Router } from '@angular/router';\n\nexport class HomePage {\n  constructor(private router: Router) {}\n  \n  navigateToDetails() {\n    this.router.navigate(['/details', 123]);\n  }\n  \n  // Or using Ionic NavController\n  // this.navController.navigateForward('/details/123');\n}\n\n<!-- In template -->\n<ion-button (click)=\"navigateToDetails()\">View Details</ion-button>",
+              "title": "<strong>Angular Routing Example</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "framework-integration",
+        "title": "Framework Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ionic with Frameworks"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Framework Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Ionic Angular</strong> - Most mature, enterprise-ready"
+                },
+                {
+                  "emoji": "⚛️",
+                  "text": "<strong>Ionic React</strong> - Popular, great ecosystem"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Ionic Vue</strong> - Simple, progressive framework"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Vanilla JS</strong> - No framework, pure JavaScript"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Framework Comparison",
+            "box": {
+              "code": "// Angular - Structured, TypeScript-first\n@Component({\n  selector: 'app-home',\n  templateUrl: 'home.page.html',\n  styleUrls: ['home.page.scss']\n})\nexport class HomePage {\n  items: string[] = ['Item 1', 'Item 2'];\n  \n  addItem(item: string) {\n    this.items.push(item);\n  }\n}\n\n// React - Functional components, hooks\nimport React, { useState } from 'react';\n\nconst HomePage: React.FC = () => {\n  const [items, setItems] = useState<string[]>(['Item 1', 'Item 2']);\n  \n  const addItem = (item: string) => {\n    setItems([...items, item]);\n  };\n  \n  return (\n    <IonPage>\n      <IonContent>...</IonContent>\n    </IonPage>\n  );\n};\n\n// Vue - Reactive, template-based\n<template>\n  <ion-page>\n    <ion-content>...</ion-content>\n  </ion-page>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      items: ['Item 1', 'Item 2']\n    }\n  },\n  methods: {\n    addItem(item) {\n      this.items.push(item);\n    }\n  }\n}\n</script>",
+              "title": "<strong>Choosing Your Framework</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "native-features",
+        "title": "Native Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Capacitor & Native APIs"
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Capacitor Plugins",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📸",
+                  "text": "<strong>Camera</strong> - Take photos and videos"
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Geolocation</strong> - GPS and location services"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Filesystem</strong> - Read/write local files"
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Push Notifications</strong> - FCM & APNs"
+                },
+                {
+                  "emoji": "📳",
+                  "text": "<strong>Haptics & Vibration</strong> - Tactile feedback"
+                },
+                {
+                  "emoji": "🔋",
+                  "text": "<strong>Device Info</strong> - Battery, platform, model"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Camera Plugin Example",
+            "box": {
+              "code": "import { Camera, CameraResultType } from '@capacitor/camera';\n\nexport class PhotoService {\n  public async takePicture(): Promise<string> {\n    const image = await Camera.getPhoto({\n      quality: 90,\n      allowEditing: true,\n      resultType: CameraResultType.Uri\n    });\n    \n    return image.webPath; // Returns image URL\n  }\n}\n\n// In component\nasync captureImage() {\n  try {\n    const imageUrl = await this.photoService.takePicture();\n    this.currentImage = imageUrl;\n  } catch (error) {\n    console.error('Camera error:', error);\n  }\n}\n\n<!-- In template -->\n<ion-button (click)=\"captureImage()\">\n  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\n  Take Photo\n</ion-button>\n\n<img [src]=\"currentImage\" *ngIf=\"currentImage\" />\n\n<!-- Add to capacitor.config.ts -->\n/* capacitor.config.ts */\nimport { CapacitorConfig } from '@capacitor/cli';\n\nconst config: CapacitorConfig = {\n  appId: 'com.example.app',\n  appName: 'My App',\n  plugins: {\n    Camera: {\n      // Camera configuration\n    }\n  }\n};",
+              "title": "<strong>Using Capacitor Camera</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-management",
+        "title": "Data Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "State & Data Handling"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Storage Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Capacitor Storage</strong> - Simple key-value store"
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>SQLite</strong> - Full database capabilities"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>IndexedDB</strong> - Browser database"
+                },
+                {
+                  "emoji": "🍪",
+                  "text": "<strong>LocalStorage</strong> - Simple web storage"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "HTTP & API Integration",
+            "box": {
+              "code": "import { HttpClient } from '@angular/common/http';\nimport { Storage } from '@capacitor/storage';\n\nexport class DataService {\n  constructor(private http: HttpClient) {}\n  \n  // HTTP Requests\n  async getUsers(): Promise<any[]> {\n    const response = await this.http.get<any[]>('/api/users').toPromise();\n    return response || [];\n  }\n  \n  // Local Storage\n  async saveUserPrefs(prefs: any): Promise<void> {\n    await Storage.set({\n      key: 'userPreferences',\n      value: JSON.stringify(prefs)\n    });\n  }\n  \n  async getUserPrefs(): Promise<any> {\n    const { value } = await Storage.get({ key: 'userPreferences' });\n    return value ? JSON.parse(value) : null;\n  }\n  \n  // Authentication\n  async login(credentials: any): Promise<boolean> {\n    try {\n      const response = await this.http.post('/api/auth/login', credentials).toPromise();\n      await this.saveAuthToken(response.token);\n      return true;\n    } catch (error) {\n      return false;\n    }\n  }\n}\n\n// Using in component\nexport class HomePage {\n  users: any[] = [];\n  \n  constructor(private dataService: DataService) {}\n  \n  async loadUsers() {\n    this.users = await this.dataService.getUsers();\n  }\n}",
+              "title": "<strong>API Communication</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "building-deployment",
+        "title": "Building & Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "App Store Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Building for Platforms",
+            "box": {
+              "code": "# Build web assets\nionic build\n\n# Add Android platform\nnpm install @capacitor/android\nnpx cap add android\nnpx cap sync\n\n# Add iOS platform\nnpm install @capacitor/ios\nnpx cap add ios\nnpx cap sync\n\n# Open in native IDEs\nnpx cap open android  # Opens Android Studio\nnpx cap open ios      # Opens Xcode\n\n# Live reload development\nionic capacitor run android -l --external\nionic capacitor run ios -l --external\n\n# Build production\nionic build --prod\nnpx cap sync\n\n# Generate app icons & splash screens\nnpm install -g capacitor-assets\ncapacitor-assets generate",
+              "title": "<strong>Platform Build Process</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "App Store Requirements",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🍎",
+                  "text": "<strong>Apple App Store</strong> - $99/year, strict guidelines"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Google Play Store</strong> - $25 one-time, more flexible"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>PWA</strong> - Free, deploy to any web server"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Desktop</strong> - Electron for Mac/Windows/Linux"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Performance & Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance Optimization"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Optimization Techniques",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Lazy Loading</strong> - Load pages only when needed"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Code Splitting</strong> - Smaller bundle sizes"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Image Optimization</strong> - WebP, compression"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Caching</strong> - Service workers for offline"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Tree Shaking</strong> - Remove unused code"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "pwa",
+        "title": "Progressive Web Apps",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PWA with Ionic"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "PWA Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Installable</strong> - Add to home screen"
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Push Notifications</strong> - Web push API"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Offline Support</strong> - Service workers"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Fast Loading</strong> - App shell model"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure</strong> - HTTPS required"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "backend-integration",
+        "title": "Backend Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Connecting to Backends"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Backend Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>Firebase</strong> - Real-time database, auth, hosting"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Supabase</strong> - Open-source Firebase alternative"
+                },
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>Node.js/Express</strong> - Custom backend API"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>NestJS</strong> - Enterprise Node.js framework"
+                },
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Django/Python</strong> - Python backend"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>Laravel/PHP</strong> - PHP backend"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world",
+        "title": "Real World Applications",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Case Studies"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Companies Using Ionic",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>NASA</strong> - International Space Station apps"
+                },
+                {
+                  "emoji": "🚆",
+                  "text": "<strong>Amtrak</strong> - Train booking and tracking"
+                },
+                {
+                  "emoji": "🍔",
+                  "text": "<strong>Burger King</strong> - Customer ordering app"
+                },
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Healthcare Apps</strong> - Patient portals"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Financial Apps</strong> - Banking and finance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Ionic Quick Reference",
+            "box": {
+              "code": "# CLI Commands\nionic start myApp tabs          # Create new app\nionic serve                     # Development server\nionic build                     # Build for web\nionic capacitor add android     # Add Android\nionic capacitor add ios         # Add iOS\n\n# Common Components\n<ion-header>, <ion-content>, <ion-footer>\n<ion-button>, <ion-input>, <ion-card>\n<ion-list>, <ion-item>, <ion-grid>\n\n# Navigation\nthis.navController.navigateForward()\nthis.router.navigate()\n\n# Capacitor Plugins\nimport { Camera } from '@capacitor/camera'\nimport { Geolocation } from '@capacitor/geolocation'\nimport { Storage } from '@capacitor/storage'\n\n# Styling\nTheming with CSS variables\nPlatform-specific styles\nDark mode support",
+              "title": "<strong>Essential Commands & Patterns</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning Ionic",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Ionic Documentation</strong> - Official docs"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Ionic Academy</strong> - Video courses"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Ionic Forum</strong> - Community support"
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Ionic Cookbook</strong> - Recipes & solutions"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube</strong> - Ionic tutorials & demos"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub</strong> - Open source examples"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Photo Gallery App",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Create new Ionic app with tabs"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Implement camera functionality"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Add photo gallery display"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Implement local storage for photos"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Add sharing capabilities"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Style with Ionic components"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Test on Android/iOS devices"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Deploy as PWA"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Ionic Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between Capacitor and Cordova?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you add native camera functionality?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What are the main framework options for Ionic?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you deploy to app stores?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What makes a good PWA?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "Ionic = Cross-platform mobile framework"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Uses web technologies (HTML, CSS, JS)"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "One codebase for iOS, Android, Web"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "Capacitor for native device features"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Rich UI component library"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Fast development & cost-effective"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Ionic development, native features, or deployment!<br><span class=\"gradient-accent\">All mobile app questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">⚡</span> Ready to build cross-platform apps?<br><span class=\"gradient-accent\">Start your Ionic journey today!</span>",
+              "note": "Cross-Platform • Web Technologies • Native Performance"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

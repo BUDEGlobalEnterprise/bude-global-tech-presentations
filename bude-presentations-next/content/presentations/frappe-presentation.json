@@ -1,0 +1,891 @@
+{
+  "category": "business",
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Frappe",
+            "subtitle": "Full-Stack Web Framework for Rapid Application Development<br>Powering ERPNext and Beyond"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Frappe?</strong> - Core Concepts & Architecture"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Frappe vs Other Frameworks</strong> - Comparison"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Installation & Setup</strong> - Getting Started"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>DocTypes & Models</strong> - Core Building Blocks"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Frappe ORM</strong> - Database Operations"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Role-Based Permissions</strong> - Security"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>REST API & GraphQL</strong> - Integration"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Custom Apps & Modules</strong> - Extensibility"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Frontend Development</strong> - UI Components"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Workflows & Automation</strong> - Business Logic"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Background Jobs</strong> - Performance"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Event Hooks</strong> - Extensibility"
+                },
+                {
+                  "emoji": "🧪",
+                  "text": "<strong>Testing & Debugging</strong> - Quality"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Deployment & Bench</strong> - Production"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Real-World Use Cases</strong> - Applications"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-frappe",
+        "title": "What is Frappe?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Frappe Framework"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Frappe?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐍",
+                  "text": "<strong>Backend</strong> - Python-based server"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Frontend</strong> - JavaScript + Jinja templates"
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>Database</strong> - Abstraction layer (MySQL/MariaDB)"
+                },
+                {
+                  "emoji": "🎪",
+                  "text": "<strong>Architecture</strong> - Event-driven, metadata-first"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Powering</strong> - ERPNext and thousands of custom apps"
+                }
+              ],
+              "title": "Full-stack, <span class=\"highlight\">metadata-driven web framework</span> for rapid application development"
+            },
+            "note": {
+              "text": "<strong>Founded:</strong> 2008<br><strong>Company:</strong> Frappe Technologies<br><strong>License:</strong> MIT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-frappe",
+        "title": "Why Frappe?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why Choose Frappe?"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Key Advantages",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Rapid Development</strong> - Build apps in days, not months"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Auto UI Generation</strong> - Forms and lists from models"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Built-in User System</strong> - Ready-to-use auth & roles"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>REST APIs</strong> - Auto-generated API endpoints"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Multi-Tenant</strong> - SaaS-ready architecture"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>App Ecosystem</strong> - Reusable modules and apps"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Frappe Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "System Architecture",
+            "box": {
+              "code": "Client ↔ Web Server ↔ Frappe App ↔ Database\n        ↓\n   Metadata Layer\n        ↓\n   Event Hooks",
+              "title": "<strong>MVC + Metadata + Event Hooks Architecture</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🎯",
+                "text": "<strong>Model</strong> - DocTypes (Database + Business Logic)"
+              },
+              {
+                "emoji": "🎨",
+                "text": "<strong>View</strong> - Jinja Templates + JavaScript"
+              },
+              {
+                "emoji": "🔧",
+                "text": "<strong>Controller</strong> - Python Methods + API"
+              },
+              {
+                "emoji": "📋",
+                "text": "<strong>Metadata</strong> - Configuration as JSON"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "System Requirements",
+            "box": {
+              "code": "sudo apt install python3-dev \\\n  redis-server \\\n  mariadb-server \\\n  && pip install frappe-bench",
+              "title": "<strong>Prerequisites installation</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🐍",
+                "text": "Python 3.7+"
+              },
+              {
+                "emoji": "🗄️",
+                "text": "MySQL/MariaDB"
+              },
+              {
+                "emoji": "🔴",
+                "text": "Redis"
+              },
+              {
+                "emoji": "📦",
+                "text": "Node.js"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Quick Setup",
+            "box": {
+              "code": "# Create bench directory\nbench init --frappe-branch version-15 mysite\n\n# Create new site\ncd mysite\nbench new-site test.local\n\n# Start development server\nbench start",
+              "title": "<strong>Initialize Frappe environment</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Access your site at http://test.local:8000"
+            }
+          }
+        ]
+      },
+      {
+        "id": "doctypes",
+        "title": "DocTypes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Core Building Blocks"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "What are DocTypes?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Field Definitions</strong> - Database schema"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Validation Logic</strong> - Data integrity rules"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>UI Settings</strong> - Form and list views"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Permissions</strong> - Role-based access control"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>API Access</strong> - REST endpoints"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Workflows</strong> - Business process flows"
+                }
+              ],
+              "title": "<strong>Unified definition for database tables + forms + permissions</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> One DocType definition = Database table + UI + API + Permissions"
+            }
+          }
+        ]
+      },
+      {
+        "id": "orm",
+        "title": "Frappe ORM",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Database Operations"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Frappe ORM Examples",
+            "box": {
+              "code": "import frappe\n\n# Get document\nuser = frappe.get_doc('User', 'test@example.com')\nprint(user.first_name)\n\n# Create new document\nnew_user = frappe.get_doc({\n    'doctype': 'User',\n    'email': 'new@example.com',\n    'first_name': 'John'\n})\nnew_user.insert()\n\n# Update document\nuser.last_name = 'Doe'\nuser.save()\n\n# Query documents\nusers = frappe.get_all('User', \n    filters={'enabled': 1},\n    fields=['name', 'first_name']\n)",
+              "title": "<strong>Working with documents</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "permissions",
+        "title": "Permissions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security & Access Control"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Role-Based Permissions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Role-Based</strong> - Assign permissions by role"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Document-Level</strong> - Fine-grained per-document access"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>User Permission Rules</strong> - Custom access rules"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Workflow-Based</strong> - Dynamic permissions in workflows"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "title": "API & Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "REST API & GraphQL"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "REST API",
+            "box": {
+              "code": "# GET all items\nGET /api/resource/Item\n\n# GET specific item\nGET /api/resource/Item/ITEM-001\n\n# CREATE new item\nPOST /api/resource/Item\n{\n    \"item_name\": \"Laptop\",\n    \"item_code\": \"LAP-001\",\n    \"standard_rate\": 999.99\n}\n\n# UPDATE item\nPUT /api/resource/Item/ITEM-001\n{\n    \"standard_rate\": 899.99\n}\n\n# DELETE item\nDELETE /api/resource/Item/ITEM-001",
+              "title": "<strong>Auto-generated REST endpoints</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔮",
+            "title": "GraphQL Support",
+            "box": {
+              "code": "query {\n  User(name: \"test@example.com\") {\n    name\n    first_name\n    last_name\n    roles {\n      role\n    }\n  }\n}",
+              "title": "<strong>Modern GraphQL API</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "custom-apps",
+        "title": "Custom Apps",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Building Custom Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Creating New Apps",
+            "box": {
+              "code": "# Create new app\nbench new-app hrms_custom\n\n# Install app on site\nbench --site test.local install-app hrms_custom\n\n# Create new DocType\nbench new-doctype \"Employee\"\n\n# Build assets\nbench build --app hrms_custom",
+              "title": "<strong>App development workflow</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🏗️",
+                "text": "App structure with modules"
+              },
+              {
+                "emoji": "🔧",
+                "text": "Custom DocTypes and logic"
+              },
+              {
+                "emoji": "🎨",
+                "text": "Custom UI and pages"
+              },
+              {
+                "emoji": "📦",
+                "text": "Reusable across sites"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "frontend",
+        "title": "Frontend Development",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "UI & Frontend"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Frontend Technologies",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Jinja Templates</strong> - Server-side rendering"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Auto-Generated Forms</strong> - From DocType definitions"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Web Pages & Portal</strong> - Public-facing pages"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Custom JS Controllers</strong> - Client-side logic"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Frappe UI</strong> - Component library"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "workflows",
+        "title": "Workflows & Automation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Business Process Automation"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Workflows",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>State Management</strong> - Document states"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Role Assignment</strong> - Who can transition"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Conditions</strong> - When transitions can happen"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Notifications</strong> - Email and system alerts"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Actions</strong> - Automated tasks on transitions"
+                }
+              ],
+              "title": "<strong>Visual approval workflows at DocType level</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "Print & PDF Formats",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Jinja HTML Templates</strong> - Custom layouts"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Auto PDF Export</strong> - Web to PDF conversion"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Header/Footer Scripting</strong> - Dynamic content"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Multiple Formats</strong> - Different templates per use case"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "background-jobs",
+        "title": "Background Jobs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance & Async Tasks"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Background Processing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>Redis Queue (RQ)</strong> - Job queue system"
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Scheduled Tasks</strong> - Cron-style scheduling"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Long-running Tasks</strong> - Async processing"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Progress Tracking</strong> - Monitor job progress"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Retry Logic</strong> - Automatic retries on failure"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "event-hooks",
+        "title": "Event Hooks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Extensibility & Customization"
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "Event-Driven Architecture",
+            "box": {
+              "code": "# In hooks.py\ndoc_events = {\n    'User': {\n        'after_insert': 'app.user.after_create',\n        'on_update': 'app.user.on_update',\n        'on_trash': 'app.user.before_delete'\n    },\n    'Task': {\n        'on_change': 'app.tasks.sync_with_external'\n    }\n}\n\n# Event handler method\ndef after_create(doc, method):\n    # Custom logic after user creation\n    frappe.sendmail(\n        recipients=doc.email,\n        subject='Welcome!',\n        message='Your account was created.'\n    )",
+              "title": "<strong>Hook into document lifecycle events</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing",
+        "title": "Testing & Debugging",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Quality Assurance"
+          },
+          {
+            "type": "content",
+            "emoji": "🧪",
+            "title": "Testing Framework",
+            "box": {
+              "code": "# Run all tests\nbench --site test.local run-tests\n\n# Run specific app tests\nbench --site test.local run-tests --app erpnext\n\n# Run specific module\nbench --site test.local run-tests --module erpnext.selling\n\n# Run specific test case\nbench --site test.local run-tests --test test_customer",
+              "title": "<strong>Built-in testing tools</strong>"
+            },
+            "list": [
+              {
+                "emoji": "✅",
+                "text": "Unit tests for Python methods"
+              },
+              {
+                "emoji": "🔧",
+                "text": "Integration tests for workflows"
+              },
+              {
+                "emoji": "🎯",
+                "text": "UI tests with Selenium"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Developer Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Frappe UI Builder</strong> - Visual form designer"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Inspector (Ctrl+I)</strong> - Debug metadata and state"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Console</strong> - bench console for live coding"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Bench Commands</strong> - CLI for all operations"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment",
+        "title": "Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Deployment"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Production Setup",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Using Bench</strong> - Production bench setup"
+                },
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Supervisor</strong> - Process management"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>NGINX</strong> - Web server and reverse proxy"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>SSL + HTTPS</strong> - Secure connections"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Production Mode</strong> - Optimized performance"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Monitoring</strong> - Logs and performance tracking"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Real World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Frappe in Production"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Popular Applications",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>ERPNext</strong> - World's top open source ERP"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>LMS</strong> - Learning management systems"
+                },
+                {
+                  "emoji": "🏥",
+                  "text": "<strong>Healthcare EMR</strong> - Electronic medical records"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>HR & Payroll</strong> - Human resource management"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Custom Internal Tools</strong> - Business-specific apps"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>E-commerce</strong> - Online store management"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "demo",
+        "title": "Live Demo",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🎬",
+            "title": "Live Demo Steps",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Create new site with bench"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Install custom app"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Create new DocType (e.g., Project)"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Add fields and validation"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Test auto-generated UI"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Add sample data"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Test REST API endpoints"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Demonstrate permissions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Frappe Framework Docs</strong> - frappeframework.com"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Frappe School</strong> - Free video courses"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/frappe/frappe"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Frappe Forum</strong> - Community discussions"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Step-by-step guides"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "Frappe = Full-stack framework in Python/JS"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "DocTypes unify data model + UI + API + Permissions"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Rapid development with auto-generated interfaces"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "Built-in multi-tenant and security features"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Perfect for business applications and ERPs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Frappe setup, DocTypes, or specific use cases!<br><span class=\"gradient-accent\">All framework questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🏗️</span> Ready to build with Frappe?<br><span class=\"gradient-accent\">Start creating amazing applications today!</span>",
+              "note": "Rapid Development • Full-Stack • Open Source"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

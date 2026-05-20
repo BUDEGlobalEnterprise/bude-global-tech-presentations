@@ -1,0 +1,1486 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Ghost - Just a Blogging Platform",
+            "subtitle": "Modern Publishing Platform for Professional Writers<br>From Setup to Monetization"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👻",
+                  "text": "<strong>What is Ghost?</strong> - Modern Publishing Platform"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Core Features</strong> - Speed, Simplicity, Performance"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Why Choose Ghost?</strong> - Benefits & Advantages"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Installation Options</strong> - Hosting & Deployment"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Themes & Customization</strong> - Design & Branding"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Integrations</strong> - Third-party Services"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Content Management</strong> - Writing Experience"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Admin Panel</strong> - Dashboard & Settings"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Membership & Newsletter</strong> - Monetization"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>SEO & Performance</strong> - Optimization"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Headless CMS Mode</strong> - API-first Approach"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Use Cases</strong> - Real-world Applications"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-ghost",
+        "title": "What is Ghost?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding Ghost"
+          },
+          {
+            "type": "content",
+            "emoji": "👻",
+            "title": "What is Ghost?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Built With</strong> - Node.js, Handlebars, Ember.js"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Focus</strong> - Content creation and publishing"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>License</strong> - MIT (Free and open source)"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Performance</strong> - Blazing fast and lightweight"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Users</strong> - Bloggers, publishers, content creators"
+                }
+              ],
+              "title": "<span class=\"highlight\">Modern, open-source publishing platform</span> built for professional writers"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Ghost started as a Kickstarter project in 2013 and has grown into a popular alternative to WordPress!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History & Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Journey"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Key Milestones",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>2013</strong> - Launched on Kickstarter, raised $300k+"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>2013</strong> - First public release (v0.3)"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2016</strong> - Major rewrite, Ghost(Pro) hosting"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2018</strong> - Membership & subscriptions"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "<strong>2020</strong> - Headless CMS capabilities"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "<strong>2023</strong> - 4.0 release with improved APIs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-features",
+        "title": "Core Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Feature Set"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Key Features Overview",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Minimal Editor</strong> - Distraction-free writing"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Fast & Lightweight</strong> - Optimized performance"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Built-in SEO</strong> - Automatic optimization"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Membership System</strong> - User management"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Newsletters</strong> - Built-in publishing"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Themes & Customization</strong> - Flexible design"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Performance Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Node.js Backend</strong> - High performance"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>AMP Support</strong> - Mobile optimization"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Caching</strong> - Built-in performance"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Image Optimization</strong> - Automatic resizing"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Lighthouse Scores</strong> - 90+ out of the box"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-ghost",
+        "title": "Why Choose Ghost?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Advantages"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Benefits Over Alternatives",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Focused Purpose</strong> - Built specifically for publishing"
+                },
+                {
+                  "emoji": "✍️",
+                  "text": "<strong>Writing Experience</strong> - Clean, minimal editor"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Monetization</strong> - Built-in membership & payments"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - Faster than WordPress"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Developer Friendly</strong> - Full API access"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Ghost vs WordPress",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👻",
+                  "text": "<strong>Ghost</strong> - Focused on publishing, fast, modern"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>WordPress</strong> - General purpose, extensive plugins"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Ghost</strong> - Better for content-focused sites"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>WordPress</strong> - Better for e-commerce, complex sites"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Ghost</strong> - Superior performance out of the box"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>WordPress</strong> - More customization options"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Technical Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Technology Stack",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>Backend</strong> - Node.js with Express.js"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Database</strong> - MySQL, SQLite, or PostgreSQL"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Templating</strong> - Handlebars.js"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Admin Interface</strong> - Ember.js"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>API</strong> - RESTful JSON API"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Package Manager</strong> - npm/yarn"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation Options",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started with Ghost"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Hosting Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Ghost(Pro)</strong> - Official managed hosting"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Containerized deployment"
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>VPS</strong> - Ubuntu with Nginx & MySQL"
+                },
+                {
+                  "emoji": "🚂",
+                  "text": "<strong>Railway/Fly.io</strong> - Modern cloud platforms"
+                },
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>DigitalOcean</strong> - 1-click app deployment"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Quick Local Setup",
+            "box": {
+              "code": "# Install Ghost CLI globally\nnpm install ghost-cli@latest -g\n\n# Create and navigate to directory\nmkdir my-ghost-site\ncd my-ghost-site\n\n# Install Ghost locally\nghost install local\n\n# Start Ghost\nghost start\n\n# Access your site at http://localhost:2368\n# Admin panel at http://localhost:2368/ghost",
+              "title": "<strong>Using Ghost CLI</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Docker Installation",
+            "box": {
+              "code": "# docker-compose.yml\nversion: '3.3'\nservices:\n  ghost:\n    image: ghost:5-alpine\n    restart: always\n    ports:\n      - \"2368:2368\"\n    environment:\n      url: http://localhost:2368\n      database__client: mysql\n      database__connection__host: mysql\n      database__connection__user: root\n      database__connection__password: password\n      database__connection__database: ghost\n    depends_on:\n      - mysql\n\n  mysql:\n    image: mysql:8.0\n    restart: always\n    environment:\n      MYSQL_ROOT_PASSWORD: password\n      MYSQL_DATABASE: ghost\n\n# Run with: docker-compose up -d",
+              "title": "<strong>Using Docker Compose</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "themes-customization",
+        "title": "Themes & Customization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Themes"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Theme System Overview",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Templating Engine</strong> - Handlebars.js"
+                },
+                {
+                  "emoji": "🏪",
+                  "text": "<strong>Theme Marketplace</strong> - Free & premium themes"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Custom Themes</strong> - Fully customizable"
+                },
+                {
+                  "emoji": "💅",
+                  "text": "<strong>CSS Customization</strong> - Custom styles support"
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Code Injection</strong> - Header/footer scripts"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Theme Structure",
+            "box": {
+              "code": "my-custom-theme/\n├── package.json          # Theme metadata\n├── index.hbs             # Homepage template\n├── post.hbs              # Single post template\n├── page.hbs              # Static page template\n├── tag.hbs               # Tag archive template\n├── author.hbs            # Author archive template\n├── default.hbs           # Default layout wrapper\n├── error.hbs             # Error page template\n├── assets/\n│   ├── css/\n│   │   └── screen.css    # Main stylesheet\n│   └── js/\n│       └── app.js        # JavaScript files\n└── partials/\n    ├── header.hbs        # Header partial\n    ├── footer.hbs        # Footer partial\n    └── navigation.hbs    # Navigation partial",
+              "title": "<strong>Basic theme directory structure</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "integrations",
+        "title": "Integrations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Third-party Integrations"
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "Popular Integrations",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Zapier</strong> - 1000+ app connections"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>n8n</strong> - Workflow automation"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Mailgun</strong> - Email delivery"
+                },
+                {
+                  "emoji": "💳",
+                  "text": "<strong>Stripe</strong> - Payment processing"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Google Analytics</strong> - Traffic analytics"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Disqus</strong> - Comment system"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Headless Frontends",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Next.js</strong> - React framework"
+                },
+                {
+                  "emoji": "🔮",
+                  "text": "<strong>Gatsby</strong> - Static site generator"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Nuxt.js</strong> - Vue.js framework"
+                },
+                {
+                  "emoji": "🟢",
+                  "text": "<strong>SvelteKit</strong> - Svelte framework"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Eleventy</strong> - Simple static site generator"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "content-management",
+        "title": "Content Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Writing Experience"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Editor Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Markdown First</strong> - Clean writing experience"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Embeds</strong> - YouTube, Twitter, CodePen etc."
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Bookmarks</strong> - Link preview cards"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Galleries</strong> - Image collections"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Code Blocks</strong> - Syntax highlighting"
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Tables</strong> - Easy table creation"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Koenig Editor",
+            "box": {
+              "code": "<!-- Example of editor cards -->\n📝 **Markdown Card**\n```markdown\n# Heading 1\n## Heading 2\n**Bold text** and *italic text*\n- List item 1\n- List item 2\n```\n\n🖼️ **Image Card**\n![Alt text](image.jpg \"Optional title\")\n\n💻 **Code Card**\n```javascript\nfunction hello() {\n  console.log(\"Hello, Ghost!\");\n}\n```\n\n🔗 **Embed Card**\n{{> \"youtube\" url=\"https://www.youtube.com/watch?v=abc123\"}}\n\n📚 **Bookmark Card**\n{{> \"bookmark\" url=\"https://ghost.org\"}}",
+              "title": "<strong>Ghost's rich text editor</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "admin-panel",
+        "title": "Admin Panel",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Dashboard"
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Admin Interface Overview",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Dashboard</strong> - Analytics overview"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Posts</strong> - Content management"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Tags</strong> - Category management"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Authors</strong> - User management"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Members</strong> - Subscriber management"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Newsletters</strong> - Email campaigns"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "membership",
+        "title": "Membership & Newsletter",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Monetization Features"
+          },
+          {
+            "type": "content",
+            "emoji": "💰",
+            "title": "Membership System",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Member Signup</strong> - Built-in registration"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Free/Paid Tiers</strong> - Subscription levels"
+                },
+                {
+                  "emoji": "💳",
+                  "text": "<strong>Stripe Integration</strong> - Payment processing"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Newsletters</strong> - Native publishing"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Audience Segmentation</strong> - Targeted content"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💳",
+            "title": "Stripe Configuration",
+            "box": {
+              "code": "// Ghost Admin → Settings → Membership\n\n1. Enable members\n2. Connect Stripe account\n3. Configure subscription plans:\n   - Free tier: Basic access\n   - Monthly: $5/month\n   - Yearly: $50/year (save 16%)\n\n4. Set up payment methods:\n   - Credit cards\n   - Apple Pay / Google Pay\n\n5. Configure tax settings\n6. Set up webhooks for payment events\n\n// Webhook events:\n- customer.subscription.created\n- invoice.payment_succeeded\n- customer.subscription.deleted",
+              "title": "<strong>Setting up payments</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "seo-performance",
+        "title": "SEO & Performance",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Optimization Features"
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "SEO Capabilities",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗺️",
+                  "text": "<strong>Auto Sitemap</strong> - XML sitemap generation"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>OpenGraph Tags</strong> - Social media sharing"
+                },
+                {
+                  "emoji": "🐦",
+                  "text": "<strong>Twitter Cards</strong> - Twitter optimization"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Canonical URLs</strong> - Duplicate content prevention"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>AMP Support</strong> - Accelerated Mobile Pages"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Structured Data</strong> - Rich snippets"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Performance Optimization",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Fast Loading</strong> - Optimized out of the box"
+                },
+                {
+                  "emoji": "🖼️",
+                  "text": "<strong>Image Optimization</strong> - Responsive images"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Caching</strong> - Built-in cache layers"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile First</strong> - Responsive design"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Lighthouse Scores</strong> - 90+ performance"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "headless-cms",
+        "title": "Headless CMS Mode",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API-first Approach"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Headless CMS Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>REST API</strong> - Full content access"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>GraphQL-style API</strong> - Flexible queries"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Content API</strong> - Public content access"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Admin API</strong> - Management operations"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Webhooks</strong> - Real-time notifications"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Content API Example",
+            "box": {
+              "code": "// Fetch recent posts\nfetch('https://yourblog.com/ghost/api/content/posts/?key=API_KEY')\n  .then(response => response.json())\n  .then(data => {\n    console.log(data.posts);\n  });\n\n// Get specific post\nfetch('https://yourblog.com/ghost/api/content/posts/slug/hello-world/?key=API_KEY')\n  .then(response => response.json())\n  .then(data => {\n    console.log(data.posts[0]);\n  });\n\n// Include authors and tags\nfetch('https://yourblog.com/ghost/api/content/posts/?key=API_KEY&include=authors,tags')\n  .then(response => response.json())\n  .then(data => {\n    data.posts.forEach(post => {\n      console.log(post.title, post.authors, post.tags);\n    });\n  });",
+              "title": "<strong>Fetching content via API</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-extensions",
+        "title": "Extending with APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "API Development"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "API Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Content API</strong> - Read-only public content"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Admin API</strong> - Full CRUD operations"
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Webhooks</strong> - Event notifications"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Members API</strong> - Member management"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "JAMStack Integration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Next.js</strong> - React SSG/SSR"
+                },
+                {
+                  "emoji": "🔮",
+                  "text": "<strong>Gatsby</strong> - Static site generation"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Nuxt.js</strong> - Vue.js framework"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Vercel/Netlify</strong> - Deployment platforms"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>ISR/SSG</strong> - Incremental static generation"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hosting-options",
+        "title": "Hosting Choices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Deployment Options"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Hosting Platforms",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👻",
+                  "text": "<strong>Ghost(Pro)</strong> - Official managed hosting"
+                },
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>DigitalOcean</strong> - 1-click droplet"
+                },
+                {
+                  "emoji": "🐳",
+                  "text": "<strong>Docker</strong> - Container deployment"
+                },
+                {
+                  "emoji": "🚂",
+                  "text": "<strong>Railway</strong> - Modern cloud platform"
+                },
+                {
+                  "emoji": "🪰",
+                  "text": "<strong>Fly.io</strong> - Edge deployment"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Self-hosted VPS</strong> - Full control"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Real-world Applications"
+          },
+          {
+            "type": "content",
+            "emoji": "💼",
+            "title": "Common Use Cases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Personal Blog</strong> - Individual writers"
+                },
+                {
+                  "emoji": "📰",
+                  "text": "<strong>Publication</strong> - Magazine-style sites"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Newsletter Business</strong> - Email-first content"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "<strong>Documentation</strong> - Technical documentation"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Membership Site</strong> - Paid content"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Company Blog</strong> - Corporate publishing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "migration",
+        "title": "Migration Guide",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Moving to Ghost"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Migration Options",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>WordPress</strong> - Built-in import tool"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Medium</strong> - Export and import"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Custom Import</strong> - JSON import API"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>RSS Feed</strong> - Import from any RSS"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>CSV Import</strong> - For members/data"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Security & Privacy"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Measures",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>SSL/HTTPS</strong> - Encrypted connections"
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>User Roles</strong> - Permission system"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Verification</strong> - Member validation"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Content Security Policy</strong> - XSS protection"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Audit Log</strong> - Activity tracking"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Ghost Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "⭐",
+            "title": "Development Practices",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Use Ghost CLI</strong> - Official command line tool"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Keep Updated</strong> - Regular updates"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Backup Regularly</strong> - Content backup"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure Installation</strong> - Proper permissions"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Optimize Images</strong> - Before uploading"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitor Performance</strong> - Regular checks"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cheat-sheet",
+        "title": "Cheat Sheet",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Ghost CLI Commands",
+            "box": {
+              "code": "# Installation & Setup\nghost install local          # Local development\nghost install production     # Production setup\n\n# Management\nghost start                  # Start Ghost\nghost stop                   # Stop Ghost\nghost restart                # Restart Ghost\nghost update                 # Update Ghost\nghost update --force         # Force update\n\n# Content Operations\nghost backup                 # Backup content\nghost restore <file>         # Restore from backup\nghost doctor                 # System health check\n\n# Development\nghost ls                     # List running instances\nghost log                    # View logs\nghost run                    # Run directly (dev)\n\n# Configuration\nghost setup <command>        # Setup various components\nghost config                 # View configuration",
+              "title": "<strong>Essential Ghost CLI commands</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "API Key Management",
+            "box": {
+              "code": "# In Ghost Admin → Integrations → Add custom integration\n\n# Content API Key - Read only access\nKey: 1234567890abcdef1234567890\nURL: https://yoursite.com/ghost/api/content/posts/?key=API_KEY\n\n# Admin API Key - Full access\nKey: a1b2c3d4e5f67890abcdef123456\nURL: https://yoursite.com/ghost/api/admin/posts/\n\n# Using with cURL\ncurl -H \"Authorization: Ghost [API_KEY]\" \\\n     https://yoursite.com/ghost/api/admin/posts/\n\n# Using with fetch\nfetch('https://yoursite.com/ghost/api/content/posts/?key=API_KEY')",
+              "title": "<strong>Creating and managing API keys</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Common Issues & Solutions"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Frequent Problems",
+            "box": {
+              "list": [
+                {
+                  "emoji": "❌",
+                  "text": "<strong>Installation Failures</strong> - Check Node.js version and permissions"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Issues</strong> - Verify SMTP settings"
+                },
+                {
+                  "emoji": "💳",
+                  "text": "<strong>Payment Problems</strong> - Check Stripe configuration"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Theme Errors</strong> - Validate Handlebars syntax"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>API Issues</strong> - Verify API keys and CORS"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Performance</strong> - Check caching and image optimization"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "community-resources",
+        "title": "Community & Resources",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Learning Resources"
+          },
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Official Resources",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Ghost Documentation</strong> - ghost.org/docs"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Ghost Tutorials</strong> - ghost.org/tutorials"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community Forum</strong> - forum.ghost.org"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/TryGhost/Ghost"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Channel</strong> - Official tutorials"
+                },
+                {
+                  "emoji": "🆘",
+                  "text": "<strong>Support</strong> - help.ghost.org"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Developer Resources",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>API Documentation</strong> - ghost.org/api"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Theme Documentation</strong> - ghost.org/docs/themes"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>CLI Documentation</strong> - ghost.org/docs/ghost-cli"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Marketplace</strong> - ghost.org/marketplace"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Developer Blog</strong> - ghost.org/changelog"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "pricing",
+        "title": "Pricing & Plans",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Cost Considerations"
+          },
+          {
+            "type": "content",
+            "emoji": "💰",
+            "title": "Ghost(Pro) Pricing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Starter</strong> - $9/month, basic features"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Creator</strong> - $25/month, membership features"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Team</strong> - $50/month, collaboration tools"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Business</strong> - $199/month, advanced features"
+                },
+                {
+                  "emoji": "🆓",
+                  "text": "<strong>Self-hosted</strong> - Free (infrastructure costs)"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "future-roadmap",
+        "title": "Future Roadmap",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "What's Next for Ghost"
+          },
+          {
+            "type": "content",
+            "emoji": "🔮",
+            "title": "Upcoming Features",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Improved Analytics</strong> - Better insights"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>AI Integration</strong> - Writing assistants"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Enhanced APIs</strong> - More endpoints"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Theme Improvements</strong> - Better customization"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile App</strong> - Native applications"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Internationalization</strong> - Multi-language support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Build a Blog",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Install Ghost locally using Ghost CLI"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Customize the default theme"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Create 5 sample blog posts"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Set up membership system"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Configure email newsletter"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Integrate with Stripe for payments"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Deploy to DigitalOcean"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Set up custom domain and SSL"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "case-studies",
+        "title": "Case Studies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Successful Ghost Implementations"
+          },
+          {
+            "type": "content",
+            "emoji": "🏆",
+            "title": "Notable Ghost Users",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐦",
+                  "text": "<strong>Buffer</strong> - Social media blog"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Design+</strong> - Design publication"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>DigitalOcean</strong> - Tutorials and docs"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Moz</strong> - SEO blog"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Toptal</strong> - Engineering blog"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>DuckDuckGo</strong> - Privacy blog"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What programming language is Ghost built with?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you install Ghost locally for development?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the main advantage of Ghost over WordPress?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you set up paid memberships in Ghost?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What API endpoints are available in Ghost?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👻",
+                  "text": "Ghost = Modern, open-source publishing platform"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "Built with Node.js for high performance"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "Focused on content creation and publishing"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Built-in membership and monetization"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "Full API access for headless CMS"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Perfect for writers and content creators"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Ghost setup, customization, or specific use cases!<br><span class=\"gradient-accent\">All Ghost questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">👻</span> Ready to start publishing?<br><span class=\"gradient-accent\">Begin your Ghost journey today!</span>",
+              "note": "Modern • Fast • Focused"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

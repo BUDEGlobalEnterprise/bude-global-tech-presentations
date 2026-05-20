@@ -1,6 +1,5 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "bude-global-tech-presentations",
-  "pages_build_output_dir": ".",
+  "pages_build_output_dir": "bude-presentations-next/out",
   "compatibility_date": "2026-01-25"
 }

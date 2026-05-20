@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Bude Global Banner](assets/images/budeglobal_logo.png)
+![Bude Global Banner](legacy/assets/images/budeglobal_logo.png)
 
 **A Dynamic, Interactive Platform for Technical Knowledge Sharing**
 
@@ -20,7 +20,7 @@
 <p align="center">
   Scan the QR to support the project 👇  
   <br><br>
-  <img src="assets/images/Aravind_GooglePay_QR.png" width="250" />
+  <img src="legacy/assets/images/Aravind_GooglePay_QR.png" width="250" />
 </p>
 
 ### Sponsors
@@ -96,15 +96,15 @@ Our mission is to foster a culture of continuous learning and knowledge sharing 
 ## 🎬 Demo & Screenshots
 
 ### 🏠 Home Page - Presentation Selector
-![Home Page](assets/images/Readme/home.png)
+![Home Page](legacy/assets/images/Readme/home.png)
 *Smart search and autocomplete for quick presentation discovery*
 
 ### 👤 Author/Presenter Page
-![Author Page](assets/images/Readme/author.png)
+![Author Page](legacy/assets/images/Readme/author.png)
 *Professional presenter introduction with social links*
 
 ### 📊 React Presentation Example
-![React Presentation](assets/images/Readme/intro-react.png)
+![React Presentation](legacy/assets/images/Readme/intro-react.png)
 *Clean, modern slide design with code examples*
 
 ---
@@ -604,7 +604,7 @@ Replace the Molot font in `assets/fonts/` and update the `@font-face` rule:
 
 ### Logo
 
-Replace `assets/images/budeglobal_logo.png` with your logo (recommended size: 400x400px).
+Replace `legacy/assets/images/budeglobal_logo.png` with your logo (recommended size: 400x400px).
 
 ### Footer Links
 

@@ -1,0 +1,54 @@
+name: Deploy to Cloudflare Pages
+
+# Builds the Next.js app (bude-presentations-next) and deploys its static
+# export to Cloudflare Pages. Replaces the old root-served vanilla site.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "bude-presentations-next/**"
+      - "wrangler.jsonc"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: bude-presentations-next/package-lock.json
+
+      - name: Install dependencies
+        working-directory: bude-presentations-next
+        run: npm ci
+
+      - name: Validate presentation content
+        working-directory: bude-presentations-next
+        run: npm run validate-content
+
+      - name: Build static export
+        working-directory: bude-presentations-next
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Reads name + pages_build_output_dir from wrangler.jsonc
+          command: pages deploy

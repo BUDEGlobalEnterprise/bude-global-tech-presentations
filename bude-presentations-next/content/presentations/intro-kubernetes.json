@@ -1,0 +1,951 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Kubernetes – Container Orchestration",
+            "subtitle": "Production-grade platform for automating deployment, scaling, and management of containerized applications"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & UI Framework Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>What is Kubernetes?</strong> - Container Orchestration Overview"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Why Kubernetes?</strong> - Benefits & Use Cases"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Core Concepts</strong> - Pods, Deployments, Services, Ingress"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Architecture</strong> - Control Plane & Worker Nodes"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>kubectl Basics</strong> - Essential Commands"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>YAML Manifests</strong> - Declarative Configuration"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Deployment Strategies</strong> - Rolling Updates, Blue-Green"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Storage & Volumes</strong> - Persistent Data"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Security</strong> - RBAC, Secrets, Network Policies"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Monitoring</strong> - Metrics, Logging, Dashboard"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Ecosystem Tools</strong> - Helm, Istio, ArgoCD"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Managed Services</strong> - EKS, AKS, GKE"
+                },
+                {
+                  "emoji": "🏆",
+                  "text": "<strong>Learning Path</strong> - CKAD/CKA Certification"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Real World Examples</strong> - Production Case Studies"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-kubernetes",
+        "title": "What is Kubernetes?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Container Orchestration Overview"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "What is Kubernetes?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>Origin</strong> - Google Borg system, donated to CNCF in 2014"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Maintainer</strong> - Cloud Native Computing Foundation (CNCF)"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Adoption</strong> - Industry standard for container orchestration"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Features</strong> - Automated rollouts, self-healing, service discovery"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Ecosystem</strong> - Rich set of tools and extensions"
+                }
+              ],
+              "title": "<span class=\"highlight\">Open-source container orchestration system</span> for automating deployment, scaling, and management"
+            },
+            "note": {
+              "text": "<strong>Fun fact:</strong> Kubernetes means \"helmsman\" or \"pilot\" in Greek - k8s is the abbreviation!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-kubernetes",
+        "title": "Why Kubernetes?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Benefits & Use Cases"
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Key Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Automation</strong> - Self-healing, auto-scaling, rollbacks"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Portability</strong> - Run anywhere: cloud, on-prem, hybrid, edge"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Scalability</strong> - Horizontal and vertical scaling"
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>Efficiency</strong> - Better resource utilization"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Standardization</strong> - Consistent platform across environments"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CI/CD</strong> - GitOps and automated deployments"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Popular Use Cases",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Microservices</strong> - Distributed application architecture"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Web Applications</strong> - Auto-scaling APIs and frontends"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CI/CD Pipelines</strong> - Rolling and canary deployments"
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Edge Computing</strong> - IoT and edge device management"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Stateful Workloads</strong> - Databases with StatefulSets"
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Machine Learning</strong> - Distributed training and serving"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "title": "Core Concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kubernetes Building Blocks"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Essential Kubernetes Objects",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Pods</strong> - Smallest deployable unit, runs one or more containers"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Nodes</strong> - Worker machines (VMs or physical servers)"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Cluster</strong> - Set of nodes managed by Kubernetes"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Deployment</strong> - Declarative updates for Pods and ReplicaSets"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Service</strong> - Network endpoint for Pods"
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>Ingress</strong> - HTTP routing to services"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Configuration & Storage Objects",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>ConfigMap</strong> - Configuration data in key-value pairs"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Secret</strong> - Sensitive data (encrypted at rest)"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>PersistentVolume</strong> - Storage resource in the cluster"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>PersistentVolumeClaim</strong> - Request for storage by user"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Namespace</strong> - Virtual cluster isolation"
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Labels & Selectors</strong> - Identifying and grouping objects"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kubernetes Cluster Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Control Plane Components",
+            "box": {
+              "code": "Control Plane (Master Node):\n├── kube-apiserver\n│   └── Frontend to control plane, REST API\n├── etcd\n│   └── Consistent, highly-available key-value store\n├── kube-scheduler\n│   └── Watches for new Pods, assigns to nodes\n├── kube-controller-manager\n│   └── Runs controller processes (Node, Replication, etc.)\n└── cloud-controller-manager\n    └── Cloud-specific control logic (optional)\n\nFeatures:\n• High availability with multiple master nodes\n• etcd cluster for distributed consensus\n• All communication via API server",
+              "title": "<strong>Master nodes that manage the cluster</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🖥️",
+            "title": "Worker Node Components",
+            "box": {
+              "code": "Worker Node:\n├── kubelet\n│   └── Agent that communicates with control plane\n├── kube-proxy\n│   └── Network proxy maintaining network rules\n├── Container Runtime\n│   └── Docker, containerd, CRI-O\n└── Pods\n    └── Running application containers\n\nNode Communication:\n• kubelet registers node with API server\n• kube-proxy handles service networking\n• Container runtime pulls images and runs containers\n• Pods scheduled based on resource availability",
+              "title": "<strong>Nodes that run containerized applications</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "kubectl-basics",
+        "title": "kubectl Basics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Essential kubectl Commands"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Basic kubectl Commands",
+            "box": {
+              "code": "# Cluster information\nkubectl cluster-info                    # Display cluster info\nkubectl get nodes                       # List all nodes\nkubectl version                         # Client and server version\n\n# Basic operations\nkubectl get pods                        # List pods in current namespace\nkubectl get pods -A                     # List all pods in all namespaces\nkubectl describe pod <pod-name>         # Detailed pod information\nkubectl logs <pod-name>                 # Pod logs\nkubectl exec -it <pod-name> -- bash     # Execute command in pod\n\n# Resource management\nkubectl apply -f manifest.yaml          # Create/update resources\nkubectl delete -f manifest.yaml         # Delete resources\nkubectl create deployment nginx --image=nginx  # Imperative create\n\n# Namespace operations\nkubectl get namespaces                  # List namespaces\nkubectl config set-context --current --namespace=my-namespace  # Switch namespace",
+              "title": "<strong>Essential commands for cluster management</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Advanced kubectl Usage",
+            "box": {
+              "code": "# Debugging and troubleshooting\nkubectl get events --sort-by=.metadata.creationTimestamp  # Recent events\nkubectl top nodes                        # Resource usage (nodes)\nkubectl top pods                         # Resource usage (pods)\nkubectl port-forward svc/my-service 8080:80  # Port forwarding\n\n# Configuration and context\nkubectl config get-contexts             # List contexts\nkubectl config use-context my-cluster   # Switch context\nkubectl config view                     # View kubeconfig\n\n# Batch operations\nkubectl get pods --selector app=nginx   # Filter by label\nkubectl delete pods --all               # Delete all pods in namespace\nkubectl scale deployment my-app --replicas=5  # Scale deployment\n\n# YAML operations\nkubectl get pod my-pod -o yaml          # Get resource as YAML\nkubectl explain pods                    # Documentation for resource\nkubectl api-resources                   # List all API resources",
+              "title": "<strong>Powerful commands for debugging and management</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "yaml-manifests",
+        "title": "YAML Manifests",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Declarative Configuration"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "Basic Pod Manifest",
+            "box": {
+              "code": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: nginx-pod\n  labels:\n    app: nginx\n    environment: development\nspec:\n  containers:\n  - name: nginx-container\n    image: nginx:1.21\n    ports:\n    - containerPort: 80\n    env:\n    - name: ENVIRONMENT\n      value: \"development\"\n    resources:\n      requests:\n        memory: \"64Mi\"\n        cpu: \"250m\"\n      limits:\n        memory: \"128Mi\"\n        cpu: \"500m\"\n  restartPolicy: Always\n\nKey Fields:\n• apiVersion: Kubernetes API version\n• kind: Type of resource (Pod, Deployment, etc.)\n• metadata: Name, labels, annotations\n• spec: Desired state of the resource\n• containers: Container specifications\n• resources: CPU and memory requirements",
+              "title": "<strong>Simple Pod configuration</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Deployment Manifest",
+            "box": {
+              "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment\n  labels:\n    app: nginx\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: nginx\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 1\n      maxUnavailable: 0\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: nginx:1.21\n        ports:\n        - containerPort: 80\n        livenessProbe:\n          httpGet:\n            path: /\n            port: 80\n          initialDelaySeconds: 5\n          periodSeconds: 10\n        readinessProbe:\n          httpGet:\n            path: /\n            port: 80\n          initialDelaySeconds: 5\n          periodSeconds: 10\n\nDeployment Benefits:\n• Maintains desired number of replicas\n• Rolling updates and rollbacks\n• Self-healing (replaces failed pods)\n• Scalable replica counts",
+              "title": "<strong>Deployment for managing Pod replicas</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Service & Ingress Manifests",
+            "box": {
+              "code": "# Service Manifest\napiVersion: v1\nkind: Service\nmetadata:\n  name: nginx-service\nspec:\n  selector:\n    app: nginx\n  ports:\n  - name: http\n    port: 80\n    targetPort: 80\n  type: ClusterIP  # Also: NodePort, LoadBalancer\n\n---\n\n# Ingress Manifest\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: nginx-ingress\n  annotations:\n    nginx.ingress.kubernetes.io/rewrite-target: /\nspec:\n  rules:\n  - host: myapp.example.com\n    http:\n      paths:\n      - path: /\n        pathType: Prefix\n        backend:\n          service:\n            name: nginx-service\n            port:\n              number: 80\n\nService Types:\n• ClusterIP: Internal cluster IP (default)\n• NodePort: Expose on node IPs\n• LoadBalancer: Cloud load balancer\n• ExternalName: External service reference",
+              "title": "<strong>Networking configuration</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment-strategies",
+        "title": "Deployment Strategies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Application Deployment Patterns"
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Rolling Update Strategy",
+            "box": {
+              "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-rolling\nspec:\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 25%        # Maximum additional pods during update\n      maxUnavailable: 25%  # Maximum unavailable pods during update\n  replicas: 4\n  template:\n    # ... pod template ...\n\nRolling Update Process:\n1. New ReplicaSet created with updated version\n2. Old pods gradually terminated, new pods created\n3. Service load balancer distributes traffic\n4. Process continues until all pods are updated\n\nBenefits:\n• Zero downtime deployment\n• Automatic rollback on failure\n• Gradual traffic migration\n• Health checks ensure stability\n\nCommands:\nkubectl rollout status deployment/myapp-rolling\nkubectl rollout history deployment/myapp-rolling\nkubectl rollout undo deployment/myapp-rolling",
+              "title": "<strong>Gradual replacement of old pods with new ones</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔵🟢",
+            "title": "Blue-Green Deployment",
+            "box": {
+              "code": "# Blue Environment (v1.0)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-blue\n  labels:\n    version: \"1.0\"\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: myapp\n      version: \"1.0\"\n  template:\n    metadata:\n      labels:\n        app: myapp\n        version: \"1.0\"\n    # ... container spec ...\n\n---\n\n# Green Environment (v1.1)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: myapp-green\n  labels:\n    version: \"1.1\"\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: myapp\n      version: \"1.1\"\n  template:\n    metadata:\n      labels:\n        app: myapp\n        version: \"1.1\"\n    # ... container spec ...\n\n---\n\n# Service pointing to current version\napiVersion: v1\nkind: Service\nmetadata:\n  name: myapp-service\nspec:\n  selector:\n    app: myapp\n    version: \"1.0\"  # Switch to \"1.1\" for green deployment\n  ports:\n  - port: 80\n\nProcess:\n1. Deploy new version alongside old (green)\n2. Test new version internally\n3. Update service selector to switch traffic\n4. Remove old deployment (blue)",
+              "title": "<strong>Instant switch between two identical environments</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "storage-volumes",
+        "title": "Storage & Volumes",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Persistent Data Management"
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Persistent Volumes & Claims",
+            "box": {
+              "code": "# PersistentVolumeClaim (User requests storage)\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: my-pvc\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 10Gi\n  storageClassName: fast-ssd\n\n---\n\n# Pod using PersistentVolumeClaim\napiVersion: v1\nkind: Pod\nmetadata:\n  name: app-with-storage\nspec:\n  containers:\n  - name: app\n    image: nginx\n    volumeMounts:\n    - name: storage-volume\n      mountPath: /data\n  volumes:\n  - name: storage-volume\n    persistentVolumeClaim:\n      claimName: my-pvc\n\nAccess Modes:\n• ReadWriteOnce (RWO): Single node read-write\n• ReadOnlyMany (ROX): Multiple nodes read-only\n• ReadWriteMany (RWX): Multiple nodes read-write\n\nStorage Classes:\n• fast-ssd: SSD storage\n• standard-hdd: HDD storage\n• cloud-specific: aws-ebs, azure-disk, gce-pd",
+              "title": "<strong>Dynamic storage provisioning</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗄️",
+            "title": "StatefulSets for Stateful Applications",
+            "box": {
+              "code": "apiVersion: apps/v1\nkind: StatefulSet\nmetadata:\n  name: mysql\nspec:\n  serviceName: \"mysql\"\n  replicas: 3\n  selector:\n    matchLabels:\n      app: mysql\n  template:\n    metadata:\n      labels:\n        app: mysql\n    spec:\n      containers:\n      - name: mysql\n        image: mysql:8.0\n        env:\n        - name: MYSQL_ROOT_PASSWORD\n          valueFrom:\n            secretKeyRef:\n              name: mysql-secret\n              key: password\n        volumeMounts:\n        - name: data\n          mountPath: /var/lib/mysql\n  volumeClaimTemplates:\n  - metadata:\n      name: data\n    spec:\n      accessModes: [ \"ReadWriteOnce\" ]\n      resources:\n        requests:\n          storage: 20Gi\n\nStatefulSet Characteristics:\n• Stable, unique network identifiers\n• Persistent storage for each replica\n• Ordered, graceful deployment and scaling\n• Ordered, graceful deletion and termination\n• Unique: mysql-0, mysql-1, mysql-2",
+              "title": "<strong>Managing stateful workloads</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kubernetes Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "RBAC & Service Accounts",
+            "box": {
+              "code": "# ServiceAccount for application\napiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: my-app-sa\n  namespace: default\n\n---\n\n# Role with specific permissions\napiVersion: rbac.authorization.k8s.io/v1\nkind: Role\nmetadata:\n  namespace: default\n  name: pod-reader\nrules:\n- apiGroups: [\"\"]\n  resources: [\"pods\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n\n---\n\n# RoleBinding to grant permissions\napiVersion: rbac.authorization.k8s.io/v1\nkind: RoleBinding\nmetadata:\n  name: read-pods\n  namespace: default\nsubjects:\n- kind: ServiceAccount\n  name: my-app-sa\n  namespace: default\nroleRef:\n  kind: Role\n  name: pod-reader\n  apiGroup: rbac.authorization.k8s.io\n\n---\n\n# Pod using ServiceAccount\napiVersion: v1\nkind: Pod\nmetadata:\n  name: my-pod\nspec:\n  serviceAccountName: my-app-sa\n  containers:\n  - name: app\n    image: my-app:latest\n\nRBAC Components:\n• ServiceAccount: Identity for processes in pods\n• Role: Namespace-scoped permissions\n• ClusterRole: Cluster-scoped permissions\n• RoleBinding: Grants permissions within namespace\n• ClusterRoleBinding: Grants cluster-wide permissions",
+              "title": "<strong>Role-Based Access Control</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Secrets & Network Policies",
+            "box": {
+              "code": "# Secret for sensitive data\napiVersion: v1\nkind: Secret\nmetadata:\n  name: api-credentials\ntype: Opaque\ndata:\n  username: YWRtaW4=  # base64 encoded 'admin'\n  password: cGFzc3dvcmQ=  # base64 encoded 'password'\n\n---\n\n# NetworkPolicy for pod isolation\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: database-policy\n  namespace: default\nspec:\n  podSelector:\n    matchLabels:\n      app: database\n  policyTypes:\n  - Ingress\n  ingress:\n  - from:\n    - podSelector:\n        matchLabels:\n          app: webapp\n    ports:\n    - protocol: TCP\n      port: 5432\n\nSecurity Best Practices:\n• Use Secrets for sensitive data (encrypted at rest)\n• Implement Network Policies for traffic control\n• Use Pod Security Standards\n• Enable audit logging\n• Regular security scanning",
+              "title": "<strong>Securing data and network traffic</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "monitoring",
+        "title": "Monitoring",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Observability & Monitoring"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Metrics & Logging",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Prometheus</strong> - Metrics collection and alerting"
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Grafana</strong> - Visualization and dashboards"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>EFK Stack</strong> - Elasticsearch, Fluentd, Kibana for logging"
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Kubernetes Dashboard</strong> - Web-based UI"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>kube-state-metrics</strong> - Kubernetes object metrics"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Alertmanager</strong> - Handling alerts from Prometheus"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Resource Monitoring Setup",
+            "box": {
+              "code": "# Install Prometheus Stack with Helm\nhelm repo add prometheus-community https://prometheus-community.github.io/helm-charts\nhelm repo update\n\nhelm install prometheus prometheus-community/kube-prometheus-stack \\\n  --namespace monitoring \\\n  --create-namespace \\\n  --set grafana.adminPassword=admin \\\n  --set prometheus.prometheusSpec.retentionSize=10GB\n\n# Access Grafana (port-forward)\nkubectl port-forward -n monitoring svc/prometheus-grafana 8080:80\n\n# Access Prometheus\nkubectl port-forward -n monitoring svc/prometheus-kube-prometheus-prometheus 9090:9090\n\nKey Metrics to Monitor:\n• Cluster: Node CPU/Memory, Pod capacity\n• Application: Request rate, error rate, latency\n• Kubernetes: Pod restarts, deployment status\n• Storage: Volume usage, IOPS\n\nAlerts to Configure:\n• Node down or not ready\n• Pod crash loops\n• High resource utilization\n• Persistent volume full",
+              "title": "<strong>Monitoring stack installation</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ecosystem-tools",
+        "title": "Ecosystem Tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kubernetes Ecosystem"
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Essential Ecosystem Tools",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Helm</strong> - Package manager for Kubernetes applications"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Kustomize</strong> - Native configuration management"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>ArgoCD / Flux</strong> - GitOps continuous delivery"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Istio / Linkerd</strong> - Service mesh for traffic management"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Prometheus + Grafana</strong> - Monitoring and visualization"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Tekton</strong> - Cloud-native CI/CD pipeline"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Helm Package Manager",
+            "box": {
+              "code": "# Helm Chart Structure\nmy-chart/\n├── Chart.yaml          # Chart metadata\n├── values.yaml         # Default configuration\n├── charts/             # Dependent charts\n├── templates/          # Kubernetes manifest templates\n│   ├── deployment.yaml\n│   ├── service.yaml\n│   └── configmap.yaml\n└── README.md\n\n# Common Helm Commands\nhelm repo add bitnami https://charts.bitnami.com/bitnami  # Add repository\nhelm repo update                                          # Update repo info\nhelm search repo nginx                                    # Search charts\nhelm install my-nginx bitnami/nginx                       # Install chart\nhelm upgrade my-nginx bitnami/nginx --version 1.0.0       # Upgrade release\nhelm uninstall my-nginx                                   # Remove release\nhelm list                                                 # List releases\n\n# Create your own chart\nhelm create my-app                                        # Create new chart\nhelm package my-app                                       # Package chart\nhelm install my-app ./my-app-1.0.0.tgz                   # Install local chart\n\nBenefits:\n• Template-driven manifest generation\n• Versioning and release management\n• Dependency management\n• Easy upgrades and rollbacks",
+              "title": "<strong>Managing Kubernetes applications</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "managed-services",
+        "title": "Managed Services",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Managed Kubernetes Services"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Cloud Provider Offerings",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔶",
+                  "text": "<strong>Amazon EKS</strong> - Elastic Kubernetes Service (AWS)"
+                },
+                {
+                  "emoji": "🔵",
+                  "text": "<strong>Azure AKS</strong> - Azure Kubernetes Service (Microsoft)"
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>Google GKE</strong> - Google Kubernetes Engine (Google Cloud)"
+                },
+                {
+                  "emoji": "🟣",
+                  "text": "<strong>DigitalOcean Kubernetes</strong> - Simple managed clusters"
+                },
+                {
+                  "emoji": "🟠",
+                  "text": "<strong>IBM Cloud Kubernetes</strong> - Enterprise features"
+                },
+                {
+                  "emoji": "⚫",
+                  "text": "<strong>Oracle Container Engine</strong> - OCI Kubernetes"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Choosing a Managed Service",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost</strong> - Cluster management vs. control plane costs"
+                },
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Region Availability</strong> - Geographic coverage"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Integration</strong> - Cloud provider service integration"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Scalability</strong> - Auto-scaling capabilities"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Security</strong> - Compliance and security features"
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Features</strong> - Serverless, GPU, Windows support"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "learning-path",
+        "title": "Learning Path",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Kubernetes Certification Path"
+          },
+          {
+            "type": "content",
+            "emoji": "🏆",
+            "title": "CNCF Certification Tracks",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔰",
+                  "text": "<strong>KCNA</strong> - Kubernetes and Cloud Native Associate (Fundamentals)"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>CKAD</strong> - Certified Kubernetes Application Developer (6 months experience)"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>CKA</strong> - Certified Kubernetes Administrator (6 months experience)"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>CKS</strong> - Certified Kubernetes Security Specialist (CKA required, security focus)"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Learning Resources",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Kubernetes Documentation</strong> - Official docs and tutorials"
+                },
+                {
+                  "emoji": "🎓",
+                  "text": "<strong>Kubernetes.io/training</strong> - Free official courses"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>Killercoda</strong> - Interactive browser-based labs"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>KubeAcademy</strong> - VMware's free Kubernetes courses"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube</strong> - Just me and Opensource, TechWorld with Nana"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Practice Exams</strong> - Killer.sh, Udemy practice tests"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "real-world-examples",
+        "title": "Real World Examples",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Case Studies"
+          },
+          {
+            "type": "content",
+            "emoji": "🎵",
+            "title": "Spotify Kubernetes Journey",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Scale</strong> - 300+ microservices, thousands of pods"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Savings</strong> - 60% reduction in resource costs"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance</strong> - 2x faster deployment times"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Migration</strong> - Moved from homegrown orchestration"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏠",
+            "title": "Airbnb Infrastructure",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌍",
+                  "text": "<strong>Global Scale</strong> - Multiple regions and clusters"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>CI/CD</strong> - Thousands of deployments daily"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security</strong> - Multi-tenant isolation"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Growth</strong> - Handles seasonal traffic spikes"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎮",
+            "title": "Pokemon Go Scaling",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Launch</strong> - 50x expected traffic at launch"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Scaling</strong> - Vertical and horizontal scaling"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Global</strong> - Multi-region deployment"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Early Adopter</strong> - Used Kubernetes in early versions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hands-on-project",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Mini Project: Deploy Microservices App",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "Set up Minikube or Kind local cluster"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "Deploy frontend application (nginx)"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "Deploy backend API (Node.js/Python)"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "Configure Service for internal communication"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "Set up Ingress for external access"
+                },
+                {
+                  "emoji": "6️⃣",
+                  "text": "Configure ConfigMap for environment variables"
+                },
+                {
+                  "emoji": "7️⃣",
+                  "text": "Set up liveness and readiness probes"
+                },
+                {
+                  "emoji": "8️⃣",
+                  "text": "Test rolling update deployment"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Quick Quiz",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Test Your Kubernetes Knowledge",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "What's the difference between Deployment and StatefulSet?"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "How do you troubleshoot a pod in CrashLoopBackOff?"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "What's the purpose of a Service in Kubernetes?"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "How do you securely manage database credentials?"
+                },
+                {
+                  "emoji": "5️⃣",
+                  "text": "What's the difference between requests and limits?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "Kubernetes = Container orchestration platform"
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "Pods are smallest deployable units"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "Deployments manage stateless applications"
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "StatefulSets handle stateful workloads"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Services provide network connectivity"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "Declarative configuration with YAML"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Kubernetes concepts, deployment strategies, or specific use cases!<br><span class=\"gradient-accent\">All container orchestration questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">⚓</span> Ready to orchestrate your containers?<br><span class=\"gradient-accent\">Start your Kubernetes journey with Minikube today!</span>",
+              "note": "Automated • Scalable • Cloud Native"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

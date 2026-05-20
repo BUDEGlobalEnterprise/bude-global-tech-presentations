@@ -1,0 +1,845 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Keycloak",
+            "subtitle": "Complete Identity & Access Management Guide<br>From Zero to Production Ready"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "what-is-keycloak",
+        "title": "What is Keycloak?",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Welcome to Keycloak",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Single Sign-On</strong> - One login for all applications"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Identity Brokering</strong> - Social logins & external providers"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>User Federation</strong> - Connect to LDAP, Active Directory"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Standards Compliant</strong> - OAuth2, OIDC, SAML"
+                }
+              ],
+              "title": "Open-source <span class=\"highlight\">Identity and Access Management</span> solution by Red Hat:"
+            },
+            "note": {
+              "text": "<strong>Developed by:</strong> Red Hat<br><strong>License:</strong> Apache 2.0<br><strong>Written in:</strong> Java"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-keycloak",
+        "title": "Why Keycloak?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why Choose Keycloak?",
+            "note": {
+              "text": "<span class=\"emoji\">📊</span> <strong>Used by:</strong> Major enterprises, banks, universities, and SaaS platforms"
+            },
+            "subtitle": "The modern solution for authentication and authorization challenges"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Key Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Rapid Integration</strong> - Get SSO working in hours, not weeks"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Enhanced Security</strong> - Built-in MFA, brute force protection"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Centralized Management</strong> - One place for all user management"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Protocol Support</strong> - OAuth2, OpenID Connect, SAML 2.0"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Effective</strong> - Open source with enterprise features"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Scalable</strong> - Handles millions of users"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "title": "Core Concepts",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Keycloak Terminology"
+          },
+          {
+            "type": "content",
+            "emoji": "🏰",
+            "title": "Realms",
+            "box": {
+              "code": "// Master Realm (admin)\n// → Company Realm\n//   → Web App Client\n//   → Mobile App Client\n//   → API Client",
+              "title": "<strong>Logical security domains that isolate configurations</strong>"
+            },
+            "list": [
+              {
+                "emoji": "👑",
+                "text": "<strong>Master Realm</strong> - Super admin realm"
+              },
+              {
+                "emoji": "🏢",
+                "text": "<strong>Application Realms</strong> - Isolated per organization/tenant"
+              }
+            ],
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Each realm has separate users, clients, and configurations"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📱",
+            "title": "Clients",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Confidential</strong> - Server-side apps (web apps with backend)"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Public</strong> - Client-side apps (SPA, mobile apps)"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Bearer-only</strong> - APIs that only validate tokens"
+                }
+              ],
+              "title": "<strong>Applications that use Keycloak for authentication</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "👤",
+            "title": "Users & Roles",
+            "box": {
+              "code": "// User: alice@company.com\n// Realm Roles: user, admin\n// Client Roles: read_data, write_data\n// Groups: developers, managers",
+              "title": "<strong>User management and permission system</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🎯",
+                "text": "<strong>Realm Roles</strong> - Global permissions"
+              },
+              {
+                "emoji": "📱",
+                "text": "<strong>Client Roles</strong> - App-specific permissions"
+              },
+              {
+                "emoji": "👥",
+                "text": "<strong>Groups</strong> - Bulk role assignments"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "authentication",
+        "title": "Authentication & Authorization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Auth vs Authz"
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "Authentication vs Authorization",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>Authentication</strong> - Who are you? (Verifying identity)"
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Authorization</strong> - What can you do? (Checking permissions)"
+                }
+              ],
+              "title": "<strong>Understanding the difference</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">🔑</span> Keycloak handles both: AuthN + AuthZ = Complete IAM"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Authentication Flows",
+            "box": {
+              "code": "1. Username/Password\n2. Conditional MFA\n3. Terms & Conditions\n4. Required Actions\n5. Token Issued",
+              "title": "<strong>Customizable login processes</strong>"
+            },
+            "list": [
+              {
+                "emoji": "📝",
+                "text": "<strong>Browser Flow</strong> - Web app logins"
+              },
+              {
+                "emoji": "🔌",
+                "text": "<strong>Direct Grant Flow</strong> - API/REST logins"
+              },
+              {
+                "emoji": "📱",
+                "text": "<strong>Registration Flow</strong> - User signup process"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Multi-Factor Authentication",
+            "box": {
+              "title": "MFA Options",
+              "list": [
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>TOTP</strong> - Time-based One-Time Password (Google Authenticator)"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email OTP</strong> - One-time codes via email"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>SMS OTP</strong> - Codes via text message"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>WebAuthn</strong> - Biometric & security keys"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "tokens",
+        "title": "Tokens & Protocols",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Tokens & Security Protocols"
+          },
+          {
+            "type": "content",
+            "emoji": "🎫",
+            "title": "JWT Tokens",
+            "box": {
+              "code": "{\n  \"iss\": \"keycloak-server\",\n  \"sub\": \"user123\",\n  \"preferred_username\": \"alice\",\n  \"email\": \"alice@company.com\",\n  \"realm_access\": { \"roles\": [\"user\", \"admin\"] },\n  \"exp\": 1672531200\n}",
+              "title": "<strong>JSON Web Tokens - The authentication standard</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🔑",
+                "text": "<strong>Access Token</strong> - API authorization (short-lived)"
+              },
+              {
+                "emoji": "🔄",
+                "text": "<strong>Refresh Token</strong> - Get new access tokens (long-lived)"
+              },
+              {
+                "emoji": "🆔",
+                "text": "<strong>ID Token</strong> - User identity information (OIDC)"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "OAuth2 vs OpenID Connect",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>OAuth 2.0</strong> - Authorization framework (WHAT you can access)"
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>OpenID Connect</strong> - Authentication layer (WHO you are)"
+                }
+              ],
+              "title": "<strong>Understanding the protocols</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> OIDC = OAuth 2.0 + Identity Information"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "SAML 2.0 Support",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Identity Provider</strong> - Keycloak acts as IdP"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Service Provider</strong> - Keycloak acts as SP"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Bridge</strong> - Connect SAML and OIDC worlds"
+                }
+              ],
+              "title": "<strong>Enterprise identity protocol</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started with Keycloak"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Docker Installation",
+            "box": {
+              "code": "docker run -p 8080:8080 \\\n  -e KEYCLOAK_ADMIN=admin \\\n  -e KEYCLOAK_ADMIN_PASSWORD=admin \\\n  quay.io/keycloak/keycloak:latest \\\n  start-dev",
+              "title": "<strong>Quick start with Docker</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">⚡</span> Development mode with H2 database - not for production!"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗄️",
+            "title": "Production Database Setup",
+            "box": {
+              "title": "Supported Databases",
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Recommended for production"
+                },
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Enterprise friendly"
+                },
+                {
+                  "emoji": "🔷",
+                  "text": "<strong>MariaDB</strong> - MySQL alternative"
+                },
+                {
+                  "emoji": "💎",
+                  "text": "<strong>Oracle</strong> - Enterprise databases"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "☸️",
+            "title": "Kubernetes Deployment",
+            "box": {
+              "code": "helm repo add bitnami https://charts.bitnami.com/bitnami\nhelm install keycloak bitnami/keycloak \\\n  --set auth.adminUser=admin \\\n  --set auth.adminPassword=admin",
+              "title": "<strong>Helm chart installation</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "integrations",
+        "title": "Integrations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Application Integrations"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Frontend Integration",
+            "box": {
+              "title": "SPA Applications (React, Angular, Vue)",
+              "code": "// keycloak-js adapter\nimport Keycloak from 'keycloak-js';\n\nconst keycloak = new Keycloak({\n  url: 'https://keycloak.company.com',\n  realm: 'myrealm',\n  clientId: 'myapp'\n});\n\nawait keycloak.init({ onLoad: 'login-required' });"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "☕",
+            "title": "Spring Boot Integration",
+            "box": {
+              "code": "// application.properties\nkeycloak.auth-server-url=https://keycloak.company.com\nkeycloak.realm=myrealm\nkeycloak.resource=myapp\nkeycloak.public-client=true\nkeycloak.principal-attribute=preferred_username",
+              "title": "<strong>Java/Spring Boot setup</strong>"
+            },
+            "list": [
+              {
+                "emoji": "📦",
+                "text": "Add keycloak-spring-boot-starter"
+              },
+              {
+                "emoji": "🔒",
+                "text": "Use @RolesAllowed annotations"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": ".NET Integration",
+            "box": {
+              "code": "services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n  .AddJwtBearer(options =>\n  {\n    options.Authority = \"https://keycloak.company.com\";\n    options.Audience = \"myapp\";\n  });",
+              "title": "<strong>ASP.NET Core setup</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "identity-brokering",
+        "title": "Identity Brokering",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "External Identity Providers"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Social Logins",
+            "box": {
+              "title": "Pre-configured Social Providers",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Google</strong> - OAuth 2.0"
+                },
+                {
+                  "emoji": "📘",
+                  "text": "<strong>Facebook</strong> - OAuth 2.0"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub</strong> - OAuth 2.0"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Microsoft</strong> - OpenID Connect"
+                },
+                {
+                  "emoji": "🐦",
+                  "text": "<strong>Twitter</strong> - OAuth 1.0a"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Enterprise Identity",
+            "box": {
+              "title": "Corporate Identity Providers",
+              "list": [
+                {
+                  "emoji": "📡",
+                  "text": "<strong>LDAP</strong> - Lightweight Directory Access Protocol"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>Active Directory</strong> - Microsoft directory services"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Kerberos</strong> - Enterprise authentication"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "admin-features",
+        "title": "Admin Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Administration & Management"
+          },
+          {
+            "type": "content",
+            "emoji": "🖥️",
+            "title": "Admin Console",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👥",
+                  "text": "<strong>User Management</strong> - Create, edit, disable users"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Role Management</strong> - Define permissions"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Client Configuration</strong> - Application settings"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Session Management</strong> - Active sessions"
+                }
+              ],
+              "title": "<strong>Web-based administration UI</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📡",
+            "title": "REST API",
+            "box": {
+              "code": "// Get access token\ncurl -X POST \\\n  https://keycloak.company.com/realms/master/protocol/openid-connect/token \\\n  -d 'client_id=admin-cli&username=admin&password=admin&grant_type=password'\n\n// Create user\ncurl -X POST \\\n  -H \"Authorization: Bearer $ACCESS_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"username\":\"newuser\",\"email\":\"user@company.com\"}' \\\n  https://keycloak.company.com/admin/realms/myrealm/users",
+              "title": "<strong>Programmatic administration</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Security"
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Brute Force Protection",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Temporary Lockout</strong> - After failed attempts"
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Wait Period</strong> - Increasing delay between attempts"
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Permanent Lock</strong> - Manual admin intervention required"
+                }
+              ],
+              "title": "<strong>Automatic attack prevention</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Audit & Events",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Login Events</strong> - Success/failure attempts"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Admin Actions</strong> - Configuration changes"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Token Events</strong> - Issuance and validation"
+                }
+              ],
+              "title": "<strong>Comprehensive logging</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "production",
+        "title": "Production Ready",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Scaling & Performance",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Clustering</strong> - Multiple Keycloak instances"
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Load Balancer</strong> - Distribute traffic"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Database Optimization</strong> - Proper indexing"
+                },
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>Caching</strong> - Infinispan for sessions"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Security Hardening",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>HTTPS Everywhere</strong> - No HTTP in production"
+                },
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>Reverse Proxy</strong> - nginx/traefik for SSL termination"
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Secure Email</strong> - TLS for email communications"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Strong Secrets</strong> - Secure admin passwords"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Real World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Keycloak in Production"
+          },
+          {
+            "type": "content",
+            "emoji": "🏦",
+            "title": "Banking & Finance",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Multi-Factor Authentication</strong> - TOTP + SMS"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Mobile Banking</strong> - Secure app authentication"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Online Banking</strong> - Web portal SSO"
+                }
+              ],
+              "title": "<strong>High security requirements</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎓",
+            "title": "Education & Universities",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👨‍🎓",
+                  "text": "<strong>Student Portals</strong> - Course management systems"
+                },
+                {
+                  "emoji": "👨‍🏫",
+                  "text": "<strong>Faculty Systems</strong> - Grade management"
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>Administration</strong> - HR and finance systems"
+                }
+              ],
+              "title": "<strong>Large user base with different roles</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🐛",
+            "title": "Common Issues & Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>CORS Errors</strong> - Check client web origins"
+                },
+                {
+                  "emoji": "🎫",
+                  "text": "<strong>Invalid Token</strong> - Verify token signature and expiry"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Redirect URI Mismatch</strong> - Exact URL matching required"
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>SSL Issues</strong> - HTTPS required in production"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Documentation</strong> - keycloak.org/documentation"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub Repository</strong> - github.com/keycloak/keycloak"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube Tutorials</strong> - Keycloak channel"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Community</strong> - Stack Overflow, Discord"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔐",
+                  "text": "Keycloak provides complete IAM solution"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "Supports OIDC, OAuth2, SAML standards"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "Easy integration with any application"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "Enterprise-ready with clustering and HA"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "Open source with no licensing costs"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Keycloak setup, integrations, or specific use cases!<br><span class=\"gradient-accent\">All technical questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🔐</span> Ready to implement Keycloak?<br><span class=\"gradient-accent\">Start securing your applications today!</span>",
+              "note": "Identity • Security • Open Source"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

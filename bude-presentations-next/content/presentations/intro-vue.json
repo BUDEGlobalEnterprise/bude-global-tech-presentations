@@ -1,0 +1,667 @@
+{
+  "presentation": {
+    "info": {
+      "title": "Vue.js 3 & Nuxt 3: The Complete Mastery Guide",
+      "subtitle": "From Progressive Framework to Full-Stack Excellence",
+      "author": "Aravind Govindhasamy",
+      "version": "4.0.0",
+      "description": "Comprehensive 400+ slide guide covering Vue 3's reactivity system, Composition API, Nuxt 3's full-stack capabilities, and enterprise-scale patterns",
+      "duration": "10 hours",
+      "audience": "Full-stack Developers, Framework Enthusiasts, Enterprise Architects",
+      "prerequisites": ["JavaScript ES6+", "HTML/CSS fundamentals", "Basic Vue.js exposure"],
+      "generated_at": "2025-12-31",
+      "total_slides": 424,
+      "modules": 22
+    },
+    "modules": [
+      {
+        "id": "module_1",
+        "title": "Module 1: The Progressive Framework Philosophy",
+        "duration": "35 minutes",
+        "slides": [
+          {
+            "id": "1.1",
+            "type": "keynote",
+            "title": "Vue.js: The Deliberate Middle Path",
+            "subtitle": "How Vue Captured the Developer Experience Market",
+            "history": {
+              "2014": "First prototype (Personal project by Evan You)",
+              "2015": "Vue 1.0 - Feature parity with Angular 1, but simpler",
+              "2016": "Vue 2.0 - Virtual DOM, TypeScript support",
+              "2020": "Vue 3.0 - Composition API, Performance optimizations",
+              "2022": "Nuxt 3 - Full-stack framework on Nitro engine"
+            },
+            "adoption_metrics": {
+              "github_stars": "210,000+ (3rd most popular JS framework)",
+              "npm_downloads": "5M+/week",
+              "job_market": "40% YoY growth",
+              "enterprise_users": ["Alibaba", "Baidu", "GitLab", "Louis Vuitton", "NASA"]
+            },
+            "framework_comparison": {
+              "react": {
+                "philosophy": "Learn once, write anywhere",
+                "strengths": ["Ecosystem size", "React Native", "Corporate backing"],
+                "complexity": "High (hooks, context, memoization)"
+              },
+              "vue": {
+                "philosophy": "Progressive framework",
+                "strengths": ["Developer experience", "Documentation", "Official ecosystem"],
+                "complexity": "Medium (gradual learning curve)"
+              },
+              "svelte": {
+                "philosophy": "Compiler as framework",
+                "strengths": ["Bundle size", "Runtime performance", "Simplicity"],
+                "complexity": "Low (but different mental model)"
+              }
+            },
+            "script": [
+              "Welcome to the definitive Vue.js and Nuxt 3 masterclass.",
+              "We're not just learning another JavaScript framework. We're learning a philosophy of web development that prioritizes developer experience without sacrificing power.",
+              "Vue's journey from a side project to a top-3 framework is a story of deliberate design choices.",
+              "Unlike React's 'throw you in the deep end' approach or Angular's 'everything included' philosophy, Vue follows the Goldilocks principle: just right.",
+              "Today, Vue powers everything from Alibaba's e-commerce platform (handling billions in transactions) to NASA's mission control dashboards.",
+              "Let's understand why."
+            ]
+          },
+          {
+            "id": "1.2",
+            "type": "architecture",
+            "title": "Vue's Progressive Adoption Curve",
+            "adoption_paths": [
+              {
+                "level": "Level 1: Enhancement",
+                "use_case": "Add interactivity to existing server-rendered apps",
+                "implementation": "CDN script tag with options API",
+                "code": `<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  const { createApp } = Vue;
+  
+  createApp({
+    data() {
+      return { count: 0 };
+    },
+    template: \`<button @click="count++">{{ count }}</button>\`
+  }).mount('#app');
+</script>`,
+                "benefit": "No build step, instant integration"
+              },
+              {
+                "level": "Level 2: SPA",
+                "use_case": "Single Page Applications",
+                "implementation": "Vite + Vue Router + Pinia",
+                "tooling": "npm create vue@latest",
+                "features": ["Client-side routing", "State management", "Build optimization"]
+              },
+              {
+                "level": "Level 3: Full-Stack",
+                "use_case": "Production applications with SEO/performance",
+                "implementation": "Nuxt 3 with SSR/SSG",
+                "tooling": "npx nuxi@latest init",
+                "features": ["Server-side rendering", "API routes", "Middleware", "Deployment adapters"]
+              }
+            ],
+            "migration_story": {
+              "company": "GitLab",
+              "from": "jQuery + Rails",
+              "to": "Vue.js components",
+              "process": "Gradual migration over 3 years",
+              "result": "70% faster page loads, 50% less code"
+            },
+            "script": [
+              "Vue's 'progressive' nature isn't just marketing. It's an architectural decision.",
+              "Level 1: Need to add a dynamic component to your Django/Rails/PHP app? Drop in a Vue script tag. No Webpack, no npm, no build step.",
+              "Level 2: Ready for a full SPA? Use the official CLI. Get Vue Router for navigation, Pinia for state management, Vite for blazing builds.",
+              "Level 3: Need SEO, performance, full-stack capabilities? Use Nuxt 3. Server-side rendering, API routes, middleware—all batteries included.",
+              "This progression mirrors how real companies evolve. GitLab didn't rewrite their massive Rails app overnight. They migrated component by component over years.",
+              "Vue supports this journey at every step."
+            ]
+          },
+          {
+            "id": "1.3",
+            "type": "ecosystem",
+            "title": "The Official Ecosystem: Vue's Secret Weapon",
+            "comparison": {
+              "vue_ecosystem": {
+                "state_management": "Pinia (official)",
+                "routing": "Vue Router (official)",
+                "ssr_framework": "Nuxt (official)",
+                "testing": "Vitest + Vue Test Utils (official)",
+                "dev_tools": "Vue DevTools (official)",
+                "cli": "create-vue (official)"
+              },
+              "react_ecosystem": {
+                "state_management": "Redux, Zustand, Recoil, Jotai, MobX, Valtio...",
+                "routing": "React Router, TanStack Router, Next.js Router...",
+                "ssr_framework": "Next.js, Remix, Gatsby...",
+                "testing": "Jest, Vitest, React Testing Library...",
+                "dev_tools": "React DevTools (official)",
+                "cli": "create-react-app (deprecated), Vite"
+              }
+            },
+            "analysis": {
+              "vue_advantage": "Curated, integrated, documented together",
+              "react_advantage": "Innovation through competition",
+              "decision_fatigue": "React: High, Vue: Low",
+              "learning_curve": "React: Steep (choose and learn each library), Vue: Gentle (learn once, use everywhere)"
+            },
+            "script": [
+              "Here's Vue's killer feature: The Official Ecosystem.",
+              "In React land, you face decision fatigue: Which state manager? Which router? Which SSR framework? Each has different APIs, different mental models.",
+              "In Vue land: Use Pinia (official). Use Vue Router (official). Use Nuxt (official).",
+              "They're designed to work together. They share documentation patterns. They're maintained by the same core team.",
+              "This doesn't mean Vue lacks innovation. The community still builds amazing libraries. But the 'blessed path' is clear and well-supported.",
+              "For enterprise teams, this reduces onboarding time and architectural debates."
+            ]
+          },
+          {
+            "id": "1.4",
+            "type": "quiz",
+            "title": "Module 1: Philosophy Quiz",
+            "questions": [
+              {
+                "question": "What year was Vue 3 released?",
+                "options": ["2018", "2019", "2020", "2021"],
+                "answer": "2020",
+                "explanation": "Vue 3 was released in September 2020, introducing the Composition API and performance improvements."
+              },
+              {
+                "question": "Which company famously migrated from jQuery to Vue incrementally?",
+                "options": ["Facebook", "Google", "GitLab", "Netflix"],
+                "answer": "GitLab",
+                "explanation": "GitLab migrated their massive Rails application to Vue.js component by component over several years."
+              },
+              {
+                "question": "What is Vue's official state management library?",
+                "options": ["Vuex", "Pinia", "Redux", "MobX"],
+                "answer": "Pinia",
+                "explanation": "Pinia is Vue's official state management library, replacing Vuex in Vue 3 applications."
+              }
+            ],
+            "script": [
+              "Let's test our understanding of Vue's philosophy and history.",
+              "These questions highlight key milestones and differentiators."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Vue follows a progressive adoption path from enhancement to full-stack",
+          "The official ecosystem eliminates decision fatigue",
+          "Vue prioritizes developer experience without sacrificing capability",
+          "Real-world migrations prove Vue's progressive approach works at scale"
+        ]
+      },
+      {
+        "id": "module_2",
+        "title": "Module 2: Options API vs Composition API - The Great Evolution",
+        "duration": "50 minutes",
+        "slides": [
+          {
+            "id": "2.1",
+            "type": "comparison",
+            "title": "Options API: The Classic Vue Pattern",
+            "characteristics": {
+              "organization": "By option type (data, methods, computed, lifecycle)",
+              "learning_curve": "Gentle for beginners familiar with object literals",
+              "limitations": ["Logic fragmentation", "TypeScript support", "Code reuse complexity"]
+            },
+            "example": {
+              "component": "UserProfile with search and filtering",
+              "options_api": `export default {
+  data() {
+    return {
+      users: [],
+      searchQuery: '',
+      filterRole: 'all',
+      isLoading: false
+    };
+  },
+  computed: {
+    filteredUsers() {
+      return this.users.filter(user => {
+        const matchesSearch = user.name
+          .toLowerCase()
+          .includes(this.searchQuery.toLowerCase());
+        const matchesRole = this.filterRole === 'all' || 
+          user.role === this.filterRole;
+        return matchesSearch && matchesRole;
+      });
+    },
+    userCount() {
+      return this.filteredUsers.length;
+    }
+  },
+  methods: {
+    async fetchUsers() {
+      this.isLoading = true;
+      try {
+        const response = await fetch('/api/users');
+        this.users = await response.json();
+      } catch (error) {
+        console.error('Failed to fetch users:', error);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+    resetFilters() {
+      this.searchQuery = '';
+      this.filterRole = 'all';
+    }
+  },
+  mounted() {
+    this.fetchUsers();
+  },
+  watch: {
+    searchQuery(newQuery, oldQuery) {
+      console.log('Search query changed:', newQuery);
+    }
+  }
+};`,
+              "analysis": "Logic for 'users' is spread across data, computed, methods, mounted, and watch"
+            },
+            "script": [
+              "The Options API made Vue famous for its approachability.",
+              "It organizes code by 'what' rather than 'how': data here, methods here, lifecycle here.",
+              "For small components, this is brilliant. Everything has its place.",
+              "But for large components (like this user profile), a single feature (user management) is scattered across the file.",
+              "To understand 'fetching users', you look at data, methods, and mounted.",
+              "To understand 'filtering', you look at data, computed, and watch.",
+              "This fragmentation becomes painful at scale."
+            ]
+          },
+          {
+            "id": "2.2",
+            "type": "evolution",
+            "title": "Composition API: Logic Composition, Not Option Segregation",
+            "paradigm_shift": "Organize by feature, not by option type",
+            "advantages": [
+              "Logic co-location (all related code together)",
+              "Better TypeScript inference",
+              "Easier code extraction and reuse",
+              "No `this` context confusion"
+            ],
+            "same_component": {
+              "composition_api": `<script setup>
+import { ref, computed, onMounted, watch } from 'vue';
+
+// Feature 1: User data management
+const users = ref([]);
+const isLoading = ref(false);
+
+async function fetchUsers() {
+  isLoading.value = true;
+  try {
+    const response = await fetch('/api/users');
+    users.value = await response.json();
+  } catch (error) {
+    console.error('Failed to fetch users:', error);
+  } finally {
+    isLoading.value = false;
+  }
+}
+
+onMounted(() => {
+  fetchUsers();
+});
+
+// Feature 2: User filtering
+const searchQuery = ref('');
+const filterRole = ref('all');
+
+const filteredUsers = computed(() => {
+  return users.value.filter(user => {
+    const matchesSearch = user.name
+      .toLowerCase()
+      .includes(searchQuery.value.toLowerCase());
+    const matchesRole = filterRole.value === 'all' || 
+      user.role === filterRole.value;
+    return matchesSearch && matchesRole;
+  });
+});
+
+const userCount = computed(() => filteredUsers.value.length);
+
+function resetFilters() {
+  searchQuery.value = '';
+  filterRole.value = 'all';
+}
+
+// Feature 3: Search query logging
+watch(searchQuery, (newQuery, oldQuery) => {
+  console.log('Search query changed:', newQuery);
+});
+</script>`,
+              "analysis": "Each feature (user data, filtering, logging) is grouped together"
+            },
+            "script": [
+              "The Composition API solves the fragmentation problem.",
+              "Feature 1: User data management. All in one block: reactive state, functions, lifecycle.",
+              "Feature 2: User filtering. All in one block: reactive inputs, computed outputs, helper functions.",
+              "Feature 3: Search query logging. All in one block.",
+              "This is the key insight: Group code by feature, not by technical concern.",
+              "Now, if you want to understand 'user filtering', you read one block. If you want to extract it to a composable, you copy one block.",
+              "The `<script setup>` syntax makes this even cleaner by removing the boilerplate."
+            ]
+          },
+          {
+            "id": "2.3",
+            "type": "migration",
+            "title": "Migration Strategy: Options API to Composition API",
+            "approaches": [
+              {
+                "approach": "Incremental Migration",
+                "description": "Mix Options and Composition API in same component",
+                "implementation": "Use `setup()` function alongside options",
+                "example": `export default {
+  // Options API (legacy)
+  data() {
+    return { legacyData: 'old' };
+  },
+  
+  // Composition API (new)
+  setup() {
+    const newData = ref('new');
+    return { newData };
+  }
+};`,
+                "use_case": "Large codebase, gradual migration"
+              },
+              {
+                "approach": "Feature-by-Feature",
+                "description": "Convert one feature at a time to composables",
+                "implementation": "Extract logic to composables, use in Options API",
+                "example": `// useUsers.js (composable)
+export function useUsers() {
+  const users = ref([]);
+  const fetchUsers = async () => { /* ... */ };
+  return { users, fetchUsers };
+}
+
+// Component.vue (Options API)
+import { useUsers } from './useUsers';
+
+export default {
+  setup() {
+    const { users, fetchUsers } = useUsers();
+    return { users, fetchUsers };
+  },
+  mounted() {
+    this.fetchUsers();
+  }
+};`,
+                "use_case": "Systematic refactoring"
+              },
+              {
+                "approach": "Big Bang",
+                "description": "Rewrite entire component",
+                "implementation": "Convert to `<script setup>`",
+                "example": "Complete rewrite using Composition API patterns",
+                "use_case": "Small components, greenfield projects"
+              }
+            ],
+            "tooling_support": {
+              "vue_migration_build": "Provides runtime warnings for deprecated features",
+              "eslint_plugin_vue": "Automated migration suggestions",
+              "vue_3_compat_build": "Backwards compatibility layer"
+            },
+            "script": [
+              "You don't need to rewrite your entire app overnight.",
+              "The incremental approach lets you mix Options and Composition API. New features use Composition API. Old features stay as-is until you refactor.",
+              "The feature-by-feature approach is most practical: Extract a piece of logic to a composable, then use it in your Options API component. Eventually, the component becomes thin.",
+              "Vue provides excellent tooling for migration: warnings for deprecated features, ESLint plugins, and even a compatibility build.",
+              "Most importantly: The Composition API is additive. You can adopt it gradually based on team comfort and project needs."
+            ]
+          },
+          {
+            "id": "2.4",
+            "type": "demo",
+            "title": "Hands-On: Refactoring a Complex Component",
+            "scenario": "E-commerce product listing with search, filters, sorting, and pagination",
+            "before_options_api": {
+              "lines": "150+ lines scattered across options",
+              "pain_points": ["Filter logic split across 4 places", "Sorting logic in computed and methods", "Pagination state mixed with product data"]
+            },
+            "after_composition_api": {
+              "structure": [
+                "useProducts() - Data fetching and storage",
+                "useProductFilters() - Search and filter logic",
+                "useProductSorter() - Sorting logic",
+                "usePagination() - Pagination state and logic",
+                "Component - Thin template that composes features"
+              ],
+              "benefits": ["Each feature is testable independently", "Logic can be reused across components", "TypeScript types flow naturally"]
+            },
+            "extracted_composable": `// useProductFilters.js
+import { ref, computed } from 'vue';
+
+export function useProductFilters(products) {
+  const searchQuery = ref('');
+  const selectedCategory = ref('all');
+  const priceRange = ref([0, 1000]);
+  const inStockOnly = ref(false);
+
+  const filteredProducts = computed(() => {
+    return products.value.filter(product => {
+      // Search filter
+      const matchesSearch = product.name
+        .toLowerCase()
+        .includes(searchQuery.value.toLowerCase()) ||
+        product.description
+          .toLowerCase()
+          .includes(searchQuery.value.toLowerCase());
+      
+      // Category filter
+      const matchesCategory = selectedCategory.value === 'all' ||
+        product.category === selectedCategory.value;
+      
+      // Price filter
+      const matchesPrice = product.price >= priceRange.value[0] &&
+        product.price <= priceRange.value[1];
+      
+      // Stock filter
+      const matchesStock = !inStockOnly.value || product.inStock;
+      
+      return matchesSearch && matchesCategory && 
+             matchesPrice && matchesStock;
+    });
+  });
+
+  function resetFilters() {
+    searchQuery.value = '';
+    selectedCategory.value = 'all';
+    priceRange.value = [0, 1000];
+    inStockOnly.value = false;
+  }
+
+  return {
+    searchQuery,
+    selectedCategory,
+    priceRange,
+    inStockOnly,
+    filteredProducts,
+    resetFilters
+  };
+}`,
+            "script": [
+              "Let's see the power of the Composition API in action.",
+              "We're taking a complex e-commerce component and refactoring it into focused composables.",
+              "Each composable handles one concern: filtering, sorting, pagination.",
+              "The component becomes declarative: compose these features together.",
+              "The filtering logic is now reusable. Any component that needs product filtering can import `useProductFilters`.",
+              "Each composable is independently testable. No need to render the entire component.",
+              "This is the future of Vue development: modular, reusable, maintainable logic."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Options API organizes by technical concern, Composition API by feature",
+          "Composition API enables better TypeScript support and logic reuse",
+          "Migration can be incremental: mix both APIs or refactor feature-by-feature",
+          "Complex components benefit most from Composition API's co-location"
+        ]
+      },
+      {
+        "id": "module_3",
+        "title": "Module 3: Reactivity Deep Dive - From Proxies to Performance",
+        "duration": "55 minutes",
+        "slides": [
+          {
+            "id": "3.1",
+            "type": "architecture",
+            "title": "Vue 3's Reactivity System: How Proxies Changed Everything",
+            "comparison": {
+              "vue_2": {
+                "technology": "Object.defineProperty",
+                "limitations": [
+                  "Cannot detect new properties (need Vue.set)",
+                  "Cannot detect array index changes",
+                  "Cannot detect array length changes",
+                  "Performance overhead on large objects"
+                ],
+                "api": "Vue.set(), Vue.delete()"
+              },
+              "vue_3": {
+                "technology": "ES6 Proxies",
+                "advantages": [
+                  "Detects property addition/deletion",
+                  "Detects array index mutations",
+                  "Detects array length changes",
+                  "Lazy initialization (only proxies accessed properties)",
+                  "Better performance for large objects"
+                ],
+                "api": "No special API needed"
+              }
+            },
+            "proxy_implementation": {
+              "simplified": `function reactive(target) {
+  return new Proxy(target, {
+    get(obj, key) {
+      track(obj, key); // Record dependency
+      return Reflect.get(obj, key);
+    },
+    set(obj, key, value) {
+      const oldValue = obj[key];
+      const result = Reflect.set(obj, key, value);
+      if (oldValue !== value) {
+        trigger(obj, key); // Notify dependents
+      }
+      return result;
+    },
+    deleteProperty(obj, key) {
+      const hadKey = key in obj;
+      const result = Reflect.deleteProperty(obj, key);
+      if (hadKey) {
+        trigger(obj, key); // Notify dependents
+      }
+      return result;
+    }
+  });
+}`,
+              "key_insights": [
+                "Track dependencies during get operations",
+                "Trigger updates during set/delete operations",
+                "Uses Reflect API for default behavior",
+                "Only notifies when value actually changes"
+              ]
+            },
+            "script": [
+              "Vue 3's reactivity system is a masterpiece of modern JavaScript.",
+              "In Vue 2, we had limitations: Couldn't detect new properties, couldn't detect array index changes. We needed special APIs like Vue.set().",
+              "Vue 3 uses ES6 Proxies, which are like 'traps' around objects. When you get a property, Vue tracks it as a dependency. When you set a property, Vue notifies all dependents.",
+              "The magic: It just works. Add a new property? Reactive. Change array[3]? Reactive. Delete a property? Reactive.",
+              "Proxies are lazy: If you have an object with 100 properties but only access 2, only those 2 get proxied. This is huge for performance.",
+              "This is why Vue 3 feels so magical: It looks like plain JavaScript, but it's fully reactive."
+            ]
+          },
+          {
+            "id": "3.2",
+            "type": "patterns",
+            "title": "ref() vs reactive(): When to Use What",
+            "detailed_comparison": {
+              "ref": {
+                "purpose": "Creates reactive reference for any value",
+                "syntax": "const count = ref(0);",
+                "access": "count.value (in JS), {{ count }} (in template)",
+                "internals": "Wraps value in { value: ... } object with Proxy",
+                "best_for": ["Primitives (string, number, boolean)", "When you need to replace entire object", "Explicit reactivity signaling"]
+              },
+              "reactive": {
+                "purpose": "Creates reactive proxy of object",
+                "syntax": "const state = reactive({ count: 0 });",
+                "access": "state.count (no .value)",
+                "internals": "Direct Proxy on object",
+                "best_for": ["Complex objects with nested properties", "When you want 'normal' object syntax", "State objects that won't be replaced"]
+              },
+              "toRefs": {
+                "purpose": "Converts reactive object to refs",
+                "syntax": "const { count } = toRefs(state);",
+                "use_case": "Destructuring while keeping reactivity",
+                "warning": "Without toRefs: const { count } = state; // loses reactivity!"
+              }
+            },
+            "decision_tree": {
+              "question_1": "Is it a primitive (string, number, boolean)?",
+              "yes": "Use ref()",
+              "no": "Question 2: Will you replace the entire object?",
+              "yes_2": "Use ref()",
+              "no_2": "Question 3: Do you need to destructure?",
+              "yes_3": "Use reactive() + toRefs()",
+              "no_3": "Use reactive()"
+            },
+            "real_world_patterns": [
+              {
+                "pattern": "Form State",
+                "implementation": `const form = reactive({
+  email: '',
+  password: '',
+  rememberMe: false
+});
+
+// Template: v-model="form.email"
+// No .value needed, clean syntax`,
+                "reasoning": "Form fields are naturally object-like, won't replace entire form"
+              },
+              {
+                "pattern": "API Response",
+                "implementation": `const users = ref([]); // Will replace entire array
+
+async function fetchUsers() {
+  const response = await api.getUsers();
+  users.value = response.data; // Replace entire array
+}`,
+                "reasoning": "API responses often replace entire data structures"
+              },
+              {
+                "pattern": "Component Props",
+                "implementation": `// Parent passes object prop
+const props = defineProps<{ user: User }>();
+
+// Convert to refs for manipulation
+const { user } = toRefs(props);
+
+// Now user is reactive ref
+watch(user, (newUser) => {
+  console.log('User prop changed:', newUser);
+});`,
+                "reasoning": "Props are reactive but immutable, toRefs creates mutable refs"
+              }
+            ],
+            "script": [
+              "The ref vs reactive debate is the #1 question from new Vue 3 developers.",
+              "Here's the simple answer: Use ref() for primitives and when you might replace the value. Use reactive() for objects that you'll modify in-place.",
+              "But there's nuance: ref() is more explicit. You see .value and know it's reactive. reactive() looks like a normal object, which can be confusing.",
+              "The destructuring problem is critical: `const { count } = reactive({ count: 0 })` loses reactivity! You must use `toRefs()`.",
+              "My recommendation: Default to ref(). It's explicit, works everywhere, and avoids the destructuring footgun. Use reactive() only when the object syntax benefit outweighs the confusion.",
+              "Real patterns: Forms use reactive (object-like). API data uses ref (will replace). Props use toRefs (need reactivity)."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Vue 3 uses ES6 Proxies for transparent, full-featured reactivity",
+          "ref() wraps values in objects, reactive() proxies objects directly",
+          "Always use toRefs() when destructuring reactive objects",
+          "Default to ref() for explicitness, use reactive() for object syntax benefits"
+        ]
+      }
+    ]
+  }
+}

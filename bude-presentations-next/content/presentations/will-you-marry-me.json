@@ -1,0 +1,493 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "slides": [
+          {
+            "type": "title",
+            "title": "For Erumaaa",
+            "subtitle": "A presentation in 41 slides. Promise it's worth it."
+          },
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Applicant for the position of Husband",
+            "experience": "Several years of being absolutely, embarrassingly in love with Erumaaa.",
+            "oss_experience": "References available on request. (My mom thinks I'm a great catch.)",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "how-we-got-here",
+        "title": "How we got here",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "How we got here",
+            "subtitle": "A brief history of the best thing that ever happened to me.",
+            "emoji": "📜"
+          },
+          {
+            "type": "content",
+            "title": "The first time I saw you",
+            "emoji": "✨",
+            "box": {
+              "content": "<p>I remember it the way most people remember big news. A small jolt. A sudden, quiet certainty that this was someone I should pay attention to.</p><p>I didn't know yet that <strong>paying attention to you</strong> would become the easiest, most natural thing I'd ever do.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The first real conversation",
+            "emoji": "💬",
+            "box": {
+              "content": "<p>You said something that made me laugh harder than I had in months. And then — even better — you said something <em>thoughtful</em>, the kind of sentence that stays with you for days.</p><p>I went home and did the worst thing a person can do at the start of something good: I overthought it. I drafted texts I didn't send. I refreshed my chat at unholy hours.</p><p>And then I sent the only one that mattered.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "When I knew",
+            "emoji": "🎯",
+            "box": {
+              "title": "There wasn't one moment. There were a hundred small ones.",
+              "list": [
+                {
+                  "emoji": "☕",
+                  "text": "The way you hold a cup with both hands, like the world's at stake"
+                },
+                {
+                  "emoji": "🤣",
+                  "text": "Your laugh at things you weren't supposed to laugh at"
+                },
+                {
+                  "emoji": "🤔",
+                  "text": "How you <em>actually</em> think before you answer questions"
+                },
+                {
+                  "emoji": "📚",
+                  "text": "The book on your bedside table that never seems to make it past chapter three"
+                },
+                {
+                  "emoji": "🌧️",
+                  "text": "That you don't mind silence — you make it feel like company"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "That you reply when you mean to, not on a schedule"
+                },
+                {
+                  "emoji": "💪",
+                  "text": "How you tell me when I'm being a fool — gently, but you tell me"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-review",
+        "title": "Performance review",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Quick performance review",
+            "subtitle": "Life before Erumaaa. Life after Erumaaa. A scientific comparison.",
+            "emoji": "📊"
+          },
+          {
+            "type": "comparison",
+            "title": "The data is in",
+            "leftTitle": "Aravind — before Erumaaa",
+            "leftPoints": [
+              "🍜 Dinner was \"whatever's in the fridge\"",
+              "🛌 Slept five hours and called it productivity",
+              "🎧 Listened to the same twelve songs on loop",
+              "📱 Doomscrolled like it was a paid position",
+              "🤐 Kept feelings in a small dusty container",
+              "🛒 Bought groceries for one, sadly",
+              "🧦 Owned exactly two pairs of matching socks"
+            ],
+            "rightTitle": "Aravind — after Erumaaa",
+            "rightPoints": [
+              "🍳 Suddenly a passable cook (you raised the bar)",
+              "🌅 Sleeping properly, because you insist on it",
+              "🎶 Stealing your taste in music (yours is better)",
+              "💬 Phone exists primarily to text <strong>you</strong>",
+              "🫶 Feelings: openly discussed, occasionally embarrassingly",
+              "🛒 Always buying snacks I know <em>you'll</em> like",
+              "✨ Genuinely happier in ways friends keep noticing"
+            ],
+            "note": {
+              "text": "Conclusion: substantial quality-of-life improvements across every measured metric. 12 out of 10. Would recommend to a friend."
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-i-love-you",
+        "title": "Why I love you",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why I love you",
+            "subtitle": "The actual answer. Not the cute one.",
+            "emoji": "💛"
+          },
+          {
+            "type": "content",
+            "title": "Your mind",
+            "emoji": "🧠",
+            "box": {
+              "content": "<p>You ask the questions other people are too tired or too cool to ask.</p><p>You change your mind when the evidence changes — which is a kind of bravery most people pretend they don't need. You notice things. Small details. Throwaway lines. And you remember them weeks later, often when I've forgotten I said them.</p><p>Being smart is common. Being <strong>curious</strong> in the way you are — that's rare.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Your heart",
+            "emoji": "❤️",
+            "box": {
+              "content": "<p>You are kind to people you'll never see again. You're kind to the friend who's been hard work this year. You're kind to me on days I haven't earned it.</p><p>Kindness isn't softness. The way you do it, it looks like <em>strength</em>.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Your laugh",
+            "emoji": "😂",
+            "box": {
+              "content": "<p>It's louder than you mean it to be. It comes out at the wrong moments. It makes strangers turn around in restaurants.</p><p>It is, without exaggeration, my favourite sound on this entire planet.</p><p>If we have a soundtrack, that's it.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "How we fit",
+            "emoji": "🧩",
+            "box": {
+              "content": "<p>It's not that we never fight. It's that we know how to come back.</p><p>It's not that we agree on everything. It's that we genuinely <em>like</em> each other's company even when we don't.</p><p>That, I've come to learn, is the whole thing. Everything else is decoration.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "you-asked",
+        "title": "You asked. I answered.",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "You asked. I answered.",
+            "subtitle": "Every question you've actually thrown at me, in convenient multiple-choice form.",
+            "emoji": "❓"
+          },
+          {
+            "type": "quiz",
+            "question": "Why do you want to marry me?",
+            "options": [
+              "Because life is more interesting when you're in the room",
+              "Because every plan I make now starts with the word \"we\"",
+              "Because you make me a better me — without ever asking me to be different",
+              "All of these. Plus forty-seven other reasons saved for slide 29."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Trick question. The real answer is the entire rest of this deck. But if you want it in one line: because a life with you is the one I keep choosing — every day, in every weather."
+          },
+          {
+            "type": "quiz",
+            "question": "What if I drive you crazy someday?",
+            "options": [
+              "You already do. (And it's fine.)",
+              "Then I drive you crazy right back, and we call it even",
+              "We argue, we apologise, we order biriyani, we move on",
+              "All of the above. Repeat as needed for the next sixty years."
+            ],
+            "correctAnswer": 3,
+            "explanation": "The \"driving each other crazy\" part isn't a bug — it's part of the deal. Every long marriage I've ever watched has two people who occasionally want to throttle each other — gently — and keep choosing each other anyway."
+          },
+          {
+            "type": "quiz",
+            "question": "What's the best thing about us?",
+            "options": [
+              "We're better at being us than at being apart",
+              "We make each other laugh in places we really shouldn't",
+              "We tell each other the truth — even the inconvenient parts",
+              "Honestly? All three. That's the whole shortlist."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Couples are easy when it's easy. The good ones are the ones who keep choosing each other when it isn't. We do that. We've already proven it more than once."
+          },
+          {
+            "type": "quiz",
+            "question": "What scares me about a life without you?",
+            "options": [
+              "Eating dinner alone every night, badly",
+              "Forgetting what real conversation sounds like",
+              "Going back to the version of me I was before you",
+              "All of them. Which is why we're not finding out."
+            ],
+            "correctAnswer": 3,
+            "explanation": "I'm not afraid of much in life. I am, very specifically, afraid of a version of it that doesn't have you in it. So I'm doing the rational thing and proposing."
+          },
+          {
+            "type": "quiz",
+            "question": "What do I notice about you most?",
+            "options": [
+              "The small dance you do when food arrives",
+              "The way your eyes go quiet when you're thinking hard",
+              "How you defend the things you love, even when no one's attacking them",
+              "All three. Plus a hundred more I'm collecting like trading cards."
+            ],
+            "correctAnswer": 3,
+            "explanation": "I have an entire mental file. I take notes I don't write down. I notice things — especially you."
+          },
+          {
+            "type": "quiz",
+            "question": "What's my favourite thing we do together?",
+            "options": [
+              "Long walks where we forget where we were going",
+              "Cooking something neither of us has made before, badly",
+              "Saying absolutely nothing in the same room for hours",
+              "Trick question. The activity doesn't matter. You're the part I like."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Genuinely. I have done all sorts of things with you. The fun part is always you."
+          },
+          {
+            "type": "quiz",
+            "question": "What do I love about your family?",
+            "options": [
+              "They made you. So immediately — all of that.",
+              "The way they argue about food like it's high diplomacy",
+              "How loud the love is — no one whispers about how they feel",
+              "All of the above. They feel like home before I even step inside."
+            ],
+            "correctAnswer": 3,
+            "explanation": "You can tell a lot about a person by their family. I'm marrying into a family I'd choose. That's a gift not everyone gets."
+          },
+          {
+            "type": "quiz",
+            "question": "What's our most ridiculous fight going to be?",
+            "options": [
+              "Whose turn it is to text the parents",
+              "The exact correct way to fold towels",
+              "Pineapple on pizza (an ongoing diplomatic crisis)",
+              "Doesn't matter — we'll forget the original reason within an hour anyway."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Healthy couples fight about laundry and pizza toppings. We are squarely in the laundry-and-pizza tier. Long may it last."
+          },
+          {
+            "type": "quiz",
+            "question": "What kind of husband am I planning to be?",
+            "options": [
+              "The one who actually listens (not the one waiting for his turn to talk)",
+              "The one who remembers important dates without phone reminders (mostly)",
+              "The one you can be your full, unfiltered self around",
+              "All three. With version updates released as needed."
+            ],
+            "correctAnswer": 3,
+            "explanation": "I'm not promising perfect. I'm promising I'll keep getting better. Every release will include performance improvements and minor bug fixes."
+          },
+          {
+            "type": "quiz",
+            "question": "What do I want our home to feel like?",
+            "options": [
+              "Loud, with the right people in it",
+              "Quiet, when the world outside is too loud",
+              "Like the safest place either of us has ever been",
+              "All three — depending on the day."
+            ],
+            "correctAnswer": 2,
+            "explanation": "If I had to pick one, it's the third. Home should be the place you exhale. Everything else is decoration."
+          },
+          {
+            "type": "quiz",
+            "question": "What's the first promise I'm making?",
+            "options": [
+              "To say sorry first when I'm wrong",
+              "To say sorry first sometimes even when I'm not — because being right is overrated",
+              "To never stop being curious about you",
+              "All three. They come as a package."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Promises are easy to make. Mine are: be honest. Be kind. Keep paying attention. The hard part is the daily work of doing them. I'm in."
+          },
+          {
+            "type": "quiz",
+            "question": "What's something I'd never tell anyone — but I'll tell you?",
+            "options": [
+              "Most days, I'm just winging it",
+              "I get unreasonably proud when I make you laugh",
+              "I'm a little scared of the future — and a lot less scared because of you",
+              "All of them. The whole vault. No locks for you."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Marriage is, among other things, the official end of having to perform a version of yourself. I'm ready for that. With you, I'm mostly already there."
+          },
+          {
+            "type": "quiz",
+            "question": "What's the deal-breaker for me?",
+            "options": [
+              "Cheating",
+              "Cruelty",
+              "Giving up on each other quietly, without telling each other",
+              "All three. They're the same thing wearing different costumes."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Most things I can work through with you. Those three I can't. I don't think we'll ever come close. But the line deserves to be named — out loud, on the record."
+          },
+          {
+            "type": "quiz",
+            "question": "What if we get really, really old together?",
+            "options": [
+              "We become those slightly annoying old people who finish each other's sentences",
+              "We accidentally adopt too many cats",
+              "We become the cool grandparents — with stories the kids are slightly afraid of",
+              "All of them. Plus matching cardigans. I'm choosing them now."
+            ],
+            "correctAnswer": 3,
+            "explanation": "I have thought about this in genuinely embarrassing detail. The cardigans will be navy. Resistance is futile."
+          },
+          {
+            "type": "quiz",
+            "question": "How sure am I that I want to spend my life with Erumaaa?",
+            "options": [
+              "Pretty sure",
+              "Very sure",
+              "Embarrassingly, indecently, completely sure",
+              "All of the above — but mostly the third one"
+            ],
+            "correctAnswer": 3,
+            "explanation": "I have considered this from every angle, including the angles you've made fun of me for considering. The answer keeps coming back the same."
+          }
+        ]
+      },
+      {
+        "id": "our-future",
+        "title": "Our future",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "What I want next",
+            "subtitle": "And by \"what I want next\", I mean \"everything, with you\".",
+            "emoji": "🌅"
+          },
+          {
+            "type": "content",
+            "title": "Quiet mornings",
+            "emoji": "☕",
+            "box": {
+              "content": "<p>Sunlight on the kitchen counter. The kettle hissing. You — hair still doing whatever it does in the morning. No phones for the first ten minutes. The world can wait.</p><p>I want a thousand of these. I want a few thousand more.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Places we'll go",
+            "emoji": "🌍",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏔️",
+                  "text": "Somewhere cold, where we have to bundle up and you complain affectionately"
+                },
+                {
+                  "emoji": "🌊",
+                  "text": "Somewhere warm, where the wifi is bad and we don't care"
+                },
+                {
+                  "emoji": "🏛️",
+                  "text": "Somewhere old, with stories in the stones"
+                },
+                {
+                  "emoji": "🥘",
+                  "text": "And, of course, every restaurant you've been quietly making a list of"
+                },
+                {
+                  "emoji": "🚂",
+                  "text": "A slow train through a country with too many vowels in its name"
+                },
+                {
+                  "emoji": "🏝️",
+                  "text": "Anywhere we can do absolutely nothing together, well"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "The hard parts",
+            "emoji": "🛡️",
+            "box": {
+              "content": "<p>I'm not promising sunshine. I'm promising that whatever rain comes — and there <em>will</em> be rain — I'd rather get drenched standing next to you than be dry, alone.</p><p>You should know I mean this. I've thought about it on bad days, not only the good ones.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Growing old",
+            "emoji": "🪴",
+            "box": {
+              "content": "<p>I want to know what you look like with grey hair. I want to know the silly things we'll argue about in twenty years.</p><p>I want to be the person you call first, and last, and at every important moment in between.</p><p>I want the long version of this story. The whole book. Every chapter.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-now",
+        "title": "Why now",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why now",
+            "subtitle": "Three honest reasons.",
+            "emoji": "⏳"
+          },
+          {
+            "type": "content",
+            "title": "Because I'm sure.",
+            "emoji": "🪨",
+            "box": {
+              "content": "<p>Not in a young, reckless way. In the way you become sure of certain things after watching them hold up under weight.</p><p>We have been weighed. We held.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Because waiting is fear in disguise.",
+            "emoji": "🕰️",
+            "box": {
+              "content": "<p>I could wait for some perfect moment. The world has a way of making you wait yourself out of the things that matter.</p><p>I don't want to wait myself out of <strong>you</strong>.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Because I want to start.",
+            "emoji": "🚀",
+            "box": {
+              "content": "<p>Marriage isn't the end of a love story. It's a beginning that gets to call itself by a different name.</p><p>I want to begin. I want everything that comes after this — to come after this <em>with you</em>.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "the-ask",
+        "title": "The ask",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "And so…",
+            "emoji": "💍"
+          },
+          {
+            "type": "title",
+            "title": "Will you marry me?",
+            "subtitle": "I love you. I am yours. — A."
+          },
+          {
+            "type": "thank-you",
+            "title": "Whatever you say",
+            "message": "I love you. Now. Tomorrow. Always. — Aravind"
+          }
+        ]
+      }
+    ]
+  }
+}

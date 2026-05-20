@@ -139,7 +139,7 @@
 
 ### 🟠 DevOps, Infrastructure & Cloud (13)
 - [ ] [#75 DevOps – CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75)
-- [ ] [#26 Terraform](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/26) - Infrastructure as Code
+- [x] #26 Terraform - [View](presentations/intro-terraform.json) - Infrastructure as Code
 - [ ] [#27 Ansible](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/27) - Configuration management tool
 - [ ] [#28 Helm](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/28) - Kubernetes package manager
 - [ ] [#29 ArgoCD / GitOps](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/29) - Continuous delivery for Kubernetes

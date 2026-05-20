@@ -1,0 +1,1198 @@
+{
+  "presentation": {
+    "info": {
+      "title": "Enterprise Open Source Low-Code Masterclass",
+      "subtitle": "Architecting Scalable Internal Tools with Appsmith & ToolJet",
+      "author": "Aravind Govindhasamy",
+      "version": "3.0.0",
+      "description": "A comprehensive 3.5-hour technical workshop covering architecture, development, security, deployment, and enterprise integration of modern low-code platforms.",
+      "duration": "210 minutes",
+      "audience": "Senior Developers, Tech Leads, DevOps Engineers, Enterprise Architects",
+      "format": "Workshop with live coding sessions",
+      "prerequisites": [
+        "Docker basics",
+        "JavaScript/Python",
+        "Database concepts"
+      ],
+      "generated_at": "2025-12-31",
+      "total_slides": 72,
+      "topics": 8
+    },
+    "topics": [
+      {
+        "id": "module_1",
+        "title": "Module 1: The Low-Code Revolution",
+        "duration": "25 minutes",
+        "slides": [
+          {
+            "id": "1.1",
+            "type": "keynote",
+            "title": "The Developer's Dilemma in 2025",
+            "subtitle": "Why 63% of Developer Time is Wasted on Internal Tools",
+            "stats": [
+              {
+                "metric": "63%",
+                "label": "Developer time spent on maintenance"
+              },
+              {
+                "metric": "$87B",
+                "label": "Annual cost of internal tool development"
+              },
+              {
+                "metric": "6 months",
+                "label": "Average time to internal tool MVP"
+              },
+              {
+                "metric": "2 weeks",
+                "label": "With open-source low-code"
+              }
+            ],
+            "content": "A recent Stripe survey of 10,000 developers reveals that the majority of development time is spent on maintaining existing systems, not building new value. Internal tools - CRUD interfaces, admin panels, approval workflows - consume disproportionate resources.",
+            "script": [
+              "Good morning. Let me start with a controversial statement: The way we build software inside enterprises is fundamentally broken.",
+              "The average enterprise has 150+ internal tools. Each costs $250,000+ to build and maintain.",
+              "Today, we're not just learning a new tool. We're learning a new methodology that can save your organization millions."
+            ],
+            "demo": {
+              "title": "Live Build Challenge",
+              "task": "Build a user management dashboard in 180 seconds",
+              "components": [
+                "Table widget",
+                "Search input",
+                "Filter buttons",
+                "Export CSV button"
+              ]
+            }
+          },
+          {
+            "id": "1.2",
+            "type": "timeline",
+            "title": "From Dreamweaver to Appsmith: 25 Years of RAD",
+            "timeline": [
+              {
+                "year": "1999",
+                "event": "Dreamweaver/Delphi - Desktop RAD tools",
+                "type": "desktop"
+              },
+              {
+                "year": "2008",
+                "event": "Force.com - First cloud RAD platform",
+                "type": "cloud"
+              },
+              {
+                "year": "2015",
+                "event": "Bubble/Webflow - No-code for non-developers",
+                "type": "nocode"
+              },
+              {
+                "year": "2020",
+                "event": "Appsmith/ToolJet - Low-code FOR developers",
+                "type": "lowcode"
+              },
+              {
+                "year": "2024",
+                "event": "AI-assisted low-code (GitHub Copilot + Appsmith)",
+                "type": "ai"
+              }
+            ],
+            "insight": "Each generation increased abstraction while preserving programmability. Modern low-code platforms are essentially cloud IDEs with built-in state management and deployment.",
+            "script": [
+              "Let's understand our lineage. This isn't a new concept.",
+              "What's different now? Three things: 1) Everything runs in containers, 2) Everything connects via APIs, 3) We can write real code when needed."
+            ]
+          },
+          {
+            "id": "1.3",
+            "type": "matrix",
+            "title": "Market Positioning Matrix",
+            "axes": {
+              "x": "Development Speed",
+              "y": "Flexibility/Customization"
+            },
+            "quadrants": [
+              {
+                "position": "top-right",
+                "label": "Appsmith/ToolJet",
+                "characteristics": [
+                  "High speed",
+                  "High flexibility",
+                  "Developer-centric"
+                ],
+                "use_cases": [
+                  "Complex workflows",
+                  "Enterprise integrations",
+                  "Custom logic"
+                ]
+              },
+              {
+                "position": "bottom-right",
+                "label": "Bubble/Webflow",
+                "characteristics": [
+                  "Very high speed",
+                  "Limited flexibility",
+                  "Designer-focused"
+                ],
+                "use_cases": [
+                  "Marketing sites",
+                  "Simple CRUD",
+                  "Prototypes"
+                ]
+              },
+              {
+                "position": "top-left",
+                "label": "Custom React/Node.js",
+                "characteristics": [
+                  "Low speed",
+                  "Maximum flexibility",
+                  "Full control"
+                ],
+                "use_cases": [
+                  "Public-facing apps",
+                  "Complex algorithms",
+                  "Legacy integration"
+                ]
+              },
+              {
+                "position": "bottom-left",
+                "label": "Excel/Google Sheets",
+                "characteristics": [
+                  "Instant",
+                  "No flexibility",
+                  "Ad-hoc"
+                ],
+                "use_cases": [
+                  "Quick calculations",
+                  "Personal tracking",
+                  "One-time analysis"
+                ]
+              }
+            ],
+            "script": [
+              "Every tool has its place on this matrix.",
+              "The sweet spot for internal tools? Top-right quadrant. Fast to build, but still customizable when requirements change."
+            ]
+          },
+          {
+            "id": "1.4",
+            "type": "comparison",
+            "title": "Appsmith vs ToolJet vs Retool",
+            "headers": [
+              "Feature",
+              "Appsmith 🟠",
+              "ToolJet 🟣",
+              "Retool 🔵"
+            ],
+            "rows": [
+              [
+                "Pricing",
+                "Open Source (FREE)",
+                "Open Source (FREE)",
+                "$10/user/month (Starts at $5k/yr)"
+              ],
+              [
+                "Self-Host",
+                "✅ Full control",
+                "✅ Full control",
+                "✅ Enterprise only ($50k+)"
+              ],
+              [
+                "Data Sources",
+                "30+ Native",
+                "50+ Native + Marketplace",
+                "80+ Native"
+              ],
+              [
+                "Custom Code",
+                "JavaScript only",
+                "JavaScript + Python + SQL",
+                "JavaScript only"
+              ],
+              [
+                "Mobile",
+                "Responsive web",
+                "Native mobile builder",
+                "Responsive web"
+              ],
+              [
+                "Git Integration",
+                "✅ Full GitOps",
+                "✅ Beta",
+                "✅ Enterprise plan"
+              ],
+              [
+                "SSO",
+                "✅ OIDC/SAML",
+                "✅ OIDC/SAML",
+                "✅ All plans"
+              ],
+              [
+                "Audit Logs",
+                "✅",
+                "✅",
+                "✅ Enterprise only"
+              ]
+            ],
+            "analysis": "For open-source teams, Appsmith and ToolJet offer 90% of Retool's functionality at 0% of the cost. The choice depends on your team's language preference and mobile requirements.",
+            "script": [
+              "Let's address the Retool question upfront.",
+              "Retool is fantastic, but it's expensive. At 100 users, you're paying $60,000/year.",
+              "Appsmith and ToolJet give you the same core functionality for free. The trade-off? You manage the infrastructure."
+            ]
+          },
+          {
+            "id": "1.5",
+            "type": "usecases",
+            "title": "Real-World Use Cases",
+            "categories": [
+              {
+                "category": "Customer Support",
+                "examples": [
+                  "Refund approval dashboard",
+                  "User account lookup",
+                  "Support ticket triage",
+                  "Chat transcript viewer"
+                ],
+                "complexity": "Medium",
+                "build_time": "2-5 days"
+              },
+              {
+                "category": "Operations",
+                "examples": [
+                  "Inventory management",
+                  "Order processing pipeline",
+                  "Shipment tracking",
+                  "Vendor approval workflow"
+                ],
+                "complexity": "High",
+                "build_time": "1-2 weeks"
+              },
+              {
+                "category": "Finance",
+                "examples": [
+                  "Expense report approval",
+                  "Invoice processing",
+                  "Revenue dashboard",
+                  "Budget tracking"
+                ],
+                "complexity": "High",
+                "build_time": "2-3 weeks"
+              },
+              {
+                "category": "HR",
+                "examples": [
+                  "Employee onboarding tracker",
+                  "Leave request approval",
+                  "Performance review system",
+                  "Recruitment pipeline"
+                ],
+                "complexity": "Medium",
+                "build_time": "1-2 weeks"
+              }
+            ],
+            "script": [
+              "These aren't hypothetical examples. I've seen each of these built in production.",
+              "The pattern? All are data-intensive, require multiple data sources, and need to be built faster than traditional development allows."
+            ]
+          },
+          {
+            "id": "1.6",
+            "type": "economics",
+            "title": "Cost-Benefit Analysis",
+            "comparison": {
+              "traditional": {
+                "team": "2 developers, 1 designer",
+                "timeline": "3 months",
+                "cost": "$75,000 (salary + benefits)",
+                "ongoing": "$2,000/month maintenance",
+                "risk": "High (key person dependency)"
+              },
+              "lowcode": {
+                "team": "1 developer",
+                "timeline": "2 weeks",
+                "cost": "$12,500",
+                "ongoing": "$200/month (server costs)",
+                "risk": "Medium (platform dependency)"
+              },
+              "saas": {
+                "team": "No developers needed",
+                "timeline": "1 day",
+                "cost": "$50/user/month",
+                "ongoing": "Grows with users",
+                "risk": "High (vendor lock-in)"
+              }
+            },
+            "roi_calculation": "For 50-user tool over 3 years:\nTraditional: $231,000\nLow-code: $19,200\nSaaS: $90,000\nSavings: $211,800 (92% reduction)",
+            "script": [
+              "The numbers speak for themselves.",
+              "But beyond cost, consider time-to-value. A tool that takes 3 months to build might be obsolete by launch.",
+              "With low-code, you can ship version 1 in two weeks, get feedback, and iterate."
+            ]
+          },
+          {
+            "id": "1.7",
+            "type": "anti_patterns",
+            "title": "When NOT to Use Low-Code",
+            "warning_signs": [
+              "Public-facing applications (security concerns)",
+              "High-frequency trading systems (latency requirements)",
+              "Complex ML pipelines (computational intensity)",
+              "Legacy system replacements (migration complexity)",
+              "Regulated environments without compliance certification"
+            ],
+            "recommendations": [
+              "Use for internal tools only",
+              "Avoid for customer-facing products",
+              "Test performance under load early",
+              "Have an exit strategy (export data schemas)"
+            ],
+            "script": [
+              "Low-code is a hammer, but not everything is a nail.",
+              "The biggest mistake? Trying to build your main customer product with low-code.",
+              "These platforms excel at internal tools where requirements change weekly and users are forgiving."
+            ]
+          },
+          {
+            "id": "1.8",
+            "type": "demo",
+            "title": "Hands-On: Build a User Search Interface",
+            "tasks": [
+              "Connect to PostgreSQL database",
+              "Add search input with debounce",
+              "Create filter dropdowns (status, role)",
+              "Build data table with pagination",
+              "Add export to CSV button",
+              "Implement row selection for batch actions"
+            ],
+            "time_limit": "7 minutes",
+            "starter_code": {
+              "sql": "SELECT * FROM users WHERE \n  name ILIKE {{ '%' + SearchInput.text + '%' }}\n  AND status IN {{ StatusFilter.selectedOptionValues }}\n  AND role IN {{ RoleFilter.selectedOptionValues }}\nLIMIT 100 OFFSET {{ (PageInput.value - 1) * 100 }}",
+              "javascript": "export default {\n  downloadCSV: () => {\n    const data = Query1.data;\n    const csv = Papa.unparse(data);\n    download(csv, 'users.csv', 'text/csv');\n  }\n}"
+            },
+            "script": [
+              "Now, let's build something real.",
+              "Follow along in your own instance. We'll create a user management dashboard in 7 minutes.",
+              "This is what separates watching from learning."
+            ]
+          },
+          {
+            "id": "1.9",
+            "type": "quiz",
+            "title": "Module 1: Knowledge Check",
+            "questions": [
+              {
+                "question": "What percentage of developer time is typically spent on internal tool maintenance?",
+                "options": [
+                  "25%",
+                  "43%",
+                  "63%",
+                  "82%"
+                ],
+                "answer": "63%",
+                "explanation": "Stripe's 2024 Developer Survey found 63% of time spent on maintenance/overhead."
+              },
+              {
+                "question": "Which scenario is LEAST appropriate for low-code?",
+                "options": [
+                  "Customer support dashboard",
+                  "Public e-commerce site",
+                  "Inventory management system",
+                  "HR onboarding tracker"
+                ],
+                "answer": "Public e-commerce site",
+                "explanation": "Public-facing applications have higher security and scalability requirements."
+              },
+              {
+                "question": "What's the primary cost advantage of open-source low-code vs Retool at 100 users?",
+                "options": [
+                  "10% cheaper",
+                  "50% cheaper",
+                  "90% cheaper",
+                  "Same cost"
+                ],
+                "answer": "90% cheaper",
+                "explanation": "Retool costs ~$60k/year for 100 users. Open-source costs ~$5k/year in infrastructure."
+              }
+            ],
+            "script": [
+              "Let's check our understanding.",
+              "These questions highlight the key decision factors for adopting low-code."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Low-code for developers is fundamentally different from no-code for business users",
+          "The economic case is overwhelming for internal tools",
+          "Open-source options provide 90% of enterprise functionality at 10% of the cost",
+          "Success requires knowing when NOT to use low-code"
+        ]
+      },
+      {
+        "id": "module_2",
+        "title": "Module 2: Architectural Internals",
+        "duration": "30 minutes",
+        "slides": [
+          {
+            "id": "2.1",
+            "type": "architecture",
+            "title": "Appsmith Container Architecture (Deep Dive)",
+            "diagram": {
+              "layers": [
+                {
+                  "layer": "Proxy/SSL",
+                  "components": [
+                    "Nginx",
+                    "Let's Encrypt"
+                  ],
+                  "purpose": "SSL termination, rate limiting, static file serving"
+                },
+                {
+                  "layer": "Application Server",
+                  "components": [
+                    "Java (Spring Boot)",
+                    "RTS (Real-Time Server)"
+                  ],
+                  "purpose": "API handling, real-time updates, permission enforcement"
+                },
+                {
+                  "layer": "Data Layer",
+                  "components": [
+                    "MongoDB (embedded)",
+                    "Redis",
+                    "File Storage"
+                  ],
+                  "purpose": "App metadata, sessions, file uploads"
+                },
+                {
+                  "layer": "Client",
+                  "components": [
+                    "React App",
+                    "WebSocket Client"
+                  ],
+                  "purpose": "UI rendering, reactive state management"
+                }
+              ]
+            },
+            "data_flow": "User Action → Nginx → Spring Boot → MongoDB → RTS → WebSocket → React → UI Update",
+            "script": [
+              "Let's peel back the layers. Understanding the architecture prevents production surprises.",
+              "This is a microservices architecture packaged as a monolith container for ease of deployment."
+            ]
+          },
+          {
+            "id": "2.2",
+            "type": "detailed",
+            "title": "The Reactive Engine: How DAG Works",
+            "concepts": [
+              {
+                "concept": "AST Parsing",
+                "description": "All {{ }} expressions are parsed into Abstract Syntax Trees",
+                "example": "{{ Table1.selectedRow.email }} → AST with 3 nodes"
+              },
+              {
+                "concept": "Dependency Graph",
+                "description": "Directed Acyclic Graph built from AST dependencies",
+                "example": "Input1 → Query1 → Table1 → Chart1"
+              },
+              {
+                "concept": "Topological Sort",
+                "description": "Nodes executed in dependency order",
+                "example": "Input1 (first) → Query1 → Table1 → Chart1 (last)"
+              },
+              {
+                "concept": "Memoization",
+                "description": "Results cached until dependencies change",
+                "example": "Query1.result cached until Input1.value changes"
+              }
+            ],
+            "code_example": {
+              "scenario": "Search with filters",
+              "expressions": [
+                "Query1: SELECT * FROM users WHERE name LIKE {{SearchBox.text}} AND status = {{StatusDropdown.value}}",
+                "StatsCard: {{Query1.data.length}} users found",
+                "ExportButton.visible: {{Query1.data.length > 0}}"
+              ],
+              "graph": "SearchBox → StatusDropdown → Query1 → StatsCard, ExportButton"
+            },
+            "script": [
+              "This reactive system is what makes Appsmith feel like Excel.",
+              "When you change a dropdown, everything that depends on it updates automatically.",
+              "The magic? It's all deterministic graph traversal."
+            ]
+          },
+          {
+            "id": "2.3",
+            "type": "comparison",
+            "title": "ToolJet Multi-Service Architecture",
+            "architecture": {
+              "services": [
+                {
+                  "service": "Frontend",
+                  "tech": "React + Redux",
+                  "port": 3000,
+                  "purpose": "UI rendering"
+                },
+                {
+                  "service": "Backend",
+                  "tech": "Node.js + Express",
+                  "port": 3001,
+                  "purpose": "API gateway, auth"
+                },
+                {
+                  "service": "Plugin Server",
+                  "tech": "Node.js",
+                  "port": 3002,
+                  "purpose": "Data source plugins"
+                },
+                {
+                  "service": "Python Runner",
+                  "tech": "Python + FastAPI",
+                  "port": 3003,
+                  "purpose": "Python script execution"
+                },
+                {
+                  "service": "Database",
+                  "tech": "PostgreSQL",
+                  "purpose": "Primary datastore"
+                },
+                {
+                  "service": "Redis",
+                  "purpose": "Queue, cache, sessions"
+                }
+              ]
+            },
+            "advantages": [
+              "Better scalability (scale Python runner independently)",
+              "Polyglot support out of the box",
+              "Plugin system for custom data sources"
+            ],
+            "complexities": [
+              "More moving parts to monitor",
+              "Inter-service communication overhead",
+              "Complex deployment requirements"
+            ],
+            "script": [
+              "ToolJet chose a microservices approach from day one.",
+              "This gives flexibility but increases operational complexity.",
+              "Each service can be scaled independently based on load."
+            ]
+          },
+          {
+            "id": "2.4",
+            "type": "security",
+            "title": "Credential Management & Encryption",
+            "mechanisms": [
+              {
+                "mechanism": "Encryption at Rest",
+                "implementation": "AES-256-GCM with environment variables",
+                "location": "APPSMITH_ENCRYPTION_PASSWORD, APPSMITH_ENCRYPTION_SALT",
+                "risk": "Losing env vars = losing all credentials"
+              },
+              {
+                "mechanism": "Secure Credential Storage",
+                "implementation": "Credentials never logged, never sent to client",
+                "example": "Database passwords stored encrypted, decrypted only during query execution"
+              },
+              {
+                "mechanism": "Query Whitelisting (Appsmith)",
+                "implementation": "Only pre-configured queries can be executed",
+                "protection": "Prevents SQL injection via UI"
+              },
+              {
+                "mechanism": "Row-Level Security",
+                "implementation": "{{ current_user.id }} in WHERE clause",
+                "example": "WHERE user_id = {{ appsmith.user.id }}"
+              }
+            ],
+            "best_practices": [
+              "Always externalize encryption keys (never use defaults)",
+              "Use read-only database users for queries",
+              "Implement query timeouts (default: 10 seconds)",
+              "Regularly rotate database credentials"
+            ],
+            "script": [
+              "Security is the #1 concern for enterprise adoption.",
+              "These platforms handle credentials more securely than most custom code would.",
+              "The encryption system means even if someone accesses your database, they can't decrypt the credentials without the environment variables."
+            ]
+          },
+          {
+            "id": "2.5",
+            "type": "performance",
+            "title": "Scaling Patterns & Bottlenecks",
+            "bottlenecks": [
+              {
+                "component": "MongoDB (Appsmith embedded)",
+                "limit": "~10k apps, ~100k widgets",
+                "solution": "Externalize MongoDB, add indexes"
+              },
+              {
+                "component": "Python Runner (ToolJet)",
+                "limit": "CPU-intensive scripts block others",
+                "solution": "Horizontal scaling, resource limits"
+              },
+              {
+                "component": "WebSocket Connections",
+                "limit": "~10k concurrent users per instance",
+                "solution": "Multiple instances + load balancer"
+              },
+              {
+                "component": "Database Connections",
+                "limit": "Connection pool exhaustion",
+                "solution": "PGBouncer for PostgreSQL, proxy for MySQL"
+              }
+            ],
+            "scaling_recommendations": [
+              "Start with 4CPU/8GB RAM for up to 50 concurrent users",
+              "Add Redis caching for frequently accessed data",
+              "Use connection pooling for database sources",
+              "Implement query pagination (LIMIT/OFFSET)",
+              "Schedule heavy jobs during off-hours"
+            ],
+            "script": [
+              "Performance issues usually appear at specific thresholds.",
+              "Most internal tools serve 10-100 users concurrently. A single instance handles this easily.",
+              "For 1000+ users, you need proper scaling architecture."
+            ]
+          },
+          {
+            "id": "2.6",
+            "type": "detailed",
+            "title": "Widget Rendering Pipeline",
+            "stages": [
+              {
+                "stage": "1. Widget Definition",
+                "description": "JSON schema defining widget properties",
+                "example": "{type: 'TABLE', tableData: '{{Query1.data}}', columns: [...]}"
+              },
+              {
+                "stage": "2. Property Evaluation",
+                "description": "Evaluate all {{ }} bindings in widget props",
+                "example": "'{{Query1.data}}' → actual array of objects"
+              },
+              {
+                "stage": "3. React Component Creation",
+                "description": "Instantiate React component with evaluated props",
+                "example": "<Table data={evaluatedData} columns={columns} />"
+              },
+              {
+                "stage": "4. Virtual DOM Diff",
+                "description": "React calculates minimal DOM updates",
+                "example": "Only update changed table rows"
+              }
+            ],
+            "optimization_tips": [
+              "Avoid complex calculations in bindings (move to JS objects)",
+              "Use pagination for large datasets",
+              "Memoize expensive computations with getters",
+              "Disable auto-refresh for infrequently changing data"
+            ],
+            "script": [
+              "Understanding this pipeline helps debug performance issues.",
+              "If your table is slow, check what's happening at each stage.",
+              "Most performance problems come from stage 2 - property evaluation."
+            ]
+          },
+          {
+            "id": "2.7",
+            "type": "demo",
+            "title": "Debugging the Dependency Graph",
+            "scenario": "Performance issue: UI freezes for 3 seconds after search",
+            "debug_steps": [
+              "Open Developer Tools → Console",
+              "Type `appsmith.dependencyMap` to see the graph",
+              "Check `appsmith.evaluations` for expensive computations",
+              "Use `console.time()` in JS objects to measure",
+              "Enable query logging in database"
+            ],
+            "tools": [
+              "Chrome DevTools Performance tab",
+              "Appsmith's built-in debugger (right panel)",
+              "PostgreSQL's EXPLAIN ANALYZE",
+              "Redis MONITOR command"
+            ],
+            "common_issues": [
+              "N+1 query problem (query inside loop)",
+              "Large dataset transferred over network",
+              "Expensive JavaScript in computed properties",
+              "Missing database indexes"
+            ],
+            "script": [
+              "Let's debug a real performance problem.",
+              "We have a search that's freezing the UI. We'll systematically identify the bottleneck.",
+              "This process works for any performance issue."
+            ]
+          },
+          {
+            "id": "2.8",
+            "type": "comparison",
+            "title": "Database Integration Patterns",
+            "patterns": [
+              {
+                "pattern": "Direct Connection",
+                "implementation": "Connect directly to production database",
+                "pros": [
+                  "Real-time data",
+                  "Simple setup"
+                ],
+                "cons": [
+                  "Production load",
+                  "Security risk"
+                ],
+                "use_when": "Read-only queries, small datasets"
+              },
+              {
+                "pattern": "Read Replica",
+                "implementation": "Connect to async replica",
+                "pros": [
+                  "No production load",
+                  "Better isolation"
+                ],
+                "cons": [
+                  "Eventual consistency",
+                  "Additional cost"
+                ],
+                "use_when": "Analytics, reporting, dashboards"
+              },
+              {
+                "pattern": "API Gateway",
+                "implementation": "Connect to existing REST/GraphQL APIs",
+                "pros": [
+                  "Security controls",
+                  "Business logic reuse"
+                ],
+                "cons": [
+                  "Additional latency",
+                  "API limitations"
+                ],
+                "use_when": "Complex business logic, audit requirements"
+              },
+              {
+                "pattern": "Data Warehouse",
+                "implementation": "Connect to Snowflake/BigQuery",
+                "pros": [
+                  "Analytical queries",
+                  "Historical data"
+                ],
+                "cons": [
+                  "Not real-time",
+                  "Complex SQL"
+                ],
+                "use_when": "Business intelligence, historical analysis"
+              }
+            ],
+            "recommendation": "Start with read replicas for most use cases. Move to API gateway as complexity grows.",
+            "script": [
+              "How you connect to data determines scalability and security.",
+              "Direct connections are tempting but dangerous.",
+              "The pattern depends on your data freshness requirements and security constraints."
+            ]
+          },
+          {
+            "id": "2.9",
+            "type": "quiz",
+            "title": "Module 2: Architecture Quiz",
+            "questions": [
+              {
+                "question": "What database does Appsmith use by default for storing app metadata?",
+                "options": [
+                  "PostgreSQL",
+                  "MongoDB",
+                  "SQLite",
+                  "Redis"
+                ],
+                "answer": "MongoDB",
+                "explanation": "Appsmith uses embedded MongoDB for app structure, though it can be externalized."
+              },
+              {
+                "question": "Which component handles Python execution in ToolJet?",
+                "options": [
+                  "Node.js backend",
+                  "Python Runner service",
+                  "Plugin Server",
+                  "Frontend worker"
+                ],
+                "answer": "Python Runner service",
+                "explanation": "ToolJet has a dedicated Python Runner service (FastAPI) that executes Python scripts."
+              },
+              {
+                "question": "What happens if you lose APPSMITH_ENCRYPTION_PASSWORD?",
+                "options": [
+                  "Nothing, it's optional",
+                  "Can't decrypt datasource credentials",
+                  "App won't start",
+                  "Only affects new deployments"
+                ],
+                "answer": "Can't decrypt datasource credentials",
+                "explanation": "The password encrypts credentials at rest. Losing it means existing credentials are unrecoverable."
+              }
+            ],
+            "script": [
+              "These questions test understanding of critical architectural decisions.",
+              "Knowing these details prevents production disasters."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Appsmith uses a monolithic container with embedded services",
+          "ToolJet uses a microservices architecture for flexibility",
+          "The reactive engine uses Directed Acyclic Graphs for dependency management",
+          "Credential encryption requires careful key management"
+        ]
+      },
+      {
+        "id": "module_3",
+        "title": "Module 3: Self-Hosting & Deployment",
+        "duration": "30 minutes",
+        "slides": [
+          {
+            "id": "3.1",
+            "type": "decision_tree",
+            "title": "Deployment Strategy Decision Tree",
+            "tree": {
+              "root": "How many users?",
+              "branches": [
+                {
+                  "condition": "< 10 users",
+                  "path": "Docker on single server",
+                  "details": "Simplest option, manual backups"
+                },
+                {
+                  "condition": "10-100 users",
+                  "path": "Docker Compose with external DB",
+                  "details": "Better reliability, automated backups"
+                },
+                {
+                  "condition": "100-1000 users",
+                  "path": "Kubernetes with Helm",
+                  "details": "High availability, auto-scaling"
+                },
+                {
+                  "condition": "> 1000 users",
+                  "path": "Multi-region Kubernetes",
+                  "details": "Global deployment, CDN, read replicas"
+                }
+              ]
+            },
+            "infrastructure_costs": {
+              "docker_single": "$20/month (DigitalOcean droplet)",
+              "docker_compose": "$80/month (Managed DB + VM)",
+              "kubernetes": "$300/month (3-node cluster)",
+              "multi_region": "$1000+/month (Multiple clusters)"
+            },
+            "script": [
+              "Choosing the right deployment strategy depends on scale and team expertise.",
+              "Start simple. You can always migrate to more complex setups later."
+            ]
+          },
+          {
+            "id": "3.2",
+            "type": "code",
+            "title": "Production Docker Compose",
+            "description": "Enterprise-ready configuration with external services",
+            "code": "version: \"3.8\"\n\nservices:\n  appsmith:\n    image: appsmith/appsmith-ce:latest\n    container_name: appsmith\n    restart: unless-stopped\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    environment:\n      # REQUIRED: Encryption (generate with: openssl rand -base64 32)\n      - APPSMITH_ENCRYPTION_PASSWORD=${APPSMITH_ENCRYPTION_PASSWORD}\n      - APPSMITH_ENCRYPTION_SALT=${APPSMITH_ENCRYPTION_SALT}\n      \n      # Database externalization\n      - APPSMITH_MONGODB_URI=mongodb://appsmith:${MONGO_PASSWORD}@mongodb:27017/appsmith\n      - APPSMITH_REDIS_URL=redis://redis:6379\n      \n      # Email (for invites)\n      - APPSMITH_MAIL_ENABLED=true\n      - APPSMITH_MAIL_HOST=smtp.gmail.com\n      - APPSMITH_MAIL_PORT=587\n      - APPSMITH_MAIL_USERNAME=${SMTP_USER}\n      - APPSMITH_MAIL_PASSWORD=${SMTP_PASS}\n      \n      # Security\n      - APPSMITH_DISABLE_TELEMETRY=true\n      - APPSMITH_SUPERVISOR_HTTP_PORT=80\n      \n      # Performance\n      - APPSMITH_MAX_PAYLOAD_SIZE=10MB\n      - JAVA_OPTS=-Xmx2g -Xms512m\n      \n    volumes:\n      - ./stacks:/appsmith-stacks\n      - ./logs:/appsmith-stacks/logs\n      - ./certs:/appsmith-stacks/ssl\n    depends_on:\n      mongodb:\n        condition: service_healthy\n      redis:\n        condition: service_healthy\n    healthcheck:\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost/api/v1/health\"]\n      interval: 30s\n      timeout: 10s\n      retries: 3\n      start_period: 40s\n\n  mongodb:\n    image: mongo:5.0\n    container_name: appsmith-mongodb\n    restart: unless-stopped\n    command: mongod --wiredTigerCacheSizeGB 1\n    environment:\n      - MONGO_INITDB_ROOT_USERNAME=appsmith\n      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}\n    volumes:\n      - mongodb_data:/data/db\n      - ./mongo-backup:/backup\n    healthcheck:\n      test: echo 'db.runCommand(\"ping\").ok' | mongosh localhost:27017/test --quiet\n      interval: 10s\n      timeout: 10s\n      retries: 5\n\n  redis:\n    image: redis:7-alpine\n    container_name: appsmith-redis\n    restart: unless-stopped\n    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru\n    volumes:\n      - redis_data:/data\n    healthcheck:\n      test: [\"CMD\", \"redis-cli\", \"ping\"]\n      interval: 10s\n      timeout: 5s\n      retries: 3\n\nvolumes:\n  mongodb_data:\n  redis_data:\n\nnetworks:\n  default:\n    name: appsmith-network",
+            "setup_commands": [
+              "mkdir -p stacks logs certs mongo-backup",
+              "openssl rand -base64 32 > .encryption_password",
+              "openssl rand -base64 32 > .encryption_salt",
+              "openssl rand -base64 32 > .mongo_password"
+            ],
+            "script": [
+              "This is a production-grade Docker Compose file.",
+              "Key features: External MongoDB and Redis, health checks, resource limits, and proper volume management.",
+              "Always use environment variables for secrets, never hardcode."
+            ]
+          },
+          {
+            "id": "3.3",
+            "type": "code",
+            "title": "Kubernetes Helm Configuration",
+            "description": "Highly available deployment with ingress and monitoring",
+            "code": "# values-production.yaml\nreplicaCount: 3\n\nimage:\n  repository: appsmith/appsmith-ce\n  tag: latest\n  pullPolicy: IfNotPresent\n\nappsmith:\n  encryptionPassword:\n    existingSecret: appsmith-secrets\n    key: encryption-password\n  encryptionSalt:\n    existingSecret: appsmith-secrets\n    key: encryption-salt\n  \n  mongodb:\n    enabled: false  # Use external MongoDB\n    external:\n      uri: \"mongodb://appsmith:${MONGO_PASSWORD}@mongodb-prod.cluster.us-east-1.docdb.amazonaws.com:27017/appsmith?tls=true&replicaSet=rs0\"\n  \n  redis:\n    enabled: false  # Use external Redis\n    external:\n      host: \"redis-prod.abcdef.ng.0001.use1.cache.amazonaws.com\"\n      port: 6379\n      password: \"${REDIS_PASSWORD}\"\n\ningress:\n  enabled: true\n  className: nginx\n  annotations:\n    cert-manager.io/cluster-issuer: \"letsencrypt-prod\"\n    nginx.ingress.kubernetes.io/proxy-body-size: \"10m\"\n    nginx.ingress.kubernetes.io/proxy-read-timeout: \"60\"\n    nginx.ingress.kubernetes.io/proxy-send-timeout: \"60\"\n  hosts:\n    - host: \"tools.company.com\"\n      paths:\n        - path: /\n          pathType: Prefix\n  tls:\n    - secretName: appsmith-tls\n      hosts:\n        - \"tools.company.com\"\n\nresources:\n  requests:\n    memory: \"1Gi\"\n    cpu: \"500m\"\n  limits:\n    memory: \"2Gi\"\n    cpu: \"2\"\n\nautoscaling:\n  enabled: true\n  minReplicas: 3\n  maxReplicas: 10\n  targetCPUUtilizationPercentage: 70\n  targetMemoryUtilizationPercentage: 80\n\nnodeSelector:\n  node-type: internal-tools\n\ntolerations:\n  - key: \"internal-tools\"\n    operator: \"Equal\"\n    value: \"true\"\n    effect: \"NoSchedule\"\n\naffinity:\n  podAntiAffinity:\n    preferredDuringSchedulingIgnoredDuringExecution:\n      - weight: 100\n        podAffinityTerm:\n          labelSelector:\n            matchExpressions:\n              - key: \"app.kubernetes.io/name\"\n                operator: In\n                values:\n                  - appsmith\n          topologyKey: \"kubernetes.io/hostname\"\n\nserviceMonitor:\n  enabled: true\n  namespace: monitoring\n  interval: 30s",
+            "deployment_steps": [
+              "Create namespace: kubectl create ns internal-tools",
+              "Store secrets: kubectl create secret generic appsmith-secrets --from-file=./secrets",
+              "Add Helm repo: helm repo add appsmith https://helm.appsmith.com",
+              "Install: helm install appsmith appsmith/appsmith -f values-production.yaml -n internal-tools",
+              "Wait for ingress: kubectl get ingress -n internal-tools"
+            ],
+            "script": [
+              "This is enterprise-grade Kubernetes deployment.",
+              "Notice the anti-affinity rules: Pods won't schedule on the same node, ensuring high availability.",
+              "The serviceMonitor enables Prometheus integration for monitoring."
+            ]
+          },
+          {
+            "id": "3.4",
+            "type": "checklist",
+            "title": "Pre-Production Checklist",
+            "categories": [
+              {
+                "category": "Security",
+                "items": [
+                  "✅ SSL/TLS configured (Let's Encrypt or internal CA)",
+                  "✅ SSO/OIDC integrated (Okta, Azure AD, Google)",
+                  "✅ Database firewall rules restrict to app IP",
+                  "✅ Encryption keys backed up in password manager",
+                  "✅ Audit logging enabled and exported"
+                ]
+              },
+              {
+                "category": "Infrastructure",
+                "items": [
+                  "✅ Daily automated backups (MongoDB + volumes)",
+                  "✅ Monitoring (CPU, memory, disk, response time)",
+                  "✅ Alerting configured (Slack/PagerDuty)",
+                  "✅ Disaster recovery plan documented",
+                  "✅ Load balancer health checks"
+                ]
+              },
+              {
+                "category": "Application",
+                "items": [
+                  "✅ All datasources use read-only users",
+                  "✅ Query timeouts configured (default 10s)",
+                  "✅ Rate limiting enabled at ingress",
+                  "✅ Custom domain configured (not IP)",
+                  "✅ Git integration configured for version control"
+                ]
+              }
+            ],
+            "script": [
+              "Don't go to production without checking these items.",
+              "Each item here prevents a specific class of production incident."
+            ]
+          },
+          {
+            "id": "3.5",
+            "type": "backup",
+            "title": "Backup & Disaster Recovery",
+            "strategies": [
+              {
+                "strategy": "MongoDB Backup",
+                "frequency": "Daily",
+                "command": "mongodump --uri=\"mongodb://...\" --archive --gzip | aws s3 cp - s3://backups/appsmith/$(date +%Y%m%d).gz",
+                "retention": "30 days"
+              },
+              {
+                "strategy": "Volume Backup",
+                "frequency": "Hourly",
+                "command": "tar czf - /appsmith-stacks | aws s3 cp - s3://backups/appsmith-volumes/$(date +%Y%m%d-%H).tgz",
+                "retention": "7 days"
+              },
+              {
+                "strategy": "Configuration Export",
+                "frequency": "On change",
+                "command": "Use Git integration (automatic)",
+                "retention": "Forever (Git history)"
+              }
+            ],
+            "recovery_scenarios": [
+              {
+                "scenario": "Server crash",
+                "recovery_time": "1 hour",
+                "steps": [
+                  "Launch new VM",
+                  "Restore volumes",
+                  "Restore MongoDB",
+                  "Update DNS"
+                ]
+              },
+              {
+                "scenario": "Data corruption",
+                "recovery_time": "15 minutes",
+                "steps": [
+                  "Stop app",
+                  "Restore MongoDB from backup",
+                  "Verify data",
+                  "Restart app"
+                ]
+              },
+              {
+                "scenario": "Encryption key loss",
+                "recovery_time": "Days (manual)",
+                "steps": [
+                  "Recreate all datasource credentials",
+                  "Update environment variables",
+                  "Test all apps"
+                ]
+              }
+            ],
+            "script": [
+              "Backups are useless without tested restore procedures.",
+              "Test your recovery process quarterly. The first real disaster isn't the time to learn."
+            ]
+          },
+          {
+            "id": "3.6",
+            "type": "monitoring",
+            "title": "Monitoring & Observability",
+            "metrics": [
+              {
+                "metric": "appsmith_applications_total",
+                "description": "Number of applications",
+                "alert_threshold": "> 500 (consider splitting instances)"
+              },
+              {
+                "metric": "appsmith_queries_per_minute",
+                "description": "Query execution rate",
+                "alert_threshold": "> 1000 (check for inefficient queries)"
+              },
+              {
+                "metric": "appsmith_response_time_95p",
+                "description": "95th percentile response time",
+                "alert_threshold": "> 2000ms"
+              },
+              {
+                "metric": "mongodb_connections",
+                "description": "Active database connections",
+                "alert_threshold": "> 80% of max connections"
+              }
+            ],
+            "dashboard_example": {
+              "panels": [
+                "CPU/Memory usage per pod",
+                "Query latency histogram",
+                "Error rate by endpoint",
+                "Active WebSocket connections",
+                "Database connection pool usage"
+              ],
+              "tools": [
+                "Grafana",
+                "Prometheus",
+                "Loki for logs",
+                "Jaeger for tracing"
+              ]
+            },
+            "script": [
+              "You can't improve what you don't measure.",
+              "These metrics give early warning of capacity issues."
+            ]
+          },
+          {
+            "id": "3.7",
+            "type": "demo",
+            "title": "Hands-On: Deploy to AWS ECS",
+            "tasks": [
+              "Create ECR repository and push Appsmith image",
+              "Configure ECS task definition with secrets",
+              "Set up Application Load Balancer with SSL",
+              "Configure RDS for MongoDB (DocumentDB)",
+              "Set up ElastiCache for Redis",
+              "Configure CloudWatch alarms"
+            ],
+            "time_estimate": "45 minutes",
+            "cost_estimate": "$200/month (including RDS, ElastiCache, ALB)",
+            "terraform_example": {
+              "file": "main.tf",
+              "snippet": "resource \"aws_ecs_service\" \"appsmith\" {\n  name            = \"appsmith\"\n  cluster         = aws_ecs_cluster.main.id\n  task_definition = aws_ecs_task_definition.appsmith.arn\n  desired_count   = 2\n\n  load_balancer {\n    target_group_arn = aws_lb_target_group.appsmith.arn\n    container_name   = \"appsmith\"\n    container_port   = 80\n  }\n}"
+            },
+            "script": [
+              "Let's deploy to a real cloud environment.",
+              "We'll use Infrastructure as Code (Terraform) to ensure reproducibility.",
+              "This is how enterprise teams deploy."
+            ]
+          },
+          {
+            "id": "3.8",
+            "type": "migration",
+            "title": "Migration from Development to Production",
+            "scenarios": [
+              {
+                "scenario": "Single instance → Kubernetes",
+                "steps": [
+                  "Export all applications via Git",
+                  "Set up production Kubernetes cluster",
+                  "Import applications to new instance",
+                  "Test all data connections",
+                  "Cutover DNS gradually (blue-green)"
+                ]
+              },
+              {
+                "scenario": "Appsmith Cloud → Self-hosted",
+                "steps": [
+                  "Request export from Appsmith support",
+                  "Set up matching version self-hosted",
+                  "Import export file",
+                  "Reconfigure datasource credentials",
+                  "Update SSO configuration"
+                ]
+              },
+              {
+                "scenario": "ToolJet → Appsmith (or vice versa)",
+                "steps": [
+                  "Map widgets/components between platforms",
+                  "Rewrite queries/scripts as needed",
+                  "Recreate UI layouts",
+                  "Test functionality parity",
+                  "Run both in parallel during transition"
+                ]
+              }
+            ],
+            "testing_checklist": [
+              "All datasources connect successfully",
+              "SSO login works for all user groups",
+              "Critical queries execute within timeout",
+              "Export/import functionality works",
+              "Mobile responsive layouts preserved"
+            ],
+            "script": [
+              "Migration is inevitable as you scale.",
+              "Plan migrations carefully with rollback procedures.",
+              "Always test with a subset of users first."
+            ]
+          },
+          {
+            "id": "3.9",
+            "type": "quiz",
+            "title": "Module 3: Deployment Quiz",
+            "questions": [
+              {
+                "question": "What's the primary risk of using embedded MongoDB in production?",
+                "options": [
+                  "Slower queries",
+                  "Data loss on container restart",
+                  "No backup capability",
+                  "Limited scalability"
+                ],
+                "answer": "Data loss on container restart",
+                "explanation": "Embedded MongoDB data is stored in container volumes. If the container is recreated, data can be lost unless volumes are properly managed."
+              },
+              {
+                "question": "Which tool is recommended for managing Kubernetes deployments of Appsmith?",
+                "options": [
+                  "Docker Compose",
+                  "Helm",
+                  "Ansible",
+                  "Puppet"
+                ],
+                "answer": "Helm",
+                "explanation": "Appsmith provides an official Helm chart that simplifies Kubernetes deployment with production-ready defaults."
+              },
+              {
+                "question": "What's the recommended backup frequency for MongoDB in production?",
+                "options": [
+                  "Weekly",
+                  "Monthly",
+                  "Daily",
+                  "Hourly"
+                ],
+                "answer": "Daily",
+                "explanation": "Daily backups provide a good balance between recovery point objective and storage costs for most internal tools."
+              }
+            ],
+            "script": [
+              "Deployment knowledge prevents downtime and data loss.",
+              "These questions cover critical production considerations."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Start with Docker Compose, evolve to Kubernetes as needed",
+          "Always externalize MongoDB and Redis for production",
+          "Implement comprehensive backup and monitoring from day one",
+          "Use Infrastructure as Code for reproducible deployments"
+        ]
+      }
+    ]
+  }
+}

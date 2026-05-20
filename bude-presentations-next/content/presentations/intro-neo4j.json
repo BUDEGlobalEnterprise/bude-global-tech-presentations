@@ -1,0 +1,670 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Neo4j & Graph Data Modeling ()",
+            "subtitle": "Mastering Connected Data, Cypher, and Graph Algorithms <br> The Power of the Labeled Property Graph"
+          }
+        ]
+      },
+      {
+        "id": "graph-foundations",
+        "title": "1. Graph Foundations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "1. Why Graphs?",
+            "subtitle": "The world is connected, not just tabular."
+          },
+          {
+            "type": "content",
+            "title": "Relation-First Design",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🕸️",
+                  "text": "<strong>Native Graph Processing:</strong> No JOINs; use pointers to traverse neighbors."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Index-Free Adjacency:</strong> Constant time traversal regardless of total data size."
+                }
+              ],
+              "title": "Unlike Relational DBs, relationships are first-class citizens in Neo4j."
+            }
+          }
+        ]
+      },
+      {
+        "id": "labeled-property-graph",
+        "title": "2. The Labeled Property Graph (LPG)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "2. The LPG Model",
+            "subtitle": "Nodes, Relationships, and Properties."
+          },
+          {
+            "type": "content",
+            "title": "Core Components",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔵",
+                  "text": "<strong>Nodes:</strong> Represent entities (e.g., User, Product)."
+                },
+                {
+                  "emoji": "➡️",
+                  "text": "<strong>Relationships:</strong> Connect nodes with direction and type (e.g., LIKES, BOUGHT)."
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Labels:</strong> Categorize nodes."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Properties:</strong> Key-value pairs on both nodes and relationships."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cypher-query-language",
+        "title": "3. Cypher Query Language",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "3. Cypher",
+            "subtitle": "ASCII art for patterns."
+          },
+          {
+            "type": "content",
+            "title": "Pattern Matching",
+            "box": {
+              "code": "MATCH (u:User)-[:FOLLOWS]->(m:User)\nWHERE u.name = 'Alice'\nRETURN m.name",
+              "title": "A declarative approach to graph querying."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The MERGE Clause",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Safety:</strong> Ensures unique nodes and relationships without duplicates."
+                }
+              ],
+              "title": "The 'Get or Create' pattern."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Variable Length Paths",
+            "box": {
+              "code": "MATCH (u:User)-[:FOLLOWS*1..3]->(f:User)\nRETURN f",
+              "title": "Querying connections of arbitrary depth."
+            }
+          }
+        ]
+      },
+      {
+        "id": "traversal-internals",
+        "title": "4. Traversal Internals",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "4. How Traversal Works",
+            "subtitle": "Pointers and adjacency."
+          },
+          {
+            "type": "content",
+            "title": "Index-Free Adjacency",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Speed:</strong> O(1) jump to the next node; no lookups required."
+                }
+              ],
+              "title": "Storing pointers to neighbors directly on the node record."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Query Execution Plan",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗺️",
+                  "text": "<strong>Planner:</strong> Determines the best starting point (Entry Node) using indexes."
+                },
+                {
+                  "emoji": "🕹️",
+                  "text": "<strong>Expander:</strong> Iterates over relationship pointers."
+                }
+              ],
+              "title": "Interpreting Cypher into traversals."
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-modeling-patterns",
+        "title": "5. Graph Data Modeling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "5. Modeling Patterns",
+            "subtitle": "Nodes vs. Relationships."
+          },
+          {
+            "type": "content",
+            "title": "Entity vs Relationship",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔵",
+                  "text": "<strong>Node:</strong> For things that exist independently."
+                },
+                {
+                  "emoji": "➡️",
+                  "text": "<strong>Relationship:</strong> For the context of the connection (e.g., timestamp, weight)."
+                }
+              ],
+              "title": "When to use a node vs a relationship property."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Anti-Patterns",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Dense Nodes:</strong> Nodes with millions of relationships (Hotspots)."
+                }
+              ],
+              "title": "Common pitfalls in graph design."
+            }
+          }
+        ]
+      },
+      {
+        "id": "graph-algorithms-gds",
+        "title": "6. Graph Data Science (GDS)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "6. Graph Algorithms",
+            "subtitle": "The science of connectivity."
+          },
+          {
+            "type": "content",
+            "title": "Centrality: Who is Important?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👑",
+                  "text": "<strong>PageRank:</strong> Google's original influence algorithm."
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Betweenness:</strong> Finding bottlenecks and bridge nodes."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Closeness:</strong> Identifying the best-placed brokers."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Community: Who Belongs Together?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Louvain:</strong> Detecting clusters and modularity."
+                },
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>Label Propagation:</strong> Fast community detection based on neighbor labels."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Similarity: Who is Like You?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👯",
+                  "text": "<strong>Jaccard Similarity:</strong> Intersection over union of neighbors."
+                },
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Cosine Similarity:</strong> Comparing vector representations of nodes."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Pathfinding: How Do I Get There?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗺️",
+                  "text": "<strong>A*:</strong> Heuristic path search."
+                },
+                {
+                  "emoji": "🕵️",
+                  "text": "<strong>BFS / DFS:</strong> Foundational search strategies."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "apoc-utility",
+        "title": "7. APOC & Utility Procedures",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "7. Awesome Procedures",
+            "subtitle": "Awesome Procedures on Cypher (APOC)."
+          },
+          {
+            "type": "content",
+            "title": "Data Integration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud:</strong> Load JSON/CSV directly from S3 or GCS."
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>JDBC:</strong> Connect Neo4j to SQL databases for ETL."
+                }
+              ],
+              "title": "Loading data from anywhere."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Periodic Commit",
+            "box": {
+              "code": "CALL apoc.periodic.iterate(...)",
+              "title": "Handling mass updates without memory overflow."
+            }
+          }
+        ]
+      },
+      {
+        "id": "scaling-causal-cluster",
+        "title": "8. Causal Clustering",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "8. High Availability",
+            "subtitle": "Industrial-scale graph deployments."
+          },
+          {
+            "type": "content",
+            "title": "Architecture Overview",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Core Nodes:</strong> Raft-based consensus group for writes."
+                },
+                {
+                  "emoji": "📖",
+                  "text": "<strong>Read Replicas:</strong> Scale-out search capabilities."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Transaction Routing",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Routing Driver:</strong> Multi-homed connections with server-side load balancing."
+                }
+              ],
+              "title": "How the driver sends queries to the right node."
+            }
+          }
+        ]
+      },
+      {
+        "id": "neo4j-fabric",
+        "title": "9. Sharding & Fabric",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "9. Graph Fabric",
+            "subtitle": "Horizontal sharding of the graph."
+          },
+          {
+            "type": "content",
+            "title": "Distributed Queries",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>Federation:</strong> Joining data from different graph shards in a single Cypher call."
+                }
+              ],
+              "title": "Querying across multiple separate databases."
+            }
+          }
+        ]
+      },
+      {
+        "id": "performance-tuning",
+        "title": "10. Performance Tuning",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "10. Squeezing the Graph",
+            "subtitle": "Optimization for milliseconds."
+          },
+          {
+            "type": "content",
+            "title": "Index Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔎",
+                  "text": "<strong>Range Indexes:</strong> Fast lookup for start nodes."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Composite Indexes:</strong> Multiple property lookups."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Query Tuning (EXPLAIN/PROFILE)",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🕵️",
+                  "text": "<strong>Hit Ratio:</strong> Monitoring index effectiveness vs. storage scans."
+                }
+              ],
+              "title": "Analyzing execution plans."
+            }
+          }
+        ]
+      },
+      {
+        "id": "knowledge-graphs",
+        "title": "11. Knowledge Graphs & Semantics",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "11. Knowledge Graphs",
+            "subtitle": "The peak of data connectivity."
+          },
+          {
+            "type": "content",
+            "title": "What is a Knowledge Graph?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Semantic Context:</strong> Defining the 'why' behind the connections."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Ontologies:</strong> Standardized schemas for shared understanding (e.g., Schema.org)."
+                }
+              ],
+              "title": "A network of interconnected entities and their meanings."
+            }
+          },
+          {
+            "type": "content",
+            "title": "RDF vs. Property Graphs",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🪵",
+                  "text": "<strong>RDF:</strong> Triples (Subject-Predicate-Object). High formal structure."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>LPG (Neo4j):</strong> Nodes and relationships with properties. High developer agility."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "graph-embeddings",
+        "title": "12. Graph Machine Learning (GraphML)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "12. Graph Embeddings",
+            "subtitle": "Turning graphs into vectors."
+          },
+          {
+            "type": "content",
+            "title": "Node2Vec",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Vectorization:</strong> Preserving structural similarity for downstream ML models."
+                }
+              ],
+              "title": "Representing nodes in a continuous vector space."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Link Prediction",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔮",
+                  "text": "<strong>Recommendations:</strong> 'People you may know' logic."
+                }
+              ],
+              "title": "Predicting future connections."
+            }
+          }
+        ]
+      },
+      {
+        "id": "scaling-ops",
+        "title": "13. Enterprise Operations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "13. Graph at Scale",
+            "subtitle": "Maintaining massive graphs."
+          },
+          {
+            "type": "content",
+            "title": "Memory Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Page Cache:</strong> Storing the graph data in memory outside the JVM heap."
+                },
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>JVM Heap:</strong> Used for query execution and transaction state."
+                }
+              ],
+              "title": "The Neo4j Page Cache."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Backup & Restoration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Online Backups:</strong> Zero-downtime consistency snapshots."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud-native",
+        "title": "14. Neo4j Aura & Cloud",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "14. Cloud Native",
+            "subtitle": "Managed graph databases."
+          },
+          {
+            "type": "content",
+            "title": "Neo4j Aura",
+            "box": {
+              "list": [
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Auto-scaling:</strong> Dynamic cluster sizing based on workload."
+                }
+              ],
+              "title": "The fully managed DBaaS."
+            }
+          }
+        ]
+      },
+      {
+        "id": "visualization-bloom",
+        "title": "15. Graph Visualization & Exploration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "15. Neo4j Bloom",
+            "subtitle": "Visual exploration for non-technical users."
+          },
+          {
+            "type": "content",
+            "title": "Natural Language Search",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Semantic Search:</strong> 'Show me all users who bought product X' maps to graph patterns."
+                }
+              ],
+              "title": "Exploring the graph without Cypher."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Visual Styling",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Rule-based Styling:</strong> Color nodes and relationships based on properties."
+                }
+              ],
+              "title": "Customizing the graph view."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Graph Layouts",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Force-Directed:</strong> Organizing nodes based on physical forces."
+                },
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Hierarchical:</strong> Displaying tree-like structures."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Perspective Management",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👁️",
+                  "text": "<strong>Perspectives:</strong> Limiting node labels and types for different business roles."
+                }
+              ],
+              "title": "Filtering what users can see."
+            }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Graph Mastery",
+            "subtitle": "Building the Connective Tissue of Enterprise Data."
+          },
+          {
+            "type": "content",
+            "title": "Summary",
+            "box": {
+              "list": [
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Insights:</strong> Uncovering hidden patterns."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Agility:</strong> Schema-optional graph flexibility."
+                },
+                {
+                  "emoji": "✅",
+                  "text": "<strong>Scale:</strong> From small networks to global social graphs."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Q&A",
+            "box": {
+              "title": "Thank you! Any questions?"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

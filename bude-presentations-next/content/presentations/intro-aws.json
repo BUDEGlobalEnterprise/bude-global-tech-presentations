@@ -1,0 +1,932 @@
+{
+  "presentation": {
+    "info": {
+      "title": "AWS Cloud Mastery: The Wikipedia Edition",
+      "subtitle": "The Complete Architecture & Operations Encyclopedia",
+      "author": "Aravind Govindhasamy",
+      "version": "4.0.0",
+      "description": "Comprehensive AWS guide covering fundamentals to advanced topics across 22 modules with 150+ detailed slides",
+      "duration": "8 hours",
+      "audience": "Cloud Architects, DevOps Engineers, Solutions Architects, Senior Developers",
+      "prerequisites": ["Basic networking knowledge", "Linux/Windows fundamentals", "Programming experience"],
+      "generated_at": "2025-12-31",
+      "total_slides": 156,
+      "modules": 22
+    },
+    "modules": [
+      {
+        "id": "module_1",
+        "title": "Module 1: AWS Fundamentals & Cloud Philosophy",
+        "duration": "30 minutes",
+        "slides": [
+          {
+            "id": "1.1",
+            "type": "keynote",
+            "title": "The Cloud Computing Revolution: AWS's Dominance",
+            "subtitle": "How AWS Became the $80B Operating System of the Internet",
+            "timeline": [
+              {"year": "2006", "event": "S3 & EC2 Launch - Birth of Modern Cloud", "impact": "Pay-as-you-go compute"},
+              {"year": "2009", "event": "RDS Launch - Managed Databases", "impact": "Death of self-managed DB servers"},
+              {"year": "2014", "event": "Lambda Launch - Serverless Computing", "impact": "No server management paradigm"},
+              {"year": "2018", "event": "Outposts Launch - Hybrid Cloud", "impact": "Cloud on-premises"},
+              {"year": "2022", "event": "Graviton3 Launch - ARM in Cloud", "impact": "40% better price-performance"}
+            ],
+            "market_share": {
+              "aws": "34%",
+              "azure": "21%",
+              "gcp": "11%",
+              "others": "34%"
+            },
+            "script": [
+              "Welcome to the most comprehensive AWS course you'll ever take.",
+              "Today isn't about passing certification exams. It's about understanding the underlying philosophy that made AWS a $80 billion business.",
+              "The cloud isn't about renting virtual machines. It's about renting COMPUTATION as a utility.",
+              "Think about electricity: You don't build power plants for your house. You plug in and pay per kilowatt-hour.",
+              "That's AWS. Computation as a utility."
+            ]
+          },
+          {
+            "id": "1.2",
+            "type": "architecture",
+            "title": "AWS Global Infrastructure: The Physical Reality",
+            "infrastructure": {
+              "regions": {
+                "count": 32,
+                "expansion": "Announcing 3-5 new regions annually",
+                "criteria": ["Geologically stable", "Power grid redundancy", "Multiple fiber paths", "Local regulations"]
+              },
+              "availability_zones": {
+                "count": 102,
+                "definition": "One or more discrete data centers with redundant power, networking, and connectivity",
+                "distance": "Typically 1-100km apart within region"
+              },
+              "edge_locations": {
+                "count": 400,
+                "purpose": "Content delivery and DNS resolution",
+                "services": ["CloudFront", "Route53", "Lambda@Edge", "Shield"]
+              }
+            },
+            "geographic_strategy": {
+              "americas": ["US-East-1 (Virginia)", "US-West-2 (Oregon)", "Canada-Central", "São Paulo"],
+              "europe": ["Ireland", "Frankfurt", "London", "Paris", "Stockholm"],
+              "asia_pacific": ["Tokyo", "Singapore", "Sydney", "Mumbai", "Seoul"],
+              "middle_east": ["Bahrain", "UAE"],
+              "africa": ["Cape Town"]
+            },
+            "script": [
+              "Let's talk physics. Where are AWS data centers actually located?",
+              "AWS doesn't publish exact addresses for security reasons, but we know the general regions.",
+              "US-East-1 in Northern Virginia has more data centers than some countries have power plants.",
+              "Each region has at least 3 Availability Zones. Why 3? Because with 3, you can lose one and still have quorum for distributed systems.",
+              "The distance between AZs is carefully calibrated: Far enough to avoid common disasters, close enough for synchronous replication."
+            ]
+          },
+          {
+            "id": "1.3",
+            "type": "comparison",
+            "title": "Cloud Models: IaaS vs PaaS vs SaaS vs Serverless",
+            "models": [
+              {
+                "model": "IaaS (Infrastructure as a Service)",
+                "examples": ["EC2", "EBS", "VPC"],
+                "responsibility": "AWS: Physical security, networking, virtualization. You: OS, runtime, data, apps",
+                "use_case": "Legacy migration, full control requirements"
+              },
+              {
+                "model": "PaaS (Platform as a Service)",
+                "examples": ["RDS", "Elastic Beanstalk", "EKS"],
+                "responsibility": "AWS: OS, runtime, platform. You: Data, application code",
+                "use_case": "Developer productivity, managed services"
+              },
+              {
+                "model": "SaaS (Software as a Service)",
+                "examples": ["WorkMail", "Chime", "QuickSight"],
+                "responsibility": "AWS: Everything. You: Configuration",
+                "use_case": "Business applications, collaboration tools"
+              },
+              {
+                "model": "Serverless/FaaS (Function as a Service)",
+                "examples": ["Lambda", "Step Functions", "Fargate"],
+                "responsibility": "AWS: Everything except code. You: Business logic",
+                "use_case": "Event-driven architectures, microservices"
+              }
+            ],
+            "evolution": "From IaaS (2006) → PaaS (2009) → Serverless (2014) → Specialized Services (Present)",
+            "script": [
+              "The cloud journey typically follows this path:",
+              "Phase 1: Lift and Shift (IaaS) - Just move your VMs to EC2.",
+              "Phase 2: Managed Services (PaaS) - Use RDS instead of EC2 with MySQL.",
+              "Phase 3: Serverless (FaaS) - Break monoliths into Lambda functions.",
+              "Phase 4: Specialized Services - Use Rekognition for ML, Aurora for DB."
+            ]
+          },
+          {
+            "id": "1.4",
+            "type": "economics",
+            "title": "Cloud Economics: TCO & Pricing Models",
+            "pricing_models": [
+              {
+                "model": "On-Demand",
+                "description": "Pay by the second for compute, no commitment",
+                "price_premium": "100% (baseline)",
+                "best_for": "Spiky workloads, development, testing"
+              },
+              {
+                "model": "Reserved Instances (1-3 years)",
+                "description": "Commit to usage, significant discount",
+                "price_premium": "40-70% off on-demand",
+                "best_for": "Steady-state production, databases"
+              },
+              {
+                "model": "Savings Plans (1-3 years)",
+                "description": "Commit to $/hour, applies across instance families",
+                "price_premium": "Up to 72% off on-demand",
+                "best_for": "Flexible usage, modern workloads"
+              },
+              {
+                "model": "Spot Instances",
+                "description": "Use spare capacity, can be interrupted",
+                "price_premium": "Up to 90% off on-demand",
+                "best_for": "Batch processing, CI/CD, stateless workloads"
+              }
+            ],
+            "tco_calculation": {
+              "traditional": {
+                "capex": "$100,000 (servers)",
+                "opex": "$50,000/year (power, cooling, admins)",
+                "utilization": "15-25% average"
+              },
+              "cloud": {
+                "capex": "$0",
+                "opex": "$30,000/year (cloud bills)",
+                "utilization": "Auto-scales, pay for what you use"
+              },
+              "savings": "40% lower TCO over 3 years"
+            },
+            "script": [
+              "The biggest cloud cost isn't the compute. It's the waste.",
+              "AWS makes it easy to provision resources. Too easy.",
+              "The average enterprise wastes 35% of cloud spend on:",
+              "1. Idle resources (dev instances running 24/7)",
+              "2. Over-provisioned instances (using m5.4xlarge when m5.large would work)",
+              "3. Unused storage (old S3 objects never deleted)",
+              "4. Inefficient architectures (using EC2 when Lambda would be cheaper)"
+            ]
+          },
+          {
+            "id": "1.5",
+            "type": "quiz",
+            "title": "Fundamentals Knowledge Check",
+            "questions": [
+              {
+                "question": "What's the minimum number of Availability Zones in a modern AWS Region?",
+                "options": ["1", "2", "3", "4"],
+                "answer": "3",
+                "explanation": "All regions launched after 2018 have at least 3 AZs for high availability."
+              },
+              {
+                "question": "Which AWS service pioneered the serverless compute model?",
+                "options": ["EC2", "Lambda", "Fargate", "Elastic Beanstalk"],
+                "answer": "Lambda",
+                "explanation": "Lambda launched in 2014, introducing Functions-as-a-Service."
+              },
+              {
+                "question": "What percentage discount can Spot Instances provide vs On-Demand?",
+                "options": ["10-30%", "30-60%", "60-90%", "90-99%"],
+                "answer": "Up to 90%",
+                "explanation": "Spot instances use spare capacity and can provide up to 90% savings."
+              }
+            ],
+            "script": [
+              "Let's test your cloud fundamentals.",
+              "These questions aren't trivia—they're foundational concepts that inform architectural decisions."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "AWS operates 32 regions with 102 AZs globally",
+          "Cloud evolution moves from IaaS → PaaS → Serverless → Specialized Services",
+          "Proper financial management can save 40%+ on cloud costs",
+          "The physical infrastructure enables high availability through geographic distribution"
+        ]
+      },
+      {
+        "id": "module_2",
+        "title": "Module 2: Identity & Access Management (IAM) Deep Dive",
+        "duration": "45 minutes",
+        "slides": [
+          {
+            "id": "2.1",
+            "type": "security",
+            "title": "IAM Fundamentals: Users, Groups, Roles, Policies",
+            "hierarchy": {
+              "root_user": {
+                "characteristics": ["Created with account", "Unlimited permissions", "Can close account", "Should be locked away"],
+                "best_practices": ["Enable MFA", "Use only for account-level tasks", "Store credentials securely"]
+              },
+              "iam_users": {
+                "characteristics": ["Human identities", "Long-term credentials", "Password + Access Keys", "Permission inheritance"],
+                "modern_approach": "Use IAM Identity Center (SSO) instead"
+              },
+              "iam_roles": {
+                "characteristics": ["Temporary credentials", "Assumed by services/users", "No password/keys", "Session duration (1-12 hours)"],
+                "use_cases": ["EC2 instance roles", "Lambda execution roles", "Cross-account access"]
+              },
+              "iam_groups": {
+                "characteristics": ["Collection of users", "Permission management", "No credentials", "Users can be in multiple groups"],
+                "best_practice": "Assign permissions to groups, not individual users"
+              }
+            },
+            "script": [
+              "IAM is the foundation of AWS security.",
+              "If you get IAM wrong, nothing else matters—your security is compromised.",
+              "The golden rule: Never use the root user for daily operations. Lock it away with MFA.",
+              "Modern best practice: Don't even create IAM users. Use IAM Identity Center to federate your corporate directory."
+            ]
+          },
+          {
+            "id": "2.2",
+            "type": "code",
+            "title": "IAM Policy Language: Mastering JSON Authorization",
+            "policy_anatomy": {
+              "version": "Always use '2012-10-17' for policy variables support",
+              "statement": {
+                "sid": "Optional identifier",
+                "effect": "Allow or Deny (explicit deny overrides allow)",
+                "principal": "Who the policy applies to (users, roles, services)",
+                "action": "API operations (s3:GetObject, ec2:RunInstances)",
+                "resource": "ARNs of affected resources",
+                "condition": "Optional constraints (IP range, time, MFA)"
+              }
+            },
+            "advanced_examples": [
+              {
+                "name": "Time-based access",
+                "code": `"Condition": {
+  "DateGreaterThan": {"aws:CurrentTime": "2024-01-01T00:00:00Z"},
+  "DateLessThan": {"aws:CurrentTime": "2024-12-31T23:59:59Z"},
+  "IpAddress": {"aws:SourceIp": ["203.0.113.0/24", "198.51.100.0/24"]}
+}`,
+                "use_case": "Contractor access during project timeline"
+              },
+              {
+                "name": "Resource-level permissions",
+                "code": `"Resource": [
+  "arn:aws:s3:::confidential-data",
+  "arn:aws:s3:::confidential-data/*",
+  "arn:aws:s3:::shared-data/common/*"
+]`,
+                "use_case": "Granular S3 bucket access"
+              },
+              {
+                "name": "Tag-based authorization",
+                "code": `"Condition": {
+  "StringEquals": {"aws:ResourceTag/Department": "Engineering"},
+  "StringEquals": {"aws:PrincipalTag/Department": "Engineering"}
+}`,
+                "use_case": "Department-based resource access"
+              }
+            ],
+            "script": [
+              "IAM policies are the DNA of AWS security.",
+              "They're written in JSON but think of them as executable security contracts.",
+              "The most powerful feature? Conditions.",
+              "You can restrict access based on: time of day, source IP, whether MFA was used, resource tags, and even encryption status."
+            ]
+          },
+          {
+            "id": "2.3",
+            "type": "best_practices",
+            "title": "IAM Security Best Practices",
+            "practices": [
+              {
+                "category": "Principle of Least Privilege",
+                "practices": [
+                  "Start with no permissions, add as needed",
+                  "Use AWS managed policies as templates, not final",
+                  "Regularly review and remove unused permissions",
+                  "Implement permission boundaries for sensitive roles"
+                ],
+                "tools": ["IAM Access Analyzer", "IAM Credentials Report", "AWS Config"]
+              },
+              {
+                "category": "Credential Management",
+                "practices": [
+                  "Never commit access keys to code repositories",
+                  "Rotate access keys every 90 days",
+                  "Use instance roles instead of access keys on EC2",
+                  "Enable MFA for all human users"
+                ],
+                "tools": ["Secrets Manager", "Parameter Store", "git-secrets"]
+              },
+              {
+                "category": "Monitoring & Auditing",
+                "practices": [
+                  "Enable CloudTrail for all regions",
+                  "Set up alerts for suspicious activity",
+                  "Regularly review IAM Access Analyzer findings",
+                  "Use Service Control Policies in Organizations"
+                ],
+                "tools": ["CloudTrail", "GuardDuty", "Security Hub"]
+              }
+            ],
+            "common_mistakes": [
+              "Using wildcards (*) in Resource field unnecessarily",
+              "Granting s3:* permission instead of specific actions",
+              "Not implementing MFA for privileged users",
+              "Using long-term credentials for service accounts"
+            ],
+            "script": [
+              "Security isn't a feature you add. It's a process you follow.",
+              "These practices seem tedious, but they prevent breaches.",
+              "The 2022 Capital One breach? A misconfigured WAF and excessive IAM permissions.",
+              "Don't be the next case study."
+            ]
+          },
+          {
+            "id": "2.4",
+            "type": "advanced",
+            "title": "Advanced IAM: Permission Boundaries, SCPs, and Federation",
+            "concepts": [
+              {
+                "concept": "Permission Boundaries",
+                "description": "Maximum permissions a user/role can have, regardless of attached policies",
+                "use_case": "Prevent privilege escalation, delegate user creation",
+                "example": "Helpdesk can create IAM users but only with specific permissions"
+              },
+              {
+                "concept": "Service Control Policies (SCPs)",
+                "description": "Organization-wide guardrails that apply to all accounts",
+                "use_case": "Prevent certain regions, enforce tagging, block root user",
+                "example": "Deny creation of resources without CostCenter tag"
+              },
+              {
+                "concept": "IAM Federation",
+                "description": "Use external identity providers (Active Directory, Okta, Google)",
+                "use_case": "Single sign-on, leverage existing directory",
+                "example": "SAML 2.0 integration with corporate AD"
+              },
+              {
+                "concept": "Cross-Account Roles",
+                "description": "Assume roles in other AWS accounts",
+                "use_case": "Centralized security, shared services",
+                "example": "Security team role that can be assumed from all child accounts"
+              }
+            ],
+            "implementation": {
+              "scp_example": `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RequireTagging",
+      "Effect": "Deny",
+      "Action": "*",
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true"
+        }
+      }
+    }
+  ]
+}`,
+              "federation_flow": "User → Corporate IDP (Okta) → SAML Assertion → AWS STS → Temporary Credentials"
+            },
+            "script": [
+              "As organizations grow, basic IAM doesn't scale.",
+              "You need organizational controls.",
+              "SCPs are your nuclear option. They can DENY actions even if IAM policies allow.",
+              "Federation eliminates password management headaches.",
+              "Cross-account roles enable sophisticated multi-account strategies."
+            ]
+          },
+          {
+            "id": "2.5",
+            "type": "demo",
+            "title": "Hands-On: Implementing Least Privilege",
+            "scenario": "Create a role for a CI/CD pipeline that can deploy to specific S3 buckets and ECS services",
+            "requirements": [
+              "Read from S3 bucket: artifacts-123456789012",
+              "Write to S3 bucket: deployments-123456789012",
+              "Update ECS service: production-frontend",
+              "Cannot delete resources",
+              "MFA required for role assumption"
+            ],
+            "policy": `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "S3ArtifactRead",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::artifacts-123456789012",
+        "arn:aws:s3:::artifacts-123456789012/*"
+      ]
+    },
+    {
+      "Sid": "S3DeploymentWrite",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl"
+      ],
+      "Resource": "arn:aws:s3:::deployments-123456789012/*"
+    },
+    {
+      "Sid": "ECSUpdate",
+      "Effect": "Allow",
+      "Action": [
+        "ecs:UpdateService",
+        "ecs:DescribeServices"
+      ],
+      "Resource": "arn:aws:ecs:us-east-1:123456789012:service/production-frontend"
+    },
+    {
+      "Sid": "RequireMFA",
+      "Effect": "Deny",
+      "Action": "*",
+      "Resource": "*",
+      "Condition": {
+        "BoolIfExists": {
+          "aws:MultiFactorAuthPresent": "false"
+        }
+      }
+    }
+  ]
+}`,
+            "script": [
+              "Let's build a real-world IAM policy.",
+              "Notice what we're NOT granting: s3:* or ecs:*.",
+              "We're being surgical: only the exact permissions needed.",
+              "The MFA condition is critical—it prevents compromise even if credentials leak."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Never use root user for daily operations",
+          "Implement least privilege through granular policies",
+          "Use conditions for context-aware security",
+          "Leverage SCPs for organization-wide guardrails"
+        ]
+      },
+      {
+        "id": "module_3",
+        "title": "Module 3: VPC & Networking Architecture",
+        "duration": "60 minutes",
+        "slides": [
+          {
+            "id": "3.1",
+            "type": "architecture",
+            "title": "VPC Fundamentals: Your Private Cloud Network",
+            "components": [
+              {
+                "component": "VPC",
+                "description": "Virtual network isolated from other AWS customers",
+                "characteristics": ["Regional resource", "CIDR range 10.0.0.0/16 typical", "Cannot be changed after creation"]
+              },
+              {
+                "component": "Subnets",
+                "description": "Segments of VPC IP range, mapped to Availability Zones",
+                "types": ["Public (route to IGW)", "Private (route to NAT)", "Isolated (no internet)"]
+              },
+              {
+                "component": "Route Tables",
+                "description": "Rules defining where network traffic is directed",
+                "default": "Main route table, custom tables per subnet"
+              },
+              {
+                "component": "Internet Gateway",
+                "description": "Horizontally scaled gateway for VPC internet access",
+                "characteristics": ["One per VPC", "Managed by AWS", "No bandwidth constraints"]
+              }
+            ],
+            "cidr_planning": {
+              "small": "10.0.0.0/24 (256 addresses)",
+              "medium": "10.0.0.0/21 (2048 addresses)",
+              "large": "10.0.0.0/16 (65536 addresses)",
+              "enterprise": "10.0.0.0/8 with multiple VPCs"
+            },
+            "script": [
+              "VPC is AWS's answer to 'How do I create a private network in the cloud?'",
+              "It's not just virtual—it's YOUR virtual network, completely isolated.",
+              "The CIDR range is crucial. Choose wisely: too small and you'll run out of IPs; too large and you waste addresses.",
+              "Standard pattern: /16 VPC with /24 subnets across AZs."
+            ]
+          },
+          {
+            "id": "3.2",
+            "type": "diagram",
+            "title": "Three-Tier Architecture: Classic Web Application",
+            "architecture": {
+              "tier_1": {
+                "name": "Web Tier",
+                "subnet": "Public Subnet (10.0.1.0/24)",
+                "components": ["Application Load Balancer", "NAT Gateway"],
+                "connectivity": "Internet → IGW → ALB"
+              },
+              "tier_2": {
+                "name": "Application Tier",
+                "subnet": "Private Subnet (10.0.2.0/24, 10.0.3.0/24 across AZs)",
+                "components": ["EC2 Auto Scaling Group", "ECS/Fargate", "EKS"],
+                "connectivity": "ALB → App Servers → NAT Gateway (outbound)"
+              },
+              "tier_3": {
+                "name": "Data Tier",
+                "subnet": "Isolated Subnet (10.0.4.0/24, 10.0.5.0/24)",
+                "components": ["RDS Multi-AZ", "ElastiCache", "Aurora"],
+                "connectivity": "App Servers → Database (no internet)"
+              }
+            },
+            "security_groups": [
+              {
+                "layer": "ALB Security Group",
+                "inbound": ["HTTP/80 from 0.0.0.0/0", "HTTPS/443 from 0.0.0.0/0"],
+                "outbound": ["HTTP/8080 to App Tier SG"]
+              },
+              {
+                "layer": "App Tier Security Group",
+                "inbound": ["HTTP/8080 from ALB SG", "SSH/22 from Bastion SG"],
+                "outbound": ["PostgreSQL/5432 to DB Tier SG", "HTTP/443 to internet via NAT"]
+              },
+              {
+                "layer": "DB Tier Security Group",
+                "inbound": ["PostgreSQL/5432 from App Tier SG"],
+                "outbound": ["None (isolated)"]
+              }
+            ],
+            "script": [
+              "This is the blueprint for 80% of web applications on AWS.",
+              "Notice the defense-in-depth:",
+              "1. Public tier only has ALB—no compute exposed.",
+              "2. App tier can't be reached from internet, only from ALB.",
+              "3. Data tier can't even reach internet—complete isolation.",
+              "Security Groups provide microsegmentation at instance level."
+            ]
+          },
+          {
+            "id": "3.3",
+            "type": "advanced",
+            "title": "Advanced Networking: Transit Gateway, VPC Peering, & Endpoints",
+            "patterns": [
+              {
+                "pattern": "VPC Peering",
+                "description": "Direct connection between two VPCs",
+                "pros": ["No bandwidth charges", "Low latency", "Simple setup"],
+                "cons": ["Non-transitive", "Scaling issues (n² connections)", "CIDR cannot overlap"],
+                "use_case": "Connecting 2-3 VPCs"
+              },
+              {
+                "pattern": "Transit Gateway",
+                "description": "Hub-and-spoke routing for multiple VPCs",
+                "pros": ["Transitive routing", "Centralized management", "Scales to thousands of VPCs"],
+                "cons": ["Per-hour charge", "Data transfer costs", "Complex routing tables"],
+                "use_case": "Enterprise networks, multiple accounts"
+              },
+              {
+                "pattern": "VPC Endpoints",
+                "description": "Private connection to AWS services",
+                "types": ["Interface Endpoint (ENI)", "Gateway Endpoint (S3, DynamoDB)"],
+                "benefits": ["No internet traffic", "Improved security", "Lower latency"],
+                "use_case": "Access S3 from private instances"
+              }
+            ],
+            "implementation": {
+              "transit_gateway": "Central TGW → Attach VPCs → Configure route tables → Share via RAM",
+              "vpc_endpoint": "Create endpoint → Attach security group → Update route tables → Test connectivity"
+            },
+            "script": [
+              "As organizations grow, simple VPC designs become complex meshes.",
+              "VPC Peering works for 2-3 VPCs but becomes unmanageable at scale (10 VPCs need 45 peerings!).",
+              "Transit Gateway is the enterprise solution: One hub connects to all VPCs.",
+              "VPC Endpoints are security gold: Keep traffic within AWS network, never touching public internet."
+            ]
+          },
+          {
+            "id": "3.4",
+            "type": "monitoring",
+            "title": "Network Monitoring: Flow Logs, Traffic Mirroring, & Network Manager",
+            "tools": [
+              {
+                "tool": "VPC Flow Logs",
+                "description": "Capture IP traffic metadata",
+                "data": ["Source/destination IP", "Ports", "Protocol", "Bytes", "Action (ACCEPT/REJECT)"],
+                "destinations": ["CloudWatch Logs", "S3", "Kinesis Data Firehose"],
+                "use_case": "Security analysis, troubleshooting"
+              },
+              {
+                "tool": "Traffic Mirroring",
+                "description": "Copy network traffic for inspection",
+                "targets": ["Network appliances", "Security tools", "Monitoring systems"],
+                "use_case": "Intrusion detection, compliance monitoring"
+              },
+              {
+                "tool": "Network Manager",
+                "description": "Global network management",
+                "features": ["Topology visualization", "Change automation", "Performance monitoring"],
+                "use_case": "Multi-region network management"
+              }
+            ],
+            "analysis_example": {
+              "question": "Why is instance i-abc123 making calls to suspicious IP?",
+              "steps": [
+                "Enable VPC Flow Logs",
+                "Query in Athena: SELECT * FROM vpc_flow_logs WHERE srcaddr = '10.0.1.123'",
+                "Identify destination IPs",
+                "Check Threat Intelligence feeds",
+                "Isolate instance if malicious"
+              ]
+            },
+            "script": [
+              "You can't secure what you can't see.",
+              "VPC Flow Logs are like security cameras for your network.",
+              "They don't capture packet contents (that's illegal in many jurisdictions), but they capture metadata.",
+              "Combined with GuardDuty, they can detect port scanning, data exfiltration, and compromised instances."
+            ]
+          },
+          {
+            "id": "3.5",
+            "type": "cost_optimization",
+            "title": "Networking Cost Optimization",
+            "cost_drivers": [
+              {
+                "driver": "Data Transfer",
+                "patterns": ["Cross-AZ ($0.01/GB)", "Cross-Region ($0.02/GB)", "Internet egress ($0.09/GB)"],
+                "optimization": ["Use same AZ for chatty services", "Use CloudFront for static content", "Implement caching"]
+              },
+              {
+                "driver": "NAT Gateways",
+                "cost": "$0.045/hour + $0.045/GB processed",
+                "optimization": ["Use NAT instances for small workloads", "Implement VPC endpoints", "Use private subnets only when needed"]
+              },
+              {
+                "driver": "Transit Gateway",
+                "cost": "$0.05/hour per attachment + data processing",
+                "optimization": ["Consolidate VPCs", "Use RAM sharing", "Monitor attachment utilization"]
+              }
+            ],
+            "savings_strategies": [
+              "Implement S3 Gateway Endpoints (free, saves NAT Gateway costs)",
+              "Use PrivateLink for inter-service communication (avoids internet charges)",
+              "Deploy CloudFront with origins in same region (reduced data transfer)",
+              "Use Direct Connect for predictable high-volume traffic"
+            ],
+            "script": [
+              "Networking costs can surprise you.",
+              "That 'simple' NAT Gateway? $32/month just to exist, plus $45/TB of data.",
+              "Cross-region replication of 100TB database? $2,000 in data transfer.",
+              "Plan your network architecture with costs in mind from day one."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Design VPCs with three-tier architecture for security",
+          "Use Transit Gateway for multi-VPC enterprise networks",
+          "Implement VPC endpoints to avoid internet data transfer",
+          "Monitor with Flow Logs and optimize NAT Gateway usage"
+        ]
+      },
+      {
+        "id": "module_4",
+        "title": "Module 4: EC2 & Compute Services",
+        "duration": "50 minutes",
+        "slides": [
+          {
+            "id": "4.1",
+            "type": "comparison",
+            "title": "EC2 Instance Families: Choosing the Right Compute",
+            "families": [
+              {
+                "family": "General Purpose (M7g, M6i, T4g)",
+                "characteristics": ["Balanced CPU/Memory", "Burstable (T) or steady (M)", "Graviton (g) or Intel (i)"],
+                "use_cases": ["Web servers", "Small databases", "Development environments"],
+                "graviton_advantage": "20% cheaper, 40% better performance for supported workloads"
+              },
+              {
+                "family": "Compute Optimized (C7g, C6i)",
+                "characteristics": ["High CPU to memory ratio", "Best for compute-intensive", "High clock speeds"],
+                "use_cases": ["Batch processing", "Gaming servers", "Scientific modeling", "Ad serving"],
+                "performance": "Up to 15% better price-performance than M6i"
+              },
+              {
+                "family": "Memory Optimized (R7g, X2gd, X2iezn)",
+                "characteristics": ["High memory to CPU ratio", "Large memory footprint", "Some with persistent memory"],
+                "use_cases": ["In-memory databases", "Real-time analytics", "SAP HANA", "Redis/Memcached"],
+                "memory_types": ["DRAM (R7g)", "DRAM + Intel Optane (X2iezn)", "DRAM only (X2gd)"]
+              },
+              {
+                "family": "Storage Optimized (I4i, D3, D3en)",
+                "characteristics": ["High sequential I/O", "Local NVMe storage", "High disk throughput"],
+                "use_cases": ["NoSQL databases", "Data warehousing", "Distributed file systems", "Log processing"],
+                "storage": ["Up to 60TB NVMe (I4i)", "HDD optimized (D3en)"]
+              },
+              {
+                "family": "Accelerated Computing (P4, Inf1, Trn1)",
+                "characteristics": ["GPUs, FPGAs, Trainium/Inferentia", "Specialized hardware"],
+                "use_cases": ["ML training (P4)", "ML inference (Inf1)", "HPC", "Video encoding"],
+                "cost_savings": "Up to 70% cheaper ML inference vs GPUs"
+              }
+            ],
+            "selection_framework": {
+              "step1": "Identify workload type (CPU, Memory, I/O, GPU)",
+              "step2": "Check Graviton compatibility (arm64)",
+              "step3": "Right-size based on metrics (CloudWatch)",
+              "step4": "Consider burstable (T) vs steady (M/C/R)",
+              "step5": "Evaluate storage needs (EBS vs instance store)"
+            },
+            "script": [
+              "Choosing EC2 instances used to be simple: t2.micro for everything.",
+              "Now? There are 600+ instance types across 30+ families.",
+              "The key: Match the instance to the workload.",
+              "Running Redis? R7g (memory optimized).",
+              "Training ML models? P4d (GPU accelerated).",
+              "Serving web traffic? M7g (Graviton general purpose).",
+              "Always choose Graviton if your workload supports it. The price-performance is unbeatable."
+            ]
+          },
+          {
+            "id": "4.2",
+            "type": "storage",
+            "title": "EC2 Storage: EBS vs Instance Store vs EFS",
+            "comparison": {
+              "ebs": {
+                "type": "Network-attached block storage",
+                "performance": "Up to 256,000 IOPS (io2 Block Express)",
+                "durability": "99.999% (io2), 99.8-99.9% (gp3)",
+                "persistence": "Persists independently of instance",
+                "best_for": ["Boot volumes", "Databases", "Long-term storage"]
+              },
+              "instance_store": {
+                "type": "Direct-attached physical storage",
+                "performance": "Millions of IOPS (NVMe)",
+                "durability": "Ephemeral - lost on stop/terminate",
+                "persistence": "Tied to instance lifecycle",
+                "best_for": ["Cache/temp data", "Hadoop/Spark", "High-performance DBs"]
+              },
+              "efs": {
+                "type": "Network file system (NFS)",
+                "performance": "Scalable throughput/IOPS",
+                "durability": "11 nines (99.999999999%)",
+                "persistence": "Fully managed, scales automatically",
+                "best_for": ["Shared file systems", "Content management", "Home directories"]
+              }
+            },
+            "ebs_types": [
+              {
+                "type": "gp3",
+                "description": "General Purpose SSD",
+                "baseline": "3,000 IOPS, 125 MB/s at $0.08/GB-month",
+                "use_case": "Most workloads, boot volumes"
+              },
+              {
+                "type": "io2",
+                "description": "Provisioned IOPS SSD",
+                "baseline": "Up to 256,000 IOPS, 4,000 MB/s",
+                "use_case": "Mission-critical databases"
+              },
+              {
+                "type": "st1",
+                "description": "Throughput Optimized HDD",
+                "baseline": "500 MB/s throughput",
+                "use_case": "Big data, data warehouses"
+              },
+              {
+                "type": "sc1",
+                "description": "Cold HDD",
+                "baseline": "250 MB/s throughput",
+                "use_case": "Infrequently accessed data"
+              }
+            ],
+            "script": [
+              "Storage is not one-size-fits-all.",
+              "EBS is your go-to for persistent storage. It's like an external USB drive for your instance.",
+              "Instance Store is RAM for your disk—blazing fast but temporary. Great for Spark scratch space.",
+              "EFS is the network drive—multiple instances can mount it simultaneously. Perfect for shared configs."
+            ]
+          },
+          {
+            "id": "4.3",
+            "type": "scaling",
+            "title": "Auto Scaling Groups: Horizontal Scaling Patterns",
+            "patterns": [
+              {
+                "pattern": "Target Tracking",
+                "description": "Maintain metric at target value",
+                "metrics": ["CPU Utilization (70%)", "Request Count Per Target", "Network In/Out"],
+                "use_case": "Steady-state workloads with clear metrics"
+              },
+              {
+                "pattern": "Step Scaling",
+                "description": "Add/remove capacity in steps based on alarms",
+                "configuration": "Multiple CloudWatch alarms with different thresholds",
+                "use_case": "Workloads with predictable burst patterns"
+              },
+              {
+                "pattern": "Scheduled Scaling",
+                "description": "Scale at predetermined times",
+                "examples": ["Scale up before business hours", "Scale down overnight", "Weekend vs weekday schedules"],
+                "use_case": "Predictable traffic patterns"
+              },
+              {
+                "pattern": "Predictive Scaling",
+                "description": "ML-based forecasting of traffic",
+                "requirements": "At least 24 hours of history",
+                "use_case": "E-commerce, media streaming with daily patterns"
+              }
+            ],
+            "configuration": `{
+  "AutoScalingGroupName": "web-asg",
+  "MinSize": 2,
+  "MaxSize": 10,
+  "DesiredCapacity": 2,
+  "LaunchTemplate": {
+    "LaunchTemplateId": "lt-0a1b2c3d",
+    "Version": "$Latest"
+  },
+  "TargetGroupARNs": ["arn:aws:elasticloadbalancing:..."],
+  "HealthCheckType": "ELB",
+  "HealthCheckGracePeriod": 300,
+  "TerminationPolicies": ["OldestInstance"],
+  "Tags": [
+    {
+      "Key": "Environment",
+      "Value": "Production",
+      "PropagateAtLaunch": true
+    }
+  ]
+}`,
+            "script": [
+              "Auto Scaling isn't just about handling traffic spikes.",
+              "It's about cost optimization: running the minimum instances needed.",
+              "Health Check Grace Period is critical: Give instances time to bootstrap (5 minutes for web apps).",
+              "Termination Policies matter: 'OldestInstance' ensures you're always on the latest AMI."
+            ]
+          },
+          {
+            "id": "4.4",
+            "type": "advanced",
+            "title": "Spot Instances & Savings Plans: Maximizing Savings",
+            "spot_strategies": [
+              {
+                "strategy": "Spot Fleets",
+                "description": "Pool of spot instances across instance types",
+                "allocation": "LowestPrice, Diversified, CapacityOptimized",
+                "savings": "60-90% vs on-demand",
+                "best_for": "Batch processing, stateless workloads"
+              },
+              {
+                "strategy": "Spot Blocks",
+                "description": "Reserve spot capacity for 1-6 hours",
+                "advantage": "No interruptions during block",
+                "use_case": "Time-bound workloads (ML training, rendering)"
+              },
+              {
+                "strategy": "EC2 Fleet",
+                "description": "Mix of on-demand, reserved, and spot",
+                "composition": "70% spot, 20% reserved, 10% on-demand",
+                "use_case": "Production workloads needing reliability"
+              }
+            ],
+            "savings_plans": [
+              {
+                "plan": "Compute Savings Plans",
+                "discount": "Up to 66%",
+                "flexibility": "Applies to EC2, Fargate, Lambda",
+                "commitment": "$X/hour for 1-3 years",
+                "best_for": "Modern, flexible architectures"
+              },
+              {
+                "plan": "EC2 Instance Savings Plans",
+                "discount": "Up to 72%",
+                "flexibility": "Specific instance family in region",
+                "commitment": "Instance family commitment",
+                "best_for": "Steady-state EC2 workloads"
+              }
+            ],
+            "spot_interruption_handling": {
+              "notification": "2-minute warning before termination",
+              "actions": ["Drain connections", "Save state", "Launch replacement", "Checkpoint progress"],
+              "tools": ["Spot Interruption Handler", "EC2 Auto Scaling lifecycle hooks", "EventBridge rules"]
+            },
+            "script": [
+              "Spot instances are the secret weapon of cost optimization.",
+              "AWS has millions of dollars of idle capacity. They sell it at 90% discount.",
+              "The catch? They can take it back with 2 minutes notice.",
+              "But with proper architecture (stateless, checkpointing, fleets), you can run production workloads on spot.",
+              "Combine with Savings Plans for maximum savings."
+            ]
+          }
+        ],
+        "key_takeaways": [
+          "Choose instance family based on workload characteristics",
+          "Use Graviton instances for 20-40% better price-performance",
+          "Implement Auto Scaling with multiple policies",
+          "Leverage Spot Instances for up to 90% savings on appropriate workloads"
+        ]
+      }
+    ]
+  }
+}

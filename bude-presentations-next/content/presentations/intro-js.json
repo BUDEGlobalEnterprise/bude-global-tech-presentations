@@ -1,0 +1,553 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "JavaScript Fundamentals",
+            "subtitle": "An Introduction to the Language of the Web"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development & Modern JavaScript Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "title": "Agenda",
+        "slides": [
+          {
+            "type": "content",
+            "title": "What We'll Cover",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>What is JavaScript?</strong> - A brief overview"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Variables & Data Types</strong> - Storing and using data"
+                },
+                {
+                  "emoji": "🧮",
+                  "text": "<strong>Operators</strong> - Performing operations on data"
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Control Flow</strong> - Making decisions in your code"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Functions</strong> - Reusable blocks of code"
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Objects & Arrays</strong> - Grouping data together"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>DOM Manipulation</strong> - Interacting with web pages"
+                },
+                {
+                  "emoji": "🖱️",
+                  "text": "<strong>Events</strong> - Responding to user actions"
+                },
+                {
+                  "emoji": "✨",
+                  "text": "<strong>ES6+ Features</strong> - Modern JavaScript"
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Error Handling</strong> - Dealing with errors gracefully"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>JSON</strong> - Working with JSON data"
+                },
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Web APIs</strong> - Interacting with browser features"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "what-is-js",
+        "title": "What is JavaScript?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Understanding JavaScript"
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "What is JavaScript?",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>The language of the web</strong> - Runs in all modern browsers"
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Versatile</strong> - Used for frontend, backend, mobile, and more"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Dynamic</strong> - No need to specify data types"
+                }
+              ],
+              "title": "<span class=\"highlight\">High-level, interpreted programming language</span>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "History of JavaScript",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>1995</strong> - Created by Brendan Eich at Netscape"
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>1997</strong> - ECMAScript standard created"
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>2009</strong> - Node.js allows JavaScript to run on servers"
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>2015</strong> - ES6 (ECMAScript 2015) adds major new features"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "variables-data-types",
+        "title": "Variables & Data Types",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Storing and Using Data"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Variables: var, let, const",
+            "box": {
+              "code": "// var (function-scoped, avoid in modern JS)\nfunction myFunction() {\n  var myVar = \"Hello\";\n  if (true) {\n    var myVar = \"Hi\"; // myVar is redeclared\n    console.log(myVar); // Hi\n  }\n  console.log(myVar); // Hi\n}\n\n// let (block-scoped)\nfunction myFunction2() {\n  let myLet = \"Hello\";\n  if (true) {\n    let myLet = \"Hi\"; // myLet is a new variable\n    console.log(myLet); // Hi\n  }\n  console.log(myLet); // Hello\n}\n\n// const (block-scoped, cannot be reassigned)\nconst myConst = \"Hello\";\n// myConst = \"Hi\"; // This will cause an error"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>String</strong>: \"Hello, world!\""
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Number</strong>: 123, 3.14"
+                },
+                {
+                  "emoji": "👍",
+                  "text": "<strong>Boolean</strong>: true, false"
+                },
+                {
+                  "emoji": "❓",
+                  "text": "<strong>Null & Undefined</strong>: typeof null is object, typeof undefined is undefined"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Object</strong>: { name: 'John', age: 30 }"
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Symbol</strong>: Symbol('id')"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>BigInt</strong>: 123n"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "var, let, const: Key Differences",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong><code>var</code></strong>: Function-scoped, can be re-declared and re-assigned. Hoisted with a default value of <code>undefined</code>."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong><code>let</code></strong>: Block-scoped, can be re-assigned but not re-declared. Hoisted but not initialized (Temporal Dead Zone)."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong><code>const</code></strong>: Block-scoped, cannot be re-assigned or re-declared. Must be initialized at declaration. For objects/arrays, the reference is constant, but contents can be modified."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Primitive vs. Non-Primitive Data Types",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Primitives</strong>: Stored directly in the location that the variable accesses. (String, Number, Boolean, Null, Undefined, Symbol, BigInt). Passed by value."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Non-Primitives (Objects)</strong>: Stored as a reference to a memory location. (Objects, Arrays, Functions). Passed by reference."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Type Coercion",
+            "box": {
+              "code": "// Implicit Coercion\nconsole.log('5' + 5); // '55' (Number to String)\nconsole.log('5' - 5); // 0 (String to Number)\nconsole.log(true + 1); // 2 (Boolean to Number)\n\n// Explicit Coercion\nconsole.log(Number('10')); // 10\nconsole.log(String(100)); // '100'\nconsole.log(Boolean(0)); // false",
+              "title": "JavaScript often automatically converts values from one type to another (type coercion)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "operators",
+        "title": "Operators",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performing Operations"
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Arithmetic Operators",
+            "box": {
+              "code": "let x = 10;\nlet y = 5;\n\nconsole.log(x + y); // 15\nconsole.log(x - y); // 5\nconsole.log(x * y); // 50\nconsole.log(x / y); // 2\nconsole.log(x % y); // 0\nconsole.log(x ** y); // 100000"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Comparison & Logical Operators",
+            "box": {
+              "code": "// Comparison\nconsole.log(10 == \"10\"); // true (loose equality)\nconsole.log(10 === \"10\"); // false (strict equality)\nconsole.log(10 != \"10\"); // false\nconsole.log(10 !== \"10\"); // true\nconsole.log(10 > 5); // true\n\n// Logical\nconsole.log(true && false); // false\nconsole.log(true || false); // true\nconsole.log(!true); // false"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Assignment Operators",
+            "box": {
+              "code": "let x = 10;\nx += 5; // x is now 15 (x = x + 5)\nx -= 3; // x is now 12 (x = x - 3)\nx *= 2; // x is now 24 (x = x * 2)\nx /= 4; // x is now 6 (x = x / 4)\nx %= 5; // x is now 1 (x = x % 5)"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Ternary Operator",
+            "box": {
+              "code": "let age = 20;\nlet status = (age >= 18) ? \"adult\" : \"minor\";\nconsole.log(status); // adult"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧮",
+            "title": "Operator Precedence",
+            "box": {
+              "code": "let result = 5 + 3 * 2; // result is 11 (multiplication before addition)\nlet result2 = (5 + 3) * 2; // result2 is 16 (parentheses change precedence)",
+              "title": "Determines the order in which operators are evaluated."
+            }
+          }
+        ]
+      },
+      {
+        "id": "control-flow",
+        "title": "Control Flow",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Making Decisions"
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Conditional Statements",
+            "box": {
+              "code": "let age = 18;\n\nif (age >= 18) {\n  console.log(\"You are an adult.\");\n} else if (age >= 13) {\n  console.log(\"You are a teenager.\");\n} else {\n  console.log(\"You are a child.\");\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Loops",
+            "box": {
+              "code": "// for loop\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// while loop\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}\n\n// do...while loop\nlet j = 0;\ndo {\n  console.log(j);\n  j++;\n} while (j < 5);"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Switch Statement",
+            "box": {
+              "code": "let day = \"Monday\";\n\nswitch (day) {\n  case \"Monday\":\n    console.log(\"It's the start of the week.\");\n    break;\n  case \"Friday\":\n    console.log(\"It's almost the weekend!\");\n    break;\n  default:\n    console.log(\"It's a regular day.\");\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Break and Continue",
+            "box": {
+              "code": "// break\nfor (let i = 0; i < 10; i++) {\n  if (i === 5) {\n    break; // Exits the loop\n  }\n  console.log(i); // 0, 1, 2, 3, 4\n}\n\n// continue\nfor (let i = 0; i < 10; i++) {\n  if (i % 2 === 0) {\n    continue; // Skips even numbers\n  }\n  console.log(i); // 1, 3, 5, 7, 9\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "for...in and for...of Loops",
+            "box": {
+              "code": "const person = { name: \"John\", age: 30 };\nfor (let key in person) {\n  console.log(`${key}: ${person[key]}`);\n}\n// Output:\n// name: John\n// age: 30\n\nconst colors = [\"red\", \"green\", \"blue\"];\nfor (let color of colors) {\n  console.log(color);\n}\n// Output:\n// red\n// green\n// blue"
+            }
+          }
+        ]
+      },
+      {
+        "id": "functions",
+        "title": "Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Reusable Blocks of Code"
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Defining and Calling Functions",
+            "box": {
+              "code": "// Function declaration\nfunction greet(name) {\n  return \"Hello, \" + name + \"!\";\n}\n\n// Function expression\nconst greet2 = function(name) {\n  return \"Hello, \" + name + \"!\";\n};\n\n// Arrow function\nconst greet3 = (name) => {\n  return \"Hello, \" + name + \"!\";\n};\n\nconsole.log(greet(\"John\")); // Hello, John!"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Function Parameters & Arguments",
+            "box": {
+              "code": "// Default parameters\nfunction greet(name = \"Guest\") {\n  return \"Hello, \" + name + \"!\";\n}\n\nconsole.log(greet()); // Hello, Guest!\nconsole.log(greet(\"John\")); // Hello, John!\n\n// Rest parameters\nfunction sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(sum(1, 2, 3)); // 6"
+            }
+          }
+        ]
+      },
+      {
+        "id": "objects-arrays",
+        "title": "Objects & Arrays",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Grouping Data"
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Objects",
+            "box": {
+              "code": "const person = {\n  name: \"John\",\n  age: 30,\n  greet: function() {\n    return \"Hello, my name is \" + this.name;\n  }\n};\n\nconsole.log(person.name); // John\nconsole.log(person.greet()); // Hello, my name is John"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧩",
+            "title": "Arrays and Array Methods",
+            "box": {
+              "code": "const colors = [\"red\", \"green\", \"blue\"];\n\n// map\nconst upperColors = colors.map(color => color.toUpperCase());\n// [\"RED\", \"GREEN\", \"BLUE\"]\n\n// filter\nconst longColors = colors.filter(color => color.length > 3);\n// [\"green\", \"blue\"]\n\n// reduce\nconst numbers = [1, 2, 3, 4, 5];\nconst sum = numbers.reduce((total, num) => total + num, 0); // 15"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dom-manipulation",
+        "title": "DOM Manipulation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Interacting with Web Pages"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Selecting Elements",
+            "box": {
+              "code": "// by ID\nconst heading = document.getElementById(\"my-heading\");\n\n// by class name\nconst items = document.getElementsByClassName(\"my-item\");\n\n// by tag name\nconst paragraphs = document.getElementsByTagName(\"p\");\n\n// using querySelector\nconst firstItem = document.querySelector(\".my-item\");\n\n// using querySelectorAll\nconst allItems = document.querySelectorAll(\".my-item\");"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Modifying Elements",
+            "box": {
+              "code": "const heading = document.getElementById(\"my-heading\");\n\n// Changing content\nheading.textContent = \"New Heading\";\nheading.innerHTML = \"<em>New Heading</em>\";\n\n// Changing styles\nheading.style.color = \"red\";\nheading.style.fontSize = \"2rem\";\n\n// Adding and removing classes\nheading.classList.add(\"highlight\");\nheading.classList.remove(\"main\");"
+            }
+          }
+        ]
+      },
+      {
+        "id": "events",
+        "title": "Events",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Responding to User Actions"
+          },
+          {
+            "type": "content",
+            "emoji": "🖱️",
+            "title": "Event Handling",
+            "box": {
+              "code": "const myButton = document.getElementById(\"my-button\");\n\nmyButton.addEventListener(\"click\", () => {\n  alert(\"Button clicked!\");\n});\n\nmyButton.addEventListener(\"mouseover\", () => {\n  myButton.style.backgroundColor = \"red\";\n});\n\nmyButton.addEventListener(\"mouseout\", () => {\n  myButton.style.backgroundColor = \"\";\n});"
+            }
+          }
+        ]
+      },
+      {
+        "id": "es6-features",
+        "title": "ES6+ Features",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Modern JavaScript"
+          },
+          {
+            "type": "content",
+            "emoji": "✨",
+            "title": "Arrow Functions & Classes",
+            "box": {
+              "code": "// Arrow Functions\nconst add = (a, b) => a + b;\n\n// Classes\nclass Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n\n  greet() {\n    return `Hello, my name is ${this.name}`;\n  }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "✨",
+            "title": "Promises & Async/Await",
+            "box": {
+              "code": "// Promises\nconst myPromise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve(\"Success!\");\n  }, 1000);\n});\n\nmyPromise.then(result => console.log(result)); // Success!\n\n// Async/Await\nasync function myAsyncFunction() {\n  const result = await myPromise;\n  console.log(result);\n}\n\nmyAsyncFunction(); // Success!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "error-handling",
+        "title": "Error Handling",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Dealing with Errors"
+          },
+          {
+            "type": "content",
+            "emoji": "🚨",
+            "title": "try...catch",
+            "box": {
+              "code": "try {\n  // Code that may throw an error\n  const result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.error(error);\n}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "json",
+        "title": "JSON",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Working with JSON"
+          },
+          {
+            "type": "content",
+            "emoji": "📄",
+            "title": "JSON.parse() & JSON.stringify()",
+            "box": {
+              "code": "const jsonString = '{\"name\":\"John\",\"age\":30}';\nconst person = JSON.parse(jsonString);\nconsole.log(person.name); // John\n\nconst personObject = { name: \"John\", age: 30 };\nconst json = JSON.stringify(personObject);\nconsole.log(json); // {\"name\":\"John\",\"age\":30}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "web-apis",
+        "title": "Web APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Browser Features"
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Fetch API",
+            "box": {
+              "code": "fetch(\"https://api.example.com/data\")\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss JavaScript concepts or specific use cases!<br><span class=\"gradient-accent\">All web development questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">📜</span> Ready to build amazing web experiences?<br><span class=\"gradient-accent\">Start your JavaScript journey today!</span>",
+              "note": "The Language of the Web"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering developers worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

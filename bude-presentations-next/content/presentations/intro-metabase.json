@@ -1,0 +1,1010 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Introduction to Metabase",
+            "subtitle": "Complete Business Intelligence Guide<br>From Data to Insights in Minutes"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "what-is-metabase",
+        "title": "What is Metabase?",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Welcome to Metabase",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>No-Code Analytics</strong> - Point-and-click queries"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Self-Service</strong> - Business users can explore data"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Multi-Database</strong> - 20+ data source connections"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Embedding</strong> - White-label analytics for apps"
+                }
+              ],
+              "title": "Open-source <span class=\"highlight\">Business Intelligence</span> and data visualization platform:"
+            },
+            "note": {
+              "text": "<strong>Founded:</strong> 2014<br><strong>License:</strong> Open Source (AGPL) + Enterprise"
+            }
+          }
+        ]
+      },
+      {
+        "id": "why-metabase",
+        "title": "Why Metabase?",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Why Choose Metabase?",
+            "note": {
+              "text": "<span class=\"emoji\">📈</span> <strong>Used by:</strong> 50,000+ companies worldwide"
+            },
+            "subtitle": "Democratizing data analytics for everyone in your organization"
+          },
+          {
+            "type": "content",
+            "emoji": "🎯",
+            "title": "Key Benefits",
+            "box": {
+              "list": [
+                {
+                  "emoji": "👶",
+                  "text": "<strong>Beginner Friendly</strong> - No SQL knowledge required"
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Effective</strong> - Free open source version"
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Rapid Setup</strong> - Running in 5 minutes"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Secure</strong> - Row-level permissions, SSO"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Scalable</strong> - From startup to enterprise"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "<strong>Beautiful</strong> - Modern, intuitive interface"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Metabase Architecture"
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "System Overview",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Web UI</strong> - React-based frontend"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Application Server</strong> - Clojure backend"
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Metadata Database</strong> - Stores configurations"
+                },
+                {
+                  "emoji": "🗄️",
+                  "text": "<strong>Data Sources</strong> - Your business databases"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>User Access Layer</strong> - Permissions & security"
+                }
+              ],
+              "title": "<strong>How Metabase works</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Installation & Setup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Getting Started"
+          },
+          {
+            "type": "content",
+            "emoji": "🐳",
+            "title": "Docker Installation",
+            "box": {
+              "code": "docker run -d --name metabase \\\n  -p 3000:3000 \\\n  -e MB_DB_TYPE=postgres \\\n  -e MB_DB_DBNAME=metabase \\\n  -e MB_DB_PORT=5432 \\\n  -e MB_DB_USER=username \\\n  -e MB_DB_PASS=password \\\n  -e MB_DB_HOST=hostname \\\n  metabase/metabase",
+              "title": "<strong>Quick start with Docker</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">⚡</span> Access at http://localhost:3000 after startup"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "JAR File Installation",
+            "box": {
+              "code": "java -jar metabase.jar",
+              "title": "<strong>Traditional Java deployment</strong>"
+            },
+            "list": [
+              {
+                "emoji": "✅",
+                "text": "Requires Java 8+"
+              },
+              {
+                "emoji": "🔧",
+                "text": "Easy to run anywhere"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "☸️",
+            "title": "Kubernetes Deployment",
+            "box": {
+              "code": "helm repo add metabase https://charts.bitnami.com/bitnami\nhelm install my-metabase metabase/metabase",
+              "title": "<strong>Production-grade setup</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "database-connections",
+        "title": "Database Connections",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Connecting Data Sources"
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Supported Databases",
+            "box": {
+              "title": "20+ Database Types",
+              "list": [
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Most popular open source"
+                },
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Advanced features"
+                },
+                {
+                  "emoji": "🪟",
+                  "text": "<strong>SQL Server</strong> - Microsoft ecosystem"
+                },
+                {
+                  "emoji": "📄",
+                  "text": "<strong>MongoDB</strong> - NoSQL document store"
+                },
+                {
+                  "emoji": "❄️",
+                  "text": "<strong>Snowflake</strong> - Cloud data warehouse"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>BigQuery</strong> - Google's analytics"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Connection Setup",
+            "box": {
+              "code": "Host: db.company.com\nPort: 5432\nDatabase: analytics\nUsername: metabase_user\nPassword: ********\nSSL: Required",
+              "title": "<strong>Database connection parameters</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🔒",
+                "text": "Use read-only database user"
+              },
+              {
+                "emoji": "🌐",
+                "text": "SSL/TLS for secure connections"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "questions",
+        "title": "Questions & Queries",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Asking Questions"
+          },
+          {
+            "type": "content",
+            "emoji": "❓",
+            "title": "Simple Questions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Choose Table</strong> - Select data source"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Filter Data</strong> - Where conditions"
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Summarize</strong> - Count, sum, average"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Group By</strong> - Categories and segments"
+                }
+              ],
+              "title": "<strong>Point-and-click query builder</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> No SQL knowledge required for basic analysis"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Custom Questions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Joins</strong> - Combine multiple tables"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Expressions</strong> - Custom calculations"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Multiple Aggregations</strong> - Complex metrics"
+                }
+              ],
+              "title": "<strong>Advanced query builder</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "Native SQL",
+            "box": {
+              "code": "SELECT \n  DATE(created_at) as date,\n  COUNT(*) as signups,\n  SUM(amount) as revenue\nFROM users\nWHERE created_at >= CURRENT_DATE - INTERVAL 30 DAY\nGROUP BY DATE(created_at)\nORDER BY date DESC",
+              "title": "<strong>Write raw SQL queries</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🎯",
+                "text": "Full SQL power for complex queries"
+              },
+              {
+                "emoji": "🔒",
+                "text": "Granular permissions control"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "visualizations",
+        "title": "Visualizations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Visualization"
+          },
+          {
+            "type": "content",
+            "emoji": "📊",
+            "title": "Chart Types",
+            "box": {
+              "title": "15+ Visualization Options",
+              "list": [
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Line Chart</strong> - Time series trends"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Bar Chart</strong> - Category comparisons"
+                },
+                {
+                  "emoji": "🥧",
+                  "text": "<strong>Pie Chart</strong> - Proportion breakdowns"
+                },
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>KPI</strong> - Key performance indicators"
+                },
+                {
+                  "emoji": "🗺️",
+                  "text": "<strong>Map</strong> - Geographic data"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Funnel</strong> - Conversion analysis"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboards",
+        "title": "Dashboards",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Building Dashboards"
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Dashboard Creation",
+            "box": {
+              "list": [
+                {
+                  "emoji": "➕",
+                  "text": "<strong>Add Questions</strong> - Drag and drop cards"
+                },
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Layout</strong> - Resize and arrange"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Filters</strong> - Global dashboard filters"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Text Boxes</strong> - Add context and notes"
+                }
+              ],
+              "title": "<strong>Combine multiple questions</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎛️",
+            "title": "Dashboard Filters",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📅",
+                  "text": "<strong>Date Range</strong> - Time period selection"
+                },
+                {
+                  "emoji": "🔽",
+                  "text": "<strong>Dropdown</strong> - Category selection"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Search</strong> - Text search filters"
+                }
+              ],
+              "title": "<strong>Interactive filtering</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Filters automatically apply to all dashboard cards"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Drill-Through",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>View Details</strong> - See underlying records"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Break Out By</strong> - Add another dimension"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Zoom In</strong> - Focus on specific segment"
+                }
+              ],
+              "title": "<strong>Interactive data exploration</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "organization",
+        "title": "Organization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Content Management"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Collections",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Root Collection</strong> - Default location"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Team Collections</strong> - Department folders"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Personal Collections</strong> - User-specific"
+                }
+              ],
+              "title": "<strong>Folder-based organization</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔖",
+            "title": "Models",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🎯",
+                  "text": "<strong>Friendly Names</strong> - Business terminology"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Default Filters</strong> - Pre-applied conditions"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Metrics</strong> - Standard calculations"
+                }
+              ],
+              "title": "<strong>Curated data models</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "permissions",
+        "title": "Permissions & Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Access Control"
+          },
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "User Roles",
+            "box": {
+              "title": "Built-in Permission Levels",
+              "list": [
+                {
+                  "emoji": "👑",
+                  "text": "<strong>Admin</strong> - Full system access"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Analyst</strong> - Create content, SQL access"
+                },
+                {
+                  "emoji": "👀",
+                  "text": "<strong>Viewer</strong> - Read-only access"
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Row-Level Permissions",
+            "box": {
+              "code": "-- Sales team sees only their region\nWHERE region = '{{user_region}}'\n\n-- Managers see their team only\nWHERE manager_id = {{user_id}}",
+              "title": "<strong>Data segmentation</strong>"
+            },
+            "note": {
+              "text": "<span class=\"emoji\">💡</span> Different users see different data from the same query"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "Authentication Methods",
+            "box": {
+              "title": "Single Sign-On Options",
+              "list": [
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email/Password</strong> - Basic authentication"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Google OAuth</strong> - Google Workspace"
+                },
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>LDAP/Active Directory</strong> - Enterprise"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>SAML</strong> - Enterprise SSO"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "alerts-subscriptions",
+        "title": "Alerts & Subscriptions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Proactive Monitoring"
+          },
+          {
+            "type": "content",
+            "emoji": "🚨",
+            "title": "Alerts",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Email Alerts</strong> - Threshold breaches"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Slack Alerts</strong> - Team notifications"
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Schedule</strong> - Daily, weekly, or real-time"
+                }
+              ],
+              "title": "<strong>Condition-based notifications</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📨",
+            "title": "Subscriptions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Dashboard Subscriptions</strong> - Entire dashboards"
+                },
+                {
+                  "emoji": "❓",
+                  "text": "<strong>Question Subscriptions</strong> - Individual queries"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Multiple Recipients</strong> - Team distribution"
+                }
+              ],
+              "title": "<strong>Scheduled report delivery</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "embedding",
+        "title": "Embedding & API",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Integration Options"
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Embedding Dashboards",
+            "box": {
+              "code": "<iframe\n  src=\"https://metabase.company.com/embed/dashboard/abc123\"\n  width=\"800\"\n  height=\"600\"\n  frameborder=\"0\">\n</iframe>",
+              "title": "<strong>White-label analytics</strong>"
+            },
+            "list": [
+              {
+                "emoji": "🔒",
+                "text": "<strong>JWT Authentication</strong> - Secure embedding"
+              },
+              {
+                "emoji": "🎨",
+                "text": "<strong>White Label</strong> - Hide Metabase branding"
+              }
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "REST API",
+            "box": {
+              "code": "// Get dashboard data\nGET /api/dashboard/1\n\n// Create new user\nPOST /api/user\n{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"john@company.com\"\n}\n\n// Run query programmatically\nPOST /api/card/1/query/json",
+              "title": "<strong>Programmatic access</strong>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "production",
+        "title": "Production Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Production Best Practices"
+          },
+          {
+            "type": "content",
+            "emoji": "🗄️",
+            "title": "Database Configuration",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🐘",
+                  "text": "<strong>PostgreSQL</strong> - Recommended for production"
+                },
+                {
+                  "emoji": "🐬",
+                  "text": "<strong>MySQL</strong> - Alternative option"
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>Avoid H2</strong> - For development only"
+                }
+              ],
+              "title": "<strong>Production metadata database</strong>"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "Performance Optimization",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Caching</strong> - Query result caching"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Indexing</strong> - Database performance"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Models</strong> - Pre-aggregated data"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Query Optimization</strong> - Avoid N+1 queries"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "use-cases",
+        "title": "Real World Use Cases",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Metabase in Action"
+          },
+          {
+            "type": "content",
+            "emoji": "🏢",
+            "title": "Business Scenarios",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Sales Analytics</strong> - Revenue, conversions, pipeline"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Marketing Dashboards</strong> - Campaign performance"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>HR Analytics</strong> - Employee metrics, turnover"
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Operations</strong> - Process efficiency, bottlenecks"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Product Analytics</strong> - User behavior, feature usage"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Tool Comparison",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🆚",
+            "title": "Metabase vs Alternatives",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost</strong> - Metabase (Free) vs Tableau ($70/user)"
+                },
+                {
+                  "emoji": "👶",
+                  "text": "<strong>Ease of Use</strong> - Metabase wins for non-technical"
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>SQL Support</strong> - Metabase has full SQL capability"
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Embedding</strong> - Metabase superior for SaaS apps"
+                },
+                {
+                  "emoji": "🔓",
+                  "text": "<strong>Open Source</strong> - Metabase is community-driven"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔧",
+            "title": "Common Issues & Solutions",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Driver Issues</strong> - Download correct JDBC drivers"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>SSL Errors</strong> - Configure database SSL properly"
+                },
+                {
+                  "emoji": "🐌",
+                  "text": "<strong>Slow Queries</strong> - Add database indexes"
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Filter Problems</strong> - Check field types and mappings"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "Best Practices",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "✅",
+            "title": "Metabase Guidelines",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Use Models</strong> - Don't expose raw tables"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Row-Level Security</strong> - Implement early"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Naming Conventions</strong> - Consistent naming"
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Shared Filters</strong> - Reusable filter components"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Team Collaboration</strong> - Use collections effectively"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Learning Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📚",
+            "title": "Continue Learning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Official Docs</strong> - metabase.com/docs"
+                },
+                {
+                  "emoji": "🐙",
+                  "text": "<strong>GitHub</strong> - github.com/metabase/metabase"
+                },
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Slack Community</strong> - 20,000+ members"
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>YouTube</strong> - Tutorials and demos"
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Sample Data</strong> - Practice with demo datasets"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "project-ideas",
+        "title": "Hands-On Project",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "🔨",
+            "title": "Build Your First Dashboard",
+            "box": {
+              "list": [
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Sales Dashboard</strong> - Revenue by product/region"
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>HR Analytics</strong> - Employee attendance, performance"
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>IoT Tracking</strong> - Device metrics and alerts"
+                },
+                {
+                  "emoji": "🛒",
+                  "text": "<strong>E-commerce</strong> - Customer behavior, conversions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "recap",
+        "title": "Quick Recap",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Key Takeaways",
+            "box": {
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "Metabase = Open source BI for everyone"
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "5-minute setup, no SQL required for basics"
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "Connect to 20+ database types"
+                },
+                {
+                  "emoji": "🎨",
+                  "text": "Beautiful dashboards with point-and-click"
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "Enterprise-grade security and permissions"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qa-and-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss Metabase setup, dashboards, or specific analytics use cases!<br><span class=\"gradient-accent\">All data questions welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">📊</span> Ready to explore your data?<br><span class=\"gradient-accent\">Start building insights today!</span>",
+              "note": "Analytics • Visualization • Business Intelligence"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering data-driven decisions worldwide"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
