@@ -254,6 +254,30 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     category: ["database", "tools"],
     difficulty: "intermediate",
   },
+  {
+    file: "intro-supabase.json",
+    title: "Supabase Masterclass",
+    description: "The Open-Source Firebase Alternative: dedicated PostgreSQL, RLS policies, GoTrue Auth, Realtime Phoenix channels, storage buckets, and Edge Functions.",
+    keywords: ["supabase", "postgresql", "baas", "auth", "realtime", "storage", "deno", "edge-functions", "vector-database", "rls"],
+    category: ["database", "backend"],
+    difficulty: "intermediate",
+  },
+  {
+    file: "intro-firebase.json",
+    title: "Firebase Masterclass",
+    description: "Google's Mobile & Web Application Development Platform: Cloud Firestore, Realtime DB, Auth, Storage, Cloud Functions, Security Rules, and Emulator Suite.",
+    keywords: ["firebase", "firestore", "nosql", "auth", "cloud-storage", "cloud-functions", "security-rules", "hosting", "fcm", "emulators"],
+    category: ["database", "backend"],
+    difficulty: "intermediate",
+  },
+  {
+    file: "intro-prisma.json",
+    title: "Prisma ORM Masterclass",
+    description: "Next-Generation Type-Safe Database Access: schema.prisma declaration, data modeling, client CRUD APIs, migrations, N+1 query optimization, and serverless architectures.",
+    keywords: ["prisma", "orm", "database", "typescript", "type-safety", "migrations", "postgresql", "mysql", "serverless", "accelerate"],
+    category: ["database", "backend"],
+    difficulty: "intermediate",
+  },
 
   // ============= FRONTEND FRAMEWORKS =============
   {
@@ -295,6 +319,14 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     keywords: ["svelte", "sveltekit", "javascript", "frontend", "compiler", "reactive", "performance"],
     category: ["frontend"],
     difficulty: "beginner",
+  },
+  {
+    file: "intro-angular.json",
+    title: "Angular Masterclass",
+    description: "Enterprise Frontend Web Development: Standalone component architecture, signals reactivity, RxJS pipelines, reactive forms, dependency injection, and SSR compilation.",
+    keywords: ["angular", "typescript", "frontend", "spa", "signals", "rxjs", "google", "routing", "forms", "dependency-injection"],
+    category: ["frontend"],
+    difficulty: "intermediate",
   },
   {
     file: "nextjs-presentation.json",
@@ -509,6 +541,14 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
 
   // ============= DEVOPS & INFRASTRUCTURE =============
   {
+    file: "intro-devops-cicd.json",
+    title: "DevOps & CI/CD Masterclass",
+    description: "Accelerating Software Delivery from Commit to Production. A Practical Guide to Automation, Pipelines, Security, and Deployment Strategies.",
+    keywords: ["devops", "ci/cd", "automation", "pipeline", "github-actions", "devsecops", "kubernetes", "docker", "gitops"],
+    category: ["devops"],
+    difficulty: "intermediate",
+  },
+  {
     file: "intro-docker.json",
     title: "Introduction to Docker & Containerization",
     description: "Complete containerization guide from beginner to production deployment",
@@ -555,6 +595,22 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     keywords: ["system-design", "architecture", "scalability", "databases", "caching", "load-balancing", "microservices", "sharding", "consistent-hashing", "fault-tolerance", "observability", "case-studies"],
     category: ["backend", "devops"],
     difficulty: "advanced",
+  },
+  {
+    file: "mqtt.json",
+    title: "MQTT Masterclass: From IoT Fundamentals to AI-Enhanced Edge Computing",
+    description: "Comprehensive 60+ slide guide covering MQTT fundamentals, advanced patterns, AI integration, and enterprise deployment",
+    keywords: ["mqtt", "iot", "messaging", "pub-sub", "edge-computing", "broker", "qos", "security", "ai-iot"],
+    category: ["backend", "devops", "iot"],
+    difficulty: "advanced"
+  },
+  {
+    file: "intro-google-home.json",
+    title: "Introduction to Google Home & Smart Home Ecosystem",
+    description: "Comprehensive guide to Google Home, Google Nest, smart home automation, and developer platforms including Matter & Thread",
+    keywords: ["google home", "google nest", "smart home", "matter", "thread", "google assistant", "iot"],
+    category: ["iot", "tools"],
+    difficulty: "beginner"
   },
 
   // ============= BUSINESS & ENTERPRISE =============

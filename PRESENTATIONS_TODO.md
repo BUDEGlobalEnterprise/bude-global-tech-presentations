@@ -1,24 +1,24 @@
 # 📋 Presentations Progress Tracker
 
 > **Last Updated**: March 2026
-> **Total Presentations**: 59 ✅ | 48 ⬜
-> **Completion**: 55.1%
+> **Total Presentations**: 65 ✅ | 42 ⬜
+> **Completion**: 60.7%
 
 ---
 
 ## 📊 Progress Overview
 
 ```
-█████████████░░░░░░░░░░░░░░░░░ 47.7% Complete
+████████████████░░░░░░░░░░░░░░ 53.3% Complete
 ```
 
 | Category | Completed | Pending | Total | Progress |
 |----------|-----------|---------|-------|----------|
-| 🟢 **Core Topics** | 51 | 56 | 107 | 47.7% |
-| 🔵 **Programming Languages** | 8 | 1 | 9 | 88.9% |
+| 🟢 **Core Topics** | 57 | 50 | 107 | 53.3% |
+| 🔵 **Programming Languages** | 9 | 0 | 9 | 100% |
 | 🟣 **Backend Frameworks** | 2 | 6 | 8 | 25% |
-| 🔴 **Databases & Storage** | 4 | 4 | 8 | 50% |
-| 🟠 **DevOps & Cloud** | 4 | 6 | 10 | 40% |
+| 🔴 **Databases & Storage** | 8 | 0 | 8 | 100% |
+| 🟠 **DevOps & Cloud** | 5 | 5 | 10 | 50% |
 | 🟡 **Security & Auth** | 1 | 6 | 7 | 14.3% |
 | 🟢 **AI & Automation** | 2 | 5 | 7 | 28.6% |
 | 🟤 **Tools & Productivity** | 12 | 0 | 12 | 100% |
@@ -45,6 +45,7 @@
 - [x] #15 Node.js - [View](presentations/nodejs-presentation.json)
 - [x] #63 JavaScript Fundamentals - [View](presentations/intro-js.json)
 - [x] #64 TypeScript + Node.js - [View](presentations/intro-typescript.json)
+- [x] #66 Angular - [View](presentations/intro-angular.json)
 - [x] #68 GraphQL – API Query Language - [View](presentations/intro-graphql.json)
 - [x] #69 REST API & Swagger/OpenAPI - [View](presentations/intro-rest-api-swagger.json)
 - [x] #84 Flutter - [View](presentations/intro-flutter.json)
@@ -61,6 +62,9 @@
 - [x] #17 MySQL - [View](presentations/intro-mysql.json)
 - [x] #18 Redis - [View](presentations/intro-redis.json)
 - [x] #19 SQLite - [View](presentations/intro-sqlite.json)
+- [x] #22 Supabase - [View](presentations/intro-supabase.json)
+- [x] #23 Firebase - [View](presentations/intro-firebase.json)
+- [x] #24 Prisma ORM - [View](presentations/intro-prisma.json)
 - [x] #70 SQL & Databases - [View](presentations/intro-sql-databases.json)
 
 ### DevOps & Cloud
@@ -70,6 +74,7 @@
 - [x] #27 Git vs GitHub - [View](presentations/intro-git-github.json)
 - [x] #71 WSL (Windows Subsystem for Linux) - [View](presentations/intro-wsl.json)
 - [x] #73 Kubernetes – Container Orchestration - [View](presentations/intro-kubernetes.json)
+- [x] #75 DevOps – CI/CD - [View](presentations/intro-devops-cicd.json)
 
 ### Business & Tools
 - [x] #2 Keycloak - [View](presentations/intro-keycloak.json)
@@ -120,10 +125,10 @@
 
 ---
 
-## ⬜ Pending Presentations (69)
+## ⬜ Pending Presentations (43)
 
 ### 🔵 Programming Languages & Core Tech (8)
-- [ ] [#66 Angular](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/66)
+- [x] #66 Angular - [View](presentations/intro-angular.json)
 - [x] #8 Bash Scripting - [View](presentations/intro-bash.json)
 - [x] #26 Django Fundamentals - [View](presentations/intro-django.json)
 
@@ -132,13 +137,13 @@
 - [x] #19 SQLite - [View](presentations/intro-sqlite.json)
 - [x] #20 Cassandra - [View](presentations/intro-cassandra.json)
 - [x] #21 Neo4j - [View](presentations/intro-neo4j.json)
-- [ ] [#22 Supabase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/22) - Open-source Firebase alternative
-- [ ] [#23 Firebase](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/23) - Google's mobile platform
-- [ ] [#24 Prisma ORM](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/24) - Next-generation ORM
+- [x] #22 Supabase - [View](presentations/intro-supabase.json) - Open-source Firebase alternative
+- [x] #23 Firebase - [View](presentations/intro-firebase.json) - Google's mobile platform
+- [x] #24 Prisma ORM - [View](presentations/intro-prisma.json) - Next-generation ORM
 - [x] #25 Elasticsearch - [View](presentations/intro-elasticsearch.json)
 
 ### 🟠 DevOps, Infrastructure & Cloud (13)
-- [ ] [#75 DevOps – CI/CD](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/75)
+- [x] #75 DevOps – CI/CD - [View](presentations/intro-devops-cicd.json)
 - [x] #26 Terraform - [View](presentations/intro-terraform.json) - Infrastructure as Code
 - [ ] [#27 Ansible](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/27) - Configuration management tool
 - [ ] [#28 Helm](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/28) - Kubernetes package manager
@@ -219,7 +224,7 @@ Top contributors will be featured here!
 
 | Rank | Contributor | Presentations | Topics |
 |------|-------------|---------------|---------|
-| 🥇 | @aravind-govindhasamy | 38 | Various |
+| 🥇 | @aravind-govindhasamy | 39 | Various |
 | 🥈 | Your name here! | - | - |
 | 🥉 | Your name here! | - | - |
 
@@ -259,9 +264,9 @@ Have a topic not on this list? [Open a feature request](https://github.com/BUDEG
 ## 📊 Statistics
 
 - **Total Topics Planned**: 107
-- **Completed**: 50 (46.7%)
+- **Completed**: 65 (60.7%)
 - **In Progress**: 0
-- **Remaining**: 57 (53.3%)
+- **Remaining**: 42 (39.3%)
 - **Average per month**: ~3-5 presentations
 - **Estimated Completion**: Q4 2025
 

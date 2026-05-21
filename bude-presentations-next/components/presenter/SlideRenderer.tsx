@@ -4,6 +4,7 @@ import { ComparisonSlide } from "./slides/ComparisonSlide";
 import { ContentSlide } from "./slides/ContentSlide";
 import { DiagramSlide } from "./slides/DiagramSlide";
 import { GenericSlide } from "./slides/GenericSlide";
+import { ImageTextSlide } from "./slides/ImageTextSlide";
 import { PresenterSlide } from "./slides/PresenterSlide";
 import { QASlide } from "./slides/QASlide";
 import { QuizSlide } from "./slides/QuizSlide";
@@ -27,6 +28,8 @@ export function SlideRenderer({ slide }: Props) {
       return <ContentSlide slide={slide} />;
     case "comparison":
       return <ComparisonSlide slide={slide} />;
+    case "imageText":
+      return <ImageTextSlide slide={slide} />;
     case "diagram":
       return <DiagramSlide slide={slide} />;
     case "quiz":

@@ -1,0 +1,801 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Prisma ORM Masterclass",
+            "subtitle": "Next-Generation Type-Safe Database Access<br>A Deep Dive into Architecture, Schema Design, Migrations, Performance, and Serverless Workflows",
+            "emoji": "◮",
+            "backgroundImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development, Database Design & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "intro-orm",
+        "title": "Introduction & ORM Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Introduction to Prisma & The ORM Evolution",
+            "subtitle": "Understanding Database Access Patterns and Type-Safe System Needs"
+          },
+          {
+            "type": "imageText",
+            "title": "The Evolution of Database Access",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Database servers and cables",
+            "caption": "From raw queries to fully typed application models",
+            "content": "<h4>⚡ Shift in Database Interfaces</h4><p>Historically, developers interacted with databases using raw SQL, which had no compilation safety. Then came Object-Relational Mappers (ORMs) to bridge the gap between Object-Oriented Code and Relational Tables.</p><ul><li>🔌 <strong>Raw SQL</strong> - Maximum performance, but error-prone and hard to maintain.</li><li>⚙️ <strong>Query Builders</strong> - Knex.js / Kysely. Dynamic query construction without database mapping.</li><li>📦 <strong>Traditional ORMs</strong> - Sequelize / TypeORM. Maps tables to class instances.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "title": "Data Access Paradigms",
+            "leftTitle": "Traditional ORMs (Active Record / Data Mapper)",
+            "leftPoints": [
+              "🧱 Models are classes representing database rows",
+              "⚠️ Business logic and database operations are coupled",
+              "💥 Complex schemas require heavy annotations/decorators",
+              "🔄 Lazy loading of relations can trigger unexpected queries",
+              "❌ Dynamic typed systems cause high type-safety friction"
+            ],
+            "rightTitle": "Prisma ORM (Data Mapper / Virtual Schema)",
+            "rightPoints": [
+              "📄 Single declarative schema file as source of truth",
+              "🛡️ Auto-generated, fully-typed Prisma Client SDK",
+              "🚀 Rust-powered engines running query optimizations",
+              "⚙️ Explicit loading prevents silent N+1 query loops",
+              "💎 Zero-annotation typescript files representing tables"
+            ],
+            "note": {
+              "text": "Prisma decouples data modeling from runtime logic, producing compile-time type safety."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Prisma Philosophy",
+            "box": {
+              "title": "🎯 Three Pillars of Developer-First Database Access:",
+              "list": [
+                "<strong>Prisma Schema:</strong> A declarative schema file defining models, sources, and generators.",
+                "<strong>Prisma Client:</strong> Auto-generated, query-optimized, and fully type-safe JavaScript/TypeScript library.",
+                "<strong>Prisma Migrate:</strong> Standard CLI utility to create and apply SQL migration files automatically."
+              ]
+            },
+            "note": {
+              "text": "Prisma makes databases easy to reason about by aligning DB schemas directly with application code."
+            }
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "Which of the following is a key advantage of Prisma over traditional class-based ORMs?",
+            "options": [
+              "It eliminates the need for any database schema",
+              "It automatically runs business logic on the database server",
+              "It provides a single declarative schema file and auto-generates fully typed query clients",
+              "It replaces relational databases with raw text file storage"
+            ],
+            "correct": 2,
+            "explanation": "Prisma uses a single declarative file (schema.prisma) and generates a type-safe client, preventing runtime errors."
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Core Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Core Architecture & Rust Query Engine",
+            "subtitle": "Peeking Under the Hood of Prisma's High-Performance Core"
+          },
+          {
+            "type": "diagram",
+            "title": "Prisma Architecture Stack",
+            "content": "┌─────────────────────────────────────────────────────────────┐\n│                     Client Application                      │\n│                 (Next.js, Express, NestJS)                  │\n├──────────────────────────────┬──────────────────────────────┤\n│             Generated Prisma Client Module                  │\n│         (TypeScript definition files & JS wrapper)          │\n└──────────────────────────────┼──────────────────────────────┘\n                               │ Query Engine IPC / HTTP Channel\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                  Rust Query Engine Binary                   │\n│   (GraphQL AST parse, query planning, connection pooling,   │\n│    transaction management, N+1 query aggregation/batching)  │\n└──────────────────────────────┬──────────────────────────────┘\n                               │ Database TCP Connection\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                  Relational Database (SQL)                  │\n│             (PostgreSQL, MySQL, SQLite, MongoDB)            │\n└─────────────────────────────────────────────────────────────┘",
+            "note": {
+              "text": "The Rust Engine runs as a separate process (or Node.js library API) to handle actual database execution."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Under the Hood: Rust Query Engines",
+            "box": {
+              "title": "🦀 Why Rust for a Node.js ORM?",
+              "list": [
+                "<strong>Performance:</strong> Heavy query parsing, AST creation, and serialization run in compiled native code.",
+                "<strong>Memory Efficiency:</strong> Strict memory bounds without garbage collection pauses.",
+                "<strong>Cross-Language Support:</strong> Single engine code-base reused across Node.js, Go, and Python clients.",
+                "<strong>Automatic Batching:</strong> Efficient query resolver handles multiple select queries simultaneously."
+              ]
+            },
+            "note": {
+              "text": "By shifting queries to a Rust engine, node-based backend processes save memory and scale better."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Prisma's Engine Ecosystem",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Developer monitors servers",
+            "caption": "Specialized binaries managing schema transitions and data queries",
+            "content": "<h4>🛠️ The Three Internal Engines</h4><p>Prisma orchestrates several engines to manage schema state, migrations, and database queries behind the scenes.</p><ul><li>⚙️ <strong>Query Engine</strong> - Handles database query planning, connection pooling, and serialization.</li><li>📐 <strong>Schema Engine</strong> - Computes schema diffs, pulls data for introspection, and maps types.</li><li>🚚 <strong>Migration Engine</strong> - Operates migrations, checks shadow database state, and applies DDL.</li></ul>"
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "What is the primary role of the Rust Query Engine in Prisma?",
+            "options": [
+              "It automatically installs PostgreSQL on the developer's computer",
+              "It parses client queries, builds query plans, manages database connections, and fetches data",
+              "It converts the client application into a Rust binary",
+              "It renders the visual interfaces in Prisma Studio"
+            ],
+            "correct": 1,
+            "explanation": "The Rust Query Engine acts as the bridge between Prisma Client and the database, running optimized queries."
+          }
+        ]
+      },
+      {
+        "id": "schema",
+        "title": "The Prisma Schema File",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "The Prisma Schema File (schema.prisma)",
+            "subtitle": "Structuring the Source of Truth for Data Models, Sources, and Clients"
+          },
+          {
+            "type": "content",
+            "title": "Structure of schema.prisma",
+            "box": {
+              "title": "📄 The Three Main Block Types:",
+              "list": [
+                "<strong>datasource db:</strong> Defines database type (provider) and connection credentials (url).",
+                "<strong>generator client:</strong> Configures what language SDK to build (e.g. prisma-client-js).",
+                "<strong>model [Name]:</strong> Outlines database tables, columns, indexes, and relationships."
+              ]
+            },
+            "note": {
+              "text": "Every Prisma project starts with this file, typically located at prisma/schema.prisma."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Datasources & Generators",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Code editor configuration file",
+            "caption": "Declaring project environments and target language bindings",
+            "content": "<h4>🔌 Configuration Blocks</h4><p>Data source and generator blocks setup your project boundaries. They read environment variables dynamically to prevent leaking production secrets.</p><pre><code>datasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\ngenerator client {\n  provider = \"prisma-client-js\"\n}</code></pre>"
+          },
+          {
+            "type": "comparison",
+            "title": "Configuration Style Comparison",
+            "leftTitle": "Declarative schema.prisma",
+            "leftPoints": [
+              "✅ Clear, highly readable domain definition",
+              "✅ Database-agnostic configuration blocks",
+              "✅ Instantly visualizes relationships and constraints",
+              "✅ Reuses models directly to build schema validations",
+              "✅ Zero dependency decorators in runtime code files"
+            ],
+            "rightTitle": "Imperative Active Record models",
+            "rightPoints": [
+              "❌ Hard-coded JS classes with complex decorators",
+              "❌ Schema drifts easily from actual database state",
+              "❌ Relations scattered across many source files",
+              "❌ Slower startup time due to runtime code parsing",
+              "❌ Heavy framework coupling in database classes"
+            ],
+            "note": {
+              "text": "Using schema.prisma yields a single readable map of your database design."
+            }
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "Which block type in schema.prisma is used to read database connection URLs?",
+            "options": [
+              "generator",
+              "model",
+              "datasource",
+              "client"
+            ],
+            "correct": 2,
+            "explanation": "The datasource block specifies the database provider and database connection URL."
+          }
+        ]
+      },
+      {
+        "id": "data-modeling",
+        "title": "Data Modeling & Relations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Data Modeling & Relation Rules",
+            "subtitle": "Designing Tables, Mapping Fields, and Enforcing Referential Integrity"
+          },
+          {
+            "type": "content",
+            "title": "Field Types and Attributes",
+            "box": {
+              "title": "🏷️ Field Definition Primitives:",
+              "list": [
+                "<strong>Scalar Types:</strong> String, Int, Float, Boolean, DateTime, Json, Bytes.",
+                "<strong>Field Modifiers:</strong> Optional (<code>?</code>) or list (<code>[]</code>).",
+                "<strong>Attributes:</strong> <code>@id</code> (Primary Key), <code>@default()</code>, <code>@unique</code>, <code>@map()</code>.",
+                "<strong>Block Attributes:</strong> <code>@@id</code> (Composite Keys), <code>@@index</code> (Database indexes)."
+              ]
+            },
+            "note": {
+              "text": "Field attributes are prefixed with @, while block attributes apply to the model using @@."
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Relation Mappings in Prisma",
+            "leftTitle": "One-to-Many Relationships",
+            "leftPoints": [
+              "🧱 One User can author multiple Post records",
+              "🔗 Post model contains the foreign key: userId",
+              "📍 Uses @relation(fields: [userId], references: [id])",
+              "👥 User model contains a post array: posts Post[]",
+              "🛡️ Prisma enforces relation integrity at runtime"
+            ],
+            "rightTitle": "Many-to-Many (Implicit vs Explicit)",
+            "rightPoints": [
+              "🔄 Posts can have multiple Tag categories",
+              "📦 Implicit: Prisma handles pivot table automatically",
+              "🔧 Explicit: Manually define pivot model for extra fields",
+              "🔗 Implicit requires Tag[] in Post and Post[] in Tag",
+              "⚡ Implicit pivot tables scale and update instantly"
+            ],
+            "note": {
+              "text": "Implicit many-to-many relationships require no manual pivot table maintenance."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Prisma Relation Schema Layout",
+            "content": "┌─────────────────────────────────┐\n│             User                │\n│  id   : Int (Primary Key)      │\n│  email: String (Unique)         │\n└────────────────┬────────────────┘\n                 │ 1\n                 │\n                 │ Has Many\n                 ▼ 0..*\n┌─────────────────────────────────┐       0..*       ┌───────────────────┐\n│             Post                │◄────────────────►│        Tag        │\n│  id      : Int (Primary Key)    │  (Implicit       │  id  : Int        │\n│  title   : String               │   Relation)      │  name: String     │\n│  authorId: Int (Foreign Key)    │                  │                   │\n└─────────────────────────────────┘                  └───────────────────┘",
+            "note": {
+              "text": "Prisma handles the database join tables and constraint mapping transparently."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Referential Actions",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Database nodes diagram",
+            "caption": "Configuring delete and update propagation",
+            "content": "<h4>🛡️ Enforcing DB Constraints</h4><p>Referential actions define what happens to child records when a parent record is deleted or updated in the database.</p><ul><li>💥 <strong>Cascade</strong> - Delete child records when parent is deleted.</li><li>🚫 <strong>Restrict</strong> - Block parent deletion if child records exist.</li><li>📍 <strong>SetNull</strong> - Set foreign key to NULL on parent delete.</li><li>🔄 <strong>NoAction</strong> - Pass operation directly to database engine.</li></ul>"
+          },
+          {
+            "type": "content",
+            "title": "Database Introspection",
+            "box": {
+              "title": "🔌 Reverse-Engineering Schemas from Existing DBs:",
+              "list": [
+                "<strong>npx prisma db pull:</strong> Connects to db, parses tables, updates schema.prisma.",
+                "<strong>Automatic Mapping:</strong> Translates native types (e.g. VARCHAR) to Prisma types.",
+                "<strong>Incremental Schema Update:</strong> Safely preserves custom model mappings/relations.",
+                "<strong>Clean Setup:</strong> Start using Prisma in legacy applications in under 5 minutes."
+              ]
+            },
+            "note": {
+              "text": "Introspection guarantees that Prisma remains compatible with pre-existing database designs."
+            }
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "What modifier is added to a field type in Prisma to make it optional?",
+            "options": [
+              "Add a trailing asterisk (*)",
+              "Add a trailing question mark (?)",
+              "Add a trailing exclamation mark (!)",
+              "Wrap the type in brackets ([])"
+            ],
+            "correct": 1,
+            "explanation": "In Prisma schema, appending a '?' to the field type designates it as nullable/optional."
+          }
+        ]
+      },
+      {
+        "id": "client-crud",
+        "title": "Prisma Client & CRUD",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Prisma Client & CRUD Operations",
+            "subtitle": "Generating the Client and Performing Core Database Interactions"
+          },
+          {
+            "type": "content",
+            "title": "Generating the Client",
+            "box": {
+              "title": "⚙️ The Setup and Compilation Sequence:",
+              "list": [
+                "<strong>1. Install:</strong> Install <code>@prisma/client</code> package.",
+                "<strong>2. Declare:</strong> Define generator client in schema.prisma.",
+                "<strong>3. Build:</strong> Run <code>npx prisma generate</code> inside terminal.",
+                "<strong>4. Import:</strong> Import client instance into code files."
+              ]
+            },
+            "note": {
+              "text": "Generating runs type compilation locally, creating typed interfaces in node_modules."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Performing Read Operations",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Developer writing JS code",
+            "caption": "Fetching database entities with complete type safety",
+            "content": "<h4>🔍 Retrieving Database Records</h4><p>Prisma Client exposes straightforward CRUD APIs for database reading. Queries return plain JavaScript objects that conform exactly to your model definitions.</p><pre><code>// Fetch user by unique email\nconst user = await prisma.user.findUnique({\n  where: { email: \"aravind@bude.io\" }\n});\n\n// Fetch first matching record\nconst post = await prisma.post.findFirst({\n  where: { published: true }\n});</code></pre>"
+          },
+          {
+            "type": "comparison",
+            "title": "Create, Update & Upsert",
+            "leftTitle": "Create and Update",
+            "leftPoints": [
+              "🧱 create() inserts a single record into the database",
+              "📝 update() modifies fields on matching records",
+              "⚠️ update() throws an error if no record matches",
+              "👥 Support nested writes (e.g. create user and posts at once)"
+            ],
+            "rightTitle": "Upsert (Merge)",
+            "rightPoints": [
+              "🔄 upsert() handles both create and update operations",
+              "🛡️ Ensures operations succeed regardless of record existence",
+              "🔧 Requires where: unique identifier block",
+              "💎 Requires separate create: and update: object fields"
+            ],
+            "note": {
+              "text": "Nested writes allow you to perform atomic multi-table inserts with a single client call."
+            }
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "Which Prisma Client command updates an existing database record or inserts it if it is missing?",
+            "options": [
+              "prisma.user.update()",
+              "prisma.user.createOrUpdate()",
+              "prisma.user.upsert()",
+              "prisma.user.save()"
+            ],
+            "correct": 2,
+            "explanation": "The upsert() method combines creation and update logic into a single database-safe transaction."
+          }
+        ]
+      },
+      {
+        "id": "advanced-querying",
+        "title": "Advanced Querying",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Advanced Querying & Filtering",
+            "subtitle": "Leveraging Relations, Complex Filters, Pagination, and Raw SQL Escapes"
+          },
+          {
+            "type": "content",
+            "title": "Filtering & Sorting Operators",
+            "box": {
+              "title": "🔍 Advanced Query Modifiers:",
+              "list": [
+                "<strong>Logical Operators:</strong> <code>AND</code>, <code>OR</code>, <code>NOT</code> block nesting.",
+                "<strong>Text Comparison:</strong> <code>contains</code>, <code>startsWith</code>, <code>endsWith</code>, <code>mode: 'insensitive'</code>.",
+                "<strong>Number/Date bounds:</strong> <code>gt</code>, <code>gte</code>, <code>lt</code>, <code>lte</code>.",
+                "<strong>Sorting:</strong> <code>orderBy</code> specifying fields with <code>asc</code> or <code>desc</code>."
+              ]
+            },
+            "note": {
+              "text": "Every query parameter is fully type-checked, preventing compile-time typos in field names."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Fetching Related Entities",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Connected servers database",
+            "caption": "Eagerly loading database relations with include",
+            "content": "<h4>🔗 Nested Object Queries</h4><p>Prisma handles SQL joins dynamically. You specify what relations to load using the <code>include</code> block, or select specific columns using <code>select</code>.</p><pre><code>// Fetch user and eagerly load posts array\nconst author = await prisma.user.findUnique({\n  where: { id: 1 },\n  include: { posts: true }\n});\n\n// Select specific columns only\nconst minimal = await prisma.user.findMany({\n  select: { email: true, name: true }\n});</code></pre>"
+          },
+          {
+            "type": "comparison",
+            "title": "Pagination Patterns",
+            "leftTitle": "Offset-based Pagination",
+            "leftPoints": [
+              "🧱 Uses take: (limit) and skip: (offset)",
+              "📉 Database skips rows sequentially (causes slow reads at depth)",
+              "🌐 Excellent for fixed page counts (e.g. Page 1, Page 2)",
+              "⚠️ Vulnerable to schema drifts (duplicate/skipped records)"
+            ],
+            "rightTitle": "Cursor-based Pagination",
+            "rightPoints": [
+              "🔄 Uses take: and cursor: (unique row ID identifier)",
+              "📈 Maximum database speed because index pointer is moved",
+              "📱 Recommended for infinite scroll user interfaces",
+              "💎 Robust against inserts/deletions during queries"
+            ],
+            "note": {
+              "text": "Cursor-based pagination offers stable performance even when processing millions of database rows."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Raw SQL Fallbacks",
+            "box": {
+              "title": "🛠️ Escape Hatches for Specialized Database Operations:",
+              "list": [
+                "<strong>prisma.$queryRaw:</strong> Run raw SQL queries and return typed data structures.",
+                "<strong>prisma.$executeRaw:</strong> Run raw SQL update/delete operations (DDL/DML).",
+                "<strong>SQL Injection Protection:</strong> Uses JS template literals to sanitize parameters automatically.",
+                "<strong>Native Query Support:</strong> Write specialized queries (e.g. CTEs or JSON aggregations)."
+              ]
+            },
+            "note": {
+              "text": "Prisma automatically parses the output of raw queries back into standard javascript objects."
+            }
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "Which block parameter is used in Prisma to eagerly load database relationships?",
+            "options": [
+              "join",
+              "select",
+              "include",
+              "merge"
+            ],
+            "correct": 2,
+            "explanation": "The include block tells the query engine to load related database records using SQL joins."
+          }
+        ]
+      },
+      {
+        "id": "transactions",
+        "title": "Transactions & Batching",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Transactions & Batching Operations",
+            "subtitle": "Guaranteeing ACID Compliance and Handling Complex Multi-Record Operations"
+          },
+          {
+            "type": "content",
+            "title": "Sequential Transactions",
+            "box": {
+              "title": "📦 Bundling Parallel DB Operations:",
+              "list": [
+                "<strong>Array API:</strong> Pass multiple operations inside <code>prisma.$transaction([...])</code>.",
+                "<strong>ACID Safety:</strong> If any nested operation fails, the transaction rolls back.",
+                "<strong>Execution Speed:</strong> Operations run in a single network round-trip to database.",
+                "<strong>Concurrency:</strong> Automatically handles database locks transparently."
+              ]
+            },
+            "note": {
+              "text": "Sequential transactions are ideal for simple batch inserts or bulk status updates."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Interactive Transactions",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Code displaying async javascript logic",
+            "caption": "Executing conditional queries inside transactions",
+            "content": "<h4>🔄 Handling Conditional Updates</h4><p>When database operations depend on the result of previous queries within the same transaction, you use Interactive Transactions.</p><pre><code>await prisma.$transaction(async (tx) => {\n  // 1. Fetch source wallet balance\n  const sender = await tx.wallet.findUnique({ ... });\n  if (sender.balance < amount) throw new Error();\n\n  // 2. Perform transfer\n  await tx.wallet.update({ ... });\n  await tx.wallet.update({ ... });\n});</code></pre>"
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "What is the key benefit of Interactive Transactions over Sequential Transactions?",
+            "options": [
+              "They run without contacting the database",
+              "They allow you to write conditional application logic inside the transaction scope",
+              "They can only insert records but never update them",
+              "They disable database row locking"
+            ],
+            "correct": 1,
+            "explanation": "Interactive transactions provide a transaction client (tx) inside a callback, enabling checks before execution."
+          }
+        ]
+      },
+      {
+        "id": "migrate",
+        "title": "Prisma Migrate",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Prisma Migrate & Schema Evolution",
+            "subtitle": "Version Control for Your Database Schema and Deployment Operations"
+          },
+          {
+            "type": "content",
+            "title": "Migration Workflows",
+            "box": {
+              "title": "🚚 Development Migration Sequence:",
+              "list": [
+                "<strong>1. Modify:</strong> Update models or constraints in <code>schema.prisma</code>.",
+                "<strong>2. Dev Migrate:</strong> Run <code>npx prisma migrate dev</code> in console.",
+                "<strong>3. DDL:</strong> Prisma diffs schema, generates SQL, and runs it on the database.",
+                "<strong>4. Artifact:</strong> A timestamped folder with <code>migration.sql</code> is saved to disk."
+              ]
+            },
+            "note": {
+              "text": "These generated SQL files should be committed to your version control (Git)."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Prisma Migrate Lifecycle",
+            "content": "┌──────────────────────────────────────────────┐\n│            Local schema.prisma               │\n│         (Developer edits schema model)       │\n└──────────────────────┬───────────────────────┘\n                       │ npx prisma migrate dev\n                       ▼\n┌──────────────────────────────────────────────┐\n│               Shadow Database                │\n│    (Temporary DB created to check migrations │\n│     history and compute schema difference)   │\n└──────────────────────┬───────────────────────┘\n                       │ Computes DDL SQL diff\n                       ▼\n┌──────────────────────┴───────────────────────┐\n│         Generated migration.sql              │\n│       (Saved locally as version control)     │\n└──────────────────────┬───────────────────────┘\n                       │ Applies SQL changes\n                       ▼\n┌──────────────────────────────────────────────┐\n│         Development / Production DB          │\n│        (Database tables updated)             │\n└──────────────────────────────────────────────┘",
+            "note": {
+              "text": "The shadow database detects conflicts and guarantees migrations apply cleanly."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Baseline & Drift Resolution",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Database infrastructure visual representation",
+            "caption": "Managing production drift and legacy applications",
+            "content": "<h4>⚠️ Responding to Database Drift</h4><p>Drift occurs when changes are made directly to the database without updating the schema.prisma file. Prisma CLI provides tools to reconcile these variations safely.</p><ul><li>📍 <strong>npx prisma migrate resolve</strong> - Marks migrations as applied.</li><li>⚡ <strong>npx prisma db push</strong> - Synchronizes state directly without generating migration history.</li><li>📦 <strong>Baseline Migrations</strong> - Initialize migrations on existing databases.</li></ul>"
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "What role does the shadow database play in Prisma Migrate development?",
+            "options": [
+              "It acts as a backup store for user sessions",
+              "It runs in the cloud to host static web assets",
+              "It is a temporary database used to validate migrations and detect schema drifts",
+              "It serves queries when the primary database crashes"
+            ],
+            "correct": 2,
+            "explanation": "Prisma Migrate uses the shadow database to test DDL scripts, ensuring migration history is consistent."
+          }
+        ]
+      },
+      {
+        "id": "optimization",
+        "title": "Performance Optimization",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Performance Optimization & N+1 Prevention",
+            "subtitle": "Eliminating Query Bottlenecks and Accelerating Data Fetching"
+          },
+          {
+            "type": "content",
+            "title": "The N+1 Query Problem",
+            "box": {
+              "title": "🐌 What is the N+1 Query Problem?",
+              "list": [
+                "<strong>Initial Query:</strong> Application fetches N parent records (e.g. 50 users).",
+                "<strong>Subsequent Queries:</strong> Loop fetches relations for each record (50 select post queries).",
+                "<strong>Cost:</strong> 1 + N total network database calls instead of 1 simple join.",
+                "<strong>Result:</strong> Slow app response times and heavy database overhead."
+              ]
+            },
+            "note": {
+              "text": "Many traditional ORMs suffer from N+1 query loops due to lazy relation loading features."
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Loading Strategies",
+            "leftTitle": "Prisma Automatic Batching",
+            "leftPoints": [
+              "✅ Eager relation loading via include / select",
+              "✅ Automatic query aggregation via DataLoader pattern",
+              "✅ Batches multiple ID lookups into a single IN (...) query",
+              "✅ Keeps database network trips to a absolute minimum",
+              "✅ Out-of-the-box N+1 protection with zero custom config"
+            ],
+            "rightTitle": "Traditional Lazy Loading",
+            "rightPoints": [
+              "❌ Relations loaded dynamically when fields are read",
+              "❌ Causes silent, hard-to-detect database query loop calls",
+              "❌ High database connection exhaustion risk under load",
+              "❌ Increases app logic latency due to network chatter",
+              "❌ Requires complex manual pre-fetching configurations"
+            ],
+            "note": {
+              "text": "Prisma defaults to eager loading, forcing developers to make conscious relation load choices."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Configuring Database Indexes",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Speed database concept",
+            "caption": "Speeding up database lookups with indices",
+            "content": "<h4>⚡ Creating Schema Indexes</h4><p>Indices are crucial to maintain fast query response times as databases scale. You specify indices directly inside your models.</p><pre><code>model Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  authorId  Int\n\n  // Add index on authorId foreign key\n  @@index([authorId])\n}</code></pre>"
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "How does Prisma prevent the N+1 query problem during relation fetching?",
+            "options": [
+              "It stores the entire database in Node.js server memory",
+              "It relies on lazy loading, executing queries only when properties are read",
+              "It uses automatic query batching and forces developers to use explicit include blocks",
+              "It blocks relation requests that cross more than two tables"
+            ],
+            "correct": 2,
+            "explanation": "Prisma uses explicit relation loading (include) and aggregates lookup operations internally, preventing N+1 queries."
+          }
+        ]
+      },
+      {
+        "id": "serverless",
+        "title": "Serverless Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Serverless Architecture & Prisma Accelerate",
+            "subtitle": "Scaling Connections and Speeding up Edge Data Delivery"
+          },
+          {
+            "type": "content",
+            "title": "Serverless Connection Challenges",
+            "box": {
+              "title": "⚠️ The Serverless Database Bottleneck:",
+              "list": [
+                "<strong>Ephemeral Compute:</strong> Lambda functions spin up and down dynamically on requests.",
+                "<strong>Instance Isolation:</strong> Each active runtime instance creates its own connection pool.",
+                "<strong>Resource Exhaustion:</strong> High traffic instantly runs out of database connections.",
+                "<strong>Cold Starts:</strong> Re-establishing database handshakes adds latency to requests."
+              ]
+            },
+            "note": {
+              "text": "Serverless infrastructure requires external connection poolers to sit between lambdas and DBs."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Prisma Accelerate Stack",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Serverless edge networks",
+            "caption": "Connecting edge apps to databases with global proxy layers",
+            "content": "<h4>⚡ Global Connection Pooling & Caching</h4><p>Prisma Accelerate is a cloud-based database proxy proxying queries from edge environments (Vercel, Cloudflare Workers) to databases.</p><ul><li>🔌 <strong>Connection Pooling</strong> - Maintains a persistent, reuseable database pool.</li><li>🌍 <strong>Global Edge Caching</strong> - Cache database results on global CDN points.</li><li>💎 <strong>Optimized Client</strong> - Ultra-lightweight Prisma engine client without heavy engine binaries.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "title": "Accelerate vs. Pulse",
+            "leftTitle": "Prisma Accelerate",
+            "leftPoints": [
+              "🧱 Global database connection proxy layer",
+              "📈 Prevents connection exhaustion in serverless",
+              "⚡ Caches read queries at the edge",
+              "⚙️ Replaces standard database URL string"
+            ],
+            "rightTitle": "Prisma Pulse",
+            "rightPoints": [
+              "🔄 Real-time database event subscription",
+              "🌍 Captures change events (CDC) from database",
+              "📱 Triggers serverless functions on DB writes",
+              "💎 Perfect for chat, sync, and event-driven architecture"
+            ],
+            "note": {
+              "text": "Accelerate optimizes query speed and scaling; Pulse enables event-driven reactivity."
+            }
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "Which Prisma product is designed to provide global connection pooling and edge caching?",
+            "options": [
+              "Prisma Migrate",
+              "Prisma Pulse",
+              "Prisma Studio",
+              "Prisma Accelerate"
+            ],
+            "correct": 3,
+            "explanation": "Prisma Accelerate is a database proxy that resolves connection pool limits and caches queries at the edge."
+          }
+        ]
+      },
+      {
+        "id": "integration",
+        "title": "Framework Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Integration with Next.js & Modern Frameworks",
+            "subtitle": "Setting up Singletons, API Routes, and Leveraging Full Type Safety"
+          },
+          {
+            "type": "content",
+            "title": "Prisma in Next.js Server Components",
+            "box": {
+              "title": "🧱 Avoiding Hot-Reload Client Leaks:",
+              "list": [
+                "<strong>The Problem:</strong> Next.js dev server hot-reload instantiates multiple Prisma Clients.",
+                "<strong>The Result:</strong> Quickly exhausts database connection limits in local development.",
+                "<strong>The Solution:</strong> Instantiate PrismaClient as a global singleton object.",
+                "<strong>Integration:</strong> Directly import and invoke the global prisma client instance."
+              ]
+            },
+            "note": {
+              "text": "In production, the singleton pattern ensures a single pool is shared across server instances."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Type-safe API Routes with NestJS",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "API architecture code representation",
+            "caption": "Integrating database models with dependency injection",
+            "content": "<h4>💎 Clean Backend Architectures</h4><p>Prisma integrates seamlessly with NestJS. Wrap your Prisma Client in a Service class to hook it into the dependency injection lifecycle container.</p><pre><code>@Injectable()\nexport class PrismaService \n  extends PrismaClient \n  implements OnModuleInit {\n  \n  async onModuleInit() {\n    await this.$connect();\n  }\n}</code></pre>"
+          },
+          {
+            "type": "quiz",
+            "title": "Knowledge Check",
+            "question": "Why is a global singleton instantiation pattern recommended for PrismaClient in Next.js local development?",
+            "options": [
+              "To encrypt database passwords stored in files",
+              "To prevent hot-reloading from creating new client instances and exhausting connections",
+              "To convert the relational database to a GraphQL API automatically",
+              "To force database queries to run synchronously"
+            ],
+            "correct": 1,
+            "explanation": "Because Next.js re-runs code modules on hot-reload, caching PrismaClient globally prevents connection leaks."
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion & Summary",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Conclusion & Next Steps",
+            "subtitle": "Building Modern, Safe, and Fast Database Applications"
+          },
+          {
+            "type": "thank-you",
+            "emoji": "◮",
+            "message": "Thank you for attending the Prisma ORM Masterclass!",
+            "note": {
+              "text": "Master schema validation, database migrations, and edge performance using Prisma. Dive deeper at prisma.io."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

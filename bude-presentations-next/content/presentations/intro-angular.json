@@ -1,0 +1,761 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "emoji": "🅰️",
+            "title": "Angular Masterclass",
+            "subtitle": "Modern Enterprise Web Application Development with Angular<br>Standalone Architecture, RxJS, Signals, Dependency Injection, and Routing",
+            "backgroundImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer & IoT Enthusiast",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Full-Stack Development, Architecture Design & Frontend Engineering Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "intro-angular",
+        "title": "Introduction & Overview",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🚀",
+            "title": "Introduction to Angular",
+            "subtitle": "Overview of Google's Enterprise-Grade Frontend Framework"
+          },
+          {
+            "type": "imageText",
+            "title": "What is Angular?",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Workspace representing development team working on web interfaces",
+            "caption": "A batteries-included framework for scalable development",
+            "content": "<h4>🛡️ Enterprise-Grade Web Platform</h4><p>Angular is a development platform and framework built on TypeScript for creating highly scalable, single-page web applications (SPAs).</p><ul><li>📦 <strong>Batteries-Included</strong> - Official solutions for routing, state management, HTTP requests, form handling, and testing.</li><li>⚙️ <strong>Component-Driven</strong> - Focuses on modular, reusable pieces of user interfaces.</li><li>💪 <strong>TypeScript Native</strong> - Strong typing, static analysis, and robust tooling support from day one.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Angular vs. React & Vue",
+            "leftTitle": "React / Vue (Library Paradigm)",
+            "leftPoints": [
+              "🔌 Bring Your Own Library - Routing, form validation, and state must be chosen from community packages.",
+              "🧩 Fast, lightweight core that focuses on the view layer.",
+              "✍️ JSX/Virtual DOM for rendering templates.",
+              "🌀 High flexibility, which can lead to inconsistencies across projects."
+            ],
+            "rightTitle": "Angular (Framework Paradigm)",
+            "rightPoints": [
+              "🔋 Full Ecosystem - Official router, HTTP client, forms, and validation libraries are built-in.",
+              "🏗️ Opinionated Architecture ensures code looks consistent across teams.",
+              "⚡ Ahead-Of-Time (AOT) Ivy compiler outputs direct DOM instructions.",
+              "🛠️ Standard CLI handles code generation, builds, and updates automatically."
+            ],
+            "note": {
+              "text": "Angular's opinionated nature drastically simplifies onboarding and maintainability in large enterprises."
+            }
+          },
+          {
+            "type": "content",
+            "title": "A Brief History of Angular",
+            "box": {
+              "title": "⏳ Evolution from AngularJS to Modern Angular",
+              "list": [
+                "<strong>AngularJS (1.x - 2010):</strong> The original framework based on MVC and two-way binding. Suffered from scaling and performance limitations.",
+                "<strong>Angular 2 (2016):</strong> A complete rewrite. Shifted to component architecture, TypeScript, and unidirectional data flow.",
+                "<strong>Ivy Compiler (v9 - 2020):</strong> Next-generation compiler that decreased bundle sizes and improved debugging experience.",
+                "<strong>Modern Era (v14+ to present):</strong> Introduced Standalone components (removing NgModule requirements), Signals reactive primitive, and zoneless rendering."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-architecture",
+        "title": "Core Architecture",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏗️",
+            "title": "Core Architecture & Compiler",
+            "subtitle": "How Angular Applications Compiles and Operates Under the Hood"
+          },
+          {
+            "type": "diagram",
+            "title": "Angular Workspace Compilation Flow",
+            "content": "┌───────────────────────────────────────────────┐\n│         Angular TypeScript Source Code        │\n│      (Components, Templates, CSS, Directives) │\n└───────────────────────┬───────────────────────┘\n                        │\n                        ▼  Angular CLI (ng build)\n┌───────────────────────────────────────────────┐\n│            Ivy Compiler (AOT Engine)          │\n│  - Parses HTML templates                      │\n│  - Type-checks templates against component TS │\n│  - Generates optimized JavaScript DOM code    │\n└───────────────────────┬───────────────────────┘\n                        │\n                        ▼  Tree-Shaking (Webpack/Esbuild)\n┌───────────────────────────────────────────────┐\n│            Optimized Production Bundles       │\n│      (Main.js, Polyfills.js, Styles.css)      │\n└───────────────────────────────────────────────┘",
+            "note": {
+              "text": "Ahead-of-Time (AOT) Ivy compiler validates templates during build time, preventing runtime errors in templates."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Angular CLI: The Developer's Swiss Army Knife",
+            "box": {
+              "title": "🛠️ Command-Line Utilities",
+              "list": [
+                "<code>ng new [name]</code> - Scaffolds a complete workspace with tests, styles, and routing configuration.",
+                "<code>ng generate [type] [name]</code> - Creates components, services, directives, guards, and pipes following style guides.",
+                "<code>ng serve</code> - Launches a fast, local development server with Hot Module Replacement (HMR).",
+                "<code>ng build</code> - Compiles the app into output files in the dist/ directory with optimizations."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "The Root Application Bootstrapping",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Code on a monitor representing JavaScript orchestration",
+            "caption": "The main entry point: bootstrapApplication",
+            "content": "<h4>🔥 Standalone Bootstrapping</h4><p>Modern Angular applications bypass standard NgModule definitions and bootstrap directly using a root Component.</p><ul><li>⚡ <strong>main.ts</strong> - The entry point. Imports <code>bootstrapApplication</code> and configures core providers.</li><li>📂 <strong>app.config.ts</strong> - Holds app-wide configurations like routers, HTTP client, and state services.</li><li>🌐 <strong>index.html</strong> - Contains the root element (e.g. <code>&lt;app-root&gt;</code>) which is replaced by Angular.</li></ul>"
+          }
+        ]
+      },
+      {
+        "id": "standalone-components",
+        "title": "Standalone Components",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧩",
+            "title": "Standalone Components & Anatomy",
+            "subtitle": "Building Modern Angular Applications without NgModules"
+          },
+          {
+            "type": "content",
+            "title": "The Paradigm Shift: Standalone vs NgModule",
+            "box": {
+              "title": "💡 Why did Angular introduce Standalone?",
+              "list": [
+                "<strong>Before Standalone:</strong> Every component had to be declared in an <code>NgModule</code>, which managed imports, exports, and providers. This created heavy boilerplate and high learning curves.",
+                "<strong>With Standalone:</strong> Components directly declare their dependencies (components, directives, pipes) inside their <code>imports</code> array.",
+                "<strong>Modular:</strong> Reusability is simple. Just import the component where needed; no shared modules required."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Anatomy of a Standalone Component",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Abstract illustration of puzzle blocks representing components",
+            "caption": "Metadata and logic unified in one file",
+            "content": "<h4>✍️ Component Anatomy</h4><pre><code class=\"language-typescript\">import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-user-profile',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './profile.component.html',\n  styleUrls: ['./profile.component.css']\n})\nexport class UserProfileComponent {\n  username = 'Aravind';\n}</code></pre>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "⚙️",
+            "title": "Component Metadata Config",
+            "leftTitle": "Essential Metadata Properties",
+            "leftPoints": [
+              "🏷️ <strong>selector:</strong> CSS selector that tells Angular where to instantiate the component.",
+              "🏡 <strong>template / templateUrl:</strong> Inline or external HTML structure defining the view.",
+              "🎨 <strong>styles / styleUrls:</strong> Scope-encapsulated styles for UI components."
+            ],
+            "rightTitle": "Dependency Metadata Properties",
+            "rightPoints": [
+              "🧱 <strong>standalone: true:</strong> Tells Ivy this component does not belong to any NgModule.",
+              "📦 <strong>imports:</strong> List of other components, directives, and pipes used in this component's template.",
+              "💉 <strong>providers:</strong> Define localized services injected for this component subtree."
+            ],
+            "note": {
+              "text": "Angular uses View Encapsulation (shadow DOM simulation) to prevent component CSS from leaking into other areas."
+            }
+          }
+        ]
+      },
+      {
+        "id": "template-syntax-directives",
+        "title": "Template Syntax & Directives",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🎨",
+            "title": "Template Syntax & Directives",
+            "subtitle": "HTML Templating, Data Binding, and Structural Control Flows"
+          },
+          {
+            "type": "content",
+            "title": "Angular Data Binding Mechanisms",
+            "box": {
+              "title": "🔗 Connecting Component Data to HTML Templates",
+              "list": [
+                "<strong>Interpolation:</strong> <code>{{ value }}</code>. Inserts dynamic text into markup.",
+                "<strong>Property Binding:</strong> <code>[src]=\"imageUrl\"</code>. Binds component state variables to DOM element properties.",
+                "<strong>Event Binding:</strong> <code>(click)=\"onSave()\"</code>. Listens for user interactions and runs component code.",
+                "<strong>Two-Way Data Binding:</strong> <code>[(ngModel)]=\"username\"</code>. Synchronizes component variable and form input state in both directions."
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔀",
+            "title": "New Control Flow vs. Old Directives",
+            "leftTitle": "Classic Directives (pre-v17)",
+            "leftPoints": [
+              "<code>*ngIf=\"isLoggedIn\"</code> requires importing <code>CommonModule</code>.",
+              "Verbose syntax using helper tags like <code>&lt;ng-template&gt;</code>.",
+              "Requires <code>*ngFor=\"let item of list\"</code> to iterate arrays.",
+              "Uses <code>[ngSwitch]</code> for switch cases."
+            ],
+            "rightTitle": "Modern Control Flow (@ block)",
+            "rightPoints": [
+              "Built directly into the compiler: no imports required.",
+              "Clean JS-like syntax: <code>@if (isLoggedIn) { ... } @else { ... }</code>.",
+              "Extremely fast iterations: <code>@for (item of list; track item.id) { ... }</code>.",
+              "Mandatory <code>track</code> clause boosts DOM render performance."
+            ],
+            "note": {
+              "text": "The new @for block performs significantly faster than *ngFor and has built-in @empty blocks when arrays are empty."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Attribute and Custom Directives",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Code snippet illustrating modular extensions",
+            "caption": "Extending element behavior using @Directive",
+            "content": "<h4>⚡ Directives in Angular</h4><p>Directives allow developers to attach custom behavior, modify classes/styles, or manipulate structure on host elements.</p><ul><li>🎨 <strong>ngClass & ngStyle</strong> - Conditional CSS classes and inline styling.</li><li>🔧 <strong>Custom Attribute Directives</strong> - Listening to mouse hover and dynamically modifying element styles.</li><li>🧬 <strong>Structure Directives</strong> - Adding or removing HTML elements programmatically.</li></ul>"
+          }
+        ]
+      },
+      {
+        "id": "pipes-data-transformation",
+        "title": "Pipes & Data Transformation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧪",
+            "title": "Pipes & Data Transformation",
+            "subtitle": "Formatting and Transforming Template Data on the Fly"
+          },
+          {
+            "type": "content",
+            "title": "Built-in Angular Pipes",
+            "box": {
+              "title": "🚰 Streamlining Data Formatting directly in templates:",
+              "list": [
+                "<strong>DatePipe:</strong> <code>{{ user.joined | date:'shortDate' }}</code>. Formats raw timestamp strings.",
+                "<strong>CurrencyPipe:</strong> <code>{{ price | currency:'USD' }}</code>. Renders currency symbols and decimas.",
+                "<strong>JsonPipe:</strong> <code>&lt;pre&gt;{{ user | json }}&lt;/pre&gt;</code>. Prints debug object structures as strings.",
+                "<strong>AsyncPipe:</strong> <code>{{ items$ | async }}</code>. Automatically subscribes to Observables and unsubscribes when destroyed."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Creating Custom Pipes",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Text editor displaying frontend logic",
+            "caption": "The transform method: PipeTransform interface",
+            "content": "<h4>🎨 Custom Pipe Anatomy</h4><pre><code class=\"language-typescript\">import { Pipe, PipeTransform } from '@angular/core';\n\n@Pipe({\n  name: 'exponential',\n  standalone: true\n})\nexport class ExponentialPipe implements PipeTransform {\n  transform(value: number, exponent = 1): number {\n    return Math.pow(value, exponent);\n  }\n}</code></pre>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🛡️",
+            "title": "Pure vs. Impure Pipes",
+            "leftTitle": "Pure Pipes (Default)",
+            "leftPoints": [
+              "Executed only when input reference changes.",
+              "Cached: Returns prior computed values if inputs remain identical.",
+              "Extremely fast and optimized for rendering loop performance.",
+              "Must use immutable state patterns to trigger re-computation."
+            ],
+            "rightTitle": "Impure Pipes",
+            "rightPoints": [
+              "Executed during every application change detection cycle.",
+              "No caching: Recalculates values on every mouse move or keystroke.",
+              "Can seriously degrade scrolling and interaction performance.",
+              "Necessary for dynamic asynchronous calls without standard dependencies."
+            ],
+            "note": {
+              "text": "Keep custom pipes Pure by default. If you need dynamic updates, rely on Services or Signals instead of Impure pipes."
+            }
+          }
+        ]
+      },
+      {
+        "id": "dependency-injection",
+        "title": "Dependency Injection (DI)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "💉",
+            "title": "Dependency Injection & Services",
+            "subtitle": "Decoupling Logic with Angular's Hierarchical DI Engine"
+          },
+          {
+            "type": "diagram",
+            "title": "Hierarchical Injector Lookup",
+            "content": "┌───────────────────────────────────────────────┐\n│               Platform Injector               │\n│         (Global browser-level instances)       │\n└───────────────────────▲───────────────────────┘\n                        │ Parent Lookups\n┌───────────────────────┴───────────────────────┐\n│                 Root Injector                 │\n│        (AppConfig: `providedIn: 'root'`)       │\n└───────────────────────▲───────────────────────┘\n                        │ Parent Lookups\n┌───────────────────────┴───────────────────────┐\n│            Route / Element Injector           │\n│    (Lazy Route definition or @Component)      │\n└───────────────────────▲───────────────────────┘\n                        │ DI Token Request\n                 [ Component ]",
+            "note": {
+              "text": "Angular DI walks up the injector tree to resolve tokens. If a token is not found, it throws a No Provider Found error."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Declaring Injectable Services",
+            "box": {
+              "title": "🧬 Creating Reusable Business Logic Classes",
+              "list": [
+                "<strong>@Injectable Decorator:</strong> Marks a class as available for dependency injection.",
+                "<strong>providedIn: 'root':</strong> Declares service as a singleton at the app-wide level. Allows optimal compiler code tree-shaking.",
+                "<strong>Constructor Injection:</strong> The traditional way to declare dependencies inside class headers.",
+                "<strong>inject() Function (v14+):</strong> Modern functional API to query tokens outside constructor boundaries."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "inject() Function vs Constructor Injection",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1516116211223-5c359a36298a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Technological background showing modular wiring",
+            "caption": "Choosing modern functional APIs",
+            "content": "<h4>💉 Modern DI Syntax</h4><pre><code class=\"language-typescript\">// Traditional Constructor style\nexport class UserService {\n  constructor(private http: HttpClient) {}\n}\n\n// Modern inject() style\nexport class UserService {\n  private http = inject(HttpClient);\n}</code></pre>"
+          }
+        ]
+      },
+      {
+        "id": "rxjs-reactive-programming",
+        "title": "Reactive Programming with RxJS",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🌀",
+            "title": "Reactive Programming & RxJS",
+            "subtitle": "Asynchronous Streams, Reactive Programming, and Memory Management"
+          },
+          {
+            "type": "content",
+            "title": "Understanding RxJS Core Concepts",
+            "box": {
+              "title": "🌊 Asynchronous Flow Concepts",
+              "list": [
+                "<strong>Observable:</strong> A stream of values that can be observed over time.",
+                "<strong>Observer:</strong> A consumer that listens to values, error states, or completion triggers of an observable.",
+                "<strong>Subscription:</strong> Represents the execution context of an observable; must be managed to prevent memory leaks.",
+                "<strong>Subject / BehaviorSubject:</strong> Special Observables that allow multicasting values to multiple listeners (BehaviorSubject holds initial state)."
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Observable Pipeline Transformation",
+            "content": "Source Data Stream:  ---(1)-------(2)-------(3)--------->\n                         │         │         │\n                       pipe(map(x => x * 10))\n                         ▼         ▼         ▼\nMapped Stream:       ---(10)------(20)------(30)-------->\n                         │         │         │\n                       pipe(filter(x => x > 15))\n                         ▼         ▼         ▼\nFiltered Stream:     ------------(20)------(30)-------->\n                                   │         │\n                           subscribe(data => print)\n                                   ▼         ▼\nConsole Output:                  \"20\"      \"30\"",
+            "note": {
+              "text": "RxJS pipelines transform raw events into refined state streams using composable, pure mathematical operators."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Preventing Memory Leaks in RxJS",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Security padlock and binary code",
+            "caption": "Managing subscriptions proactively",
+            "content": "<h4>🛡️ Subscription Safety</h4><p>Failing to unsubscribe from global streams leaves components resident in browser memory, leading to heavy leaks.</p><ul><li>🔄 <strong>Async Pipe</strong> - Let Angular automatically subscribe/unsubscribe in HTML templates.</li><li>🛑 <strong>takeUntilDestroyed</strong> - Modern operator that unsubscribes automatically when component destroys.</li><li>🧩 <strong>take(1) / first()</strong> - Completes the stream immediately after receiving the first payload.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🧩",
+            "title": "Common RxJS Operators",
+            "leftTitle": "Transformation & Filtering",
+            "leftPoints": [
+              "🔄 <strong>map:</strong> Applies a transformation function to each emitted value.",
+              "🧹 <strong>filter:</strong> Allows only matching values through to observers.",
+              "⏳ <strong>debounceTime:</strong> Ignores events until a specific quiet time has passed (great for search inputs)."
+            ],
+            "rightTitle": "Flattening / Concatenation",
+            "rightPoints": [
+              "⚡ <strong>switchMap:</strong> Cancels previous HTTP request and maps to new observable (avoids race conditions).",
+              "📥 <strong>mergeMap:</strong> Fires multiple parallel requests simultaneously without cancelling any.",
+              "🧱 <strong>concatMap:</strong> Executes calls sequentially in order, waiting for prior streams to finish."
+            ],
+            "note": {
+              "text": "Use switchMap for search inputs and auto-completes to guarantee stale server responses are discarded."
+            }
+          }
+        ]
+      },
+      {
+        "id": "angular-signals",
+        "title": "Angular Signals",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚡",
+            "title": "Angular Signals",
+            "subtitle": "Understanding the New Fine-Grained Reactive Primitives"
+          },
+          {
+            "type": "imageText",
+            "title": "What are Angular Signals?",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Fibers showing connection and quick communication",
+            "caption": "Direct dependency tracking at the variable level",
+            "content": "<h4>⚡ The New Reactive Core</h4><p>Signals track where and when state is used, allowing Angular to trigger updates at a micro-level rather than checking entire DOM branches.</p><ul><li>🎯 <strong>Fine-Grained Updates</strong> - Direct, precise DOM updates.</li><li>🔗 <strong>Auto-Dependency Tracking</strong> - Automatically updates dependent state.</li><li>⚡ <strong>Zoneless Ready</strong> - Allows compiling apps without Zone.js.</li></ul>"
+          },
+          {
+            "type": "diagram",
+            "title": "Signals Reactive Dependency Graph",
+            "content": "┌───────────────────────────────────────────────┐\n│            Writable Signal (count)             │ <─── count.set(2)\n│              (Holds core value)               │\n└───────────────────────┬───────────────────────┘\n                        │\n                        ▼ (Auto-tracks reads)\n┌───────────────────────────────────────────────┐\n│         Computed Signal (doubleCount)         │\n│    (Derived value: computed(() => count() * 2))│\n└───────────────────────┬───────────────────────┘\n                        │\n                        ▼ (Fires reactive execution)\n┌───────────────────────────────────────────────┐\n│               Effect (Logging)                │\n│        (effect(() => console.log(double())))  │\n└───────────────────────────────────────────────┘",
+            "note": {
+              "text": "Unlike RxJS, Signals do not require manual subscriptions. Dependencies are calculated automatically during function execution."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Signal API Cheat Sheet",
+            "box": {
+              "title": "✍️ Basic Signal Operations",
+              "list": [
+                "<strong>Writable Signal:</strong> <code>const count = signal(0);</code>. Declares mutable variables.",
+                "<strong>Reading Values:</strong> <code>count()</code>. Evaluates value using function invocation syntax.",
+                "<strong>Mutating State:</strong> <code>count.set(10)</code> or <code>count.update(v => v + 1)</code>.",
+                "<strong>Computed:</strong> <code>computed(() => x() + y())</code>. Declares read-only computed derivations that cache values."
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔀",
+            "title": "Signals vs. RxJS Observables",
+            "leftTitle": "Angular Signals",
+            "leftPoints": [
+              "Synchronous state reading (no async await or pipelines).",
+              "Glitch-free (no transient invalid states/intermediate renders).",
+              "No subscriptions to unsubscribe or manage.",
+              "Ideal for UI state, component data, and DOM rendering."
+            ],
+            "rightTitle": "RxJS Observables",
+            "rightPoints": [
+              "Asynchronous events over time.",
+              "Requires pipeline execution operators (mapping, debouncing).",
+              "Requires careful subscription cleanup.",
+              "Ideal for HTTP streams, WebSockets, and complex time-based events."
+            ],
+            "note": {
+              "text": "Angular incorporates both: Signals handle local/UI state, and RxJS handles asynchronous network/event streams."
+            }
+          }
+        ]
+      },
+      {
+        "id": "routing-navigation",
+        "title": "Routing & Navigation",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧭",
+            "title": "Routing & Navigation",
+            "subtitle": "Configuring Single-Page Application Navigation & Route Guards"
+          },
+          {
+            "type": "content",
+            "title": "Configuring Angular Routes",
+            "box": {
+              "title": "🗺️ Defining URL Mappings",
+              "list": [
+                "<strong>Route Definition:</strong> Array mapping <code>path</code> strings to component exports.",
+                "<strong>Router Outlet:</strong> <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code> component placeholder where routing displays matching components.",
+                "<strong>Router Link:</strong> <code>routerLink=\"/users\"</code>. Client-side navigation without full browser refresh.",
+                "<strong>Lazy Loading:</strong> <code>loadComponent: () => import('./profile.component')</code>. Bundles page code separately."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Securing Routes with Guards",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Security firewall representation",
+            "caption": "Functional guards: modern return checking",
+            "content": "<h4>🛡️ Functional Route Guards</h4><p>Route guards intercept navigation attempts to perform checks like authentication or dirty-state check before rendering components.</p><ul><li>🔒 <strong>CanActivate</strong> - Checks if users can access pages (e.g. checks authorization token).</li><li>📦 <strong>Resolve</strong> - Fetches server data before navigating to avoid empty screen loading.</li><li>🚪 <strong>CanDeactivate</strong> - Warns users before leaving dirty unsaved forms.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🧭",
+            "title": "Route Configuration Syntax",
+            "leftTitle": "Standard Direct Loading",
+            "leftPoints": [
+              "Loads component immediately inside main bundle.",
+              "Simple declarations: <code>component: HomeComponent</code>.",
+              "Optimal for primary landing views."
+            ],
+            "rightTitle": "Lazy Loaded Configurations",
+            "rightPoints": [
+              "Splits code into async chunks.",
+              "Dynamic imports: <code>loadComponent: () => import(...)</code>.",
+              "Drastically reduces main bundle download sizes."
+            ],
+            "note": {
+              "text": "Combined with standalone components, lazy loading routes isolates component dependencies into separate files."
+            }
+          }
+        ]
+      },
+      {
+        "id": "forms-in-angular",
+        "title": "Forms in Angular",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "📝",
+            "title": "Forms & Validation",
+            "subtitle": "Handling User Input with Reactive and Template-driven Systems"
+          },
+          {
+            "type": "comparison",
+            "emoji": "📝",
+            "title": "Reactive vs. Template-driven Forms",
+            "leftTitle": "Template-driven Forms",
+            "leftPoints": [
+              "State managed inside HTML template using <code>[(ngModel)]</code>.",
+              "Asynchronous, harder to unit test.",
+              "Implicit, template-based validation attributes.",
+              "Good for simple, basic forms (e.g. login input)."
+            ],
+            "rightTitle": "Reactive Forms (Recommended)",
+            "rightPoints": [
+              "Form structure declared explicitly inside TypeScript file.",
+              "Synchronous, easily tested via mock data structures.",
+              "Reactive validation: dynamic validator additions.",
+              "Good for complex enterprise workflows (e.g. multi-step forms)."
+            ],
+            "note": {
+              "text": "For enterprise web apps, Reactive forms are preferred due to type-safety, testability, and reactive flow control."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Declaring Reactive Forms",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Workspace table with checklist",
+            "caption": "Using FormBuilder to group inputs",
+            "content": "<h4>📝 Reactive Form Controls</h4><pre><code class=\"language-typescript\">import { FormBuilder, Validators } from '@angular/forms';\n\nexport class FormComponent {\n  private fb = inject(FormBuilder);\n  \n  userForm = this.fb.group({\n    email: ['', [Validators.required, Validators.email]],\n    password: ['', [Validators.required, Validators.minLength(6)]]\n  });\n}</code></pre>"
+          },
+          {
+            "type": "content",
+            "title": "Built-in and Custom Validators",
+            "box": {
+              "title": "🛡️ Validating User Inputs",
+              "list": [
+                "<strong>Built-in Validators:</strong> <code>Validators.required</code>, <code>Validators.pattern()</code>, <code>Validators.min()</code>.",
+                "<strong>Form Controls Status:</strong> Inspect properties like <code>form.valid</code>, <code>form.invalid</code>, <code>form.dirty</code>, <code>form.touched</code>.",
+                "<strong>Custom Synchronous Validators:</strong> Functions that evaluate form values and return error objects or null.",
+                "<strong>Async Validators:</strong> Evaluate backend responses (e.g. checking email uniqueness) returning Observables/Promises."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "state-management",
+        "title": "State Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "💾",
+            "title": "State Management",
+            "subtitle": "Handling State with Shared Services, RxJS, and Signal Store"
+          },
+          {
+            "type": "comparison",
+            "emoji": "💾",
+            "title": "State Management Strategies",
+            "leftTitle": "Component Store / Services",
+            "leftPoints": [
+              "Injectable Service holds state variables directly.",
+              "Exposes Observables or Signals to components.",
+              "Extremely lightweight, no third-party package dependencies.",
+              "Best for small to medium apps and localized component state."
+            ],
+            "rightTitle": "Global Stores (NgRx)",
+            "rightPoints": [
+              "Redux architecture: unidirectional data flow.",
+              "Store, Actions, Reducers, Effects, and Selectors.",
+              "Comprehensive state logging and DevTools support.",
+              "Best for complex enterprise apps with massive state interactions."
+            ],
+            "note": {
+              "text": "With the release of Angular Signals, many developers use lightweight Signal-based state services over bulky NgRx boilerplate."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "NgRx Redux State Lifecycle Flow",
+            "content": "┌───────────────────────────────────────────────┐\n│                   Component                   │\n└───────┬───────────────────────────────▲───────┘\n        │ Dispatches Action             │ Subscribes Selectors\n        ▼                               │\n┌───────────────┐               ┌───────┴───────┐\n│    Action     ├──────────────►│     Store     │\n└───────┬───────┘               └───────▲───────┘\n        │ Triggers                      │ Mutates state\n        ▼                               │\n┌───────────────┐               ┌───────┴───────┐\n│    Effects    │               │   Reducers    │\n│ (HTTP Calls)  │               │ (Pure Funcs)  │\n└───────────────┘               └───────────────┘",
+            "note": {
+              "text": "NgRx strictly isolates async side-effects in Effects, ensuring that Reducers remain pure functions that are easy to test."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Signal Store Paradigm",
+            "box": {
+              "title": "⚡ Signal-based Store Patterns",
+              "list": [
+                "<strong>NgRx SignalStore:</strong> Lightweight, opinionated state management utility built for Signals.",
+                "<strong>Functional Mixins:</strong> Allows composing state, computed selectors, and methods cleanly.",
+                "<strong>No Boilerplate:</strong> No complex actions or reducers required to perform simple mutations.",
+                "<strong>Highly Performant:</strong> Glitch-free, fine-grained UI updates with clean reactive logic."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing-optimization",
+        "title": "Testing, Optimization & Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚙️",
+            "title": "Testing, Optimization & Deployment",
+            "subtitle": "Testing Components, Optimizing Change Detection, and Building for SSR"
+          },
+          {
+            "type": "content",
+            "title": "Testing in Angular",
+            "box": {
+              "title": "🧪 Test Scaffolding and Utilities",
+              "list": [
+                "<strong>TestBed:</strong> Main API that configures compilation of test modules and components.",
+                "<strong>ComponentFixture:</strong> Handles inspecting component DOM nodes and triggering change detection manually.",
+                "<strong>Mocking Services:</strong> Provide fake implementations to decouple API network calls from unit tests.",
+                "<strong>Jasmine & Karma / Jest:</strong> Standard frameworks to run assertions and generate test reports."
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🏎️",
+            "title": "Optimizing Change Detection",
+            "leftTitle": "ChangeDetectionStrategy.Default",
+            "leftPoints": [
+              "Checks every component in tree from root on any event.",
+              "Relies on Zone.js monkeys to capture browser events.",
+              "Requires zero developer configuration to work.",
+              "Can slow down performance in massive component trees."
+            ],
+            "rightTitle": "ChangeDetectionStrategy.OnPush",
+            "rightPoints": [
+              "Checks component only if Inputs reference changes.",
+              "Skips checking entire subtrees if inputs remain identical.",
+              "Requires immutable state operations.",
+              "Increases rendering performance; mandatory for large tables/lists."
+            ],
+            "note": {
+              "text": "OnPush strategy combined with Signals enables Angular applications to achieve near-instantaneous render updates."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Server-Side Rendering (SSR) & Pre-rendering",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Data center racks representing SSR servers",
+            "caption": "Hydration: activating static client-side views",
+            "content": "<h4>🌐 Server-Side Capabilities</h4><p>Angular provides built-in SSR features using Express servers to pre-render static HTML elements before transferring code to clients.</p><ul><li>📈 <strong>SEO Optimization</strong> - Returns fully readable HTML to search engine bots.</li><li>🏎️ <strong>Fast First Paint</strong> - Immediate content display.</li><li>💧 <strong>Client Hydration</strong> - Smart activation of elements without refreshing layouts.</li></ul>"
+          },
+          {
+            "type": "diagram",
+            "title": "Client Hydration Lifecycle Flow",
+            "content": "Client Request  ──► [ Node Express Server ]\n                           │\n                           ▼ Pre-renders static HTML\nClient Browser  ◄── [ Raw HTML + Inline Styles ]\n   (Renders immediately, not interactive yet)\n                           │\n                           ▼ Downloads JS Bundles\nClient Browser  ──► [ Hydration / Bootstrapping ]\n   (Attaches event listeners, updates signals)\n                           │\n                           ▼\n                      [ Fully Interactive App ]",
+            "note": {
+              "text": "Angular's modern hydration system matches DOM trees without destroying and recreating nodes, eliminating screen flickers."
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Knowledge Check",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧠",
+            "title": "Knowledge Check",
+            "subtitle": "Test Your Understanding of Modern Angular Architecture and Reactivity"
+          },
+          {
+            "type": "quiz",
+            "question": "Which metadata property is required to make a component standalone in Angular?",
+            "options": [
+              "imports: []",
+              "providedIn: 'root'",
+              "standalone: true",
+              "selector: 'app-root'"
+            ],
+            "correct": 2,
+            "explanation": "To define a component as Standalone (bypassing NgModules), you must set 'standalone: true' in the @Component metadata."
+          },
+          {
+            "type": "quiz",
+            "question": "How do Angular Signals determine dependency tracking?",
+            "options": [
+              "Manual declaration of dependencies inside dependency arrays.",
+              "Automatic tracking during function evaluation/read calls.",
+              "Using Zone.js event listener wrappers.",
+              "Declaring imports in the component's imports metadata."
+            ],
+            "correct": 1,
+            "explanation": "Angular Signals automatically track all signals read during the execution of computed functions or effects: no dependency arrays required."
+          },
+          {
+            "type": "quiz",
+            "question": "Which RxJS flattening operator is best suited for search inputs to prevent race conditions?",
+            "options": [
+              "switchMap",
+              "mergeMap",
+              "concatMap",
+              "exhaustMap"
+            ],
+            "correct": 0,
+            "explanation": "switchMap is best for searches because it cancels the current/pending HTTP stream when a new search string is typed, preventing race conditions."
+          }
+        ]
+      },
+      {
+        "id": "qa-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions & Answers",
+            "emoji": "❓"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You!",
+            "emoji": "🎉",
+            "message": "Thank you for attending the Angular Masterclass!<br>You can find more resources and examples in our repository.",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      }
+    ]
+  }
+}

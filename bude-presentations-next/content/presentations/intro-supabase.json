@@ -1,0 +1,823 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Supabase Masterclass",
+            "subtitle": "The Open-Source Firebase Alternative<br>A Deep Dive into Architecture, Database, Auth, Realtime, and CLI Workflows",
+            "emoji": "⚡",
+            "backgroundImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development, Database Design & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "intro-supabase",
+        "title": "Introduction to Supabase",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Introduction to Supabase & The BaaS Revolution",
+            "subtitle": "Understanding Backend-as-a-Service and Open-Source Philosophy"
+          },
+          {
+            "type": "imageText",
+            "title": "The Backend-as-a-Service (BaaS) Paradigm",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Developer working on backend configurations",
+            "caption": "Accelerating modern web and mobile development",
+            "content": "<h4>🚀 Backend-as-a-Service Revolution</h4><p>BaaS allows developers to focus entirely on frontend experiences by outsourcing database management, authentication, storage, and serverless logic to a managed or self-hosted platform.</p><ul><li>⚡ <strong>Zero Boilerplate</strong> - Skip server initialization, routing, and environment configurations.</li><li>🔒 <strong>Secure by Default</strong> - Built-in security layers like JSON Web Tokens (JWT) and database level security.</li><li>📈 <strong>Auto-Scaling</strong> - Pay-as-you-grow compute power without infrastructure upkeep.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "title": "Supabase vs. Google Firebase",
+            "leftTitle": "Supabase (SQL-based)",
+            "leftPoints": [
+              "🐘 Dedicated PostgreSQL instance per project",
+              "💾 Standard Relational SQL schema with foreign keys",
+              "🔒 Row Level Security (RLS) policies at the DB level",
+              "🌐 Open-source (fully self-hostable with Docker)",
+              "🚀 Complex joins and aggregations run instantly",
+              "💰 Predictable pricing based on resources/storage"
+            ],
+            "rightTitle": "Google Firebase (NoSQL-based)",
+            "rightPoints": [
+              "🔥 Proprietary NoSQL Firestore document database",
+              "🔄 Hierarchical collections of JSON-like documents",
+              "🛡️ Firebase Security Rules written in proprietary language",
+              "🔒 Proprietary Google service (not self-hostable)",
+              "🐌 Complex joins require manual nested client queries",
+              "💸 Usage-based pricing (can lead to unexpected bills)"
+            ],
+            "note": {
+              "text": "Supabase delivers standard SQL capabilities with BaaS convenience, removing vendor lock-in."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Supabase Core Component Stack",
+            "content": "┌─────────────────────────────────────────────────────────────┐\n│                     Client Applications                     │\n│               (Web, Mobile, Edge, IoT Devices)              │\n├──────────────────────────────┬──────────────────────────────┤\n│    @supabase/supabase-js     │      Raw HTTP/REST/Websocket │\n└──────────────────────────────┼──────────────────────────────┘\n                               │ HTTP / Websocket requests\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                      Kong API Gateway                       │\n│            (Reverse proxy, routing, SSL, rate-limits)       │\n└──────────────────────────────┬──────────────────────────────┘\n                               │ Routed requests\n         ┌─────────────────────┼─────────────────────┐\n         ▼                     ▼                     ▼\n┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐\n│   PostgREST     │   │     GoTrue      │   │ Realtime Server │\n│ (Auto-REST API) │   │ (Authentication)│   │ (Elixir/Phoenix)│\n└────────┬────────┘   └────────┬────────┘   └────────┬────────┘\n         │                     │                     │\n         └─────────────────────┼─────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                 PostgreSQL Database Engine                  │\n│      (ACID, schemas, extensions, tables, vectors, storage)  │\n└─────────────────────────────────────────────────────────────┘",
+            "note": {
+              "text": "Kong routes client requests to dedicated GoTrue, PostgREST, and Realtime endpoints."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Open-Source Philosophy",
+            "box": {
+              "title": "🧩 No Custom Wrappers - Only Battle-Tested Open Source Tools:",
+              "list": [
+                "<strong>PostgreSQL:</strong> The backbone of the entire system. You have full database access.",
+                "<strong>PostgREST:</strong> Inspects your schema and outputs a high-performance REST API.",
+                "<strong>GoTrue:</strong> An API written in Go for managing users and generating JWTs.",
+                "<strong>Phoenix:</strong> An Elixir framework utilizing WebSockets for real-time messages."
+              ]
+            },
+            "note": {
+              "text": "This modular composition allows Supabase to remain fully open source and highly scalable."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Supabase Studio Dashboard",
+            "box": {
+              "title": "🎨 Managing Database Resources Visually:",
+              "list": [
+                "<strong>Table Editor:</strong> A spreadsheet-like interface for creating columns, editing data, and linking tables.",
+                "<strong>SQL Editor:</strong> A built-in scratchpad to execute complex SQL queries and analyze performance.",
+                "<strong>Auth Manager:</strong> Interface to inspect registered users, revoke sessions, and configure OAuth.",
+                "<strong>Database Metrics:</strong> Real-time charts detailing CPU usage, database size, and active connections."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "postgres-core",
+        "title": "PostgreSQL at the Core",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "PostgreSQL: The Database Engine",
+            "subtitle": "Tapping into the Power of Relational Data Systems"
+          },
+          {
+            "type": "imageText",
+            "title": "Why PostgreSQL?",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "PostgreSQL Database logo and visual layout",
+            "caption": "The world's most advanced open-source database",
+            "content": "<h4>🐘 PostgreSQL Core Strengths</h4><p>Unlike other BaaS platforms that invent proprietary databases, Supabase gives you a raw, dedicated PostgreSQL engine with zero compromises.</p><ul><li>🔒 <strong>Full ACID Compliance</strong> - Guaranteeing transactional safety and database consistency.</li><li>🛡️ <strong>Schemas & Constraints</strong> - Enforce data integrity with strong typing, foreign keys, and unique checks.</li><li>🔌 <strong>Direct Access</strong> - Connect using any language-specific Postgres driver (pg, psycopg2, pq) or client tool.</li></ul>"
+          },
+          {
+            "type": "content",
+            "title": "Managing Tables & Relationships",
+            "box": {
+              "title": "🏗️ Designing a relational schema:",
+              "list": [
+                "Use standard foreign keys (`REFERENCES`) to establish relationships between tables.",
+                "Implement constraints like `NOT NULL`, `UNIQUE`, and `CHECK` to enforce business rules.",
+                "Enable database indexes (`CREATE INDEX`) to keep query lookups fast as tables grow.",
+                "Set cascade behaviors (`ON DELETE CASCADE`) to automatically manage orphaned children."
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "SQL: Creating Relational Tables",
+            "box": {
+              "title": "Designing profiles with a foreign key back to the user catalog:",
+              "code": "CREATE TABLE profiles (\n  id UUID REFERENCES auth.users ON DELETE CASCADE PRIMARY KEY,\n  username TEXT UNIQUE NOT NULL,\n  avatar_url TEXT,\n  points INTEGER DEFAULT 0 CHECK (points >= 0),\n  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL\n);",
+              "language": "sql"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Postgres Extensions Ecosystem",
+            "box": {
+              "title": "🔌 Enable custom functionality directly inside the database:",
+              "list": [
+                "<strong>pg_vector:</strong> Store vector embeddings and calculate distances for AI matching.",
+                "<strong>pg_cron:</strong> Set cron-like schedules to run SQL jobs inside the database.",
+                "<strong>pg_net:</strong> Make asynchronous HTTP web requests directly from Postgres triggers.",
+                "<strong>PostGIS:</strong> Manipulate geo-coordinates, polygons, and spatial indices."
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Stored Procedures (RPC Functions)",
+            "box": {
+              "title": "Creating a custom procedure that clients can trigger:",
+              "code": "CREATE OR REPLACE FUNCTION add_points_to_user(user_id UUID, pts INT)\nRETURNS VOID AS $$\nBEGIN\n  UPDATE profiles\n  SET points = points + pts\n  WHERE id = user_id;\nEND;\n$$ LANGUAGE plpgsql SECURITY DEFINER;",
+              "language": "sql"
+            },
+            "note": {
+              "text": "SECURITY DEFINER causes the function to run with permissions of the creator (superuser), bypassing RLS."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Database Triggers",
+            "box": {
+              "title": "⚡ Trigger automatic actions based on database operations:",
+              "list": [
+                "Triggers run automatically on INSERT, UPDATE, or DELETE operations.",
+                "Enable workflows like auditing, calculating values, or calling external endpoints.",
+                "Can be configured to run BEFORE or AFTER the target SQL operation."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "rls-security",
+        "title": "Row Level Security (RLS)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Row Level Security (RLS)",
+            "subtitle": "Enforcing Authorization Rules at the SQL Layer"
+          },
+          {
+            "type": "imageText",
+            "title": "What is Row Level Security?",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Security shield and data lock visualization",
+            "caption": "Securing data directly at the source",
+            "content": "<h4>🛡️ Database-Level Access Control</h4><p>Instead of writing API route middleware in Node.js or Python, Supabase relies on Row Level Security (RLS). All data queries are filtered based on SQL policies, regardless of how they are queried.</p><ul><li>🔒 <strong>Secure by Default</strong> - Once RLS is enabled, all access is blocked until explicit permissions are granted.</li><li>⚙️ <strong>Postgres Evaluation</strong> - The DB engine checks each row before returning it.</li><li>👥 <strong>Flexible Rules</strong> - Write separate policies for SELECT, INSERT, UPDATE, and DELETE.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "SQL: Creating Basic RLS Policies",
+            "box": {
+              "title": "Declaring security policies on the profiles table:",
+              "code": "-- Enable Row Level Security\nALTER TABLE profiles ENABLE ROW LEVEL SECURITY;\n\n-- Allow anyone to view profiles\nCREATE POLICY \"Profiles are public\" ON profiles\n  FOR SELECT USING (true);\n\n-- Only allow the profile owner to update it\nCREATE POLICY \"Users can update own profile\" ON profiles\n  FOR UPDATE USING (auth.uid() = id);",
+              "language": "sql"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "RLS Request Lifecycle",
+            "content": "Client Request (reads public.profiles)\n       │\n       ▼\n Kong API Gateway (validates API key)\n       │\n       ▼\n PostgREST Engine (extracts user's JWT token)\n       │\n       ▼\n PostgreSQL (maps JWT user_id to session parameter)\n       │\n       ├─► Is Row Level Security (RLS) enabled?\n       │     ├─► NO  ──► Execute raw query (return all rows)\n       │     └─► YES ──► Filter rows matching policies\n       │                   │\n       │                   ├─► Owner policy (auth.uid() = id) ──► Match!\n       │                   └─► Admin policy (is_admin = true) ──► Match!\n       ▼\nFiltered Rows Returned to Client",
+            "note": {
+              "text": "Data filtering happens inside the database query plan, keeping RLS extremely efficient."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The auth.uid() Session Helper",
+            "box": {
+              "title": "🔗 How user identity maps to database policies:",
+              "list": [
+                "Every request carries a JSON Web Token (JWT) representing the logged-in user.",
+                "PostgREST extracts this token and sets the transaction parameter `request.jwt.claims`.",
+                "The custom helper `auth.uid()` evaluates to the `sub` claim in that JWT.",
+                "Enables simple rules like `auth.uid() = user_id` to establish row ownership."
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Service Role Key vs. Anon Key",
+            "leftTitle": "Anon Key (Client-Side)",
+            "leftPoints": [
+              "🔒 Bound by Row Level Security (RLS)",
+              "🌐 Publicly exposed in client JS files",
+              "🛡️ Used for normal client-side operations",
+              "❌ Cannot perform administrative operations",
+              "👥 Identifies queries as anonymous or user-authenticated"
+            ],
+            "rightTitle": "Service Role Key (Server-Side)",
+            "rightPoints": [
+              "⚡ Bypasses Row Level Security entirely",
+              "🔑 Must NEVER be exposed in the browser",
+              "🛠️ Used for migrations, background jobs, and seed files",
+              "🚀 Unrestricted read/write/delete privileges",
+              "🏢 Identifies queries as superuser requests"
+            ],
+            "note": {
+              "text": "Never expose your service role key in frontend repositories or client applications!"
+            }
+          },
+          {
+            "type": "content",
+            "title": "RLS Best Practices",
+            "box": {
+              "title": "💡 Designing secure database policies:",
+              "list": [
+                "<strong>Avoid recursions:</strong> Don't read table A inside table A's policy without using helper functions.",
+                "<strong>Test policies:</strong> Write unit tests or verify policies locally with different user contexts.",
+                "<strong>Specify operations:</strong> Avoid `FOR ALL` policies; write distinct rules for SELECT, INSERT, etc.",
+                "<strong>Use indexes:</strong> Ensure columns used in RLS policies (e.g. `owner_id`, `org_id`) are indexed."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "auth-users",
+        "title": "Authentication & User Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Authentication & User Management",
+            "subtitle": "Identity management, session handling, and social integrations"
+          },
+          {
+            "type": "imageText",
+            "title": "GoTrue Identity Engine",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Security login screen visual representation",
+            "caption": "Modern, secure user accounts out of the box",
+            "content": "<h4>🔐 Comprehensive Auth Management</h4><p>Supabase Auth is powered by GoTrue, an open-source API for managing users and issuing JSON Web Tokens (JWT).</p><ul><li>🔄 <strong>Secure Sessions</strong> - Supports access and refresh token rotation with customizable expiry.</li><li>📧 <strong>Verification Flows</strong> - Automatic signup emails, email confirmation, and password reset templates.</li><li>🔒 <strong>Encryption</strong> - Secure password hashing using bcrypt or argon2 database routines.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: User Sign-Up",
+            "box": {
+              "title": "Registering a new user with custom meta-data:",
+              "code": "const { data, error } = await supabase.auth.signUp({\n  email: 'aravind@example.com',\n  password: 'my-super-secret-password',\n  options: {\n    data: {\n      first_name: 'Aravind',\n      role: 'developer'\n    }\n  }\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: OAuth Social Login",
+            "box": {
+              "title": "Triggering social sign-in with Google, GitHub, or Apple:",
+              "code": "const { data, error } = await supabase.auth.signInWithOAuth({\n  provider: 'github',\n  options: {\n    redirectTo: 'https://mysite.com/dashboard',\n    queryParams: {\n      access_type: 'offline',\n      prompt: 'consent'\n    }\n  }\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Passwordless Sign-In",
+            "box": {
+              "title": "📱 Modern authentication strategies:",
+              "list": [
+                "<strong>Magic Links:</strong> Send a single-use login link via email to log users in immediately.",
+                "<strong>SMS / WhatsApp OTP:</strong> Send a 6-digit verification code to mobile numbers using providers like Twilio.",
+                "<strong>Passkeys:</strong> Log users in using biometrics (face ID, fingerprint) or hardware keys (WebAuthn)."
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "SQL: Synchronizing Profiles Automatically",
+            "box": {
+              "title": "Postgres trigger to duplicate auth users into public profiles:",
+              "code": "CREATE OR REPLACE FUNCTION public.handle_new_user()\nRETURNS TRIGGER AS $$\nBEGIN\n  INSERT INTO public.profiles (id, username, avatar_url)\n  VALUES (new.id, new.raw_user_meta_data->>'username', new.raw_user_meta_data->>'avatar_url');\n  RETURN new;\nEND;\n$$ LANGUAGE plpgsql SECURITY DEFINER;\n\nCREATE TRIGGER on_auth_user_created\n  AFTER INSERT ON auth.users\n  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();",
+              "language": "sql"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Custom JWT Claims & RBAC",
+            "box": {
+              "title": "👑 Implementing Role-Based Access Control (RBAC):",
+              "list": [
+                "Customize user JWT claims via auth triggers or database app metadata.",
+                "Expose user roles (e.g. `admin`, `moderator`) directly inside the JWT payload.",
+                "Read these custom claims inside RLS policies using `auth.jwt() ->> 'role'`.",
+                "Restricts unauthorized API calls before they reach the database server."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "auto-apis",
+        "title": "Auto-generated APIs",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Auto-generated REST and GraphQL APIs",
+            "subtitle": "Instant Query Engines that Map Directly to Postgres"
+          },
+          {
+            "type": "imageText",
+            "title": "How PostgREST Works",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Web servers and API conceptual design",
+            "caption": "Instant, sub-millisecond API endpoints",
+            "content": "<h4>⚡ High-Speed REST Engine</h4><p>PostgREST acts as a gateway that parses incoming RESTful URLs, converts them directly into a single SQL statement, and executes it inside PostgreSQL.</p><ul><li>📈 <strong>Sub-millisecond Latency</strong> - No server-side loops or serialization overhead.</li><li>🔒 <strong>Transaction Isolation</strong> - Every API request runs in its own transaction, ensuring data security.</li><li>📦 <strong>Rich JSON Outputs</strong> - Results are aggregated and returned as standard JSON arrays.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Fetching Data with Filters",
+            "box": {
+              "title": "Reading profiles with query builder chaining:",
+              "code": "const { data, error } = await supabase\n  .from('profiles')\n  .select('id, username, points')\n  .eq('status', 'active')\n  .gt('points', 100)\n  .order('points', { ascending: false })\n  .range(0, 9);",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Incredibly Simple Joins",
+            "box": {
+              "title": "Fetching profiles and their related blog posts without SQL joins:",
+              "code": "const { data, error } = await supabase\n  .from('profiles')\n  .select(`\n    id,\n    username,\n    posts (\n      title,\n      content,\n      likes\n    )\n  `)\n  .eq('id', profileId);",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Writing Data (Insert & Upsert)",
+            "box": {
+              "title": "Inserting and updating records with the client:",
+              "code": "// Insert a new profile\nconst { data, error } = await supabase\n  .from('profiles')\n  .insert([{ username: 'aravind', points: 150 }]);\n\n// Upsert (Insert or Update if key conflicts)\nconst { data: upsertData } = await supabase\n  .from('profiles')\n  .upsert({ id: userId, username: 'aravind_g' });",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "pg_graphql: Native GraphQL Engine",
+            "box": {
+              "title": "🕸️ Access your relational data with GraphQL schemas:",
+              "list": [
+                "The `pg_graphql` extension inspects tables and compiles a GraphQL schema automatically.",
+                "Allows performing complex queries, page navigation, and mutations on `/graphql` endpoint.",
+                "Resolves queries into a single, optimized SQL query plan for minimal database overhead."
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Query Performance Tuning",
+            "box": {
+              "title": "🚀 Speeding up API endpoints:",
+              "list": [
+                "Use standard indexes (`CREATE INDEX`) on all fields used in client filters (like `eq`, `gt`).",
+                "Avoid fetching all fields with `*`; select only required columns to reduce bandwidth.",
+                "Implement pagination using `.range(start, end)` to avoid loading massive arrays."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "realtime",
+        "title": "Supabase Realtime",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Supabase Realtime System",
+            "subtitle": "Phoenix channels, websocket connections, and WAL replication"
+          },
+          {
+            "type": "imageText",
+            "title": "Inside the Realtime Engine",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Network graphs and real-time visualization",
+            "caption": "Instant websocket communication",
+            "content": "<h4>⚡ Low-latency Data Broadcasting</h4><p>Supabase Realtime handles real-time sync, client broadcast, and presence status tracking in a distributed Elixir environment.</p><ul><li>WAL Replication - Listens to Postgres Write-Ahead Log to detect INSERT, UPDATE, and DELETE actions.</li><li>Broadcast Channels - High-speed peer-to-peer data passing (sub-10ms latency).</li><li>Presence State - Track online participants and connection metadata across sockets.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Postgres Subscriptions",
+            "box": {
+              "title": "Subscribing to real-time insertions on the messages table:",
+              "code": "const chatChannel = supabase\n  .channel('public-chat')\n  .on('postgres_changes', {\n    event: 'INSERT',\n    schema: 'public',\n    table: 'messages'\n  }, (payload) => {\n    console.log('New message:', payload.new);\n  })\n  .subscribe();",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Broadcast Messages",
+            "box": {
+              "title": "Sending custom, lightweight peer-to-peer messages:",
+              "code": "const channel = supabase.channel('room-1');\n\n// Send cursor tracking updates\nchannel.send({\n  type: 'broadcast',\n  event: 'cursor_move',\n  payload: { x: 120, y: 350 }\n});\n\n// Listen to broadcasts\nchannel.on('broadcast', { event: 'cursor_move' }, ({ payload }) => {\n  console.log('Cursor moved:', payload);\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Presence Tracking",
+            "box": {
+              "title": "Tracking user online status and synchronizing state:",
+              "code": "const channel = supabase.channel('room-2');\n\nchannel\n  .on('presence', { event: 'sync' }, () => {\n    const state = channel.presenceState();\n    console.log('Online users:', state);\n  })\n  .subscribe(async (status) => {\n    if (status === 'SUBSCRIBED') {\n      await channel.track({ online_at: new Date().toISOString(), user: 'Aravind' });\n    }\n  });",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Realtime Architecture Flow",
+            "content": "Client Database Change      PostgreSQL Engine (WAL)\n          │                      │\n          │                      ▼\n          │             supabase_realtime (listener)\n          │                      │\n          ▼                      ▼\n  Realtime Server (Phoenix / Elixir Socket Engine)\n          │\n          ├─► Is request a DB Subscription?\n          │     └─► Filter payload using RLS policies per user!\n          ├─► Is request a Broadcast?\n          │     └─► Instantly relay JSON bytes to channel members.\n          └─► Is request a Presence Track?\n                └─► Update CRDT and emit sync event.\n          │\n          ▼\nConnected Client WebSockets receive event",
+            "note": {
+              "text": "Phoenix cluster allows high concurrency, supporting tens of thousands of connections."
+            }
+          }
+        ]
+      },
+      {
+        "id": "storage",
+        "title": "Storage & File Management",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Storage & File Management",
+            "subtitle": "Uploading, serving, and dynamically resizing files"
+          },
+          {
+            "type": "imageText",
+            "title": "Object Storage Architecture",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Server rack storage cabinets",
+            "caption": "Media management at scale",
+            "content": "<h4>📁 Scalable Media Storage</h4><p>Supabase Storage stores binary assets (images, PDFs, videos) inside scalable object storage buckets integrated with Row Level Security.</p><ul><li>📦 <strong>Bucket Isolation</strong> - Logical grouping of assets (e.g. public avatars, private invoices).</li><li>🛡️ <strong>SQL-based Control</strong> - Policies written directly on `storage.objects` table define access rights.</li><li>🌐 <strong>CDN Caching</strong> - Files are cached at edge nodes for high-speed global downloads.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Uploading Assets",
+            "box": {
+              "title": "Uploading file objects using the storage client:",
+              "code": "const uploadAvatar = async (file: File) => {\n  const { data, error } = await supabase.storage\n    .from('avatars')\n    .upload('public/user-profile-avatar.jpg', file, {\n      cacheControl: '3600',\n      upsert: true\n    });\n};",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Public vs. Signed URLs",
+            "box": {
+              "title": "Retrieving file sharing links:",
+              "code": "// Get a direct link for files in public buckets\nconst { data: publicUrlData } = supabase.storage\n  .from('avatars')\n  .getPublicUrl('public/user-profile-avatar.jpg');\n\n// Generate a temporary 60-second link for private buckets\nconst { data: signedUrlData, error } = await supabase.storage\n  .from('invoices')\n  .createSignedUrl('private/invoice-102.pdf', 60);",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "SQL: Storage Security Policies",
+            "box": {
+              "title": "Securing storage files using database rules:",
+              "code": "-- Allow users to upload files to their own folder inside avatars bucket\nCREATE POLICY \"Upload own avatars\" ON storage.objects\n  FOR INSERT WITH CHECK (\n    bucket_id = 'avatars'\n    AND (storage.foldername(name))[1] = auth.uid()::text\n  );",
+              "language": "sql"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Dynamic Image Transformation",
+            "box": {
+              "title": "🖼️ Manipulate images on the fly via query parameters:",
+              "list": [
+                "<strong>Resizing:</strong> Downscale large images dynamically to save user bandwidth.",
+                "<strong>Cropping:</strong> Specify dimensions to generate perfect square thumbnails.",
+                "<strong>Format Conversion:</strong> Convert heavy PNG/JPG files to lightweight WebP formats.",
+                "Example: `/storage/v1/render/image/public/photos/beach.jpg?width=300&height=300&resize=contain`"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "edge-functions",
+        "title": "Edge Functions & Serverless",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Edge Functions & Serverless",
+            "subtitle": "Running TypeScript serverless logic globally on Deno"
+          },
+          {
+            "type": "imageText",
+            "title": "Serverless Execution at the Edge",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Edge cloud computing illustration",
+            "caption": "Zero cold-starts, global availability",
+            "content": "<h4>🌐 Deno Serverless Runtime</h4><p>Supabase Edge Functions are written in TypeScript and executed using Deno, running physically close to your users on the Supabase edge network.</p><ul><li>⚡ <strong>No Build Step</strong> - Imports are managed using ES Modules and import maps without webpack/esbuild.</li><li>⏱️ <strong>Sub-10ms Startup</strong> - Isolated execution envs prevent heavy Node.js lambda cold start delays.</li><li>🛡️ <strong>Secure Sandbox</strong> - Deno runs in a secure sandbox requiring explicit flags to access network/env.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Writing an Edge Function",
+            "box": {
+              "title": "Deno server-side request listener skeleton:",
+              "code": "import { serve } from \"https://deno.land/std@0.168.0/http/server.ts\";\n\nserve(async (req) => {\n  const { name } = await req.json();\n  const responseData = { message: `Welcome to the edge, ${name}!` };\n  \n  return new Response(JSON.stringify(responseData), {\n    headers: { \"Content-Type\": \"application/json\" },\n    status: 200\n  });\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Accessing DB from Edge",
+            "box": {
+              "title": "Connecting to the database with service keys inside Edge Functions:",
+              "code": "import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';\n\nserve(async (req) => {\n  const supabaseClient = createClient(\n    Deno.env.get('SUPABASE_URL')!,\n    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!\n  );\n  \n  const { data, error } = await supabaseClient.from('profiles').select('count');\n  return new Response(JSON.stringify({ data }));\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Invoking Functions",
+            "box": {
+              "title": "Calling the Edge Function from user-side applications:",
+              "code": "const { data, error } = await supabase.functions.invoke('hello-world', {\n  body: { name: 'Aravind Govindhasamy' },\n  headers: {\n    'X-Custom-Header': 'bude-tech'\n  }\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Edge Function Use Cases",
+            "box": {
+              "title": "💡 Common server-side applications:",
+              "list": [
+                "<strong>Payment Gateway Integrations:</strong> Execute Stripe or PayPal webhook verify sequences safely.",
+                "<strong>Integrations:</strong> Connect and communicate with Slack, SendGrid, Twilio, or Discord APIs.",
+                "<strong>AI Computations:</strong> Send prompts to OpenAI GPT-4, evaluate answers, and output responses.",
+                "<strong>Database Triggers:</strong> Call Edge Functions from table hooks to offload long background tasks."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "vector-ai",
+        "title": "Vector & AI Integrations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "AI & Vector Database Capabilities",
+            "subtitle": "Storing Embeddings and Building Semantic Search Engines with pg_vector"
+          },
+          {
+            "type": "imageText",
+            "title": "AI Capabilities with pg_vector",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1677442136019-21780efad99a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "AI neural network visual representation",
+            "caption": "Postgres as a vector database",
+            "content": "<h4>🐘 Vector Embeddings in Postgres</h4><p>Instead of managing a separate database like Pinecone or Milvus, Supabase integrates `pg_vector` directly into PostgreSQL to store and query multidimensional embeddings.</p><ul><li>🔢 <strong>Vector Columns</strong> - Define column types of varying dimension counts (e.g. 1536).</li><li>🔍 <strong>Math Operators</strong> - Calculate Cosine, L2 (Euclidean), and Inner Product distance.</li><li>🚀 <strong>HNSW Indexes</strong> - Fast, approximate nearest neighbor search structures.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "SQL: Initializing Vector Columns",
+            "box": {
+              "title": "Enabling pg_vector and creating tables to store document embedding data:",
+              "code": "-- Enable pg_vector extension\nCREATE EXTENSION IF NOT EXISTS vector;\n\n-- Create documents table\nCREATE TABLE documents (\n  id BIGSERIAL PRIMARY KEY,\n  content TEXT NOT NULL,\n  embedding VECTOR(1536) -- Matches OpenAI text-embedding-ada-002 dimensions\n);",
+              "language": "sql"
+            }
+          },
+          {
+            "type": "code",
+            "title": "SQL: Vector Similarity Search Function",
+            "box": {
+              "title": "Stored procedure to fetch matching documents based on cosine similarity:",
+              "code": "CREATE OR REPLACE FUNCTION match_documents (\n  query_embedding VECTOR(1536),\n  match_threshold FLOAT,\n  match_count INT\n)\nRETURNS TABLE (id BIGINT, content TEXT, similarity FLOAT) AS $$\n  SELECT id, content, 1 - (documents.embedding <=> query_embedding) AS similarity\n  FROM documents\n  WHERE 1 - (documents.embedding <=> query_embedding) > match_threshold\n  ORDER BY documents.embedding <=> query_embedding LIMIT match_count;\n$$ LANGUAGE sql STABLE;",
+              "language": "sql"
+            }
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: Semantic Search Query",
+            "box": {
+              "title": "Calling the similarity search function from client applications:",
+              "code": "const queryVector = [0.0023, -0.0154, 0.0894];\n\nconst { data, error } = await supabase.rpc('match_documents', {\n  query_embedding: queryVector,\n  match_threshold: 0.78,\n  match_count: 5\n});\n\nconsole.log('Similar documents:', data);",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Retrieval-Augmented Generation (RAG)",
+            "box": {
+              "title": "🤖 How RAG fits together with Supabase:",
+              "list": [
+                "User enters search query -> Query text is converted to a vector embedding.",
+                "Perform vector search inside Supabase using RPC to find closest document snippets.",
+                "Assemble context strings -> Send prompt + context to LLM (GPT-4 or Claude).",
+                "LLM responds with highly contextual answers grounded in database facts."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "local-dev",
+        "title": "Local Development & CLI",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Local Development & CLI Workflows",
+            "subtitle": "Local docker stacks, schema migrations, and deployment strategies"
+          },
+          {
+            "type": "imageText",
+            "title": "The Local-First Workflow",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Developer workspace with terminal and editor",
+            "caption": "Dockerized local development environment",
+            "content": "<h4>💻 Code Locally, Deploy Confidently</h4><p>Supabase provides a complete development CLI that builds the entire ecosystem on your local machine using Docker container layers.</p><ul><li>🔌 <strong>Offline Sandbox</strong> - Work on code, DB triggers, and functions without network calls.</li><li>📦 <strong>Reproducible Setup</strong> - Team members run the exact same versions of PostgreSQL, Kong, and GoTrue.</li><li>🛠️ <strong>Easy Resets</strong> - Restore, seed, or wipe database states in seconds.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "Bash: CLI Initialization Commands",
+            "box": {
+              "title": "Setting up the local environment:",
+              "code": "# Install Supabase CLI globally via npm\nnpm install -g supabase-cli\n\n# Initialize project folder structure\nsupabase init\n\n# Start the local Docker containers\nsupabase start",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "code",
+            "title": "Bash: Schema Migrations",
+            "box": {
+              "title": "Generating and keeping track of DB schemas:",
+              "code": "# Create a blank SQL migration template\nsupabase migration new add_comments_table\n\n# Generate a migration automatically based on local dashboard changes\nsupabase db diff -f add_ratings_column\n\n# Reset local database and apply all migrations\nsupabase db reset",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "code",
+            "title": "Bash: Production Deployment",
+            "box": {
+              "title": "Linking and deploying changes to production projects:",
+              "code": "# Link local workspace to cloud project reference ID\nsupabase link --project-ref abcdefghijklmnop\n\n# Push local database migrations to live cloud database\nsupabase db push\n\n# Deploy edge functions\nsupabase functions deploy hello-world",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Self-Hosting Supabase",
+            "box": {
+              "title": "🐳 Deploying on your own cloud infrastructure:",
+              "list": [
+                "All core binaries (Postgres, Kong, GoTrue, Realtime, Storage) are Dockerized.",
+                "Official Docker Compose files and Helm charts are maintained for production hosting.",
+                "Helps bypass API limits and storage pricing tiers while keeping ownership of your data."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "video-tutorial",
+        "title": "Video Tutorial",
+        "slides": [
+          {
+            "type": "video",
+            "title": "Supabase in 100 Seconds",
+            "videoUrl": "https://www.youtube.com/watch?v=zHAqEEhpXC8",
+            "caption": "A lightning-fast summary of Supabase features and benefits",
+            "note": {
+              "text": "Supabase gives developers a robust relational database with instant APIs and auth integrations."
+            }
+          }
+        ]
+      },
+      {
+        "id": "quizzes",
+        "title": "Knowledge Checks & Quizzes",
+        "slides": [
+          {
+            "type": "quiz",
+            "question": "Which relational database engine lies at the core of every Supabase project?",
+            "options": [
+              "MySQL",
+              "MongoDB",
+              "PostgreSQL",
+              "SQLite"
+            ],
+            "correctAnswer": 2,
+            "correct": 2,
+            "explanation": "Every Supabase project is built on a dedicated PostgreSQL instance, granting you full relational SQL capabilities and superuser access."
+          },
+          {
+            "type": "quiz",
+            "question": "What happens when Row Level Security (RLS) is enabled on a table, but NO security policies are created?",
+            "options": [
+              "All users can read and write data.",
+              "Only anonymous users can read data.",
+              "All read and write access is denied by default.",
+              "Only administrators can insert new records."
+            ],
+            "correctAnswer": 2,
+            "correct": 2,
+            "explanation": "Enabling Row Level Security closes access by default. Without explicit SQL policies, all database operations on that table are denied."
+          },
+          {
+            "type": "quiz",
+            "question": "Which Supabase API key should NEVER be exposed in a client application or git repository?",
+            "options": [
+              "Anon Key",
+              "Service Role Key",
+              "Database Password",
+              "Both B and C"
+            ],
+            "correctAnswer": 3,
+            "correct": 3,
+            "explanation": "Both the Service Role Key and Database Password bypass Row Level Security and have admin rights. They must remain strictly confidential."
+          },
+          {
+            "type": "quiz",
+            "question": "What serverless runtime executes Supabase Edge Functions?",
+            "options": [
+              "Node.js",
+              "Deno",
+              "Bun",
+              "Python 3"
+            ],
+            "correctAnswer": 1,
+            "correct": 1,
+            "explanation": "Edge Functions run on Deno, which supports TypeScript natively, executes inside secure sandboxes, and eliminates serverless cold starts."
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion & Q&A",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Mastering Supabase: Key Takeaways",
+            "box": {
+              "title": "📋 Summary checklist for building with Supabase:",
+              "list": [
+                "<strong>Relational First:</strong> Leverage PostgreSQL instead of inventing custom NoSQL wrappers.",
+                "<strong>Shift Security Left:</strong> Secure data inside the database using RLS instead of custom API layers.",
+                "<strong>Auto APIs:</strong> Let PostgREST handle CRUD, saving hundreds of developer hours.",
+                "<strong>Local Sandbox:</strong> Develop locally using the dockerized CLI to safely test schemas and migrations."
+              ]
+            }
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You!",
+            "message": "Congratulations on completing the Supabase Masterclass!",
+            "box": {
+              "title": "Connect and contribute:",
+              "list": [
+                "GitHub: aravind-govindhasamy",
+                "Website: aravind-govindhasamy.github.io",
+                "Repo: bude-global-tech-presentations"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
