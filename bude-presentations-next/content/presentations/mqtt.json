@@ -1,0 +1,1226 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "emoji": "📡",
+            "title": "MQTT Masterclass",
+            "subtitle": "From IoT Fundamentals to AI-Enhanced Edge Computing"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer & IoT Enthusiast",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "introduction",
+        "title": "Introduction to MQTT",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🚀",
+            "title": "Introduction to MQTT & Pub-Sub",
+            "subtitle": "Understanding the lightweight communication paradigm for the Internet of Things"
+          },
+          {
+            "type": "content",
+            "emoji": "ℹ️",
+            "title": "What is MQTT?",
+            "box": {
+              "title": "Core Definition & Philosophy",
+              "list": [
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Lightweight Transport:</strong> Message Queuing Telemetry Transport is a publish-subscribe network protocol designed for resource-constrained devices."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Low Bandwidth:</strong> Minimizes network overhead with small header sizes (starting at just 2 bytes), making it ideal for satellite or cellular connections."
+                },
+                {
+                  "emoji": "🩹",
+                  "text": "<strong>High Latency Tolerant:</strong> Built to withstand unstable, intermittent, and low-quality network connections common in remote deployments."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⏳",
+            "title": "History & Evolution",
+            "box": {
+              "title": "Origin and Standardization Milestones",
+              "list": [
+                {
+                  "emoji": "🏭",
+                  "text": "<strong>1999 - Oil Pipeline Monitoring:</strong> Created by Andy Stanford-Clark (IBM) and Arlen Nipper (Eurotech) to monitor oil pipelines over expensive satellite links."
+                },
+                {
+                  "emoji": "📑",
+                  "text": "<strong>2014 - OASIS MQTT v3.1.1:</strong> Formally standardized by the OASIS consortium, becoming the industry standard for IoT systems."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>2019 - MQTT v5.0 Released:</strong> Introduces crucial enterprise features like User Properties, Shared Subscriptions, and improved error handling."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Request-Response vs Pub-Sub",
+            "leftTitle": "HTTP (Request-Response)",
+            "leftPoints": [
+              "Tightly coupled: Client must know server's address and status.",
+              "Unidirectional: Server cannot push messages to client spontaneously.",
+              "High overhead: Large HTTP headers (hundreds of bytes) and verbose payload formats."
+            ],
+            "rightTitle": "MQTT (Publish-Subscribe)",
+            "rightPoints": [
+              "Decoupled: Clients communicate through a broker without knowing each other.",
+              "Bidirectional: Real-time asynchronous pushes supported natively.",
+              "Low overhead: Binary protocol headers are extremely small (minimum 2 bytes)."
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🌐",
+            "title": "Decoupling Primitives",
+            "box": {
+              "title": "Three Dimensions of Decoupling",
+              "list": [
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Time Decoupling:</strong> Publishers and subscribers do not need to be active at the same time to exchange messages."
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Space Decoupling:</strong> Neither publisher nor subscriber needs to know the IP address or port of the other."
+                },
+                {
+                  "emoji": "🧵",
+                  "text": "<strong>Thread Decoupling:</strong> Publishing and receiving operations do not block execution threads synchronously."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "MQTT Protocol Characteristics",
+            "box": {
+              "title": "Under the Hood",
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>TCP/IP Foundation:</strong> Relies on the connection-oriented TCP protocol to ensure ordered, lossless byte streams."
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Binary Protocol:</strong> Fields are packed at the byte/bit level rather than text (unlike HTTP, WebSocket, or gRPC JSON)."
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Payload Agnostic:</strong> The message payload is a raw byte array; it can carry JSON, XML, Protobuf, or binary files."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "title": "Core Concepts & Lifecycle",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚙️",
+            "title": "Core Concepts & Lifecycle",
+            "subtitle": "Understanding connections, subscriptions, and message flow"
+          },
+          {
+            "type": "content",
+            "emoji": "🤝",
+            "title": "MQTT Client & Broker Roles",
+            "box": {
+              "title": "The Decoupled Architecture",
+              "list": [
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Client:</strong> Any device (microcontroller, server, phone) that connects to the broker to publish or subscribe to topics."
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Broker:</strong> The central router. Receives publishes, filters messages by topic, and dispatches them to matching subscribers."
+                },
+                {
+                  "emoji": "🧼",
+                  "text": "<strong>No Store-and-Forward (by default):</strong> Brokers route messages immediately; they do not store historic data unless configured."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "🔌",
+            "title": "Establishing a Connection",
+            "box": {
+              "title": "CONNECT Control Packet Structure",
+              "code": "Client                     Broker\n  |                          |\n  |--- CONNECT ------------->|  - Protocol Name & Level\n  |                          |  - Client Identifier (ClientId)\n  |                          |  - Keep Alive interval\n  |                          |  - CleanSession / CleanStart flag\n  |                          |  - Username / Password (Optional)\n  |                          |  - Last Will Message (Optional)\n  |<-- CONNACK --------------|  - Session Present Flag\n  |                          |  - Connect Reason Code"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🆗",
+            "title": "Understanding CONNACK Responses",
+            "box": {
+              "title": "Connection Acknowledgment",
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Session Present:</strong> Indicates if the broker has saved state (subscriptions, queued messages) from a previous session."
+                },
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>Reason Code 0x00:</strong> Connection accepted and established successfully."
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>Error Reason Codes:</strong> Indicates failures like unauthorized (0x87), client identifier not valid (0x85), or server unavailable (0x88)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📤",
+            "title": "Publishing Messages",
+            "box": {
+              "title": "The PUBLISH Packet Properties",
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Topic Name:</strong> The hierarchical string classifying the message channel (e.g., 'factory/zone1/temp')."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Payload:</strong> The actual data. The broker does not read, modify, or translate this byte array."
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Packet Identifier:</strong> Unique 16-bit integer used to track acknowledgments in QoS 1 and QoS 2 flows."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "📥",
+            "title": "Subscriptions & Flow",
+            "box": {
+              "title": "SUBSCRIBE and SUBACK Packets",
+              "code": "Client                     Broker\n  |                          |\n  |--- SUBSCRIBE ----------->|  - Packet Identifier (e.g., 0x0001)\n  |                            - Topic Filters (e.g., 'sensor/+/temp')\n  |                            - Requested QoS Level (0, 1, or 2)\n  |                          |\n  |<-- SUBACK ---------------|  - Packet Identifier match (0x0001)\n  |                          |  - List of Granted QoS Levels / Reason Codes"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💓",
+            "title": "Keep Alive & Heartbeats",
+            "box": {
+              "title": "PINGREQ and PINGRESP Mechanisms",
+              "list": [
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Keep Alive Interval:</strong> Client-defined timeout in seconds (e.g. 60s). Max time allowed between control packets."
+                },
+                {
+                  "emoji": "🩺",
+                  "text": "<strong>PINGREQ:</strong> Sent by client if no other packet has been transmitted within the Keep Alive window."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>PINGRESP:</strong> Sent by broker immediately upon receiving PINGREQ. If not received, client terminates the TCP connection."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Persistent Sessions",
+            "box": {
+              "title": "State Storage on Broker",
+              "list": [
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>Clean Session (true):</strong> Broker discards any previous state on disconnect, and deletes the session state on reconnect."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Clean Session (false):</strong> Broker retains client subscriptions and queues outstanding QoS 1/2 messages while the client is offline."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Resuming Session:</strong> On reconnect, client receives all queued messages that were published during its downtime."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qos",
+        "title": "Quality of Service (QoS) Levels",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚖️",
+            "title": "Quality of Service (QoS) Levels",
+            "subtitle": "Fine-tuning reliability and network performance in MQTT"
+          },
+          {
+            "type": "content",
+            "emoji": "💨",
+            "title": "QoS 0: At Most Once Delivery",
+            "box": {
+              "title": "Best-Effort Delivery",
+              "list": [
+                {
+                  "emoji": "🕊️",
+                  "text": "<strong>Fire and Forget:</strong> Message is sent once without any acknowledgment handshake. No retry logic is executed."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Lowest Overhead:</strong> Consumes the minimum network bandwidth and requires zero client/broker storage."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Use Cases:</strong> High-frequency, non-critical telemetry data where single drops do not matter (e.g. real-time CPU utilization)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "🔄",
+            "title": "QoS 1: At Least Once Delivery",
+            "box": {
+              "title": "Acknowledged Delivery & Retries",
+              "code": "Sender                     Receiver\n  |                          |\n  |--- PUBLISH (PacketId=1)->|  - Store message locally\n  |                          |  - Process message\n  |<-- PUBACK (PacketId=1)---|  - Send acknowledgment\n  |                          |\n  |-- (If PUBACK lost) ------|\n  |--- PUBLISH (PacketId=1)->|  - Redelivered (duplicate flag set)"
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "🛡️",
+            "title": "QoS 2: Exactly Once Delivery",
+            "box": {
+              "title": "Four-Way Handshake Protocol",
+              "code": "Sender                     Receiver\n  |                          |\n  |--- PUBLISH (PacketId=2)->|  - Store packet ID, block duplicate processing\n  |<-- PUBREC (PacketId=2)---|  - Publish Received (Received flag set)\n  |--- PUBREL (PacketId=2)-->|  - Publish Release (Sender releases state)\n  |<-- PUBCOMP (PacketId=2)--|  - Publish Complete (Handshake completed)"
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "📊",
+            "title": "Comparing QoS Levels",
+            "leftTitle": "QoS 0 & QoS 1",
+            "leftPoints": [
+              "<strong>QoS 0:</strong> Fast, unbuffered, data loss is possible during network disruptions.",
+              "<strong>QoS 1:</strong> Guarantees delivery, but duplicate messages may occur if ACK is lost.",
+              "<strong>Resource usage:</strong> Low memory and compute requirements; standard network load."
+            ],
+            "rightTitle": "QoS 2",
+            "rightPoints": [
+              "<strong>Guaranteed once:</strong> Prevents duplicates entirely, ensuring exact count consistency.",
+              "<strong>Latency cost:</strong> Requires 4 control messages, raising latency and network traffic.",
+              "<strong>Storage cost:</strong> Sender and receiver must track packet state during handshake."
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "📥",
+            "title": "Offline Queuing Mechanics",
+            "box": {
+              "title": "Message Queuing for Disconnected Clients",
+              "list": [
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Persistent State:</strong> Only applies if the client connected with CleanSession=false (or SessionExpiry > 0 in v5.0)."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>QoS 1 & 2 Only:</strong> The broker queues only QoS 1 and QoS 2 messages. QoS 0 messages are discarded instantly if the client is offline."
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>Queue Limits:</strong> High-performance brokers have memory limits. Excess queued messages trigger drops or overwrite oldest items."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "wildcards",
+        "title": "Topic Wildcards & Design",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏷️",
+            "title": "Topic Wildcards & Hierarchy Design",
+            "subtitle": "Designing structured, efficient, and secure topic trees"
+          },
+          {
+            "type": "content",
+            "emoji": "🌳",
+            "title": "Topic Hierarchy & Structure",
+            "box": {
+              "title": "Hierarchical Topic Structure",
+              "list": [
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Topic Levels:</strong> Separated by forward slashes (e.g. 'home/livingroom/temperature'). Levels represent logical domains."
+                },
+                {
+                  "emoji": "🔡",
+                  "text": "<strong>Case Sensitivity:</strong> Topics are case-sensitive. 'Home/temp' and 'home/temp' are distinct channels."
+                },
+                {
+                  "emoji": "⚠️",
+                  "text": "<strong>Leading Slashes:</strong> Avoid starting topics with a slash (e.g. '/home/temp'). This creates an empty leading level, adding overhead."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "➕",
+            "title": "Single-Level Wildcard (+)",
+            "box": {
+              "title": "Matching a Single Level",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Pattern:</strong> The '+' character matches exactly one topic level anywhere in the topic string."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Example:</strong> Subscribing to 'sensors/+/temperature' matches 'sensors/livingroom/temperature' and 'sensors/kitchen/temperature'."
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>No Match:</strong> It does NOT match 'sensors/livingroom/north/temperature' (requires matching two levels)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "井",
+            "title": "Multi-Level Wildcard (#)",
+            "box": {
+              "title": "Matching All Trailing Levels",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Pattern:</strong> The '#' character matches zero or more trailing levels in the topic hierarchy."
+                },
+                {
+                  "emoji": "📌",
+                  "text": "<strong>Positioning:</strong> Must always be the last character in the topic filter, preceded by a forward slash."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Example:</strong> 'home/livingroom/#' matches 'home/livingroom', 'home/livingroom/temp', and 'home/livingroom/lights/status'."
+                }
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "emoji": "🗺️",
+            "title": "Wildcard Matching Matrix",
+            "box": {
+              "title": "Comparing Filter Matches",
+              "code": "Topic Filter                 | Target Topic                  | Result\n-----------------------------+-------------------------------+-------\nhome/+/temp                  | home/kitchen/temp             | MATCH\nhome/+/temp                  | home/kitchen/sensor/temp      | FAIL\nhome/+/temp                  | home/temp                     | FAIL\nhome/#                       | home                          | MATCH\nhome/#                       | home/kitchen/fridge/humidity  | MATCH\nsensors/+/+/status           | sensors/zone1/node12/status   | MATCH"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎨",
+            "title": "Topic Design Best Practices",
+            "box": {
+              "title": "Structuring Enterprise Topics",
+              "list": [
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>Embed Client IDs:</strong> Include unique client or device IDs in the path (e.g. 'devices/client123/telemetry') to simplify authorization."
+                },
+                {
+                  "emoji": "🏃",
+                  "text": "<strong>Action-Oriented Nodes:</strong> Use active suffixes for commands (e.g. '.../set') and state reports (e.g. '.../state')."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Avoid Spaces/Special Chars:</strong> Keep topic levels alphanumeric, avoiding spaces, backslashes, or control characters."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "System Topics ($SYS/)",
+            "box": {
+              "title": "Broker Telemetry & Metadata",
+              "list": [
+                {
+                  "emoji": "💲",
+                  "text": "<strong>Reserved Prefix:</strong> Topics starting with '$' are reserved for broker-internal statistics and configurations."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Telemetry Data:</strong> Subscribing to '$SYS/broker/clients/connected' provides real-time counts of active connections."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Read-Only:</strong> Clients cannot publish to '$SYS/' topics; they are strictly managed by the broker runtime."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏷️",
+            "title": "Topic Aliases (MQTT v5.0)",
+            "box": {
+              "title": "Reducing Bandwidth of Repetitive Topics",
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Integer Mapping:</strong> Replaces long string topic names with a simple 16-bit integer ID (e.g. 'devices/sensor-long-name/temp' -> 1)."
+                },
+                {
+                  "emoji": "📤",
+                  "text": "<strong>Initial Send:</strong> The client publishes a message with both the full topic string and the Alias integer (e.g., 1)."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Subsequent Sends:</strong> The client sends subsequent messages with ONLY the Alias integer, leaving the topic field empty."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "advanced-v5",
+        "title": "Advanced Features & MQTT v5.0",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚡",
+            "title": "Advanced Features & MQTT v5.0",
+            "subtitle": "Unlocking enterprise scalability and modern control features"
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Why MQTT v5.0?",
+            "box": {
+              "title": "Addressing Enterprise Needs",
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Cloud Scale Compatibility:</strong> Improved features for high-traffic Kubernetes clusters and large load-balanced deployments."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Robust Error Reporting:</strong> Replaces silent failures with descriptive reason codes on all acknowledgment packets."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Extensibility:</strong> Introduces user properties to allow custom header metadata without altering the core binary schema."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏷️",
+            "title": "User Properties",
+            "box": {
+              "title": "Custom Metadata Headers",
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Key-Value Pairs:</strong> Allows appending custom UTF-8 string metadata arrays to any message header (similar to HTTP headers)."
+                },
+                {
+                  "emoji": "⛓️",
+                  "text": "<strong>Distributed Tracing:</strong> Enable correlation IDs to trace messages across brokers, gateways, and backend services."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Routing Metadata:</strong> Attach custom routing keys or content-type info (e.g., 'content-type: application/json')."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💀",
+            "title": "Last Will & Testament (LWT)",
+            "box": {
+              "title": "Detecting Unclean Disconnections",
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Will Registration:</strong> During connection (CONNECT), the client provides a pre-configured topic and message payload (the Will)."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Trigger Condition:</strong> If the client disconnects ungracefully (e.g. power loss, network dropout), the broker publishes the Will message."
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>Graceful Disconnect:</strong> If the client sends a DISCONNECT packet, the broker discards the Will, recognizing a clean exit."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⏳",
+            "title": "Session & Message Expiry",
+            "box": {
+              "title": "Preventing Resource Leaks",
+              "list": [
+                {
+                  "emoji": "🧹",
+                  "text": "<strong>Session Expiry Interval:</strong> Defines how long a disconnected persistent session remains active on the broker before deletion."
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Message Expiry Interval:</strong> Message-level TTL. If a queued message sits longer than this limit, the broker discards it."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Use Case:</strong> Prevents broker memory exhaustion from dead sensors that never reconnect to consume their queues."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🆗",
+            "title": "Standardized Reason Codes",
+            "box": {
+              "title": "Diagnostic Identifiers",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Packet-Level Feedback:</strong> v5.0 adds reason codes to CONNACK, PUBACK, SUBACK, UNSUBACK, and DISCONNECT."
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Security Feedback:</strong> Allows brokers to explicitly send 'Not Authorized' (0x87) rather than silently closing TCP links."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Administrative Disconnect:</strong> Broker can notify the client of administrative shutdown (0x98) or protocol errors (0x82)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🤝",
+            "title": "Shared Subscriptions",
+            "box": {
+              "title": "Load Balancing Consumers",
+              "list": [
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Traditional Pub-Sub:</strong> If three clients subscribe to 'telemetry', all three receive every published message."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Shared Subscriptions:</strong> Using prefix '$share/group_name/telemetry' distributes messages round-robin among group members."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Horizontal Scaling:</strong> Enables standard microservice worker groups to process massive IoT streams without duplicates."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛑",
+            "title": "Flow Control",
+            "box": {
+              "title": "Negotiating Transmission Speed",
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Receive Maximum:</strong> Clients and brokers declare the maximum number of concurrent inflight QoS 1/2 messages they accept."
+                },
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>Buffer Overrun Protection:</strong> Prevents a fast publisher from overwhelming a slow consumer by blocking sends until ACKs return."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Dynamic Throttling:</strong> Keeps client/broker resources stable under spikes without drop-offs."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "MQTT Security & Hardening",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🔒",
+            "title": "MQTT Security & Hardening",
+            "subtitle": "Securing message transport, client identities, and access control"
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Transport Layer Security (TLS)",
+            "box": {
+              "title": "Securing Data in Transit",
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Encryption:</strong> Encrypts all payload and control packets, preventing eavesdropping and packet injection."
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>Standard Ports:</strong> Port 8883 is reserved for MQTT over TLS, while Port 1883 is used for unencrypted plain text."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Performance Overhead:</strong> TLS handshake adds latency and bytes, requiring hardware cryptographic accelerators on low-power chips."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "Client Authentication Methods",
+            "box": {
+              "title": "Verifying Identity",
+              "list": [
+                {
+                  "emoji": "👤",
+                  "text": "<strong>Basic Auth:</strong> Username and Password sent inside the CONNECT packet. Should always be paired with TLS."
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>mTLS (Client Certificates):</strong> Dual-sided authentication where client validates broker, and broker validates client's X.509 certificate."
+                },
+                {
+                  "emoji": "🎟️",
+                  "text": "<strong>OAuth 2.0 / JWT:</strong> Passing dynamic web tokens in username/password fields for short-lived access authorization."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Authorization & ACLs",
+            "box": {
+              "title": "Access Control Lists",
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Granular Permissions:</strong> Restrict clients to specific read (subscribe) and write (publish) topic patterns."
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Dynamic Rules:</strong> Use variables in ACL configurations (e.g. allow client '%c' to publish only to 'devices/%c/telemetry')."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Isolation:</strong> Prevents compromised devices from sniffing data belonging to other sensors on the network."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Broker Hardening Best Practices",
+            "box": {
+              "title": "Securing the Broker Deployment",
+              "list": [
+                {
+                  "emoji": "❌",
+                  "text": "<strong>Disable Anonymous:</strong> Ensure anonymous access is disabled in production settings (allow_anonymous false)."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Rate Limiting:</strong> Configure connection rate limits and bandwidth throttling to mitigate denial-of-service (DoS) attacks."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Firewall Rules:</strong> Bind broker listener ports to localhost or private VPN adapters, exposing them only via reverse proxies."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Authentication Trade-offs",
+            "leftTitle": "Username/Password",
+            "leftPoints": [
+              "Simple onboarding and credentials management.",
+              "Requires storage of password databases on brokers or directory sync (LDAP).",
+              "Vulnerable to credential harvesting if TLS is misconfigured."
+            ],
+            "rightTitle": "Client Certificates (mTLS)",
+            "rightPoints": [
+              "Extremely secure; cryptographic validation without passwords over the air.",
+              "Requires Public Key Infrastructure (PKI) to issue and revoke certificates.",
+              "Heavy CPU computation overhead during handshakes on low-power devices."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "broker-architecture",
+        "title": "Broker Architecture & Clustering",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏢",
+            "title": "Broker Architecture & Clustering",
+            "subtitle": "Scaling MQTT broker fabrics to handle millions of concurrent IoT devices"
+          },
+          {
+            "type": "content",
+            "emoji": "🖥️",
+            "title": "Popular MQTT Brokers Overview",
+            "box": {
+              "title": "Comparing Popular Open-Source & Enterprise Brokers",
+              "list": [
+                {
+                  "emoji": "🦟",
+                  "text": "<strong>Eclipse Mosquitto:</strong> Lightweight, single-threaded broker written in C. Ideal for low-resource environments (Raspberry Pi, edge gateways)."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>EMQX:</strong> Erlang-based high-performance broker. Supports massive concurrency, horizontal clustering, and rules engine."
+                },
+                {
+                  "emoji": "🐝",
+                  "text": "<strong>HiveMQ:</strong> Java-based enterprise broker. Highly customizable with SDK plug-ins, designed for cloud-native orchestration."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📈",
+            "title": "Scaling: Vertical vs Horizontal",
+            "box": {
+              "title": "Scaling Strategies",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>Vertical Scaling:</strong> Increasing CPU cores, RAM, and tuning kernel socket parameters. Limited by single-system boundaries."
+                },
+                {
+                  "emoji": "🕸️",
+                  "text": "<strong>Horizontal Clustering:</strong> Distributing connections across multiple broker instances joined in a cluster."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>State Sync:</strong> Requires clustering protocols to route messages to subscribers connected to different nodes."
+                }
+              ]
+            }
+          },
+          {
+            "type": "diagram",
+            "emoji": "🌐",
+            "title": "Broker Cluster Architecture",
+            "box": {
+              "title": "Load-Balanced Multi-Node Topology",
+              "code": "             +------------------------------------+\n             |      Load Balancer (HAProxy)       |\n             +------------------------------------+\n               /                |               \\\n      +----------------+ +----------------+ +----------------+\n      | Broker Node A  | | Broker Node B  | | Broker Node C  |\n      +----------------+ +----------------+ +----------------+\n      |     EMQX 1     | |     EMQX 2     | |     EMQX 3     |\n      +----------------+ +----------------+ +----------------+\n      +------------------------------------------------------+\n      |       Inter-Node Gossip / State Sync Fabric          |\n      +------------------------------------------------------+"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌉",
+            "title": "MQTT Bridging",
+            "box": {
+              "title": "Connecting Edge to Cloud",
+              "list": [
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Edge Link:</strong> A local broker (e.g. Mosquitto) is configured to connect as a client to a remote parent broker."
+                },
+                {
+                  "emoji": "🔀",
+                  "text": "<strong>Route Mapping:</strong> Selected local topics are forwarded to the remote broker, and remote control topics are pulled back locally."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Store-and-Forward:</strong> If the WAN link fails, the edge broker queues telemetry messages locally and sends them once link recovers."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "State Sync in Clusters",
+            "box": {
+              "title": "Gossip Protocols & Message Routing",
+              "list": [
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Shared Registry:</strong> Nodes must coordinate subscription records, knowing which client is connected to which node."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Message Forwarding:</strong> If client X publishes to Node A, and subscriber Y is on Node B, Node A forwards the message to Node B internally."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>Distributed Lock Manager:</strong> Manages persistent sessions to ensure a client cannot hold active connections on two nodes simultaneously."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚖️",
+            "title": "Load Balancing MQTT Connections",
+            "box": {
+              "title": "Managing TCP Traffic at Scale",
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Sticky Sessions:</strong> Load balancer route clients with persistent sessions to their previous broker node if possible."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>TCP Passthrough:</strong> Configure HAProxy/Nginx in layer 4 TCP mode to bypass HTTP proxy overhead, maximizing throughput."
+                },
+                {
+                  "emoji": "🩺",
+                  "text": "<strong>Health Checks:</strong> Use custom broker health endpoints to immediately stop routing connections to failing nodes."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "OS Performance Tuning",
+            "box": {
+              "title": "Optimizing Linux Kernel for Millions of Connections",
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>File Descriptors:</strong> Increase maximum open files limits in system settings (e.g. fs.file-max) to allow over 100k TCP connections."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>TCP Buffers:</strong> Tune read/write socket memory buffers (sysctl net.ipv4.tcp_rmem / wmem) to reduce RAM usage per socket."
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>TCP Keepalive:</strong> Lower system TCP keepalive time to quickly release dead sockets that went disconnected without DISCONNECT."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "edge-aiot",
+        "title": "Edge Computing & AIoT",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🤖",
+            "title": "Edge Computing & AIoT Integration",
+            "subtitle": "Combining real-time message streams with AI models at the network edge"
+          },
+          {
+            "type": "content",
+            "emoji": "🌉",
+            "title": "Edge Gateways & Local Brokers",
+            "box": {
+              "title": "Processing at the Edge",
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Local Autonomy:</strong> Edge gateways run local brokers to allow sensors and switches to interact even when internet connectivity is down."
+                },
+                {
+                  "emoji": "🧼",
+                  "text": "<strong>Data Filtering:</strong> Gateways consume high-frequency raw telemetry, aggregate it, and publish only processed trends to the cloud."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Low Latency:</strong> Crucial for closed-loop industrial controls where actions must take place in milliseconds."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "AIoT: AI + IoT Integration",
+            "box": {
+              "title": "Smarter Connected Devices",
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Intelligence Shift:</strong> Moving machine learning execution from central cloud servers directly onto edge devices and gateways."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Telemetry Pipelines:</strong> MQTT acts as the real-time event pipeline feeding data into edge inference runtimes (e.g. TensorFlow Lite)."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Model Outputs:</strong> Model predictions and classification events are published back to MQTT topics for downstream execution."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🩺",
+            "title": "Predictive Maintenance via MQTT",
+            "box": {
+              "title": "Preventing Machine Failures",
+              "list": [
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Continuous Monitoring:</strong> Sensors stream vibration, temperature, and current data via MQTT to local edge processors."
+                },
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Anomaly Detection:</strong> Local AI models analyze real-time streams to identify deviations from normal operating patterns."
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Alert Dispatching:</strong> If anomaly is detected, broker dispatches high-priority warning message to maintenance terminals."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🤖",
+            "title": "MQTT & Generative AI Smart Agents",
+            "box": {
+              "title": "AI-Driven Automations",
+              "list": [
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Multimodal Inputs:</strong> AI agents subscribe to MQTT event feeds to understand current physical contexts."
+                },
+                {
+                  "emoji": "✍️",
+                  "text": "<strong>Dynamic Actions:</strong> LLMs generate automation rules or MQTT commands dynamically in response to natural language goals."
+                },
+                {
+                  "emoji": "🏡",
+                  "text": "<strong>Next-Gen Home:</strong> Future smart home systems using ambient models to adjust heating and lighting by parsing telemetry logs."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏭",
+            "title": "Case Study: Sparkplug B Standard",
+            "box": {
+              "title": "MQTT in Industrial Automation",
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Topic Standardization:</strong> Sparkplug B defines strict topic structures (e.g., 'spBv1.0/group/message_type/edge_node') for plug-and-play setups."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Compressed Payload:</strong> Uses highly optimized Google Protocol Buffers (Protobuf) payload format to reduce traffic."
+                },
+                {
+                  "emoji": "🩺",
+                  "text": "<strong>State Management:</strong> Integrates birth/death certificate sequences to track online states of industrial PLCs."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quizzes",
+        "title": "Knowledge Checks",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧠",
+            "title": "Knowledge Checks",
+            "subtitle": "Test your understanding of MQTT core concepts, wildcards, and features"
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "QoS Handshake Check",
+            "question": "Which MQTT QoS level implements a four-way handshake to guarantee that a message is delivered exactly once?",
+            "options": [
+              "QoS 0",
+              "QoS 1",
+              "QoS 2",
+              "QoS 3"
+            ],
+            "correct": 2,
+            "answer": "QoS 2",
+            "explanation": "QoS 2 uses a four-way handshake (PUBLISH -> PUBREC -> PUBREL -> PUBCOMP) to guarantee that the message is delivered exactly once and duplicate deliveries are prevented."
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "Wildcard Matching Logic",
+            "question": "Given the subscription topic filter 'home/+/status', which of the following topic paths will NOT match?",
+            "options": [
+              "home/kitchen/status",
+              "home/livingroom/status",
+              "home/livingroom/lights/status",
+              "home/bedroom/status"
+            ],
+            "correct": 2,
+            "answer": "home/livingroom/lights/status",
+            "explanation": "The '+' wildcard matches exactly one level. The path 'home/livingroom/lights/status' has four levels and fails to match. It would require 'home/+/+/status' or 'home/#'."
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "MQTT v5.0 Shared Subscriptions",
+            "question": "What is the primary benefit of MQTT v5.0 Shared Subscriptions?",
+            "options": [
+              "They allow messages to be shared across different internet protocols.",
+              "They load-balance messages round-robin among a group of subscribing consumers.",
+              "They force brokers to store all published messages permanently.",
+              "They encrypt subscriptions to hide subscriber identities."
+            ],
+            "correct": 1,
+            "answer": "They load-balance messages round-robin among a group of subscribing consumers.",
+            "explanation": "Shared Subscriptions allow a pool of client consumers to share the message workload of a single subscription, distributing publishes round-robin."
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "Last Will and Testament (LWT)",
+            "question": "When does the broker publish a client's Last Will and Testament (LWT) message?",
+            "options": [
+              "When the client disconnects cleanly by sending a DISCONNECT packet.",
+              "When the client successfully establishes a new connection.",
+              "Only when the client disconnects ungracefully due to network or power loss.",
+              "Every time the client completes a QoS 2 handshake."
+            ],
+            "correct": 2,
+            "answer": "Only when the client disconnects ungracefully due to network or power loss.",
+            "explanation": "LWT messages are only sent if the client connection is closed ungracefully without sending a DISCONNECT packet (e.g. heartbeat timeout or TCP link loss)."
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion & Resources",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏁",
+            "title": "Conclusion & Resources",
+            "subtitle": "Wrapping up and next steps in your IoT journey"
+          },
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "MQTT Masterclass Summary",
+            "box": {
+              "title": "Key Takeaways",
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Lightweight & Robust:</strong> MQTT is the backbone of IoT, offering minimal overhead and high resiliency for unstable networks."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>MQTT v5.0 Ready:</strong> Leverages modern features like user properties, shared subscriptions, and session expiry for enterprise scalability."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Security First:</strong> Hardens production systems using TLS encryption, client certificate authentication (mTLS), and strict topic ACLs."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "Essential Developer Toolkit",
+            "box": {
+              "title": "Tools for MQTT Development",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>MQTT Explorer:</strong> A desktop client that visualizes topic structures in an intuitive, hierarchical tree view."
+                },
+                {
+                  "emoji": "💻",
+                  "text": "<strong>CLI Tools:</strong> Using 'mosquitto_pub' and 'mosquitto_sub' command-line utilities for rapid script testing."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Wireshark:</strong> Analyzing packet structures and decoding unencrypted MQTT frames for deep network troubleshooting."
+                }
+              ]
+            }
+          },
+          {
+            "type": "thank-you",
+            "emoji": "👋",
+            "title": "Thank You!",
+            "message": "Start building your next smart device with MQTT! Q&A Session."
+          }
+        ]
+      }
+    ]
+  }
+}

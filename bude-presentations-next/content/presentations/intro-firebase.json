@@ -1,0 +1,774 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "emoji": "🔥",
+            "title": "Firebase Masterclass",
+            "subtitle": "Google's Mobile & Web Application Development Platform<br>A Complete Guide to Serverless Architecture, Databases, Security, and Emulators",
+            "backgroundImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer & IoT Enthusiast",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development, Serverless Architecture & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "intro-firebase",
+        "title": "Introduction to Firebase",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🚀",
+            "title": "Introduction to Firebase & The BaaS Ecosystem",
+            "subtitle": "Understanding Google's Backend-as-a-Service Philosophy and Platform Suite"
+          },
+          {
+            "type": "imageText",
+            "title": "The Backend-as-a-Service (BaaS) Paradigm",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Developer working on code with serverless tools",
+            "caption": "Focusing on client experiences, not server management",
+            "content": "<h4>🔥 Understanding Google Firebase</h4><p>Firebase is a comprehensive BaaS platform that provides developers with tools and infrastructure to build, secure, and scale applications rapidly.</p><ul><li>⚡ <strong>Rapid Prototyping</strong> - Instant databases, authentication, and file storage.</li><li>🛡️ <strong>Google Cloud Infrastructure</strong> - Powered by Google Cloud Platform (GCP) for automatic scaling and global availability.</li><li>📦 <strong>Unified SDK</strong> - Access all services through a single client-side library.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Firebase vs. Traditional Backend",
+            "leftTitle": "Traditional Custom Backend",
+            "leftPoints": [
+              "🏗️ Developer creates, provisions, and maintains database servers.",
+              "💻 Manually write authentication routines, JWT signing, and session refreshes.",
+              "💸 Pay fixed costs for virtual machines and compute capacity.",
+              "🔒 Write custom API route controllers, middleware, and CORS policies.",
+              "🔄 Set up custom servers for real-time WebSocket communication."
+            ],
+            "rightTitle": "Google Firebase (BaaS)",
+            "rightPoints": [
+              "🐘 Managed Serverless database (Firestore) scales automatically.",
+              "🔑 Authentication handled out of the box with standard provider integrations.",
+              "💰 Pay-as-you-go pricing model with generous free tiers.",
+              "🛡️ Access rules declared at the database layer using Security Rules.",
+              "⚡ Native WebSocket-based realtime data sync built into the client SDK."
+            ],
+            "note": {
+              "text": "Firebase trade-off: fast time-to-market versus vendor lock-in and complex query limitations."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Firebase Platform Component Stack",
+            "content": "┌─────────────────────────────────────────────────────────────┐\n│                     Client Applications                     │\n│                 (iOS, Android, Web, Flutter)                │\n├──────────────────────────────┬──────────────────────────────┤\n│       firebase/app SDK       │      REST / gRPC Endpoints   │\n└──────────────────────────────┼──────────────────────────────┘\n                               │ Secure Connection\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                  Firebase Security Rules                    │\n│             (Client Access Validation & Auth check)         │\n└──────────────────────────────┬──────────────────────────────┘\n                               │ Validated Actions\n         ┌─────────────────────┼─────────────────────┐\n         ▼                     ▼                     ▼\n┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐\n│ Cloud Firestore │   │  Firebase Auth  │   │ Cloud Storage   │\n│ (NoSQL Database)│   │ (User Identity) │   │ (Blob Storage)  │\n└────────┬────────┘   └────────┬────────┘   └────────┬────────┘\n         │                     │                     │\n         └─────────────────────┼─────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                    Cloud Functions (GCF)                    │\n│               (Node.js Serverless Microservices)             │\n└──────────────────────────────┬──────────────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                Google Cloud Platform (GCP)                  │\n│          (BigQuery, Cloud Logging, Identity Platform)       │\n└─────────────────────────────────────────────────────────────┘",
+            "note": {
+              "text": "Firebase integrates security rules directly at the resource level, enabling secure direct client-to-database requests."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The Firebase Console & Project Management",
+            "box": {
+              "title": "🎨 Managing application resources in the dashboard:",
+              "list": [
+                "<strong>Project Settings:</strong> Manage project credentials, registers web/mobile applications, and generate configuration scripts.",
+                "<strong>Database Browsers:</strong> View, edit, add, and query Firestore documents and Realtime DB JSON nodes visually.",
+                "<strong>Authentication Table:</strong> Monitor registered users, reset passwords, revoke accounts, and enable identity providers.",
+                "<strong>Usage Monitoring:</strong> Access detailed analytics on bandwidth consumption, database reads/writes, and serverless invocations."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "firestore",
+        "title": "Cloud Firestore",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🗄️",
+            "title": "Cloud Firestore Database",
+            "subtitle": "Deep Dive into Google's Flagship Serverless NoSQL Document Store"
+          },
+          {
+            "type": "imageText",
+            "title": "Firestore Document Model",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Database indexing and storage racks",
+            "caption": "Flexible, document-based NoSQL architecture",
+            "content": "<h4>🏗️ Collections and Documents</h4><p>Cloud Firestore is a flexible, scalable database for mobile, web, and server development. It stores data in documents, which are organized into collections.</p><ul><li>📄 <strong>Documents</strong> - Key-value maps resembling JSON. Documents are limited to 1MB.</li><li>🗃️ <strong>Collections</strong> - Containers for documents. Collections cannot contain raw values, only documents.</li><li>🔗 <strong>Subcollections</strong> - Documents can contain subcollections, enabling hierarchical relationships.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Reading and Writing Documents",
+            "box": {
+              "title": "Creating a document and retrieving it from Firestore:",
+              "code": "import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';\nconst db = getFirestore(app);\n\n// Write data to a document\nawait setDoc(doc(db, 'users', 'aravind'), {\n  username: 'aravind_g',\n  role: 'developer',\n  points: 100\n});\n\n// Retrieve document\nconst docSnap = await getDoc(doc(db, 'users', 'aravind'));\nif (docSnap.exists()) {\n  console.log('User data:', docSnap.data());\n}",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "⚖️",
+            "title": "Firestore vs. MongoDB",
+            "leftTitle": "Cloud Firestore",
+            "leftPoints": [
+              "🔄 Built-in real-time synchronization out-of-the-box.",
+              "🔒 Direct client-side SDK query access via Security Rules.",
+              "🔍 Queries are scaled to the size of the result set, not the dataset.",
+              "📈 Auto-scaling managed globally by Google with zero operations.",
+              "❌ Lacks complex aggregation pipelines (requires BigQuery)."
+            ],
+            "rightTitle": "MongoDB",
+            "rightPoints": [
+              "🔄 Real-time requires Change Streams (needs custom server processing).",
+              "🔒 Requires middle tier API server for client access control.",
+              "🔍 Query performance scales with database size (requires manual indexing).",
+              "📈 Requires manual cluster management or Atlas setup.",
+              "⚡ Extremely rich aggregation pipelines and join operations."
+            ],
+            "note": {
+              "text": "Firestore is optimal for mobile/web apps with high concurrent reads/writes and minimal complex joins."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Understanding Firestore Indexes",
+            "box": {
+              "title": "🚀 How Firestore guarantees sub-millisecond query performance:",
+              "list": [
+                "<strong>Single-Field Indexes:</strong> Firestore automatically indexes every field in a document to support simple filters.",
+                "<strong>Composite Indexes:</strong> Required for queries filtering on multiple fields or mixing filters with sorting.",
+                "<strong>Index Failures:</strong> Running an unindexed query triggers an SDK exception containing a direct link to generate the index.",
+                "<strong>Query Limits:</strong> Queries cannot search text using wildcards or run regex (requires Algolia/Elasticsearch)."
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Listening to Real-time Updates",
+            "box": {
+              "title": "Subscribing to document updates on the client:",
+              "code": "import { doc, onSnapshot } from 'firebase/firestore';\n\nconst unsub = onSnapshot(doc(db, 'users', 'aravind'), (doc) => {\n  const source = doc.metadata.hasPendingWrites ? 'Local' : 'Server';\n  console.log(`Data source: ${source}`, doc.data());\n});\n\n// Call unsub() to terminate listener\n// unsub();",
+              "language": "javascript"
+            },
+            "note": {
+              "text": "The SDK handles offline synchronization, immediately firing callbacks for local writes before server sync."
+            }
+          }
+        ]
+      },
+      {
+        "id": "realtime-db",
+        "title": "Realtime Database",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚡",
+            "title": "Firebase Realtime Database",
+            "subtitle": "Exploring Google's Original Low-Latency JSON Tree Database"
+          },
+          {
+            "type": "imageText",
+            "title": "The JSON Tree Structure",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "JSON tree diagram visualization",
+            "caption": "Data structured as a single massive JSON object",
+            "content": "<h4>🌳 Hierarchical Tree Model</h4><p>Unlike Firestore's document-collection structure, Realtime Database stores data as a single, large, nested JSON tree.</p><ul><li>🌲 <strong>No Documents</strong> - Everything is a key or a nested value.</li><li>🔗 <strong>Reference URLs</strong> - Access nodes directly via URI paths (e.g. `https://my-app.firebaseio.com/users/aravind`).</li><li>📦 <strong>Bulk Downloads</strong> - Downloading a node retrieves all its nested children. Deep nesting should be avoided.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Realtime Database Operations",
+            "box": {
+              "title": "Setting and reading values from the JSON tree:",
+              "code": "import { getDatabase, ref, set, onValue } from 'firebase/database';\nconst rdb = getDatabase(app);\n\n// Set database reference value\nawait set(ref(rdb, 'presence/aravind'), {\n  status: 'online',\n  lastSeen: Date.now()\n});\n\n// Listen for continuous updates\nconst starCountRef = ref(rdb, 'presence/aravind');\nonValue(starCountRef, (snapshot) => {\n  const data = snapshot.val();\n  console.log('Presence update:', data);\n});",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "↔️",
+            "title": "Firestore vs. Realtime Database",
+            "leftTitle": "Cloud Firestore",
+            "leftPoints": [
+              "🗂️ Document/Collection structure.",
+              "🔍 Supports complex queries (sorting, compound filters).",
+              "📁 Subcollections help partition data; no bulk fetches.",
+              "📈 Scales to billions of documents effortlessly.",
+              "⏱️ Moderate latency (tens of milliseconds)."
+            ],
+            "rightTitle": "Realtime Database",
+            "rightPoints": [
+              "🌳 Single flat JSON tree.",
+              "❌ Extremely limited querying capabilities.",
+              "📁 Fetching a parent node downloads ALL child nodes.",
+              "📉 Scalability limited to ~200k concurrent connections.",
+              "⚡ Extremely low latency (single-digit milliseconds)."
+            ],
+            "note": {
+              "text": "Use Realtime Database for high-frequency low-latency updates (e.g., real-time presence indicators or chats)."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Realtime Database Offline Support",
+            "box": {
+              "title": "🔌 Managing network disruptions seamlessly:",
+              "list": [
+                "<strong>Local Cache:</strong> Writes are immediately committed to a local memory cache, allowing offline usage.",
+                "<strong>OnDisconnect Hooks:</strong> Tell the server to execute a write operation when the client connection terminates unexpectedly.",
+                "<strong>Connection State:</strong> Read the special path `/.info/connected` to determine client connectivity status.",
+                "<strong>Conflict Resolution:</strong> Automatically updates local state with server state upon reconnection."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "auth",
+        "title": "Firebase Authentication",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🔑",
+            "title": "Firebase Authentication",
+            "subtitle": "Identity Management, Federated Sign-In, and Secure User Handshakes"
+          },
+          {
+            "type": "imageText",
+            "title": "Secure Client Authentication Flow",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Secure login lock concept",
+            "caption": "Handling user credentials securely and transparently",
+            "content": "<h4>🔐 Out-of-the-Box User Management</h4><p>Firebase Authentication provides SDKs and pre-built UI components to authenticate users with passwords, phone numbers, and identity providers.</p><ul><li>🔒 <strong>Secure Enclave Hashing</strong> - Password hashes are stored securely inside Google's authentication system.</li><li>🔄 <strong>JWT Tokens</strong> - Generates JSON Web Tokens (JWT) signed by Google, carrying user metadata.</li><li>🌐 <strong>Federated Providers</strong> - Native support for Google, Apple, GitHub, Facebook, and Microsoft OAuth.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Password & OAuth Sign-In",
+            "box": {
+              "title": "Implementing user signup and social authentication redirects:",
+              "code": "import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GithubAuthProvider } from 'firebase/auth';\nconst auth = getAuth(app);\n\n// Create email-based account\nconst userCredential = await createUserWithEmailAndPassword(auth, 'email@site.com', 'password123');\n\n// Auth with GitHub\nconst provider = new GithubAuthProvider();\nconst result = await signInWithPopup(auth, provider);\nconsole.log('GitHub Authenticated User:', result.user);",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Advanced Authentication Mechanisms",
+            "box": {
+              "title": "📱 Passwordless and multi-factor strategies:",
+              "list": [
+                "<strong>Magic Links:</strong> Email a sign-in link that logs the user in instantly, eliminating passwords.",
+                "<strong>Phone / SMS Auth:</strong> Send 6-digit one-time passwords (OTP) to verify telephone numbers.",
+                "<strong>Anonymous Auth:</strong> Create temporary guest sessions to save data before a user registers.",
+                "<strong>Multi-Factor Auth (MFA):</strong> Require second-factor verification (SMS or TOTP code) for added security."
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Node.js: Custom Claims & Admin SDK",
+            "box": {
+              "title": "Assigning custom roles to users from server-side environments:",
+              "code": "const admin = require('firebase-admin');\nadmin.initializeApp();\n\n// Set custom user claims\nawait admin.auth().setCustomUserClaims('userId_123', {\n  admin: true,\n  premium: true\n});\n\n// Token details will now contain these claims\n// Ex: auth.token.admin == true inside security rules",
+              "language": "javascript"
+            },
+            "note": {
+              "text": "Clients must force token refresh (`getIdToken(true)`) to receive newly updated claims."
+            }
+          }
+        ]
+      },
+      {
+        "id": "storage",
+        "title": "Cloud Storage",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "💾",
+            "title": "Cloud Storage for Firebase",
+            "subtitle": "Storing and Serving User-Generated Binary Assets at Global Scale"
+          },
+          {
+            "type": "imageText",
+            "title": "Blob Storage Infrastructure",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Server database storage racks",
+            "caption": "Powered by Google Cloud Storage",
+            "content": "<h4>📦 Scalable Asset Management</h4><p>Cloud Storage stores images, audio, video, or other user-generated content. Under the hood, it uses Google Cloud Storage buckets for high availability and redundancy.</p><ul><li>🔄 <strong>Upload Resume Capability</strong> - Native upload tasks can pause, resume, and retry uploads dynamically.</li><li>📈 <strong>Exabytes of Storage</strong> - Automatically scales up to petabytes of data without capacity planning.</li><li>🛡️ <strong>Rule-Based Authorization</strong> - Restrict client access to specific folders via Cloud Storage Security Rules.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Uploading Files with Progress",
+            "box": {
+              "title": "Uploading file objects and monitoring status:",
+              "code": "import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';\nconst storage = getStorage(app);\n\nconst storageRef = ref(storage, 'avatars/aravind.png');\nconst uploadTask = uploadBytesResumable(storageRef, fileBlob);\n\nuploadTask.on('state_changed', \n  (snapshot) => {\n    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;\n    console.log(`Upload is ${progress}% done`);\n  },\n  (error) => { console.error('Upload failed:', error); },\n  async () => {\n    const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);\n    console.log('File available at:', downloadURL);\n  }\n);",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Serving Assets Efficiently",
+            "box": {
+              "title": "🌐 Optimization strategies for binary content:",
+              "list": [
+                "<strong>Download URLs:</strong> Direct, unguessable, token-revokable URLs for sharing files publicly.",
+                "<strong>Browser Caching:</strong> Configure metadata headers (`cacheControl`) to store assets on client browsers.",
+                "<strong>Global CDN:</strong> Auto-replicated across edge locations for low-latency downloads.",
+                "<strong>Direct GCP access:</strong> Servers can bypass Firebase wrappers and use standard GCP Storage APIs."
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Storage Security Rules Syntax",
+            "box": {
+              "title": "Creating access policies on the storage bucket:",
+              "code": "rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    // Allow user to write only to their folder\n    match /users/{userId}/{allPaths=**} {\n      allow read, write: if request.auth != null && request.auth.uid == userId;\n    }\n    // Allow anyone to read profile images\n    match /public/{allPaths=**} {\n      allow read: if true;\n    }\n  }\n}",
+              "language": "javascript"
+            }
+          }
+        ]
+      },
+      {
+        "id": "functions",
+        "title": "Cloud Functions",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚡",
+            "title": "Cloud Functions for Firebase",
+            "subtitle": "Writing Serverless Backend Microservices in Response to Client Events"
+          },
+          {
+            "type": "imageText",
+            "title": "Serverless Microservice Execution",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Serverless cloud concept",
+            "caption": "Execute server-side logic in managed environments",
+            "content": "<h4>💻 Event-Driven Computation</h4><p>Cloud Functions allows writing custom backend code that executes in response to database changes, auth updates, HTTP requests, or Pub/Sub messages.</p><ul><li>🔄 <strong>Zero Maintenance</strong> - Code runs in isolated Node.js virtual containers managed by Google.</li><li>⚡ <strong>Trigger Hooks</strong> - Intercept operations (e.g., when a user signs up, write a profile to Firestore).</li><li>🔒 <strong>Secure Environments</strong> - Restricts access to sensitive keys via GCP Secret Manager integration.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "TypeScript: HTTP and Firestore Triggers",
+            "box": {
+              "title": "Defining functions in TypeScript (2nd Gen syntax):",
+              "code": "import { onRequest } from 'firebase-functions/v2/https';\nimport { onDocumentCreated } from 'firebase-functions/v2/firestore';\nimport { initializeApp } from 'firebase-admin/app';\ninitializeApp();\n\n// HTTP endpoint\nexport const greet = onRequest((req, res) => {\n  res.json({ message: `Hello ${req.query.name || 'Developer'}!` });\n});\n\n// Firestore trigger\nexport const onUserCreated = onDocumentCreated('users/{userId}', (event) => {\n  const newValue = event.data.data();\n  console.log(`New user profile added: ${event.params.userId}`, newValue);\n});",
+              "language": "typescript"
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "⚡",
+            "title": "Cloud Functions: 1st Gen vs. 2nd Gen",
+            "leftTitle": "1st Generation Functions",
+            "leftPoints": [
+              "⚙️ Built on Cloud Functions v1 backend architecture.",
+              "⏱️ Max execution time: 9 minutes.",
+              "📦 Concurrency: 1 request per container instance.",
+              "❌ Lacks support for VPC networking.",
+              "❌ Standard HTTP endpoints have cold start delays."
+            ],
+            "rightTitle": "2nd Generation Functions (v2)",
+            "rightPoints": [
+              "🐳 Built on Cloud Run backend container architecture.",
+              "⏱️ Extended execution time: Up to 60 minutes for tasks.",
+              "📦 Concurrency: Handles up to 80 concurrent requests per instance.",
+              "🌐 Advanced networking, VPC connectivity, and custom traffic split.",
+              "⚡ Reduced cold starts with custom warmup scripts and memory cache."
+            ],
+            "note": {
+              "text": "2nd Gen functions are highly recommended for cost efficiency and higher throughput."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Trigger Lifecycle and Async Execution",
+            "box": {
+              "title": "⚙️ Best practices for writing asynchronous functions:",
+              "list": [
+                "<strong>Return Promises:</strong> Triggers must return promises or resolve successfully so the runtime engine knows when to terminate execution.",
+                "<strong>Idempotency:</strong> Functions must be idempotent; a single event might fire the trigger multiple times due to retry policies.",
+                "<strong>Resource Cleanup:</strong> Close external database connections and clean temporary server files (`/tmp`) to prevent memory leaks."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "security-rules",
+        "title": "Security Rules",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🛡️",
+            "title": "Firebase Security Rules",
+            "subtitle": "Enforcing Identity, Structure, and Authorization Rules at the API Layer"
+          },
+          {
+            "type": "imageText",
+            "title": "Declarative Authorization Layer",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Security lock representation",
+            "caption": "Securing Firestore database collections and storage buckets",
+            "content": "<h4>🛡️ Client Access Control</h4><p>Security Rules allow writing declarative logic to validate incoming requests, check user authentication states, and inspect document fields before allowing actions.</p><ul><li>🔒 <strong>Secure by Default</strong> - If a rule doesn't match an incoming request, the request is rejected instantly.</li><li>👥 <strong>Context-Aware</strong> - Rules have access to request payloads (`request.resource`) and user claims (`request.auth`).</li><li>🐘 <strong>Database Checks</strong> - Rules can execute database reads (`get()`, `exists()`) to check references.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "Writing Firestore Security Rules",
+            "box": {
+              "title": "Securing user profiles and content sub-collections:",
+              "code": "rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    \n    // Match profiles collection\n    match /users/{userId} {\n      allow read: if true;\n      allow write: if request.auth != null && request.auth.uid == userId;\n    }\n    \n    // Match comments collection with resource check\n    match /posts/{postId} {\n      allow read: if true;\n      allow create: if request.auth != null && request.resource.data.authorId == request.auth.uid;\n      allow update, delete: if request.auth != null && resource.data.authorId == request.auth.uid;\n    }\n  }\n}",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Security Rule Verification Lifecycle",
+            "content": "Client Request (e.g. read /users/aravind)\n       │\n       ▼\n Firebase Access Gateway (parses client JWT token)\n       │\n       ▼\n Evaluator Engine (loads security rules matching path)\n       │\n       ├─► Is request.auth != null? (Authentication Check)\n       │     ├─► NO  ──► Reject Request (403 Forbidden)\n       │     └─► YES ──► Check specific rule conditions\n       │\n       ├─► Does path userId match request.auth.uid? (Identity Check)\n       │     ├─► NO  ──► Reject Request (403 Forbidden)\n       │     └─► YES ──► Check write payload types\n       │\n       ├─► Inspect request.resource.data.points < 500 (Validation Check)\n       │     ├─► NO  ──► Reject Request (403 Forbidden)\n       │     └─► YES ──► Approve query!\n       ▼\nDatabase commits write, returns 200 OK to Client",
+            "note": {
+              "text": "Rule checks are performed before the database performs any changes, protecting storage and compute capacity."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Common Rules Gotchas & Best Practices",
+            "box": {
+              "title": "💡 Designing robust security boundaries:",
+              "list": [
+                "<strong>Rules are not filters:</strong> You cannot query all documents if some fail rules. Queries must match rules exactly.",
+                "<strong>Read cost limits:</strong> Each `get()` or `exists()` call inside security rules counts as a Firestore database read.",
+                "<strong>Recursive matches:</strong> Use `{document=**}` matching scopes carefully; it allows cascading rule permissions downstream.",
+                "<strong>Avoid lockouts:</strong> Write unit tests using the Local Emulator Suite before publishing rules changes."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hosting",
+        "title": "Firebase Hosting",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🌐",
+            "title": "Firebase Hosting & CDN",
+            "subtitle": "Global Edge Delivery for Static Assets, SPAs, and Dynamic SSR Microservices"
+          },
+          {
+            "type": "imageText",
+            "title": "Global Edge Caching CDN",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Server farm network cables",
+            "caption": "Fast page delivery globally via SSD storage and CDN edge sites",
+            "content": "<h4>🚀 Zero-Configuration Static Hosting</h4><p>Firebase Hosting provides fast and secure hosting for your web app, static content, and dynamic microservices.</p><ul><li>🔒 <strong>Automatic SSL</strong> - Provision SSL certificates automatically for custom domains.</li><li>🌐 <strong>Global Delivery CDN</strong> - Content cached at Cloudflare edge nodes globally for sub-second downloads.</li><li>🔄 <strong>Deploy Rollback</strong> - Undo broken updates instantly using one-click version history recovery.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "firebase.json: Rewrite & Redirect Configurations",
+            "box": {
+              "title": "Setting up single-page app routers and Cloud Functions routes:",
+              "code": "{\n  \"hosting\": {\n    \"public\": \"dist\",\n    \"ignore\": [\n      \"firebase.json\",\n      \"**/.*\"\n    ],\n    \"rewrites\": [\n      {\n        \"source\": \"/api/**\",\n        \"function\": \"greet\"\n      },\n      {\n        \"source\": \"**\",\n        \"destination\": \"/index.html\"\n      }\n    ]\n  }\n}",
+              "language": "json"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Modern Framework Integrations",
+            "box": {
+              "title": "⚡ Deploying Server-Side Rendered (SSR) architectures:",
+              "list": [
+                "<strong>Next.js / Nuxt / SvelteKit:</strong> Firebase CLI automatically detects SSR directories, builds, and deploys pages.",
+                "<strong>Cloud Run integration:</strong> Host containerized web applications and route dynamic URL requests.",
+                "<strong>Preview Channels:</strong> Deploy unique, temporary preview URLs for testing staging branch PRs."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "analytics",
+        "title": "Analytics & Monitoring",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "📊",
+            "title": "Firebase Analytics & Crashlytics",
+            "subtitle": "Monitoring App Health, Tracking User Behaviour, and Collecting Diagnostics"
+          },
+          {
+            "type": "imageText",
+            "title": "Real-time Behavior Monitoring",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Data graphs dashboard view",
+            "caption": "Evaluating business metrics and application health",
+            "content": "<h4>📈 Data-Driven Development</h4><p>Google Analytics for Firebase helps capture user interactions across web and mobile applications, allowing data-driven decisions.</p><ul><li>📊 <strong>Auto-Logged Events</strong> - Automatically tracks user sessions, device types, and system logs.</li><li>👥 <strong>Target Audiences</strong> - Segment user bases by behaviors to configure features.</li><li>💥 <strong>Crash Reports</strong> - Capture stack traces and diagnostic logs automatically via Crashlytics SDK.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Logging Events and Properties",
+            "box": {
+              "title": "Logging e-commerce checkouts and user categories:",
+              "code": "import { getAnalytics, logEvent, setUserProperties } from 'firebase/analytics';\nconst analytics = getAnalytics(app);\n\n// Set custom user attribute\nsetUserProperties(analytics, { account_tier: 'premium' });\n\n// Log custom conversion event\nlogEvent(analytics, 'checkout_completed', {\n  cart_value: 129.99,\n  items_count: 5,\n  currency: 'USD'\n});",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Data Export and Processing Pipeline",
+            "box": {
+              "title": "🔗 Accessing logs for advanced data pipelines:",
+              "list": [
+                "<strong>BigQuery Integration:</strong> Export raw, non-aggregated logs to BigQuery for SQL analysis.",
+                "<strong>Remote Config:</strong> Adjust application UI and logic parameters dynamically without pushing new builds.",
+                "<strong>A/B Testing:</strong> Run experiments on specific user groups to evaluate layout conversion rates."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "fcm",
+        "title": "Cloud Messaging",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "📲",
+            "title": "Firebase Cloud Messaging",
+            "subtitle": "Cross-Platform Push Notifications and Real-time Broadcast Channels"
+          },
+          {
+            "type": "imageText",
+            "title": "FCM Delivery Infrastructure",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Push notification cell phone visual",
+            "caption": "Reliable push messages globally at zero cost",
+            "content": "<h4>📲 Real-time Mobile Push Systems</h4><p>FCM routes notification and data messages to mobile applications and client web browsers, handling millions of connections instantly.</p><ul><li>⚡ <strong>Zero Cost</strong> - Unlimited notification deliveries globally across platforms.</li><li>📡 <strong>Target Options</strong> - Broadcast to topics, single device tokens, or user segments.</li><li>📲 <strong>Background Sync</strong> - Trigger background application updates even when the device is asleep.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "Service Worker: Background Push Listener",
+            "box": {
+              "title": "Configuring service worker script to handle incoming notification packets:",
+              "code": "// firebase-messaging-sw.js\nimportScripts('https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js');\nimportScripts('https://www.gstatic.com/firebasejs/10.0.0/firebase-messaging-compat.js');\n\nfirebase.initializeApp({\n  apiKey: '...', authDomain: '...', projectId: '...', messagingSenderId: '...'\n});\n\nconst messaging = firebase.messaging();\nmessaging.onBackgroundMessage((payload) => {\n  console.log('Background message received: ', payload);\n  self.registration.showNotification(payload.notification.title, {\n    body: payload.notification.body,\n    icon: '/firebase-logo.png'\n  });\n});",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Notification Tokens & Management Lifecycle",
+            "box": {
+              "title": "⚙️ Storing and cycling notification keys:",
+              "list": [
+                "<strong>Device Tokens:</strong> Every client instance receives a unique FCM registration token.",
+                "<strong>Server Storage:</strong> Always push and store client tokens to Firestore to send target payloads later.",
+                "<strong>Token Expiry:</strong> Tokens rotate when users reinstall apps or clear browser files; refresh listeners handle updates."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "emulators",
+        "title": "Firebase Emulators",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🛠️",
+            "title": "Firebase Local Emulator Suite",
+            "subtitle": "Offline Sandbox Environments for Local Development and CI/CD Pipelines"
+          },
+          {
+            "type": "imageText",
+            "title": "Local First Serverless Sandbox",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Developer terminal screen close up",
+            "caption": "Development environment running fully offline",
+            "content": "<h4>💻 Offline Platform Simulation</h4><p>The Firebase Local Emulator Suite mimics Auth, Firestore, Realtime DB, Storage, and Cloud Functions fully on local machines.</p><ul><li>⚡ <strong>Zero Deployments</strong> - Test security rules and functions immediately without cloud delays.</li><li>🔌 <strong>Offline Development</strong> - Build and test applications without network connections.</li><li>🔍 <strong>Visual Inspection</strong> - Explore and edit database states visually using the Emulator Suite UI.</li></ul>"
+          },
+          {
+            "type": "code",
+            "title": "Bash: Initializing and Running Emulators",
+            "box": {
+              "title": "Setting up and starting local emulator instances:",
+              "code": "# Install Firebase CLI\nnpm install -g firebase-tools\n\n# Initialize emulator configurations\nfirebase init emulators\n\n# Run the Emulator suite locally\nfirebase emulators:start --import=./seed-data --export-on-exit=./seed-data",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "code",
+            "title": "JavaScript: Connecting Client SDK to Emulator",
+            "box": {
+              "title": "Routing client queries to local ports during development:",
+              "code": "import { initializeApp } from 'firebase/app';\nimport { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';\nimport { getAuth, connectAuthEmulator } from 'firebase/auth';\n\nconst app = initializeApp(firebaseConfig);\nconst db = getFirestore(app);\nconst auth = getAuth(app);\n\n// Connect to emulator instances locally\nif (location.hostname === 'localhost') {\n  connectFirestoreEmulator(db, 'localhost', 8080);\n  connectAuthEmulator(auth, 'http://localhost:9099');\n}",
+              "language": "javascript"
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "📊",
+            "title": "Production Console vs. Emulator UI",
+            "leftTitle": "Production Firebase Console",
+            "leftPoints": [
+              "🌐 Hosted globally on Google servers; requires internet.",
+              "💰 Operations count towards monthly billing totals.",
+              "⏱️ Security Rules updates take up to a minute to apply.",
+              "🔒 Bound by production RLS rules and active authentication.",
+              "📈 Scaled to handle concurrent user traffic."
+            ],
+            "rightTitle": "Local Emulator Dashboard",
+            "rightPoints": [
+              "💻 Hosted locally on localhost (port 4000); runs offline.",
+              "🆓 Infinite reads, writes, and computations for free.",
+              "⚡ Rule changes evaluate instantly upon saving local files.",
+              "🔓 Fully open test environment; clear data states instantly.",
+              "📈 Perfect for isolated automated CI/CD pipelines."
+            ],
+            "note": {
+              "text": "The Emulator Suite is essential for integration tests and developer productivity."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Emulator-Powered CI/CD Automation",
+            "box": {
+              "title": "🤖 Integrating Emulators with GitHub Actions pipelines:",
+              "list": [
+                "Use `firebase emulators:exec \"npm test\"` to boot emulators, run tests, and spin down automatically.",
+                "Automate Security Rules validation against database assertions before deployment.",
+                "Isolate test databases per run, ensuring repeatable unit checks with zero shared state."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quizzes",
+        "title": "Knowledge Checks & Quizzes",
+        "slides": [
+          {
+            "type": "quiz",
+            "question": "Which database model is used by Cloud Firestore?",
+            "options": [
+              "JSON Tree structure",
+              "Document-Collection model",
+              "Relational SQL Tables",
+              "Graph model with Cypher queries"
+            ],
+            "correctAnswer": 1,
+            "correct": 1,
+            "explanation": "Cloud Firestore organizes data into documents and collections, keeping data isolated and scale-invariant, unlike the legacy Realtime Database JSON tree."
+          },
+          {
+            "type": "quiz",
+            "question": "What is the primary function of Firebase Security Rules?",
+            "options": [
+              "Formatting data payloads on the client",
+              "Restricting and validating database/storage access from the client SDK",
+              "Encrypting user passwords in transit",
+              "Routing API gateway traffic to Cloud Functions"
+            ],
+            "correctAnswer": 1,
+            "correct": 1,
+            "explanation": "Security Rules validate client requests at the database API layer, checking query identity, properties, and paths before committing changes."
+          },
+          {
+            "type": "quiz",
+            "question": "What technology powers Firebase Cloud Functions 2nd Gen under the hood?",
+            "options": [
+              "AWS Lambda instances",
+              "Google Cloud Run container orchestration",
+              "Compute Engine Virtual Machines",
+              "Docker Compose local stacks"
+            ],
+            "correctAnswer": 1,
+            "correct": 1,
+            "explanation": "2nd Gen functions run on Cloud Run, which allows multiple concurrent requests per container, larger execution limits, and enhanced VPC routing."
+          },
+          {
+            "type": "quiz",
+            "question": "Which Firebase key grants full administrative control, bypassing all Security Rules?",
+            "options": [
+              "Client Anon Key",
+              "Browser Config API Key",
+              "Service Account Key (Admin SDK)",
+              "FCM Server Notification Token"
+            ],
+            "correctAnswer": 2,
+            "correct": 2,
+            "explanation": "The Service Account Key is utilized by server environments and Admin SDKs to perform unrestricted operations, bypassing rules completely."
+          },
+          {
+            "type": "quiz",
+            "question": "How do you test security rules and functions locally without internet connectivity?",
+            "options": [
+              "By deploying code directly to a staging project",
+              "By running the Firebase Local Emulator Suite",
+              "By writing client-side mock conditions",
+              "By setting database rules to write: true"
+            ],
+            "correctAnswer": 1,
+            "correct": 1,
+            "explanation": "The Local Emulator Suite runs database, auth, and function mock servers locally on your machine, permitting offline development and testing."
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion & Next Steps",
+        "slides": [
+          {
+            "type": "content",
+            "title": "Summary Checklist: Firebase Best Practices",
+            "box": {
+              "title": "📋 Rules for building production-ready Firebase apps:",
+              "list": [
+                "<strong>Deny by Default:</strong> Write strict Security Rules to lock down Firestore and Storage before deployment.",
+                "<strong>Optimize Indexes:</strong> Rely on Composite Indexes to keep client-side filters fast and cost-effective.",
+                "<strong>Clean Functions:</strong> Always return promises inside triggers to prevent unexpected function termination.",
+                "<strong>Local First:</strong> Test database updates and functions using the local Emulator Suite to prevent cloud billing surprises."
+              ]
+            }
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You!",
+            "message": "Congratulations on completing the Firebase Masterclass!",
+            "box": {
+              "title": "Connect and contribute:",
+              "list": [
+                "GitHub: aravind-govindhasamy",
+                "Website: aravind-govindhasamy.github.io",
+                "Repo: bude-global-tech-presentations"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

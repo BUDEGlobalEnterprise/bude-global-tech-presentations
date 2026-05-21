@@ -1,0 +1,719 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "emoji": "♾️",
+            "title": "DevOps & CI/CD Masterclass",
+            "subtitle": "Accelerating Software Delivery from Commit to Production<br>A Practical Guide to Automation, Pipelines, Security, and Deployment Strategies",
+            "backgroundImage": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter Slide",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer & IoT Enthusiast",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "DevOps Automation, CI/CD Pipeline Architect & Infrastructure Engineering Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "philosophy",
+        "title": "DevOps Philosophy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧠",
+            "title": "DevOps Philosophy",
+            "subtitle": "Breaking Down Silos and Embracing the Continuous Delivery Culture"
+          },
+          {
+            "type": "imageText",
+            "title": "What is DevOps?",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1552581230-c01591d6f5b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Dev and Ops teams collaborating around a board",
+            "caption": "DevOps: The union of people, process, and products",
+            "content": "<h4>♾️ Culture, Automation, and Trust</h4><p>DevOps is a set of practices, tools, and a cultural philosophy that automates and integrates the processes between software development and IT teams.</p><ul><li>🤝 <strong>Culture Shift</strong> - Removing silos between Developers (Dev) and Operations (Ops).</li><li>⚡ <strong>Continuous Feedback</strong> - Rapid feedback loops to ensure code reliability and user satisfaction.</li><li>🚀 <strong>Faster Delivery</strong> - Releasing features to production quickly, securely, and repeatedly.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Traditional IT vs. DevOps Culture",
+            "leftTitle": "Traditional IT (Siloed)",
+            "leftPoints": [
+              "🧱 Development focuses on writing code; Operations focuses on system stability.",
+              "🐌 Manual deployments scheduled once every few weeks or months.",
+              "🗣️ Blame culture during production outages (Dev vs. Ops).",
+              "📝 Long, manual regression testing phases before release."
+            ],
+            "rightTitle": "Modern DevOps Culture",
+            "rightPoints": [
+              "🤝 Shared ownership: Devs monitor production; Ops write automation code.",
+              "⚡ Automated pipelines deploy code multiple times per day.",
+              "🔍 Blameless post-mortems focused on systemic fixes, not individual errors.",
+              "🚀 Continuous automated testing run on every code commit."
+            ],
+            "note": {
+              "text": "DevOps bridges the conflicting goals of Dev (maximize velocity/change) and Ops (maximize stability/no change)."
+            }
+          },
+          {
+            "type": "content",
+            "title": "The CALMS Framework",
+            "box": {
+              "title": "🛡️ The 5 Pillars of Successful DevOps",
+              "list": [
+                "<strong>Culture:</strong> Shared responsibility, trust, and open collaboration across all engineering roles.",
+                "<strong>Automation:</strong> Automate everything possible—builds, testing, infrastructure, and releases.",
+                "<strong>Lean:</strong> Eliminate waste, work in small batches, and optimize the value stream map.",
+                "<strong>Measurement:</strong> Collect data on metrics like deployment frequency and mean time to recovery (MTTR).",
+                "<strong>Sharing:</strong> Share knowledge, lessons learned, and tools openly across the organization."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "title": "The DevOps Lifecycle",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🌀",
+            "title": "The DevOps Lifecycle",
+            "subtitle": "Understanding the Infinite Continuous Feedback Loop"
+          },
+          {
+            "type": "diagram",
+            "title": "The DevOps Loop Architecture",
+            "content": "      ┌─────────────────────────┐\n      │          PLAN           │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Trunk-Based / Git Flow\n      ┌─────────────────────────┐\n      │          CODE           │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Continuous Integration (CI)\n      ┌─────────────────────────┐\n      │          BUILD          │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Automated Testing (QA)\n      ┌─────────────────────────┐\n      │          TEST           │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Continuous Delivery (CD)\n      ┌─────────────────────────┐\n      │         RELEASE         │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Continuous Deployment\n      ┌─────────────────────────┐\n      │         DEPLOY          │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Infrastructure as Code\n      ┌─────────────────────────┐\n      │         OPERATE         │\n      └───────────┬─────────────┘\n                  │\n                  ▼  Observability & Alerting\n      ┌─────────────────────────┐\n      │         MONITOR         │\n      └───────────┬─────────────┘\n                  │\n                  ▼ (Loops back to Plan)\n       Continuous Feedback Loop",
+            "note": {
+              "text": "The infinity loop represents the continuous, iterative nature of software deployment and operation."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Understanding the Feedback Loop",
+            "box": {
+              "title": "📢 Tightening the Loop for Faster Adjustments",
+              "list": [
+                "<strong>Plan & Code:</strong> Developers track features in agile boards and write code in localized git branches.",
+                "<strong>Build & Test:</strong> The CI pipeline triggers automatically to compile, run tests, and report errors.",
+                "<strong>Deploy & Operate:</strong> Releases are automated; configurations are managed declaratively using orchestration.",
+                "<strong>Monitor & Feedback:</strong> Errors and logs feed directly back to planners to build better features and fixes."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Shift-Left Principles",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Graph showing cost vs stage of fixing bugs",
+            "caption": "Catching issues early reduces cost exponentially",
+            "content": "<h4>🛠️ Shifting Security and Testing Left</h4><p>Shift-Left refers to moving testing, quality, and security checks earlier in the software development lifecycle.</p><ul><li>🔍 <strong>Early Defect Detection</strong> - Run tests on developers' machines and pull requests.</li><li>🛡️ <strong>Integrate Security Early</strong> - Scan dependencies during the commit stage, not in staging.</li><li>💰 <strong>Lower Costs</strong> - Fixing bugs in code takes minutes; fixing bugs in production takes weeks.</li></ul>"
+          }
+        ]
+      },
+      {
+        "id": "ci-concepts",
+        "title": "Continuous Integration (CI)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🔧",
+            "title": "Continuous Integration (CI)",
+            "subtitle": "The Foundation of Automating Builds, Linting, and Code Checks"
+          },
+          {
+            "type": "content",
+            "title": "The Core Pillars of Continuous Integration",
+            "box": {
+              "title": "🏗️ Maintaining a Healthy Main Branch",
+              "list": [
+                "<strong>Single Source Repository:</strong> All code sits in Git; branches are short-lived and merged to a main trunk.",
+                "<strong>Automated Build:</strong> The pipeline compiles/transpiles and checks dependencies on every commit.",
+                "<strong>Self-Testing Build:</strong> Automated unit tests run as part of the build process; failing tests block merges.",
+                "<strong>Immediate Feedback:</strong> Success or failure notifications are sent to developers immediately via slack, mail, or IDE."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Automating Code Quality Checks",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Terminal window showing linting errors",
+            "caption": "Automatic checking before code review",
+            "content": "<h4>🚨 Code Analysis Pipelines</h4><p>Manual code reviews are slow. Automated checks enforce guidelines before reviewers read a single line of code.</p><ul><li>📏 <strong>Linting</strong> - Formats code and flags common syntactic styling mistakes.</li><li>🔬 <strong>Static Application Security Testing (SAST)</strong> - Analyzes source code for security vulnerabilities.</li><li>📊 <strong>Code Coverage</strong> - Checks how much of the codebase is covered by unit tests (e.g. minimum 80%).</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🌿",
+            "title": "Git Branching: GitFlow vs. Trunk-Based",
+            "leftTitle": "GitFlow (Classic Branching)",
+            "leftPoints": [
+              "Long-lived branches (develop, release, master/main).",
+              "Large, infrequent merges lead to merge conflicts ('merge hell').",
+              "High overhead in managing features, releases, and hotfixes.",
+              "Slower release cycle: updates wait for release windows."
+            ],
+            "rightTitle": "Trunk-Based Development (DevOps Standard)",
+            "rightPoints": [
+              "Developers commit directly or via short PRs to the main branch.",
+              "Daily integrations avoid conflicts and simplify branching.",
+              "Uses 'feature flags' to hide incomplete features in production.",
+              "Enables continuous deployment pipelines."
+            ],
+            "note": {
+              "text": "DevOps organizations prefer Trunk-Based Development because it keeps integration friction minimal."
+            }
+          }
+        ]
+      },
+      {
+        "id": "cd-vs-deployment",
+        "title": "Continuous Delivery vs. Continuous Deployment",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🚀",
+            "title": "Continuous Delivery vs. Deployment",
+            "subtitle": "Understanding the Critical Difference at the Release Gate"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔀",
+            "title": "Continuous Delivery vs. Continuous Deployment",
+            "leftTitle": "Continuous Delivery (CD)",
+            "leftPoints": [
+              "Code is always in a releasable state.",
+              "Builds, tests, and packages artifacts automatically.",
+              "Requires a <strong>manual approval</strong> click to push to production.",
+              "Ideal for regulated industries requiring formal release approval."
+            ],
+            "rightTitle": "Continuous Deployment (CD)",
+            "rightPoints": [
+              "Automates the entire process from commit to production.",
+              "Builds, tests, packages, and deploys without human intervention.",
+              "Requires <strong>zero manual approvals</strong>.",
+              "Relies on robust test suites and automatic rollbacks to protect users."
+            ],
+            "note": {
+              "text": "Continuous Delivery prepares the build; Continuous Deployment ships it automatically."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Delivery vs Deployment Gating Lifecycle",
+            "content": "Commit Code  ──► [ CI Pipeline ]  ──► [ Deploy to Staging ]\n                                           │\n                   ┌───────────────────────┴───────────────────────┐\n                   ▼                                               ▼\n      [ Continuous Delivery ]                         [ Continuous Deployment ]\n┌───────────────────────────────┐               ┌───────────────────────────────┐\n│   Release Artifact Ready      │               │   Deploying to Production     │\n│  (Waiting for approval click) │               │   (Auto-promoted by pipeline) │\n└──────────────┬────────────────┘               └──────────────┬────────────────┘\n               │                                               │\n               ▼ Manual Trigger                                ▼ Auto Execution\n┌──────────────┴────────────────┐               ┌──────────────┴────────────────┐\n│    Deploy to Production       │               │     Live in Production        │\n└───────────────────────────────┘               └───────────────────────────────┘",
+            "note": {
+              "text": "The main differentiator is the presence of a manual release gate in Continuous Delivery."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Prerequisites for Continuous Deployment",
+            "box": {
+              "title": "🧱 Foundational Requirements before Automating Production Releases",
+              "list": [
+                "<strong>High Automated Test Coverage:</strong> Comprehensive unit, integration, and E2E tests are mandatory.",
+                "<strong>Zero-Downtime Deployments:</strong> Infrastructure must support blue-green or rolling deploys.",
+                "<strong>Automated Rollback Systems:</strong> Pipelines must monitor error rates and auto-revert buggy releases.",
+                "<strong>Feature Flags:</strong> Decouple code deployment from feature release, enabling fast trunk commits."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "pipeline-anatomy",
+        "title": "CI/CD Pipeline Anatomy",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧬",
+            "title": "CI/CD Pipeline Anatomy",
+            "subtitle": "Understanding Stages, Triggers, Runners, and Artifacts"
+          },
+          {
+            "type": "diagram",
+            "title": "Standard Pipeline Stage Flow",
+            "content": "┌─────────────────────────────────────────────────────────────┐\n│                      Source Stage (Git)                     │\n│              Trigger: Git Commit, Push, or PR               │\n└──────────────────────────────┬──────────────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                     Build Stage (Compiler)                  │\n│           Compiles code, fetches npm/nuget dependencies     │\n└──────────────────────────────┬──────────────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                     Test Stage (QA Tools)                   │\n│           Runs Unit Tests, Lints, SAST vulnerability scans   │\n└──────────────────────────────┬──────────────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                    Package Stage (Docker)                   │\n│         Builds Container Image, pushes to Registry (ECR/DH) │\n└──────────────────────────────┬──────────────────────────────┘\n                               ▼\n┌─────────────────────────────────────────────────────────────┐\n│                     Deploy Stage (K8s/Cloud)                │\n│      Applies manifests, performs rolling update, verifies   │\n└─────────────────────────────────────────────────────────────┘",
+            "note": {
+              "text": "A pipeline consists of distinct, isolated stages. If any stage fails, the entire pipeline run halts, blocking buggy code."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Caching & Artifact Management",
+            "box": {
+              "title": "📦 Optimizing Pipeline Speeds",
+              "list": [
+                "<strong>Dependency Caching:</strong> Cache folders like node_modules or .m2 to avoid fetching packages on every run.",
+                "<strong>Build Artifacts:</strong> Output binaries or bundles passed from one stage to another.",
+                "<strong>Container Images:</strong> Building static Docker images ensures that identical runtimes are deployed to staging and production.",
+                "<strong>Artifact Registries:</strong> Stores packaged software securely (e.g. Nexus, Artifactory, GitHub Packages)."
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Runners and Execution Environments",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Server rack blades representing cloud runner infrastructure",
+            "caption": "The execution engines of CI/CD pipelines",
+            "content": "<h4>⚙️ Hosting Pipeline Runs</h4><p>A Runner is a machine (virtual or physical) that executes the steps declared in your pipeline scripts.</p><ul><li>🌐 <strong>Hosted Runners</strong> - Managed by cloud providers (e.g. GitHub-hosted runners). Convenient but costly.</li><li>🏠 <strong>Self-Hosted Runners</strong> - Set up on your own infrastructure. Offers complete control over memory, speed, and network.</li><li>🐳 <strong>Containerized Run environments</strong> - Run jobs inside isolated Docker containers for clean, predictable run states.</li></ul>"
+          }
+        ]
+      },
+      {
+        "id": "tooling-ecosystem",
+        "title": "CI/CD Tooling Ecosystem",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🛠️",
+            "title": "CI/CD Tooling Ecosystem",
+            "subtitle": "Comparing Top Continuous Integration and Delivery Platforms"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔧",
+            "title": "GitHub Actions vs. Jenkins",
+            "leftTitle": "Jenkins (The Legacy Standard)",
+            "leftPoints": [
+              "Self-hosted, open-source automation server.",
+              "Requires dedicated VM maintenance, updates, and configuration.",
+              "Highly extensible with thousands of community plugins.",
+              "Pipeline configurations defined using Groovy (Jenkinsfile)."
+            ],
+            "rightTitle": "GitHub Actions (Cloud-Native)",
+            "rightPoints": [
+              "Fully managed, hosted directly inside GitHub repositories.",
+              "Zero maintenance: runners spin up dynamically on demand.",
+              "Ecosystem of pre-built marketplace actions simplifies setup.",
+              "Declarative configuration written in clean YAML syntax."
+            ],
+            "note": {
+              "text": "Jenkins is highly customizable for on-prem networks; GitHub Actions provides instant cloud integration."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Other Industry Leaders",
+            "box": {
+              "title": "⚙️ Alternative Enterprise CI/CD Systems",
+              "list": [
+                "<strong>GitLab CI/CD:</strong> Excellent, unified platform combining Git, CI/CD, security scans, and container registries.",
+                "<strong>CircleCI:</strong> Fast, cloud-native CI platform known for performance, caching speeds, and docker integration.",
+                "<strong>ArgoCD:</strong> Specialized Kubernetes GitOps continuous delivery tool that continuously syncs git changes to live clusters.",
+                "<strong>Tekton:</strong> Kubernetes-native open-source framework for creating serverless CI/CD pipelines."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "github-actions",
+        "title": "GitHub Actions Deep Dive",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🐙",
+            "title": "GitHub Actions Deep Dive",
+            "subtitle": "Writing Declarative Pipelines with Workflows, Jobs, and Actions"
+          },
+          {
+            "type": "imageText",
+            "title": "GitHub Actions YAML Anatomy",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Clean code editor displaying YAML properties",
+            "caption": "YAML-based pipeline configuration",
+            "content": "<h4>✍️ Workflow YAML Structure</h4><pre><code class=\"language-yaml\">name: Node CI\non:\n  push:\n    branches: [ main ]\njobs:\n  build-and-test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - name: Install dependencies\n        run: npm ci\n      - name: Run tests\n        run: npm test</code></pre>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🧬",
+            "title": "Workflows, Jobs, and Steps",
+            "leftTitle": "Jobs & Runners",
+            "leftPoints": [
+              "💼 <strong>Jobs:</strong> A collection of steps executed on the same runner.",
+              "⚡ Jobs run in parallel by default, but can be configured to depend on each other (<code>needs</code> keyword).",
+              "🖥️ <strong>runs-on:</strong> Defines target operating system (Ubuntu, Windows, macOS)."
+            ],
+            "rightTitle": "Steps & Actions",
+            "rightPoints": [
+              "👣 <strong>Steps:</strong> Individual tasks executed sequentially inside a job.",
+              "⚙️ <strong>run:</strong> Executes raw shell commands on the runner system.",
+              "🧩 <strong>uses:</strong> Imports a reusable marketplace Action (e.g. <code>actions/checkout</code>)."
+            ],
+            "note": {
+              "text": "Steps share the same filesystem runner instance, allowing inputs/outputs and binaries to pass from checkouts to builds."
+            }
+          },
+          {
+            "type": "content",
+            "title": "GitHub Actions Secrets and Environments",
+            "box": {
+              "title": "🔒 Securing Credentials & API Keys",
+              "list": [
+                "<strong>Encrypted Secrets:</strong> Store API tokens, passwords, and SSH keys in Settings -> Secrets. Secrets are masked in console output.",
+                "<strong>Referencing Secrets:</strong> Access secrets securely using template syntax: <code>${{ secrets.AWS_ACCESS_KEY }}</code>.",
+                "<strong>Environments:</strong> Declare specific deployment targets (Staging, Production) with custom approval gates.",
+                "<strong>OpenID Connect (OIDC):</strong> Authenticate dynamically with cloud providers (AWS, GCP, Azure) without storing long-lived credentials."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "devsecops",
+        "title": "DevSecOps (Pipeline Security)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🛡️",
+            "title": "DevSecOps (Pipeline Security)",
+            "subtitle": "Embedding Security Checks Directly Into The CI/CD Automation Flow"
+          },
+          {
+            "type": "imageText",
+            "title": "Why DevSecOps?",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Security network visualization",
+            "caption": "Security is a continuous practice, not a release checkbox",
+            "content": "<h4>🛡️ Integrating Security Checks</h4><p>Traditional security reviews are post-build, creating major release blocks. DevSecOps embeds automated security checks in the developer's daily pipeline.</p><ul><li>🛠️ <strong>Automated Scans</strong> - Dependency, secret, and container scans run on every pull request.</li><li>🛡️ <strong>Fail Fast</strong> - Halt builds immediately if high-severity CVEs are introduced.</li><li>🔑 <strong>Least Privilege</strong> - Give runner tokens minimum permissions (e.g. read-only code).</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔬",
+            "title": "Dependency Scanning vs. SAST",
+            "leftTitle": "Software Composition Analysis (SCA)",
+            "leftPoints": [
+              "Scans third-party libraries (npm, pip, maven) for known CVEs.",
+              "Identifies license compliance issues (e.g. copyleft licenses).",
+              "Prevents supply-chain attacks.",
+              "Tools: Snyk, Trivy, npm audit, GitHub Dependabot."
+            ],
+            "rightTitle": "Static Application Security Testing (SAST)",
+            "rightPoints": [
+              "Scans custom source code you wrote.",
+              "Detects security errors like SQL Injection, XSS, and hardcoded secrets.",
+              "Runs directly on source files before compilation.",
+              "Tools: SonarQube, Semgrep, GitHub CodeQL."
+            ],
+            "note": {
+              "text": "SCA checks the building blocks you import; SAST checks the custom logic you write."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Preventing Secret Leaks",
+            "box": {
+              "title": "🔑 Keeping API Keys out of Version Control",
+              "list": [
+                "<strong>Git Secrets Scanning:</strong> Run pre-commit hooks (TruffleHog, Gitleaks) to block commits containing private credentials.",
+                "<strong>Pipeline Hardening:</strong> Configure environments so variables are injected at runtime rather than hardcoded in repositories.",
+                "<strong>Short-lived Credentials:</strong> Use dynamic credentials providers (Vault, cloud identity profiles) to generate tokens on the fly.",
+                "<strong>Emergency Response:</strong> If secrets leak, immediately rotate keys and revoke credential permissions."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "deployment-strategies",
+        "title": "Deployment Strategies",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏗️",
+            "title": "Deployment Strategies",
+            "subtitle": "Rolling, Blue-Green, and Canary Deployment Architecture Patterns"
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Blue-Green vs. Canary Deployments",
+            "leftTitle": "Blue-Green Deployment",
+            "leftPoints": [
+              "Maintains two identical server environments: Blue (active) and Green (inactive).",
+              "Deploys updates to the inactive Green cluster.",
+              "Switch router traffic to Green; instantaneous cutover.",
+              "Requires 2x resource overhead; rollback is an instant router switch."
+            ],
+            "rightTitle": "Canary Deployment",
+            "rightPoints": [
+              "Deploys updates to a small subset of servers (e.g. 5% of traffic).",
+              "Verifies release stability using live user interactions.",
+              "Gradually rolls out changes to all servers if error rates remain flat.",
+              "Requires advanced ingress routing rules; isolates impact of bad builds."
+            ],
+            "note": {
+              "text": "Blue-Green switches traffic all at once; Canary rolls out updates incrementally."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Blue-Green Deployment Traffic Switch",
+            "content": "      [ Client Ingress Router ]\n                 │\n      ┌──────────┴──────────┐\n      │  Active Traffic:    │  Router configuration\n      │  Switching from     │  updates instantly\n      │  Blue to Green      │\n      └────┬───────────┬────┘\n           │           │\n           ▼ (OLD)     ▼ (NEW)\n     ┌──────────┐ ┌──────────┐\n     │  BLUE    │ │  GREEN   │\n     │ Cluster  │ │ Cluster  │\n     │ (v1.0.0) │ │ (v1.1.0) │\n     └──────────┘ └──────────┘",
+            "note": {
+              "text": "The inactive Blue cluster is kept online for several hours after cutover to allow immediate, single-click rollbacks if issues arise."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Rolling Deployments (Default Pattern)",
+            "box": {
+              "title": "🔄 Step-by-Step Server Updates",
+              "list": [
+                "<strong>Definition:</strong> Updates servers incrementally, replacing old instances with new ones in batches.",
+                "<strong>Zero Downtime:</strong> Part of the cluster remains online to handle user traffic during builds.",
+                "<strong>Resource Savings:</strong> Unlike Blue-Green, rolling updates do not require double server capacity.",
+                "<strong>Risk Factor:</strong> During updates, both v1 and v2 run simultaneously, demanding backward-compatible APIs."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "gitops-iac",
+        "title": "GitOps & IaC Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🐙",
+            "title": "GitOps & Infrastructure as Code",
+            "subtitle": "Managing Infrastructure and Kubernetes Declaratively via Git"
+          },
+          {
+            "type": "imageText",
+            "title": "What is GitOps?",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Digital code streams representing automation control",
+            "caption": "Git is the single source of truth for systems",
+            "content": "<h4>🐙 Declarative Operations</h4><p>GitOps is an operational framework that takes DevOps best practices used for application development (Git, CI/CD, pull requests) and applies them to infrastructure.</p><ul><li>📜 <strong>Declarative State</strong> - Infrastructure described as code files in Git.</li><li>🔄 <strong>Continuous Sync</strong> - Agent reconciliation loop ensures live cluster matches git.</li><li>🛡️ <strong>Improved Auditability</strong> - Git commits provide clear audit trails of who changed what.</li></ul>"
+          },
+          {
+            "type": "diagram",
+            "title": "ArgoCD GitOps Loop Architecture",
+            "content": "┌───────────────────────────────────────────────┐\n│                Git Repository                 │ <─── Developer pushes\n│         (Declarative K8s Manifests)           │      commit / Pull Request\n└───────────────────────┬───────────────────────┘\n                        │\n                        ▼ (Continuous State Check)\n┌───────────────────────────────────────────────┐\n│             ArgoCD Controller Engine          │ ◄─── Scans live cluster\n│  - Compares Git state against Kubernetes      │\n│  - Detects deviations (Out-of-Sync status)    │\n└───────────────────────┬───────────────────────┘\n                        │\n                        ▼ (Automatic / Manual Reconciliation)\n┌───────────────────────────────────────────────┐\n│             Kubernetes Cluster                │\n│           (Apps match Git config)             │\n└───────────────────────────────────────────────┘",
+            "note": {
+              "text": "GitOps pull model prevents configuration drift by continuously overwriting manual, ad-hoc terminal changes in target clusters."
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🛡️",
+            "title": "Push vs. Pull Delivery Pipelines",
+            "leftTitle": "Push-Based Delivery (CI Tools)",
+            "leftPoints": [
+              "CI tool (GitHub Actions) runs shell scripts to connect to cluster.",
+              "Requires sharing cluster API credentials with the external CI server.",
+              "No continuous drift checking: configuration drifts remain until next pipeline run.",
+              "Pipeline can access target network directly."
+            ],
+            "rightTitle": "Pull-Based Delivery (GitOps)",
+            "rightPoints": [
+              "Agent controller runs inside the target cluster (ArgoCD).",
+              "Security: No cluster credentials leave the network boundary.",
+              "Self-healing: Reverts unauthorized manual cluster overrides.",
+              "Requires Git repos to structure target deployment configuration."
+            ],
+            "note": {
+              "text": "Pull-based pipelines are highly secure because credentials are kept entirely within target network clusters."
+            }
+          }
+        ]
+      },
+      {
+        "id": "monitoring-observability",
+        "title": "Monitoring & Observability",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "📊",
+            "title": "Monitoring & Observability",
+            "subtitle": "Closing the Loop with Continuous Feedback, Logging, and Metrics"
+          },
+          {
+            "type": "content",
+            "title": "The Golden Signals of Observability",
+            "box": {
+              "title": "📈 Key Metrics to Monitor in Production",
+              "list": [
+                "<strong>Latency:</strong> The time it takes to service a request (e.g. HTTP 200 ms).",
+                "<strong>Traffic:</strong> Demand measure (e.g. HTTP requests per second).",
+                "<strong>Errors:</strong> Rate of failing requests (e.g. 5xx responses).",
+                "<strong>Saturation:</strong> System resources utilization percentage (e.g. CPU, RAM, Disk I/O)."
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🪵",
+            "title": "Logs, Metrics, and Traces",
+            "leftTitle": "Metrics & Alerts",
+            "leftPoints": [
+              "Numeric values over time representing system health (e.g. CPU load).",
+              "Low storage footprint; queryable across custom ranges.",
+              "Triggers alerts (e.g. Slack page when memory > 90%).",
+              "Tools: Prometheus, Grafana, Datadog."
+            ],
+            "rightTitle": "Logs & Traces",
+            "rightPoints": [
+              "Detailed event streams with contextual details (e.g. stack traces).",
+              "Traces track requests traveling through distributed microservices.",
+              "Crucial for identifying the root cause of complex errors.",
+              "Tools: Jaeger, OpenTelemetry, ELK/PLG Stack."
+            ],
+            "note": {
+              "text": "Metrics tell you something is broken; logs and traces tell you exactly why it broke."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Continuous Feedback Metrics",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Grafana dashboards shown on screens",
+            "caption": "Quantifying pipeline and service health",
+            "content": "<h4>📊 Tracking DevOps Success</h4><p>Successful DevOps teams use metrics to evaluate the performance of their delivery pipeline and production environments.</p><ul><li>⏱️ <strong>Lead Time for Changes</strong> - Time from commit to production.</li><li>⚡ <strong>Deployment Frequency</strong> - How often code is successfully shipped.</li><li>🩹 <strong>Change Failure Rate</strong> - Percentage of deployments causing production errors.</li><li>🚀 <strong>Mean Time to Restore (MTTR)</strong> - Time required to fix a production failure.</li></ul>"
+          }
+        ]
+      },
+      {
+        "id": "best-practices",
+        "title": "DevOps Best Practices",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🌟",
+            "title": "DevOps Best Practices & Anti-Patterns",
+            "subtitle": "How to Maximize Automation Value and Avoid Flaky Build Pipelines"
+          },
+          {
+            "type": "content",
+            "title": "Guiding Principles for CI/CD",
+            "box": {
+              "title": "🚀 Designing Reliable Pipelines",
+              "list": [
+                "<strong>Keep Builds Fast:</strong> Pipelines should take under 10 minutes. Use caching and parallel testing jobs.",
+                "<strong>Build Once, Deploy Anywhere:</strong> Compile and package artifacts (Docker image) once; promote that identical binary to all staging and production servers.",
+                "<strong>Clean Run Environments:</strong> Run pipeline stages inside isolated container runtimes to avoid stale dependency caching bugs.",
+                "<strong>Automated Rollbacks:</strong> Revert builds automatically if system performance metrics drop after release."
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "⚠️",
+            "title": "DevOps Anti-Patterns to Avoid",
+            "leftTitle": "Common Anti-Patterns (Pitfalls)",
+            "leftPoints": [
+              "Ignoring flaky test suite failures ('Just rerun the build').",
+              "Hardcoding environment configurations inside container images.",
+              "Keeping branch life longer than 48 hours.",
+              "Using CI tool triggers to push untested Docker images."
+            ],
+            "rightTitle": "Best Practice Solutions",
+            "rightPoints": [
+              "Delete or fix flaky tests immediately to maintain build trust.",
+              "Inject variables dynamically using ConfigMaps or vaults.",
+              "Adopt trunk-based branches and merge daily.",
+              "Enforce pipeline stages (Unit Test -> SAST -> Package)."
+            ],
+            "note": {
+              "text": "A pipeline is only as reliable as its tests; allowing flaky test runs breaks development trust in automation."
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Knowledge Check",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🧠",
+            "title": "Knowledge Check",
+            "subtitle": "Test Your Understanding of CI/CD Core Systems and Pipelines"
+          },
+          {
+            "type": "quiz",
+            "question": "What is the key differentiator between Continuous Delivery and Continuous Deployment?",
+            "options": [
+              "Continuous Deployment does not run automated unit tests.",
+              "Continuous Delivery requires a manual approval step to push builds to production.",
+              "Continuous Delivery uses container images; Continuous Deployment does not.",
+              "Continuous Deployment requires maintaining identical Blue and Green environments."
+            ],
+            "correct": 1,
+            "explanation": "Continuous Delivery keeps the build ready for release but holds at a manual release gate; Continuous Deployment automates the push to production with zero human intervention."
+          },
+          {
+            "type": "quiz",
+            "question": "Which deployment strategy switches active traffic instantly from one identical cluster environment to another?",
+            "options": [
+              "Rolling Update Deployment",
+              "Canary Deployment",
+              "Blue-Green Deployment",
+              "Shadow Traffic Deployment"
+            ],
+            "correct": 2,
+            "explanation": "Blue-Green Deployment maintains two identical active/inactive environments and redirects all client traffic instantly at the router level."
+          },
+          {
+            "type": "quiz",
+            "question": "Why is the GitOps pull-based pipeline model considered more secure than the push-based model?",
+            "options": [
+              "It runs linting checks on YAML configurations.",
+              "It completely bypasses the need for running automated QA tests.",
+              "No target cluster API access credentials need to leave the internal cluster boundary.",
+              "It runs container compilation stages on self-hosted environments."
+            ],
+            "correct": 2,
+            "explanation": "In a pull-based model, a GitOps agent inside the private cluster pulls changes from Git. No API keys or credentials need to be exposed to external CI servers."
+          }
+        ]
+      },
+      {
+        "id": "qa-thank-you",
+        "title": "Q&A and Thank You",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions & Answers",
+            "emoji": "❓"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You!",
+            "emoji": "🎉",
+            "message": "Thank you for attending the DevOps & CI/CD Masterclass!<br>You can find more resources and examples in our repository.",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      }
+    ]
+  }
+}

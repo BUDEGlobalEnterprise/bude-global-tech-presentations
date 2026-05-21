@@ -1,0 +1,992 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "emoji": "🏡",
+            "title": "Google Home & Smart Home Ecosystem",
+            "subtitle": "Comprehensive Guide to Nest Hardware, Matter, Thread, Developer APIs & Gemini AI"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer & IoT Enthusiast",
+            "experience": "3 years in .NET, Python, IoT & RFID",
+            "oss_experience": "Backend Development & Automation Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "evolution",
+        "title": "Ecosystem Evolution",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⏳",
+            "title": "Evolution of Google Smart Home",
+            "subtitle": "From a simple smart speaker to a unified ambient computing platform"
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Milestones & Key Acquisitions",
+            "box": {
+              "title": "Key Milestones",
+              "list": [
+                {
+                  "emoji": "🔴",
+                  "text": "<strong>2014: Nest Acquisition</strong> - Google acquires Nest Labs for $3.2B, marking its entry into connected home hardware."
+                },
+                {
+                  "emoji": "🔊",
+                  "text": "<strong>2016: Google Home Launch</strong> - Introduction of the original Google Home speaker powered by Google Assistant."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>2019: Google Nest Rebrand</strong> - Rebranding of home products to 'Google Nest', merging Nest and Google Home teams."
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>2022: Matter 1.0 Release</strong> - Google announces major support for Matter standard, updating existing Nest devices."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>2024: Gemini AI Integration</strong> - Infusing Gemini LLM capabilities into Google Assistant for complex routine generation and natural conversation."
+                }
+              ]
+            }
+          },
+          {
+            "type": "timeline",
+            "emoji": "📅",
+            "title": "Google Smart Home Timeline",
+            "timeline": [
+              {"year": "2014", "event": "Google acquires Nest Labs", "impact": "Foundational hardware step"},
+              {"year": "2016", "event": "Google Home Speaker launched", "impact": "Introduced Google Assistant in the home"},
+              {"year": "2018", "event": "Google Home Hub launched", "impact": "First smart display interface"},
+              {"year": "2020", "event": "Matter protocol announced (Project CHIP)", "impact": "Unified standard collaboration began"},
+              {"year": "2022", "event": "Nest devices updated with Matter support", "impact": "Direct local control enabled"},
+              {"year": "2024", "event": "Gemini models roll out to Nest displays", "impact": "GenAI-driven ambient home automation"}
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "👁️",
+            "title": "What is Ambient Computing?",
+            "box": {
+              "title": "Core Tenets of Ambient Intelligence",
+              "list": [
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Invisibility:</strong> Technology fades into the background, responding to presence, routines, and gestures rather than active screen time."
+                },
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Natural Interfaces:</strong> Interfaces shift from screens to voice, gaze, gestures, and automated triggers."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Context Awareness:</strong> The home senses who is in a room, the time of day, and history, making proactive optimizations."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "emoji": "🔄",
+            "title": "Mobile-First vs Ambient UI",
+            "leftTitle": "Mobile-First Smart Home",
+            "leftPoints": [
+              "Requires picking up a phone, unlocking it, and opening a dedicated application.",
+              "Requires precise taps and manual configurations for basic actions.",
+              "Reactive model: the user must request all state changes manually."
+            ],
+            "rightTitle": "Ambient Smart Home",
+            "rightPoints": [
+              "Responds instantly to voice, presence sensors, or touchscreens mounted on walls.",
+              "Understands natural context (e.g. 'Good morning' triggers multiple actions).",
+              "Proactive model: uses environmental inputs (motion, light, humidity) to act automatically."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nest-hardware",
+        "title": "Google Nest Hardware Lineup",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🔌",
+            "title": "The Nest Hardware Ecosystem",
+            "subtitle": "Overview of physical devices powering the Google Home experience"
+          },
+          {
+            "type": "comparison",
+            "emoji": "📊",
+            "title": "Smart Speakers vs Smart Displays",
+            "leftTitle": "Smart Speakers (Nest Mini & Nest Audio)",
+            "leftPoints": [
+              "<strong>Acoustic focus:</strong> Optimized for high-fidelity audio (Nest Audio) or compact placement (Nest Mini).",
+              "<strong>Interaction:</strong> Purely voice-controlled via Google Assistant with top touch controls.",
+              "<strong>Use Cases:</strong> Background music, quick voice commands, and smart home notifications."
+            ],
+            "rightTitle": "Smart Displays (Nest Hub & Nest Hub Max)",
+            "rightPoints": [
+              "<strong>Visual feedback:</strong> Screen displays weather, recipes, calendar events, and video feeds from Nest Cams.",
+              "<strong>Gestures & Camera:</strong> Hub Max includes a camera for Nest Cam monitoring, Face Match, and hand gestures.",
+              "<strong>Use Cases:</strong> Kitchen assistant, smart home control center, photo frame, and video calling."
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🔊",
+            "title": "Nest Mini & Nest Audio Deep Dive",
+            "box": {
+              "title": "Audio Hardware & Acoustic Design",
+              "list": [
+                {
+                  "emoji": "🎼",
+                  "text": "<strong>Nest Audio:</strong> Features a 75mm woofer and 19mm tweeter, designed to deliver rich bass and clear vocals. Adapts dynamically to room acoustics."
+                },
+                {
+                  "emoji": "🪙",
+                  "text": "<strong>Nest Mini (2nd Gen):</strong> Features a custom 40mm driver, wall-mount slot, and an on-device machine learning chip with 1 TeraOPS compute for faster local voice responses."
+                },
+                {
+                  "emoji": "🎙️",
+                  "text": "<strong>Far-field Microphones:</strong> Uses multi-microphone arrays and echo cancellation technology to detect 'Hey Google' commands even during loud music playback."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📺",
+            "title": "Nest Hub & Nest Hub Max Deep Dive",
+            "box": {
+              "title": "Visual Smart Home Hubs",
+              "list": [
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>Nest Hub (2nd Gen):</strong> 7-inch display featuring Soli radar technology for Sleep Sensing (breathing & movement detection) and touchless gesture control."
+                },
+                {
+                  "emoji": "🎥",
+                  "text": "<strong>Nest Hub Max:</strong> 10-inch HD screen with a 6.5MP wide-angle camera. Supports Face Match, video calling, and doubles as an indoor Nest Cam."
+                },
+                {
+                  "emoji": "☀️",
+                  "text": "<strong>Ambient EQ:</strong> Dynamically adjusts screen brightness and color temperature to match the lighting of the room, looking like a real photo frame."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌡️",
+            "title": "Climate Control: Nest Thermostats",
+            "box": {
+              "title": "Smart Climate Management",
+              "list": [
+                {
+                  "emoji": "🔥",
+                  "text": "<strong>Nest Learning Thermostat:</strong> Uses sensors and algorithms to learn temperature preferences over time and automatically creates a schedule."
+                },
+                {
+                  "emoji": "🍂",
+                  "text": "<strong>Eco Temperature:</strong> Uses built-in motion sensors and phone location (geofencing) to detect when the house is empty, switching to Eco mode to save energy."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>System Compatibility:</strong> Operates with low-voltage heating and cooling systems, and supports Matter for cross-ecosystem automation."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📹",
+            "title": "Home Security: Nest Cams & Doorbells",
+            "box": {
+              "title": "Vision AI & Smart Alerts",
+              "list": [
+                {
+                  "emoji": "📹",
+                  "text": "<strong>Nest Cam (Indoor/Outdoor):</strong> Offers 1080p HDR video with night vision. Integrates on-device Edge AI to differentiate between people, animals, packages, and vehicles."
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>Nest Doorbell (Wired/Battery):</strong> Features a tall 3:4 aspect ratio to view packages on the floor, and supports pre-recorded quick responses."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>Local Backup:</strong> Includes on-device memory storage that records up to 1 hour of video locally during Wi-Fi outages."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚨",
+            "title": "Safety & Sensors: Nest Protect",
+            "box": {
+              "title": "Advanced Smoke & CO Alarm",
+              "list": [
+                {
+                  "emoji": "💨",
+                  "text": "<strong>Split-Spectrum Sensor:</strong> Uses two wavelengths of light to detect both fast-burning and slow-smoldering fires quickly."
+                },
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Voice Alerts:</strong> Instead of a loud siren, it speaks clearly (e.g. 'Heads up. There's smoke in the kitchen') before triggering full alarm."
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>App Integration:</strong> Sends smartphone alerts and tells you exactly what the issue is, allowing you to silence the alarm from your phone."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📶",
+            "title": "Smart Home Mesh: Nest Wifi Pro",
+            "box": {
+              "title": "Wi-Fi 6E & Border Router",
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Wi-Fi 6E Speed:</strong> Operates on the newly opened 6GHz wireless band, providing faster speeds, lower latency, and less congestion."
+                },
+                {
+                  "emoji": "🕸️",
+                  "text": "<strong>Built-in Thread Border Router:</strong> Connects Thread smart home devices directly to your home network without extra hubs."
+                },
+                {
+                  "emoji": "🏡",
+                  "text": "<strong>Smart Home Traffic Prioritization:</strong> Automatically optimizes bandwidth for video calls, streaming, and smart home signals."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "connectivity",
+        "title": "Connectivity & Protocols",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "📡",
+            "title": "Connectivity Protocols",
+            "subtitle": "Matter and Thread: The foundation of a reliable, secure, and interoperable smart home"
+          },
+          {
+            "type": "diagram",
+            "emoji": "🌐",
+            "title": "The Matter & Thread Protocol Stack",
+            "box": {
+              "title": "How Matter and Thread Interoperate",
+              "code": "+---------------------------------------------------+\n|              Application Layer (Matter)           |\n+---------------------------------------------------+\n|       Transport Layer (TCP / UDP / IPv6)          |\n+---------------------------------------------------+\n| Network Layer (Wi-Fi) |  Network Layer (Thread)   |\n| High Bandwidth (Video)|  Low Power Mesh (Sensors) |\n+-----------------------+---------------------------+\n| Physical Layer (802.11| Physical Layer (802.15.4) |\n+-----------------------+---------------------------+"
+            },
+            "note": "Matter defines the common language devices speak, while Thread provides a low-power IP-based mesh network layer."
+          },
+          {
+            "type": "content",
+            "emoji": "📶",
+            "title": "The Role of Wi-Fi in Matter",
+            "box": {
+              "title": "High-Bandwidth Communication",
+              "list": [
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>High Data Rates:</strong> Essential for smart home devices that stream media or require high bandwidth, such as smart displays, cameras, and streaming sticks."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Main Powered:</strong> Typically used for devices connected to a continuous power source, as Wi-Fi consumes substantial power."
+                },
+                {
+                  "emoji": "🏡",
+                  "text": "<strong>Direct LAN Access:</strong> Communicates over the local network using IPv6 without relying on external cloud gateways."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧵",
+            "title": "Thread: Low-Power Mesh Networking",
+            "box": {
+              "title": "The Mesh Framework",
+              "list": [
+                {
+                  "emoji": "🔋",
+                  "text": "<strong>Low Power Consumption:</strong> Optimized for battery-operated devices like door locks, temp sensors, and motion detectors to last for years."
+                },
+                {
+                  "emoji": "🕸️",
+                  "text": "<strong>Self-Healing Architecture:</strong> If a Thread router node fails, the mesh automatically reroutes traffic to ensure connection continuity."
+                },
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>IP Native:</strong> Unlike Zigbee or Z-Wave, Thread is built on IPv6, enabling direct IP-to-IP device communication without translations."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔵",
+            "title": "BLE: Commissioning & Onboarding",
+            "box": {
+              "title": "Bluetooth Low Energy for Setup",
+              "list": [
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Device Discovery:</strong> Matter uses BLE during the initial setup to securely discover new, uncommissioned devices nearby."
+                },
+                {
+                  "emoji": "🔐",
+                  "text": "<strong>Credential Handshake:</strong> BLE transfers Wi-Fi or Thread network credentials securely from the phone app to the device."
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>BLE Disconnection:</strong> Once onboarding is complete, the device disconnects BLE and communicates solely over Wi-Fi or Thread."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Matter Controller vs Matter Bridge",
+            "box": {
+              "title": "Smart Home Roles",
+              "list": [
+                {
+                  "emoji": "🎮",
+                  "text": "<strong>Matter Controller:</strong> The brain of the setup. Initiates commissioning, issues commands, and stores the local cryptographic fabric keys. (e.g. Nest Hub 2nd Gen, Nest Wifi Pro)."
+                },
+                {
+                  "emoji": "🌉",
+                  "text": "<strong>Matter Bridge:</strong> Translates non-Matter protocols (like Zigbee, Z-Wave, or proprietary RF) into Matter-compatible signals, bringing older legacy devices into the ecosystem."
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Fabric:</strong> A virtual network of trusted devices sharing a common Root of Trust, enabling direct device interaction."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗼",
+            "title": "Thread Border Routers Deep Dive",
+            "box": {
+              "title": "Bridging Thread & Home Network",
+              "list": [
+                {
+                  "emoji": "🌉",
+                  "text": "<strong>Translating Physical Layers:</strong> Connects the Thread mesh network (802.15.4) to the local Wi-Fi or Ethernet network (802.11 / 802.3)."
+                },
+                {
+                  "emoji": "🏡",
+                  "text": "<strong>No Cloud Required:</strong> Allows any Matter controller (like a phone or hub) to send commands directly to battery-operated Thread devices locally."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Google Devices:</strong> Google Nest Hub Max, Nest Hub (2nd Gen), and Nest Wifi Pro all contain built-in Thread Border Routers."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔗",
+            "title": "Multi-Admin: Ecosystem Interoperability",
+            "box": {
+              "title": "Sharing Devices Across Ecosystems",
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>Ecosystem Freedom:</strong> A single Matter device can be controlled simultaneously by Google Home, Apple Home, and Amazon Alexa."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Independent Fabrics:</strong> Each smart home platform creates its own separate fabric and security keys on the device."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Zero Interference:</strong> Actions and states are synchronized locally on the device; one platform cannot lock out another."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔐",
+            "title": "Security & Attestation in Matter",
+            "box": {
+              "title": "Matter Security Framework",
+              "list": [
+                {
+                  "emoji": "📜",
+                  "text": "<strong>Device Attestation Certificate (DAC):</strong> Every Matter device has a unique DAC burned in during manufacturing to prove authenticity."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Node Operational Credentials (NOC):</strong> Generated locally during setup to represent the device's identity on the specific home fabric."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>AES-128-CCM Encryption:</strong> All messages passing through the network are encrypted and authenticated to prevent sniffing and replay attacks."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "developer-platform",
+        "title": "Google Home Developer Platform",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "💻",
+            "title": "Developing for Google Home",
+            "subtitle": "Building integrations, device drivers, and custom web applications for the Google Home platform"
+          },
+          {
+            "type": "content",
+            "emoji": "🛠️",
+            "title": "The Developer Console",
+            "box": {
+              "title": "Google Home Developer Hub",
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Console Portal:</strong> Dashboard to register Matter vendor IDs (VIDs), product IDs (PIDs), and create virtual testing environments."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>OTA Provider:</strong> Manage firmware updates for Matter devices and distribute them securely over the air via the Google infrastructure."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Analytics & Logs:</strong> Monitor device connection rates, command latencies, and error codes in real time."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "☁️",
+            "title": "Cloud-to-Cloud Integration Model",
+            "box": {
+              "title": "Connecting via the Smart Home API",
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>OAuth 2.0 Flow:</strong> Authenticates the user and links their Google account to the developer's cloud backend account."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Webhook Fulfilment:</strong> Google sends HTTPS POST requests representing user commands to the developer's cloud server."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Request Sync:</strong> Proactively notifies Google of device name, trait, or connection state changes via a sync call."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "📝",
+            "title": "Cloud-to-Cloud: SYNC Intent",
+            "box": {
+              "title": "JSON Request from Google Assistant to Developer Cloud",
+              "code": "{\n  \"requestId\": \"ff36a3cc-ec34-11e6-b1a4-993285411259\",\n  \"inputs\": [{\n    \"intent\": \"action.devices.SYNC\"\n  }]\n}\n\n// Expected Response contains details of user devices:\n// {\n//   \"requestId\": \"ff36a3cc-ec34-11e6-b1a4-993285411259\",\n//   \"payload\": {\n//     \"agentUserId\": \"1836.1526739f\",\n//     \"devices\": [{\n//       \"id\": \"light-123\",\n//       \"type\": \"action.devices.types.LIGHT\",\n//       \"traits\": [\"action.devices.traits.OnOff\"],\n//       \"name\": { \"name\": \"Living Room Light\" },\n//       \"willReportState\": true\n//     }]\n//   }\n// }"
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "🔍",
+            "title": "Cloud-to-Cloud: QUERY Intent",
+            "box": {
+              "title": "Requesting Current State of Devices",
+              "code": "{\n  \"requestId\": \"ff36a3cc-ec34-11e6-b1a4-993285411259\",\n  \"inputs\": [{\n    \"intent\": \"action.devices.QUERY\",\n    \"payload\": {\n      \"devices\": [{\"id\": \"light-123\"}]\n    }\n  }]\n}\n\n// Expected Response containing the state:\n// {\n//   \"requestId\": \"ff36a3cc-ec34-11e6-b1a4-993285411259\",\n//   \"payload\": {\n//     \"devices\": {\n//       \"light-123\": {\n//         \"on\": true,\n//         \"online\": true\n//       }\n//     }\n//   }\n// }"
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "🎬",
+            "title": "Cloud-to-Cloud: EXECUTE Intent",
+            "box": {
+              "title": "Sending Command to Toggle Device",
+              "code": "{\n  \"requestId\": \"ff36a3cc-ec34-11e6-b1a4-993285411259\",\n  \"inputs\": [{\n    \"intent\": \"action.devices.EXECUTE\",\n    \"payload\": {\n      \"commands\": [{\n        \"devices\": [{\"id\": \"light-123\"}],\n        \"execution\": [{\n          \"command\": \"action.devices.commands.OnOff\",\n          \"params\": { \"on\": false }\n        }]\n      }]\n    }\n  }]\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Local Home SDK Architecture",
+            "box": {
+              "title": "Local Control Runtime",
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Hub Container:</strong> The SDK runs a JavaScript application inside a Node.js or WebAssembly container directly on Google Nest Hubs or Chromecast."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>mDNS/SSDP Discovery:</strong> The Google Nest device searches the local network dynamically to detect compatible devices."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Protocol Channels:</strong> Executes local commands directly using HTTP/REST, TCP sockets, UDP, or CoAP instead of sending commands to the cloud."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "📝",
+            "title": "Local Home SDK: Discovery Handler",
+            "box": {
+              "title": "JavaScript Discovery Setup",
+              "code": "const localHomeApp = new smarthome.App('1.0.0');\n\nlocalHomeApp.onIdentify((request) => {\n  const device = request.inputs[0].payload.device;\n  console.log('Discovered local device:', device.id);\n  \n  // Return identifying information to match with cloud sync device list\n  return {\n    intent: smarthome.Intents.IDENTIFY,\n    requestId: request.requestId,\n    payload: {\n      device: {\n        id: device.id,\n        verificationId: device.id\n      }\n    }\n  };\n});"
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "🔌",
+            "title": "Local Home SDK: Control Handler",
+            "box": {
+              "title": "JavaScript Command Execution",
+              "code": "localHomeApp.onExecute((request) => {\n  const command = request.inputs[0].payload.commands[0];\n  const execution = command.execution[0];\n  \n  // Construct local HTTP or UDP request packet\n  const payload = JSON.stringify({ power: execution.params.on });\n  const localCommand = new smarthome.DataFlow.HttpRequestData();\n  localCommand.method = smarthome.DataFlow.HttpMethod.POST;\n  localCommand.path = '/control';\n  localCommand.data = payload;\n  \n  return localHomeApp.getDeviceManager()\n    .send(localCommand)\n    .then(() => ({\n      intent: smarthome.Intents.EXECUTE,\n      requestId: request.requestId,\n      payload: { commands: [{ ids: [command.devices[0].id], status: 'SUCCESS' }] }\n    }));\n});"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔌",
+            "title": "Device SDK for Matter Hardware",
+            "box": {
+              "title": "Building Matter Microcontrollers",
+              "list": [
+                {
+                  "emoji": "🏗️",
+                  "text": "<strong>Open-Source Core:</strong> Based on the Connected Home IP (CHIP) repository containing standard reference code for the Matter stack."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Supported SDKs:</strong> Espressif IDF (ESP32), Nordic Semiconductor Connect SDK (nRF52840), and Raspberry Pi Pico SDK."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Cryptographic Engine:</strong> Integrates hardware-backed secure elements to process Elliptic Curve Cryptography (ECC) for Matter handshakes."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏷️",
+            "title": "Smart Home API Device Types",
+            "box": {
+              "title": "Standardized Device Taxonomy",
+              "list": [
+                {
+                  "emoji": "💡",
+                  "text": "<strong>action.devices.types.LIGHT:</strong> Supports brightness, color, temperature, and flash effects."
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>action.devices.types.LOCK:</strong> Supports lock/unlock state, status detection, and lock jam reporting."
+                },
+                {
+                  "emoji": "🌡️",
+                  "text": "<strong>action.devices.types.THERMOSTAT:</strong> Supports target temperature setting, heating/cooling mode toggling, and fan control."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧬",
+            "title": "Smart Home API Traits Schema",
+            "box": {
+              "title": "Defining Capabilities",
+              "list": [
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>action.devices.traits.OnOff:</strong> The most basic trait. Enables toggling hardware power states (true/false)."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>action.devices.traits.Brightness:</strong> Defines percentage-based dimming levels (0 to 100)."
+                },
+                {
+                  "emoji": "🌈",
+                  "text": "<strong>action.devices.traits.ColorSetting:</strong> Handles RGB color values (HEX/decimal) and Kelvin color temperature."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "automation",
+        "title": "Advanced Automations",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚙️",
+            "title": "Advanced Automations & Routines",
+            "subtitle": "Unlocking the power of the Google Home Script Editor for custom smart home logic"
+          },
+          {
+            "type": "content",
+            "emoji": "📝",
+            "title": "Home Script Editor Overview",
+            "box": {
+              "title": "Unleashing Advanced Automation Control",
+              "list": [
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Web Console access:</strong> Edit scripts from your desktop browser at script.home.google.com."
+                },
+                {
+                  "emoji": "📜",
+                  "text": "<strong>YAML Programming:</strong> Author robust automations using structured code containing triggers, states, conditions, and sequential actions."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Sensor Integration:</strong> React to micro-changes like luminance, temperature, contact sensor states, and motion."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧬",
+            "title": "YAML Automation Script Anatomy",
+            "box": {
+              "title": "Script Editor Structure",
+              "list": [
+                {
+                  "emoji": "📋",
+                  "text": "<strong>metadata:</strong> Declares the name and descriptive explanation of the automation."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>starters:</strong> The events that trigger the script execution. Can have multiple triggers (OR logic)."
+                },
+                {
+                  "emoji": "⚖️",
+                  "text": "<strong>condition:</strong> Logical checks evaluated before running the action. Must resolve to true (AND logic)."
+                },
+                {
+                  "emoji": "🎬",
+                  "text": "<strong>actions:</strong> The list of sequential actions to perform (device commands, delays, notifications)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚀",
+            "title": "Script Starter Configurations",
+            "box": {
+              "title": "Event Listeners in YAML",
+              "list": [
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Time Starter:</strong> Triggered at specific times, days of the week, or offset relative to sunrise/sunset (e.g. 'type: time.schedule')."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Device State Starter:</strong> Triggered when a device property changes (e.g. motion detected, lock turned, light switched on)."
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Location Starter:</strong> Runs based on geofencing (e.g. when the first user arrives home or the last user leaves)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚖️",
+            "title": "Script Condition Logic",
+            "box": {
+              "title": "Filtering Starter Execution",
+              "list": [
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Time Conditions:</strong> Restrict actions to certain times (e.g., 'type: time.between', 'after: 22:00', 'before: 06:00')."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>State Conditions:</strong> Checks if another device state is matching (e.g. only run if TV is ON or garage door is OPEN)."
+                },
+                {
+                  "emoji": "👪",
+                  "text": "<strong>Home Mode Conditions:</strong> Filters based on whether the home structure state is set to Home or Away."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🎬",
+            "title": "Script Action Dispatching",
+            "box": {
+              "title": "Sequential Outputs",
+              "list": [
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Device Commands:</strong> Execute specific device functions (e.g., 'type: device.command.OnOff', 'on: true')."
+                },
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>Delays:</strong> Pause execution sequence (e.g., 'type: time.delay', 'duration: 5m') before starting the next action."
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Broadcasts & Alerts:</strong> Send push notifications to family phones or broadcast custom voice audio on Nest speakers."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "📝",
+            "title": "Automation 1: Presence Auto-Lock",
+            "box": {
+              "title": "Locking doors when home structure is empty",
+              "code": "metadata:\n  name: Empty House Lockdown\n  description: Locks front door and turns off lights when everyone leaves\nautomations:\n  - starters:\n      - type: home.state.HomeAway\n        state: homeAway\n        is: AWAY\n    actions:\n      - type: device.command.LockUnlock\n        devices:\n          - Front Door Lock\n        lock: true\n      - type: device.command.OnOff\n        devices:\n          - All Lights Group\n        on: false"
+            }
+          },
+          {
+            "type": "code",
+            "emoji": "💡",
+            "title": "Automation 2: Smart Lighting Scene",
+            "box": {
+              "title": "Adapting lighting based on luminance",
+              "code": "metadata:\n  name: Ambient Reading Mode\n  description: Dim lights and adjust color temperature when ambient light drops\nautomations:\n  - starters:\n      - type: device.state.LuminanceReport\n        device: Living Room Motion Sensor\n        state: currentLuminanceLevel\n        below: 50\n    condition:\n      type: device.state.OnOff\n      device: Living Room TV\n      state: on\n      is: false\n    actions:\n      - type: device.command.OnOff\n        devices:\n          - Reading Lamp\n        on: true\n      - type: device.command.ColorSetting\n        devices:\n          - Reading Lamp\n        colorTemperature: 2700"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ai-future",
+        "title": "Generative AI & Future",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🔮",
+            "title": "The Future of Smart Homes",
+            "subtitle": "Ambience, Generative AI, and proactive smart home helpers"
+          },
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Gemini AI Integration",
+            "box": {
+              "title": "The Next Gen AI Smart Assistant",
+              "list": [
+                {
+                  "emoji": "💬",
+                  "text": "<strong>Contextual Assistant:</strong> Understands complex phrases and intent without requiring specific commands or structures."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>State Memory:</strong> Remembers conversational histories to make dynamic adjustments, like 'make the lights warmer than yesterday'."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>LLM at the Edge:</strong> Leverages Gemini Nano on-device models to process smart home metadata locally, increasing privacy."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗣",
+            "title": "Natural Language Query Processing",
+            "box": {
+              "title": "Beyond Rigid Voice Command Synonyms",
+              "list": [
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Semantic Understanding:</strong> Saying 'It's too bright in here' or 'Make it cozy' translates automatically to dimming the overhead lights and turning on the fireplace."
+                },
+                {
+                  "emoji": "🤷",
+                  "text": "<strong>Fuzzy Instructions:</strong> Evaluates vague queries and asks clarifying questions, e.g. 'Should I turn on the desk lamp or the ceiling light?'."
+                },
+                {
+                  "emoji": "🗣️",
+                  "text": "<strong>Multi-Intent:</strong> Processes multiple actions in a single breath: 'Turn on the fan, dim the lights, and set a timer for 10 minutes'."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔍",
+            "title": "Multimodal Camera Search",
+            "box": {
+              "title": "Visual Context Retrieval",
+              "list": [
+                {
+                  "emoji": "📹",
+                  "text": "<strong>Search Video History:</strong> Users can query Nest Cams using natural language, e.g. 'Did the postman deliver any packages today?' or 'Where did I leave my keys?'."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Visual Reasoning:</strong> Gemini identifies items and event patterns in security feeds without tags, reporting chronological summaries."
+                },
+                {
+                  "emoji": "💡",
+                  "text": "<strong>Intelligent Highlights:</strong> Extracts and compiles short clips based on user query description automatically."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "✍️",
+            "title": "Generative Script Writing",
+            "box": {
+              "title": "Auto-Generating YAML Codes",
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Text-to-Code:</strong> Describe an automation in plain English (e.g. 'Turn off the lights if no motion is detected for an hour, but only at night'), and Gemini writes the YAML script."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Error Correction:</strong> Identifies syntax bugs or unavailable device attributes, automatically suggesting corrected YAML structures."
+                },
+                {
+                  "emoji": "🚀",
+                  "text": "<strong>One-Click Deployment:</strong> Deploys the generated script directly into the Google Home Script Console after validation."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔮",
+            "title": "Proactive Smart Home Adjustments",
+            "box": {
+              "title": "Predictive Automation",
+              "list": [
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Pattern Tracking:</strong> Tracks household behaviors to identify repetitive manual adjustments (e.g. dimming bedroom lights every night at 10 PM)."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Proactive Optimization:</strong> Prompts the user via Nest Hub screen: 'I noticed you adjust the heat at 7 AM. Would you like me to automate this?'."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Energy Savings:</strong> Automatically coordinates appliance cycles with local power grid solar pricing peaks to lower bills."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Knowledge Checks",
+        "slides": [
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "Connectivity Protocol Quiz",
+            "question": "Which wireless protocol is used by Matter to form a low-power, self-healing mesh network for battery-operated devices?",
+            "options": [
+              "Wi-Fi",
+              "Thread",
+              "Bluetooth Low Energy (BLE)",
+              "Zigbee"
+            ],
+            "correct": 1,
+            "explanation": "Thread is a low-power, IPv6-based self-healing mesh networking protocol that Matter uses for sensors, smart locks, and other low-power battery devices."
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "Automation Scripting Quiz",
+            "question": "What is the primary language used to write custom automations in the advanced Google Home Script Editor?",
+            "options": [
+              "JavaScript",
+              "JSON",
+              "YAML",
+              "Python"
+            ],
+            "correct": 2,
+            "explanation": "The Google Home Script Editor uses YAML to construct triggers, conditions, and actions for advanced smart home automations."
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "Local Control API Quiz",
+            "question": "Which Google Home SDK executes JavaScript code locally on a Nest display/Chromecast to control local network devices directly?",
+            "options": [
+              "Local Home SDK",
+              "Device SDK",
+              "Cloud-to-Cloud SDK",
+              "Home Automation SDK"
+            ],
+            "correct": 0,
+            "explanation": "The Local Home SDK executes JavaScript on a local Google Nest device or Chromecast to identify and control smart devices on the local LAN."
+          },
+          {
+            "type": "quiz",
+            "emoji": "❓",
+            "title": "Interoperability Quiz",
+            "question": "Which Matter feature allows a single smart home device (e.g. smart light bulb) to be controlled by multiple platforms like Google Home, Apple Home, and Alexa simultaneously?",
+            "options": [
+              "Border Routing",
+              "Multi-Admin",
+              "Attestation",
+              "Fabric Splitting"
+            ],
+            "correct": 1,
+            "explanation": "The Multi-Admin feature of Matter allows a device to connect securely to multiple independent fabrics (controllers) at the same time."
+          }
+        ]
+      },
+      {
+        "id": "thank-you",
+        "title": "Thank You",
+        "slides": [
+          {
+            "type": "thank-you",
+            "title": "Thank You!",
+            "message": "Questions & Answers\n\nBuild the future of ambient computing today."
+          }
+        ]
+      }
+    ]
+  }
+}
