@@ -41,7 +41,7 @@ export function QuizSlide({ slide }: Props) {
     <div className="mx-auto flex h-full w-full max-w-4xl flex-col px-6 py-8 md:px-10 md:py-12">
       <div className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-bude-purple">
         <span className="inline-flex h-2 w-2 rounded-full bg-bude-purple animate-pulse" />
-        Pop quiz
+        {slide.topic ? `Topic: ${slide.topic}` : "Pop quiz"}
       </div>
       <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl">
         {question}

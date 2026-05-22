@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 7 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: If a research scenario or project requires: **logic gate reduction optimization**, which component or approach should be chosen?",
+            "options": [
+              "RISC Architecture",
+              "Boolean Algebra Minimization",
+              "Partially Ordered Set (Poset)",
+              "Decoder"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of logic gate reduction optimization, you should select **Boolean Algebra Minimization**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: If a research scenario or project requires: **graphical boolean simplification table**, which component or approach should be chosen?",
+            "options": [
+              "Karnaugh Map (K-map)",
+              "Vertex Degree",
+              "Von Neumann Architecture",
+              "IEEE 754 Standard"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of graphical boolean simplification table, you should select **Karnaugh Map (K-map)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: If a research scenario or project requires: **many-to-one signal selector**, which component or approach should be chosen?",
+            "options": [
+              "Euler Path",
+              "Multiplexer (MUX)",
+              "Propositional Logic Connectives",
+              "Cache Memory Hierarchy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of many-to-one signal selector, you should select **Multiplexer (MUX)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: If a research scenario or project requires: **one-to-many signal router**, which component or approach should be chosen?",
+            "options": [
+              "Demultiplexer (DEMUX)",
+              "Direct Memory Access (DMA)",
+              "Hamiltonian Cycle",
+              "Predicate Logic Quantifiers"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of one-to-many signal router, you should select **Demultiplexer (DEMUX)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: If a research scenario or project requires: **three-input binary addition circuit**, which component or approach should be chosen?",
+            "options": [
+              "Full Adder",
+              "Group Theory Group",
+              "Pipelining Hazards",
+              "Set Theory Operations"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of three-input binary addition circuit, you should select **Full Adder**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: If a research scenario or project requires: **clock-driven sequential memory components**, which component or approach should be chosen?",
+            "options": [
+              "Instruction Cycle",
+              "Equivalence Relation",
+              "Flip-Flops",
+              "Permutation"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of clock-driven sequential memory components, you should select **Flip-Flops**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: If a research scenario or project requires: **simultaneously-clocked state counter**, which component or approach should be chosen?",
+            "options": [
+              "RISC Architecture",
+              "Partially Ordered Set (Poset)",
+              "Boolean Algebra Minimization",
+              "Synchronous Counter"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of simultaneously-clocked state counter, you should select **Synchronous Counter**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: If a research scenario or project requires: **binary-to-unary line converter**, which component or approach should be chosen?",
+            "options": [
+              "Decoder",
+              "IEEE 754 Standard",
+              "Vertex Degree",
+              "Karnaugh Map (K-map)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of binary-to-unary line converter, you should select **Decoder**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: If a research scenario or project requires: **shared instruction-data bus architecture**, which component or approach should be chosen?",
+            "options": [
+              "Euler Path",
+              "Propositional Logic Connectives",
+              "Von Neumann Architecture",
+              "Multiplexer (MUX)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of shared instruction-data bus architecture, you should select **Von Neumann Architecture**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: If a research scenario or project requires: **multi-level fast memory staging**, which component or approach should be chosen?",
+            "options": [
+              "Demultiplexer (DEMUX)",
+              "Cache Memory Hierarchy",
+              "Hamiltonian Cycle",
+              "Predicate Logic Quantifiers"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of multi-level fast memory staging, you should select **Cache Memory Hierarchy**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: If a research scenario or project requires: **lightweight shared-memory execution unit**, which component or approach should be chosen?",
+            "options": [
+              "File Allocation Methods",
+              "Device Driver",
+              "Banker's Algorithm",
+              "Thread"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of lightweight shared-memory execution unit, you should select **Thread**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: If a research scenario or project requires: **single-thread resource lock**, which component or approach should be chosen?",
+            "options": [
+              "System Calls",
+              "Spooling",
+              "Paging",
+              "Mutex"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of single-thread resource lock, you should select **Mutex**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: If a research scenario or project requires: **variable-based process signaling**, which component or approach should be chosen?",
+            "options": [
+              "Virtual Memory",
+              "RAID Levels",
+              "Counting Semaphore",
+              "Process States"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of variable-based process signaling, you should select **Counting Semaphore**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: If a research scenario or project requires: **cpu state saving-restoring overhead**, which component or approach should be chosen?",
+            "options": [
+              "CPU Scheduling",
+              "Context Switching",
+              "Microkernel Architecture",
+              "Translation Lookaside Buffer (TLB)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of cpu state saving-restoring overhead, you should select **Context Switching**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: If a research scenario or project requires: **isolated process communication mechanisms**, which component or approach should be chosen?",
+            "options": [
+              "Page Replacement Algorithm",
+              "Cache Coherence Protocols",
+              "Inter-Process Communication (IPC)",
+              "Process Synchronization"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of isolated process communication mechanisms, you should select **Inter-Process Communication (IPC)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: If a research scenario or project requires: **speed-matching data storage buffer**, which component or approach should be chosen?",
+            "options": [
+              "Memory Segmentation",
+              "I/O Buffering",
+              "Thrashing",
+              "Deadlock Prevention"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of speed-matching data storage buffer, you should select **I/O Buffering**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: If a research scenario or project requires: **hard drive head seek optimization**, which component or approach should be chosen?",
+            "options": [
+              "Banker's Algorithm",
+              "Thread",
+              "Disk Scheduling",
+              "Device Driver"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of hard drive head seek optimization, you should select **Disk Scheduling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: If a research scenario or project requires: **physical disk block mapping strategies**, which component or approach should be chosen?",
+            "options": [
+              "Mutex",
+              "File Allocation Methods",
+              "Spooling",
+              "Paging"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of physical disk block mapping strategies, you should select **File Allocation Methods**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: If a research scenario or project requires: **privileged kernel service requests interface**, which component or approach should be chosen?",
+            "options": [
+              "Virtual Memory",
+              "Process States",
+              "Counting Semaphore",
+              "System Calls"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of privileged kernel service requests interface, you should select **System Calls**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: If a research scenario or project requires: **redundancy-performance disk array configurations**, which component or approach should be chosen?",
+            "options": [
+              "CPU Scheduling",
+              "RAID Levels",
+              "Context Switching",
+              "Translation Lookaside Buffer (TLB)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of redundancy-performance disk array configurations, you should select **RAID Levels**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: If a research scenario or project requires: **asymptotic run-time upper bound indicator**, which component or approach should be chosen?",
+            "options": [
+              "Big O Complexity",
+              "Call Stack",
+              "Heap Data Structure",
+              "Garbage Collection"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of asymptotic run-time upper bound indicator, you should select **Big O Complexity**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: If a research scenario or project requires: **LIFO element storage collection**, which component or approach should be chosen?",
+            "options": [
+              "AVL Tree",
+              "Pointer dereferencing",
+              "Stack Data Structure",
+              "Variable Scope"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of LIFO element storage collection, you should select **Stack Data Structure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: If a research scenario or project requires: **FIFO element storage collection**, which component or approach should be chosen?",
+            "options": [
+              "Polymorphism",
+              "Binary Search Tree (BST)",
+              "Queue Data Structure",
+              "Quick Sort"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of FIFO element storage collection, you should select **Queue Data Structure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: If a research scenario or project requires: **one-way pointer node sequence**, which component or approach should be chosen?",
+            "options": [
+              "Inheritance",
+              "Adjacency List",
+              "Dijkstra's Algorithm",
+              "Singly Linked List"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of one-way pointer node sequence, you should select **Singly Linked List**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: If a research scenario or project requires: **two-way pointer node sequence**, which component or approach should be chosen?",
+            "options": [
+              "Dynamic Programming",
+              "Encapsulation",
+              "Doubly Linked List",
+              "Breadth-First Search (BFS)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of two-way pointer node sequence, you should select **Doubly Linked List**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: If a research scenario or project requires: **O(n log n) stable comparison sort**, which component or approach should be chosen?",
+            "options": [
+              "Hashing",
+              "Depth-First Search (DFS)",
+              "Merge Sort",
+              "Abstract Data Type (ADT)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of O(n log n) stable comparison sort, you should select **Merge Sort**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: If a research scenario or project requires: **O(log n) sorted array search**, which component or approach should be chosen?",
+            "options": [
+              "Heap Data Structure",
+              "Binary Search",
+              "Big O Complexity",
+              "Garbage Collection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of O(log n) sorted array search, you should select **Binary Search**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: If a research scenario or project requires: **active subroutine memory tracker**, which component or approach should be chosen?",
+            "options": [
+              "Variable Scope",
+              "Stack Data Structure",
+              "Call Stack",
+              "AVL Tree"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of active subroutine memory tracker, you should select **Call Stack**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: If a research scenario or project requires: **retrieving value from pointer address**, which component or approach should be chosen?",
+            "options": [
+              "Pointer dereferencing",
+              "Binary Search Tree (BST)",
+              "Quick Sort",
+              "Queue Data Structure"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of retrieving value from pointer address, you should select **Pointer dereferencing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: If a research scenario or project requires: **single interface multi-implementation capability**, which component or approach should be chosen?",
+            "options": [
+              "Dijkstra's Algorithm",
+              "Singly Linked List",
+              "Adjacency List",
+              "Polymorphism"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of single interface multi-implementation capability, you should select **Polymorphism**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: If a research scenario or project requires: **virtual table query abstraction**, which component or approach should be chosen?",
+            "options": [
+              "ACID Properties",
+              "Phantom Read",
+              "Referential Integrity",
+              "Database View"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of virtual table query abstraction, you should select **Database View**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: If a research scenario or project requires: **non-relational schema-less storage**, which component or approach should be chosen?",
+            "options": [
+              "Query Optimizer",
+              "Foreign Key",
+              "Data Redundancy",
+              "NoSQL Database"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of non-relational schema-less storage, you should select **NoSQL Database**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: If a research scenario or project requires: **logical database structure visualization**, which component or approach should be chosen?",
+            "options": [
+              "ER Modeling",
+              "Database Trigger",
+              "First Normal Form (1NF)",
+              "B+ Tree Index"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of logical database structure visualization, you should select **ER Modeling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: If a research scenario or project requires: **reverting uncommitted transactional modifications**, which component or approach should be chosen?",
+            "options": [
+              "Two-Phase Locking (2PL)",
+              "Stored Procedure",
+              "Second Normal Form (2NF)",
+              "Transaction Rollback"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of reverting uncommitted transactional modifications, you should select **Transaction Rollback**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: If a research scenario or project requires: **concurrent write overwrite anomaly**, which component or approach should be chosen?",
+            "options": [
+              "SQL JOIN",
+              "Lost Update Anomaly",
+              "Third Normal Form (3NF)",
+              "Primary Key"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of concurrent write overwrite anomaly, you should select **Lost Update Anomaly**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: If a research scenario or project requires: **reading uncommitted transaction modifications**, which component or approach should be chosen?",
+            "options": [
+              "Relational Algebra",
+              "Dirty Read",
+              "Boyce-Codd Normal Form (BCNF)",
+              "Candidate Key"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of reading uncommitted transaction modifications, you should select **Dirty Read**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: If a research scenario or project requires: **reading committed concurrent modifications**, which component or approach should be chosen?",
+            "options": [
+              "Database View",
+              "ACID Properties",
+              "Referential Integrity",
+              "Non-Repeatable Read"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of reading committed concurrent modifications, you should select **Non-Repeatable Read**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: If a research scenario or project requires: **reading committed concurrent insertions**, which component or approach should be chosen?",
+            "options": [
+              "Data Redundancy",
+              "NoSQL Database",
+              "Foreign Key",
+              "Phantom Read"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of reading committed concurrent insertions, you should select **Phantom Read**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: If a research scenario or project requires: **efficient execution plan selector**, which component or approach should be chosen?",
+            "options": [
+              "Query Optimizer",
+              "First Normal Form (1NF)",
+              "ER Modeling",
+              "B+ Tree Index"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of efficient execution plan selector, you should select **Query Optimizer**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: If a research scenario or project requires: **automatic event-driven code block**, which component or approach should be chosen?",
+            "options": [
+              "Two-Phase Locking (2PL)",
+              "Transaction Rollback",
+              "Second Normal Form (2NF)",
+              "Database Trigger"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of automatic event-driven code block, you should select **Database Trigger**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: If a research scenario or project requires: **flexible iterative development paradigm**, which component or approach should be chosen?",
+            "options": [
+              "Software Architecture",
+              "Symmetric Encryption",
+              "SRS Document",
+              "Agile Methodology"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of flexible iterative development paradigm, you should select **Agile Methodology**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: If a research scenario or project requires: **reusable architectural solution blueprint**, which component or approach should be chosen?",
+            "options": [
+              "Design Pattern",
+              "Asymmetric Encryption",
+              "Scrum Framework",
+              "Refactoring"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of reusable architectural solution blueprint, you should select **Design Pattern**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: If a research scenario or project requires: **isolated component validation**, which component or approach should be chosen?",
+            "options": [
+              "OSI Model",
+              "Cohesion",
+              "DNS (Domain Name System)",
+              "Unit Testing"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of isolated component validation, you should select **Unit Testing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: If a research scenario or project requires: **distributed source control management**, which component or approach should be chosen?",
+            "options": [
+              "ARP (Address Resolution Protocol)",
+              "TCP/IP Protocol",
+              "Git Version Control",
+              "Coupling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of distributed source control management, you should select **Git Version Control**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: If a research scenario or project requires: **automated deployment automation**, which component or approach should be chosen?",
+            "options": [
+              "CI/CD Pipeline",
+              "Subnet Mask",
+              "SDLC Model",
+              "Firewall"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of automated deployment automation, you should select **CI/CD Pipeline**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: If a research scenario or project requires: **functional specification validation**, which component or approach should be chosen?",
+            "options": [
+              "IPv6 Address Space",
+              "UML Diagrams",
+              "Black-box Testing",
+              "Border Gateway Protocol (BGP)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of functional specification validation, you should select **Black-box Testing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: If a research scenario or project requires: **internal code path validation**, which component or approach should be chosen?",
+            "options": [
+              "White-box Testing",
+              "Symmetric Encryption",
+              "Agile Methodology",
+              "SRS Document"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of internal code path validation, you should select **White-box Testing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: If a research scenario or project requires: **high-level structural system organization**, which component or approach should be chosen?",
+            "options": [
+              "Asymmetric Encryption",
+              "Software Architecture",
+              "Design Pattern",
+              "Refactoring"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of high-level structural system organization, you should select **Software Architecture**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: If a research scenario or project requires: **sprint-based team collaboration**, which component or approach should be chosen?",
+            "options": [
+              "Scrum Framework",
+              "OSI Model",
+              "Unit Testing",
+              "DNS (Domain Name System)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of sprint-based team collaboration, you should select **Scrum Framework**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: If a research scenario or project requires: **single module functional focus score**, which component or approach should be chosen?",
+            "options": [
+              "Cohesion",
+              "TCP/IP Protocol",
+              "Git Version Control",
+              "ARP (Address Resolution Protocol)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of single module functional focus score, you should select **Cohesion**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 7. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 7.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

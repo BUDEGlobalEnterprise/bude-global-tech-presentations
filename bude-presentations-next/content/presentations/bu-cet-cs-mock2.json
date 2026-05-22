@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 2 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: Which of the following Computer Science terms is defined as: 'is the process of simplifying a Boolean expression to reduce the number of logic gates required for implementation.'?",
+            "options": [
+              "Partially Ordered Set (Poset)",
+              "Boolean Algebra Minimization",
+              "Decoder",
+              "RISC Architecture"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Boolean Algebra Minimization** is defined as: is the process of simplifying a Boolean expression to reduce the number of logic gates required for implementation. (logic gate reduction optimization)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: Which of the following Computer Science terms is defined as: 'is a graphical method used to simplify Boolean algebra expressions without using algebraic laws.'?",
+            "options": [
+              "IEEE 754 Standard",
+              "Karnaugh Map (K-map)",
+              "Vertex Degree",
+              "Von Neumann Architecture"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Karnaugh Map (K-map)** is defined as: is a graphical method used to simplify Boolean algebra expressions without using algebraic laws. (graphical boolean simplification table)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: Which of the following Computer Science terms is defined as: 'is a combinational logic circuit that selects binary information from one of many input lines and directs it to a single output.'?",
+            "options": [
+              "Cache Memory Hierarchy",
+              "Euler Path",
+              "Multiplexer (MUX)",
+              "Propositional Logic Connectives"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Multiplexer (MUX)** is defined as: is a combinational logic circuit that selects binary information from one of many input lines and directs it to a single output. (many-to-one signal selector)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: Which of the following Computer Science terms is defined as: 'is a combinational logic circuit that takes a single input line and routes it to one of several digital outputs.'?",
+            "options": [
+              "Predicate Logic Quantifiers",
+              "Direct Memory Access (DMA)",
+              "Demultiplexer (DEMUX)",
+              "Hamiltonian Cycle"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Demultiplexer (DEMUX)** is defined as: is a combinational logic circuit that takes a single input line and routes it to one of several digital outputs. (one-to-many signal router)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: Which of the following Computer Science terms is defined as: 'is a combinational circuit that adds three single-bit inputs (A, B, and Carry-in) and outputs Sum and Carry.'?",
+            "options": [
+              "Set Theory Operations",
+              "Full Adder",
+              "Pipelining Hazards",
+              "Group Theory Group"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Full Adder** is defined as: is a combinational circuit that adds three single-bit inputs (A, B, and Carry-in) and outputs Sum and Carry. (three-input binary addition circuit)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: Which of the following Computer Science terms is defined as: 'are sequential logic circuits used as basic memory storage elements, changing states based on clock inputs (e.g. JK, D).'?",
+            "options": [
+              "Permutation",
+              "Flip-Flops",
+              "Instruction Cycle",
+              "Equivalence Relation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Flip-Flops** is defined as: are sequential logic circuits used as basic memory storage elements, changing states based on clock inputs (e.g. JK, D). (clock-driven sequential memory components)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: Which of the following Computer Science terms is defined as: 'is a digital counter where all flip-flops are triggered simultaneously by a single common clock pulse.'?",
+            "options": [
+              "RISC Architecture",
+              "Synchronous Counter",
+              "Partially Ordered Set (Poset)",
+              "Boolean Algebra Minimization"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Synchronous Counter** is defined as: is a digital counter where all flip-flops are triggered simultaneously by a single common clock pulse. (simultaneously-clocked state counter)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: Which of the following Computer Science terms is defined as: 'is a combinational circuit that converts an n-bit binary input code into a maximum of 2^n unique output lines.'?",
+            "options": [
+              "Decoder",
+              "Karnaugh Map (K-map)",
+              "IEEE 754 Standard",
+              "Vertex Degree"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Decoder** is defined as: is a combinational circuit that converts an n-bit binary input code into a maximum of 2^n unique output lines. (binary-to-unary line converter)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: Which of the following Computer Science terms is defined as: 'is a computer design model featuring a single shared memory and bus for both instruction and data storage.'?",
+            "options": [
+              "Euler Path",
+              "Propositional Logic Connectives",
+              "Multiplexer (MUX)",
+              "Von Neumann Architecture"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Von Neumann Architecture** is defined as: is a computer design model featuring a single shared memory and bus for both instruction and data storage. (shared instruction-data bus architecture)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: Which of the following Computer Science terms is defined as: 'is a multi-level layout (L1, L2, L3) of small, fast memory to bridge the speed gap between CPU and RAM.'?",
+            "options": [
+              "Cache Memory Hierarchy",
+              "Demultiplexer (DEMUX)",
+              "Hamiltonian Cycle",
+              "Predicate Logic Quantifiers"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Cache Memory Hierarchy** is defined as: is a multi-level layout (L1, L2, L3) of small, fast memory to bridge the speed gap between CPU and RAM. (multi-level fast memory staging)."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: Which of the following Computer Science terms is defined as: 'is the smallest unit of execution within a process, sharing the process's memory space but maintaining its own stack and registers.'?",
+            "options": [
+              "Banker's Algorithm",
+              "Device Driver",
+              "Thread",
+              "File Allocation Methods"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Thread** is defined as: is the smallest unit of execution within a process, sharing the process's memory space but maintaining its own stack and registers. (lightweight shared-memory execution unit)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: Which of the following Computer Science terms is defined as: 'is a mutual exclusion locking mechanism used to synchronize access to a resource, ensuring only one thread holds the lock at a time.'?",
+            "options": [
+              "System Calls",
+              "Paging",
+              "Spooling",
+              "Mutex"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Mutex** is defined as: is a mutual exclusion locking mechanism used to synchronize access to a resource, ensuring only one thread holds the lock at a time. (single-thread resource lock)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: Which of the following Computer Science terms is defined as: 'is a synchronization tool that uses a signaling integer value to control access to shared resources by multiple processes.'?",
+            "options": [
+              "RAID Levels",
+              "Virtual Memory",
+              "Counting Semaphore",
+              "Process States"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Counting Semaphore** is defined as: is a synchronization tool that uses a signaling integer value to control access to shared resources by multiple processes. (variable-based process signaling)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: Which of the following Computer Science terms is defined as: 'is the process of storing the state of a CPU process/thread so that it can be restored and resume execution later.'?",
+            "options": [
+              "Microkernel Architecture",
+              "CPU Scheduling",
+              "Context Switching",
+              "Translation Lookaside Buffer (TLB)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Context Switching** is defined as: is the process of storing the state of a CPU process/thread so that it can be restored and resume execution later. (cpu state saving-restoring overhead)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: Which of the following Computer Science terms is defined as: 'refers to mechanisms (like pipes, message queues, shared memory) that allow processes to communicate and share data.'?",
+            "options": [
+              "Page Replacement Algorithm",
+              "Inter-Process Communication (IPC)",
+              "Cache Coherence Protocols",
+              "Process Synchronization"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Inter-Process Communication (IPC)** is defined as: refers to mechanisms (like pipes, message queues, shared memory) that allow processes to communicate and share data. (isolated process communication mechanisms)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: Which of the following Computer Science terms is defined as: 'uses temporary memory areas to store data during transfers between fast devices (like CPU) and slow I/O peripherals.'?",
+            "options": [
+              "I/O Buffering",
+              "Memory Segmentation",
+              "Deadlock Prevention",
+              "Thrashing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **I/O Buffering** is defined as: uses temporary memory areas to store data during transfers between fast devices (like CPU) and slow I/O peripherals. (speed-matching data storage buffer)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: Which of the following Computer Science terms is defined as: 'is the process of managing I/O requests for a hard disk drive using algorithms like SCAN, C-SCAN, or SSTF.'?",
+            "options": [
+              "Disk Scheduling",
+              "Thread",
+              "Banker's Algorithm",
+              "Device Driver"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Disk Scheduling** is defined as: is the process of managing I/O requests for a hard disk drive using algorithms like SCAN, C-SCAN, or SSTF. (hard drive head seek optimization)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: Which of the following Computer Science terms is defined as: 'include Contiguous, Linked, and Indexed allocation strategies for storing files on physical storage devices.'?",
+            "options": [
+              "Paging",
+              "File Allocation Methods",
+              "Mutex",
+              "Spooling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **File Allocation Methods** is defined as: include Contiguous, Linked, and Indexed allocation strategies for storing files on physical storage devices. (physical disk block mapping strategies)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: Which of the following Computer Science terms is defined as: 'provide the essential interface between a running program and the operating system kernel to request privileged services.'?",
+            "options": [
+              "Process States",
+              "Counting Semaphore",
+              "Virtual Memory",
+              "System Calls"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **System Calls** is defined as: provide the essential interface between a running program and the operating system kernel to request privileged services. (privileged kernel service requests interface)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: Which of the following Computer Science terms is defined as: 'designate different configurations of multiple physical disks to achieve redundancy, performance, or both (e.g. RAID 0, 1, 5).'?",
+            "options": [
+              "RAID Levels",
+              "Context Switching",
+              "Translation Lookaside Buffer (TLB)",
+              "CPU Scheduling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **RAID Levels** is defined as: designate different configurations of multiple physical disks to achieve redundancy, performance, or both (e.g. RAID 0, 1, 5). (redundancy-performance disk array configurations)."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: Which of the following Computer Science terms is defined as: 'describes the asymptotic upper bound of an algorithm's execution time or space requirement in terms of input size.'?",
+            "options": [
+              "Call Stack",
+              "Big O Complexity",
+              "Garbage Collection",
+              "Heap Data Structure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Big O Complexity** is defined as: describes the asymptotic upper bound of an algorithm's execution time or space requirement in terms of input size. (asymptotic run-time upper bound indicator)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: Which of the following Computer Science terms is defined as: 'is a linear data structure that follows the Last-In-First-Out (LIFO) principle for inserting and removing elements.'?",
+            "options": [
+              "AVL Tree",
+              "Stack Data Structure",
+              "Variable Scope",
+              "Pointer dereferencing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Stack Data Structure** is defined as: is a linear data structure that follows the Last-In-First-Out (LIFO) principle for inserting and removing elements. (LIFO element storage collection)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: Which of the following Computer Science terms is defined as: 'is a linear data structure that follows the First-In-First-Out (FIFO) principle for inserting and removing elements.'?",
+            "options": [
+              "Polymorphism",
+              "Quick Sort",
+              "Binary Search Tree (BST)",
+              "Queue Data Structure"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Queue Data Structure** is defined as: is a linear data structure that follows the First-In-First-Out (FIFO) principle for inserting and removing elements. (FIFO element storage collection)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: Which of the following Computer Science terms is defined as: 'is a linear collection of data nodes where each node points to the next node in the sequence.'?",
+            "options": [
+              "Inheritance",
+              "Singly Linked List",
+              "Dijkstra's Algorithm",
+              "Adjacency List"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Singly Linked List** is defined as: is a linear collection of data nodes where each node points to the next node in the sequence. (one-way pointer node sequence)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: Which of the following Computer Science terms is defined as: 'is a linear collection of nodes where each node contains pointers to both the next and the previous nodes.'?",
+            "options": [
+              "Encapsulation",
+              "Dynamic Programming",
+              "Breadth-First Search (BFS)",
+              "Doubly Linked List"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Doubly Linked List** is defined as: is a linear collection of nodes where each node contains pointers to both the next and the previous nodes. (two-way pointer node sequence)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: Which of the following Computer Science terms is defined as: 'is a stable, divide-and-conquer sorting algorithm that splits arrays in halves, sorts them, and merges them back.'?",
+            "options": [
+              "Abstract Data Type (ADT)",
+              "Merge Sort",
+              "Hashing",
+              "Depth-First Search (DFS)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Merge Sort** is defined as: is a stable, divide-and-conquer sorting algorithm that splits arrays in halves, sorts them, and merges them back. (O(n log n) stable comparison sort)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: Which of the following Computer Science terms is defined as: 'is an efficient search algorithm that repeatedly divides a sorted search interval in half to locate a target.'?",
+            "options": [
+              "Binary Search",
+              "Heap Data Structure",
+              "Garbage Collection",
+              "Big O Complexity"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Binary Search** is defined as: is an efficient search algorithm that repeatedly divides a sorted search interval in half to locate a target. (O(log n) sorted array search)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: Which of the following Computer Science terms is defined as: 'is a stack memory structure that stores information about active subroutines and functions in a running program.'?",
+            "options": [
+              "Stack Data Structure",
+              "AVL Tree",
+              "Call Stack",
+              "Variable Scope"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Call Stack** is defined as: is a stack memory structure that stores information about active subroutines and functions in a running program. (active subroutine memory tracker)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: Which of the following Computer Science terms is defined as: 'is the programming operation used to retrieve or modify the value stored at the memory address held by a pointer.'?",
+            "options": [
+              "Quick Sort",
+              "Pointer dereferencing",
+              "Queue Data Structure",
+              "Binary Search Tree (BST)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Pointer dereferencing** is defined as: is the programming operation used to retrieve or modify the value stored at the memory address held by a pointer. (retrieving value from pointer address)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: Which of the following Computer Science terms is defined as: 'is an object-oriented programming concept allowing objects of different classes to be treated as objects of a common superclass.'?",
+            "options": [
+              "Singly Linked List",
+              "Dijkstra's Algorithm",
+              "Adjacency List",
+              "Polymorphism"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Polymorphism** is defined as: is an object-oriented programming concept allowing objects of different classes to be treated as objects of a common superclass. (single interface multi-implementation capability)."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: Which of the following Computer Science terms is defined as: 'is a virtual table based on the result-set of an active SQL statement, containing no physical data of its own.'?",
+            "options": [
+              "ACID Properties",
+              "Phantom Read",
+              "Database View",
+              "Referential Integrity"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Database View** is defined as: is a virtual table based on the result-set of an active SQL statement, containing no physical data of its own. (virtual table query abstraction)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: Which of the following Computer Science terms is defined as: 'provides a mechanism for storage and retrieval of data modeled in formats other than tabular relations (e.g. document, key-value).'?",
+            "options": [
+              "NoSQL Database",
+              "Foreign Key",
+              "Data Redundancy",
+              "Query Optimizer"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **NoSQL Database** is defined as: provides a mechanism for storage and retrieval of data modeled in formats other than tabular relations (e.g. document, key-value). (non-relational schema-less storage)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: Which of the following Computer Science terms is defined as: 'represents the logical structure of a database using Entities, Attributes, and Relationships visually.'?",
+            "options": [
+              "ER Modeling",
+              "Database Trigger",
+              "B+ Tree Index",
+              "First Normal Form (1NF)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **ER Modeling** is defined as: represents the logical structure of a database using Entities, Attributes, and Relationships visually. (logical database structure visualization)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: Which of the following Computer Science terms is defined as: 'reverts all changes made during the current transaction if a failure occurs before completion, ensuring atomicity.'?",
+            "options": [
+              "Stored Procedure",
+              "Second Normal Form (2NF)",
+              "Two-Phase Locking (2PL)",
+              "Transaction Rollback"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Transaction Rollback** is defined as: reverts all changes made during the current transaction if a failure occurs before completion, ensuring atomicity. (reverting uncommitted transactional modifications)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: Which of the following Computer Science terms is defined as: 'occurs when two concurrent transactions read and update the same data item, where one overwrite is lost.'?",
+            "options": [
+              "Primary Key",
+              "Third Normal Form (3NF)",
+              "SQL JOIN",
+              "Lost Update Anomaly"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Lost Update Anomaly** is defined as: occurs when two concurrent transactions read and update the same data item, where one overwrite is lost. (concurrent write overwrite anomaly)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: Which of the following Computer Science terms is defined as: 'occurs when a transaction reads data that has been modified by another concurrent transaction but not yet committed.'?",
+            "options": [
+              "Dirty Read",
+              "Candidate Key",
+              "Relational Algebra",
+              "Boyce-Codd Normal Form (BCNF)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Dirty Read** is defined as: occurs when a transaction reads data that has been modified by another concurrent transaction but not yet committed. (reading uncommitted transaction modifications)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: Which of the following Computer Science terms is defined as: 'occurs when a transaction re-reads data it previously read and finds that another committed transaction has modified it.'?",
+            "options": [
+              "Non-Repeatable Read",
+              "Database View",
+              "Referential Integrity",
+              "ACID Properties"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Non-Repeatable Read** is defined as: occurs when a transaction re-reads data it previously read and finds that another committed transaction has modified it. (reading committed concurrent modifications)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: Which of the following Computer Science terms is defined as: 'occurs when a transaction re-runs a query returning a set of rows and finds new rows added by another committed transaction.'?",
+            "options": [
+              "NoSQL Database",
+              "Data Redundancy",
+              "Phantom Read",
+              "Foreign Key"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Phantom Read** is defined as: occurs when a transaction re-runs a query returning a set of rows and finds new rows added by another committed transaction. (reading committed concurrent insertions)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: Which of the following Computer Science terms is defined as: 'is a DBMS component that analyzes SQL statements and determines the most efficient execution plan based on statistics.'?",
+            "options": [
+              "B+ Tree Index",
+              "Query Optimizer",
+              "ER Modeling",
+              "First Normal Form (1NF)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Query Optimizer** is defined as: is a DBMS component that analyzes SQL statements and determines the most efficient execution plan based on statistics. (efficient execution plan selector)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: Which of the following Computer Science terms is defined as: 'is a procedural block of code that automatically executes in response to certain events on a particular table.'?",
+            "options": [
+              "Transaction Rollback",
+              "Second Normal Form (2NF)",
+              "Two-Phase Locking (2PL)",
+              "Database Trigger"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Database Trigger** is defined as: is a procedural block of code that automatically executes in response to certain events on a particular table. (automatic event-driven code block)."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: Which of the following Computer Science terms is defined as: 'promotes continuous iteration of development and testing throughout the software development life cycle.'?",
+            "options": [
+              "Agile Methodology",
+              "Software Architecture",
+              "SRS Document",
+              "Symmetric Encryption"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Agile Methodology** is defined as: promotes continuous iteration of development and testing throughout the software development life cycle. (flexible iterative development paradigm)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: Which of the following Computer Science terms is defined as: 'is a reusable, template-like solution to a commonly occurring design problem in software architecture.'?",
+            "options": [
+              "Refactoring",
+              "Asymmetric Encryption",
+              "Design Pattern",
+              "Scrum Framework"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Design Pattern** is defined as: is a reusable, template-like solution to a commonly occurring design problem in software architecture. (reusable architectural solution blueprint)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: Which of the following Computer Science terms is defined as: 'is a software testing method by which individual source code components are tested to determine if they are fit for use.'?",
+            "options": [
+              "Unit Testing",
+              "Cohesion",
+              "OSI Model",
+              "DNS (Domain Name System)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Unit Testing** is defined as: is a software testing method by which individual source code components are tested to determine if they are fit for use. (isolated component validation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: Which of the following Computer Science terms is defined as: 'is a distributed version control system designed to track changes in source code during software development.'?",
+            "options": [
+              "TCP/IP Protocol",
+              "ARP (Address Resolution Protocol)",
+              "Coupling",
+              "Git Version Control"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Git Version Control** is defined as: is a distributed version control system designed to track changes in source code during software development. (distributed source control management)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: Which of the following Computer Science terms is defined as: 'automates software delivery phases: building, testing, and deploying changes to production environments.'?",
+            "options": [
+              "CI/CD Pipeline",
+              "Subnet Mask",
+              "Firewall",
+              "SDLC Model"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **CI/CD Pipeline** is defined as: automates software delivery phases: building, testing, and deploying changes to production environments. (automated deployment automation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: Which of the following Computer Science terms is defined as: 'is a method of software testing that examines the functionality of an application without peering into its internal structures.'?",
+            "options": [
+              "UML Diagrams",
+              "Border Gateway Protocol (BGP)",
+              "IPv6 Address Space",
+              "Black-box Testing"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Black-box Testing** is defined as: is a method of software testing that examines the functionality of an application without peering into its internal structures. (functional specification validation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: Which of the following Computer Science terms is defined as: 'is a method of software testing that tests internal structures or workings of an application, requiring code visibility.'?",
+            "options": [
+              "Symmetric Encryption",
+              "White-box Testing",
+              "Agile Methodology",
+              "SRS Document"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **White-box Testing** is defined as: is a method of software testing that tests internal structures or workings of an application, requiring code visibility. (internal code path validation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: Which of the following Computer Science terms is defined as: 'refers to the high-level structures of a software system, the discipline of creating such structures.'?",
+            "options": [
+              "Software Architecture",
+              "Asymmetric Encryption",
+              "Refactoring",
+              "Design Pattern"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Software Architecture** is defined as: refers to the high-level structures of a software system, the discipline of creating such structures. (high-level structural system organization)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: Which of the following Computer Science terms is defined as: 'is an agile framework for managing complex work, utilizing sprints, daily standups, and product backlogs.'?",
+            "options": [
+              "Scrum Framework",
+              "Unit Testing",
+              "OSI Model",
+              "DNS (Domain Name System)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Scrum Framework** is defined as: is an agile framework for managing complex work, utilizing sprints, daily standups, and product backlogs. (sprint-based team collaboration)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: Which of the following Computer Science terms is defined as: 'measures the strength of relationship between pieces of functionality within a single software module.'?",
+            "options": [
+              "TCP/IP Protocol",
+              "Cohesion",
+              "Git Version Control",
+              "ARP (Address Resolution Protocol)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Cohesion** is defined as: measures the strength of relationship between pieces of functionality within a single software module. (single module functional focus score)."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 2. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 2.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

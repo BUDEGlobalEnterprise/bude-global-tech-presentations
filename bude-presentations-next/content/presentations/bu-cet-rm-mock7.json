@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 7 - Research Methodology",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Introduction to Research",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q1: If a research scenario or project requires: **critical factual evaluation**, which component or approach should be chosen?",
+            "options": [
+              "Diagnostic Research",
+              "Analytical Research",
+              "Qualitative Research",
+              "Grounded Theory"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of critical factual evaluation, you should select **Analytical Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q2: If a research scenario or project requires: **abstract concept re-interpretation**, which component or approach should be chosen?",
+            "options": [
+              "Conceptual Research",
+              "Descriptive Research",
+              "Ethnographic Research",
+              "Evaluative Research"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of abstract concept re-interpretation, you should select **Conceptual Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q3: If a research scenario or project requires: **after-the-fact investigation**, which component or approach should be chosen?",
+            "options": [
+              "Fundamental Research",
+              "Exploratory Research",
+              "Comparative Research",
+              "Ex-Post Facto Research"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of after-the-fact investigation, you should select **Ex-Post Facto Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q4: If a research scenario or project requires: **long-term repeated observation**, which component or approach should be chosen?",
+            "options": [
+              "Applied Research",
+              "Longitudinal Study",
+              "Historical Research",
+              "Deductive Research Approach"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of long-term repeated observation, you should select **Longitudinal Study**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q5: If a research scenario or project requires: **single point-in-time snapshot**, which component or approach should be chosen?",
+            "options": [
+              "Inductive Research Approach",
+              "Action Research",
+              "Cross-Sectional Study",
+              "Empirical Research"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of single point-in-time snapshot, you should select **Cross-Sectional Study**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q6: If a research scenario or project requires: **in-depth single unit analysis**, which component or approach should be chosen?",
+            "options": [
+              "Theoretical Research",
+              "Case Study Method",
+              "Phenomenological Research",
+              "Quantitative Research"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of in-depth single unit analysis, you should select **Case Study Method**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q7: If a research scenario or project requires: **cause-and-effect verification**, which component or approach should be chosen?",
+            "options": [
+              "Analytical Research",
+              "Qualitative Research",
+              "Experimental Research",
+              "Grounded Theory"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of cause-and-effect verification, you should select **Experimental Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q8: If a research scenario or project requires: **cause-and-association diagnosis**, which component or approach should be chosen?",
+            "options": [
+              "Diagnostic Research",
+              "Ethnographic Research",
+              "Conceptual Research",
+              "Descriptive Research"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of cause-and-association diagnosis, you should select **Diagnostic Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q9: If a research scenario or project requires: **worth and outcome assessment**, which component or approach should be chosen?",
+            "options": [
+              "Ex-Post Facto Research",
+              "Exploratory Research",
+              "Fundamental Research",
+              "Evaluative Research"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of worth and outcome assessment, you should select **Evaluative Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q10: If a research scenario or project requires: **similarity and difference analysis**, which component or approach should be chosen?",
+            "options": [
+              "Longitudinal Study",
+              "Comparative Research",
+              "Applied Research",
+              "Historical Research"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of similarity and difference analysis, you should select **Comparative Research**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Research Design & Hypothesis",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q11: If a research scenario or project requires: **constant baseline variable**, which component or approach should be chosen?",
+            "options": [
+              "Type I Error",
+              "Internal Validity",
+              "Control Group",
+              "Control Variable"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of constant baseline variable, you should select **Control Variable**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q12: If a research scenario or project requires: **critical gap analysis of past works**, which component or approach should be chosen?",
+            "options": [
+              "Literature Review",
+              "Type II Error",
+              "External Validity",
+              "Quasi-Experimental Design"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of critical gap analysis of past works, you should select **Literature Review**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q13: If a research scenario or project requires: **clear problem identification**, which component or approach should be chosen?",
+            "options": [
+              "Research Problem",
+              "Independent Variable",
+              "Double-Blind Study",
+              "Research Design"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of clear problem identification, you should select **Research Problem**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q14: If a research scenario or project requires: **conceptual schema explanation**, which component or approach should be chosen?",
+            "options": [
+              "Statistical Power",
+              "Dependent Variable",
+              "Research Hypothesis",
+              "Conceptual Framework"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of conceptual schema explanation, you should select **Conceptual Framework**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q15: If a research scenario or project requires: **feasibility and scale trial**, which component or approach should be chosen?",
+            "options": [
+              "Null Hypothesis (H0)",
+              "Directional Hypothesis",
+              "Extraneous Variable",
+              "Pilot Study"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of feasibility and scale trial, you should select **Pilot Study**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q16: If a research scenario or project requires: **insight and familiarity collection**, which component or approach should be chosen?",
+            "options": [
+              "Exploratory Design",
+              "Alternative Hypothesis (H1)",
+              "Confounding Variable",
+              "Non-Directional Hypothesis"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of insight and familiarity collection, you should select **Exploratory Design**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q17: If a research scenario or project requires: **accurate characteristic profiling**, which component or approach should be chosen?",
+            "options": [
+              "Control Variable",
+              "Internal Validity",
+              "Descriptive Design",
+              "Type I Error"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of accurate characteristic profiling, you should select **Descriptive Design**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q18: If a research scenario or project requires: **untreated baseline group**, which component or approach should be chosen?",
+            "options": [
+              "Literature Review",
+              "Control Group",
+              "Type II Error",
+              "External Validity"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of untreated baseline group, you should select **Control Group**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q19: If a research scenario or project requires: **non-randomized comparison design**, which component or approach should be chosen?",
+            "options": [
+              "Research Problem",
+              "Research Design",
+              "Independent Variable",
+              "Quasi-Experimental Design"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of non-randomized comparison design, you should select **Quasi-Experimental Design**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q20: If a research scenario or project requires: **participant-researcher bias prevention**, which component or approach should be chosen?",
+            "options": [
+              "Conceptual Framework",
+              "Research Hypothesis",
+              "Double-Blind Study",
+              "Dependent Variable"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of participant-researcher bias prevention, you should select **Double-Blind Study**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Sampling & Data Collection",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q21: If a research scenario or project requires: **referral-based chain network**, which component or approach should be chosen?",
+            "options": [
+              "Snowball Sampling",
+              "Response Rate",
+              "Likert Scale",
+              "Cluster Sampling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of referral-based chain network, you should select **Snowball Sampling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q22: If a research scenario or project requires: **frame-population mismatch error**, which component or approach should be chosen?",
+            "options": [
+              "Multi-Stage Sampling",
+              "Sampling Frame Error",
+              "Semantic Differential Scale",
+              "Pilot Testing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of frame-population mismatch error, you should select **Sampling Frame Error**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q23: If a research scenario or project requires: **systematic selection skew**, which component or approach should be chosen?",
+            "options": [
+              "Observation Method",
+              "Probability Sampling",
+              "Sampling Bias",
+              "Non-Probability Sampling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of systematic selection skew, you should select **Sampling Bias**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q24: If a research scenario or project requires: **original direct collection**, which component or approach should be chosen?",
+            "options": [
+              "Focus Group Discussion",
+              "Primary Data",
+              "Convenience Sampling",
+              "Simple Random Sampling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of original direct collection, you should select **Primary Data**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q25: If a research scenario or project requires: **previously collected material**, which component or approach should be chosen?",
+            "options": [
+              "Content Analysis",
+              "Quota Sampling",
+              "Stratified Random Sampling",
+              "Secondary Data"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of previously collected material, you should select **Secondary Data**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q26: If a research scenario or project requires: **standardized self-report tool**, which component or approach should be chosen?",
+            "options": [
+              "Systematic Sampling",
+              "Data Triangulation",
+              "Purposive Sampling",
+              "Questionnaire"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of standardized self-report tool, you should select **Questionnaire**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q27: If a research scenario or project requires: **rigid standardized interview**, which component or approach should be chosen?",
+            "options": [
+              "Cluster Sampling",
+              "Response Rate",
+              "Structured Interview",
+              "Snowball Sampling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of rigid standardized interview, you should select **Structured Interview**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q28: If a research scenario or project requires: **measuring ordinal/interval agreement levels**, which component or approach should be chosen?",
+            "options": [
+              "Multi-Stage Sampling",
+              "Likert Scale",
+              "Pilot Testing",
+              "Sampling Frame Error"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of measuring ordinal/interval agreement levels, you should select **Likert Scale**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q29: If a research scenario or project requires: **bipolar adjective scaling**, which component or approach should be chosen?",
+            "options": [
+              "Sampling Bias",
+              "Semantic Differential Scale",
+              "Non-Probability Sampling",
+              "Probability Sampling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of bipolar adjective scaling, you should select **Semantic Differential Scale**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q30: If a research scenario or project requires: **systematic behavior recording**, which component or approach should be chosen?",
+            "options": [
+              "Primary Data",
+              "Simple Random Sampling",
+              "Convenience Sampling",
+              "Observation Method"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of systematic behavior recording, you should select **Observation Method**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Data Analysis & Hypothesis Testing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q31: If a research scenario or project requires: **categorical association verification**, which component or approach should be chosen?",
+            "options": [
+              "Standard Error of the Mean",
+              "Chi-Square Test",
+              "Variance",
+              "Wilcoxon Signed-Rank Test"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of categorical association verification, you should select **Chi-Square Test**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q32: If a research scenario or project requires: **comparing three or more group means**, which component or approach should be chosen?",
+            "options": [
+              "Kruskal-Wallis Test",
+              "Pearson Correlation",
+              "ANOVA (Analysis of Variance)",
+              "Normal Distribution"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of comparing three or more group means, you should select **ANOVA (Analysis of Variance)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q33: If a research scenario or project requires: **comparing two group means**, which component or approach should be chosen?",
+            "options": [
+              "Student's t-Test",
+              "Positively Skewed",
+              "Arithmetic Mean",
+              "Spearman Rank Correlation"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of comparing two group means, you should select **Student's t-Test**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q34: If a research scenario or project requires: **large-sample mean comparison**, which component or approach should be chosen?",
+            "options": [
+              "Z-Test",
+              "Median",
+              "Negatively Skewed",
+              "Regression Coefficient"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of large-sample mean comparison, you should select **Z-Test**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q35: If a research scenario or project requires: **alpha threshold for hypothesis rejection**, which component or approach should be chosen?",
+            "options": [
+              "Parametric Test",
+              "Level of Significance",
+              "Kurtosis",
+              "Mode"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of alpha threshold for hypothesis rejection, you should select **Level of Significance**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q36: If a research scenario or project requires: **parameter estimation range**, which component or approach should be chosen?",
+            "options": [
+              "Standard Deviation",
+              "Mann-Whitney U Test",
+              "Non-Parametric Test",
+              "Confidence Interval"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of parameter estimation range, you should select **Confidence Interval**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q37: If a research scenario or project requires: **independent observation count limit**, which component or approach should be chosen?",
+            "options": [
+              "Variance",
+              "Wilcoxon Signed-Rank Test",
+              "Degrees of Freedom",
+              "Chi-Square Test"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of independent observation count limit, you should select **Degrees of Freedom**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q38: If a research scenario or project requires: **sample mean precision estimate**, which component or approach should be chosen?",
+            "options": [
+              "Standard Error of the Mean",
+              "ANOVA (Analysis of Variance)",
+              "Pearson Correlation",
+              "Kruskal-Wallis Test"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of sample mean precision estimate, you should select **Standard Error of the Mean**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q39: If a research scenario or project requires: **symmetric bell-curve model**, which component or approach should be chosen?",
+            "options": [
+              "Student's t-Test",
+              "Spearman Rank Correlation",
+              "Normal Distribution",
+              "Arithmetic Mean"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of symmetric bell-curve model, you should select **Normal Distribution**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q40: If a research scenario or project requires: **right-tail distribution skew**, which component or approach should be chosen?",
+            "options": [
+              "Positively Skewed",
+              "Regression Coefficient",
+              "Z-Test",
+              "Median"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of right-tail distribution skew, you should select **Positively Skewed**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Research Ethics & Report Writing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q41: If a research scenario or project requires: **human subject safety oversight board**, which component or approach should be chosen?",
+            "options": [
+              "Institutional Review Board (IRB)",
+              "Research Proposal",
+              "Acknowledgment Section",
+              "Chicago Style"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of human subject safety oversight board, you should select **Institutional Review Board (IRB)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q42: If a research scenario or project requires: **voluntary participant agreement process**, which component or approach should be chosen?",
+            "options": [
+              "Research Monograph",
+              "Intellectual Property Rights (IPR)",
+              "Thesis Layout Structure",
+              "Informed Consent"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of voluntary participant agreement process, you should select **Informed Consent**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q43: If a research scenario or project requires: **expert quality check before publication**, which component or approach should be chosen?",
+            "options": [
+              "Citation Indexing",
+              "Peer Review",
+              "Patent",
+              "Plagiarism"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of expert quality check before publication, you should select **Peer Review**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q44: If a research scenario or project requires: **barrier-free research accessibility**, which component or approach should be chosen?",
+            "options": [
+              "Self-Plagiarism",
+              "Fabrication",
+              "Copyright",
+              "Open Access"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of barrier-free research accessibility, you should select **Open Access**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q45: If a research scenario or project requires: **consulted sources comprehensive list**, which component or approach should be chosen?",
+            "options": [
+              "Bibliography",
+              "APA Style",
+              "Impact Factor",
+              "Falsification"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of consulted sources comprehensive list, you should select **Bibliography**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q46: If a research scenario or project requires: **brief paper summary overview**, which component or approach should be chosen?",
+            "options": [
+              "Abstract",
+              "Conflict of Interest",
+              "MLA Style",
+              "H-Index"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of brief paper summary overview, you should select **Abstract**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q47: If a research scenario or project requires: **bottom-of-page contextual note**, which component or approach should be chosen?",
+            "options": [
+              "Chicago Style",
+              "Acknowledgment Section",
+              "Institutional Review Board (IRB)",
+              "Footnote"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of bottom-of-page contextual note, you should select **Footnote**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q48: If a research scenario or project requires: **planned research blueprint outline**, which component or approach should be chosen?",
+            "options": [
+              "Thesis Layout Structure",
+              "Research Proposal",
+              "Informed Consent",
+              "Intellectual Property Rights (IPR)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of planned research blueprint outline, you should select **Research Proposal**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q49: If a research scenario or project requires: **single-subject specialist writing piece**, which component or approach should be chosen?",
+            "options": [
+              "Plagiarism",
+              "Patent",
+              "Peer Review",
+              "Research Monograph"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of single-subject specialist writing piece, you should select **Research Monograph**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q50: If a research scenario or project requires: **tracking scientific citations system**, which component or approach should be chosen?",
+            "options": [
+              "Citation Indexing",
+              "Open Access",
+              "Self-Plagiarism",
+              "Copyright"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of tracking scientific citations system, you should select **Citation Indexing**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 7. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Research Methodology Mock Exam 7.",
+              "note": "Solve all 10 mock exams to master the 500 Research Methodology questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

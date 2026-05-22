@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 10 - Research Methodology",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Introduction to Research",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q1: Which of the following statements is **TRUE** regarding **Case Study Method**?",
+            "options": [
+              "It is fundamentally characterized by: is a qualitative approach that focuses on describing the lived experiences of individuals regarding a specific concept or phenomenon.",
+              "It is equivalent in purpose to: focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon.",
+              "It is correctly described as: is an in-depth, detailed study of an individual, group, or event to explore underlying principles in a real-life context.",
+              "It has no relation to: in-depth single unit analysis"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Case Study Method** is accurately described as: is an in-depth, detailed study of an individual, group, or event to explore underlying principles in a real-life context."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q2: Which of the following statements is **TRUE** regarding **Experimental Research**?",
+            "options": [
+              "It is equivalent in purpose to: is exploratory research used to gain an understanding of underlying reasons, opinions, and motivations.",
+              "It has no relation to: cause-and-effect verification",
+              "It is correctly described as: establishes cause-and-effect relationships by manipulating an independent variable and observing its effect on a dependent variable.",
+              "It is fundamentally characterized by: is a systematic qualitative methodology that involves the generation of theory from systematic analysis of data."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Experimental Research** is accurately described as: establishes cause-and-effect relationships by manipulating an independent variable and observing its effect on a dependent variable."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q3: Which of the following statements is **TRUE** regarding **Diagnostic Research**?",
+            "options": [
+              "It has no relation to: cause-and-association diagnosis",
+              "It is fundamentally characterized by: involves the immersive study of people and cultures in their natural environment over an extended period.",
+              "It is equivalent in purpose to: aims to describe the characteristics of a population or phenomenon being studied without manipulating variables.",
+              "It is correctly described as: determines the frequency with which something occurs or its association with something else, aiming to find causes of a phenomenon."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Diagnostic Research** is accurately described as: determines the frequency with which something occurs or its association with something else, aiming to find causes of a phenomenon."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q4: Which of the following statements is **TRUE** regarding **Evaluative Research**?",
+            "options": [
+              "It is fundamentally characterized by: aims to expand the existing body of scientific knowledge without any immediate practical application.",
+              "It has no relation to: worth and outcome assessment",
+              "It is correctly described as: is a systematic assessment of the worth or merit of a time-bound project, program, or policy.",
+              "It is equivalent in purpose to: is conducted for a research problem when there are few or no earlier studies to refer to, aiming to clarify the exact nature of the problem."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Evaluative Research** is accurately described as: is a systematic assessment of the worth or merit of a time-bound project, program, or policy."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q5: Which of the following statements is **TRUE** regarding **Comparative Research**?",
+            "options": [
+              "It has no relation to: similarity and difference analysis",
+              "It is equivalent in purpose to: involves studying and interpreting past events to understand current patterns and anticipate future trends.",
+              "It is fundamentally characterized by: is designed to solve practical, real-world problems of modern society.",
+              "It is correctly described as: focuses on identifying similarities and differences between two or more groups, subjects, or datasets."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Comparative Research** is accurately described as: focuses on identifying similarities and differences between two or more groups, subjects, or datasets."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q6: Which of the following statements is **TRUE** regarding **Deductive Research Approach**?",
+            "options": [
+              "It is correctly described as: starts with a general theory or hypothesis and tests it through specific empirical observations.",
+              "It is fundamentally characterized by: is a reflective process of progressive problem-solving led by individuals working with others in teams to address immediate issues.",
+              "It has no relation to: top-down theory testing",
+              "It is equivalent in purpose to: relies on direct or indirect observation or experience as a database rather than theory or belief."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Deductive Research Approach** is accurately described as: starts with a general theory or hypothesis and tests it through specific empirical observations."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q7: Which of the following statements is **TRUE** regarding **Inductive Research Approach**?",
+            "options": [
+              "It is fundamentally characterized by: focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon.",
+              "It is correctly described as: starts with specific observations or measurements and moves toward broader generalizations and theories.",
+              "It is equivalent in purpose to: focuses on the development of new theories or abstract models based on existing literature rather than direct experiments.",
+              "It has no relation to: bottom-up theory construction"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Inductive Research Approach** is accurately described as: starts with specific observations or measurements and moves toward broader generalizations and theories."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q8: Which of the following statements is **TRUE** regarding **Phenomenological Research**?",
+            "options": [
+              "It has no relation to: lived experience description",
+              "It is fundamentally characterized by: is exploratory research used to gain an understanding of underlying reasons, opinions, and motivations.",
+              "It is correctly described as: is a qualitative approach that focuses on describing the lived experiences of individuals regarding a specific concept or phenomenon.",
+              "It is equivalent in purpose to: uses facts or information already available and analyzes them to make a critical evaluation of the material."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Phenomenological Research** is accurately described as: is a qualitative approach that focuses on describing the lived experiences of individuals regarding a specific concept or phenomenon."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q9: Which of the following statements is **TRUE** regarding **Grounded Theory**?",
+            "options": [
+              "It is equivalent in purpose to: is related to some abstract idea(s) or theory, generally used by philosophers and thinkers to develop new concepts or to re-interpret existing ones.",
+              "It has no relation to: data-driven theory generation",
+              "It is fundamentally characterized by: aims to describe the characteristics of a population or phenomenon being studied without manipulating variables.",
+              "It is correctly described as: is a systematic qualitative methodology that involves the generation of theory from systematic analysis of data."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Grounded Theory** is accurately described as: is a systematic qualitative methodology that involves the generation of theory from systematic analysis of data."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q10: Which of the following statements is **TRUE** regarding **Ethnographic Research**?",
+            "options": [
+              "It is equivalent in purpose to: is a category of research design in which the investigation starts after the fact has occurred without interference from the researcher.",
+              "It is correctly described as: involves the immersive study of people and cultures in their natural environment over an extended period.",
+              "It has no relation to: immersive cultural study",
+              "It is fundamentally characterized by: is conducted for a research problem when there are few or no earlier studies to refer to, aiming to clarify the exact nature of the problem."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Ethnographic Research** is accurately described as: involves the immersive study of people and cultures in their natural environment over an extended period."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Research Design & Hypothesis",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q11: Which of the following statements is **TRUE** regarding **Exploratory Design**?",
+            "options": [
+              "It is equivalent in purpose to: states that there is a significant difference or relationship between variables, contrary to the null hypothesis.",
+              "It has no relation to: insight and familiarity collection",
+              "It is fundamentally characterized by: predicts that there is a relationship or difference, but does not specify which group will be higher or lower.",
+              "It is correctly described as: is selected when the primary objective is to gain insights and familiarity with a problem for more precise investigation later."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Exploratory Design** is accurately described as: is selected when the primary objective is to gain insights and familiarity with a problem for more precise investigation later."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q12: Which of the following statements is **TRUE** regarding **Descriptive Design**?",
+            "options": [
+              "It has no relation to: accurate characteristic profiling",
+              "It is equivalent in purpose to: occurs when the null hypothesis is rejected when it is actually true (false positive), denoted by alpha.",
+              "It is correctly described as: is chosen to provide an accurate portrayal of characteristics of a particular individual, situation, or group.",
+              "It is fundamentally characterized by: is the extent to which a study establishes a trustworthy cause-and-effect relationship, free from confounding variables."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Descriptive Design** is accurately described as: is chosen to provide an accurate portrayal of characteristics of a particular individual, situation, or group."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q13: Which of the following statements is **TRUE** regarding **Control Group**?",
+            "options": [
+              "It is equivalent in purpose to: occurs when the null hypothesis is accepted when it is actually false (false negative), denoted by beta.",
+              "It has no relation to: untreated baseline group",
+              "It is correctly described as: is the group in an experiment that does not receive the treatment or manipulation, serving as a baseline for comparison.",
+              "It is fundamentally characterized by: is the extent to which the results of a study can be generalized to other situations, people, and times."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Control Group** is accurately described as: is the group in an experiment that does not receive the treatment or manipulation, serving as a baseline for comparison."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q14: Which of the following statements is **TRUE** regarding **Quasi-Experimental Design**?",
+            "options": [
+              "It has no relation to: non-randomized comparison design",
+              "It is equivalent in purpose to: is the variable that is manipulated or controlled by the researcher to observe its effect.",
+              "It is correctly described as: is a research design that shares similarities with traditional experimental design but lacks random assignment to groups.",
+              "It is fundamentally characterized by: is the conceptual blueprint or framework within which research is conducted."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Quasi-Experimental Design** is accurately described as: is a research design that shares similarities with traditional experimental design but lacks random assignment to groups."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q15: Which of the following statements is **TRUE** regarding **Double-Blind Study**?",
+            "options": [
+              "It is equivalent in purpose to: is the variable being tested and measured, which changes in response to the independent variable.",
+              "It is fundamentally characterized by: is a tentative, testable statement about the relationship between two or more variables.",
+              "It is correctly described as: is an experimental procedure in which neither the participants nor the researchers know who is receiving a particular treatment.",
+              "It has no relation to: participant-researcher bias prevention"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Double-Blind Study** is accurately described as: is an experimental procedure in which neither the participants nor the researchers know who is receiving a particular treatment."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q16: Which of the following statements is **TRUE** regarding **Statistical Power**?",
+            "options": [
+              "It has no relation to: correct rejection probability (1-beta)",
+              "It is correctly described as: is the probability that a statistical test will correctly reject a false null hypothesis, equal to 1 minus beta.",
+              "It is fundamentally characterized by: asserts that there is no significant difference or relationship between the variables being tested.",
+              "It is equivalent in purpose to: is any variable other than the independent variable that could influence the results of the study."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Statistical Power** is accurately described as: is the probability that a statistical test will correctly reject a false null hypothesis, equal to 1 minus beta."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q17: Which of the following statements is **TRUE** regarding **Directional Hypothesis**?",
+            "options": [
+              "It is equivalent in purpose to: is an extraneous variable that correlates with both the independent and dependent variables, masking the true relationship.",
+              "It has no relation to: expected relationship direction statement",
+              "It is correctly described as: specifies the expected direction of the relationship or difference between variables (e.g., group A will score higher than B).",
+              "It is fundamentally characterized by: states that there is a significant difference or relationship between variables, contrary to the null hypothesis."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Directional Hypothesis** is accurately described as: specifies the expected direction of the relationship or difference between variables (e.g., group A will score higher than B)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q18: Which of the following statements is **TRUE** regarding **Non-Directional Hypothesis**?",
+            "options": [
+              "It is correctly described as: predicts that there is a relationship or difference, but does not specify which group will be higher or lower.",
+              "It has no relation to: direction-free relationship statement",
+              "It is fundamentally characterized by: occurs when the null hypothesis is rejected when it is actually true (false positive), denoted by alpha.",
+              "It is equivalent in purpose to: is a variable that is kept constant or controlled throughout the experiment to prevent it from influencing the outcome."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Non-Directional Hypothesis** is accurately described as: predicts that there is a relationship or difference, but does not specify which group will be higher or lower."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q19: Which of the following statements is **TRUE** regarding **Internal Validity**?",
+            "options": [
+              "It is equivalent in purpose to: is a comprehensive summary of previous research on a specific topic, identifying gaps in current knowledge.",
+              "It is correctly described as: is the extent to which a study establishes a trustworthy cause-and-effect relationship, free from confounding variables.",
+              "It has no relation to: confound-free cause-effect trust",
+              "It is fundamentally characterized by: occurs when the null hypothesis is accepted when it is actually false (false negative), denoted by beta."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Internal Validity** is accurately described as: is the extent to which a study establishes a trustworthy cause-and-effect relationship, free from confounding variables."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q20: Which of the following statements is **TRUE** regarding **External Validity**?",
+            "options": [
+              "It has no relation to: results generalization capability",
+              "It is fundamentally characterized by: is the variable that is manipulated or controlled by the researcher to observe its effect.",
+              "It is correctly described as: is the extent to which the results of a study can be generalized to other situations, people, and times.",
+              "It is equivalent in purpose to: is a clear, precise statement identifying an area of concern, a condition to be improved, or a difficulty to be eliminated."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **External Validity** is accurately described as: is the extent to which the results of a study can be generalized to other situations, people, and times."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Sampling & Data Collection",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q21: Which of the following statements is **TRUE** regarding **Questionnaire**?",
+            "options": [
+              "It is equivalent in purpose to: selects elements from an ordered population list at a regular interval (every k-th element) after a random starting point.",
+              "It is correctly described as: is a structured research instrument consisting of a series of questions for gathering information from respondents.",
+              "It has no relation to: standardized self-report tool",
+              "It is fundamentally characterized by: is the use of multiple data sources or collection methods to study a single phenomenon to increase validity."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Questionnaire** is accurately described as: is a structured research instrument consisting of a series of questions for gathering information from respondents."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q22: Which of the following statements is **TRUE** regarding **Structured Interview**?",
+            "options": [
+              "It is equivalent in purpose to: divides the population into naturally occurring groups (clusters) and randomly selects entire clusters to study.",
+              "It has no relation to: rigid standardized interview",
+              "It is correctly described as: is an interview method where all questions are pre-determined and asked in exactly the same order for all respondents.",
+              "It is fundamentally characterized by: is the percentage of people who completed the research instrument out of the total sample selected."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Structured Interview** is accurately described as: is an interview method where all questions are pre-determined and asked in exactly the same order for all respondents."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q23: Which of the following statements is **TRUE** regarding **Likert Scale**?",
+            "options": [
+              "It is fundamentally characterized by: is the trial administration of a questionnaire to a small group to detect and fix ambiguities before main collection.",
+              "It is correctly described as: is an interval scale used to measure attitudes by asking respondents to specify their level of agreement on a symmetric agree-disagree scale.",
+              "It has no relation to: measuring ordinal/interval agreement levels",
+              "It is equivalent in purpose to: involves selecting samples in stages using smaller and smaller sampling units at each stage."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Likert Scale** is accurately described as: is an interval scale used to measure attitudes by asking respondents to specify their level of agreement on a symmetric agree-disagree scale."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q24: Which of the following statements is **TRUE** regarding **Semantic Differential Scale**?",
+            "options": [
+              "It is correctly described as: is a scaling method that measures the psychological meaning of concepts using bipolar adjectives (e.g., Good-Bad).",
+              "It has no relation to: bipolar adjective scaling",
+              "It is equivalent in purpose to: does not use random selection, meaning some members of the population have zero chance of selection.",
+              "It is fundamentally characterized by: gives every element in the population an equal, non-zero chance of being selected."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Semantic Differential Scale** is accurately described as: is a scaling method that measures the psychological meaning of concepts using bipolar adjectives (e.g., Good-Bad)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q25: Which of the following statements is **TRUE** regarding **Observation Method**?",
+            "options": [
+              "It is equivalent in purpose to: selects samples that are easiest to access or recruit, resulting in high speed but potential bias.",
+              "It has no relation to: systematic behavior recording",
+              "It is fundamentally characterized by: is a probability sampling method where every member of the population has an equal chance of selection.",
+              "It is correctly described as: involves gathering primary data by systematically watching and recording behavioral patterns of people, objects, or occurrences."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Observation Method** is accurately described as: involves gathering primary data by systematically watching and recording behavioral patterns of people, objects, or occurrences."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q26: Which of the following statements is **TRUE** regarding **Focus Group Discussion**?",
+            "options": [
+              "It is fundamentally characterized by: divides the population into homogeneous subgroups (strata) and then samples randomly from each stratum.",
+              "It is correctly described as: is a qualitative technique where a small group of people (usually 6-10) discuss a topic guided by a moderator.",
+              "It has no relation to: moderated group discussion",
+              "It is equivalent in purpose to: selects a specified number of elements from defined subgroups, but using non-random selection methods."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Focus Group Discussion** is accurately described as: is a qualitative technique where a small group of people (usually 6-10) discuss a topic guided by a moderator."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q27: Which of the following statements is **TRUE** regarding **Content Analysis**?",
+            "options": [
+              "It is equivalent in purpose to: relies on the researcher's judgment to select elements that are most representative or informative for the study.",
+              "It is correctly described as: is a research tool used to determine the presence of certain words, themes, or concepts within qualitative data.",
+              "It has no relation to: qualitative data theme analysis",
+              "It is fundamentally characterized by: selects elements from an ordered population list at a regular interval (every k-th element) after a random starting point."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Content Analysis** is accurately described as: is a research tool used to determine the presence of certain words, themes, or concepts within qualitative data."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q28: Which of the following statements is **TRUE** regarding **Data Triangulation**?",
+            "options": [
+              "It has no relation to: multi-source validation technique",
+              "It is equivalent in purpose to: relies on existing research participants to recruit future participants from among their acquaintances.",
+              "It is correctly described as: is the use of multiple data sources or collection methods to study a single phenomenon to increase validity.",
+              "It is fundamentally characterized by: divides the population into naturally occurring groups (clusters) and randomly selects entire clusters to study."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Data Triangulation** is accurately described as: is the use of multiple data sources or collection methods to study a single phenomenon to increase validity."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q29: Which of the following statements is **TRUE** regarding **Response Rate**?",
+            "options": [
+              "It is equivalent in purpose to: occurs when the list from which the sample is drawn does not accurately represent the target population.",
+              "It has no relation to: completion ratio of sample",
+              "It is fundamentally characterized by: involves selecting samples in stages using smaller and smaller sampling units at each stage.",
+              "It is correctly described as: is the percentage of people who completed the research instrument out of the total sample selected."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Response Rate** is accurately described as: is the percentage of people who completed the research instrument out of the total sample selected."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q30: Which of the following statements is **TRUE** regarding **Pilot Testing**?",
+            "options": [
+              "It is fundamentally characterized by: does not use random selection, meaning some members of the population have zero chance of selection.",
+              "It has no relation to: questionnaire design validation",
+              "It is equivalent in purpose to: occurs when some members of a population are systematically more likely to be selected in a sample than others.",
+              "It is correctly described as: is the trial administration of a questionnaire to a small group to detect and fix ambiguities before main collection."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Pilot Testing** is accurately described as: is the trial administration of a questionnaire to a small group to detect and fix ambiguities before main collection."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Data Analysis & Hypothesis Testing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q31: Which of the following statements is **TRUE** regarding **Confidence Interval**?",
+            "options": [
+              "It has no relation to: parameter estimation range",
+              "It is equivalent in purpose to: measures the dispersion or spread of data points around their arithmetic mean.",
+              "It is fundamentally characterized by: is a non-parametric alternative to the independent t-test used to compare two independent groups.",
+              "It is correctly described as: is a range of values derived from sample statistics that is likely to contain the true population parameter."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Confidence Interval** is accurately described as: is a range of values derived from sample statistics that is likely to contain the true population parameter."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q32: Which of the following statements is **TRUE** regarding **Degrees of Freedom**?",
+            "options": [
+              "It is correctly described as: indicates the number of values in the final calculation of a statistic that are free to vary.",
+              "It is fundamentally characterized by: is a non-parametric alternative to the paired t-test used to compare two related samples.",
+              "It has no relation to: independent observation count limit",
+              "It is equivalent in purpose to: is the average of the squared differences from the mean, representing the overall spread of data."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Degrees of Freedom** is accurately described as: indicates the number of values in the final calculation of a statistic that are free to vary."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q33: Which of the following statements is **TRUE** regarding **Standard Error of the Mean**?",
+            "options": [
+              "It is fundamentally characterized by: is a non-parametric alternative to one-way ANOVA used to compare three or more independent groups.",
+              "It is equivalent in purpose to: measures the strength and direction of a linear relationship between two continuous variables.",
+              "It has no relation to: sample mean precision estimate",
+              "It is correctly described as: measures the standard deviation of the sample mean's estimate of the population mean."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Standard Error of the Mean** is accurately described as: measures the standard deviation of the sample mean's estimate of the population mean."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q34: Which of the following statements is **TRUE** regarding **Normal Distribution**?",
+            "options": [
+              "It has no relation to: symmetric bell-curve model",
+              "It is equivalent in purpose to: is a non-parametric measure of rank correlation, assessing how well a relationship can be described using a monotonic function.",
+              "It is correctly described as: is a symmetric, bell-shaped probability distribution where the mean, median, and mode are all equal.",
+              "It is fundamentally characterized by: is the mathematical average of a dataset, calculated by summing all values and dividing by the count."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Normal Distribution** is accurately described as: is a symmetric, bell-shaped probability distribution where the mean, median, and mode are all equal."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q35: Which of the following statements is **TRUE** regarding **Positively Skewed**?",
+            "options": [
+              "It has no relation to: right-tail distribution skew",
+              "It is fundamentally characterized by: is the middle value of an ordered dataset, dividing it into two equal halves, unaffected by outliers.",
+              "It is equivalent in purpose to: represents the rate of change in the dependent variable for every unit change in the independent variable.",
+              "It is correctly described as: is a distribution with a tail extending toward the right side (higher values), where Mean > Median > Mode."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Positively Skewed** is accurately described as: is a distribution with a tail extending toward the right side (higher values), where Mean > Median > Mode."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q36: Which of the following statements is **TRUE** regarding **Negatively Skewed**?",
+            "options": [
+              "It is correctly described as: is a distribution with a tail extending toward the left side (lower values), where Mean < Median < Mode.",
+              "It is fundamentally characterized by: is the most frequently occurring value in a dataset.",
+              "It is equivalent in purpose to: makes strict assumptions about the parameters of the population distribution (e.g., normality).",
+              "It has no relation to: left-tail distribution skew"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Negatively Skewed** is accurately described as: is a distribution with a tail extending toward the left side (lower values), where Mean < Median < Mode."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q37: Which of the following statements is **TRUE** regarding **Kurtosis**?",
+            "options": [
+              "It is correctly described as: measures the tail-heaviness or peakedness of a probability distribution relative to a normal distribution.",
+              "It is fundamentally characterized by: measures the dispersion or spread of data points around their arithmetic mean.",
+              "It is equivalent in purpose to: does not make assumptions about the underlying population distribution, suitable for ordinal or skewed data.",
+              "It has no relation to: peakedness or flatness score"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Kurtosis** is accurately described as: measures the tail-heaviness or peakedness of a probability distribution relative to a normal distribution."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q38: Which of the following statements is **TRUE** regarding **Mann-Whitney U Test**?",
+            "options": [
+              "It is fundamentally characterized by: is the average of the squared differences from the mean, representing the overall spread of data.",
+              "It has no relation to: distribution-free two-group comparison",
+              "It is equivalent in purpose to: is a non-parametric test used to determine if there is a significant association between two categorical variables.",
+              "It is correctly described as: is a non-parametric alternative to the independent t-test used to compare two independent groups."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Mann-Whitney U Test** is accurately described as: is a non-parametric alternative to the independent t-test used to compare two independent groups."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q39: Which of the following statements is **TRUE** regarding **Wilcoxon Signed-Rank Test**?",
+            "options": [
+              "It is fundamentally characterized by: measures the strength and direction of a linear relationship between two continuous variables.",
+              "It is correctly described as: is a non-parametric alternative to the paired t-test used to compare two related samples.",
+              "It has no relation to: distribution-free paired comparison",
+              "It is equivalent in purpose to: is a parametric test used to compare the means of three or more independent groups."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Wilcoxon Signed-Rank Test** is accurately described as: is a non-parametric alternative to the paired t-test used to compare two related samples."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q40: Which of the following statements is **TRUE** regarding **Kruskal-Wallis Test**?",
+            "options": [
+              "It is fundamentally characterized by: is a non-parametric measure of rank correlation, assessing how well a relationship can be described using a monotonic function.",
+              "It is correctly described as: is a non-parametric alternative to one-way ANOVA used to compare three or more independent groups.",
+              "It has no relation to: distribution-free multi-group comparison",
+              "It is equivalent in purpose to: is a parametric test used to compare the means of exactly two groups, either independent or paired."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Kruskal-Wallis Test** is accurately described as: is a non-parametric alternative to one-way ANOVA used to compare three or more independent groups."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Research Ethics & Report Writing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q41: Which of the following statements is **TRUE** regarding **Abstract**?",
+            "options": [
+              "It is fundamentally characterized by: occurs when an investigator's private interests or relationships compromise the professional judgment of research.",
+              "It is equivalent in purpose to: is a formatting style by the Modern Language Association, commonly used in humanities, utilizing parenthetical page citations.",
+              "It has no relation to: brief paper summary overview",
+              "It is correctly described as: is a self-contained, brief summary of a research paper, thesis, or review, outlining goals, methods, and main findings."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Abstract** is accurately described as: is a self-contained, brief summary of a research paper, thesis, or review, outlining goals, methods, and main findings."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q42: Which of the following statements is **TRUE** regarding **Footnote**?",
+            "options": [
+              "It is correctly described as: is a note placed at the bottom of a page of a document that provides additional context or citations for text on that page.",
+              "It is equivalent in purpose to: is a citation style providing bibliography and notes/author-date formats, used widely in history and social sciences.",
+              "It has no relation to: bottom-of-page contextual note",
+              "It is fundamentally characterized by: is the portion of a research paper dedicated to thanking individuals, funders, or institutions who aided the study."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Footnote** is accurately described as: is a note placed at the bottom of a page of a document that provides additional context or citations for text on that page."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q43: Which of the following statements is **TRUE** regarding **Research Proposal**?",
+            "options": [
+              "It is fundamentally characterized by: is the standardized sequence of chapters (Introduction, Literature, Methods, Results, Discussion) for reporting research.",
+              "It has no relation to: planned research blueprint outline",
+              "It is equivalent in purpose to: are legal rights governing the protection of creations of the mind, including patents, copyrights, and trademarks.",
+              "It is correctly described as: is a structured document outlining what the researcher plans to study, why it is important, and how they will execute it."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Research Proposal** is accurately described as: is a structured document outlining what the researcher plans to study, why it is important, and how they will execute it."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q44: Which of the following statements is **TRUE** regarding **Research Monograph**?",
+            "options": [
+              "It is equivalent in purpose to: is an exclusive right granted for an invention, providing the owner with the right to exclude others from making or selling it for a limited period.",
+              "It is correctly described as: is a specialist work of writing on a single scholarly subject or aspect of a subject, usually by a single author.",
+              "It has no relation to: single-subject specialist writing piece",
+              "It is fundamentally characterized by: is the practice of taking someone else's work or ideas and passing them off as one's own without proper citation."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Research Monograph** is accurately described as: is a specialist work of writing on a single scholarly subject or aspect of a subject, usually by a single author."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q45: Which of the following statements is **TRUE** regarding **Citation Indexing**?",
+            "options": [
+              "It is correctly described as: is the process of indexing publications by their citations to track scientific discourse and calculate metrics.",
+              "It has no relation to: tracking scientific citations system",
+              "It is fundamentally characterized by: occurs when an author reuses portions of their own previously published work without proper attribution.",
+              "It is equivalent in purpose to: is a legal right that grants the creator of an original work exclusive rights for its use and distribution."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Citation Indexing** is accurately described as: is the process of indexing publications by their citations to track scientific discourse and calculate metrics."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q46: Which of the following statements is **TRUE** regarding **Fabrication**?",
+            "options": [
+              "It is equivalent in purpose to: is a measure of the frequency with which the average article in a journal has been cited in a particular year.",
+              "It is fundamentally characterized by: is a citation and formatting style established by the American Psychological Association, commonly used in social sciences.",
+              "It has no relation to: inventing non-existent research data",
+              "It is correctly described as: is the unethical practice of inventing data or results and recording or reporting them as true research outcomes."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Fabrication** is accurately described as: is the unethical practice of inventing data or results and recording or reporting them as true research outcomes."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q47: Which of the following statements is **TRUE** regarding **Falsification**?",
+            "options": [
+              "It has no relation to: manipulating active research data",
+              "It is fundamentally characterized by: is a formatting style by the Modern Language Association, commonly used in humanities, utilizing parenthetical page citations.",
+              "It is correctly described as: is the unethical practice of manipulating research materials, equipment, or processes, or changing or omitting data.",
+              "It is equivalent in purpose to: is an author-level metric that measures both the productivity and citation impact of the publications of a scientist."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Falsification** is accurately described as: is the unethical practice of manipulating research materials, equipment, or processes, or changing or omitting data."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q48: Which of the following statements is **TRUE** regarding **Conflict of Interest**?",
+            "options": [
+              "It is equivalent in purpose to: is a committee formally designated to approve, monitor, and review biomedical and behavioral research involving humans.",
+              "It has no relation to: private interest compromising professional work",
+              "It is fundamentally characterized by: is a citation style providing bibliography and notes/author-date formats, used widely in history and social sciences.",
+              "It is correctly described as: occurs when an investigator's private interests or relationships compromise the professional judgment of research."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Conflict of Interest** is accurately described as: occurs when an investigator's private interests or relationships compromise the professional judgment of research."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q49: Which of the following statements is **TRUE** regarding **Acknowledgment Section**?",
+            "options": [
+              "It is fundamentally characterized by: are legal rights governing the protection of creations of the mind, including patents, copyrights, and trademarks.",
+              "It is correctly described as: is the portion of a research paper dedicated to thanking individuals, funders, or institutions who aided the study.",
+              "It is equivalent in purpose to: is the process of providing research participants with clear info about the study to help them voluntarily agree to participate.",
+              "It has no relation to: thanking contributors and funders section"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Acknowledgment Section** is accurately described as: is the portion of a research paper dedicated to thanking individuals, funders, or institutions who aided the study."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q50: Which of the following statements is **TRUE** regarding **Thesis Layout Structure**?",
+            "options": [
+              "It is correctly described as: is the standardized sequence of chapters (Introduction, Literature, Methods, Results, Discussion) for reporting research.",
+              "It is fundamentally characterized by: is an exclusive right granted for an invention, providing the owner with the right to exclude others from making or selling it for a limited period.",
+              "It is equivalent in purpose to: is the evaluation of creative work or performance by other people in the same field in order to maintain quality.",
+              "It has no relation to: standardized academic chapter sequence"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Thesis Layout Structure** is accurately described as: is the standardized sequence of chapters (Introduction, Literature, Methods, Results, Discussion) for reporting research."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 10. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Research Methodology Mock Exam 10.",
+              "note": "Solve all 10 mock exams to master the 500 Research Methodology questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

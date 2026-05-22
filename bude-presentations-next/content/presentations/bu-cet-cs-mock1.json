@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 1 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: Which of the following Computer Science terms is defined as: 'are symbols used to connect propositions to form compound propositions, such as AND, OR, and NOT.'?",
+            "options": [
+              "Propositional Logic Connectives",
+              "Demultiplexer (DEMUX)",
+              "Hamiltonian Cycle",
+              "Cache Memory Hierarchy"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Propositional Logic Connectives** is defined as: are symbols used to connect propositions to form compound propositions, such as AND, OR, and NOT. (compound proposition builders)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: Which of the following Computer Science terms is defined as: 'are symbols like Universal (forall) and Existential (exists) that specify the scope of a predicate's variables.'?",
+            "options": [
+              "Group Theory Group",
+              "Full Adder",
+              "Direct Memory Access (DMA)",
+              "Predicate Logic Quantifiers"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Predicate Logic Quantifiers** is defined as: are symbols like Universal (forall) and Existential (exists) that specify the scope of a predicate's variables. (predicate variable scoping symbols)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: Which of the following Computer Science terms is defined as: 'include Union, Intersection, Difference, and Complement used to manipulate and combine collections of objects.'?",
+            "options": [
+              "Flip-Flops",
+              "Permutation",
+              "Set Theory Operations",
+              "Pipelining Hazards"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Set Theory Operations** is defined as: include Union, Intersection, Difference, and Complement used to manipulate and combine collections of objects. (set manipulation mathematical operations)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: Which of the following Computer Science terms is defined as: 'is a binary relation that is simultaneously reflexive, symmetric, and transitive, partitioning a set into equivalence classes.'?",
+            "options": [
+              "Synchronous Counter",
+              "Equivalence Relation",
+              "Instruction Cycle",
+              "Boolean Algebra Minimization"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Equivalence Relation** is defined as: is a binary relation that is simultaneously reflexive, symmetric, and transitive, partitioning a set into equivalence classes. (partitioning reflexive-symmetric-transitive relation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: Which of the following Computer Science terms is defined as: 'is a set combined with a binary relation that is reflexive, antisymmetric, and transitive.'?",
+            "options": [
+              "Partially Ordered Set (Poset)",
+              "Decoder",
+              "RISC Architecture",
+              "Karnaugh Map (K-map)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Partially Ordered Set (Poset)** is defined as: is a set combined with a binary relation that is reflexive, antisymmetric, and transitive. (reflexive-antisymmetric-transitive ordering framework)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: Which of the following Computer Science terms is defined as: 'is the number of edges incident to a vertex in a graph, with self-loops counting twice.'?",
+            "options": [
+              "Multiplexer (MUX)",
+              "IEEE 754 Standard",
+              "Vertex Degree",
+              "Von Neumann Architecture"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Vertex Degree** is defined as: is the number of edges incident to a vertex in a graph, with self-loops counting twice. (vertex incident edge count)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: Which of the following Computer Science terms is defined as: 'is a trail in a finite graph that visits every edge exactly once, existing if exactly zero or two vertices have odd degree.'?",
+            "options": [
+              "Propositional Logic Connectives",
+              "Demultiplexer (DEMUX)",
+              "Euler Path",
+              "Cache Memory Hierarchy"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Euler Path** is defined as: is a trail in a finite graph that visits every edge exactly once, existing if exactly zero or two vertices have odd degree. (single-visit edge traversal trail)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: Which of the following Computer Science terms is defined as: 'is a closed loop in a graph that visits every vertex exactly once and returns to the starting vertex.'?",
+            "options": [
+              "Full Adder",
+              "Direct Memory Access (DMA)",
+              "Hamiltonian Cycle",
+              "Predicate Logic Quantifiers"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Hamiltonian Cycle** is defined as: is a closed loop in a graph that visits every vertex exactly once and returns to the starting vertex. (single-visit vertex traversal loop)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: Which of the following Computer Science terms is defined as: 'is a set combined with a binary operation satisfying closure, associativity, identity, and invertibility.'?",
+            "options": [
+              "Group Theory Group",
+              "Pipelining Hazards",
+              "Flip-Flops",
+              "Set Theory Operations"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Group Theory Group** is defined as: is a set combined with a binary operation satisfying closure, associativity, identity, and invertibility. (closure-associativity-identity-inverse algebraic structure)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: Which of the following Computer Science terms is defined as: 'is an ordered arrangement of all or part of a set of objects, where the order of selection matters.'?",
+            "options": [
+              "Equivalence Relation",
+              "Synchronous Counter",
+              "Permutation",
+              "Instruction Cycle"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Permutation** is defined as: is an ordered arrangement of all or part of a set of objects, where the order of selection matters. (order-sensitive selection arrangement)."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: Which of the following Computer Science terms is defined as: 'include Ready, Running, Waiting, New, and Terminated, representing the life-cycle stages of a process.'?",
+            "options": [
+              "Context Switching",
+              "Translation Lookaside Buffer (TLB)",
+              "RAID Levels",
+              "Process States"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Process States** is defined as: include Ready, Running, Waiting, New, and Terminated, representing the life-cycle stages of a process. (process lifecycle stage indicators)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: Which of the following Computer Science terms is defined as: 'is the process of allocating CPU time to processes in the ready queue using algorithms like Round Robin or SJF.'?",
+            "options": [
+              "Inter-Process Communication (IPC)",
+              "CPU Scheduling",
+              "Page Replacement Algorithm",
+              "Microkernel Architecture"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **CPU Scheduling** is defined as: is the process of allocating CPU time to processes in the ready queue using algorithms like Round Robin or SJF. (ready queue CPU allocation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: Which of the following Computer Science terms is defined as: 'coordinates the execution of concurrent processes to ensure no two processes access shared data simultaneously.'?",
+            "options": [
+              "Thrashing",
+              "Process Synchronization",
+              "I/O Buffering",
+              "Cache Coherence Protocols"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Process Synchronization** is defined as: coordinates the execution of concurrent processes to ensure no two processes access shared data simultaneously. (prevention of race conditions)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: Which of the following Computer Science terms is defined as: 'is a strategy that eliminates at least one of the four necessary Coffman conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait).'?",
+            "options": [
+              "Disk Scheduling",
+              "Thread",
+              "Memory Segmentation",
+              "Deadlock Prevention"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Deadlock Prevention** is defined as: is a strategy that eliminates at least one of the four necessary Coffman conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait). (coffman condition elimination strategy)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: Which of the following Computer Science terms is defined as: 'is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating allocation limits.'?",
+            "options": [
+              "Banker's Algorithm",
+              "File Allocation Methods",
+              "Mutex",
+              "Device Driver"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Banker's Algorithm** is defined as: is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating allocation limits. (safe-state resource allocation simulator)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: Which of the following Computer Science terms is defined as: 'is a memory management scheme that eliminates the need for contiguous physical memory allocation by dividing logical memory into blocks.'?",
+            "options": [
+              "Counting Semaphore",
+              "Paging",
+              "System Calls",
+              "Spooling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Paging** is defined as: is a memory management scheme that eliminates the need for contiguous physical memory allocation by dividing logical memory into blocks. (elimination of external fragmentation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: Which of the following Computer Science terms is defined as: 'is a technique that allows the execution of processes that are not completely in physical memory, using disk storage.'?",
+            "options": [
+              "Context Switching",
+              "Virtual Memory",
+              "Process States",
+              "RAID Levels"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Virtual Memory** is defined as: is a technique that allows the execution of processes that are not completely in physical memory, using disk storage. (logical memory expansion)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: Which of the following Computer Science terms is defined as: 'is a hardware cache memory that stores recent translations of virtual memory addresses to physical memory addresses.'?",
+            "options": [
+              "Translation Lookaside Buffer (TLB)",
+              "CPU Scheduling",
+              "Microkernel Architecture",
+              "Inter-Process Communication (IPC)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Translation Lookaside Buffer (TLB)** is defined as: is a hardware cache memory that stores recent translations of virtual memory addresses to physical memory addresses. (fast page table lookup cache)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: Which of the following Computer Science terms is defined as: 'decides which memory page to swap out of physical RAM when a new page needs to be allocated (e.g. LRU, FIFO).'?",
+            "options": [
+              "Cache Coherence Protocols",
+              "Process Synchronization",
+              "I/O Buffering",
+              "Page Replacement Algorithm"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Page Replacement Algorithm** is defined as: decides which memory page to swap out of physical RAM when a new page needs to be allocated (e.g. LRU, FIFO). (physical memory page eviction policy)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: Which of the following Computer Science terms is defined as: 'is a state where the operating system spends more time swapping pages in and out of disk than executing instructions.'?",
+            "options": [
+              "Disk Scheduling",
+              "Deadlock Prevention",
+              "Memory Segmentation",
+              "Thrashing"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Thrashing** is defined as: is a state where the operating system spends more time swapping pages in and out of disk than executing instructions. (excessive paging performance collapse)."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: Which of the following Computer Science terms is defined as: 'is a node-based binary tree data structure where the left subtree contains keys less than the parent, and the right contains keys greater.'?",
+            "options": [
+              "Singly Linked List",
+              "Adjacency List",
+              "Binary Search Tree (BST)",
+              "Polymorphism"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Binary Search Tree (BST)** is defined as: is a node-based binary tree data structure where the left subtree contains keys less than the parent, and the right contains keys greater. (O(log n) average search time)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: Which of the following Computer Science terms is defined as: 'finds the shortest path from a single source vertex to all other vertices in a weighted graph with non-negative edge weights.'?",
+            "options": [
+              "Doubly Linked List",
+              "Breadth-First Search (BFS)",
+              "Inheritance",
+              "Dijkstra's Algorithm"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Dijkstra's Algorithm** is defined as: finds the shortest path from a single source vertex to all other vertices in a weighted graph with non-negative edge weights. (single-source shortest path optimization)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: Which of the following Computer Science terms is defined as: 'solves complex problems by breaking them down into simpler subproblems and storing the results of these subproblems to avoid redundant computing.'?",
+            "options": [
+              "Depth-First Search (DFS)",
+              "Dynamic Programming",
+              "Encapsulation",
+              "Merge Sort"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Dynamic Programming** is defined as: solves complex problems by breaking them down into simpler subproblems and storing the results of these subproblems to avoid redundant computing. (memoization and tabulation paradigm)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: Which of the following Computer Science terms is defined as: 'maps data of arbitrary size to fixed-size values using a mathematical function, enabling constant-time average insertions and lookups.'?",
+            "options": [
+              "Binary Search",
+              "Hashing",
+              "Big O Complexity",
+              "Abstract Data Type (ADT)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Hashing** is defined as: maps data of arbitrary size to fixed-size values using a mathematical function, enabling constant-time average insertions and lookups. (O(1) average lookup complexity)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: Which of the following Computer Science terms is defined as: 'is a complete binary tree that satisfies the heap property, where the parent node key is compared with its children.'?",
+            "options": [
+              "Garbage Collection",
+              "Heap Data Structure",
+              "Call Stack",
+              "Stack Data Structure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Heap Data Structure** is defined as: is a complete binary tree that satisfies the heap property, where the parent node key is compared with its children. (efficient priority queue implementation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: Which of the following Computer Science terms is defined as: 'is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one.'?",
+            "options": [
+              "AVL Tree",
+              "Queue Data Structure",
+              "Pointer dereferencing",
+              "Variable Scope"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **AVL Tree** is defined as: is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one. (strictly balanced binary search tree)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: Which of the following Computer Science terms is defined as: 'is a divide-and-conquer sorting algorithm that selects a pivot element and partitions the array around it.'?",
+            "options": [
+              "Binary Search Tree (BST)",
+              "Polymorphism",
+              "Quick Sort",
+              "Singly Linked List"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Quick Sort** is defined as: is a divide-and-conquer sorting algorithm that selects a pivot element and partitions the array around it. (in-place sorting with O(n log n) average time)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: Which of the following Computer Science terms is defined as: 'represents a graph as an array of linked lists, where each index represents a vertex and its list contains its adjacent neighbors.'?",
+            "options": [
+              "Doubly Linked List",
+              "Dijkstra's Algorithm",
+              "Inheritance",
+              "Adjacency List"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Adjacency List** is defined as: represents a graph as an array of linked lists, where each index represents a vertex and its list contains its adjacent neighbors. (space-efficient sparse graph representation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: Which of the following Computer Science terms is defined as: 'traverses a graph level by level, utilizing a queue data structure to visit vertices in order of increasing distance.'?",
+            "options": [
+              "Merge Sort",
+              "Breadth-First Search (BFS)",
+              "Dynamic Programming",
+              "Encapsulation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Breadth-First Search (BFS)** is defined as: traverses a graph level by level, utilizing a queue data structure to visit vertices in order of increasing distance. (shortest path in unweighted graphs)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: Which of the following Computer Science terms is defined as: 'traverses a graph by exploring as deep as possible along each branch before backtracking, utilizing a stack.'?",
+            "options": [
+              "Abstract Data Type (ADT)",
+              "Depth-First Search (DFS)",
+              "Hashing",
+              "Binary Search"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Depth-First Search (DFS)** is defined as: traverses a graph by exploring as deep as possible along each branch before backtracking, utilizing a stack. (connectivity and topological sorting tool)."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: Which of the following Computer Science terms is defined as: 'requires that domain values must be atomic, meaning attributes cannot contain multiple or nested values.'?",
+            "options": [
+              "Database Trigger",
+              "Two-Phase Locking (2PL)",
+              "First Normal Form (1NF)",
+              "Transaction Rollback"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **First Normal Form (1NF)** is defined as: requires that domain values must be atomic, meaning attributes cannot contain multiple or nested values. (atomic column values requirement)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: Which of the following Computer Science terms is defined as: 'requires a table to be in 1NF and ensure that all non-prime attributes are fully functionally dependent on the primary key.'?",
+            "options": [
+              "SQL JOIN",
+              "Lost Update Anomaly",
+              "Second Normal Form (2NF)",
+              "Stored Procedure"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Second Normal Form (2NF)** is defined as: requires a table to be in 1NF and ensure that all non-prime attributes are fully functionally dependent on the primary key. (elimination of partial dependencies)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: Which of the following Computer Science terms is defined as: 'requires a table to be in 2NF and ensure that no non-prime attribute is transitively dependent on the primary key.'?",
+            "options": [
+              "Relational Algebra",
+              "Primary Key",
+              "Dirty Read",
+              "Third Normal Form (3NF)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Third Normal Form (3NF)** is defined as: requires a table to be in 2NF and ensure that no non-prime attribute is transitively dependent on the primary key. (elimination of transitive dependencies)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: Which of the following Computer Science terms is defined as: 'is a stronger version of 3NF where for every non-trivial functional dependency X -> Y, X must be a superkey.'?",
+            "options": [
+              "Non-Repeatable Read",
+              "Database View",
+              "Boyce-Codd Normal Form (BCNF)",
+              "Candidate Key"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Boyce-Codd Normal Form (BCNF)** is defined as: is a stronger version of 3NF where for every non-trivial functional dependency X -> Y, X must be a superkey. (eliminating overlapping candidate key anomalies)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: Which of the following Computer Science terms is defined as: 'guarantee database transaction reliability: Atomicity, Consistency, Isolation, and Durability.'?",
+            "options": [
+              "NoSQL Database",
+              "Phantom Read",
+              "ACID Properties",
+              "Referential Integrity"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **ACID Properties** is defined as: guarantee database transaction reliability: Atomicity, Consistency, Isolation, and Durability. (transaction reliability standards)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: Which of the following Computer Science terms is defined as: 'is a field in a relational database table that uniquely identifies a row in another table, enforcing referential integrity.'?",
+            "options": [
+              "ER Modeling",
+              "Data Redundancy",
+              "Query Optimizer",
+              "Foreign Key"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Foreign Key** is defined as: is a field in a relational database table that uniquely identifies a row in another table, enforcing referential integrity. (referential integrity constraint)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: Which of the following Computer Science terms is defined as: 'is a self-balancing search tree structure widely used in databases to enable fast sequential access and range queries.'?",
+            "options": [
+              "B+ Tree Index",
+              "Transaction Rollback",
+              "Database Trigger",
+              "First Normal Form (1NF)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **B+ Tree Index** is defined as: is a self-balancing search tree structure widely used in databases to enable fast sequential access and range queries. (disk-optimized indexing structure)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: Which of the following Computer Science terms is defined as: 'is a concurrency control method that guarantees serializability by locking data items in growing and shrinking phases.'?",
+            "options": [
+              "Stored Procedure",
+              "Two-Phase Locking (2PL)",
+              "Lost Update Anomaly",
+              "Second Normal Form (2NF)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Two-Phase Locking (2PL)** is defined as: is a concurrency control method that guarantees serializability by locking data items in growing and shrinking phases. (serializability guarantee in transactions)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: Which of the following Computer Science terms is defined as: 'combines records from two or more tables in a relational database based on a related column between them.'?",
+            "options": [
+              "Dirty Read",
+              "Third Normal Form (3NF)",
+              "Primary Key",
+              "SQL JOIN"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **SQL JOIN** is defined as: combines records from two or more tables in a relational database based on a related column between them. (multi-table data retrieval operation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: Which of the following Computer Science terms is defined as: 'is a procedural query language consisting of operations like Select, Project, Join, and Union to manipulate relations.'?",
+            "options": [
+              "Non-Repeatable Read",
+              "Boyce-Codd Normal Form (BCNF)",
+              "Candidate Key",
+              "Relational Algebra"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Relational Algebra** is defined as: is a procedural query language consisting of operations like Select, Project, Join, and Union to manipulate relations. (theoretical query language foundation)."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: Which of the following Computer Science terms is defined as: 'is a conceptual framework of 7 layers that standardizes telecommunication and networking protocol functions.'?",
+            "options": [
+              "Cohesion",
+              "OSI Model",
+              "ARP (Address Resolution Protocol)",
+              "Git Version Control"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **OSI Model** is defined as: is a conceptual framework of 7 layers that standardizes telecommunication and networking protocol functions. (7-layer abstraction framework)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: Which of the following Computer Science terms is defined as: 'is a suite of communication protocols used to interconnect network devices on the internet, emphasizing reliable delivery.'?",
+            "options": [
+              "Coupling",
+              "Firewall",
+              "CI/CD Pipeline",
+              "TCP/IP Protocol"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **TCP/IP Protocol** is defined as: is a suite of communication protocols used to interconnect network devices on the internet, emphasizing reliable delivery. (reliable internet transport framework)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: Which of the following Computer Science terms is defined as: 'is a 32-bit number that masks an IP address, dividing the IP address into network address and host address portions.'?",
+            "options": [
+              "Black-box Testing",
+              "IPv6 Address Space",
+              "Subnet Mask",
+              "SDLC Model"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Subnet Mask** is defined as: is a 32-bit number that masks an IP address, dividing the IP address into network address and host address portions. (IP address segmentation tool)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: Which of the following Computer Science terms is defined as: 'is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems.'?",
+            "options": [
+              "Border Gateway Protocol (BGP)",
+              "Agile Methodology",
+              "UML Diagrams",
+              "White-box Testing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Border Gateway Protocol (BGP)** is defined as: is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems. (internet autonomous routing protocol)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: Which of the following Computer Science terms is defined as: 'uses the exact same key for both the encryption of plaintext and the decryption of ciphertext.'?",
+            "options": [
+              "SRS Document",
+              "Design Pattern",
+              "Symmetric Encryption",
+              "Software Architecture"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Symmetric Encryption** is defined as: uses the exact same key for both the encryption of plaintext and the decryption of ciphertext. (single shared-key cryptography)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: Which of the following Computer Science terms is defined as: 'uses a mathematically linked public-private key pair for encryption and decryption operations.'?",
+            "options": [
+              "Asymmetric Encryption",
+              "Unit Testing",
+              "Scrum Framework",
+              "Refactoring"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Asymmetric Encryption** is defined as: uses a mathematically linked public-private key pair for encryption and decryption operations. (public-private key pair cryptography)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: Which of the following Computer Science terms is defined as: 'translates human-readable domain names into machine-readable IP addresses.'?",
+            "options": [
+              "Git Version Control",
+              "DNS (Domain Name System)",
+              "Cohesion",
+              "OSI Model"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **DNS (Domain Name System)** is defined as: translates human-readable domain names into machine-readable IP addresses. (internet address resolution directory)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: Which of the following Computer Science terms is defined as: 'is a protocol used to map an Internet Protocol (IP) address to a physical machine Media Access Control (MAC) address.'?",
+            "options": [
+              "TCP/IP Protocol",
+              "CI/CD Pipeline",
+              "Coupling",
+              "ARP (Address Resolution Protocol)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **ARP (Address Resolution Protocol)** is defined as: is a protocol used to map an Internet Protocol (IP) address to a physical machine Media Access Control (MAC) address. (IP to MAC address resolver)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: Which of the following Computer Science terms is defined as: 'is a network security device that monitors and filters incoming and outgoing network traffic based on established security rules.'?",
+            "options": [
+              "SDLC Model",
+              "Subnet Mask",
+              "Black-box Testing",
+              "Firewall"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Firewall** is defined as: is a network security device that monitors and filters incoming and outgoing network traffic based on established security rules. (traffic filtering barrier)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: Which of the following Computer Science terms is defined as: 'provides 128-bit addresses to replace 32-bit IPv4 addresses, accommodating the massive growth of internet devices.'?",
+            "options": [
+              "UML Diagrams",
+              "Border Gateway Protocol (BGP)",
+              "White-box Testing",
+              "IPv6 Address Space"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **IPv6 Address Space** is defined as: provides 128-bit addresses to replace 32-bit IPv4 addresses, accommodating the massive growth of internet devices. (128-bit internet address space standard)."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 1. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 1.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

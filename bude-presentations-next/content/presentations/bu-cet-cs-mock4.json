@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 4 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: In computer systems, what is the primary focus, role, or application of **Vertex Degree**?",
+            "options": [
+              "Its primary focus is many-to-one signal selector.",
+              "Its primary focus is floating-point binary representation format.",
+              "Its primary focus is vertex incident edge count.",
+              "Its primary focus is shared instruction-data bus architecture."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Vertex Degree** is: **vertex incident edge count**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: In computer systems, what is the primary focus, role, or application of **Euler Path**?",
+            "options": [
+              "Its primary focus is single-visit edge traversal trail.",
+              "Its primary focus is one-to-many signal router.",
+              "Its primary focus is compound proposition builders.",
+              "Its primary focus is multi-level fast memory staging."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Euler Path** is: **single-visit edge traversal trail**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: In computer systems, what is the primary focus, role, or application of **Hamiltonian Cycle**?",
+            "options": [
+              "Its primary focus is single-visit vertex traversal loop.",
+              "Its primary focus is cpu-free I/O-memory transfer.",
+              "Its primary focus is predicate variable scoping symbols.",
+              "Its primary focus is three-input binary addition circuit."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Hamiltonian Cycle** is: **single-visit vertex traversal loop**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: In computer systems, what is the primary focus, role, or application of **Group Theory Group**?",
+            "options": [
+              "Its primary focus is instruction pipeline execution stalls.",
+              "Its primary focus is clock-driven sequential memory components.",
+              "Its primary focus is closure-associativity-identity-inverse algebraic structure.",
+              "Its primary focus is set manipulation mathematical operations."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Group Theory Group** is: **closure-associativity-identity-inverse algebraic structure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: In computer systems, what is the primary focus, role, or application of **Permutation**?",
+            "options": [
+              "Its primary focus is partitioning reflexive-symmetric-transitive relation.",
+              "Its primary focus is order-sensitive selection arrangement.",
+              "Its primary focus is simultaneously-clocked state counter.",
+              "Its primary focus is fetch-decode-execute basic loop."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Permutation** is: **order-sensitive selection arrangement**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: In computer systems, what is the primary focus, role, or application of **Boolean Algebra Minimization**?",
+            "options": [
+              "Its primary focus is reflexive-antisymmetric-transitive ordering framework.",
+              "Its primary focus is reduced uniform instruction set design.",
+              "Its primary focus is binary-to-unary line converter.",
+              "Its primary focus is logic gate reduction optimization."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Boolean Algebra Minimization** is: **logic gate reduction optimization**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: In computer systems, what is the primary focus, role, or application of **Karnaugh Map (K-map)**?",
+            "options": [
+              "Its primary focus is shared instruction-data bus architecture.",
+              "Its primary focus is floating-point binary representation format.",
+              "Its primary focus is graphical boolean simplification table.",
+              "Its primary focus is vertex incident edge count."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Karnaugh Map (K-map)** is: **graphical boolean simplification table**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: In computer systems, what is the primary focus, role, or application of **Multiplexer (MUX)**?",
+            "options": [
+              "Its primary focus is many-to-one signal selector.",
+              "Its primary focus is single-visit edge traversal trail.",
+              "Its primary focus is multi-level fast memory staging.",
+              "Its primary focus is compound proposition builders."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Multiplexer (MUX)** is: **many-to-one signal selector**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: In computer systems, what is the primary focus, role, or application of **Demultiplexer (DEMUX)**?",
+            "options": [
+              "Its primary focus is single-visit vertex traversal loop.",
+              "Its primary focus is one-to-many signal router.",
+              "Its primary focus is predicate variable scoping symbols.",
+              "Its primary focus is cpu-free I/O-memory transfer."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Demultiplexer (DEMUX)** is: **one-to-many signal router**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: In computer systems, what is the primary focus, role, or application of **Full Adder**?",
+            "options": [
+              "Its primary focus is instruction pipeline execution stalls.",
+              "Its primary focus is three-input binary addition circuit.",
+              "Its primary focus is set manipulation mathematical operations.",
+              "Its primary focus is closure-associativity-identity-inverse algebraic structure."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Full Adder** is: **three-input binary addition circuit**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: In computer systems, what is the primary focus, role, or application of **Paging**?",
+            "options": [
+              "Its primary focus is variable-based process signaling.",
+              "Its primary focus is peripheral device print job spooler.",
+              "Its primary focus is elimination of external fragmentation.",
+              "Its primary focus is privileged kernel service requests interface."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Paging** is: **elimination of external fragmentation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: In computer systems, what is the primary focus, role, or application of **Virtual Memory**?",
+            "options": [
+              "Its primary focus is logical memory expansion.",
+              "Its primary focus is cpu state saving-restoring overhead.",
+              "Its primary focus is process lifecycle stage indicators.",
+              "Its primary focus is redundancy-performance disk array configurations."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Virtual Memory** is: **logical memory expansion**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: In computer systems, what is the primary focus, role, or application of **Translation Lookaside Buffer (TLB)**?",
+            "options": [
+              "Its primary focus is minimal kernel user-space service design.",
+              "Its primary focus is ready queue CPU allocation.",
+              "Its primary focus is fast page table lookup cache.",
+              "Its primary focus is isolated process communication mechanisms."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Translation Lookaside Buffer (TLB)** is: **fast page table lookup cache**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: In computer systems, what is the primary focus, role, or application of **Page Replacement Algorithm**?",
+            "options": [
+              "Its primary focus is multiprocessor cache synchronization.",
+              "Its primary focus is physical memory page eviction policy.",
+              "Its primary focus is prevention of race conditions.",
+              "Its primary focus is speed-matching data storage buffer."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Page Replacement Algorithm** is: **physical memory page eviction policy**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: In computer systems, what is the primary focus, role, or application of **Thrashing**?",
+            "options": [
+              "Its primary focus is excessive paging performance collapse.",
+              "Its primary focus is logical module-based memory division.",
+              "Its primary focus is hard drive head seek optimization.",
+              "Its primary focus is coffman condition elimination strategy."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Thrashing** is: **excessive paging performance collapse**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: In computer systems, what is the primary focus, role, or application of **Thread**?",
+            "options": [
+              "Its primary focus is lightweight shared-memory execution unit.",
+              "Its primary focus is safe-state resource allocation simulator.",
+              "Its primary focus is physical disk block mapping strategies.",
+              "Its primary focus is hardware-specific control translator program."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Thread** is: **lightweight shared-memory execution unit**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: In computer systems, what is the primary focus, role, or application of **Mutex**?",
+            "options": [
+              "Its primary focus is peripheral device print job spooler.",
+              "Its primary focus is single-thread resource lock.",
+              "Its primary focus is privileged kernel service requests interface.",
+              "Its primary focus is elimination of external fragmentation."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Mutex** is: **single-thread resource lock**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: In computer systems, what is the primary focus, role, or application of **Counting Semaphore**?",
+            "options": [
+              "Its primary focus is process lifecycle stage indicators.",
+              "Its primary focus is logical memory expansion.",
+              "Its primary focus is redundancy-performance disk array configurations.",
+              "Its primary focus is variable-based process signaling."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Counting Semaphore** is: **variable-based process signaling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: In computer systems, what is the primary focus, role, or application of **Context Switching**?",
+            "options": [
+              "Its primary focus is fast page table lookup cache.",
+              "Its primary focus is minimal kernel user-space service design.",
+              "Its primary focus is ready queue CPU allocation.",
+              "Its primary focus is cpu state saving-restoring overhead."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Context Switching** is: **cpu state saving-restoring overhead**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: In computer systems, what is the primary focus, role, or application of **Inter-Process Communication (IPC)**?",
+            "options": [
+              "Its primary focus is prevention of race conditions.",
+              "Its primary focus is multiprocessor cache synchronization.",
+              "Its primary focus is physical memory page eviction policy.",
+              "Its primary focus is isolated process communication mechanisms."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Inter-Process Communication (IPC)** is: **isolated process communication mechanisms**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: In computer systems, what is the primary focus, role, or application of **AVL Tree**?",
+            "options": [
+              "Its primary focus is strictly balanced binary search tree.",
+              "Its primary focus is FIFO element storage collection.",
+              "Its primary focus is retrieving value from pointer address.",
+              "Its primary focus is name accessibility region code boundary."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **AVL Tree** is: **strictly balanced binary search tree**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: In computer systems, what is the primary focus, role, or application of **Quick Sort**?",
+            "options": [
+              "Its primary focus is one-way pointer node sequence.",
+              "Its primary focus is single interface multi-implementation capability.",
+              "Its primary focus is O(log n) average search time.",
+              "Its primary focus is in-place sorting with O(n log n) average time."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Quick Sort** is: **in-place sorting with O(n log n) average time**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: In computer systems, what is the primary focus, role, or application of **Adjacency List**?",
+            "options": [
+              "Its primary focus is derived-to-base class reuse mechanism.",
+              "Its primary focus is single-source shortest path optimization.",
+              "Its primary focus is two-way pointer node sequence.",
+              "Its primary focus is space-efficient sparse graph representation."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Adjacency List** is: **space-efficient sparse graph representation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: In computer systems, what is the primary focus, role, or application of **Breadth-First Search (BFS)**?",
+            "options": [
+              "Its primary focus is memoization and tabulation paradigm.",
+              "Its primary focus is shortest path in unweighted graphs.",
+              "Its primary focus is O(n log n) stable comparison sort.",
+              "Its primary focus is data-hiding and modular unit bundling."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Breadth-First Search (BFS)** is: **shortest path in unweighted graphs**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: In computer systems, what is the primary focus, role, or application of **Depth-First Search (DFS)**?",
+            "options": [
+              "Its primary focus is connectivity and topological sorting tool.",
+              "Its primary focus is mathematical operation behavior model.",
+              "Its primary focus is O(log n) sorted array search.",
+              "Its primary focus is O(1) average lookup complexity."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Depth-First Search (DFS)** is: **connectivity and topological sorting tool**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: In computer systems, what is the primary focus, role, or application of **Big O Complexity**?",
+            "options": [
+              "Its primary focus is asymptotic run-time upper bound indicator.",
+              "Its primary focus is automatic dead heap memory reclamation.",
+              "Its primary focus is active subroutine memory tracker.",
+              "Its primary focus is efficient priority queue implementation."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Big O Complexity** is: **asymptotic run-time upper bound indicator**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: In computer systems, what is the primary focus, role, or application of **Stack Data Structure**?",
+            "options": [
+              "Its primary focus is name accessibility region code boundary.",
+              "Its primary focus is strictly balanced binary search tree.",
+              "Its primary focus is retrieving value from pointer address.",
+              "Its primary focus is LIFO element storage collection."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Stack Data Structure** is: **LIFO element storage collection**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: In computer systems, what is the primary focus, role, or application of **Queue Data Structure**?",
+            "options": [
+              "Its primary focus is O(log n) average search time.",
+              "Its primary focus is in-place sorting with O(n log n) average time.",
+              "Its primary focus is FIFO element storage collection.",
+              "Its primary focus is single interface multi-implementation capability."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Queue Data Structure** is: **FIFO element storage collection**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: In computer systems, what is the primary focus, role, or application of **Singly Linked List**?",
+            "options": [
+              "Its primary focus is single-source shortest path optimization.",
+              "Its primary focus is space-efficient sparse graph representation.",
+              "Its primary focus is one-way pointer node sequence.",
+              "Its primary focus is derived-to-base class reuse mechanism."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Singly Linked List** is: **one-way pointer node sequence**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: In computer systems, what is the primary focus, role, or application of **Doubly Linked List**?",
+            "options": [
+              "Its primary focus is shortest path in unweighted graphs.",
+              "Its primary focus is memoization and tabulation paradigm.",
+              "Its primary focus is two-way pointer node sequence.",
+              "Its primary focus is data-hiding and modular unit bundling."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Doubly Linked List** is: **two-way pointer node sequence**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: In computer systems, what is the primary focus, role, or application of **Foreign Key**?",
+            "options": [
+              "Its primary focus is unnecessary duplicate data storage.",
+              "Its primary focus is logical database structure visualization.",
+              "Its primary focus is referential integrity constraint.",
+              "Its primary focus is efficient execution plan selector."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Foreign Key** is: **referential integrity constraint**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: In computer systems, what is the primary focus, role, or application of **B+ Tree Index**?",
+            "options": [
+              "Its primary focus is automatic event-driven code block.",
+              "Its primary focus is disk-optimized indexing structure.",
+              "Its primary focus is atomic column values requirement.",
+              "Its primary focus is reverting uncommitted transactional modifications."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **B+ Tree Index** is: **disk-optimized indexing structure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: In computer systems, what is the primary focus, role, or application of **Two-Phase Locking (2PL)**?",
+            "options": [
+              "Its primary focus is precompiled database SQL package.",
+              "Its primary focus is serializability guarantee in transactions.",
+              "Its primary focus is elimination of partial dependencies.",
+              "Its primary focus is concurrent write overwrite anomaly."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Two-Phase Locking (2PL)** is: **serializability guarantee in transactions**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: In computer systems, what is the primary focus, role, or application of **SQL JOIN**?",
+            "options": [
+              "Its primary focus is multi-table data retrieval operation.",
+              "Its primary focus is row unique identifier constraint.",
+              "Its primary focus is elimination of transitive dependencies.",
+              "Its primary focus is reading uncommitted transaction modifications."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **SQL JOIN** is: **multi-table data retrieval operation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: In computer systems, what is the primary focus, role, or application of **Relational Algebra**?",
+            "options": [
+              "Its primary focus is reading committed concurrent modifications.",
+              "Its primary focus is eliminating overlapping candidate key anomalies.",
+              "Its primary focus is theoretical query language foundation.",
+              "Its primary focus is minimal row identifier set."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Relational Algebra** is: **theoretical query language foundation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: In computer systems, what is the primary focus, role, or application of **Database View**?",
+            "options": [
+              "Its primary focus is valid foreign-to-primary key reference state.",
+              "Its primary focus is virtual table query abstraction.",
+              "Its primary focus is reading committed concurrent insertions.",
+              "Its primary focus is transaction reliability standards."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Database View** is: **virtual table query abstraction**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: In computer systems, what is the primary focus, role, or application of **NoSQL Database**?",
+            "options": [
+              "Its primary focus is non-relational schema-less storage.",
+              "Its primary focus is efficient execution plan selector.",
+              "Its primary focus is referential integrity constraint.",
+              "Its primary focus is unnecessary duplicate data storage."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **NoSQL Database** is: **non-relational schema-less storage**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: In computer systems, what is the primary focus, role, or application of **ER Modeling**?",
+            "options": [
+              "Its primary focus is automatic event-driven code block.",
+              "Its primary focus is atomic column values requirement.",
+              "Its primary focus is disk-optimized indexing structure.",
+              "Its primary focus is logical database structure visualization."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **ER Modeling** is: **logical database structure visualization**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: In computer systems, what is the primary focus, role, or application of **Transaction Rollback**?",
+            "options": [
+              "Its primary focus is precompiled database SQL package.",
+              "Its primary focus is elimination of partial dependencies.",
+              "Its primary focus is reverting uncommitted transactional modifications.",
+              "Its primary focus is serializability guarantee in transactions."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Transaction Rollback** is: **reverting uncommitted transactional modifications**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: In computer systems, what is the primary focus, role, or application of **Lost Update Anomaly**?",
+            "options": [
+              "Its primary focus is concurrent write overwrite anomaly.",
+              "Its primary focus is elimination of transitive dependencies.",
+              "Its primary focus is row unique identifier constraint.",
+              "Its primary focus is multi-table data retrieval operation."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Lost Update Anomaly** is: **concurrent write overwrite anomaly**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: In computer systems, what is the primary focus, role, or application of **Asymmetric Encryption**?",
+            "options": [
+              "Its primary focus is isolated component validation.",
+              "Its primary focus is public-private key pair cryptography.",
+              "Its primary focus is improving code quality without behavior change.",
+              "Its primary focus is sprint-based team collaboration."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Asymmetric Encryption** is: **public-private key pair cryptography**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: In computer systems, what is the primary focus, role, or application of **DNS (Domain Name System)**?",
+            "options": [
+              "Its primary focus is single module functional focus score.",
+              "Its primary focus is distributed source control management.",
+              "Its primary focus is 7-layer abstraction framework.",
+              "Its primary focus is internet address resolution directory."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **DNS (Domain Name System)** is: **internet address resolution directory**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: In computer systems, what is the primary focus, role, or application of **ARP (Address Resolution Protocol)**?",
+            "options": [
+              "Its primary focus is automated deployment automation.",
+              "Its primary focus is IP to MAC address resolver.",
+              "Its primary focus is reliable internet transport framework.",
+              "Its primary focus is inter-module interdependence indicator."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **ARP (Address Resolution Protocol)** is: **IP to MAC address resolver**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: In computer systems, what is the primary focus, role, or application of **Firewall**?",
+            "options": [
+              "Its primary focus is traffic filtering barrier.",
+              "Its primary focus is software development process model.",
+              "Its primary focus is IP address segmentation tool.",
+              "Its primary focus is functional specification validation."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Firewall** is: **traffic filtering barrier**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: In computer systems, what is the primary focus, role, or application of **IPv6 Address Space**?",
+            "options": [
+              "Its primary focus is 128-bit internet address space standard.",
+              "Its primary focus is internal code path validation.",
+              "Its primary focus is internet autonomous routing protocol.",
+              "Its primary focus is standardized software visualization diagrams."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **IPv6 Address Space** is: **128-bit internet address space standard**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: In computer systems, what is the primary focus, role, or application of **Agile Methodology**?",
+            "options": [
+              "Its primary focus is high-level structural system organization.",
+              "Its primary focus is single shared-key cryptography.",
+              "Its primary focus is formal software requirements specifications.",
+              "Its primary focus is flexible iterative development paradigm."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Agile Methodology** is: **flexible iterative development paradigm**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: In computer systems, what is the primary focus, role, or application of **Design Pattern**?",
+            "options": [
+              "Its primary focus is public-private key pair cryptography.",
+              "Its primary focus is sprint-based team collaboration.",
+              "Its primary focus is reusable architectural solution blueprint.",
+              "Its primary focus is improving code quality without behavior change."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Design Pattern** is: **reusable architectural solution blueprint**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: In computer systems, what is the primary focus, role, or application of **Unit Testing**?",
+            "options": [
+              "Its primary focus is single module functional focus score.",
+              "Its primary focus is internet address resolution directory.",
+              "Its primary focus is 7-layer abstraction framework.",
+              "Its primary focus is isolated component validation."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Unit Testing** is: **isolated component validation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: In computer systems, what is the primary focus, role, or application of **Git Version Control**?",
+            "options": [
+              "Its primary focus is IP to MAC address resolver.",
+              "Its primary focus is distributed source control management.",
+              "Its primary focus is reliable internet transport framework.",
+              "Its primary focus is inter-module interdependence indicator."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Git Version Control** is: **distributed source control management**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: In computer systems, what is the primary focus, role, or application of **CI/CD Pipeline**?",
+            "options": [
+              "Its primary focus is traffic filtering barrier.",
+              "Its primary focus is IP address segmentation tool.",
+              "Its primary focus is automated deployment automation.",
+              "Its primary focus is software development process model."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **CI/CD Pipeline** is: **automated deployment automation**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 4. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 4.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

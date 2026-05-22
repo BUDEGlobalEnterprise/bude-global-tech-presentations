@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 5 - Research Methodology",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Introduction to Research",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q1: In research methodology, what is the primary focus, role, or application of **Case Study Method**?",
+            "options": [
+              "Its primary focus is lived experience description.",
+              "Its primary focus is numerical and statistical analysis.",
+              "Its primary focus is abstract model development.",
+              "Its primary focus is in-depth single unit analysis."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Case Study Method** is: **in-depth single unit analysis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q2: In research methodology, what is the primary focus, role, or application of **Experimental Research**?",
+            "options": [
+              "Its primary focus is non-numerical thematic analysis.",
+              "Its primary focus is cause-and-effect verification.",
+              "Its primary focus is data-driven theory generation.",
+              "Its primary focus is critical factual evaluation."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Experimental Research** is: **cause-and-effect verification**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q3: In research methodology, what is the primary focus, role, or application of **Diagnostic Research**?",
+            "options": [
+              "Its primary focus is immersive cultural study.",
+              "Its primary focus is cause-and-association diagnosis.",
+              "Its primary focus is abstract concept re-interpretation.",
+              "Its primary focus is describing 'what is'."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Diagnostic Research** is: **cause-and-association diagnosis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q4: In research methodology, what is the primary focus, role, or application of **Evaluative Research**?",
+            "options": [
+              "Its primary focus is worth and outcome assessment.",
+              "Its primary focus is after-the-fact investigation.",
+              "Its primary focus is problem definition and feasibility.",
+              "Its primary focus is basic / pure research."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Evaluative Research** is: **worth and outcome assessment**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q5: In research methodology, what is the primary focus, role, or application of **Comparative Research**?",
+            "options": [
+              "Its primary focus is similarity and difference analysis.",
+              "Its primary focus is past event analysis.",
+              "Its primary focus is practical problem-solving.",
+              "Its primary focus is long-term repeated observation."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Comparative Research** is: **similarity and difference analysis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q6: In research methodology, what is the primary focus, role, or application of **Deductive Research Approach**?",
+            "options": [
+              "Its primary focus is single point-in-time snapshot.",
+              "Its primary focus is top-down theory testing.",
+              "Its primary focus is immediate local action.",
+              "Its primary focus is empirical observation and evidence."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Deductive Research Approach** is: **top-down theory testing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q7: In research methodology, what is the primary focus, role, or application of **Inductive Research Approach**?",
+            "options": [
+              "Its primary focus is in-depth single unit analysis.",
+              "Its primary focus is bottom-up theory construction.",
+              "Its primary focus is numerical and statistical analysis.",
+              "Its primary focus is abstract model development."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Inductive Research Approach** is: **bottom-up theory construction**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q8: In research methodology, what is the primary focus, role, or application of **Phenomenological Research**?",
+            "options": [
+              "Its primary focus is non-numerical thematic analysis.",
+              "Its primary focus is lived experience description.",
+              "Its primary focus is critical factual evaluation.",
+              "Its primary focus is cause-and-effect verification."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Phenomenological Research** is: **lived experience description**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q9: In research methodology, what is the primary focus, role, or application of **Grounded Theory**?",
+            "options": [
+              "Its primary focus is describing 'what is'.",
+              "Its primary focus is cause-and-association diagnosis.",
+              "Its primary focus is data-driven theory generation.",
+              "Its primary focus is abstract concept re-interpretation."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Grounded Theory** is: **data-driven theory generation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q10: In research methodology, what is the primary focus, role, or application of **Ethnographic Research**?",
+            "options": [
+              "Its primary focus is immersive cultural study.",
+              "Its primary focus is problem definition and feasibility.",
+              "Its primary focus is after-the-fact investigation.",
+              "Its primary focus is worth and outcome assessment."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Ethnographic Research** is: **immersive cultural study**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Research Design & Hypothesis",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q11: In research methodology, what is the primary focus, role, or application of **Exploratory Design**?",
+            "options": [
+              "Its primary focus is expected effect statement.",
+              "Its primary focus is relationship-masking variable.",
+              "Its primary focus is direction-free relationship statement.",
+              "Its primary focus is insight and familiarity collection."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Exploratory Design** is: **insight and familiarity collection**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q12: In research methodology, what is the primary focus, role, or application of **Descriptive Design**?",
+            "options": [
+              "Its primary focus is constant baseline variable.",
+              "Its primary focus is false positive (rejecting true H0).",
+              "Its primary focus is accurate characteristic profiling.",
+              "Its primary focus is confound-free cause-effect trust."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Descriptive Design** is: **accurate characteristic profiling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q13: In research methodology, what is the primary focus, role, or application of **Control Group**?",
+            "options": [
+              "Its primary focus is critical gap analysis of past works.",
+              "Its primary focus is false negative (accepting false H0).",
+              "Its primary focus is results generalization capability.",
+              "Its primary focus is untreated baseline group."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Control Group** is: **untreated baseline group**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q14: In research methodology, what is the primary focus, role, or application of **Quasi-Experimental Design**?",
+            "options": [
+              "Its primary focus is manipulated variable.",
+              "Its primary focus is non-randomized comparison design.",
+              "Its primary focus is framework for data collection and analysis.",
+              "Its primary focus is clear problem identification."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Quasi-Experimental Design** is: **non-randomized comparison design**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q15: In research methodology, what is the primary focus, role, or application of **Double-Blind Study**?",
+            "options": [
+              "Its primary focus is participant-researcher bias prevention.",
+              "Its primary focus is measured outcome variable.",
+              "Its primary focus is conceptual schema explanation.",
+              "Its primary focus is testable tentative assumption."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Double-Blind Study** is: **participant-researcher bias prevention**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q16: In research methodology, what is the primary focus, role, or application of **Statistical Power**?",
+            "options": [
+              "Its primary focus is no-effect assumption.",
+              "Its primary focus is feasibility and scale trial.",
+              "Its primary focus is uncontrolled confounding variable.",
+              "Its primary focus is correct rejection probability (1-beta)."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Statistical Power** is: **correct rejection probability (1-beta)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q17: In research methodology, what is the primary focus, role, or application of **Directional Hypothesis**?",
+            "options": [
+              "Its primary focus is insight and familiarity collection.",
+              "Its primary focus is relationship-masking variable.",
+              "Its primary focus is expected relationship direction statement.",
+              "Its primary focus is expected effect statement."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Directional Hypothesis** is: **expected relationship direction statement**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q18: In research methodology, what is the primary focus, role, or application of **Non-Directional Hypothesis**?",
+            "options": [
+              "Its primary focus is direction-free relationship statement.",
+              "Its primary focus is false positive (rejecting true H0).",
+              "Its primary focus is accurate characteristic profiling.",
+              "Its primary focus is constant baseline variable."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Non-Directional Hypothesis** is: **direction-free relationship statement**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q19: In research methodology, what is the primary focus, role, or application of **Internal Validity**?",
+            "options": [
+              "Its primary focus is critical gap analysis of past works.",
+              "Its primary focus is false negative (accepting false H0).",
+              "Its primary focus is untreated baseline group.",
+              "Its primary focus is confound-free cause-effect trust."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Internal Validity** is: **confound-free cause-effect trust**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q20: In research methodology, what is the primary focus, role, or application of **External Validity**?",
+            "options": [
+              "Its primary focus is manipulated variable.",
+              "Its primary focus is non-randomized comparison design.",
+              "Its primary focus is clear problem identification.",
+              "Its primary focus is results generalization capability."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **External Validity** is: **results generalization capability**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Sampling & Data Collection",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q21: In research methodology, what is the primary focus, role, or application of **Questionnaire**?",
+            "options": [
+              "Its primary focus is standardized self-report tool.",
+              "Its primary focus is multi-source validation technique.",
+              "Its primary focus is judgmental target selection.",
+              "Its primary focus is fixed interval sampling."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Questionnaire** is: **standardized self-report tool**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q22: In research methodology, what is the primary focus, role, or application of **Structured Interview**?",
+            "options": [
+              "Its primary focus is geographical or group-level division.",
+              "Its primary focus is referral-based chain network.",
+              "Its primary focus is rigid standardized interview.",
+              "Its primary focus is completion ratio of sample."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Structured Interview** is: **rigid standardized interview**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q23: In research methodology, what is the primary focus, role, or application of **Likert Scale**?",
+            "options": [
+              "Its primary focus is complex multi-stage unit selection.",
+              "Its primary focus is measuring ordinal/interval agreement levels.",
+              "Its primary focus is frame-population mismatch error.",
+              "Its primary focus is questionnaire design validation."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Likert Scale** is: **measuring ordinal/interval agreement levels**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q24: In research methodology, what is the primary focus, role, or application of **Semantic Differential Scale**?",
+            "options": [
+              "Its primary focus is unbiased generalization potential.",
+              "Its primary focus is bipolar adjective scaling.",
+              "Its primary focus is convenience and subjectivity selection.",
+              "Its primary focus is systematic selection skew."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Semantic Differential Scale** is: **bipolar adjective scaling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q25: In research methodology, what is the primary focus, role, or application of **Observation Method**?",
+            "options": [
+              "Its primary focus is systematic behavior recording.",
+              "Its primary focus is lottery or random number selection.",
+              "Its primary focus is original direct collection.",
+              "Its primary focus is accessibility-based collection."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Observation Method** is: **systematic behavior recording**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q26: In research methodology, what is the primary focus, role, or application of **Focus Group Discussion**?",
+            "options": [
+              "Its primary focus is ensuring representation of subgroups.",
+              "Its primary focus is non-random strata filling.",
+              "Its primary focus is previously collected material.",
+              "Its primary focus is moderated group discussion."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Focus Group Discussion** is: **moderated group discussion**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q27: In research methodology, what is the primary focus, role, or application of **Content Analysis**?",
+            "options": [
+              "Its primary focus is judgmental target selection.",
+              "Its primary focus is standardized self-report tool.",
+              "Its primary focus is qualitative data theme analysis.",
+              "Its primary focus is fixed interval sampling."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Content Analysis** is: **qualitative data theme analysis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q28: In research methodology, what is the primary focus, role, or application of **Data Triangulation**?",
+            "options": [
+              "Its primary focus is rigid standardized interview.",
+              "Its primary focus is geographical or group-level division.",
+              "Its primary focus is referral-based chain network.",
+              "Its primary focus is multi-source validation technique."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Data Triangulation** is: **multi-source validation technique**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q29: In research methodology, what is the primary focus, role, or application of **Response Rate**?",
+            "options": [
+              "Its primary focus is frame-population mismatch error.",
+              "Its primary focus is complex multi-stage unit selection.",
+              "Its primary focus is completion ratio of sample.",
+              "Its primary focus is measuring ordinal/interval agreement levels."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Response Rate** is: **completion ratio of sample**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q30: In research methodology, what is the primary focus, role, or application of **Pilot Testing**?",
+            "options": [
+              "Its primary focus is systematic selection skew.",
+              "Its primary focus is convenience and subjectivity selection.",
+              "Its primary focus is bipolar adjective scaling.",
+              "Its primary focus is questionnaire design validation."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Pilot Testing** is: **questionnaire design validation**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Data Analysis & Hypothesis Testing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q31: In research methodology, what is the primary focus, role, or application of **Confidence Interval**?",
+            "options": [
+              "Its primary focus is distribution-free two-group comparison.",
+              "Its primary focus is dispersion measurement tool.",
+              "Its primary focus is parameter estimation range.",
+              "Its primary focus is distribution-free statistical testing."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Confidence Interval** is: **parameter estimation range**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q32: In research methodology, what is the primary focus, role, or application of **Degrees of Freedom**?",
+            "options": [
+              "Its primary focus is squared dispersion measure.",
+              "Its primary focus is independent observation count limit.",
+              "Its primary focus is distribution-free paired comparison.",
+              "Its primary focus is categorical association verification."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Degrees of Freedom** is: **independent observation count limit**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q33: In research methodology, what is the primary focus, role, or application of **Standard Error of the Mean**?",
+            "options": [
+              "Its primary focus is distribution-free multi-group comparison.",
+              "Its primary focus is sample mean precision estimate.",
+              "Its primary focus is comparing three or more group means.",
+              "Its primary focus is linear correlation index."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Standard Error of the Mean** is: **sample mean precision estimate**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q34: In research methodology, what is the primary focus, role, or application of **Normal Distribution**?",
+            "options": [
+              "Its primary focus is monotonic rank relationship score.",
+              "Its primary focus is arithmetic average calculation.",
+              "Its primary focus is symmetric bell-curve model.",
+              "Its primary focus is comparing two group means."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Normal Distribution** is: **symmetric bell-curve model**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q35: In research methodology, what is the primary focus, role, or application of **Positively Skewed**?",
+            "options": [
+              "Its primary focus is right-tail distribution skew.",
+              "Its primary focus is middle positional indicator.",
+              "Its primary focus is slope relationship prediction.",
+              "Its primary focus is large-sample mean comparison."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Positively Skewed** is: **right-tail distribution skew**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q36: In research methodology, what is the primary focus, role, or application of **Negatively Skewed**?",
+            "options": [
+              "Its primary focus is left-tail distribution skew.",
+              "Its primary focus is alpha threshold for hypothesis rejection.",
+              "Its primary focus is highest frequency value.",
+              "Its primary focus is distribution-assumed statistical testing."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Negatively Skewed** is: **left-tail distribution skew**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q37: In research methodology, what is the primary focus, role, or application of **Kurtosis**?",
+            "options": [
+              "Its primary focus is distribution-free statistical testing.",
+              "Its primary focus is peakedness or flatness score.",
+              "Its primary focus is dispersion measurement tool.",
+              "Its primary focus is parameter estimation range."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Kurtosis** is: **peakedness or flatness score**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q38: In research methodology, what is the primary focus, role, or application of **Mann-Whitney U Test**?",
+            "options": [
+              "Its primary focus is distribution-free two-group comparison.",
+              "Its primary focus is categorical association verification.",
+              "Its primary focus is independent observation count limit.",
+              "Its primary focus is squared dispersion measure."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Mann-Whitney U Test** is: **distribution-free two-group comparison**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q39: In research methodology, what is the primary focus, role, or application of **Wilcoxon Signed-Rank Test**?",
+            "options": [
+              "Its primary focus is sample mean precision estimate.",
+              "Its primary focus is linear correlation index.",
+              "Its primary focus is distribution-free paired comparison.",
+              "Its primary focus is comparing three or more group means."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Wilcoxon Signed-Rank Test** is: **distribution-free paired comparison**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q40: In research methodology, what is the primary focus, role, or application of **Kruskal-Wallis Test**?",
+            "options": [
+              "Its primary focus is symmetric bell-curve model.",
+              "Its primary focus is comparing two group means.",
+              "Its primary focus is distribution-free multi-group comparison.",
+              "Its primary focus is monotonic rank relationship score."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Kruskal-Wallis Test** is: **distribution-free multi-group comparison**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Research Ethics & Report Writing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q41: In research methodology, what is the primary focus, role, or application of **Abstract**?",
+            "options": [
+              "Its primary focus is citation and publication volume balance metric.",
+              "Its primary focus is private interest compromising professional work.",
+              "Its primary focus is author-page citation style.",
+              "Its primary focus is brief paper summary overview."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Abstract** is: **brief paper summary overview**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q42: In research methodology, what is the primary focus, role, or application of **Footnote**?",
+            "options": [
+              "Its primary focus is thanking contributors and funders section.",
+              "Its primary focus is bottom-of-page contextual note.",
+              "Its primary focus is notes-bibliography citation formatting.",
+              "Its primary focus is human subject safety oversight board."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Footnote** is: **bottom-of-page contextual note**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q43: In research methodology, what is the primary focus, role, or application of **Research Proposal**?",
+            "options": [
+              "Its primary focus is legal protection of mental creations.",
+              "Its primary focus is voluntary participant agreement process.",
+              "Its primary focus is planned research blueprint outline.",
+              "Its primary focus is standardized academic chapter sequence."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Research Proposal** is: **planned research blueprint outline**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q44: In research methodology, what is the primary focus, role, or application of **Research Monograph**?",
+            "options": [
+              "Its primary focus is expert quality check before publication.",
+              "Its primary focus is monopoly right for technical invention.",
+              "Its primary focus is academic theft and misattribution.",
+              "Its primary focus is single-subject specialist writing piece."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Research Monograph** is: **single-subject specialist writing piece**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q45: In research methodology, what is the primary focus, role, or application of **Citation Indexing**?",
+            "options": [
+              "Its primary focus is protection of expression of ideas.",
+              "Its primary focus is tracking scientific citations system.",
+              "Its primary focus is own-work recycling without citation.",
+              "Its primary focus is barrier-free research accessibility."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Citation Indexing** is: **tracking scientific citations system**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q46: In research methodology, what is the primary focus, role, or application of **Fabrication**?",
+            "options": [
+              "Its primary focus is author-date citation style.",
+              "Its primary focus is inventing non-existent research data.",
+              "Its primary focus is consulted sources comprehensive list.",
+              "Its primary focus is journal citation frequency index."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Fabrication** is: **inventing non-existent research data**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q47: In research methodology, what is the primary focus, role, or application of **Falsification**?",
+            "options": [
+              "Its primary focus is brief paper summary overview.",
+              "Its primary focus is citation and publication volume balance metric.",
+              "Its primary focus is manipulating active research data.",
+              "Its primary focus is author-page citation style."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Falsification** is: **manipulating active research data**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q48: In research methodology, what is the primary focus, role, or application of **Conflict of Interest**?",
+            "options": [
+              "Its primary focus is bottom-of-page contextual note.",
+              "Its primary focus is notes-bibliography citation formatting.",
+              "Its primary focus is human subject safety oversight board.",
+              "Its primary focus is private interest compromising professional work."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Conflict of Interest** is: **private interest compromising professional work**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q49: In research methodology, what is the primary focus, role, or application of **Acknowledgment Section**?",
+            "options": [
+              "Its primary focus is planned research blueprint outline.",
+              "Its primary focus is legal protection of mental creations.",
+              "Its primary focus is voluntary participant agreement process.",
+              "Its primary focus is thanking contributors and funders section."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Acknowledgment Section** is: **thanking contributors and funders section**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q50: In research methodology, what is the primary focus, role, or application of **Thesis Layout Structure**?",
+            "options": [
+              "Its primary focus is single-subject specialist writing piece.",
+              "Its primary focus is expert quality check before publication.",
+              "Its primary focus is monopoly right for technical invention.",
+              "Its primary focus is standardized academic chapter sequence."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Thesis Layout Structure** is: **standardized academic chapter sequence**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 5. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Research Methodology Mock Exam 5.",
+              "note": "Solve all 10 mock exams to master the 500 Research Methodology questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
