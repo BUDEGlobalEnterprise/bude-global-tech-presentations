@@ -890,6 +890,14 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     category: ["education", "programming"],
     difficulty: "advanced",
   },
+  {
+    file: "intro-linux-hardening.json",
+    title: "Linux Hardening Masterclass",
+    description: "Deep dive into Linux server security hardening. Covers SSH security, sysctl networking parameters, SELinux/AppArmor MAC policies, auditd monitoring, and namespace isolation.",
+    keywords: ["security", "linux", "sysadmin", "hardening", "ssh", "selinux", "auditd", "firewall"],
+    category: ["security", "devops"],
+    difficulty: "advanced",
+  },
 
   // ============= PERSONAL =============
   {
