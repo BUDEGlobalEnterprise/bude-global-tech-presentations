@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 1 - Research Methodology",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Introduction to Research",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q1: Which of the following research terms is defined as: 'aims to expand the existing body of scientific knowledge without any immediate practical application.'?",
+            "options": [
+              "Comparative Research",
+              "Fundamental Research",
+              "Historical Research",
+              "Longitudinal Study"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Fundamental Research** is defined as: aims to expand the existing body of scientific knowledge without any immediate practical application. (basic / pure research)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q2: Which of the following research terms is defined as: 'is designed to solve practical, real-world problems of modern society.'?",
+            "options": [
+              "Deductive Research Approach",
+              "Cross-Sectional Study",
+              "Empirical Research",
+              "Applied Research"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Applied Research** is defined as: is designed to solve practical, real-world problems of modern society. (practical problem-solving)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q3: Which of the following research terms is defined as: 'is a reflective process of progressive problem-solving led by individuals working with others in teams to address immediate issues.'?",
+            "options": [
+              "Case Study Method",
+              "Action Research",
+              "Theoretical Research",
+              "Inductive Research Approach"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Action Research** is defined as: is a reflective process of progressive problem-solving led by individuals working with others in teams to address immediate issues. (immediate local action)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q4: Which of the following research terms is defined as: 'focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon.'?",
+            "options": [
+              "Quantitative Research",
+              "Experimental Research",
+              "Analytical Research",
+              "Phenomenological Research"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Quantitative Research** is defined as: focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon. (numerical and statistical analysis)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q5: Which of the following research terms is defined as: 'is exploratory research used to gain an understanding of underlying reasons, opinions, and motivations.'?",
+            "options": [
+              "Conceptual Research",
+              "Diagnostic Research",
+              "Grounded Theory",
+              "Qualitative Research"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Qualitative Research** is defined as: is exploratory research used to gain an understanding of underlying reasons, opinions, and motivations. (non-numerical thematic analysis)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q6: Which of the following research terms is defined as: 'aims to describe the characteristics of a population or phenomenon being studied without manipulating variables.'?",
+            "options": [
+              "Ethnographic Research",
+              "Evaluative Research",
+              "Descriptive Research",
+              "Ex-Post Facto Research"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Descriptive Research** is defined as: aims to describe the characteristics of a population or phenomenon being studied without manipulating variables. (describing 'what is')."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q7: Which of the following research terms is defined as: 'is conducted for a research problem when there are few or no earlier studies to refer to, aiming to clarify the exact nature of the problem.'?",
+            "options": [
+              "Longitudinal Study",
+              "Comparative Research",
+              "Exploratory Research",
+              "Fundamental Research"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Exploratory Research** is defined as: is conducted for a research problem when there are few or no earlier studies to refer to, aiming to clarify the exact nature of the problem. (problem definition and feasibility)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q8: Which of the following research terms is defined as: 'involves studying and interpreting past events to understand current patterns and anticipate future trends.'?",
+            "options": [
+              "Deductive Research Approach",
+              "Applied Research",
+              "Historical Research",
+              "Cross-Sectional Study"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Historical Research** is defined as: involves studying and interpreting past events to understand current patterns and anticipate future trends. (past event analysis)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q9: Which of the following research terms is defined as: 'relies on direct or indirect observation or experience as a database rather than theory or belief.'?",
+            "options": [
+              "Action Research",
+              "Inductive Research Approach",
+              "Empirical Research",
+              "Case Study Method"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Empirical Research** is defined as: relies on direct or indirect observation or experience as a database rather than theory or belief. (empirical observation and evidence)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q10: Which of the following research terms is defined as: 'focuses on the development of new theories or abstract models based on existing literature rather than direct experiments.'?",
+            "options": [
+              "Phenomenological Research",
+              "Experimental Research",
+              "Theoretical Research",
+              "Quantitative Research"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Theoretical Research** is defined as: focuses on the development of new theories or abstract models based on existing literature rather than direct experiments. (abstract model development)."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Research Design & Hypothesis",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q11: Which of the following research terms is defined as: 'is the conceptual blueprint or framework within which research is conducted.'?",
+            "options": [
+              "Conceptual Framework",
+              "Dependent Variable",
+              "Research Design",
+              "Double-Blind Study"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Research Design** is defined as: is the conceptual blueprint or framework within which research is conducted. (framework for data collection and analysis)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q12: Which of the following research terms is defined as: 'is a tentative, testable statement about the relationship between two or more variables.'?",
+            "options": [
+              "Research Hypothesis",
+              "Statistical Power",
+              "Extraneous Variable",
+              "Pilot Study"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Research Hypothesis** is defined as: is a tentative, testable statement about the relationship between two or more variables. (testable tentative assumption)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q13: Which of the following research terms is defined as: 'asserts that there is no significant difference or relationship between the variables being tested.'?",
+            "options": [
+              "Exploratory Design",
+              "Null Hypothesis (H0)",
+              "Confounding Variable",
+              "Directional Hypothesis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Null Hypothesis (H0)** is defined as: asserts that there is no significant difference or relationship between the variables being tested. (no-effect assumption)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q14: Which of the following research terms is defined as: 'states that there is a significant difference or relationship between variables, contrary to the null hypothesis.'?",
+            "options": [
+              "Alternative Hypothesis (H1)",
+              "Control Variable",
+              "Non-Directional Hypothesis",
+              "Descriptive Design"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Alternative Hypothesis (H1)** is defined as: states that there is a significant difference or relationship between variables, contrary to the null hypothesis. (expected effect statement)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q15: Which of the following research terms is defined as: 'occurs when the null hypothesis is rejected when it is actually true (false positive), denoted by alpha.'?",
+            "options": [
+              "Type I Error",
+              "Internal Validity",
+              "Control Group",
+              "Literature Review"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Type I Error** is defined as: occurs when the null hypothesis is rejected when it is actually true (false positive), denoted by alpha. (false positive (rejecting true H0))."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q16: Which of the following research terms is defined as: 'occurs when the null hypothesis is accepted when it is actually false (false negative), denoted by beta.'?",
+            "options": [
+              "External Validity",
+              "Research Problem",
+              "Quasi-Experimental Design",
+              "Type II Error"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Type II Error** is defined as: occurs when the null hypothesis is accepted when it is actually false (false negative), denoted by beta. (false negative (accepting false H0))."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q17: Which of the following research terms is defined as: 'is the variable that is manipulated or controlled by the researcher to observe its effect.'?",
+            "options": [
+              "Double-Blind Study",
+              "Independent Variable",
+              "Conceptual Framework",
+              "Research Design"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Independent Variable** is defined as: is the variable that is manipulated or controlled by the researcher to observe its effect. (manipulated variable)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q18: Which of the following research terms is defined as: 'is the variable being tested and measured, which changes in response to the independent variable.'?",
+            "options": [
+              "Pilot Study",
+              "Research Hypothesis",
+              "Statistical Power",
+              "Dependent Variable"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Dependent Variable** is defined as: is the variable being tested and measured, which changes in response to the independent variable. (measured outcome variable)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q19: Which of the following research terms is defined as: 'is any variable other than the independent variable that could influence the results of the study.'?",
+            "options": [
+              "Null Hypothesis (H0)",
+              "Extraneous Variable",
+              "Exploratory Design",
+              "Directional Hypothesis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Extraneous Variable** is defined as: is any variable other than the independent variable that could influence the results of the study. (uncontrolled confounding variable)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q20: Which of the following research terms is defined as: 'is an extraneous variable that correlates with both the independent and dependent variables, masking the true relationship.'?",
+            "options": [
+              "Alternative Hypothesis (H1)",
+              "Non-Directional Hypothesis",
+              "Descriptive Design",
+              "Confounding Variable"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Confounding Variable** is defined as: is an extraneous variable that correlates with both the independent and dependent variables, masking the true relationship. (relationship-masking variable)."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Sampling & Data Collection",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q21: Which of the following research terms is defined as: 'gives every element in the population an equal, non-zero chance of being selected.'?",
+            "options": [
+              "Probability Sampling",
+              "Primary Data",
+              "Observation Method",
+              "Convenience Sampling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Probability Sampling** is defined as: gives every element in the population an equal, non-zero chance of being selected. (unbiased generalization potential)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q22: Which of the following research terms is defined as: 'is a probability sampling method where every member of the population has an equal chance of selection.'?",
+            "options": [
+              "Secondary Data",
+              "Focus Group Discussion",
+              "Simple Random Sampling",
+              "Quota Sampling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Simple Random Sampling** is defined as: is a probability sampling method where every member of the population has an equal chance of selection. (lottery or random number selection)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q23: Which of the following research terms is defined as: 'divides the population into homogeneous subgroups (strata) and then samples randomly from each stratum.'?",
+            "options": [
+              "Questionnaire",
+              "Stratified Random Sampling",
+              "Content Analysis",
+              "Purposive Sampling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Stratified Random Sampling** is defined as: divides the population into homogeneous subgroups (strata) and then samples randomly from each stratum. (ensuring representation of subgroups)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q24: Which of the following research terms is defined as: 'selects elements from an ordered population list at a regular interval (every k-th element) after a random starting point.'?",
+            "options": [
+              "Data Triangulation",
+              "Snowball Sampling",
+              "Systematic Sampling",
+              "Structured Interview"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Systematic Sampling** is defined as: selects elements from an ordered population list at a regular interval (every k-th element) after a random starting point. (fixed interval sampling)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q25: Which of the following research terms is defined as: 'divides the population into naturally occurring groups (clusters) and randomly selects entire clusters to study.'?",
+            "options": [
+              "Likert Scale",
+              "Response Rate",
+              "Sampling Frame Error",
+              "Cluster Sampling"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Cluster Sampling** is defined as: divides the population into naturally occurring groups (clusters) and randomly selects entire clusters to study. (geographical or group-level division)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q26: Which of the following research terms is defined as: 'involves selecting samples in stages using smaller and smaller sampling units at each stage.'?",
+            "options": [
+              "Sampling Bias",
+              "Multi-Stage Sampling",
+              "Pilot Testing",
+              "Semantic Differential Scale"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Multi-Stage Sampling** is defined as: involves selecting samples in stages using smaller and smaller sampling units at each stage. (complex multi-stage unit selection)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q27: Which of the following research terms is defined as: 'does not use random selection, meaning some members of the population have zero chance of selection.'?",
+            "options": [
+              "Primary Data",
+              "Observation Method",
+              "Probability Sampling",
+              "Non-Probability Sampling"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Non-Probability Sampling** is defined as: does not use random selection, meaning some members of the population have zero chance of selection. (convenience and subjectivity selection)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q28: Which of the following research terms is defined as: 'selects samples that are easiest to access or recruit, resulting in high speed but potential bias.'?",
+            "options": [
+              "Convenience Sampling",
+              "Simple Random Sampling",
+              "Secondary Data",
+              "Focus Group Discussion"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Convenience Sampling** is defined as: selects samples that are easiest to access or recruit, resulting in high speed but potential bias. (accessibility-based collection)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q29: Which of the following research terms is defined as: 'selects a specified number of elements from defined subgroups, but using non-random selection methods.'?",
+            "options": [
+              "Questionnaire",
+              "Content Analysis",
+              "Quota Sampling",
+              "Stratified Random Sampling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Quota Sampling** is defined as: selects a specified number of elements from defined subgroups, but using non-random selection methods. (non-random strata filling)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q30: Which of the following research terms is defined as: 'relies on the researcher's judgment to select elements that are most representative or informative for the study.'?",
+            "options": [
+              "Purposive Sampling",
+              "Structured Interview",
+              "Data Triangulation",
+              "Systematic Sampling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Purposive Sampling** is defined as: relies on the researcher's judgment to select elements that are most representative or informative for the study. (judgmental target selection)."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Data Analysis & Hypothesis Testing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q31: Which of the following research terms is defined as: 'is the mathematical average of a dataset, calculated by summing all values and dividing by the count.'?",
+            "options": [
+              "Z-Test",
+              "Positively Skewed",
+              "Arithmetic Mean",
+              "Regression Coefficient"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Arithmetic Mean** is defined as: is the mathematical average of a dataset, calculated by summing all values and dividing by the count. (arithmetic average calculation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q32: Which of the following research terms is defined as: 'is the middle value of an ordered dataset, dividing it into two equal halves, unaffected by outliers.'?",
+            "options": [
+              "Median",
+              "Parametric Test",
+              "Negatively Skewed",
+              "Level of Significance"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Median** is defined as: is the middle value of an ordered dataset, dividing it into two equal halves, unaffected by outliers. (middle positional indicator)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q33: Which of the following research terms is defined as: 'is the most frequently occurring value in a dataset.'?",
+            "options": [
+              "Kurtosis",
+              "Non-Parametric Test",
+              "Confidence Interval",
+              "Mode"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Mode** is defined as: is the most frequently occurring value in a dataset. (highest frequency value)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q34: Which of the following research terms is defined as: 'measures the dispersion or spread of data points around their arithmetic mean.'?",
+            "options": [
+              "Mann-Whitney U Test",
+              "Standard Deviation",
+              "Chi-Square Test",
+              "Degrees of Freedom"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Standard Deviation** is defined as: measures the dispersion or spread of data points around their arithmetic mean. (dispersion measurement tool)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q35: Which of the following research terms is defined as: 'is the average of the squared differences from the mean, representing the overall spread of data.'?",
+            "options": [
+              "Variance",
+              "Wilcoxon Signed-Rank Test",
+              "ANOVA (Analysis of Variance)",
+              "Standard Error of the Mean"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Variance** is defined as: is the average of the squared differences from the mean, representing the overall spread of data. (squared dispersion measure)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q36: Which of the following research terms is defined as: 'measures the strength and direction of a linear relationship between two continuous variables.'?",
+            "options": [
+              "Pearson Correlation",
+              "Student's t-Test",
+              "Normal Distribution",
+              "Kruskal-Wallis Test"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Pearson Correlation** is defined as: measures the strength and direction of a linear relationship between two continuous variables. (linear correlation index)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q37: Which of the following research terms is defined as: 'is a non-parametric measure of rank correlation, assessing how well a relationship can be described using a monotonic function.'?",
+            "options": [
+              "Arithmetic Mean",
+              "Z-Test",
+              "Positively Skewed",
+              "Spearman Rank Correlation"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Spearman Rank Correlation** is defined as: is a non-parametric measure of rank correlation, assessing how well a relationship can be described using a monotonic function. (monotonic rank relationship score)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q38: Which of the following research terms is defined as: 'represents the rate of change in the dependent variable for every unit change in the independent variable.'?",
+            "options": [
+              "Level of Significance",
+              "Negatively Skewed",
+              "Regression Coefficient",
+              "Median"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Regression Coefficient** is defined as: represents the rate of change in the dependent variable for every unit change in the independent variable. (slope relationship prediction)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q39: Which of the following research terms is defined as: 'makes strict assumptions about the parameters of the population distribution (e.g., normality).'?",
+            "options": [
+              "Confidence Interval",
+              "Kurtosis",
+              "Mode",
+              "Parametric Test"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Parametric Test** is defined as: makes strict assumptions about the parameters of the population distribution (e.g., normality). (distribution-assumed statistical testing)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q40: Which of the following research terms is defined as: 'does not make assumptions about the underlying population distribution, suitable for ordinal or skewed data.'?",
+            "options": [
+              "Non-Parametric Test",
+              "Mann-Whitney U Test",
+              "Standard Deviation",
+              "Degrees of Freedom"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Non-Parametric Test** is defined as: does not make assumptions about the underlying population distribution, suitable for ordinal or skewed data. (distribution-free statistical testing)."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Research Ethics & Report Writing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q41: Which of the following research terms is defined as: 'is the practice of taking someone else's work or ideas and passing them off as one's own without proper citation.'?",
+            "options": [
+              "Plagiarism",
+              "Copyright",
+              "Citation Indexing",
+              "Open Access"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Plagiarism** is defined as: is the practice of taking someone else's work or ideas and passing them off as one's own without proper citation. (academic theft and misattribution)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q42: Which of the following research terms is defined as: 'occurs when an author reuses portions of their own previously published work without proper attribution.'?",
+            "options": [
+              "Fabrication",
+              "Impact Factor",
+              "Bibliography",
+              "Self-Plagiarism"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Self-Plagiarism** is defined as: occurs when an author reuses portions of their own previously published work without proper attribution. (own-work recycling without citation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q43: Which of the following research terms is defined as: 'is a citation and formatting style established by the American Psychological Association, commonly used in social sciences.'?",
+            "options": [
+              "Abstract",
+              "Falsification",
+              "APA Style",
+              "H-Index"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **APA Style** is defined as: is a citation and formatting style established by the American Psychological Association, commonly used in social sciences. (author-date citation style)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q44: Which of the following research terms is defined as: 'is a formatting style by the Modern Language Association, commonly used in humanities, utilizing parenthetical page citations.'?",
+            "options": [
+              "Conflict of Interest",
+              "Footnote",
+              "Institutional Review Board (IRB)",
+              "MLA Style"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **MLA Style** is defined as: is a formatting style by the Modern Language Association, commonly used in humanities, utilizing parenthetical page citations. (author-page citation style)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q45: Which of the following research terms is defined as: 'is a citation style providing bibliography and notes/author-date formats, used widely in history and social sciences.'?",
+            "options": [
+              "Chicago Style",
+              "Acknowledgment Section",
+              "Informed Consent",
+              "Research Proposal"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Chicago Style** is defined as: is a citation style providing bibliography and notes/author-date formats, used widely in history and social sciences. (notes-bibliography citation formatting)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q46: Which of the following research terms is defined as: 'are legal rights governing the protection of creations of the mind, including patents, copyrights, and trademarks.'?",
+            "options": [
+              "Intellectual Property Rights (IPR)",
+              "Research Monograph",
+              "Peer Review",
+              "Thesis Layout Structure"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Intellectual Property Rights (IPR)** is defined as: are legal rights governing the protection of creations of the mind, including patents, copyrights, and trademarks. (legal protection of mental creations)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q47: Which of the following research terms is defined as: 'is an exclusive right granted for an invention, providing the owner with the right to exclude others from making or selling it for a limited period.'?",
+            "options": [
+              "Open Access",
+              "Patent",
+              "Citation Indexing",
+              "Plagiarism"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Patent** is defined as: is an exclusive right granted for an invention, providing the owner with the right to exclude others from making or selling it for a limited period. (monopoly right for technical invention)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q48: Which of the following research terms is defined as: 'is a legal right that grants the creator of an original work exclusive rights for its use and distribution.'?",
+            "options": [
+              "Self-Plagiarism",
+              "Copyright",
+              "Fabrication",
+              "Bibliography"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Copyright** is defined as: is a legal right that grants the creator of an original work exclusive rights for its use and distribution. (protection of expression of ideas)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q49: Which of the following research terms is defined as: 'is a measure of the frequency with which the average article in a journal has been cited in a particular year.'?",
+            "options": [
+              "Impact Factor",
+              "APA Style",
+              "Abstract",
+              "Falsification"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Impact Factor** is defined as: is a measure of the frequency with which the average article in a journal has been cited in a particular year. (journal citation frequency index)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q50: Which of the following research terms is defined as: 'is an author-level metric that measures both the productivity and citation impact of the publications of a scientist.'?",
+            "options": [
+              "H-Index",
+              "Footnote",
+              "MLA Style",
+              "Conflict of Interest"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **H-Index** is defined as: is an author-level metric that measures both the productivity and citation impact of the publications of a scientist. (citation and publication volume balance metric)."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 1. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Research Methodology Mock Exam 1.",
+              "note": "Solve all 10 mock exams to master the 500 Research Methodology questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 10 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: Which of the following statements is **TRUE** regarding **Flip-Flops**?",
+            "options": [
+              "It is equivalent in purpose to: is a binary relation that is simultaneously reflexive, symmetric, and transitive, partitioning a set into equivalence classes.",
+              "It is correctly described as: are sequential logic circuits used as basic memory storage elements, changing states based on clock inputs (e.g. JK, D).",
+              "It is fundamentally characterized by: consists of the sequence of actions: Fetch, Decode, Read effective address, Execute, and Write-back.",
+              "It has no relation to: clock-driven sequential memory components"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Flip-Flops** is accurately described as: are sequential logic circuits used as basic memory storage elements, changing states based on clock inputs (e.g. JK, D)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: Which of the following statements is **TRUE** regarding **Synchronous Counter**?",
+            "options": [
+              "It is equivalent in purpose to: is a set combined with a binary relation that is reflexive, antisymmetric, and transitive.",
+              "It is correctly described as: is a digital counter where all flip-flops are triggered simultaneously by a single common clock pulse.",
+              "It has no relation to: simultaneously-clocked state counter",
+              "It is fundamentally characterized by: features a small set of simple, uniform, single-cycle execution instructions to optimize compiler efficiency."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Synchronous Counter** is accurately described as: is a digital counter where all flip-flops are triggered simultaneously by a single common clock pulse."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: Which of the following statements is **TRUE** regarding **Decoder**?",
+            "options": [
+              "It is correctly described as: is a combinational circuit that converts an n-bit binary input code into a maximum of 2^n unique output lines.",
+              "It is fundamentally characterized by: is the widely adopted technical standard for floating-point computation, defining sign, exponent, and mantissa formats.",
+              "It is equivalent in purpose to: is the number of edges incident to a vertex in a graph, with self-loops counting twice.",
+              "It has no relation to: binary-to-unary line converter"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Decoder** is accurately described as: is a combinational circuit that converts an n-bit binary input code into a maximum of 2^n unique output lines."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: Which of the following statements is **TRUE** regarding **Von Neumann Architecture**?",
+            "options": [
+              "It is fundamentally characterized by: are symbols used to connect propositions to form compound propositions, such as AND, OR, and NOT.",
+              "It is equivalent in purpose to: is a trail in a finite graph that visits every edge exactly once, existing if exactly zero or two vertices have odd degree.",
+              "It has no relation to: shared instruction-data bus architecture",
+              "It is correctly described as: is a computer design model featuring a single shared memory and bus for both instruction and data storage."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Von Neumann Architecture** is accurately described as: is a computer design model featuring a single shared memory and bus for both instruction and data storage."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: Which of the following statements is **TRUE** regarding **Cache Memory Hierarchy**?",
+            "options": [
+              "It is equivalent in purpose to: is a closed loop in a graph that visits every vertex exactly once and returns to the starting vertex.",
+              "It has no relation to: multi-level fast memory staging",
+              "It is correctly described as: is a multi-level layout (L1, L2, L3) of small, fast memory to bridge the speed gap between CPU and RAM.",
+              "It is fundamentally characterized by: are symbols like Universal (forall) and Existential (exists) that specify the scope of a predicate's variables."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Cache Memory Hierarchy** is accurately described as: is a multi-level layout (L1, L2, L3) of small, fast memory to bridge the speed gap between CPU and RAM."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: Which of the following statements is **TRUE** regarding **Direct Memory Access (DMA)**?",
+            "options": [
+              "It has no relation to: cpu-free I/O-memory transfer",
+              "It is correctly described as: allows an I/O device to transfer data directly to or from the system memory without passing through the CPU.",
+              "It is equivalent in purpose to: is a set combined with a binary operation satisfying closure, associativity, identity, and invertibility.",
+              "It is fundamentally characterized by: include Union, Intersection, Difference, and Complement used to manipulate and combine collections of objects."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Direct Memory Access (DMA)** is accurately described as: allows an I/O device to transfer data directly to or from the system memory without passing through the CPU."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: Which of the following statements is **TRUE** regarding **Pipelining Hazards**?",
+            "options": [
+              "It is equivalent in purpose to: is an ordered arrangement of all or part of a set of objects, where the order of selection matters.",
+              "It has no relation to: instruction pipeline execution stalls",
+              "It is correctly described as: are situations in CPU execution (structural, data, control) that prevent the next instruction from executing in its designated cycle.",
+              "It is fundamentally characterized by: is a binary relation that is simultaneously reflexive, symmetric, and transitive, partitioning a set into equivalence classes."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Pipelining Hazards** is accurately described as: are situations in CPU execution (structural, data, control) that prevent the next instruction from executing in its designated cycle."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: Which of the following statements is **TRUE** regarding **Instruction Cycle**?",
+            "options": [
+              "It is equivalent in purpose to: is the process of simplifying a Boolean expression to reduce the number of logic gates required for implementation.",
+              "It is fundamentally characterized by: is a set combined with a binary relation that is reflexive, antisymmetric, and transitive.",
+              "It has no relation to: fetch-decode-execute basic loop",
+              "It is correctly described as: consists of the sequence of actions: Fetch, Decode, Read effective address, Execute, and Write-back."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Instruction Cycle** is accurately described as: consists of the sequence of actions: Fetch, Decode, Read effective address, Execute, and Write-back."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: Which of the following statements is **TRUE** regarding **RISC Architecture**?",
+            "options": [
+              "It is fundamentally characterized by: is the number of edges incident to a vertex in a graph, with self-loops counting twice.",
+              "It has no relation to: reduced uniform instruction set design",
+              "It is correctly described as: features a small set of simple, uniform, single-cycle execution instructions to optimize compiler efficiency.",
+              "It is equivalent in purpose to: is a graphical method used to simplify Boolean algebra expressions without using algebraic laws."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **RISC Architecture** is accurately described as: features a small set of simple, uniform, single-cycle execution instructions to optimize compiler efficiency."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: Which of the following statements is **TRUE** regarding **IEEE 754 Standard**?",
+            "options": [
+              "It has no relation to: floating-point binary representation format",
+              "It is fundamentally characterized by: is a trail in a finite graph that visits every edge exactly once, existing if exactly zero or two vertices have odd degree.",
+              "It is equivalent in purpose to: is a combinational logic circuit that selects binary information from one of many input lines and directs it to a single output.",
+              "It is correctly described as: is the widely adopted technical standard for floating-point computation, defining sign, exponent, and mantissa formats."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **IEEE 754 Standard** is accurately described as: is the widely adopted technical standard for floating-point computation, defining sign, exponent, and mantissa formats."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: Which of the following statements is **TRUE** regarding **I/O Buffering**?",
+            "options": [
+              "It has no relation to: speed-matching data storage buffer",
+              "It is equivalent in purpose to: is a strategy that eliminates at least one of the four necessary Coffman conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait).",
+              "It is correctly described as: uses temporary memory areas to store data during transfers between fast devices (like CPU) and slow I/O peripherals.",
+              "It is fundamentally characterized by: is a memory management technique that divides virtual memory into variable-sized segments based on logical modules."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **I/O Buffering** is accurately described as: uses temporary memory areas to store data during transfers between fast devices (like CPU) and slow I/O peripherals."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: Which of the following statements is **TRUE** regarding **Disk Scheduling**?",
+            "options": [
+              "It is correctly described as: is the process of managing I/O requests for a hard disk drive using algorithms like SCAN, C-SCAN, or SSTF.",
+              "It is fundamentally characterized by: is a specialized software program that controls a specific hardware device attached to the computer.",
+              "It is equivalent in purpose to: is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating allocation limits.",
+              "It has no relation to: hard drive head seek optimization"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Disk Scheduling** is accurately described as: is the process of managing I/O requests for a hard disk drive using algorithms like SCAN, C-SCAN, or SSTF."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: Which of the following statements is **TRUE** regarding **File Allocation Methods**?",
+            "options": [
+              "It has no relation to: physical disk block mapping strategies",
+              "It is equivalent in purpose to: is a memory management scheme that eliminates the need for contiguous physical memory allocation by dividing logical memory into blocks.",
+              "It is fundamentally characterized by: is an acronym for Simultaneous Peripheral Operations On-Line, storing printer/device jobs in a buffer to execute sequentially.",
+              "It is correctly described as: include Contiguous, Linked, and Indexed allocation strategies for storing files on physical storage devices."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **File Allocation Methods** is accurately described as: include Contiguous, Linked, and Indexed allocation strategies for storing files on physical storage devices."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: Which of the following statements is **TRUE** regarding **System Calls**?",
+            "options": [
+              "It is correctly described as: provide the essential interface between a running program and the operating system kernel to request privileged services.",
+              "It is fundamentally characterized by: include Ready, Running, Waiting, New, and Terminated, representing the life-cycle stages of a process.",
+              "It has no relation to: privileged kernel service requests interface",
+              "It is equivalent in purpose to: is a technique that allows the execution of processes that are not completely in physical memory, using disk storage."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **System Calls** is accurately described as: provide the essential interface between a running program and the operating system kernel to request privileged services."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: Which of the following statements is **TRUE** regarding **RAID Levels**?",
+            "options": [
+              "It is correctly described as: designate different configurations of multiple physical disks to achieve redundancy, performance, or both (e.g. RAID 0, 1, 5).",
+              "It is equivalent in purpose to: is a hardware cache memory that stores recent translations of virtual memory addresses to physical memory addresses.",
+              "It is fundamentally characterized by: is the process of allocating CPU time to processes in the ready queue using algorithms like Round Robin or SJF.",
+              "It has no relation to: redundancy-performance disk array configurations"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **RAID Levels** is accurately described as: designate different configurations of multiple physical disks to achieve redundancy, performance, or both (e.g. RAID 0, 1, 5)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: Which of the following statements is **TRUE** regarding **Microkernel Architecture**?",
+            "options": [
+              "It is equivalent in purpose to: decides which memory page to swap out of physical RAM when a new page needs to be allocated (e.g. LRU, FIFO).",
+              "It has no relation to: minimal kernel user-space service design",
+              "It is correctly described as: minimizes the kernel size by moving non-essential services (like file systems, drivers) into user space.",
+              "It is fundamentally characterized by: coordinates the execution of concurrent processes to ensure no two processes access shared data simultaneously."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Microkernel Architecture** is accurately described as: minimizes the kernel size by moving non-essential services (like file systems, drivers) into user space."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: Which of the following statements is **TRUE** regarding **Cache Coherence Protocols**?",
+            "options": [
+              "It is correctly described as: ensure that data changes in one local cache are correctly propagated to other caches in a multiprocessor system.",
+              "It has no relation to: multiprocessor cache synchronization",
+              "It is fundamentally characterized by: is a strategy that eliminates at least one of the four necessary Coffman conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait).",
+              "It is equivalent in purpose to: is a state where the operating system spends more time swapping pages in and out of disk than executing instructions."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Cache Coherence Protocols** is accurately described as: ensure that data changes in one local cache are correctly propagated to other caches in a multiprocessor system."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: Which of the following statements is **TRUE** regarding **Memory Segmentation**?",
+            "options": [
+              "It has no relation to: logical module-based memory division",
+              "It is correctly described as: is a memory management technique that divides virtual memory into variable-sized segments based on logical modules.",
+              "It is equivalent in purpose to: is the smallest unit of execution within a process, sharing the process's memory space but maintaining its own stack and registers.",
+              "It is fundamentally characterized by: is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating allocation limits."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Memory Segmentation** is accurately described as: is a memory management technique that divides virtual memory into variable-sized segments based on logical modules."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: Which of the following statements is **TRUE** regarding **Device Driver**?",
+            "options": [
+              "It is equivalent in purpose to: is a mutual exclusion locking mechanism used to synchronize access to a resource, ensuring only one thread holds the lock at a time.",
+              "It has no relation to: hardware-specific control translator program",
+              "It is fundamentally characterized by: is a memory management scheme that eliminates the need for contiguous physical memory allocation by dividing logical memory into blocks.",
+              "It is correctly described as: is a specialized software program that controls a specific hardware device attached to the computer."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Device Driver** is accurately described as: is a specialized software program that controls a specific hardware device attached to the computer."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: Which of the following statements is **TRUE** regarding **Spooling**?",
+            "options": [
+              "It is fundamentally characterized by: is a technique that allows the execution of processes that are not completely in physical memory, using disk storage.",
+              "It is equivalent in purpose to: is a synchronization tool that uses a signaling integer value to control access to shared resources by multiple processes.",
+              "It has no relation to: peripheral device print job spooler",
+              "It is correctly described as: is an acronym for Simultaneous Peripheral Operations On-Line, storing printer/device jobs in a buffer to execute sequentially."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Spooling** is accurately described as: is an acronym for Simultaneous Peripheral Operations On-Line, storing printer/device jobs in a buffer to execute sequentially."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: Which of the following statements is **TRUE** regarding **Merge Sort**?",
+            "options": [
+              "It has no relation to: O(n log n) stable comparison sort",
+              "It is equivalent in purpose to: maps data of arbitrary size to fixed-size values using a mathematical function, enabling constant-time average insertions and lookups.",
+              "It is correctly described as: is a stable, divide-and-conquer sorting algorithm that splits arrays in halves, sorts them, and merges them back.",
+              "It is fundamentally characterized by: is a mathematical model for data types defined by its behavior (operations) from the point of view of a user, not implementation."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Merge Sort** is accurately described as: is a stable, divide-and-conquer sorting algorithm that splits arrays in halves, sorts them, and merges them back."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: Which of the following statements is **TRUE** regarding **Binary Search**?",
+            "options": [
+              "It is equivalent in purpose to: is a complete binary tree that satisfies the heap property, where the parent node key is compared with its children.",
+              "It is fundamentally characterized by: is an automatic memory management process that reclaims heap memory occupied by objects that are no longer in use.",
+              "It is correctly described as: is an efficient search algorithm that repeatedly divides a sorted search interval in half to locate a target.",
+              "It has no relation to: O(log n) sorted array search"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Binary Search** is accurately described as: is an efficient search algorithm that repeatedly divides a sorted search interval in half to locate a target."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: Which of the following statements is **TRUE** regarding **Call Stack**?",
+            "options": [
+              "It has no relation to: active subroutine memory tracker",
+              "It is equivalent in purpose to: is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one.",
+              "It is correctly described as: is a stack memory structure that stores information about active subroutines and functions in a running program.",
+              "It is fundamentally characterized by: defines the region of program source code text within which a variable's binding or name is valid and accessible."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Call Stack** is accurately described as: is a stack memory structure that stores information about active subroutines and functions in a running program."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: Which of the following statements is **TRUE** regarding **Pointer dereferencing**?",
+            "options": [
+              "It is fundamentally characterized by: is a node-based binary tree data structure where the left subtree contains keys less than the parent, and the right contains keys greater.",
+              "It has no relation to: retrieving value from pointer address",
+              "It is equivalent in purpose to: is a divide-and-conquer sorting algorithm that selects a pivot element and partitions the array around it.",
+              "It is correctly described as: is the programming operation used to retrieve or modify the value stored at the memory address held by a pointer."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Pointer dereferencing** is accurately described as: is the programming operation used to retrieve or modify the value stored at the memory address held by a pointer."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: Which of the following statements is **TRUE** regarding **Polymorphism**?",
+            "options": [
+              "It has no relation to: single interface multi-implementation capability",
+              "It is equivalent in purpose to: represents a graph as an array of linked lists, where each index represents a vertex and its list contains its adjacent neighbors.",
+              "It is correctly described as: is an object-oriented programming concept allowing objects of different classes to be treated as objects of a common superclass.",
+              "It is fundamentally characterized by: finds the shortest path from a single source vertex to all other vertices in a weighted graph with non-negative edge weights."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Polymorphism** is accurately described as: is an object-oriented programming concept allowing objects of different classes to be treated as objects of a common superclass."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: Which of the following statements is **TRUE** regarding **Inheritance**?",
+            "options": [
+              "It is correctly described as: is an OOP mechanism where a new class (derived) adopts the attributes and behaviors of an existing class (base).",
+              "It is equivalent in purpose to: traverses a graph level by level, utilizing a queue data structure to visit vertices in order of increasing distance.",
+              "It is fundamentally characterized by: solves complex problems by breaking them down into simpler subproblems and storing the results of these subproblems to avoid redundant computing.",
+              "It has no relation to: derived-to-base class reuse mechanism"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Inheritance** is accurately described as: is an OOP mechanism where a new class (derived) adopts the attributes and behaviors of an existing class (base)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: Which of the following statements is **TRUE** regarding **Encapsulation**?",
+            "options": [
+              "It is fundamentally characterized by: maps data of arbitrary size to fixed-size values using a mathematical function, enabling constant-time average insertions and lookups.",
+              "It is equivalent in purpose to: traverses a graph by exploring as deep as possible along each branch before backtracking, utilizing a stack.",
+              "It is correctly described as: is the OOP practice of bundling data and methods that operate on that data within a single unit, restricting direct access.",
+              "It has no relation to: data-hiding and modular unit bundling"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Encapsulation** is accurately described as: is the OOP practice of bundling data and methods that operate on that data within a single unit, restricting direct access."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: Which of the following statements is **TRUE** regarding **Abstract Data Type (ADT)**?",
+            "options": [
+              "It is correctly described as: is a mathematical model for data types defined by its behavior (operations) from the point of view of a user, not implementation.",
+              "It is equivalent in purpose to: describes the asymptotic upper bound of an algorithm's execution time or space requirement in terms of input size.",
+              "It has no relation to: mathematical operation behavior model",
+              "It is fundamentally characterized by: is a complete binary tree that satisfies the heap property, where the parent node key is compared with its children."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Abstract Data Type (ADT)** is accurately described as: is a mathematical model for data types defined by its behavior (operations) from the point of view of a user, not implementation."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: Which of the following statements is **TRUE** regarding **Garbage Collection**?",
+            "options": [
+              "It has no relation to: automatic dead heap memory reclamation",
+              "It is fundamentally characterized by: is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one.",
+              "It is correctly described as: is an automatic memory management process that reclaims heap memory occupied by objects that are no longer in use.",
+              "It is equivalent in purpose to: is a linear data structure that follows the Last-In-First-Out (LIFO) principle for inserting and removing elements."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Garbage Collection** is accurately described as: is an automatic memory management process that reclaims heap memory occupied by objects that are no longer in use."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: Which of the following statements is **TRUE** regarding **Variable Scope**?",
+            "options": [
+              "It is fundamentally characterized by: is a divide-and-conquer sorting algorithm that selects a pivot element and partitions the array around it.",
+              "It has no relation to: name accessibility region code boundary",
+              "It is equivalent in purpose to: is a linear data structure that follows the First-In-First-Out (FIFO) principle for inserting and removing elements.",
+              "It is correctly described as: defines the region of program source code text within which a variable's binding or name is valid and accessible."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Variable Scope** is accurately described as: defines the region of program source code text within which a variable's binding or name is valid and accessible."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: Which of the following statements is **TRUE** regarding **Dirty Read**?",
+            "options": [
+              "It is correctly described as: occurs when a transaction reads data that has been modified by another concurrent transaction but not yet committed.",
+              "It is fundamentally characterized by: is a minimal superkey that can uniquely identify any database record without redundant attributes.",
+              "It is equivalent in purpose to: is a stronger version of 3NF where for every non-trivial functional dependency X -> Y, X must be a superkey.",
+              "It has no relation to: reading uncommitted transaction modifications"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Dirty Read** is accurately described as: occurs when a transaction reads data that has been modified by another concurrent transaction but not yet committed."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: Which of the following statements is **TRUE** regarding **Non-Repeatable Read**?",
+            "options": [
+              "It is fundamentally characterized by: is a state where all foreign key values in a database are valid, pointing to existing primary keys in parent tables.",
+              "It has no relation to: reading committed concurrent modifications",
+              "It is correctly described as: occurs when a transaction re-reads data it previously read and finds that another committed transaction has modified it.",
+              "It is equivalent in purpose to: guarantee database transaction reliability: Atomicity, Consistency, Isolation, and Durability."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Non-Repeatable Read** is accurately described as: occurs when a transaction re-reads data it previously read and finds that another committed transaction has modified it."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: Which of the following statements is **TRUE** regarding **Phantom Read**?",
+            "options": [
+              "It is equivalent in purpose to: is a field in a relational database table that uniquely identifies a row in another table, enforcing referential integrity.",
+              "It is correctly described as: occurs when a transaction re-runs a query returning a set of rows and finds new rows added by another committed transaction.",
+              "It has no relation to: reading committed concurrent insertions",
+              "It is fundamentally characterized by: occurs when the same piece of data is stored in two or more separate places in a database unnecessarily."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Phantom Read** is accurately described as: occurs when a transaction re-runs a query returning a set of rows and finds new rows added by another committed transaction."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: Which of the following statements is **TRUE** regarding **Query Optimizer**?",
+            "options": [
+              "It is equivalent in purpose to: is a self-balancing search tree structure widely used in databases to enable fast sequential access and range queries.",
+              "It has no relation to: efficient execution plan selector",
+              "It is correctly described as: is a DBMS component that analyzes SQL statements and determines the most efficient execution plan based on statistics.",
+              "It is fundamentally characterized by: requires that domain values must be atomic, meaning attributes cannot contain multiple or nested values."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Query Optimizer** is accurately described as: is a DBMS component that analyzes SQL statements and determines the most efficient execution plan based on statistics."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: Which of the following statements is **TRUE** regarding **Database Trigger**?",
+            "options": [
+              "It is fundamentally characterized by: requires a table to be in 1NF and ensure that all non-prime attributes are fully functionally dependent on the primary key.",
+              "It is correctly described as: is a procedural block of code that automatically executes in response to certain events on a particular table.",
+              "It has no relation to: automatic event-driven code block",
+              "It is equivalent in purpose to: is a concurrency control method that guarantees serializability by locking data items in growing and shrinking phases."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Database Trigger** is accurately described as: is a procedural block of code that automatically executes in response to certain events on a particular table."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: Which of the following statements is **TRUE** regarding **Stored Procedure**?",
+            "options": [
+              "It is equivalent in purpose to: combines records from two or more tables in a relational database based on a related column between them.",
+              "It is fundamentally characterized by: requires a table to be in 2NF and ensure that no non-prime attribute is transitively dependent on the primary key.",
+              "It is correctly described as: is a precompiled collection of SQL statements stored in the database, reducing network traffic and improving performance.",
+              "It has no relation to: precompiled database SQL package"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Stored Procedure** is accurately described as: is a precompiled collection of SQL statements stored in the database, reducing network traffic and improving performance."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: Which of the following statements is **TRUE** regarding **Primary Key**?",
+            "options": [
+              "It is fundamentally characterized by: is a stronger version of 3NF where for every non-trivial functional dependency X -> Y, X must be a superkey.",
+              "It is correctly described as: is a column or group of columns that uniquely identifies each row in a database table, and cannot contain NULL values.",
+              "It is equivalent in purpose to: is a procedural query language consisting of operations like Select, Project, Join, and Union to manipulate relations.",
+              "It has no relation to: row unique identifier constraint"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Primary Key** is accurately described as: is a column or group of columns that uniquely identifies each row in a database table, and cannot contain NULL values."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: Which of the following statements is **TRUE** regarding **Candidate Key**?",
+            "options": [
+              "It is equivalent in purpose to: is a virtual table based on the result-set of an active SQL statement, containing no physical data of its own.",
+              "It is correctly described as: is a minimal superkey that can uniquely identify any database record without redundant attributes.",
+              "It has no relation to: minimal row identifier set",
+              "It is fundamentally characterized by: guarantee database transaction reliability: Atomicity, Consistency, Isolation, and Durability."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Candidate Key** is accurately described as: is a minimal superkey that can uniquely identify any database record without redundant attributes."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: Which of the following statements is **TRUE** regarding **Referential Integrity**?",
+            "options": [
+              "It is fundamentally characterized by: is a field in a relational database table that uniquely identifies a row in another table, enforcing referential integrity.",
+              "It has no relation to: valid foreign-to-primary key reference state",
+              "It is equivalent in purpose to: provides a mechanism for storage and retrieval of data modeled in formats other than tabular relations (e.g. document, key-value).",
+              "It is correctly described as: is a state where all foreign key values in a database are valid, pointing to existing primary keys in parent tables."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Referential Integrity** is accurately described as: is a state where all foreign key values in a database are valid, pointing to existing primary keys in parent tables."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: Which of the following statements is **TRUE** regarding **Data Redundancy**?",
+            "options": [
+              "It is equivalent in purpose to: represents the logical structure of a database using Entities, Attributes, and Relationships visually.",
+              "It has no relation to: unnecessary duplicate data storage",
+              "It is correctly described as: occurs when the same piece of data is stored in two or more separate places in a database unnecessarily.",
+              "It is fundamentally characterized by: is a self-balancing search tree structure widely used in databases to enable fast sequential access and range queries."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Data Redundancy** is accurately described as: occurs when the same piece of data is stored in two or more separate places in a database unnecessarily."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: Which of the following statements is **TRUE** regarding **Black-box Testing**?",
+            "options": [
+              "It is fundamentally characterized by: provide a standardized visual representation of software systems to describe classes, objects, and their relationships.",
+              "It is correctly described as: is a method of software testing that examines the functionality of an application without peering into its internal structures.",
+              "It is equivalent in purpose to: is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems.",
+              "It has no relation to: functional specification validation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Black-box Testing** is accurately described as: is a method of software testing that examines the functionality of an application without peering into its internal structures."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: Which of the following statements is **TRUE** regarding **White-box Testing**?",
+            "options": [
+              "It is equivalent in purpose to: uses the exact same key for both the encryption of plaintext and the decryption of ciphertext.",
+              "It is correctly described as: is a method of software testing that tests internal structures or workings of an application, requiring code visibility.",
+              "It has no relation to: internal code path validation",
+              "It is fundamentally characterized by: is a formal document describing the functional and non-functional requirements that the software system must fulfill."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **White-box Testing** is accurately described as: is a method of software testing that tests internal structures or workings of an application, requiring code visibility."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: Which of the following statements is **TRUE** regarding **Software Architecture**?",
+            "options": [
+              "It has no relation to: high-level structural system organization",
+              "It is correctly described as: refers to the high-level structures of a software system, the discipline of creating such structures.",
+              "It is equivalent in purpose to: uses a mathematically linked public-private key pair for encryption and decryption operations.",
+              "It is fundamentally characterized by: is the process of restructuring existing computer code without changing its external behavior, to improve readability and structure."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Software Architecture** is accurately described as: refers to the high-level structures of a software system, the discipline of creating such structures."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: Which of the following statements is **TRUE** regarding **Scrum Framework**?",
+            "options": [
+              "It has no relation to: sprint-based team collaboration",
+              "It is correctly described as: is an agile framework for managing complex work, utilizing sprints, daily standups, and product backlogs.",
+              "It is fundamentally characterized by: is a conceptual framework of 7 layers that standardizes telecommunication and networking protocol functions.",
+              "It is equivalent in purpose to: translates human-readable domain names into machine-readable IP addresses."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Scrum Framework** is accurately described as: is an agile framework for managing complex work, utilizing sprints, daily standups, and product backlogs."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: Which of the following statements is **TRUE** regarding **Cohesion**?",
+            "options": [
+              "It is equivalent in purpose to: is a protocol used to map an Internet Protocol (IP) address to a physical machine Media Access Control (MAC) address.",
+              "It is fundamentally characterized by: is a suite of communication protocols used to interconnect network devices on the internet, emphasizing reliable delivery.",
+              "It has no relation to: single module functional focus score",
+              "It is correctly described as: measures the strength of relationship between pieces of functionality within a single software module."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Cohesion** is accurately described as: measures the strength of relationship between pieces of functionality within a single software module."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: Which of the following statements is **TRUE** regarding **Coupling**?",
+            "options": [
+              "It is equivalent in purpose to: is a network security device that monitors and filters incoming and outgoing network traffic based on established security rules.",
+              "It has no relation to: inter-module interdependence indicator",
+              "It is correctly described as: measures the degree of interdependence between different software modules, aiming for a low level to increase modularity.",
+              "It is fundamentally characterized by: is a 32-bit number that masks an IP address, dividing the IP address into network address and host address portions."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Coupling** is accurately described as: measures the degree of interdependence between different software modules, aiming for a low level to increase modularity."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: Which of the following statements is **TRUE** regarding **SDLC Model**?",
+            "options": [
+              "It is equivalent in purpose to: provides 128-bit addresses to replace 32-bit IPv4 addresses, accommodating the massive growth of internet devices.",
+              "It is fundamentally characterized by: is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems.",
+              "It has no relation to: software development process model",
+              "It is correctly described as: is a structured process used by the software industry to design, develop, and test high-quality software (e.g., Waterfall)."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **SDLC Model** is accurately described as: is a structured process used by the software industry to design, develop, and test high-quality software (e.g., Waterfall)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: Which of the following statements is **TRUE** regarding **UML Diagrams**?",
+            "options": [
+              "It has no relation to: standardized software visualization diagrams",
+              "It is correctly described as: provide a standardized visual representation of software systems to describe classes, objects, and their relationships.",
+              "It is equivalent in purpose to: promotes continuous iteration of development and testing throughout the software development life cycle.",
+              "It is fundamentally characterized by: uses the exact same key for both the encryption of plaintext and the decryption of ciphertext."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **UML Diagrams** is accurately described as: provide a standardized visual representation of software systems to describe classes, objects, and their relationships."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: Which of the following statements is **TRUE** regarding **SRS Document**?",
+            "options": [
+              "It is equivalent in purpose to: is a reusable, template-like solution to a commonly occurring design problem in software architecture.",
+              "It is fundamentally characterized by: uses a mathematically linked public-private key pair for encryption and decryption operations.",
+              "It is correctly described as: is a formal document describing the functional and non-functional requirements that the software system must fulfill.",
+              "It has no relation to: formal software requirements specifications"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **SRS Document** is accurately described as: is a formal document describing the functional and non-functional requirements that the software system must fulfill."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: Which of the following statements is **TRUE** regarding **Refactoring**?",
+            "options": [
+              "It has no relation to: improving code quality without behavior change",
+              "It is equivalent in purpose to: is a software testing method by which individual source code components are tested to determine if they are fit for use.",
+              "It is fundamentally characterized by: translates human-readable domain names into machine-readable IP addresses.",
+              "It is correctly described as: is the process of restructuring existing computer code without changing its external behavior, to improve readability and structure."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Refactoring** is accurately described as: is the process of restructuring existing computer code without changing its external behavior, to improve readability and structure."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 10. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 10.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

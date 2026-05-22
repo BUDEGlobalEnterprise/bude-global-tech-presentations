@@ -1,4 +1,5 @@
 import {
+  BookOpen,
   Boxes,
   Brain,
   Briefcase,
@@ -10,6 +11,7 @@ import {
   Film,
   Gamepad2,
   Globe2,
+  GraduationCap,
   Heart,
   Layers,
   Layout,
@@ -52,6 +54,8 @@ const REGISTRY: Record<string, CategoryMeta> = {
   movie: { label: "Movies", icon: Film, hue: "from-pink-500 to-rose-500" },
   games: { label: "Games", icon: Gamepad2, hue: "from-lime-500 to-emerald-500" },
   personal: { label: "Personal", icon: Heart, hue: "from-rose-500 to-pink-500" },
+  education: { label: "Education", icon: GraduationCap, hue: "from-indigo-500 to-purple-500" },
+  research: { label: "Research", icon: BookOpen, hue: "from-fuchsia-500 to-violet-500" },
 };
 
 export function categoryMeta(key: string): CategoryMeta {
@@ -84,6 +88,8 @@ export const CATEGORY_ORDER = [
   "enterprise",
   "games",
   "movie",
+  "education",
+  "research",
   "personal",
 ];
 

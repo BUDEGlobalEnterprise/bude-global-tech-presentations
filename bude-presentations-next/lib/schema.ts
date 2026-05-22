@@ -98,6 +98,7 @@ export const SlideSchema = z
     title: z.string().optional(),
     subtitle: z.string().optional(),
     emoji: z.string().optional(),
+    topic: z.string().optional(),
 
     // presenter
     name: z.string().optional(),

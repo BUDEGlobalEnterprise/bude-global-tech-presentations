@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 3 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: Which of the following Computer Science terms is defined as: 'allows an I/O device to transfer data directly to or from the system memory without passing through the CPU.'?",
+            "options": [
+              "Set Theory Operations",
+              "Direct Memory Access (DMA)",
+              "Group Theory Group",
+              "Full Adder"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Direct Memory Access (DMA)** is defined as: allows an I/O device to transfer data directly to or from the system memory without passing through the CPU. (cpu-free I/O-memory transfer)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: Which of the following Computer Science terms is defined as: 'are situations in CPU execution (structural, data, control) that prevent the next instruction from executing in its designated cycle.'?",
+            "options": [
+              "Equivalence Relation",
+              "Permutation",
+              "Flip-Flops",
+              "Pipelining Hazards"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Pipelining Hazards** is defined as: are situations in CPU execution (structural, data, control) that prevent the next instruction from executing in its designated cycle. (instruction pipeline execution stalls)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: Which of the following Computer Science terms is defined as: 'consists of the sequence of actions: Fetch, Decode, Read effective address, Execute, and Write-back.'?",
+            "options": [
+              "Synchronous Counter",
+              "Partially Ordered Set (Poset)",
+              "Instruction Cycle",
+              "Boolean Algebra Minimization"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Instruction Cycle** is defined as: consists of the sequence of actions: Fetch, Decode, Read effective address, Execute, and Write-back. (fetch-decode-execute basic loop)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: Which of the following Computer Science terms is defined as: 'features a small set of simple, uniform, single-cycle execution instructions to optimize compiler efficiency.'?",
+            "options": [
+              "Decoder",
+              "RISC Architecture",
+              "Karnaugh Map (K-map)",
+              "Vertex Degree"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **RISC Architecture** is defined as: features a small set of simple, uniform, single-cycle execution instructions to optimize compiler efficiency. (reduced uniform instruction set design)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: Which of the following Computer Science terms is defined as: 'is the widely adopted technical standard for floating-point computation, defining sign, exponent, and mantissa formats.'?",
+            "options": [
+              "Multiplexer (MUX)",
+              "Von Neumann Architecture",
+              "IEEE 754 Standard",
+              "Euler Path"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **IEEE 754 Standard** is defined as: is the widely adopted technical standard for floating-point computation, defining sign, exponent, and mantissa formats. (floating-point binary representation format)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: In computer systems, what is the primary focus, role, or application of **Propositional Logic Connectives**?",
+            "options": [
+              "Its primary focus is one-to-many signal router.",
+              "Its primary focus is multi-level fast memory staging.",
+              "Its primary focus is compound proposition builders.",
+              "Its primary focus is single-visit vertex traversal loop."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Propositional Logic Connectives** is: **compound proposition builders**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: In computer systems, what is the primary focus, role, or application of **Predicate Logic Quantifiers**?",
+            "options": [
+              "Its primary focus is closure-associativity-identity-inverse algebraic structure.",
+              "Its primary focus is predicate variable scoping symbols.",
+              "Its primary focus is three-input binary addition circuit.",
+              "Its primary focus is cpu-free I/O-memory transfer."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Predicate Logic Quantifiers** is: **predicate variable scoping symbols**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: In computer systems, what is the primary focus, role, or application of **Set Theory Operations**?",
+            "options": [
+              "Its primary focus is set manipulation mathematical operations.",
+              "Its primary focus is order-sensitive selection arrangement.",
+              "Its primary focus is clock-driven sequential memory components.",
+              "Its primary focus is instruction pipeline execution stalls."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Set Theory Operations** is: **set manipulation mathematical operations**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: In computer systems, what is the primary focus, role, or application of **Equivalence Relation**?",
+            "options": [
+              "Its primary focus is simultaneously-clocked state counter.",
+              "Its primary focus is partitioning reflexive-symmetric-transitive relation.",
+              "Its primary focus is fetch-decode-execute basic loop.",
+              "Its primary focus is logic gate reduction optimization."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Equivalence Relation** is: **partitioning reflexive-symmetric-transitive relation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: In computer systems, what is the primary focus, role, or application of **Partially Ordered Set (Poset)**?",
+            "options": [
+              "Its primary focus is reflexive-antisymmetric-transitive ordering framework.",
+              "Its primary focus is reduced uniform instruction set design.",
+              "Its primary focus is graphical boolean simplification table.",
+              "Its primary focus is binary-to-unary line converter."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Partially Ordered Set (Poset)** is: **reflexive-antisymmetric-transitive ordering framework**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: Which of the following Computer Science terms is defined as: 'minimizes the kernel size by moving non-essential services (like file systems, drivers) into user space.'?",
+            "options": [
+              "Microkernel Architecture",
+              "Process Synchronization",
+              "Inter-Process Communication (IPC)",
+              "Page Replacement Algorithm"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Microkernel Architecture** is defined as: minimizes the kernel size by moving non-essential services (like file systems, drivers) into user space. (minimal kernel user-space service design)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: Which of the following Computer Science terms is defined as: 'ensure that data changes in one local cache are correctly propagated to other caches in a multiprocessor system.'?",
+            "options": [
+              "Deadlock Prevention",
+              "Thrashing",
+              "Cache Coherence Protocols",
+              "I/O Buffering"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Cache Coherence Protocols** is defined as: ensure that data changes in one local cache are correctly propagated to other caches in a multiprocessor system. (multiprocessor cache synchronization)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: Which of the following Computer Science terms is defined as: 'is a memory management technique that divides virtual memory into variable-sized segments based on logical modules.'?",
+            "options": [
+              "Disk Scheduling",
+              "Thread",
+              "Banker's Algorithm",
+              "Memory Segmentation"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Memory Segmentation** is defined as: is a memory management technique that divides virtual memory into variable-sized segments based on logical modules. (logical module-based memory division)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: Which of the following Computer Science terms is defined as: 'is a specialized software program that controls a specific hardware device attached to the computer.'?",
+            "options": [
+              "File Allocation Methods",
+              "Paging",
+              "Mutex",
+              "Device Driver"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Device Driver** is defined as: is a specialized software program that controls a specific hardware device attached to the computer. (hardware-specific control translator program)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: Which of the following Computer Science terms is defined as: 'is an acronym for Simultaneous Peripheral Operations On-Line, storing printer/device jobs in a buffer to execute sequentially.'?",
+            "options": [
+              "Spooling",
+              "Counting Semaphore",
+              "System Calls",
+              "Virtual Memory"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Spooling** is defined as: is an acronym for Simultaneous Peripheral Operations On-Line, storing printer/device jobs in a buffer to execute sequentially. (peripheral device print job spooler)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: In computer systems, what is the primary focus, role, or application of **Process States**?",
+            "options": [
+              "Its primary focus is cpu state saving-restoring overhead.",
+              "Its primary focus is process lifecycle stage indicators.",
+              "Its primary focus is fast page table lookup cache.",
+              "Its primary focus is redundancy-performance disk array configurations."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Process States** is: **process lifecycle stage indicators**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: In computer systems, what is the primary focus, role, or application of **CPU Scheduling**?",
+            "options": [
+              "Its primary focus is physical memory page eviction policy.",
+              "Its primary focus is minimal kernel user-space service design.",
+              "Its primary focus is ready queue CPU allocation.",
+              "Its primary focus is isolated process communication mechanisms."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **CPU Scheduling** is: **ready queue CPU allocation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: In computer systems, what is the primary focus, role, or application of **Process Synchronization**?",
+            "options": [
+              "Its primary focus is multiprocessor cache synchronization.",
+              "Its primary focus is speed-matching data storage buffer.",
+              "Its primary focus is prevention of race conditions.",
+              "Its primary focus is excessive paging performance collapse."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Process Synchronization** is: **prevention of race conditions**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: In computer systems, what is the primary focus, role, or application of **Deadlock Prevention**?",
+            "options": [
+              "Its primary focus is lightweight shared-memory execution unit.",
+              "Its primary focus is coffman condition elimination strategy.",
+              "Its primary focus is logical module-based memory division.",
+              "Its primary focus is hard drive head seek optimization."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Deadlock Prevention** is: **coffman condition elimination strategy**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: In computer systems, what is the primary focus, role, or application of **Banker's Algorithm**?",
+            "options": [
+              "Its primary focus is safe-state resource allocation simulator.",
+              "Its primary focus is physical disk block mapping strategies.",
+              "Its primary focus is single-thread resource lock.",
+              "Its primary focus is hardware-specific control translator program."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Banker's Algorithm** is: **safe-state resource allocation simulator**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: Which of the following Computer Science terms is defined as: 'is an OOP mechanism where a new class (derived) adopts the attributes and behaviors of an existing class (base).'?",
+            "options": [
+              "Breadth-First Search (BFS)",
+              "Doubly Linked List",
+              "Inheritance",
+              "Dynamic Programming"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Inheritance** is defined as: is an OOP mechanism where a new class (derived) adopts the attributes and behaviors of an existing class (base). (derived-to-base class reuse mechanism)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: Which of the following Computer Science terms is defined as: 'is the OOP practice of bundling data and methods that operate on that data within a single unit, restricting direct access.'?",
+            "options": [
+              "Encapsulation",
+              "Merge Sort",
+              "Depth-First Search (DFS)",
+              "Hashing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Encapsulation** is defined as: is the OOP practice of bundling data and methods that operate on that data within a single unit, restricting direct access. (data-hiding and modular unit bundling)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: Which of the following Computer Science terms is defined as: 'is a mathematical model for data types defined by its behavior (operations) from the point of view of a user, not implementation.'?",
+            "options": [
+              "Heap Data Structure",
+              "Binary Search",
+              "Big O Complexity",
+              "Abstract Data Type (ADT)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Abstract Data Type (ADT)** is defined as: is a mathematical model for data types defined by its behavior (operations) from the point of view of a user, not implementation. (mathematical operation behavior model)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: Which of the following Computer Science terms is defined as: 'is an automatic memory management process that reclaims heap memory occupied by objects that are no longer in use.'?",
+            "options": [
+              "Stack Data Structure",
+              "Call Stack",
+              "Garbage Collection",
+              "AVL Tree"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Garbage Collection** is defined as: is an automatic memory management process that reclaims heap memory occupied by objects that are no longer in use. (automatic dead heap memory reclamation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: Which of the following Computer Science terms is defined as: 'defines the region of program source code text within which a variable's binding or name is valid and accessible.'?",
+            "options": [
+              "Variable Scope",
+              "Queue Data Structure",
+              "Quick Sort",
+              "Pointer dereferencing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Variable Scope** is defined as: defines the region of program source code text within which a variable's binding or name is valid and accessible. (name accessibility region code boundary)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: In computer systems, what is the primary focus, role, or application of **Binary Search Tree (BST)**?",
+            "options": [
+              "Its primary focus is single interface multi-implementation capability.",
+              "Its primary focus is one-way pointer node sequence.",
+              "Its primary focus is space-efficient sparse graph representation.",
+              "Its primary focus is O(log n) average search time."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Binary Search Tree (BST)** is: **O(log n) average search time**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: In computer systems, what is the primary focus, role, or application of **Dijkstra's Algorithm**?",
+            "options": [
+              "Its primary focus is shortest path in unweighted graphs.",
+              "Its primary focus is single-source shortest path optimization.",
+              "Its primary focus is two-way pointer node sequence.",
+              "Its primary focus is derived-to-base class reuse mechanism."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Dijkstra's Algorithm** is: **single-source shortest path optimization**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: In computer systems, what is the primary focus, role, or application of **Dynamic Programming**?",
+            "options": [
+              "Its primary focus is memoization and tabulation paradigm.",
+              "Its primary focus is O(n log n) stable comparison sort.",
+              "Its primary focus is data-hiding and modular unit bundling.",
+              "Its primary focus is connectivity and topological sorting tool."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Dynamic Programming** is: **memoization and tabulation paradigm**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: In computer systems, what is the primary focus, role, or application of **Hashing**?",
+            "options": [
+              "Its primary focus is asymptotic run-time upper bound indicator.",
+              "Its primary focus is O(log n) sorted array search.",
+              "Its primary focus is O(1) average lookup complexity.",
+              "Its primary focus is mathematical operation behavior model."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Hashing** is: **O(1) average lookup complexity**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: In computer systems, what is the primary focus, role, or application of **Heap Data Structure**?",
+            "options": [
+              "Its primary focus is efficient priority queue implementation.",
+              "Its primary focus is active subroutine memory tracker.",
+              "Its primary focus is automatic dead heap memory reclamation.",
+              "Its primary focus is LIFO element storage collection."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Heap Data Structure** is: **efficient priority queue implementation**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: Which of the following Computer Science terms is defined as: 'is a precompiled collection of SQL statements stored in the database, reducing network traffic and improving performance.'?",
+            "options": [
+              "Lost Update Anomaly",
+              "Third Normal Form (3NF)",
+              "Stored Procedure",
+              "SQL JOIN"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Stored Procedure** is defined as: is a precompiled collection of SQL statements stored in the database, reducing network traffic and improving performance. (precompiled database SQL package)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: Which of the following Computer Science terms is defined as: 'is a column or group of columns that uniquely identifies each row in a database table, and cannot contain NULL values.'?",
+            "options": [
+              "Boyce-Codd Normal Form (BCNF)",
+              "Relational Algebra",
+              "Primary Key",
+              "Dirty Read"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Primary Key** is defined as: is a column or group of columns that uniquely identifies each row in a database table, and cannot contain NULL values. (row unique identifier constraint)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: Which of the following Computer Science terms is defined as: 'is a minimal superkey that can uniquely identify any database record without redundant attributes.'?",
+            "options": [
+              "Candidate Key",
+              "Database View",
+              "Non-Repeatable Read",
+              "ACID Properties"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Candidate Key** is defined as: is a minimal superkey that can uniquely identify any database record without redundant attributes. (minimal row identifier set)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: Which of the following Computer Science terms is defined as: 'is a state where all foreign key values in a database are valid, pointing to existing primary keys in parent tables.'?",
+            "options": [
+              "Referential Integrity",
+              "Phantom Read",
+              "NoSQL Database",
+              "Foreign Key"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Referential Integrity** is defined as: is a state where all foreign key values in a database are valid, pointing to existing primary keys in parent tables. (valid foreign-to-primary key reference state)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: Which of the following Computer Science terms is defined as: 'occurs when the same piece of data is stored in two or more separate places in a database unnecessarily.'?",
+            "options": [
+              "Data Redundancy",
+              "ER Modeling",
+              "B+ Tree Index",
+              "Query Optimizer"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Data Redundancy** is defined as: occurs when the same piece of data is stored in two or more separate places in a database unnecessarily. (unnecessary duplicate data storage)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: In computer systems, what is the primary focus, role, or application of **First Normal Form (1NF)**?",
+            "options": [
+              "Its primary focus is reverting uncommitted transactional modifications.",
+              "Its primary focus is serializability guarantee in transactions.",
+              "Its primary focus is automatic event-driven code block.",
+              "Its primary focus is atomic column values requirement."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **First Normal Form (1NF)** is: **atomic column values requirement**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: In computer systems, what is the primary focus, role, or application of **Second Normal Form (2NF)**?",
+            "options": [
+              "Its primary focus is concurrent write overwrite anomaly.",
+              "Its primary focus is precompiled database SQL package.",
+              "Its primary focus is multi-table data retrieval operation.",
+              "Its primary focus is elimination of partial dependencies."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Second Normal Form (2NF)** is: **elimination of partial dependencies**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: In computer systems, what is the primary focus, role, or application of **Third Normal Form (3NF)**?",
+            "options": [
+              "Its primary focus is reading uncommitted transaction modifications.",
+              "Its primary focus is elimination of transitive dependencies.",
+              "Its primary focus is row unique identifier constraint.",
+              "Its primary focus is theoretical query language foundation."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Third Normal Form (3NF)** is: **elimination of transitive dependencies**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: In computer systems, what is the primary focus, role, or application of **Boyce-Codd Normal Form (BCNF)**?",
+            "options": [
+              "Its primary focus is reading committed concurrent modifications.",
+              "Its primary focus is virtual table query abstraction.",
+              "Its primary focus is eliminating overlapping candidate key anomalies.",
+              "Its primary focus is minimal row identifier set."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Boyce-Codd Normal Form (BCNF)** is: **eliminating overlapping candidate key anomalies**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: In computer systems, what is the primary focus, role, or application of **ACID Properties**?",
+            "options": [
+              "Its primary focus is non-relational schema-less storage.",
+              "Its primary focus is valid foreign-to-primary key reference state.",
+              "Its primary focus is reading committed concurrent insertions.",
+              "Its primary focus is transaction reliability standards."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **ACID Properties** is: **transaction reliability standards**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: Which of the following Computer Science terms is defined as: 'measures the degree of interdependence between different software modules, aiming for a low level to increase modularity.'?",
+            "options": [
+              "CI/CD Pipeline",
+              "Subnet Mask",
+              "Coupling",
+              "Firewall"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Coupling** is defined as: measures the degree of interdependence between different software modules, aiming for a low level to increase modularity. (inter-module interdependence indicator)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: Which of the following Computer Science terms is defined as: 'is a structured process used by the software industry to design, develop, and test high-quality software (e.g., Waterfall).'?",
+            "options": [
+              "SDLC Model",
+              "IPv6 Address Space",
+              "Border Gateway Protocol (BGP)",
+              "Black-box Testing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **SDLC Model** is defined as: is a structured process used by the software industry to design, develop, and test high-quality software (e.g., Waterfall). (software development process model)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: Which of the following Computer Science terms is defined as: 'provide a standardized visual representation of software systems to describe classes, objects, and their relationships.'?",
+            "options": [
+              "White-box Testing",
+              "UML Diagrams",
+              "Symmetric Encryption",
+              "Agile Methodology"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **UML Diagrams** is defined as: provide a standardized visual representation of software systems to describe classes, objects, and their relationships. (standardized software visualization diagrams)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: Which of the following Computer Science terms is defined as: 'is a formal document describing the functional and non-functional requirements that the software system must fulfill.'?",
+            "options": [
+              "Asymmetric Encryption",
+              "SRS Document",
+              "Software Architecture",
+              "Design Pattern"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **SRS Document** is defined as: is a formal document describing the functional and non-functional requirements that the software system must fulfill. (formal software requirements specifications)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: Which of the following Computer Science terms is defined as: 'is the process of restructuring existing computer code without changing its external behavior, to improve readability and structure.'?",
+            "options": [
+              "Unit Testing",
+              "Scrum Framework",
+              "DNS (Domain Name System)",
+              "Refactoring"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Refactoring** is defined as: is the process of restructuring existing computer code without changing its external behavior, to improve readability and structure. (improving code quality without behavior change)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: In computer systems, what is the primary focus, role, or application of **OSI Model**?",
+            "options": [
+              "Its primary focus is distributed source control management.",
+              "Its primary focus is single module functional focus score.",
+              "Its primary focus is 7-layer abstraction framework.",
+              "Its primary focus is IP to MAC address resolver."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **OSI Model** is: **7-layer abstraction framework**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: In computer systems, what is the primary focus, role, or application of **TCP/IP Protocol**?",
+            "options": [
+              "Its primary focus is reliable internet transport framework.",
+              "Its primary focus is inter-module interdependence indicator.",
+              "Its primary focus is traffic filtering barrier.",
+              "Its primary focus is automated deployment automation."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **TCP/IP Protocol** is: **reliable internet transport framework**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: In computer systems, what is the primary focus, role, or application of **Subnet Mask**?",
+            "options": [
+              "Its primary focus is 128-bit internet address space standard.",
+              "Its primary focus is functional specification validation.",
+              "Its primary focus is software development process model.",
+              "Its primary focus is IP address segmentation tool."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Subnet Mask** is: **IP address segmentation tool**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: In computer systems, what is the primary focus, role, or application of **Border Gateway Protocol (BGP)**?",
+            "options": [
+              "Its primary focus is standardized software visualization diagrams.",
+              "Its primary focus is internal code path validation.",
+              "Its primary focus is flexible iterative development paradigm.",
+              "Its primary focus is internet autonomous routing protocol."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Border Gateway Protocol (BGP)** is: **internet autonomous routing protocol**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: In computer systems, what is the primary focus, role, or application of **Symmetric Encryption**?",
+            "options": [
+              "Its primary focus is reusable architectural solution blueprint.",
+              "Its primary focus is formal software requirements specifications.",
+              "Its primary focus is single shared-key cryptography.",
+              "Its primary focus is high-level structural system organization."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Symmetric Encryption** is: **single shared-key cryptography**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 3. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 3.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

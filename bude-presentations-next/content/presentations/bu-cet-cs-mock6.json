@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 6 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: If a research scenario or project requires: **compound proposition builders**, which component or approach should be chosen?",
+            "options": [
+              "Cache Memory Hierarchy",
+              "Demultiplexer (DEMUX)",
+              "Hamiltonian Cycle",
+              "Propositional Logic Connectives"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of compound proposition builders, you should select **Propositional Logic Connectives**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: If a research scenario or project requires: **predicate variable scoping symbols**, which component or approach should be chosen?",
+            "options": [
+              "Full Adder",
+              "Direct Memory Access (DMA)",
+              "Predicate Logic Quantifiers",
+              "Group Theory Group"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of predicate variable scoping symbols, you should select **Predicate Logic Quantifiers**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: If a research scenario or project requires: **set manipulation mathematical operations**, which component or approach should be chosen?",
+            "options": [
+              "Pipelining Hazards",
+              "Flip-Flops",
+              "Set Theory Operations",
+              "Permutation"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of set manipulation mathematical operations, you should select **Set Theory Operations**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: If a research scenario or project requires: **partitioning reflexive-symmetric-transitive relation**, which component or approach should be chosen?",
+            "options": [
+              "Boolean Algebra Minimization",
+              "Synchronous Counter",
+              "Instruction Cycle",
+              "Equivalence Relation"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of partitioning reflexive-symmetric-transitive relation, you should select **Equivalence Relation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: If a research scenario or project requires: **reflexive-antisymmetric-transitive ordering framework**, which component or approach should be chosen?",
+            "options": [
+              "Decoder",
+              "Partially Ordered Set (Poset)",
+              "Karnaugh Map (K-map)",
+              "RISC Architecture"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of reflexive-antisymmetric-transitive ordering framework, you should select **Partially Ordered Set (Poset)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: If a research scenario or project requires: **vertex incident edge count**, which component or approach should be chosen?",
+            "options": [
+              "Von Neumann Architecture",
+              "Vertex Degree",
+              "IEEE 754 Standard",
+              "Multiplexer (MUX)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of vertex incident edge count, you should select **Vertex Degree**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: If a research scenario or project requires: **single-visit edge traversal trail**, which component or approach should be chosen?",
+            "options": [
+              "Euler Path",
+              "Cache Memory Hierarchy",
+              "Demultiplexer (DEMUX)",
+              "Propositional Logic Connectives"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of single-visit edge traversal trail, you should select **Euler Path**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: If a research scenario or project requires: **single-visit vertex traversal loop**, which component or approach should be chosen?",
+            "options": [
+              "Direct Memory Access (DMA)",
+              "Hamiltonian Cycle",
+              "Full Adder",
+              "Predicate Logic Quantifiers"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of single-visit vertex traversal loop, you should select **Hamiltonian Cycle**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: If a research scenario or project requires: **closure-associativity-identity-inverse algebraic structure**, which component or approach should be chosen?",
+            "options": [
+              "Group Theory Group",
+              "Pipelining Hazards",
+              "Set Theory Operations",
+              "Flip-Flops"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of closure-associativity-identity-inverse algebraic structure, you should select **Group Theory Group**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: If a research scenario or project requires: **order-sensitive selection arrangement**, which component or approach should be chosen?",
+            "options": [
+              "Permutation",
+              "Synchronous Counter",
+              "Equivalence Relation",
+              "Instruction Cycle"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of order-sensitive selection arrangement, you should select **Permutation**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: If a research scenario or project requires: **process lifecycle stage indicators**, which component or approach should be chosen?",
+            "options": [
+              "Translation Lookaside Buffer (TLB)",
+              "RAID Levels",
+              "Process States",
+              "Context Switching"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of process lifecycle stage indicators, you should select **Process States**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: If a research scenario or project requires: **ready queue CPU allocation**, which component or approach should be chosen?",
+            "options": [
+              "Page Replacement Algorithm",
+              "Microkernel Architecture",
+              "CPU Scheduling",
+              "Inter-Process Communication (IPC)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of ready queue CPU allocation, you should select **CPU Scheduling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: If a research scenario or project requires: **prevention of race conditions**, which component or approach should be chosen?",
+            "options": [
+              "I/O Buffering",
+              "Cache Coherence Protocols",
+              "Thrashing",
+              "Process Synchronization"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of prevention of race conditions, you should select **Process Synchronization**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: If a research scenario or project requires: **coffman condition elimination strategy**, which component or approach should be chosen?",
+            "options": [
+              "Deadlock Prevention",
+              "Thread",
+              "Memory Segmentation",
+              "Disk Scheduling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of coffman condition elimination strategy, you should select **Deadlock Prevention**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: If a research scenario or project requires: **safe-state resource allocation simulator**, which component or approach should be chosen?",
+            "options": [
+              "Banker's Algorithm",
+              "File Allocation Methods",
+              "Device Driver",
+              "Mutex"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of safe-state resource allocation simulator, you should select **Banker's Algorithm**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: If a research scenario or project requires: **elimination of external fragmentation**, which component or approach should be chosen?",
+            "options": [
+              "Spooling",
+              "System Calls",
+              "Counting Semaphore",
+              "Paging"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of elimination of external fragmentation, you should select **Paging**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: If a research scenario or project requires: **logical memory expansion**, which component or approach should be chosen?",
+            "options": [
+              "RAID Levels",
+              "Process States",
+              "Virtual Memory",
+              "Context Switching"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of logical memory expansion, you should select **Virtual Memory**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: If a research scenario or project requires: **fast page table lookup cache**, which component or approach should be chosen?",
+            "options": [
+              "Inter-Process Communication (IPC)",
+              "CPU Scheduling",
+              "Translation Lookaside Buffer (TLB)",
+              "Microkernel Architecture"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of fast page table lookup cache, you should select **Translation Lookaside Buffer (TLB)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: If a research scenario or project requires: **physical memory page eviction policy**, which component or approach should be chosen?",
+            "options": [
+              "Process Synchronization",
+              "Page Replacement Algorithm",
+              "I/O Buffering",
+              "Cache Coherence Protocols"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of physical memory page eviction policy, you should select **Page Replacement Algorithm**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: If a research scenario or project requires: **excessive paging performance collapse**, which component or approach should be chosen?",
+            "options": [
+              "Deadlock Prevention",
+              "Thrashing",
+              "Memory Segmentation",
+              "Disk Scheduling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of excessive paging performance collapse, you should select **Thrashing**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: If a research scenario or project requires: **O(log n) average search time**, which component or approach should be chosen?",
+            "options": [
+              "Adjacency List",
+              "Singly Linked List",
+              "Binary Search Tree (BST)",
+              "Polymorphism"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of O(log n) average search time, you should select **Binary Search Tree (BST)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: If a research scenario or project requires: **single-source shortest path optimization**, which component or approach should be chosen?",
+            "options": [
+              "Breadth-First Search (BFS)",
+              "Dijkstra's Algorithm",
+              "Doubly Linked List",
+              "Inheritance"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of single-source shortest path optimization, you should select **Dijkstra's Algorithm**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: If a research scenario or project requires: **memoization and tabulation paradigm**, which component or approach should be chosen?",
+            "options": [
+              "Dynamic Programming",
+              "Encapsulation",
+              "Depth-First Search (DFS)",
+              "Merge Sort"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of memoization and tabulation paradigm, you should select **Dynamic Programming**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: If a research scenario or project requires: **O(1) average lookup complexity**, which component or approach should be chosen?",
+            "options": [
+              "Big O Complexity",
+              "Binary Search",
+              "Abstract Data Type (ADT)",
+              "Hashing"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of O(1) average lookup complexity, you should select **Hashing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: If a research scenario or project requires: **efficient priority queue implementation**, which component or approach should be chosen?",
+            "options": [
+              "Stack Data Structure",
+              "Garbage Collection",
+              "Heap Data Structure",
+              "Call Stack"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of efficient priority queue implementation, you should select **Heap Data Structure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: If a research scenario or project requires: **strictly balanced binary search tree**, which component or approach should be chosen?",
+            "options": [
+              "Queue Data Structure",
+              "Pointer dereferencing",
+              "Variable Scope",
+              "AVL Tree"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of strictly balanced binary search tree, you should select **AVL Tree**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: If a research scenario or project requires: **in-place sorting with O(n log n) average time**, which component or approach should be chosen?",
+            "options": [
+              "Polymorphism",
+              "Binary Search Tree (BST)",
+              "Quick Sort",
+              "Singly Linked List"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of in-place sorting with O(n log n) average time, you should select **Quick Sort**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: If a research scenario or project requires: **space-efficient sparse graph representation**, which component or approach should be chosen?",
+            "options": [
+              "Adjacency List",
+              "Doubly Linked List",
+              "Dijkstra's Algorithm",
+              "Inheritance"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of space-efficient sparse graph representation, you should select **Adjacency List**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: If a research scenario or project requires: **shortest path in unweighted graphs**, which component or approach should be chosen?",
+            "options": [
+              "Breadth-First Search (BFS)",
+              "Encapsulation",
+              "Merge Sort",
+              "Dynamic Programming"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of shortest path in unweighted graphs, you should select **Breadth-First Search (BFS)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: If a research scenario or project requires: **connectivity and topological sorting tool**, which component or approach should be chosen?",
+            "options": [
+              "Binary Search",
+              "Abstract Data Type (ADT)",
+              "Depth-First Search (DFS)",
+              "Hashing"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of connectivity and topological sorting tool, you should select **Depth-First Search (DFS)**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: If a research scenario or project requires: **atomic column values requirement**, which component or approach should be chosen?",
+            "options": [
+              "Transaction Rollback",
+              "Two-Phase Locking (2PL)",
+              "Database Trigger",
+              "First Normal Form (1NF)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of atomic column values requirement, you should select **First Normal Form (1NF)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: If a research scenario or project requires: **elimination of partial dependencies**, which component or approach should be chosen?",
+            "options": [
+              "Second Normal Form (2NF)",
+              "SQL JOIN",
+              "Stored Procedure",
+              "Lost Update Anomaly"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of elimination of partial dependencies, you should select **Second Normal Form (2NF)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: If a research scenario or project requires: **elimination of transitive dependencies**, which component or approach should be chosen?",
+            "options": [
+              "Third Normal Form (3NF)",
+              "Primary Key",
+              "Dirty Read",
+              "Relational Algebra"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of elimination of transitive dependencies, you should select **Third Normal Form (3NF)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: If a research scenario or project requires: **eliminating overlapping candidate key anomalies**, which component or approach should be chosen?",
+            "options": [
+              "Database View",
+              "Candidate Key",
+              "Non-Repeatable Read",
+              "Boyce-Codd Normal Form (BCNF)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of eliminating overlapping candidate key anomalies, you should select **Boyce-Codd Normal Form (BCNF)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: If a research scenario or project requires: **transaction reliability standards**, which component or approach should be chosen?",
+            "options": [
+              "ACID Properties",
+              "Referential Integrity",
+              "Phantom Read",
+              "NoSQL Database"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of transaction reliability standards, you should select **ACID Properties**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: If a research scenario or project requires: **referential integrity constraint**, which component or approach should be chosen?",
+            "options": [
+              "Data Redundancy",
+              "ER Modeling",
+              "Foreign Key",
+              "Query Optimizer"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of referential integrity constraint, you should select **Foreign Key**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: If a research scenario or project requires: **disk-optimized indexing structure**, which component or approach should be chosen?",
+            "options": [
+              "Database Trigger",
+              "Transaction Rollback",
+              "First Normal Form (1NF)",
+              "B+ Tree Index"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of disk-optimized indexing structure, you should select **B+ Tree Index**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: If a research scenario or project requires: **serializability guarantee in transactions**, which component or approach should be chosen?",
+            "options": [
+              "Lost Update Anomaly",
+              "Two-Phase Locking (2PL)",
+              "Stored Procedure",
+              "Second Normal Form (2NF)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of serializability guarantee in transactions, you should select **Two-Phase Locking (2PL)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: If a research scenario or project requires: **multi-table data retrieval operation**, which component or approach should be chosen?",
+            "options": [
+              "Dirty Read",
+              "Third Normal Form (3NF)",
+              "Primary Key",
+              "SQL JOIN"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of multi-table data retrieval operation, you should select **SQL JOIN**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: If a research scenario or project requires: **theoretical query language foundation**, which component or approach should be chosen?",
+            "options": [
+              "Candidate Key",
+              "Relational Algebra",
+              "Boyce-Codd Normal Form (BCNF)",
+              "Non-Repeatable Read"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of theoretical query language foundation, you should select **Relational Algebra**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: If a research scenario or project requires: **7-layer abstraction framework**, which component or approach should be chosen?",
+            "options": [
+              "OSI Model",
+              "Cohesion",
+              "Git Version Control",
+              "ARP (Address Resolution Protocol)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of 7-layer abstraction framework, you should select **OSI Model**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: If a research scenario or project requires: **reliable internet transport framework**, which component or approach should be chosen?",
+            "options": [
+              "Coupling",
+              "CI/CD Pipeline",
+              "TCP/IP Protocol",
+              "Firewall"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of reliable internet transport framework, you should select **TCP/IP Protocol**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: If a research scenario or project requires: **IP address segmentation tool**, which component or approach should be chosen?",
+            "options": [
+              "Black-box Testing",
+              "Subnet Mask",
+              "IPv6 Address Space",
+              "SDLC Model"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of IP address segmentation tool, you should select **Subnet Mask**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: If a research scenario or project requires: **internet autonomous routing protocol**, which component or approach should be chosen?",
+            "options": [
+              "Agile Methodology",
+              "Border Gateway Protocol (BGP)",
+              "White-box Testing",
+              "UML Diagrams"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of internet autonomous routing protocol, you should select **Border Gateway Protocol (BGP)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: If a research scenario or project requires: **single shared-key cryptography**, which component or approach should be chosen?",
+            "options": [
+              "Design Pattern",
+              "Symmetric Encryption",
+              "SRS Document",
+              "Software Architecture"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of single shared-key cryptography, you should select **Symmetric Encryption**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: If a research scenario or project requires: **public-private key pair cryptography**, which component or approach should be chosen?",
+            "options": [
+              "Asymmetric Encryption",
+              "Scrum Framework",
+              "Unit Testing",
+              "Refactoring"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of public-private key pair cryptography, you should select **Asymmetric Encryption**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: If a research scenario or project requires: **internet address resolution directory**, which component or approach should be chosen?",
+            "options": [
+              "Git Version Control",
+              "DNS (Domain Name System)",
+              "Cohesion",
+              "OSI Model"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of internet address resolution directory, you should select **DNS (Domain Name System)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: If a research scenario or project requires: **IP to MAC address resolver**, which component or approach should be chosen?",
+            "options": [
+              "TCP/IP Protocol",
+              "ARP (Address Resolution Protocol)",
+              "CI/CD Pipeline",
+              "Coupling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of IP to MAC address resolver, you should select **ARP (Address Resolution Protocol)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: If a research scenario or project requires: **traffic filtering barrier**, which component or approach should be chosen?",
+            "options": [
+              "SDLC Model",
+              "Firewall",
+              "Black-box Testing",
+              "Subnet Mask"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of traffic filtering barrier, you should select **Firewall**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: If a research scenario or project requires: **128-bit internet address space standard**, which component or approach should be chosen?",
+            "options": [
+              "IPv6 Address Space",
+              "Border Gateway Protocol (BGP)",
+              "White-box Testing",
+              "UML Diagrams"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of 128-bit internet address space standard, you should select **IPv6 Address Space**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 6. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 6.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

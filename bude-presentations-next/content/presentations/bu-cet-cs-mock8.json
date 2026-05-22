@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 8 - Computer Science",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Discrete Structures & Digital Logic",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q1: If a research scenario or project requires: **cpu-free I/O-memory transfer**, which component or approach should be chosen?",
+            "options": [
+              "Group Theory Group",
+              "Full Adder",
+              "Set Theory Operations",
+              "Direct Memory Access (DMA)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of cpu-free I/O-memory transfer, you should select **Direct Memory Access (DMA)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q2: If a research scenario or project requires: **instruction pipeline execution stalls**, which component or approach should be chosen?",
+            "options": [
+              "Pipelining Hazards",
+              "Permutation",
+              "Equivalence Relation",
+              "Flip-Flops"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of instruction pipeline execution stalls, you should select **Pipelining Hazards**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q3: If a research scenario or project requires: **fetch-decode-execute basic loop**, which component or approach should be chosen?",
+            "options": [
+              "Instruction Cycle",
+              "Partially Ordered Set (Poset)",
+              "Boolean Algebra Minimization",
+              "Synchronous Counter"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of fetch-decode-execute basic loop, you should select **Instruction Cycle**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q4: If a research scenario or project requires: **reduced uniform instruction set design**, which component or approach should be chosen?",
+            "options": [
+              "Vertex Degree",
+              "Decoder",
+              "Karnaugh Map (K-map)",
+              "RISC Architecture"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of reduced uniform instruction set design, you should select **RISC Architecture**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q5: If a research scenario or project requires: **floating-point binary representation format**, which component or approach should be chosen?",
+            "options": [
+              "Euler Path",
+              "Von Neumann Architecture",
+              "IEEE 754 Standard",
+              "Multiplexer (MUX)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of floating-point binary representation format, you should select **IEEE 754 Standard**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q6: Which of the following statements is **TRUE** regarding **Propositional Logic Connectives**?",
+            "options": [
+              "It is correctly described as: are symbols used to connect propositions to form compound propositions, such as AND, OR, and NOT.",
+              "It has no relation to: compound proposition builders",
+              "It is fundamentally characterized by: is a closed loop in a graph that visits every vertex exactly once and returns to the starting vertex.",
+              "It is equivalent in purpose to: is a combinational logic circuit that takes a single input line and routes it to one of several digital outputs."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Propositional Logic Connectives** is accurately described as: are symbols used to connect propositions to form compound propositions, such as AND, OR, and NOT."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q7: Which of the following statements is **TRUE** regarding **Predicate Logic Quantifiers**?",
+            "options": [
+              "It is correctly described as: are symbols like Universal (forall) and Existential (exists) that specify the scope of a predicate's variables.",
+              "It is equivalent in purpose to: is a combinational circuit that adds three single-bit inputs (A, B, and Carry-in) and outputs Sum and Carry.",
+              "It is fundamentally characterized by: is a set combined with a binary operation satisfying closure, associativity, identity, and invertibility.",
+              "It has no relation to: predicate variable scoping symbols"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Predicate Logic Quantifiers** is accurately described as: are symbols like Universal (forall) and Existential (exists) that specify the scope of a predicate's variables."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q8: Which of the following statements is **TRUE** regarding **Set Theory Operations**?",
+            "options": [
+              "It is equivalent in purpose to: are sequential logic circuits used as basic memory storage elements, changing states based on clock inputs (e.g. JK, D).",
+              "It has no relation to: set manipulation mathematical operations",
+              "It is fundamentally characterized by: is an ordered arrangement of all or part of a set of objects, where the order of selection matters.",
+              "It is correctly described as: include Union, Intersection, Difference, and Complement used to manipulate and combine collections of objects."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Set Theory Operations** is accurately described as: include Union, Intersection, Difference, and Complement used to manipulate and combine collections of objects."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q9: Which of the following statements is **TRUE** regarding **Equivalence Relation**?",
+            "options": [
+              "It is correctly described as: is a binary relation that is simultaneously reflexive, symmetric, and transitive, partitioning a set into equivalence classes.",
+              "It is fundamentally characterized by: is the process of simplifying a Boolean expression to reduce the number of logic gates required for implementation.",
+              "It has no relation to: partitioning reflexive-symmetric-transitive relation",
+              "It is equivalent in purpose to: is a digital counter where all flip-flops are triggered simultaneously by a single common clock pulse."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Equivalence Relation** is accurately described as: is a binary relation that is simultaneously reflexive, symmetric, and transitive, partitioning a set into equivalence classes."
+          },
+          {
+            "type": "quiz",
+            "topic": "Discrete Structures & Digital Logic",
+            "question": "Q10: Which of the following statements is **TRUE** regarding **Partially Ordered Set (Poset)**?",
+            "options": [
+              "It is fundamentally characterized by: is a graphical method used to simplify Boolean algebra expressions without using algebraic laws.",
+              "It has no relation to: reflexive-antisymmetric-transitive ordering framework",
+              "It is correctly described as: is a set combined with a binary relation that is reflexive, antisymmetric, and transitive.",
+              "It is equivalent in purpose to: is a combinational circuit that converts an n-bit binary input code into a maximum of 2^n unique output lines."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Partially Ordered Set (Poset)** is accurately described as: is a set combined with a binary relation that is reflexive, antisymmetric, and transitive."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Computer Architecture & OS",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q11: If a research scenario or project requires: **minimal kernel user-space service design**, which component or approach should be chosen?",
+            "options": [
+              "Process Synchronization",
+              "Page Replacement Algorithm",
+              "Microkernel Architecture",
+              "Inter-Process Communication (IPC)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of minimal kernel user-space service design, you should select **Microkernel Architecture**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q12: If a research scenario or project requires: **multiprocessor cache synchronization**, which component or approach should be chosen?",
+            "options": [
+              "Cache Coherence Protocols",
+              "I/O Buffering",
+              "Thrashing",
+              "Deadlock Prevention"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of multiprocessor cache synchronization, you should select **Cache Coherence Protocols**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q13: If a research scenario or project requires: **logical module-based memory division**, which component or approach should be chosen?",
+            "options": [
+              "Disk Scheduling",
+              "Banker's Algorithm",
+              "Memory Segmentation",
+              "Thread"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of logical module-based memory division, you should select **Memory Segmentation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q14: If a research scenario or project requires: **hardware-specific control translator program**, which component or approach should be chosen?",
+            "options": [
+              "Paging",
+              "Device Driver",
+              "File Allocation Methods",
+              "Mutex"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of hardware-specific control translator program, you should select **Device Driver**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q15: If a research scenario or project requires: **peripheral device print job spooler**, which component or approach should be chosen?",
+            "options": [
+              "Spooling",
+              "Counting Semaphore",
+              "Virtual Memory",
+              "System Calls"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of peripheral device print job spooler, you should select **Spooling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q16: Which of the following statements is **TRUE** regarding **Process States**?",
+            "options": [
+              "It is equivalent in purpose to: is the process of storing the state of a CPU process/thread so that it can be restored and resume execution later.",
+              "It is correctly described as: include Ready, Running, Waiting, New, and Terminated, representing the life-cycle stages of a process.",
+              "It is fundamentally characterized by: is a hardware cache memory that stores recent translations of virtual memory addresses to physical memory addresses.",
+              "It has no relation to: process lifecycle stage indicators"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Process States** is accurately described as: include Ready, Running, Waiting, New, and Terminated, representing the life-cycle stages of a process."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q17: Which of the following statements is **TRUE** regarding **CPU Scheduling**?",
+            "options": [
+              "It is correctly described as: is the process of allocating CPU time to processes in the ready queue using algorithms like Round Robin or SJF.",
+              "It has no relation to: ready queue CPU allocation",
+              "It is fundamentally characterized by: decides which memory page to swap out of physical RAM when a new page needs to be allocated (e.g. LRU, FIFO).",
+              "It is equivalent in purpose to: refers to mechanisms (like pipes, message queues, shared memory) that allow processes to communicate and share data."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **CPU Scheduling** is accurately described as: is the process of allocating CPU time to processes in the ready queue using algorithms like Round Robin or SJF."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q18: Which of the following statements is **TRUE** regarding **Process Synchronization**?",
+            "options": [
+              "It is equivalent in purpose to: uses temporary memory areas to store data during transfers between fast devices (like CPU) and slow I/O peripherals.",
+              "It has no relation to: prevention of race conditions",
+              "It is correctly described as: coordinates the execution of concurrent processes to ensure no two processes access shared data simultaneously.",
+              "It is fundamentally characterized by: is a state where the operating system spends more time swapping pages in and out of disk than executing instructions."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Process Synchronization** is accurately described as: coordinates the execution of concurrent processes to ensure no two processes access shared data simultaneously."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q19: Which of the following statements is **TRUE** regarding **Deadlock Prevention**?",
+            "options": [
+              "It is correctly described as: is a strategy that eliminates at least one of the four necessary Coffman conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait).",
+              "It is fundamentally characterized by: is the smallest unit of execution within a process, sharing the process's memory space but maintaining its own stack and registers.",
+              "It is equivalent in purpose to: is the process of managing I/O requests for a hard disk drive using algorithms like SCAN, C-SCAN, or SSTF.",
+              "It has no relation to: coffman condition elimination strategy"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Deadlock Prevention** is accurately described as: is a strategy that eliminates at least one of the four necessary Coffman conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Computer Architecture & OS",
+            "question": "Q20: Which of the following statements is **TRUE** regarding **Banker's Algorithm**?",
+            "options": [
+              "It is fundamentally characterized by: is a mutual exclusion locking mechanism used to synchronize access to a resource, ensuring only one thread holds the lock at a time.",
+              "It is equivalent in purpose to: include Contiguous, Linked, and Indexed allocation strategies for storing files on physical storage devices.",
+              "It is correctly described as: is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating allocation limits.",
+              "It has no relation to: safe-state resource allocation simulator"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Banker's Algorithm** is accurately described as: is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating allocation limits."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Programming & Data Structures",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q21: If a research scenario or project requires: **derived-to-base class reuse mechanism**, which component or approach should be chosen?",
+            "options": [
+              "Dynamic Programming",
+              "Inheritance",
+              "Breadth-First Search (BFS)",
+              "Doubly Linked List"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of derived-to-base class reuse mechanism, you should select **Inheritance**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q22: If a research scenario or project requires: **data-hiding and modular unit bundling**, which component or approach should be chosen?",
+            "options": [
+              "Encapsulation",
+              "Depth-First Search (DFS)",
+              "Hashing",
+              "Merge Sort"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of data-hiding and modular unit bundling, you should select **Encapsulation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q23: If a research scenario or project requires: **mathematical operation behavior model**, which component or approach should be chosen?",
+            "options": [
+              "Big O Complexity",
+              "Heap Data Structure",
+              "Binary Search",
+              "Abstract Data Type (ADT)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of mathematical operation behavior model, you should select **Abstract Data Type (ADT)**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q24: If a research scenario or project requires: **automatic dead heap memory reclamation**, which component or approach should be chosen?",
+            "options": [
+              "AVL Tree",
+              "Garbage Collection",
+              "Call Stack",
+              "Stack Data Structure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of automatic dead heap memory reclamation, you should select **Garbage Collection**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q25: If a research scenario or project requires: **name accessibility region code boundary**, which component or approach should be chosen?",
+            "options": [
+              "Queue Data Structure",
+              "Pointer dereferencing",
+              "Quick Sort",
+              "Variable Scope"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of name accessibility region code boundary, you should select **Variable Scope**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q26: Which of the following statements is **TRUE** regarding **Binary Search Tree (BST)**?",
+            "options": [
+              "It is equivalent in purpose to: is a linear collection of data nodes where each node points to the next node in the sequence.",
+              "It is correctly described as: is a node-based binary tree data structure where the left subtree contains keys less than the parent, and the right contains keys greater.",
+              "It has no relation to: O(log n) average search time",
+              "It is fundamentally characterized by: represents a graph as an array of linked lists, where each index represents a vertex and its list contains its adjacent neighbors."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Binary Search Tree (BST)** is accurately described as: is a node-based binary tree data structure where the left subtree contains keys less than the parent, and the right contains keys greater."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q27: Which of the following statements is **TRUE** regarding **Dijkstra's Algorithm**?",
+            "options": [
+              "It is fundamentally characterized by: traverses a graph level by level, utilizing a queue data structure to visit vertices in order of increasing distance.",
+              "It has no relation to: single-source shortest path optimization",
+              "It is correctly described as: finds the shortest path from a single source vertex to all other vertices in a weighted graph with non-negative edge weights.",
+              "It is equivalent in purpose to: is a linear collection of nodes where each node contains pointers to both the next and the previous nodes."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Dijkstra's Algorithm** is accurately described as: finds the shortest path from a single source vertex to all other vertices in a weighted graph with non-negative edge weights."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q28: Which of the following statements is **TRUE** regarding **Dynamic Programming**?",
+            "options": [
+              "It is correctly described as: solves complex problems by breaking them down into simpler subproblems and storing the results of these subproblems to avoid redundant computing.",
+              "It is equivalent in purpose to: is a stable, divide-and-conquer sorting algorithm that splits arrays in halves, sorts them, and merges them back.",
+              "It is fundamentally characterized by: traverses a graph by exploring as deep as possible along each branch before backtracking, utilizing a stack.",
+              "It has no relation to: memoization and tabulation paradigm"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Dynamic Programming** is accurately described as: solves complex problems by breaking them down into simpler subproblems and storing the results of these subproblems to avoid redundant computing."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q29: Which of the following statements is **TRUE** regarding **Hashing**?",
+            "options": [
+              "It is equivalent in purpose to: is an efficient search algorithm that repeatedly divides a sorted search interval in half to locate a target.",
+              "It has no relation to: O(1) average lookup complexity",
+              "It is correctly described as: maps data of arbitrary size to fixed-size values using a mathematical function, enabling constant-time average insertions and lookups.",
+              "It is fundamentally characterized by: describes the asymptotic upper bound of an algorithm's execution time or space requirement in terms of input size."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Hashing** is accurately described as: maps data of arbitrary size to fixed-size values using a mathematical function, enabling constant-time average insertions and lookups."
+          },
+          {
+            "type": "quiz",
+            "topic": "Programming & Data Structures",
+            "question": "Q30: Which of the following statements is **TRUE** regarding **Heap Data Structure**?",
+            "options": [
+              "It is fundamentally characterized by: is a linear data structure that follows the Last-In-First-Out (LIFO) principle for inserting and removing elements.",
+              "It is equivalent in purpose to: is a stack memory structure that stores information about active subroutines and functions in a running program.",
+              "It has no relation to: efficient priority queue implementation",
+              "It is correctly described as: is a complete binary tree that satisfies the heap property, where the parent node key is compared with its children."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Heap Data Structure** is accurately described as: is a complete binary tree that satisfies the heap property, where the parent node key is compared with its children."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Database Management Systems",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q31: If a research scenario or project requires: **precompiled database SQL package**, which component or approach should be chosen?",
+            "options": [
+              "Lost Update Anomaly",
+              "SQL JOIN",
+              "Stored Procedure",
+              "Third Normal Form (3NF)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of precompiled database SQL package, you should select **Stored Procedure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q32: If a research scenario or project requires: **row unique identifier constraint**, which component or approach should be chosen?",
+            "options": [
+              "Boyce-Codd Normal Form (BCNF)",
+              "Primary Key",
+              "Relational Algebra",
+              "Dirty Read"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of row unique identifier constraint, you should select **Primary Key**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q33: If a research scenario or project requires: **minimal row identifier set**, which component or approach should be chosen?",
+            "options": [
+              "Candidate Key",
+              "ACID Properties",
+              "Non-Repeatable Read",
+              "Database View"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of minimal row identifier set, you should select **Candidate Key**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q34: If a research scenario or project requires: **valid foreign-to-primary key reference state**, which component or approach should be chosen?",
+            "options": [
+              "Foreign Key",
+              "NoSQL Database",
+              "Phantom Read",
+              "Referential Integrity"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of valid foreign-to-primary key reference state, you should select **Referential Integrity**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q35: If a research scenario or project requires: **unnecessary duplicate data storage**, which component or approach should be chosen?",
+            "options": [
+              "Data Redundancy",
+              "B+ Tree Index",
+              "Query Optimizer",
+              "ER Modeling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of unnecessary duplicate data storage, you should select **Data Redundancy**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q36: Which of the following statements is **TRUE** regarding **First Normal Form (1NF)**?",
+            "options": [
+              "It is correctly described as: requires that domain values must be atomic, meaning attributes cannot contain multiple or nested values.",
+              "It is fundamentally characterized by: is a concurrency control method that guarantees serializability by locking data items in growing and shrinking phases.",
+              "It has no relation to: atomic column values requirement",
+              "It is equivalent in purpose to: reverts all changes made during the current transaction if a failure occurs before completion, ensuring atomicity."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **First Normal Form (1NF)** is accurately described as: requires that domain values must be atomic, meaning attributes cannot contain multiple or nested values."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q37: Which of the following statements is **TRUE** regarding **Second Normal Form (2NF)**?",
+            "options": [
+              "It has no relation to: elimination of partial dependencies",
+              "It is fundamentally characterized by: combines records from two or more tables in a relational database based on a related column between them.",
+              "It is equivalent in purpose to: occurs when two concurrent transactions read and update the same data item, where one overwrite is lost.",
+              "It is correctly described as: requires a table to be in 1NF and ensure that all non-prime attributes are fully functionally dependent on the primary key."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Second Normal Form (2NF)** is accurately described as: requires a table to be in 1NF and ensure that all non-prime attributes are fully functionally dependent on the primary key."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q38: Which of the following statements is **TRUE** regarding **Third Normal Form (3NF)**?",
+            "options": [
+              "It has no relation to: elimination of transitive dependencies",
+              "It is correctly described as: requires a table to be in 2NF and ensure that no non-prime attribute is transitively dependent on the primary key.",
+              "It is fundamentally characterized by: is a procedural query language consisting of operations like Select, Project, Join, and Union to manipulate relations.",
+              "It is equivalent in purpose to: occurs when a transaction reads data that has been modified by another concurrent transaction but not yet committed."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Third Normal Form (3NF)** is accurately described as: requires a table to be in 2NF and ensure that no non-prime attribute is transitively dependent on the primary key."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q39: Which of the following statements is **TRUE** regarding **Boyce-Codd Normal Form (BCNF)**?",
+            "options": [
+              "It has no relation to: eliminating overlapping candidate key anomalies",
+              "It is fundamentally characterized by: is a virtual table based on the result-set of an active SQL statement, containing no physical data of its own.",
+              "It is correctly described as: is a stronger version of 3NF where for every non-trivial functional dependency X -> Y, X must be a superkey.",
+              "It is equivalent in purpose to: occurs when a transaction re-reads data it previously read and finds that another committed transaction has modified it."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Boyce-Codd Normal Form (BCNF)** is accurately described as: is a stronger version of 3NF where for every non-trivial functional dependency X -> Y, X must be a superkey."
+          },
+          {
+            "type": "quiz",
+            "topic": "Database Management Systems",
+            "question": "Q40: Which of the following statements is **TRUE** regarding **ACID Properties**?",
+            "options": [
+              "It has no relation to: transaction reliability standards",
+              "It is correctly described as: guarantee database transaction reliability: Atomicity, Consistency, Isolation, and Durability.",
+              "It is equivalent in purpose to: occurs when a transaction re-runs a query returning a set of rows and finds new rows added by another committed transaction.",
+              "It is fundamentally characterized by: provides a mechanism for storage and retrieval of data modeled in formats other than tabular relations (e.g. document, key-value)."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **ACID Properties** is accurately described as: guarantee database transaction reliability: Atomicity, Consistency, Isolation, and Durability."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Software Engineering & Networks",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q41: If a research scenario or project requires: **inter-module interdependence indicator**, which component or approach should be chosen?",
+            "options": [
+              "Firewall",
+              "CI/CD Pipeline",
+              "Coupling",
+              "Subnet Mask"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of inter-module interdependence indicator, you should select **Coupling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q42: If a research scenario or project requires: **software development process model**, which component or approach should be chosen?",
+            "options": [
+              "Border Gateway Protocol (BGP)",
+              "SDLC Model",
+              "Black-box Testing",
+              "IPv6 Address Space"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of software development process model, you should select **SDLC Model**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q43: If a research scenario or project requires: **standardized software visualization diagrams**, which component or approach should be chosen?",
+            "options": [
+              "Agile Methodology",
+              "UML Diagrams",
+              "White-box Testing",
+              "Symmetric Encryption"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of standardized software visualization diagrams, you should select **UML Diagrams**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q44: If a research scenario or project requires: **formal software requirements specifications**, which component or approach should be chosen?",
+            "options": [
+              "Asymmetric Encryption",
+              "Design Pattern",
+              "SRS Document",
+              "Software Architecture"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of formal software requirements specifications, you should select **SRS Document**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q45: If a research scenario or project requires: **improving code quality without behavior change**, which component or approach should be chosen?",
+            "options": [
+              "Refactoring",
+              "Scrum Framework",
+              "DNS (Domain Name System)",
+              "Unit Testing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of improving code quality without behavior change, you should select **Refactoring**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q46: Which of the following statements is **TRUE** regarding **OSI Model**?",
+            "options": [
+              "It is fundamentally characterized by: is a protocol used to map an Internet Protocol (IP) address to a physical machine Media Access Control (MAC) address.",
+              "It is equivalent in purpose to: is a distributed version control system designed to track changes in source code during software development.",
+              "It has no relation to: 7-layer abstraction framework",
+              "It is correctly described as: is a conceptual framework of 7 layers that standardizes telecommunication and networking protocol functions."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **OSI Model** is accurately described as: is a conceptual framework of 7 layers that standardizes telecommunication and networking protocol functions."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q47: Which of the following statements is **TRUE** regarding **TCP/IP Protocol**?",
+            "options": [
+              "It is equivalent in purpose to: automates software delivery phases: building, testing, and deploying changes to production environments.",
+              "It is correctly described as: is a suite of communication protocols used to interconnect network devices on the internet, emphasizing reliable delivery.",
+              "It is fundamentally characterized by: is a network security device that monitors and filters incoming and outgoing network traffic based on established security rules.",
+              "It has no relation to: reliable internet transport framework"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **TCP/IP Protocol** is accurately described as: is a suite of communication protocols used to interconnect network devices on the internet, emphasizing reliable delivery."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q48: Which of the following statements is **TRUE** regarding **Subnet Mask**?",
+            "options": [
+              "It is fundamentally characterized by: provides 128-bit addresses to replace 32-bit IPv4 addresses, accommodating the massive growth of internet devices.",
+              "It has no relation to: IP address segmentation tool",
+              "It is equivalent in purpose to: is a method of software testing that examines the functionality of an application without peering into its internal structures.",
+              "It is correctly described as: is a 32-bit number that masks an IP address, dividing the IP address into network address and host address portions."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Subnet Mask** is accurately described as: is a 32-bit number that masks an IP address, dividing the IP address into network address and host address portions."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q49: Which of the following statements is **TRUE** regarding **Border Gateway Protocol (BGP)**?",
+            "options": [
+              "It is equivalent in purpose to: is a method of software testing that tests internal structures or workings of an application, requiring code visibility.",
+              "It is fundamentally characterized by: promotes continuous iteration of development and testing throughout the software development life cycle.",
+              "It has no relation to: internet autonomous routing protocol",
+              "It is correctly described as: is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Border Gateway Protocol (BGP)** is accurately described as: is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems."
+          },
+          {
+            "type": "quiz",
+            "topic": "Software Engineering & Networks",
+            "question": "Q50: Which of the following statements is **TRUE** regarding **Symmetric Encryption**?",
+            "options": [
+              "It is fundamentally characterized by: is a reusable, template-like solution to a commonly occurring design problem in software architecture.",
+              "It is correctly described as: uses the exact same key for both the encryption of plaintext and the decryption of ciphertext.",
+              "It has no relation to: single shared-key cryptography",
+              "It is equivalent in purpose to: refers to the high-level structures of a software system, the discipline of creating such structures."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Symmetric Encryption** is accurately described as: uses the exact same key for both the encryption of plaintext and the decryption of ciphertext."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 8. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Computer Science Mock Exam 8.",
+              "note": "Solve all 10 mock exams to master the 500 Computer Science questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 8 - Research Methodology",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Introduction to Research",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q1: If a research scenario or project requires: **top-down theory testing**, which component or approach should be chosen?",
+            "options": [
+              "Empirical Research",
+              "Cross-Sectional Study",
+              "Deductive Research Approach",
+              "Action Research"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of top-down theory testing, you should select **Deductive Research Approach**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q2: If a research scenario or project requires: **bottom-up theory construction**, which component or approach should be chosen?",
+            "options": [
+              "Quantitative Research",
+              "Case Study Method",
+              "Theoretical Research",
+              "Inductive Research Approach"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of bottom-up theory construction, you should select **Inductive Research Approach**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q3: If a research scenario or project requires: **lived experience description**, which component or approach should be chosen?",
+            "options": [
+              "Experimental Research",
+              "Qualitative Research",
+              "Analytical Research",
+              "Phenomenological Research"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of lived experience description, you should select **Phenomenological Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q4: If a research scenario or project requires: **data-driven theory generation**, which component or approach should be chosen?",
+            "options": [
+              "Descriptive Research",
+              "Diagnostic Research",
+              "Conceptual Research",
+              "Grounded Theory"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of data-driven theory generation, you should select **Grounded Theory**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q5: If a research scenario or project requires: **immersive cultural study**, which component or approach should be chosen?",
+            "options": [
+              "Exploratory Research",
+              "Ethnographic Research",
+              "Evaluative Research",
+              "Ex-Post Facto Research"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of immersive cultural study, you should select **Ethnographic Research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q6: Which of the following statements is **TRUE** regarding **Fundamental Research**?",
+            "options": [
+              "It is correctly described as: aims to expand the existing body of scientific knowledge without any immediate practical application.",
+              "It is equivalent in purpose to: is an observational research method in which data is gathered for the same subjects repeatedly over a period of time.",
+              "It is fundamentally characterized by: involves studying and interpreting past events to understand current patterns and anticipate future trends.",
+              "It has no relation to: basic / pure research"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Fundamental Research** is accurately described as: aims to expand the existing body of scientific knowledge without any immediate practical application."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q7: Which of the following statements is **TRUE** regarding **Applied Research**?",
+            "options": [
+              "It has no relation to: practical problem-solving",
+              "It is correctly described as: is designed to solve practical, real-world problems of modern society.",
+              "It is equivalent in purpose to: involves looking at data from a population at one specific point in time to analyze prevalence or differences.",
+              "It is fundamentally characterized by: relies on direct or indirect observation or experience as a database rather than theory or belief."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Applied Research** is accurately described as: is designed to solve practical, real-world problems of modern society."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q8: Which of the following statements is **TRUE** regarding **Action Research**?",
+            "options": [
+              "It has no relation to: immediate local action",
+              "It is correctly described as: is a reflective process of progressive problem-solving led by individuals working with others in teams to address immediate issues.",
+              "It is fundamentally characterized by: focuses on the development of new theories or abstract models based on existing literature rather than direct experiments.",
+              "It is equivalent in purpose to: is an in-depth, detailed study of an individual, group, or event to explore underlying principles in a real-life context."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Action Research** is accurately described as: is a reflective process of progressive problem-solving led by individuals working with others in teams to address immediate issues."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q9: Which of the following statements is **TRUE** regarding **Quantitative Research**?",
+            "options": [
+              "It is equivalent in purpose to: establishes cause-and-effect relationships by manipulating an independent variable and observing its effect on a dependent variable.",
+              "It is fundamentally characterized by: uses facts or information already available and analyzes them to make a critical evaluation of the material.",
+              "It is correctly described as: focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon.",
+              "It has no relation to: numerical and statistical analysis"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Quantitative Research** is accurately described as: focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q10: Which of the following statements is **TRUE** regarding **Qualitative Research**?",
+            "options": [
+              "It is fundamentally characterized by: is related to some abstract idea(s) or theory, generally used by philosophers and thinkers to develop new concepts or to re-interpret existing ones.",
+              "It is correctly described as: is exploratory research used to gain an understanding of underlying reasons, opinions, and motivations.",
+              "It is equivalent in purpose to: determines the frequency with which something occurs or its association with something else, aiming to find causes of a phenomenon.",
+              "It has no relation to: non-numerical thematic analysis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Qualitative Research** is accurately described as: is exploratory research used to gain an understanding of underlying reasons, opinions, and motivations."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Research Design & Hypothesis",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q11: If a research scenario or project requires: **correct rejection probability (1-beta)**, which component or approach should be chosen?",
+            "options": [
+              "Null Hypothesis (H0)",
+              "Extraneous Variable",
+              "Statistical Power",
+              "Pilot Study"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of correct rejection probability (1-beta), you should select **Statistical Power**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q12: If a research scenario or project requires: **expected relationship direction statement**, which component or approach should be chosen?",
+            "options": [
+              "Alternative Hypothesis (H1)",
+              "Exploratory Design",
+              "Directional Hypothesis",
+              "Confounding Variable"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of expected relationship direction statement, you should select **Directional Hypothesis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q13: If a research scenario or project requires: **direction-free relationship statement**, which component or approach should be chosen?",
+            "options": [
+              "Descriptive Design",
+              "Type I Error",
+              "Control Variable",
+              "Non-Directional Hypothesis"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of direction-free relationship statement, you should select **Non-Directional Hypothesis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q14: If a research scenario or project requires: **confound-free cause-effect trust**, which component or approach should be chosen?",
+            "options": [
+              "Literature Review",
+              "Type II Error",
+              "Control Group",
+              "Internal Validity"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of confound-free cause-effect trust, you should select **Internal Validity**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q15: If a research scenario or project requires: **results generalization capability**, which component or approach should be chosen?",
+            "options": [
+              "Independent Variable",
+              "External Validity",
+              "Quasi-Experimental Design",
+              "Research Problem"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of results generalization capability, you should select **External Validity**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q16: Which of the following statements is **TRUE** regarding **Research Design**?",
+            "options": [
+              "It is correctly described as: is the conceptual blueprint or framework within which research is conducted.",
+              "It is equivalent in purpose to: is a visual or written product that explains, either graphically or in narrative form, the main things to be studied.",
+              "It has no relation to: framework for data collection and analysis",
+              "It is fundamentally characterized by: is the variable being tested and measured, which changes in response to the independent variable."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Research Design** is accurately described as: is the conceptual blueprint or framework within which research is conducted."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q17: Which of the following statements is **TRUE** regarding **Research Hypothesis**?",
+            "options": [
+              "It has no relation to: testable tentative assumption",
+              "It is equivalent in purpose to: is a small-scale preliminary study conducted to evaluate feasibility, time, cost, and adverse events prior to a full-scale research project.",
+              "It is correctly described as: is a tentative, testable statement about the relationship between two or more variables.",
+              "It is fundamentally characterized by: is any variable other than the independent variable that could influence the results of the study."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Research Hypothesis** is accurately described as: is a tentative, testable statement about the relationship between two or more variables."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q18: Which of the following statements is **TRUE** regarding **Null Hypothesis (H0)**?",
+            "options": [
+              "It is correctly described as: asserts that there is no significant difference or relationship between the variables being tested.",
+              "It is fundamentally characterized by: is an extraneous variable that correlates with both the independent and dependent variables, masking the true relationship.",
+              "It has no relation to: no-effect assumption",
+              "It is equivalent in purpose to: is selected when the primary objective is to gain insights and familiarity with a problem for more precise investigation later."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Null Hypothesis (H0)** is accurately described as: asserts that there is no significant difference or relationship between the variables being tested."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q19: Which of the following statements is **TRUE** regarding **Alternative Hypothesis (H1)**?",
+            "options": [
+              "It is fundamentally characterized by: is a variable that is kept constant or controlled throughout the experiment to prevent it from influencing the outcome.",
+              "It has no relation to: expected effect statement",
+              "It is correctly described as: states that there is a significant difference or relationship between variables, contrary to the null hypothesis.",
+              "It is equivalent in purpose to: is chosen to provide an accurate portrayal of characteristics of a particular individual, situation, or group."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Alternative Hypothesis (H1)** is accurately described as: states that there is a significant difference or relationship between variables, contrary to the null hypothesis."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q20: Which of the following statements is **TRUE** regarding **Type I Error**?",
+            "options": [
+              "It has no relation to: false positive (rejecting true H0)",
+              "It is correctly described as: occurs when the null hypothesis is rejected when it is actually true (false positive), denoted by alpha.",
+              "It is equivalent in purpose to: is the group in an experiment that does not receive the treatment or manipulation, serving as a baseline for comparison.",
+              "It is fundamentally characterized by: is a comprehensive summary of previous research on a specific topic, identifying gaps in current knowledge."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Type I Error** is accurately described as: occurs when the null hypothesis is rejected when it is actually true (false positive), denoted by alpha."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Sampling & Data Collection",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q21: If a research scenario or project requires: **moderated group discussion**, which component or approach should be chosen?",
+            "options": [
+              "Stratified Random Sampling",
+              "Quota Sampling",
+              "Focus Group Discussion",
+              "Secondary Data"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of moderated group discussion, you should select **Focus Group Discussion**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q22: If a research scenario or project requires: **qualitative data theme analysis**, which component or approach should be chosen?",
+            "options": [
+              "Content Analysis",
+              "Systematic Sampling",
+              "Purposive Sampling",
+              "Questionnaire"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of qualitative data theme analysis, you should select **Content Analysis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q23: If a research scenario or project requires: **multi-source validation technique**, which component or approach should be chosen?",
+            "options": [
+              "Snowball Sampling",
+              "Data Triangulation",
+              "Cluster Sampling",
+              "Structured Interview"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of multi-source validation technique, you should select **Data Triangulation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q24: If a research scenario or project requires: **completion ratio of sample**, which component or approach should be chosen?",
+            "options": [
+              "Likert Scale",
+              "Multi-Stage Sampling",
+              "Response Rate",
+              "Sampling Frame Error"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of completion ratio of sample, you should select **Response Rate**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q25: If a research scenario or project requires: **questionnaire design validation**, which component or approach should be chosen?",
+            "options": [
+              "Sampling Bias",
+              "Non-Probability Sampling",
+              "Pilot Testing",
+              "Semantic Differential Scale"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of questionnaire design validation, you should select **Pilot Testing**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q26: Which of the following statements is **TRUE** regarding **Probability Sampling**?",
+            "options": [
+              "It is correctly described as: gives every element in the population an equal, non-zero chance of being selected.",
+              "It is equivalent in purpose to: is data collected firsthand by the researcher specifically for the current research project.",
+              "It has no relation to: unbiased generalization potential",
+              "It is fundamentally characterized by: selects samples that are easiest to access or recruit, resulting in high speed but potential bias."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Probability Sampling** is accurately described as: gives every element in the population an equal, non-zero chance of being selected."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q27: Which of the following statements is **TRUE** regarding **Simple Random Sampling**?",
+            "options": [
+              "It is equivalent in purpose to: is pre-existing data collected by others for a different purpose, such as census data or published articles.",
+              "It has no relation to: lottery or random number selection",
+              "It is correctly described as: is a probability sampling method where every member of the population has an equal chance of selection.",
+              "It is fundamentally characterized by: selects a specified number of elements from defined subgroups, but using non-random selection methods."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Simple Random Sampling** is accurately described as: is a probability sampling method where every member of the population has an equal chance of selection."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q28: Which of the following statements is **TRUE** regarding **Stratified Random Sampling**?",
+            "options": [
+              "It is fundamentally characterized by: relies on the researcher's judgment to select elements that are most representative or informative for the study.",
+              "It is correctly described as: divides the population into homogeneous subgroups (strata) and then samples randomly from each stratum.",
+              "It is equivalent in purpose to: is a structured research instrument consisting of a series of questions for gathering information from respondents.",
+              "It has no relation to: ensuring representation of subgroups"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Stratified Random Sampling** is accurately described as: divides the population into homogeneous subgroups (strata) and then samples randomly from each stratum."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q29: Which of the following statements is **TRUE** regarding **Systematic Sampling**?",
+            "options": [
+              "It is fundamentally characterized by: relies on existing research participants to recruit future participants from among their acquaintances.",
+              "It is correctly described as: selects elements from an ordered population list at a regular interval (every k-th element) after a random starting point.",
+              "It is equivalent in purpose to: is an interview method where all questions are pre-determined and asked in exactly the same order for all respondents.",
+              "It has no relation to: fixed interval sampling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Systematic Sampling** is accurately described as: selects elements from an ordered population list at a regular interval (every k-th element) after a random starting point."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q30: Which of the following statements is **TRUE** regarding **Cluster Sampling**?",
+            "options": [
+              "It is fundamentally characterized by: occurs when the list from which the sample is drawn does not accurately represent the target population.",
+              "It is equivalent in purpose to: is an interval scale used to measure attitudes by asking respondents to specify their level of agreement on a symmetric agree-disagree scale.",
+              "It is correctly described as: divides the population into naturally occurring groups (clusters) and randomly selects entire clusters to study.",
+              "It has no relation to: geographical or group-level division"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Cluster Sampling** is accurately described as: divides the population into naturally occurring groups (clusters) and randomly selects entire clusters to study."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Data Analysis & Hypothesis Testing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q31: If a research scenario or project requires: **left-tail distribution skew**, which component or approach should be chosen?",
+            "options": [
+              "Parametric Test",
+              "Level of Significance",
+              "Mode",
+              "Negatively Skewed"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of left-tail distribution skew, you should select **Negatively Skewed**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q32: If a research scenario or project requires: **peakedness or flatness score**, which component or approach should be chosen?",
+            "options": [
+              "Confidence Interval",
+              "Kurtosis",
+              "Standard Deviation",
+              "Non-Parametric Test"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of peakedness or flatness score, you should select **Kurtosis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q33: If a research scenario or project requires: **distribution-free two-group comparison**, which component or approach should be chosen?",
+            "options": [
+              "Variance",
+              "Degrees of Freedom",
+              "Mann-Whitney U Test",
+              "Chi-Square Test"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of distribution-free two-group comparison, you should select **Mann-Whitney U Test**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q34: If a research scenario or project requires: **distribution-free paired comparison**, which component or approach should be chosen?",
+            "options": [
+              "Standard Error of the Mean",
+              "Wilcoxon Signed-Rank Test",
+              "ANOVA (Analysis of Variance)",
+              "Pearson Correlation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of distribution-free paired comparison, you should select **Wilcoxon Signed-Rank Test**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q35: If a research scenario or project requires: **distribution-free multi-group comparison**, which component or approach should be chosen?",
+            "options": [
+              "Normal Distribution",
+              "Student's t-Test",
+              "Kruskal-Wallis Test",
+              "Spearman Rank Correlation"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of distribution-free multi-group comparison, you should select **Kruskal-Wallis Test**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q36: Which of the following statements is **TRUE** regarding **Arithmetic Mean**?",
+            "options": [
+              "It is fundamentally characterized by: represents the rate of change in the dependent variable for every unit change in the independent variable.",
+              "It has no relation to: arithmetic average calculation",
+              "It is correctly described as: is the mathematical average of a dataset, calculated by summing all values and dividing by the count.",
+              "It is equivalent in purpose to: is a statistical test used to compare means when the sample size is large (n > 30) and population variance is known."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Arithmetic Mean** is accurately described as: is the mathematical average of a dataset, calculated by summing all values and dividing by the count."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q37: Which of the following statements is **TRUE** regarding **Median**?",
+            "options": [
+              "It is fundamentally characterized by: makes strict assumptions about the parameters of the population distribution (e.g., normality).",
+              "It is correctly described as: is the middle value of an ordered dataset, dividing it into two equal halves, unaffected by outliers.",
+              "It is equivalent in purpose to: is the probability of rejecting the null hypothesis when it is true, commonly set at 0.05.",
+              "It has no relation to: middle positional indicator"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Median** is accurately described as: is the middle value of an ordered dataset, dividing it into two equal halves, unaffected by outliers."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q38: Which of the following statements is **TRUE** regarding **Mode**?",
+            "options": [
+              "It is fundamentally characterized by: does not make assumptions about the underlying population distribution, suitable for ordinal or skewed data.",
+              "It has no relation to: highest frequency value",
+              "It is equivalent in purpose to: is a range of values derived from sample statistics that is likely to contain the true population parameter.",
+              "It is correctly described as: is the most frequently occurring value in a dataset."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Mode** is accurately described as: is the most frequently occurring value in a dataset."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q39: Which of the following statements is **TRUE** regarding **Standard Deviation**?",
+            "options": [
+              "It is fundamentally characterized by: is a non-parametric test used to determine if there is a significant association between two categorical variables.",
+              "It has no relation to: dispersion measurement tool",
+              "It is equivalent in purpose to: indicates the number of values in the final calculation of a statistic that are free to vary.",
+              "It is correctly described as: measures the dispersion or spread of data points around their arithmetic mean."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Standard Deviation** is accurately described as: measures the dispersion or spread of data points around their arithmetic mean."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q40: Which of the following statements is **TRUE** regarding **Variance**?",
+            "options": [
+              "It is equivalent in purpose to: measures the standard deviation of the sample mean's estimate of the population mean.",
+              "It has no relation to: squared dispersion measure",
+              "It is fundamentally characterized by: is a parametric test used to compare the means of three or more independent groups.",
+              "It is correctly described as: is the average of the squared differences from the mean, representing the overall spread of data."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Variance** is accurately described as: is the average of the squared differences from the mean, representing the overall spread of data."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Research Ethics & Report Writing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q41: If a research scenario or project requires: **inventing non-existent research data**, which component or approach should be chosen?",
+            "options": [
+              "Fabrication",
+              "Impact Factor",
+              "APA Style",
+              "Bibliography"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! To achieve the objective of inventing non-existent research data, you should select **Fabrication**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q42: If a research scenario or project requires: **manipulating active research data**, which component or approach should be chosen?",
+            "options": [
+              "Abstract",
+              "H-Index",
+              "Falsification",
+              "MLA Style"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! To achieve the objective of manipulating active research data, you should select **Falsification**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q43: If a research scenario or project requires: **private interest compromising professional work**, which component or approach should be chosen?",
+            "options": [
+              "Institutional Review Board (IRB)",
+              "Conflict of Interest",
+              "Footnote",
+              "Chicago Style"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of private interest compromising professional work, you should select **Conflict of Interest**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q44: If a research scenario or project requires: **thanking contributors and funders section**, which component or approach should be chosen?",
+            "options": [
+              "Research Proposal",
+              "Informed Consent",
+              "Intellectual Property Rights (IPR)",
+              "Acknowledgment Section"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! To achieve the objective of thanking contributors and funders section, you should select **Acknowledgment Section**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q45: If a research scenario or project requires: **standardized academic chapter sequence**, which component or approach should be chosen?",
+            "options": [
+              "Research Monograph",
+              "Thesis Layout Structure",
+              "Peer Review",
+              "Patent"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! To achieve the objective of standardized academic chapter sequence, you should select **Thesis Layout Structure**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q46: Which of the following statements is **TRUE** regarding **Plagiarism**?",
+            "options": [
+              "It has no relation to: academic theft and misattribution",
+              "It is equivalent in purpose to: refers to online, free-of-charge access to peer-reviewed scholarly research, removing price and permission barriers.",
+              "It is fundamentally characterized by: is a legal right that grants the creator of an original work exclusive rights for its use and distribution.",
+              "It is correctly described as: is the practice of taking someone else's work or ideas and passing them off as one's own without proper citation."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Plagiarism** is accurately described as: is the practice of taking someone else's work or ideas and passing them off as one's own without proper citation."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q47: Which of the following statements is **TRUE** regarding **Self-Plagiarism**?",
+            "options": [
+              "It is correctly described as: occurs when an author reuses portions of their own previously published work without proper attribution.",
+              "It has no relation to: own-work recycling without citation",
+              "It is fundamentally characterized by: is a measure of the frequency with which the average article in a journal has been cited in a particular year.",
+              "It is equivalent in purpose to: is a list of all sources consulted during the research process, regardless of whether they were directly cited in the text."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Self-Plagiarism** is accurately described as: occurs when an author reuses portions of their own previously published work without proper attribution."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q48: Which of the following statements is **TRUE** regarding **APA Style**?",
+            "options": [
+              "It is fundamentally characterized by: is an author-level metric that measures both the productivity and citation impact of the publications of a scientist.",
+              "It has no relation to: author-date citation style",
+              "It is correctly described as: is a citation and formatting style established by the American Psychological Association, commonly used in social sciences.",
+              "It is equivalent in purpose to: is a self-contained, brief summary of a research paper, thesis, or review, outlining goals, methods, and main findings."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **APA Style** is accurately described as: is a citation and formatting style established by the American Psychological Association, commonly used in social sciences."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q49: Which of the following statements is **TRUE** regarding **MLA Style**?",
+            "options": [
+              "It is equivalent in purpose to: is a note placed at the bottom of a page of a document that provides additional context or citations for text on that page.",
+              "It has no relation to: author-page citation style",
+              "It is fundamentally characterized by: is a committee formally designated to approve, monitor, and review biomedical and behavioral research involving humans.",
+              "It is correctly described as: is a formatting style by the Modern Language Association, commonly used in humanities, utilizing parenthetical page citations."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **MLA Style** is accurately described as: is a formatting style by the Modern Language Association, commonly used in humanities, utilizing parenthetical page citations."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q50: Which of the following statements is **TRUE** regarding **Chicago Style**?",
+            "options": [
+              "It has no relation to: notes-bibliography citation formatting",
+              "It is fundamentally characterized by: is the process of providing research participants with clear info about the study to help them voluntarily agree to participate.",
+              "It is equivalent in purpose to: is a structured document outlining what the researcher plans to study, why it is important, and how they will execute it.",
+              "It is correctly described as: is a citation style providing bibliography and notes/author-date formats, used widely in history and social sciences."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Chicago Style** is accurately described as: is a citation style providing bibliography and notes/author-date formats, used widely in history and social sciences."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 8. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Research Methodology Mock Exam 8.",
+              "note": "Solve all 10 mock exams to master the 500 Research Methodology questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

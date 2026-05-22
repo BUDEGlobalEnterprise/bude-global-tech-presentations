@@ -1,0 +1,720 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title",
+        "slides": [
+          {
+            "type": "title",
+            "title": "PhD CET Mock Exam 3 - Research Methodology",
+            "subtitle": "50 Practice MCQs for Doctoral Entrance Examination \u2022 Topic 1-5"
+          }
+        ]
+      },
+      {
+        "id": "topic-1",
+        "title": "Introduction to Research",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q1: Which of the following research terms is defined as: 'starts with a general theory or hypothesis and tests it through specific empirical observations.'?",
+            "options": [
+              "Deductive Research Approach",
+              "Empirical Research",
+              "Action Research",
+              "Cross-Sectional Study"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Deductive Research Approach** is defined as: starts with a general theory or hypothesis and tests it through specific empirical observations. (top-down theory testing)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q2: Which of the following research terms is defined as: 'starts with specific observations or measurements and moves toward broader generalizations and theories.'?",
+            "options": [
+              "Quantitative Research",
+              "Case Study Method",
+              "Theoretical Research",
+              "Inductive Research Approach"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Inductive Research Approach** is defined as: starts with specific observations or measurements and moves toward broader generalizations and theories. (bottom-up theory construction)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q3: Which of the following research terms is defined as: 'is a qualitative approach that focuses on describing the lived experiences of individuals regarding a specific concept or phenomenon.'?",
+            "options": [
+              "Analytical Research",
+              "Experimental Research",
+              "Qualitative Research",
+              "Phenomenological Research"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Phenomenological Research** is defined as: is a qualitative approach that focuses on describing the lived experiences of individuals regarding a specific concept or phenomenon. (lived experience description)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q4: Which of the following research terms is defined as: 'is a systematic qualitative methodology that involves the generation of theory from systematic analysis of data.'?",
+            "options": [
+              "Conceptual Research",
+              "Descriptive Research",
+              "Grounded Theory",
+              "Diagnostic Research"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Grounded Theory** is defined as: is a systematic qualitative methodology that involves the generation of theory from systematic analysis of data. (data-driven theory generation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q5: Which of the following research terms is defined as: 'involves the immersive study of people and cultures in their natural environment over an extended period.'?",
+            "options": [
+              "Exploratory Research",
+              "Ethnographic Research",
+              "Ex-Post Facto Research",
+              "Evaluative Research"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Ethnographic Research** is defined as: involves the immersive study of people and cultures in their natural environment over an extended period. (immersive cultural study)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q6: In research methodology, what is the primary focus, role, or application of **Fundamental Research**?",
+            "options": [
+              "Its primary focus is long-term repeated observation.",
+              "Its primary focus is basic / pure research.",
+              "Its primary focus is similarity and difference analysis.",
+              "Its primary focus is past event analysis."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Fundamental Research** is: **basic / pure research**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q7: In research methodology, what is the primary focus, role, or application of **Applied Research**?",
+            "options": [
+              "Its primary focus is empirical observation and evidence.",
+              "Its primary focus is practical problem-solving.",
+              "Its primary focus is top-down theory testing.",
+              "Its primary focus is single point-in-time snapshot."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Applied Research** is: **practical problem-solving**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q8: In research methodology, what is the primary focus, role, or application of **Action Research**?",
+            "options": [
+              "Its primary focus is bottom-up theory construction.",
+              "Its primary focus is abstract model development.",
+              "Its primary focus is in-depth single unit analysis.",
+              "Its primary focus is immediate local action."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Action Research** is: **immediate local action**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q9: In research methodology, what is the primary focus, role, or application of **Quantitative Research**?",
+            "options": [
+              "Its primary focus is cause-and-effect verification.",
+              "Its primary focus is critical factual evaluation.",
+              "Its primary focus is lived experience description.",
+              "Its primary focus is numerical and statistical analysis."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Quantitative Research** is: **numerical and statistical analysis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Introduction to Research",
+            "question": "Q10: In research methodology, what is the primary focus, role, or application of **Qualitative Research**?",
+            "options": [
+              "Its primary focus is non-numerical thematic analysis.",
+              "Its primary focus is cause-and-association diagnosis.",
+              "Its primary focus is abstract concept re-interpretation.",
+              "Its primary focus is data-driven theory generation."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Qualitative Research** is: **non-numerical thematic analysis**."
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Research Design & Hypothesis",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q11: Which of the following research terms is defined as: 'is the probability that a statistical test will correctly reject a false null hypothesis, equal to 1 minus beta.'?",
+            "options": [
+              "Extraneous Variable",
+              "Pilot Study",
+              "Null Hypothesis (H0)",
+              "Statistical Power"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Statistical Power** is defined as: is the probability that a statistical test will correctly reject a false null hypothesis, equal to 1 minus beta. (correct rejection probability (1-beta))."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q12: Which of the following research terms is defined as: 'specifies the expected direction of the relationship or difference between variables (e.g., group A will score higher than B).'?",
+            "options": [
+              "Confounding Variable",
+              "Exploratory Design",
+              "Directional Hypothesis",
+              "Alternative Hypothesis (H1)"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Directional Hypothesis** is defined as: specifies the expected direction of the relationship or difference between variables (e.g., group A will score higher than B). (expected relationship direction statement)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q13: Which of the following research terms is defined as: 'predicts that there is a relationship or difference, but does not specify which group will be higher or lower.'?",
+            "options": [
+              "Descriptive Design",
+              "Type I Error",
+              "Control Variable",
+              "Non-Directional Hypothesis"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Non-Directional Hypothesis** is defined as: predicts that there is a relationship or difference, but does not specify which group will be higher or lower. (direction-free relationship statement)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q14: Which of the following research terms is defined as: 'is the extent to which a study establishes a trustworthy cause-and-effect relationship, free from confounding variables.'?",
+            "options": [
+              "Type II Error",
+              "Control Group",
+              "Internal Validity",
+              "Literature Review"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Internal Validity** is defined as: is the extent to which a study establishes a trustworthy cause-and-effect relationship, free from confounding variables. (confound-free cause-effect trust)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q15: Which of the following research terms is defined as: 'is the extent to which the results of a study can be generalized to other situations, people, and times.'?",
+            "options": [
+              "Research Problem",
+              "Quasi-Experimental Design",
+              "Independent Variable",
+              "External Validity"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **External Validity** is defined as: is the extent to which the results of a study can be generalized to other situations, people, and times. (results generalization capability)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q16: In research methodology, what is the primary focus, role, or application of **Research Design**?",
+            "options": [
+              "Its primary focus is measured outcome variable.",
+              "Its primary focus is conceptual schema explanation.",
+              "Its primary focus is participant-researcher bias prevention.",
+              "Its primary focus is framework for data collection and analysis."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Research Design** is: **framework for data collection and analysis**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q17: In research methodology, what is the primary focus, role, or application of **Research Hypothesis**?",
+            "options": [
+              "Its primary focus is feasibility and scale trial.",
+              "Its primary focus is correct rejection probability (1-beta).",
+              "Its primary focus is testable tentative assumption.",
+              "Its primary focus is uncontrolled confounding variable."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Research Hypothesis** is: **testable tentative assumption**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q18: In research methodology, what is the primary focus, role, or application of **Null Hypothesis (H0)**?",
+            "options": [
+              "Its primary focus is insight and familiarity collection.",
+              "Its primary focus is no-effect assumption.",
+              "Its primary focus is expected relationship direction statement.",
+              "Its primary focus is relationship-masking variable."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Null Hypothesis (H0)** is: **no-effect assumption**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q19: In research methodology, what is the primary focus, role, or application of **Alternative Hypothesis (H1)**?",
+            "options": [
+              "Its primary focus is accurate characteristic profiling.",
+              "Its primary focus is expected effect statement.",
+              "Its primary focus is constant baseline variable.",
+              "Its primary focus is direction-free relationship statement."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Alternative Hypothesis (H1)** is: **expected effect statement**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Design & Hypothesis",
+            "question": "Q20: In research methodology, what is the primary focus, role, or application of **Type I Error**?",
+            "options": [
+              "Its primary focus is critical gap analysis of past works.",
+              "Its primary focus is untreated baseline group.",
+              "Its primary focus is false positive (rejecting true H0).",
+              "Its primary focus is confound-free cause-effect trust."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Type I Error** is: **false positive (rejecting true H0)**."
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Sampling & Data Collection",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q21: Which of the following research terms is defined as: 'is a qualitative technique where a small group of people (usually 6-10) discuss a topic guided by a moderator.'?",
+            "options": [
+              "Focus Group Discussion",
+              "Secondary Data",
+              "Quota Sampling",
+              "Stratified Random Sampling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Focus Group Discussion** is defined as: is a qualitative technique where a small group of people (usually 6-10) discuss a topic guided by a moderator. (moderated group discussion)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q22: Which of the following research terms is defined as: 'is a research tool used to determine the presence of certain words, themes, or concepts within qualitative data.'?",
+            "options": [
+              "Systematic Sampling",
+              "Content Analysis",
+              "Questionnaire",
+              "Purposive Sampling"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Content Analysis** is defined as: is a research tool used to determine the presence of certain words, themes, or concepts within qualitative data. (qualitative data theme analysis)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q23: Which of the following research terms is defined as: 'is the use of multiple data sources or collection methods to study a single phenomenon to increase validity.'?",
+            "options": [
+              "Snowball Sampling",
+              "Cluster Sampling",
+              "Data Triangulation",
+              "Structured Interview"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Data Triangulation** is defined as: is the use of multiple data sources or collection methods to study a single phenomenon to increase validity. (multi-source validation technique)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q24: Which of the following research terms is defined as: 'is the percentage of people who completed the research instrument out of the total sample selected.'?",
+            "options": [
+              "Response Rate",
+              "Likert Scale",
+              "Sampling Frame Error",
+              "Multi-Stage Sampling"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Response Rate** is defined as: is the percentage of people who completed the research instrument out of the total sample selected. (completion ratio of sample)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q25: Which of the following research terms is defined as: 'is the trial administration of a questionnaire to a small group to detect and fix ambiguities before main collection.'?",
+            "options": [
+              "Sampling Bias",
+              "Non-Probability Sampling",
+              "Pilot Testing",
+              "Semantic Differential Scale"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Pilot Testing** is defined as: is the trial administration of a questionnaire to a small group to detect and fix ambiguities before main collection. (questionnaire design validation)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q26: In research methodology, what is the primary focus, role, or application of **Probability Sampling**?",
+            "options": [
+              "Its primary focus is systematic behavior recording.",
+              "Its primary focus is original direct collection.",
+              "Its primary focus is unbiased generalization potential.",
+              "Its primary focus is accessibility-based collection."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Probability Sampling** is: **unbiased generalization potential**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q27: In research methodology, what is the primary focus, role, or application of **Simple Random Sampling**?",
+            "options": [
+              "Its primary focus is moderated group discussion.",
+              "Its primary focus is lottery or random number selection.",
+              "Its primary focus is previously collected material.",
+              "Its primary focus is non-random strata filling."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Simple Random Sampling** is: **lottery or random number selection**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q28: In research methodology, what is the primary focus, role, or application of **Stratified Random Sampling**?",
+            "options": [
+              "Its primary focus is standardized self-report tool.",
+              "Its primary focus is qualitative data theme analysis.",
+              "Its primary focus is ensuring representation of subgroups.",
+              "Its primary focus is judgmental target selection."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Stratified Random Sampling** is: **ensuring representation of subgroups**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q29: In research methodology, what is the primary focus, role, or application of **Systematic Sampling**?",
+            "options": [
+              "Its primary focus is multi-source validation technique.",
+              "Its primary focus is referral-based chain network.",
+              "Its primary focus is rigid standardized interview.",
+              "Its primary focus is fixed interval sampling."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Systematic Sampling** is: **fixed interval sampling**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Sampling & Data Collection",
+            "question": "Q30: In research methodology, what is the primary focus, role, or application of **Cluster Sampling**?",
+            "options": [
+              "Its primary focus is geographical or group-level division.",
+              "Its primary focus is measuring ordinal/interval agreement levels.",
+              "Its primary focus is completion ratio of sample.",
+              "Its primary focus is frame-population mismatch error."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Cluster Sampling** is: **geographical or group-level division**."
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Data Analysis & Hypothesis Testing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q31: Which of the following research terms is defined as: 'is a distribution with a tail extending toward the left side (lower values), where Mean < Median < Mode.'?",
+            "options": [
+              "Negatively Skewed",
+              "Level of Significance",
+              "Parametric Test",
+              "Mode"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Negatively Skewed** is defined as: is a distribution with a tail extending toward the left side (lower values), where Mean < Median < Mode. (left-tail distribution skew)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q32: Which of the following research terms is defined as: 'measures the tail-heaviness or peakedness of a probability distribution relative to a normal distribution.'?",
+            "options": [
+              "Kurtosis",
+              "Standard Deviation",
+              "Non-Parametric Test",
+              "Confidence Interval"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Kurtosis** is defined as: measures the tail-heaviness or peakedness of a probability distribution relative to a normal distribution. (peakedness or flatness score)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q33: Which of the following research terms is defined as: 'is a non-parametric alternative to the independent t-test used to compare two independent groups.'?",
+            "options": [
+              "Variance",
+              "Chi-Square Test",
+              "Mann-Whitney U Test",
+              "Degrees of Freedom"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Mann-Whitney U Test** is defined as: is a non-parametric alternative to the independent t-test used to compare two independent groups. (distribution-free two-group comparison)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q34: Which of the following research terms is defined as: 'is a non-parametric alternative to the paired t-test used to compare two related samples.'?",
+            "options": [
+              "Wilcoxon Signed-Rank Test",
+              "ANOVA (Analysis of Variance)",
+              "Pearson Correlation",
+              "Standard Error of the Mean"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Wilcoxon Signed-Rank Test** is defined as: is a non-parametric alternative to the paired t-test used to compare two related samples. (distribution-free paired comparison)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q35: Which of the following research terms is defined as: 'is a non-parametric alternative to one-way ANOVA used to compare three or more independent groups.'?",
+            "options": [
+              "Student's t-Test",
+              "Kruskal-Wallis Test",
+              "Spearman Rank Correlation",
+              "Normal Distribution"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! **Kruskal-Wallis Test** is defined as: is a non-parametric alternative to one-way ANOVA used to compare three or more independent groups. (distribution-free multi-group comparison)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q36: In research methodology, what is the primary focus, role, or application of **Arithmetic Mean**?",
+            "options": [
+              "Its primary focus is large-sample mean comparison.",
+              "Its primary focus is slope relationship prediction.",
+              "Its primary focus is right-tail distribution skew.",
+              "Its primary focus is arithmetic average calculation."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Arithmetic Mean** is: **arithmetic average calculation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q37: In research methodology, what is the primary focus, role, or application of **Median**?",
+            "options": [
+              "Its primary focus is left-tail distribution skew.",
+              "Its primary focus is middle positional indicator.",
+              "Its primary focus is alpha threshold for hypothesis rejection.",
+              "Its primary focus is distribution-assumed statistical testing."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Median** is: **middle positional indicator**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q38: In research methodology, what is the primary focus, role, or application of **Mode**?",
+            "options": [
+              "Its primary focus is parameter estimation range.",
+              "Its primary focus is peakedness or flatness score.",
+              "Its primary focus is highest frequency value.",
+              "Its primary focus is distribution-free statistical testing."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Mode** is: **highest frequency value**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q39: In research methodology, what is the primary focus, role, or application of **Standard Deviation**?",
+            "options": [
+              "Its primary focus is categorical association verification.",
+              "Its primary focus is independent observation count limit.",
+              "Its primary focus is dispersion measurement tool.",
+              "Its primary focus is distribution-free two-group comparison."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **Standard Deviation** is: **dispersion measurement tool**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Data Analysis & Hypothesis Testing",
+            "question": "Q40: In research methodology, what is the primary focus, role, or application of **Variance**?",
+            "options": [
+              "Its primary focus is comparing three or more group means.",
+              "Its primary focus is squared dispersion measure.",
+              "Its primary focus is distribution-free paired comparison.",
+              "Its primary focus is sample mean precision estimate."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Variance** is: **squared dispersion measure**."
+          }
+        ]
+      },
+      {
+        "id": "topic-5",
+        "title": "Research Ethics & Report Writing",
+        "slides": [
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q41: Which of the following research terms is defined as: 'is the unethical practice of inventing data or results and recording or reporting them as true research outcomes.'?",
+            "options": [
+              "Bibliography",
+              "APA Style",
+              "Impact Factor",
+              "Fabrication"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Fabrication** is defined as: is the unethical practice of inventing data or results and recording or reporting them as true research outcomes. (inventing non-existent research data)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q42: Which of the following research terms is defined as: 'is the unethical practice of manipulating research materials, equipment, or processes, or changing or omitting data.'?",
+            "options": [
+              "Falsification",
+              "H-Index",
+              "MLA Style",
+              "Abstract"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Falsification** is defined as: is the unethical practice of manipulating research materials, equipment, or processes, or changing or omitting data. (manipulating active research data)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q43: Which of the following research terms is defined as: 'occurs when an investigator's private interests or relationships compromise the professional judgment of research.'?",
+            "options": [
+              "Conflict of Interest",
+              "Chicago Style",
+              "Footnote",
+              "Institutional Review Board (IRB)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! **Conflict of Interest** is defined as: occurs when an investigator's private interests or relationships compromise the professional judgment of research. (private interest compromising professional work)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q44: Which of the following research terms is defined as: 'is the portion of a research paper dedicated to thanking individuals, funders, or institutions who aided the study.'?",
+            "options": [
+              "Research Proposal",
+              "Intellectual Property Rights (IPR)",
+              "Acknowledgment Section",
+              "Informed Consent"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! **Acknowledgment Section** is defined as: is the portion of a research paper dedicated to thanking individuals, funders, or institutions who aided the study. (thanking contributors and funders section)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q45: Which of the following research terms is defined as: 'is the standardized sequence of chapters (Introduction, Literature, Methods, Results, Discussion) for reporting research.'?",
+            "options": [
+              "Peer Review",
+              "Patent",
+              "Research Monograph",
+              "Thesis Layout Structure"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! **Thesis Layout Structure** is defined as: is the standardized sequence of chapters (Introduction, Literature, Methods, Results, Discussion) for reporting research. (standardized academic chapter sequence)."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q46: In research methodology, what is the primary focus, role, or application of **Plagiarism**?",
+            "options": [
+              "Its primary focus is tracking scientific citations system.",
+              "Its primary focus is protection of expression of ideas.",
+              "Its primary focus is barrier-free research accessibility.",
+              "Its primary focus is academic theft and misattribution."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Correct! The primary focus of **Plagiarism** is: **academic theft and misattribution**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q47: In research methodology, what is the primary focus, role, or application of **Self-Plagiarism**?",
+            "options": [
+              "Its primary focus is own-work recycling without citation.",
+              "Its primary focus is inventing non-existent research data.",
+              "Its primary focus is consulted sources comprehensive list.",
+              "Its primary focus is journal citation frequency index."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **Self-Plagiarism** is: **own-work recycling without citation**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q48: In research methodology, what is the primary focus, role, or application of **APA Style**?",
+            "options": [
+              "Its primary focus is author-date citation style.",
+              "Its primary focus is manipulating active research data.",
+              "Its primary focus is brief paper summary overview.",
+              "Its primary focus is citation and publication volume balance metric."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Correct! The primary focus of **APA Style** is: **author-date citation style**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q49: In research methodology, what is the primary focus, role, or application of **MLA Style**?",
+            "options": [
+              "Its primary focus is bottom-of-page contextual note.",
+              "Its primary focus is private interest compromising professional work.",
+              "Its primary focus is author-page citation style.",
+              "Its primary focus is human subject safety oversight board."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Correct! The primary focus of **MLA Style** is: **author-page citation style**."
+          },
+          {
+            "type": "quiz",
+            "topic": "Research Ethics & Report Writing",
+            "question": "Q50: In research methodology, what is the primary focus, role, or application of **Chicago Style**?",
+            "options": [
+              "Its primary focus is thanking contributors and funders section.",
+              "Its primary focus is notes-bibliography citation formatting.",
+              "Its primary focus is planned research blueprint outline.",
+              "Its primary focus is voluntary participant agreement process."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Correct! The primary focus of **Chicago Style** is: **notes-bibliography citation formatting**."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Closing",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Discussion & Review \ud83d\udcac",
+            "content": "Review your answers for Mock Exam 3. Pay special attention to topics where you selected incorrect answers!"
+          },
+          {
+            "type": "thank-you",
+            "title": "Keep Preparing! \ud83c\udf93",
+            "box": {
+              "content": "You have completed Research Methodology Mock Exam 3.",
+              "note": "Solve all 10 mock exams to master the 500 Research Methodology questions!"
+            },
+            "footer": {
+              "org": "Bharathiar University CET Prep",
+              "tagline": "Empowering researchers to excel"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
