@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 
 import { GitHubStats } from "./GitHubStats";
 import { ThemeToggle } from "./ThemeToggle";
@@ -51,13 +50,7 @@ export function GlobalHeader() {
 
         <div className="flex items-center gap-2">
           <div className="hidden sm:block">
-            <Suspense
-              fallback={
-                <div className="h-9 w-32 animate-pulse rounded-full bg-muted" />
-              }
-            >
-              <GitHubStats />
-            </Suspense>
+            <GitHubStats />
           </div>
           <ThemeToggle />
         </div>

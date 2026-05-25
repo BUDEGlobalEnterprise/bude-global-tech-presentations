@@ -35,15 +35,21 @@ export function GenericSlide({ slide }: Props) {
               {slide.type.replace(/[-_]/g, " ")}
             </div>
           )}
-          <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl">
-            {slide.title ?? slide.subtitle ?? "Content"}
-          </h2>
+          <SafeHTML
+            as="h2"
+            html={slide.title ?? slide.subtitle ?? "Content"}
+            className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl"
+          />
         </div>
       </header>
 
       <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto pr-2 text-sm md:text-base">
         {slide.subtitle && slide.title && (
-          <p className="text-muted-foreground md:text-lg">{slide.subtitle}</p>
+          <SafeHTML
+            as="p"
+            html={slide.subtitle}
+            className="text-muted-foreground md:text-lg"
+          />
         )}
         {slide.box?.content && (
           <SafeHTML

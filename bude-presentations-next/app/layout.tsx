@@ -19,8 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ppt.budeglobal.in";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ppt.budeglobal.in"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Bude Global Tech Presentations",
     template: "%s | Bude Global Tech Presentations",

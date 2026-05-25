@@ -34,8 +34,11 @@ export function Presenter({ slides, presentationTitle, exitHref }: Props) {
   const [direction, setDirection] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const stageRef = useRef<HTMLDivElement>(null);
+  // Skip the first run of the hash-sync effect so a deep-link (#15) isn't
+  // briefly clobbered to #1 before the init effect's setCurrent lands.
+  const skipFirstSync = useRef(true);
 
-  // Init from URL hash on mount, persist on change.
+  // Init from URL hash on mount.
   useEffect(() => {
     const fromHash = parseInt(window.location.hash.replace("#", ""), 10);
     if (!Number.isNaN(fromHash) && fromHash >= 1 && fromHash <= total) {
@@ -43,7 +46,12 @@ export function Presenter({ slides, presentationTitle, exitHref }: Props) {
     }
   }, [total]);
 
+  // Persist current slide to the URL hash (after the initial mount).
   useEffect(() => {
+    if (skipFirstSync.current) {
+      skipFirstSync.current = false;
+      return;
+    }
     if (typeof window === "undefined") return;
     const next = `#${current + 1}`;
     if (window.location.hash !== next) {
@@ -169,6 +177,15 @@ export function Presenter({ slides, presentationTitle, exitHref }: Props) {
             {flat && <SlideRenderer slide={flat.slide} />}
           </motion.div>
         </AnimatePresence>
+      </div>
+
+      {/* Announce slide changes to screen readers. */}
+      <div className="sr-only" aria-live="polite" role="status">
+        {flat
+          ? `Slide ${current + 1} of ${total}${
+              flat.slide.title ? `: ${flat.slide.title}` : ""
+            }`
+          : ""}
       </div>
     </div>
   );

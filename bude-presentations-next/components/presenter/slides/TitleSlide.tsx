@@ -14,7 +14,7 @@ export function TitleSlide({ slide }: Props) {
         </div>
       )}
       <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
-        <span className="text-bude-gradient">{slide.title}</span>
+        <SafeHTML as="span" html={slide.title ?? ""} className="text-bude-gradient" />
       </h1>
       {slide.subtitle && (
         <SafeHTML

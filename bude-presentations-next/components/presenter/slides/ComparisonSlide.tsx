@@ -44,9 +44,11 @@ export function ComparisonSlide({ slide }: Props) {
               {slide.emoji}
             </span>
           )}
-          <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl">
-            {slide.title}
-          </h2>
+          <SafeHTML
+            as="h2"
+            html={slide.title ?? ""}
+            className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl"
+          />
         </header>
       )}
 

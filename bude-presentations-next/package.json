@@ -8,19 +8,24 @@
     "preview": "npx --yes serve out",
     "start": "next start",
     "lint": "next lint",
-    "validate-content": "tsx scripts/validate-content.ts"
+    "validate-content": "tsx scripts/validate-content.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "docx": "^9.6.1",
     "framer-motion": "^11.18.2",
     "fuse.js": "^7.0.0",
     "isomorphic-dompurify": "^2.20.0",
     "json5": "^2.2.3",
+    "jspdf": "^4.2.1",
     "lucide-react": "^0.469.0",
+    "modern-screenshot": "^4.7.0",
     "next": "^15.1.4",
     "next-themes": "^0.4.4",
+    "pptxgenjs": "^4.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "recharts": "^2.15.0",
@@ -39,6 +44,7 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.22.3",
-    "typescript": "5.8.2"
+    "typescript": "5.8.2",
+    "vitest": "^3.2.4"
   }
 }

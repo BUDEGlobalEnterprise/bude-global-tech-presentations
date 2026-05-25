@@ -1,3 +1,4 @@
+import { SafeHTML } from "@/lib/safe-html";
 import type { Slide } from "@/types/presentation";
 
 interface Props {
@@ -20,12 +21,14 @@ export function TopicTitleSlide({ slide }: Props) {
         Section
       </div>
       <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-7xl">
-        <span className="text-bude-gradient">{slide.title}</span>
+        <SafeHTML as="span" html={slide.title ?? ""} className="text-bude-gradient" />
       </h2>
       {slide.subtitle && (
-        <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-xl">
-          {slide.subtitle}
-        </p>
+        <SafeHTML
+          as="p"
+          html={slide.subtitle}
+          className="mt-6 max-w-2xl text-base text-muted-foreground md:text-xl"
+        />
       )}
     </div>
   );

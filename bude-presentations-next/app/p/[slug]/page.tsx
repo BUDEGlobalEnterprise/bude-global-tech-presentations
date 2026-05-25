@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { DownloadMenu } from "@/components/presentation/DownloadMenu";
 import { categoryMeta } from "@/lib/category-meta";
 import { CATALOG } from "@/lib/catalog";
+import { extractDeck } from "@/lib/export/extract";
 import { getAllSlugs, getPresentationBySlug } from "@/lib/presentations";
 import { cn } from "@/lib/utils";
 import type { Difficulty } from "@/types/presentation";
@@ -19,6 +21,8 @@ export async function generateStaticParams() {
   const slugs = await getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }
+
+export const dynamic = "force-static";
 
 export async function generateMetadata({
   params,
@@ -57,6 +61,9 @@ export default async function PresentationPage({
 
   // Rough reading-time estimate (45 sec/slide is a comfortable presenting pace).
   const estimatedMinutes = Math.max(5, Math.round((totalSlides * 45) / 60));
+
+  // Pre-extract a plain-text deck model server-side for the download menu.
+  const exportDeck = extractDeck(presentation);
 
   return (
     <>
@@ -131,7 +138,7 @@ export default async function PresentationPage({
             </span>
           </div>
 
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href={`/p/${meta.slug}/present/`}
               className="group inline-flex items-center gap-2 rounded-full bg-bude-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-bude-purple/20 transition-transform hover:scale-[1.03] hover:shadow-xl hover:shadow-bude-purple/30"
@@ -139,8 +146,9 @@ export default async function PresentationPage({
               <PlayCircle className="h-4 w-4" />
               Start presentation
             </Link>
+            <DownloadMenu deck={exportDeck} />
             <span className="self-center text-xs text-muted-foreground">
-              Arrow keys ←/→ to navigate · F for fullscreen · Esc to exit
+              ←/→ navigate · F fullscreen · Esc exit
             </span>
           </div>
         </header>

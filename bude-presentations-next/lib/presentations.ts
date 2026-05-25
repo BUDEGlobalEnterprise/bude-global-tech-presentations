@@ -32,13 +32,25 @@ async function readAndValidate(file: string): Promise<PresentationFile> {
   return result.data;
 }
 
+const isProd = process.env.NODE_ENV === "production";
+
 async function buildCache() {
   const cache = new Map<string, LoadedPresentation>();
   for (const meta of CATALOG) {
+    // Slug collisions would silently overwrite a deck — never allow it.
+    if (cache.has(meta.slug)) {
+      throw new Error(
+        `[presentations] Duplicate slug "${meta.slug}" (from ${meta.file}). ` +
+          `Two catalog entries resolve to the same URL.`,
+      );
+    }
     try {
       const data = await readAndValidate(meta.file);
       cache.set(meta.slug, { slug: meta.slug, meta, data });
     } catch (err) {
+      // Fail the build loudly in production so a broken deck can't ship as a
+      // home-page card that 404s. In dev, warn and keep going for fast iteration.
+      if (isProd) throw err;
       console.warn(
         `[presentations] Skipping ${meta.slug}: ${(err as Error).message}`,
       );
@@ -50,7 +62,7 @@ async function buildCache() {
 async function getCache() {
   // In dev, always rebuild so edits to JSON files show up on next reload.
   // (HMR doesn't track files read via fs.readFile.)
-  if (process.env.NODE_ENV !== "production") {
+  if (!isProd) {
     return buildCache();
   }
   if (!memoryCache) memoryCache = await buildCache();

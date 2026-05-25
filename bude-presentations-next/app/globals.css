@@ -100,3 +100,18 @@
     color: transparent;
   }
 }
+
+/* Inline classes used inside authored slide HTML (rendered via SafeHTML).
+   These are not Tailwind utilities, so they live as plain rules. */
+.highlight {
+  color: var(--color-bude-primary);
+  font-weight: 700;
+}
+
+.dark .highlight {
+  color: var(--color-bude-pink);
+}
+
+.emoji {
+  font-style: normal;
+}
