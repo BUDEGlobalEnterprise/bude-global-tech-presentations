@@ -1,32 +1,32 @@
 # 📋 Presentations Progress Tracker
 
-> **Last Updated**: March 2026
-> **Total Presentations**: 65 ✅ | 42 ⬜
-> **Completion**: 60.7%
+> **Last Updated**: May 2026
+> **Total Presentations**: 66 ✅ | 41 ⬜
+> **Completion**: 61.7%
 
 ---
 
 ## 📊 Progress Overview
 
 ```
-████████████████░░░░░░░░░░░░░░ 53.3% Complete
+████████████████░░░░░░░░░░░░░░ 54.2% Complete
 ```
 
 | Category | Completed | Pending | Total | Progress |
 |----------|-----------|---------|-------|----------|
-| 🟢 **Core Topics** | 57 | 50 | 107 | 53.3% |
+| 🟢 **Core Topics** | 58 | 49 | 107 | 54.2% |
 | 🔵 **Programming Languages** | 9 | 0 | 9 | 100% |
 | 🟣 **Backend Frameworks** | 2 | 6 | 8 | 25% |
 | 🔴 **Databases & Storage** | 8 | 0 | 8 | 100% |
 | 🟠 **DevOps & Cloud** | 5 | 5 | 10 | 50% |
-| 🟡 **Security & Auth** | 1 | 6 | 7 | 14.3% |
+| 🟡 **Security & Auth** | 2 | 5 | 7 | 28.6% |
 | 🟢 **AI & Automation** | 2 | 5 | 7 | 28.6% |
 | 🟤 **Tools & Productivity** | 12 | 0 | 12 | 100% |
 | 🟣 **Business Applications** | 7 | 34 | 41 | 17.1% |
 
 ---
 
-## ✅ Completed Presentations (50/107)
+## ✅ Completed Presentations (51/107)
 
 <details open>
 <summary><strong>Core Topics Completed</strong></summary>
@@ -75,6 +75,7 @@
 - [x] #71 WSL (Windows Subsystem for Linux) - [View](presentations/intro-wsl.json)
 - [x] #73 Kubernetes – Container Orchestration - [View](presentations/intro-kubernetes.json)
 - [x] #75 DevOps – CI/CD - [View](presentations/intro-devops-cicd.json)
+- [x] #41 Linux Hardening - [View](presentations/intro-linux-hardening.json)
 
 ### Business & Tools
 - [x] #2 Keycloak - [View](presentations/intro-keycloak.json)
@@ -161,7 +162,7 @@
 - [ ] [#38 OWASP Top 10](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/38) - Web application security risks
 - [ ] [#39 Zero Trust Architecture](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/39) - Modern security model
 - [ ] [#40 API Security](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/40) - Securing REST & GraphQL APIs
-- [ ] [#41 Linux Hardening](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/41) - Server security best practices
+- [x] [#41 Linux Hardening](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/41) - Server security best practices - [View](presentations/intro-linux-hardening.json)
 - [ ] [#42 Secret Management](https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/issues/42) - Managing credentials securely
 
 ### 🟢 AI, Data & Automation (8)
@@ -264,9 +265,9 @@ Have a topic not on this list? [Open a feature request](https://github.com/BUDEG
 ## 📊 Statistics
 
 - **Total Topics Planned**: 107
-- **Completed**: 65 (60.7%)
+- **Completed**: 66 (61.7%)
 - **In Progress**: 0
-- **Remaining**: 42 (39.3%)
+- **Remaining**: 41 (38.3%)
 - **Average per month**: ~3-5 presentations
 - **Estimated Completion**: Q4 2025
 

@@ -1,0 +1,1115 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "intro",
+        "title": "Title & Presenter",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Linux Hardening Masterclass",
+            "subtitle": "Production Server Security & Defense-in-Depth<br>From Kernel Optimization to Access Control"
+          },
+          {
+            "type": "presenter",
+            "title": "Your Instructor",
+            "name": "Aravind Govindhasamy",
+            "experience": "Senior Systems Engineer & Security Analyst",
+            "oss_experience": "Linux Kernel Contributor & Hardening Specialist",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          },
+          {
+            "type": "content",
+            "title": "Masterclass Agenda",
+            "emoji": "🗺️",
+            "box": {
+              "title": "What We Will Cover Today",
+              "list": [
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>Topic 1</strong>: Linux Hardening & The OS Attack Surface"
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Topic 2</strong>: Access Control: SSH & PAM Configuration"
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Topic 3</strong>: Kernel Parameter Tuning & Boot Security"
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Topic 4</strong>: Firewalls & Network Filters (nftables)"
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Topic 5</strong>: Filesystem Mounts & UGO/ACL Permissions"
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Topic 6</strong>: Mandatory Access Control (SELinux/AppArmor)"
+                },
+                {
+                  "emoji": "🕵️",
+                  "text": "<strong>Topic 7</strong>: Auditing & Monitoring (auditd, Lynis, Fail2ban)"
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Topic 8</strong>: Sandbox Isolation (namespaces, cgroups, seccomp)"
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Topic 9</strong>: 10-Question Hardening Quiz"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "attack-surface",
+        "title": "Topic 1: Linux Security & Threat Landscape",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 1: Linux Security & Attack Surface",
+            "subtitle": "Understanding common threats, design philosophy, and least privilege"
+          },
+          {
+            "type": "content",
+            "emoji": "⚠️",
+            "title": "Why Linux Hardening Matters",
+            "box": {
+              "title": "The Server Security Reality",
+              "list": [
+                {
+                  "emoji": "☁️",
+                  "text": "<strong>Cloud Footprint</strong>: Linux runs over 90% of public cloud instances; it is the primary target for attackers."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Kernel Complexity</strong>: The Linux kernel is massive, creating bugs and zero-day vulnerabilities (e.g., Dirty COW, PwnKit)."
+                },
+                {
+                  "emoji": "💸",
+                  "text": "<strong>High-Value Targets</strong>: Database systems, web servers, and container clusters are high-priority ransomware targets."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Default Configuration Weaknesses</strong>: Standard distributions prioritize convenience over high-level security out of the box."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Principle of Least Privilege",
+            "box": {
+              "title": "Enforcing Structural Restraints",
+              "list": [
+                {
+                  "emoji": "❌",
+                  "text": "<strong>Banish Direct Root Logins</strong>: Disable root console access via network and enforce sudo usage."
+                },
+                {
+                  "emoji": "📦",
+                  "text": "<strong>Isolated Service Accounts</strong>: Run daemons (like nginx, postgres) under dedicated, non-privileged system accounts."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Disable Interactive Shells</strong>: Assign `/usr/sbin/nologin` or `/bin/false` to service user accounts."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Sudo Fine-Graining</strong>: Allow specific administrative commands rather than granting absolute `ALL` access."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🗺️",
+            "title": "Threat Vector Analysis",
+            "box": {
+              "title": "Where Servers Get Exploited",
+              "list": [
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Exposed Ports</strong>: Unused open listening sockets (e.g., unauthenticated Redis, backup SSH servers)."
+                },
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Credential Stuffing</strong>: Brute-force attacks against weak user passwords on port 22."
+                },
+                {
+                  "emoji": "🐞",
+                  "text": "<strong>Local Privilege Escalation (LPE)</strong>: Attackers exploit local bugs to transition from a low-privilege user to root."
+                },
+                {
+                  "emoji": "🔗",
+                  "text": "<strong>Supply Chain Hacks</strong>: Malicious libraries injected into package registries (e.g., the XZ Utils backdoor)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔄",
+            "title": "Defense-in-Depth Architecture",
+            "box": {
+              "title": "Multi-Layered Protection Strategy",
+              "list": [
+                {
+                  "emoji": "1️⃣",
+                  "text": "<strong>Network Layer</strong>: Port filtering, IP whitelisting, and DDoS firewalls."
+                },
+                {
+                  "emoji": "2️⃣",
+                  "text": "<strong>Identity Layer</strong>: Multi-Factor Authentication (MFA), public-key SSH, and PAM rules."
+                },
+                {
+                  "emoji": "3️⃣",
+                  "text": "<strong>Kernel/OS Layer</strong>: LSM restrictions (SELinux/AppArmor), sysctl parameters, and boot protection."
+                },
+                {
+                  "emoji": "4️⃣",
+                  "text": "<strong>File Layer</strong>: Strict read/write permissions, partition boundaries (nosuid), and integrity scans."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ssh-pam",
+        "title": "Topic 2: Identity & Access Management (SSH & PAM)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 2: Identity & Access Management",
+            "subtitle": "Hardening the secure shell daemon, configuring PAM modules, and managing sudo policies"
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "SSH Daemon Hardening",
+            "box": {
+              "title": "Critical Configurations for /etc/ssh/sshd_config",
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>PermitRootLogin no</strong>: Block direct logins to the root account."
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>PasswordAuthentication no</strong>: Force cryptographic SSH public-key verification."
+                },
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>ClientAliveInterval 300 / ClientAliveCountMax 2</strong>: Auto-disconnect idle sessions after 10 minutes."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>AllowUsers / AllowGroups</strong>: Whitelist specific administrative accounts that are allowed to log in."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Secure SSHD Config Blueprint",
+            "emoji": "📄",
+            "box": {
+              "title": "/etc/ssh/sshd_config",
+              "code": "# Enforce SSH Protocol 2 only\nProtocol 2\n\n# Authentication controls\nPermitRootLogin no\nMaxAuthTries 3\nPubkeyAuthentication yes\nPasswordAuthentication no\nPermitEmptyPasswords no\n\n# Crypto optimization (Disable weak algorithms)\nKexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512\nCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com\nMACs hmac-sha2-512-etm@openssh.com\n\n# User restriction\nAllowGroups sysops security\nX11Forwarding no",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🧬",
+            "title": "Pluggable Authentication Modules (PAM)",
+            "box": {
+              "title": "Understanding Linux Modular Auth",
+              "list": [
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Layout</strong>: Located in `/etc/pam.d/`. Modular configurations for login, sshd, and sudo."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Complexity Enforcement</strong>: Use `pam_pwquality` to enforce password length, character mixes, and dictionary checks."
+                },
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>Account Lockouts</strong>: Configure `pam_faillock` (replaces older `pam_tally2`) to lock accounts after repeated login failures."
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Access Controls</strong>: Use `pam_access.so` to restrict logins based on hostnames, origin IPs, or groups."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Securing Password Strength via PAM",
+            "emoji": "🛠️",
+            "box": {
+              "title": "/etc/pam.d/common-password snippet",
+              "code": "# Enforce strong passwords using pam_pwquality.so\npassword required pam_pwquality.so retry=3 minlen=14 difok=3 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1 reject_username enforce_for_root\n\n# Lockout users after 5 failed attempts within 15 minutes (in common-auth)\nauth required pam_faillock.so preauth silent deny=5 unlock_time=900\nauth [default=die] pam_faillock.so authfail deny=5 unlock_time=900",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "👥",
+            "title": "Sudoers Policies & Least Privilege",
+            "box": {
+              "title": "Designing Safe Sudoers Permissions",
+              "list": [
+                {
+                  "emoji": "📂",
+                  "text": "<strong>Use /etc/sudoers.d/</strong>: Do not edit `/etc/sudoers` directly. Use specialized files via `visudo -f`."
+                },
+                {
+                  "emoji": "🙅",
+                  "text": "<strong>Avoid NOPASSWD</strong>: Requiring a password re-entry on elevation blocks automated keylogger payloads."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Strict Command Whitelisting</strong>: Restrict groups to specific safe commands (e.g., restarting system service only)."
+                },
+                {
+                  "emoji": "🔏",
+                  "text": "<strong>Enforce Sudo Logging</strong>: Route all sudo access logs to secure centralized files."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "kernel-sysctl",
+        "title": "Topic 3: System & Kernel Hardening",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 3: System & Kernel Hardening",
+            "subtitle": "GRUB boot protection, kernel parameter tuning via sysctl, and module management"
+          },
+          {
+            "type": "content",
+            "emoji": "🔒",
+            "title": "Securing the Bootloader",
+            "box": {
+              "title": "GRUB & Boot-Level Protections",
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>GRUB Passwords</strong>: Enforce a password to edit boot parameters, blocking attackers from appending `init=/bin/sh`."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Disable External Booting</strong>: Lock down hardware BIOS/UEFI to block boot from USB, CD/DVD, or Network PXE."
+                },
+                {
+                  "emoji": "🔏",
+                  "text": "<strong>UEFI Secure Boot</strong>: Enforce signature checks on the kernel and drivers, preventing rootkits from loading during boot."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Protect /boot Partition</strong>: Mount `/boot` as read-only (`ro`) in production unless installing updates."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚙️",
+            "title": "Kernel Hardening with sysctl",
+            "box": {
+              "title": "Network and Memory Space Hardening",
+              "list": [
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>TCP SYN Cookies</strong>: Protect against TCP SYN flood DoS attacks by enabling cookies."
+                },
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Disable IP Forwarding</strong>: Ensure the system does not act as a router and forward untrusted packets."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Block Source Routing</strong>: Ignore source-routed packets, which can allow spoofing attacks."
+                },
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>ASLR Enrichment</strong>: Maximize Address Space Layout Randomization to prevent buffer overflow attacks."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Hardening Kernel Configurations",
+            "emoji": "⚙️",
+            "box": {
+              "title": "/etc/sysctl.d/99-security.conf",
+              "code": "# Enable TCP SYN Flood Protection\nnet.ipv4.tcp_syncookies = 1\n\n# Ignore ICMP Redirects (Prevent MITM)\nnet.ipv4.conf.all.accept_redirects = 0\nnet.ipv4.conf.default.accept_redirects = 0\n\n# Enable Reverse Path Filtering (Prevent IP Spoofing)\nnet.ipv4.conf.all.rp_filter = 1\nnet.ipv4.conf.default.rp_filter = 1\n\n# Restrict dmesg access to root only\nkernel.dmesg_restrict = 1\n\n# Enable ASLR (Address Space Layout Randomization)\nkernel.randomize_va_space = 2",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Disabling Unused Kernel Modules",
+            "box": {
+              "title": "Shrinking the Running Kernel Footprint",
+              "list": [
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>The Hazard</strong>: Unused modules (e.g. firewire, uncommon filesystems) expose complex kernel code to local exploits."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Blacklisting Modules</strong>: Create configurations in `/etc/modprobe.d/` to restrict auto-loading."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>USB Storage Blacklist</strong>: Disable USB storage modules on high-security servers to prevent physical data extraction."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Disable Network Protocols</strong>: Blacklist complex unused protocols like DCCP, SCTP, RDS, and TIPC."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Blacklisting Kernel Modules",
+            "emoji": "🚫",
+            "box": {
+              "title": "/etc/modprobe.d/security-blacklist.conf",
+              "code": "# Blacklist unused network protocols\ninstall dccp /bin/true\ninstall sctp /bin/true\ninstall rds /bin/true\ninstall tipc /bin/true\n\n# Disable USB storage devices\ninstall usb-storage /bin/true\n\n# Disable legacy filesystems\ninstall cramfs /bin/true\ninstall freevxfs /bin/true\ninstall hfs /bin/true\ninstall jffs2 /bin/true",
+              "language": "bash"
+            }
+          }
+        ]
+      },
+      {
+        "id": "network-firewall",
+        "title": "Topic 4: Network Security & Firewall Controls",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 4: Network Security & Firewalls",
+            "subtitle": "Firewall layout, default-deny rulesets with nftables, and socket bindings"
+          },
+          {
+            "type": "content",
+            "emoji": "🧱",
+            "title": "Linux Firewall Evolution",
+            "box": {
+              "title": "Iptables vs. Nftables",
+              "list": [
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>Legacy Iptables</strong>: Hard to manage, slow for complex rules, utilizes redundant table schemas."
+                },
+                {
+                  "emoji": "⚡",
+                  "text": "<strong>Modern Nftables</strong>: Unified framework, faster VM-like execution, structured CLI syntax."
+                },
+                {
+                  "emoji": "🐚",
+                  "text": "<strong>Wrappers (UFW/Firewalld)</strong>: Convenient syntax for basic tasks, but lack deep enterprise pipeline features."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Performance Benefits</strong>: Nftables matches packets faster with lower CPU overhead under high load."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🙅",
+            "title": "Default-Deny Firewall Design",
+            "box": {
+              "title": "Building a Zero-Trust Network Policy",
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Policy Default Drop</strong>: Set input, forward, and output base chains to drop by default."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Stateful Tracking</strong>: Allow existing established and related connections, but block new ones."
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Loopback Whitelist</strong>: Explicitly allow all traffic on the localhost loopback interface (`lo`)."
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>Selective Port Holes</strong>: Open ports only for documented services (e.g., 22 for SSH, 443 for HTTPS)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "nftables Security Ruleset Blueprint",
+            "emoji": "⚙️",
+            "box": {
+              "title": "/etc/nftables.conf",
+              "code": "table inet filter {\n    chain input {\n        type filter hook input priority 0; policy drop;\n\n        # Allow loopback traffic\n        iif \"lo\" accept\n\n        # Allow established/related traffic\n        ct state established,related accept\n        ct state invalid drop\n\n        # Allow SSH (Port 22)\n        tcp dport 22 accept\n\n        # Allow Web traffic (HTTP/HTTPS)\n        tcp dport { 80, 443 } accept\n    }\n    chain forward {\n        type filter hook forward priority 0; policy drop;\n    }\n}",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📡",
+            "title": "Service Binding Hardening",
+            "box": {
+              "title": "Preventing Accidental Network Exposure",
+              "list": [
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>Wildcard Binding Hazard</strong>: Services binding to `0.0.0.0` listen on all interfaces, exposing database ports to the internet."
+                },
+                {
+                  "emoji": "🏠",
+                  "text": "<strong>Localhost Binding</strong>: Force localized system components (Redis, PostgreSQL, memcached) to bind to `127.0.0.1`."
+                },
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>Verify Listening Ports</strong>: Use modern socket audit commands to audit network sockets."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Network Namespace Isolation</strong>: Run application instances inside separate namespaces to restrict interface access."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Socket Auditing Commands",
+            "emoji": "💻",
+            "box": {
+              "title": "Identifying Exposed Interfaces",
+              "code": "# List all listening TCP and UDP sockets with process name and PIDs\nss -tulpn\n\n# Audit open ports using netstat (Legacy)\nnetstat -tulpn\n\n# Bind Redis to localhost interface only (/etc/redis/redis.conf)\nbind 127.0.0.1 -::1\n\n# Bind PostgreSQL to localhost only (/etc/postgresql/15/main/postgresql.conf)\nlisten_addresses = 'localhost'",
+              "language": "bash"
+            }
+          }
+        ]
+      },
+      {
+        "id": "filesystem",
+        "title": "Topic 5: Filesystem Integrity & Access Controls",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 5: Filesystem Security & Access Controls",
+            "subtitle": "Standard UGO permissions, SUID/SGID hazards, ACLs, and mounting partitions securely"
+          },
+          {
+            "type": "content",
+            "emoji": "📁",
+            "title": "Linux Permissions & Umasks",
+            "box": {
+              "title": "Controlling File Permissions",
+              "list": [
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Octal Notation</strong>: Read (4), Write (2), Execute (1). `755` means rwxr-xr-x."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>Umask Configuration</strong>: Establishes default permission flags on file creation. Enforce `027` (files: `640`, folders: `750`)."
+                },
+                {
+                  "emoji": "👥",
+                  "text": "<strong>Directory Integrity</strong>: Restrict read/write to files by disabling write permission for others (`go-w`)."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Sensitive System Files</strong>: `/etc/passwd` must be write-locked, and `/etc/shadow` must be read-restricted to root (`600`)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚠️",
+            "title": "SUID, SGID, & Sticky Bit Risks",
+            "box": {
+              "title": "Special Permission Hazards",
+              "list": [
+                {
+                  "emoji": "🚨",
+                  "text": "<strong>SetUID (SUID)</strong>: Executes a binary with the permissions of the file owner (often root). A major vector for local root escalation."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>SetGID (SGID)</strong>: Executes files with group owner privileges or forces subdirectories to inherit parent group ownership."
+                },
+                {
+                  "emoji": "📌",
+                  "text": "<strong>Sticky Bit</strong>: Restricts deletion within a shared directory (like `/tmp`) to the file owner and root."
+                },
+                {
+                  "emoji": "🕵️",
+                  "text": "<strong>Auditing SUID Files</strong>: Regularly scan filesystems to locate and verify all binaries carrying SUID flags."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Finding SUID Binaries & Setting ACLs",
+            "emoji": "🔍",
+            "box": {
+              "title": "Terminal Commands for Permission Enforcement",
+              "code": "# Find all SUID binaries on the filesystem owned by root\nfind / -user root -perm -4000 -exec ls -ld {} \\; 2>/dev/null\n\n# Find all world-writable files\nfind / -type f -perm -0002 -exec ls -l {} \\; 2>/dev/null\n\n# Configure granular permissions for a user via Access Control Lists (ACLs)\nsetfacl -m u:john:r-x /opt/secured_directory/\n\n# Verify ACLs applied to the path\ngetfacl /opt/secured_directory/",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "Partition Mount Hardening",
+            "box": {
+              "title": "Securing Disk Partitions in /etc/fstab",
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>noexec</strong>: Block execution of any binary files compiled inside that specific partition."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>nosuid</strong>: Disable SetUID execution bits on the files mounted inside the partition."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>nodev</strong>: Block processing of character or block special devices on the partition."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Target Locations</strong>: Apply `noexec,nosuid,nodev` settings to volatile paths like `/tmp`, `/var/tmp`, and `/dev/shm`."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Secure Partition Mounts Config",
+            "emoji": "📄",
+            "box": {
+              "title": "/etc/fstab snippet",
+              "code": "# Secure mounting configuration for user writable directories\n/dev/vg01/tmp-vol   /tmp       ext4    defaults,nodev,nosuid,noexec   0 2\n/dev/vg01/vartmp-vol /var/tmp   ext4    defaults,nodev,nosuid,noexec   0 2\n\n# Secure shared memory mount\ntmpfs                /dev/shm   tmpfs   defaults,nodev,nosuid,noexec   0 0\n\n# Mount /boot partition as read-only by default\nUUID=xxxx-xxxx       /boot      ext2    defaults,ro                    0 2",
+              "language": "bash"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mac-security",
+        "title": "Topic 6: Mandatory Access Control (SELinux & AppArmor)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 6: Mandatory Access Control (MAC)",
+            "subtitle": "SELinux context labeling, AppArmor path-based profiles, and debugging denial logs"
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "DAC vs. MAC Security Models",
+            "box": {
+              "title": "Access Control Philosophies",
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Discretionary Access Control (DAC)</strong>: Owners decide access (via standard UGO). If a root-owned service is compromised, the attacker inherits full root capabilities."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Mandatory Access Control (MAC)</strong>: System-wide security rules defined by security modules (SELinux, AppArmor). Even if root is compromised, MAC rules restrict process behavior."
+                },
+                {
+                  "emoji": "🐧",
+                  "text": "<strong>LSM Core</strong>: Linux Security Modules (LSM) act as kernel hooks to check permissions prior to execution."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔴",
+            "title": "SELinux: Security-Enhanced Linux",
+            "box": {
+              "title": "Subject/Object Labeling & Modes",
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Type Enforcement</strong>: Every process, file, directory, and port is assigned a security context (e.g. `httpd_t`, `httpd_sys_content_t`)."
+                },
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Execution Modes</strong>: Enforcing (rules are blocked and logged), Permissive (violations are logged but allowed), Disabled (no MAC protection)."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Context Restoration</strong>: Use `restorecon` to reset file contexts to default policy settings."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Common Policy</strong>: Targeted policy confines selected network daemons, leaving user processes in standard DAC modes."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🟢",
+            "title": "AppArmor: Path-Based Profiles",
+            "box": {
+              "title": "AppArmor Features & Profile Design",
+              "list": [
+                {
+                  "emoji": "🛣️",
+                  "text": "<strong>Path-Based Identification</strong>: Associates security profiles directly to absolute paths of executable binaries."
+                },
+                {
+                  "emoji": "🧩",
+                  "text": "<strong>Simpler Design</strong>: Preferred by Ubuntu/Debian; easier to read and create than SELinux."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Enforce vs. Complain Mode</strong>: Complain mode registers violations without blocking; Enforce mode enforces rules."
+                },
+                {
+                  "emoji": "🔧",
+                  "text": "<strong>Profile Location</strong>: Stored in `/etc/apparmor.d/` as clear text config profiles."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "MAC Management Commands",
+            "emoji": "💻",
+            "box": {
+              "title": "SELinux & AppArmor Administration",
+              "code": "# SELinux: Check enforcement status\nsestatus\n\n# SELinux: Set execution mode to enforcing\nsudo setenforce 1\n\n# AppArmor: Check profile loaded status\nsudo aa-status\n\n# AppArmor: Switch a profile to enforce mode\nsudo aa-enforce /usr/sbin/nginx\n\n# Debugging MAC Denials (Search log files for audit errors)\nsudo grep -i \"denied\" /var/log/audit/audit.log\nsudo grep -i \"apparmor\" /var/log/syslog",
+              "language": "bash"
+            }
+          }
+        ]
+      },
+      {
+        "id": "auditing-monitoring",
+        "title": "Topic 7: System Auditing & Intrusion Detection",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 7: System Auditing & Intrusion Detection",
+            "subtitle": "Kernel level system call monitoring with auditd, Fail2ban brute-force protection, and Lynis security scans"
+          },
+          {
+            "type": "content",
+            "emoji": "🕵️",
+            "title": "The Linux Audit Framework (auditd)",
+            "box": {
+              "title": "Tracking System Calls & File Modifications",
+              "list": [
+                {
+                  "emoji": "📝",
+                  "text": "<strong>Real-Time Tracking</strong>: Kernel-level audit daemon tracking file changes, authentication attempts, and command execution."
+                },
+                {
+                  "emoji": "🔔",
+                  "text": "<strong>File Integrity Monitoring</strong>: Establish audit watches (`-w`) to detect modifications in critical system configuration paths (e.g. `/etc/passwd`)."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>System Call Audit</strong>: Audit syscall executions (like `execve` or `socket`) based on user IDs."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Analysis Tools</strong>: Use `ausearch` and `aureport` to parse binary audit logs."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Configuring auditd Rules",
+            "emoji": "⚙️",
+            "box": {
+              "title": "/etc/audit/rules.d/audit.rules",
+              "code": "# Monitor modifications to the system user database\n-w /etc/passwd -p wa -k user_modifications\n-w /etc/shadow -p wa -k user_modifications\n-w /etc/sudoers -p wa -k sudo_modifications\n\n# Audit execution of system calls by non-privileged accounts\n-a always,exit -F arch=b64 -S execve -F auid>=1000 -F auid!=4294967295 -k execution_audit\n\n# Lock the configuration (make rules read-only until reboot)\n-e 2",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🚦",
+            "title": "Fail2ban: Brute-Force Protection",
+            "box": {
+              "title": "Automated IP Blocking via Log Analysis",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Log Scanning</strong>: Continuously scans server log files (e.g. `/var/log/auth.log`) matching regex patterns of failures."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Dynamic Firewall Blocks</strong>: Triggers immediate firewall rules (iptables/nftables) to drop packets from source IPs exceeding threshold failures."
+                },
+                {
+                  "emoji": "📧",
+                  "text": "<strong>Alert Notifications</strong>: Can be configured to email security administrators immediately upon blocking an IP."
+                },
+                {
+                  "emoji": "👮",
+                  "text": "<strong>Custom Jails</strong>: Define distinct ban parameters for SSH, Nginx, database ports, and mail servers."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Fail2ban Jail Configuration",
+            "emoji": "📄",
+            "box": {
+              "title": "/etc/fail2ban/jail.local",
+              "code": "[DEFAULT]\nbantime = 3600\nfindtime = 600\nmaxretry = 5\naction = %(action_mw)s\n\n[sshd]\nenabled = true\nport = ssh\nlogpath = %(sshd_log)s\nbackend = %(sshd_backend)s\n\n[nginx-http-auth]\nenabled = true\nfilter = nginx-http-auth\nport = http,https\nlogpath = /var/log/nginx/error.log",
+              "language": "bash"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Vulnerability Scanning with Lynis",
+            "box": {
+              "title": "Continuous Local Audits",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>Post-Installation Scan</strong>: Identifies security misconfigurations, vulnerable packages, and deviations from CIS benchmarks."
+                },
+                {
+                  "emoji": "📊",
+                  "text": "<strong>Hardening Index</strong>: Calculates a numeric score representing overall system security posture."
+                },
+                {
+                  "emoji": "📋",
+                  "text": "<strong>Actionable Suggestions</strong>: Generates warnings and suggestions on configuration files, PAM rules, and permissions."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>Automation Mode</strong>: Supports headless, non-interactive execution inside cron schedules or CI/CD pipelines."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "namespaces-isolation",
+        "title": "Topic 8: Container & Process Isolation Security",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 8: Container & Process Isolation Security",
+            "subtitle": "Linux namespaces, resource constraints using cgroups, and system call filtering with seccomp"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Linux Namespaces",
+            "box": {
+              "title": "Virtualizing Operating System Resources",
+              "list": [
+                {
+                  "emoji": "🔍",
+                  "text": "<strong>PID Namespace</strong>: Isolates process ID allocation. Processes in a container cannot see processes running on the host."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>NET Namespace</strong>: Virtualizes network interfaces, routing tables, and socket bindings."
+                },
+                {
+                  "emoji": "💾",
+                  "text": "<strong>MNT Namespace</strong>: Limits disk mount visibility, providing containerized storage instances."
+                },
+                {
+                  "emoji": "👤",
+                  "text": "<strong>User Namespace</strong>: Maps local container IDs (e.g. root) to high-value non-privileged user IDs on the host."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚖️",
+            "title": "Control Groups (cgroups)",
+            "box": {
+              "title": "Restricting Resource Utilization",
+              "list": [
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Resource Control</strong>: Dictates maximum limits on CPU, memory, network bandwidth, and disk I/O rates."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>DoS Mitigation</strong>: Limits container resource usage to prevent memory leaks from crashing the host."
+                },
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>OOM Killer Protection</strong>: Places containers inside memory limits so the Out-of-Memory killer terminates the container, not system hosts."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>cgroups v2</strong>: Unified hierarchy design in modern kernels, simplifying multi-resource limits."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "System Call Filtering (seccomp)",
+            "box": {
+              "title": "Shrinking the Process-to-Kernel Interface",
+              "list": [
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>The Concept</strong>: Restricts the system calls a process can make. A breached daemon cannot execute unauthorized system calls."
+                },
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>Block Unsafe Calls</strong>: Turn off kernel interfaces (like `swapon`, `reboot`, `ptrace`) for normal user-space programs."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Docker default profile</strong>: Blocks over 40 unsafe system calls out of ~300, shielding the host kernel from guest exploits."
+                }
+              ]
+            }
+          },
+          {
+            "type": "code",
+            "title": "Systemd Service Hardening Sandbox",
+            "emoji": "🔒",
+            "box": {
+              "title": "/etc/systemd/system/app.service snippet",
+              "code": "[Service]\nExecStart=/usr/bin/node /opt/app/index.js\nUser=nodeguest\nGroup=nodeguest\n\n# Enforce Systemd sandboxing directives\nProtectSystem=strict\nProtectHome=yes\nPrivateTmp=yes\nPrivateDevices=yes\nNoNewPrivileges=yes\nCapabilityBoundingSet=CAP_NET_BIND_SERVICE\nSystemCallFilter=~@clock @cpu-emulation @debug @keyring @module @obsolete @raw-io @reboot @swap",
+              "language": "bash"
+            }
+          }
+        ]
+      },
+      {
+        "id": "quiz",
+        "title": "Topic 9: Linux Hardening Masterclass Quiz",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Topic 9: Linux Hardening Quiz",
+            "subtitle": "Test your knowledge on SSH, sysctl, SELinux, permissions, and auditing"
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q1: Why is configuring 'PermitRootLogin no' in sshd_config considered a critical security step for Linux servers?",
+            "options": [
+              "It blocks administrative access entirely.",
+              "It forces attackers to compromise a regular user account first, preventing direct root credential brute-forcing.",
+              "It automatically encrypts the root password using Argon2.",
+              "It speeds up SSH connection negotiations."
+            ],
+            "correct": 1,
+            "explanation": "Correct! Disabling direct root logins forces attackers to guess both a custom user ID and password, and preserves user trace logs through `sudo` audit trails."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q2: Which sysctl parameter configuration is used to protect a server from TCP SYN flood Denial-of-Service attacks?",
+            "options": [
+              "net.ipv4.ip_forward = 1",
+              "net.ipv4.tcp_syncookies = 1",
+              "kernel.randomize_va_space = 2",
+              "net.ipv4.conf.all.accept_redirects = 1"
+            ],
+            "correct": 1,
+            "explanation": "Correct! Enabling **tcp_syncookies** allows the kernel to handle incoming SYN queues by encoding sequence numbers in packet headers, avoiding memory exhaustion."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q3: An administrator edits a file's permission flags to '4755'. What does the prefix '4' denote?",
+            "options": [
+              "The file is encrypted with AES-256.",
+              "The file has the sticky bit enabled.",
+              "The file has SetUID (SUID) enabled, executing with the owner's privileges.",
+              "The file can only be modified by group owners."
+            ],
+            "correct": 2,
+            "explanation": "Correct! The **4** prefix sets the **SetUID (SUID)** bit, making the binary run with the owner's privileges (e.g., root). These should be audited strictly to prevent privilege escalation."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q4: Which option in /etc/fstab prevents the execution of binary files on a mounted partition?",
+            "options": [
+              "nosuid",
+              "nodev",
+              "noexec",
+              "ro"
+            ],
+            "correct": 2,
+            "explanation": "Correct! The **noexec** mount option prevents files on that partition from being executed, limiting write-heavy paths (like `/tmp`) from running malicious payloads."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q5: How does Mandatory Access Control (MAC) differ from traditional Discretionary Access Control (DAC)?",
+            "options": [
+              "MAC relies solely on user ownership permissions.",
+              "MAC applies global security rules at the kernel level that even the root user must obey.",
+              "MAC disables standard file systems, requiring database storage.",
+              "MAC allows users to edit security policies of other users' folders."
+            ],
+            "correct": 1,
+            "explanation": "Correct! Under **MAC** (SELinux/AppArmor), the kernel checks centralized policies. Even if a process running as root is hijacked, the MAC policy restricts it from accessing unauthorized files."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q6: Which SELinux mode logs security violations but allows the system to run without blocking operations?",
+            "options": [
+              "Enforcing",
+              "Permissive",
+              "Disabled",
+              "Targeted"
+            ],
+            "correct": 1,
+            "explanation": "Correct! **Permissive** mode allows operations to proceed but logs warnings, making it perfect for debugging policies before locking down environments in **Enforcing** mode."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q7: What does the 'fail2ban' service do when it detects multiple authentication failures from a single IP address in log files?",
+            "options": [
+              "It sends a notification email and shuts down the SSH service daemon.",
+              "It dynamically creates firewall rules to block traffic from that IP for a set duration.",
+              "It resets the user's password to a secure random string.",
+              "It logs the IP address into the `/etc/hosts` blacklist file."
+            ],
+            "correct": 1,
+            "explanation": "Correct! **Fail2ban** acts dynamically by adding temporary packet-drop rules in iptables/nftables to block brute-force attempts from specific IPs."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q8: Which tool checks the system's security configuration, filesystems, and packages against CIS benchmarks, providing a hardening index?",
+            "options": [
+              "auditd",
+              "Lynis",
+              "sysdig",
+              "Fail2ban"
+            ],
+            "correct": 1,
+            "explanation": "Correct! **Lynis** is an open-source security auditing tool designed for Unix-based hosts to evaluate configurations and suggest optimization steps."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q9: Which Linux namespace isolates network interfaces, routing tables, and listening ports?",
+            "options": [
+              "PID Namespace",
+              "NET Namespace",
+              "MNT Namespace",
+              "USER Namespace"
+            ],
+            "correct": 1,
+            "explanation": "Correct! The **NET Namespace** isolates network resources, letting containers maintain virtual interfaces and private port bindings without conflict."
+          },
+          {
+            "type": "quiz",
+            "topic": "Linux Hardening",
+            "question": "Q10: What is the primary function of system call filtering using 'seccomp' profiles?",
+            "options": [
+              "To encrypt all system logs at the storage layer.",
+              "To restrict the system calls a process can make, reducing the kernel attack surface.",
+              "To prioritize process execution schedules.",
+              "To configure network firewall access parameters."
+            ],
+            "correct": 1,
+            "explanation": "Correct! **Seccomp** restricts process system calls, limiting what an attacker can do if they exploit user-space bugs to run shellcode."
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "title": "Topic 10: Summary & Resources",
+        "slides": [
+          {
+            "type": "content",
+            "emoji": "📋",
+            "title": "Linux Hardening Checklist",
+            "box": {
+              "title": "Essential Server Hardening Steps",
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Identity</strong>: Disable password auth and root SSH logins. Configure Fail2ban."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Kernel</strong>: Set secure sysctl parameters. Lock down the GRUB bootloader."
+                },
+                {
+                  "emoji": "🧱",
+                  "text": "<strong>Network</strong>: Enforce default-drop nftables firewall rules. Bind databases locally."
+                },
+                {
+                  "emoji": "📁",
+                  "text": "<strong>Filesystem</strong>: Audit SUID flags, set restrictive umasks, and mount `/tmp` as `noexec`."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>MAC Protection</strong>: Keep SELinux or AppArmor in Enforcing mode."
+                },
+                {
+                  "emoji": "🕵️",
+                  "text": "<strong>Audit & Monitor</strong>: Configure auditd watches on critical files, and review suggestions from Lynis."
+                }
+              ]
+            }
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">🐧</span> Server security is a process, not a state.<br><span class=\"gradient-accent\">Start applying defense-in-depth principles to your Linux nodes today!</span>",
+              "note": "Verify Configurations • Limit Permissions • Log Everything"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Empowering administrators to build secure infrastructure"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
