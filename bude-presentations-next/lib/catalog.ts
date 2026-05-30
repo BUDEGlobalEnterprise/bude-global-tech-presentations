@@ -612,6 +612,14 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     category: ["iot", "tools"],
     difficulty: "beginner"
   },
+  {
+    file: "intro-rfid.json",
+    title: "RFID Masterclass: Radio Frequency Identification & IoT Integration",
+    description: "A comprehensive 60+ slide guide to RFID technology: tags, readers, frequencies, middleware, software integration, and real-world enterprise deployments.",
+    keywords: ["rfid", "iot", "hardware", "tracking", "middleware", "nfc", "supply-chain", "logistics"],
+    category: ["iot", "tools"],
+    difficulty: "intermediate"
+  },
 
   // ============= BUSINESS & ENTERPRISE =============
   {

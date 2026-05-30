@@ -9,6 +9,7 @@ import type { Slide } from "@/types/presentation";
 
 interface Props {
   slide: Slide;
+  isQuizRevealed?: boolean;
 }
 
 function getCorrectIndex(slide: Slide): number | undefined {
@@ -29,13 +30,13 @@ function optionText(opt: unknown): string {
   return String(opt);
 }
 
-export function QuizSlide({ slide }: Props) {
+export function QuizSlide({ slide, isQuizRevealed = false }: Props) {
   const [picked, setPicked] = useState<number | null>(null);
   const options = (slide.options ?? []) as unknown[];
   const correctIndex = getCorrectIndex(slide);
   const question = slide.question ?? slide.title ?? "Question";
   const explanation = slide.explanation;
-  const revealed = picked !== null;
+  const revealed = picked !== null || isQuizRevealed;
 
   return (
     <div className="mx-auto flex h-full w-full max-w-4xl flex-col px-6 py-8 md:px-10 md:py-12">
@@ -49,7 +50,7 @@ export function QuizSlide({ slide }: Props) {
 
       <div className="mt-8 grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto pr-1 md:grid-cols-2 md:gap-4">
         {options.map((opt, i) => {
-          const isPicked = picked === i;
+          const isPicked = picked === i || (isQuizRevealed && i === correctIndex);
           const isCorrect = revealed && i === correctIndex;
           const isWrongPick = revealed && isPicked && i !== correctIndex;
           return (

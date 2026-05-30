@@ -1,0 +1,1005 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "title",
+        "title": "Title Slide",
+        "slides": [
+          {
+            "type": "title",
+            "emoji": "📡",
+            "title": "RFID Masterclass",
+            "subtitle": "Radio Frequency Identification & IoT Integration<br>From Hardware Layers to Enterprise Software Middleware",
+            "backgroundImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          }
+        ]
+      },
+      {
+        "id": "presenter",
+        "title": "Presenter",
+        "slides": [
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Software Developer & IoT Integrator",
+            "experience": "3 years in .NET, Python, IoT & RFID Architectures",
+            "oss_experience": "Enterprise Automation & Middleware Engineering",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io"
+          }
+        ]
+      },
+      {
+        "id": "introduction",
+        "title": "Topic 1: Introduction to RFID",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🚀",
+            "title": "Introduction to RFID",
+            "subtitle": "The foundation of wireless automatic identification and data capture"
+          },
+          {
+            "type": "imageText",
+            "title": "What is RFID?",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1563013544-824ae1d704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "RFID scanner and card",
+            "caption": "RFID wireless communication in everyday life",
+            "content": "<h4>📡 Wireless Automatic Identification</h4><p>RFID (Radio Frequency Identification) uses electromagnetic fields in the radio frequency range to automatically identify, catalog, and track tags attached to physical objects.</p><ul><li>🚫 <strong>Non-Line-of-Sight (NLOS):</strong> Unlike barcodes, readers do not need optical sight. They can read tags through cardboard, wood, and plastic.</li><li>⚡ <strong>Instant Captures:</strong> Interrogates multiple tags in milliseconds, enabling automated supply chains.</li><li>🧠 <strong>Edge Data Node:</strong> RFID acts as a core physical bridge for IoT (Internet of Things) environments.</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "title": "RFID vs Barcodes",
+            "leftTitle": "Traditional Barcodes",
+            "leftPoints": [
+              "Line of sight required: Scanner must face the code directly.",
+              "Single read: Can only scan one barcode at a time.",
+              "Read-only: Data is printed and cannot be updated dynamically.",
+              "Low durability: Easily damaged by dirt, moisture, or tearing.",
+              "Small capacity: Stores limited data (usually numeric/alphanumeric)."
+            ],
+            "rightTitle": "RFID Technology",
+            "rightPoints": [
+              "No line of sight: Can read tags through cardboard, plastic, or wood.",
+              "Bulk reading: Can read hundreds of tags simultaneously in seconds.",
+              "Read/Write: Many tags support real-time data updates on the chip.",
+              "High durability: Encapsulated tags withstand extreme environments.",
+              "Large capacity: Stores kilobytes of data, including serials and custom fields."
+            ],
+            "note": {
+              "text": "While barcodes are cheap, RFID offers unmatched operational speed and automation capabilities."
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "Basic Working Principle & Flow",
+            "content": "  ┌─────────────────┐             Radio Waves (Power)    ┌──────────────┐\n  │   RFID Reader   │ ══════════════════════════════════> │   RFID Tag   │\n  │  (Interrogator) │ <══════════════════════════════════ │ (Transponder)│\n  └────────┬────────┘           Backscatter Data (EPC)    └──────────────┘\n           │\n           │ (LLRP / TCP Connection)\n           ▼\n  ┌─────────────────┐\n  │ RFID Middleware │ ───> Filters Duplicate Reads\n  └────────┬────────┘\n           │\n           ▼\n  ┌─────────────────┐\n  │  WMS / ERP / DB │ ───> Dispatches Business Events\n  └─────────────────┘",
+            "note": {
+              "text": "Continuous RF power waves wake up passive tags, which modulate the signal to reply."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏗️",
+            "title": "Core System Components",
+            "box": {
+              "title": "Four Pillars of an RFID System",
+              "list": [
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>RFID Tags:</strong> Affixed to assets; contain an IC (chip) and an antenna."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>RFID Antennas:</strong> Broadcast and receive the radio waves."
+                },
+                {
+                  "emoji": "🖥️",
+                  "text": "<strong>RFID Readers:</strong> Control antennas, process signals, and decrypt tag data."
+                },
+                {
+                  "emoji": "⚙️",
+                  "text": "<strong>Middleware/Software:</strong> Filters raw tag reads and pushes data to ERP or database."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "RFID vs Barcode vs QR Code",
+            "leftTitle": "Barcodes & QR Codes",
+            "leftPoints": [
+              "Requires manual optical alignment.",
+              "Read range: Inches to a few feet.",
+              "Cost: Fractions of a cent (printed directly on packaging).",
+              "Susceptible to visual blockage and grease."
+            ],
+            "rightTitle": "RFID Tags",
+            "rightPoints": [
+              "Automated RF detection.",
+              "Read range: Up to 50+ feet (passive) or 300+ feet (active).",
+              "Cost: 5 cents to $20+ depending on tag durability.",
+              "Works through dirt, paint, and non-metallic objects."
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Brief History & Evolution",
+            "box": {
+              "title": "Key Milestones",
+              "list": [
+                {
+                  "emoji": "✈️",
+                  "text": "<strong>WWII (IFF System):</strong> Identification Friend or Foe (IFF) systems used radio signals to identify allied aircraft."
+                },
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>1973 (First RFID Patent):</strong> Mario Cardullo patented the first active RFID tag with rewritable memory."
+                },
+                {
+                  "emoji": "🌎",
+                  "text": "<strong>2004 (EPCglobal Gen 2):</strong> Standardization of EPC Class 1 Gen 2 protocol, sparking widespread retail adoption."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "tags",
+        "title": "Topic 2: RFID Tags (Transponders)",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏷️",
+            "title": "RFID Tags (Transponders)",
+            "subtitle": "Anatomy, classification, and power sources of RFID tags"
+          },
+          {
+            "type": "imageText",
+            "title": "Passive RFID Tags",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Abstract chip design",
+            "caption": "Passive RFID inlays are flat and thin",
+            "content": "<h4>🔋 Zero-Battery Power Harvesting</h4><p>Passive tags possess no internal battery. They lay completely dormant until they enter the RF read zone of an active antenna.</p><ul><li>⚡ <strong>Energy Harvesting:</strong> Captures electrical currents induced in the antenna by the reader's magnetic field.</li><li>📡 <strong>Backscatter:</strong> Reflects the carrier wave back with modulated chip ID.</li><li>♾️ <strong>Infinite Shelf Life:</strong> Lasts indefinitely since there are no batteries to degrade.</li></ul>"
+          },
+          {
+            "type": "imageText",
+            "title": "Active RFID Tags",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Industrial sensor",
+            "caption": "Active tags are ruggedized and self-powered",
+            "content": "<h4>⚡ Battery-Powered Transponders</h4><p>Active RFID tags incorporate an onboard battery to power their internal circuitry and transmitter.</p><ul><li>📡 <strong>Beaconing:</strong> Continuously broadcasts signal beacons at set intervals (e.g., every 500ms).</li><li>📏 <strong>Extreme Range:</strong> Easily reads up to 100-300+ meters away, perfect for locating vehicles or shipping containers.</li><li>🌡️ <strong>Active Telemetry:</strong> Often integrates sensors for temperature, vibration, or GPS tracking.</li></ul>"
+          },
+          {
+            "type": "content",
+            "emoji": "🧠",
+            "title": "Semi-Passive Tags (BAP)",
+            "box": {
+              "title": "Battery-Assisted Passive Tags",
+              "list": [
+                {
+                  "emoji": "🧠",
+                  "text": "<strong>Hybrid Power:</strong> Uses an internal battery to power the microchip logic and on-board sensors."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Backscatter Communication:</strong> Relies on the reader's signal to reflect (backscatter) data, preserving battery."
+                },
+                {
+                  "emoji": "🌡️",
+                  "text": "<strong>Sensor Integration:</strong> Ideal for cold-chain monitoring (logging temperatures over time without a reader present)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Passive vs Active Tags",
+            "leftTitle": "Passive Tags",
+            "leftPoints": [
+              "No battery, powered by reader.",
+              "Cost: $0.05 to $1.00.",
+              "Read range: up to 10 - 15 meters.",
+              "Tag life: virtually unlimited.",
+              "Size: thin, flexible paper labels.",
+              "Data rate: slow to moderate."
+            ],
+            "rightTitle": "Active Tags",
+            "rightPoints": [
+              "Onboard battery powers transmitter.",
+              "Cost: $10.00 to $100.00+.",
+              "Read range: up to 100 - 300+ meters.",
+              "Tag life: 3 to 10 years (non-replaceable).",
+              "Size: large, rugged plastic housings.",
+              "Data rate: fast, supports complex beacons."
+            ]
+          },
+          {
+            "type": "diagram",
+            "title": "Passive Inlay Anatomy",
+            "content": "  ┌────────────────────────────────────────────────────────┐\n  │                 PASSIVE RFID INLAY ANATOMY             │\n  │                                                        │\n  │     ┌────────────────────────────────────────────┐     │\n  │     │              PET / Paper Substrate         │     │\n  │     │  ┌──────────────────────────────────────┐  │     │\n  │     │  │          Printed Antenna Inlay       │  │     │\n  │     │  │   ┌─┐                          ┌─┐   │  │     │\n  │     │  │   │ └──────────────────────────┘ │   │  │     │\n  │     │  │   │   ┌───┐                      │   │  │     │\n  │     │  │   │   │IC │ <── Silicon Chip     │   │  │     │\n  │     │  │   │   └───┘     (Integrated      │   │  │     │\n  │     │  │   │   │   │      Circuit)        │   │  │     │\n  │     │  │   │ ┌─┴───┴─┐                    │   │  │     │\n  │     │  │   └─┘       └────────────────────┘   │  │     │\n  │     │  └──────────────────────────────────────┘  │     │\n  │     └────────────────────────────────────────────┘     │\n  └────────────────────────────────────────────────────────┘",
+            "note": {
+              "text": "The antenna layout dictates the frequency tuning and performance on specific materials."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "♻️",
+            "title": "Chipless RFID Tags",
+            "box": {
+              "title": "Next-Generation Low Cost",
+              "list": [
+                {
+                  "emoji": "🚫",
+                  "text": "<strong>No Silicon Chip:</strong> Contains no integrated circuit. Relies on electromagnetic material properties."
+                },
+                {
+                  "emoji": "📉",
+                  "text": "<strong>RF Signature:</strong> The antenna structure itself causes a unique frequency notch when struck by RF waves."
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Fractions of a Cent:</strong> Printed directly using conductive ink on packaging, targeting barcode costs."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💾",
+            "title": "RFID Memory Banks (Gen 2)",
+            "box": {
+              "title": "The Four Standard Memory Banks",
+              "list": [
+                {
+                  "emoji": "🔑",
+                  "text": "<strong>Reserved Memory:</strong> Holds the 32-bit Access password and 32-bit Kill password."
+                },
+                {
+                  "emoji": "🆔",
+                  "text": "<strong>EPC Memory:</strong> Stores the Electronic Product Code (typically 96 bits) which uniquely identifies the object."
+                },
+                {
+                  "emoji": "🧬",
+                  "text": "<strong>TID Memory:</strong> Tag Identifier. Hardcoded by the chip manufacturer at birth. Globally unique and write-locked."
+                },
+                {
+                  "emoji": "📝",
+                  "text": "<strong>User Memory:</strong> Read/Write bank for custom enterprise data (e.g. batch details, logs)."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "readers",
+        "title": "Topic 3: RFID Readers & Antennas",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🖥️",
+            "title": "RFID Readers & Antennas",
+            "subtitle": "The hardware responsible for energizing tags and processing backscatter signals"
+          },
+          {
+            "type": "imageText",
+            "title": "The RFID Reader (Interrogator)",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "RFID reader hardware",
+            "caption": "Inside an RFID Reader Unit",
+            "content": "<h4>🔌 Signal Processing Hub</h4><p>An RFID reader converts high-frequency analog radio signals into digital data packets for software ingestion.</p><ul><li>📟 <strong>Transmitter Layer</strong> - Generates carrier frequency and power</li><li>🎚️ <strong>Receiver Layer</strong> - Extracts weak tag responses (backscatter)</li><li>🧠 <strong>Microprocessor</strong> - Implements anti-collision and LLRP</li><li>🌐 <strong>Connectivity</strong> - Ethernet, Wi-Fi, PoE, and GPIO ports</li></ul>"
+          },
+          {
+            "type": "comparison",
+            "title": "Fixed Readers vs Handheld Readers",
+            "leftTitle": "Fixed RFID Readers",
+            "leftPoints": [
+              "Mounted on walls, portals, or conveyors.",
+              "Supports multiple external antennas (up to 8 or 16).",
+              "Maximum power limits (up to 30 dBm / 1 Watt).",
+              "Automated operation (continuous reading).",
+              "Uses PoE (Power over Ethernet) or AC power."
+            ],
+            "rightTitle": "Handheld Readers",
+            "rightPoints": [
+              "Mobile, pistol-grip design with integrated screen.",
+              "Single integrated antenna.",
+              "Adjustable power (5 dBm to 30 dBm) to control range.",
+              "Manual, trigger-based scanning.",
+              "Runs on rechargeable Lithium-ion batteries."
+            ]
+          },
+          {
+            "type": "diagram",
+            "title": "Antenna Polarization Propagation",
+            "content": " LINEAR POLARIZATION (Directional)\n Wave propagates in a single 2D plane. Longest range, strict alignment.\n       \n        ▲\n       / \\\n      /   \\       ┌────────────────────────┐\n ════/═════\\════> │ Tag aligned: READS     │\n    /       \\     └────────────────────────┘\n   /         ▼\n \n CIRCULAR POLARIZATION (Helical)\n Wave spins in a helical 3D spiral. Reads in any orientation.\n \n       /\\      /\\\n      /  \\    /  \\    ┌────────────────────────┐\n ════/════\\══/════\\═> │ Tag any angle: READS   │\n    /      \\/      \\  └────────────────────────┘",
+            "note": {
+              "text": "Circular polarization is preferred for box contents where tags are facing random angles."
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Antenna Polarization Choice",
+            "leftTitle": "Circular Antennas",
+            "leftPoints": [
+              "Best for bulk inventory (tags oriented randomly).",
+              "Shorter read range (typically 6-8 meters).",
+              "Ideal for retail apparel, parcels, and files."
+            ],
+            "rightTitle": "Linear Antennas",
+            "rightPoints": [
+              "Best for controlled gates where tag orientation is fixed.",
+              "Maximum read range (up to 15+ meters).",
+              "Ideal for vehicle tolling, box entry portals."
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "🚫",
+            "title": "Environmental Interference",
+            "box": {
+              "title": "The Enemies of RF Signals",
+              "list": [
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Metal Reflection:</strong> Metal blocks and reflects RF waves, causing detuning of tag antennas and blind spots."
+                },
+                {
+                  "emoji": "💧",
+                  "text": "<strong>Water Absorption:</strong> Water absorbs RF energy (especially at UHF 915 MHz), extinguishing tag response signals."
+                },
+                {
+                  "emoji": "🔕",
+                  "text": "<strong>RF Noise:</strong> Motors, Wi-Fi routers, and ballast lights create ambient noise that can drown out tag signals."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📏",
+            "title": "Read Zones & Beam Width",
+            "box": {
+              "title": "Controlling the Capture Area",
+              "list": [
+                {
+                  "emoji": "📐",
+                  "text": "<strong>Beam Angle:</strong> Antennas have horizontal and vertical beam widths (e.g. 60 degrees). Wider beam = larger coverage."
+                },
+                {
+                  "emoji": "📶",
+                  "text": "<strong>Antenna Gain:</strong> Measured in dBi. Higher gain yields narrower beams and longer distances."
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>Stray Reads:</strong> Occur when tags outside the intended area are read. Controlled by reducing reader output power."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Reader Multiplexing",
+            "box": {
+              "title": "Multi-Antenna Architectures",
+              "list": [
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>Multiplexers (RF Switches):</strong> Connect 1 reader port to up to 16 external antennas."
+                },
+                {
+                  "emoji": "⏰",
+                  "text": "<strong>Time-Division:</strong> The reader rapidly switches active antennas sequentially (e.g. 50ms per antenna)."
+                },
+                {
+                  "emoji": "💰",
+                  "text": "<strong>Cost Optimization:</strong> Reduces system cost by avoiding multiple readers for a single doorway or portal."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "frequencies",
+        "title": "Topic 4: Frequency Bands & Standards",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚖️",
+            "title": "Frequency Bands & Standards",
+            "subtitle": "Spectrum allocation, characteristics, and global regulatory compliance"
+          },
+          {
+            "type": "content",
+            "emoji": "📡",
+            "title": "Low Frequency (LF) RFID",
+            "box": {
+              "title": "125 kHz - 134.2 kHz spectrum",
+              "list": [
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Read Range:</strong> Contact to 10 centimeters."
+                },
+                {
+                  "emoji": "💧",
+                  "text": "<strong>High Resilience:</strong> Highly effective in water, liquid, and near metals where other frequencies fail."
+                },
+                {
+                  "emoji": "🐑",
+                  "text": "<strong>Primary Use:</strong> Animal identification, pet microchips, car immobilizers, and access control keyfobs."
+                }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "High Frequency (HF) & NFC",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Smart card scanning",
+            "caption": "HF & NFC enable secure card authentication",
+            "content": "<h4>🔒 Proximity and Security</h4><p>High Frequency (HF) RFID operates at 13.56 MHz, serving as the technical standard for NFC.</p><ul><li>📏 <strong>Read Range:</strong> Short-range bounds (1cm to 1m) prevent eavesdropping.</li><li>💳 <strong>MIFARE / Smart Cards:</strong> Standard for physical transit systems and office turnstile access cards.</li><li>🔑 <strong>Crypto Logic:</strong> Supports cryptographic handshakes to prevent credential cloning.</li></ul>"
+          },
+          {
+            "type": "imageText",
+            "title": "Ultra High Frequency (UHF)",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Warehouse boxes",
+            "caption": "UHF tags scan entire palettes simultaneously in logistics",
+            "content": "<h4>🚀 The Logistics Workhorse</h4><p>Ultra High Frequency (UHF) RFID operates between 860 and 960 MHz, offering fast bulk reads.</p><ul><li>📏 <strong>Read Range:</strong> Scans tags up to 10-15+ meters away.</li><li>📦 <strong>Mass Reading:</strong> Scans over 1,000 tags per second inside shipping boxes.</li><li>🏬 <strong>Inventory Tracking:</strong> Standard for retail supply chains, garment tag checks, and warehouse receiving.</li></ul>"
+          },
+          {
+            "type": "content",
+            "emoji": "📡",
+            "title": "Microwave RFID",
+            "box": {
+              "title": "2.45 GHz & 5.8 GHz spectrum",
+              "list": [
+                {
+                  "emoji": "📏",
+                  "text": "<strong>Read Range:</strong> Up to 100 meters (typically active tags)."
+                },
+                {
+                  "emoji": "🏎️",
+                  "text": "<strong>Ultra High Speed:</strong> Captures tags moving at high speeds (e.g. vehicles passing highway tolls)."
+                },
+                {
+                  "emoji": "📱",
+                  "text": "<strong>Wi-Fi Coexistence:</strong> Shares frequency bands with Wi-Fi and Bluetooth, requiring channel management."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Comparison of Frequency Bands",
+            "leftTitle": "LF & HF",
+            "leftPoints": [
+              "Propagation: Magnetic Coupling (inductive).",
+              "Unaffected by liquids or human body tissue.",
+              "Short ranges (secure proximity).",
+              "Low read rates (single reads).",
+              "Tags are typically more expensive."
+            ],
+            "rightTitle": "UHF & Microwave",
+            "rightPoints": [
+              "Propagation: Electromagnetic Coupling (radiative).",
+              "Highly affected by liquids and metal.",
+              "Long ranges (up to 15+ meters passive).",
+              "Extremely high read rates (hundreds/sec).",
+              "Tags are very cheap (paper-thin)."
+            ]
+          },
+          {
+            "type": "content",
+            "emoji": "📜",
+            "title": "Standards Organizations: ISO vs EPC",
+            "box": {
+              "title": "Governance Frameworks",
+              "list": [
+                {
+                  "emoji": "🌐",
+                  "text": "<strong>ISO (International Organization for Standardization):</strong> Standardizes physical traits and air interfaces (e.g. ISO 18000 series)."
+                },
+                {
+                  "emoji": "🏷️",
+                  "text": "<strong>EPCglobal:</strong> Focuses on data standardization and serial numbering schemas (Electronic Product Code)."
+                },
+                {
+                  "emoji": "🤝",
+                  "text": "<strong>Gen 2 Harmonization:</strong> The EPC Gen 2 protocol is standardized internationally as <strong>ISO/IEC 18000-63</strong>."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "EPC Class 1 Gen 2 Overview",
+            "box": {
+              "title": "The UHF Industry Workhorse",
+              "list": [
+                {
+                  "emoji": "📶",
+                  "text": "<strong>Frequency Hopping:</strong> Readers hop frequencies randomly to prevent reader-reader interference."
+                },
+                {
+                  "emoji": "⏱️",
+                  "text": "<strong>Session Flags:</strong> Four sessions (S0, S1, S2, S3) allow multiple readers to read tags without re-triggering."
+                },
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Kill Command:</strong> Permantently disables the tag at checkout, resolving privacy concerns."
+                }
+              ]
+            }
+          },
+          {
+            "type": "chart",
+            "title": "RFID Frequency Read Ranges",
+            "chartType": "bar",
+            "labels": [
+              "LF (125 kHz)",
+              "HF (13.56 MHz)",
+              "UHF (915 MHz)",
+              "Microwave (2.45 GHz)"
+            ],
+            "data": [
+              0.1,
+              1.0,
+              12.0,
+              100.0
+            ],
+            "note": {
+              "text": "Approximate maximum read range in meters (logarithmic scale representation)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "middleware",
+        "title": "Topic 5: Middleware & System Integration",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "⚙️",
+            "title": "Middleware & System Integration",
+            "subtitle": "Processing raw streams of RFID reads into business logic actions"
+          },
+          {
+            "type": "content",
+            "emoji": "🧹",
+            "title": "What is RFID Middleware?",
+            "box": {
+              "title": "The Software Layer",
+              "list": [
+                {
+                  "emoji": "🌊",
+                  "text": "<strong>Data Flooding:</strong> A single tag sitting in front of a reader generates hundreds of reads per minute. Middleware filters this noise."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Device Management:</strong> Configures reader power, reads antennas, and monitors hardware health."
+                },
+                {
+                  "emoji": "🔌",
+                  "text": "<strong>ERP Integration:</strong> Formats raw tag data into business events (e.g. 'RECEIVE_INVENTORY') and pushes them to SAP, Oracle, or databases."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔀",
+            "title": "Data Filtering & Aggregation",
+            "box": {
+              "title": "Application Level Events (ALE) Standard",
+              "list": [
+                {
+                  "emoji": "⏳",
+                  "text": "<strong>Time-Window Filtering:</strong> Consolidates tag reads over a temporal window (e.g., 2 seconds)."
+                },
+                {
+                  "emoji": "🔢",
+                  "text": "<strong>Uniqueness Check:</strong> Deduplicates identical EPCs to report only unique items passing through a portal."
+                },
+                {
+                  "emoji": "📈",
+                  "text": "<strong>Directional Detection:</strong> Analyzes RSSI (Received Signal Strength Indicator) change over time to determine if an asset is entering or exiting."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚡",
+            "title": "ALE Filtering Implementation",
+            "box": {
+              "title": "Deduplication Window in JavaScript",
+              "code": "class RfidFilter {\n  constructor(windowMs = 2000) {\n    this.windowMs = windowMs;\n    this.tagMap = new Map(); // epc -> timestamp\n  }\n\n  processRead(epc) {\n    const now = Date.now();\n    if (this.tagMap.has(epc)) {\n      const lastRead = this.tagMap.get(epc);\n      if (now - lastRead < this.windowMs) {\n        this.tagMap.set(epc, now); // Update window\n        return null; // Suppress duplicate\n      }\n    }\n    this.tagMap.set(epc, now);\n    return epc; // Emit new tag event\n  }\n}"
+            }
+          },
+          {
+            "type": "diagram",
+            "title": "RFID Architecture Data Flow",
+            "content": " [RFID Tags] \n      │ (RF Backscatter)\n      ▼\n [RFID Antennas]\n      │ (Analog RF Signal)\n      ▼\n [RFID Readers (LLRP/MQTT)]\n      │ (Raw JSON or Binary Packets)\n      ▼\n [RFID Middleware (Filtering, Deduplication)]\n      │ (Cleaned REST Events / Webhooks)\n      ▼\n [ERP / WMS System (SAP, Oracle, Odoo)]",
+            "note": {
+              "text": "Deduplication at the middleware level reduces database traffic by over 98%."
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "💻",
+            "title": "LLRP Reader Integration",
+            "box": {
+              "title": "Low Level Reader Protocol Connection in C#",
+              "code": "using Org.Llrp.LlrpReaderMetadata;\n\npublic class LlrpManager {\n    private LLRPClient reader;\n\n    public void ConnectReader(string ipAddress) {\n        reader = new LLRPClient();\n        reader.OnRoAccessReportReceived += new DelegateRoAccessReport(OnTagRead);\n        \n        bool success = reader.Connect(ipAddress, 5000);\n        if (success) {\n            // Send LLRP command to start reading\n            reader.StartROSpec(1);\n        }\n    }\n\n    private void OnTagRead(MSG_RO_ACCESS_REPORT msg) {\n        foreach (var tag in msg.TagReportData) {\n            string epcHex = tag.EPCParameter.ToString();\n            Console.WriteLine($\"Tag Spotted: {epcHex} (RSSI: {tag.PeakRSSI} dBm)\");\n        }\n    }\n}"
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "📶",
+            "title": "Edge Computing in RFID",
+            "box": {
+              "title": "Smart Readers",
+              "list": [
+                {
+                  "emoji": "🤖",
+                  "text": "<strong>On-Reader Applications:</strong> Modern readers host Linux OS container environments directly on the device."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>MQTT Protocol:</strong> Configured to publish filtered tag streams directly to an MQTT broker over SSL."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Offline Buffer:</strong> Caches tag reads locally if network connection drops, syncing once reconnected."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "applications",
+        "title": "Topic 6: Real-World Applications",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🏬",
+            "title": "Real-World Applications & Use Cases",
+            "subtitle": "How industries utilize RFID to streamline operations, cut costs, and ensure accuracy"
+          },
+          {
+            "type": "imageText",
+            "title": "Retail & Apparel Supply Chain",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Retail store display",
+            "caption": "Item-Level RFID Tagging in Retail",
+            "content": "<h4>🏷️ Item-Level Inventory Auditing</h4><p>Retail giants like Zara, Decathlon, and Walmart tag individual garments to maintain absolute inventory visibility.</p><ul><li>📈 <strong>99% Accuracy</strong> - Replaces manual counts with rapid handheld scans</li><li>⚡ <strong>Cycle Count</strong> - Store audits reduced from 3 days to 20 minutes</li><li>🛍️ <strong>Omnichannel Enablement</strong> - Real-time stock counts support buy-online-pickup-in-store (BOPIS)</li><li>💸 <strong>Shrinkage Reduction</strong> - Identifies stolen or misplaced inventory</li></ul>"
+          },
+          {
+            "type": "content",
+            "emoji": "📦",
+            "title": "Supply Chain & Logistics",
+            "box": {
+              "title": "Automated Shipping & Receiving",
+              "list": [
+                {
+                  "emoji": "🚪",
+                  "text": "<strong>Portal Scanning:</strong> Fixed reader gates on dock doors scan entire incoming pallets in seconds without unpacking boxes."
+                },
+                {
+                  "emoji": "🚚",
+                  "text": "<strong>Real-Time Transit:</strong> Tracks containers moving through ports, warehouses, and customs automatically."
+                },
+                {
+                  "emoji": "❌",
+                  "text": "<strong>Error Proofing:</strong> Triggers alerts if a forklift operator attempts to load the wrong box onto a shipment truck."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🏥",
+            "title": "Asset Tracking & Healthcare",
+            "box": {
+              "title": "High-Value Equipment Audits",
+              "list": [
+                {
+                  "emoji": "🔬",
+                  "text": "<strong>Healthcare Equipment:</strong> Tracking surgical tools, ventilators, and wheelchairs in hospitals to reduce search time."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Tool Management:</strong> Aerospace manufacturers tag tools to ensure none are left inside aircraft hulls (FOD prevention)."
+                },
+                {
+                  "emoji": "💼",
+                  "text": "<strong>IT Assets:</strong> Auditing servers, hard drives, and laptops inside enterprise data centers."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "Access Control & Smart Cards",
+            "box": {
+              "title": "Secure Building Access",
+              "list": [
+                {
+                  "emoji": "🏢",
+                  "text": "<strong>Employee Badges:</strong> Standard 13.56 MHz HF cards (like MIFARE) authenticate employees at turnstiles."
+                },
+                {
+                  "emoji": "✈️",
+                  "text": "<strong>E-Passports:</strong> Contain embedded cryptographic RFID chips holding biographical data and biometrics."
+                },
+                {
+                  "emoji": "🎫",
+                  "text": "<strong>Event Ticketing:</strong> RFID wristbands at music festivals enable cashless payment and ticket validation."
+                }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Electronic Toll Collection (ETC)",
+            "layout": "left-image",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Highway toll gate",
+            "caption": "Windshield passive UHF stickers are read at speed",
+            "content": "<h4>🚗 Seamless Highway Tolling</h4><p>Windshield passive UHF stickers (like FASTag, E-ZPass) allow automatic billing of tolls.</p><ul><li>📶 <strong>Overhead Gantries:</strong> High-power linear reader antennas sweep toll gates.</li><li>🏎️ <strong>At Speed:</strong> Processes vehicles passing through toll channels at speeds up to 100+ km/h.</li><li>💳 <strong>Automatic Debit:</strong> Charges connected credit cards/wallets, eliminating traffic congestion queues.</li></ul>"
+          },
+          {
+            "type": "imageText",
+            "title": "Animal Tracking & Identification",
+            "layout": "right-image",
+            "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "imageAlt": "Cow ear tag",
+            "caption": "RFID ear tags on livestock",
+            "content": "<h4>🐄 Herd and Health Supervision</h4><p>Low Frequency (134.2 kHz) ear tags and glass microchips track animal identities internationally.</p><ul><li>🩺 <strong>Subdermal Microchips:</strong> Syringe-injected glass tube implants locate lost domestic pets.</li><li>🐄 <strong>Livestock Management:</strong> Pairs with automated feeding gates to track feed intake and health metrics.</li><li>🌾 <strong>Food Safety:</strong> Traces meat origins back to farms during medical outbreaks.</li></ul>"
+          },
+          {
+            "type": "chart",
+            "title": "RFID Global Market Growth Projection",
+            "chartType": "line",
+            "labels": [
+              "2020",
+              "2022",
+              "2024",
+              "2026"
+            ],
+            "data": [
+              11.2,
+              14.5,
+              18.4,
+              23.8
+            ],
+            "note": {
+              "text": "Total global market value in billions of USD ($) showing rapid IoT adoption."
+            }
+          }
+        ]
+      },
+      {
+        "id": "challenges",
+        "title": "Topic 7: Challenges, Security & Trends",
+        "slides": [
+          {
+            "type": "topic-title",
+            "emoji": "🔒",
+            "title": "Challenges, Security & Future Trends",
+            "subtitle": "Addressing physics limitations, security threats, and exploring next-generation printed RFID"
+          },
+          {
+            "type": "content",
+            "emoji": "🛡️",
+            "title": "Privacy Concerns & Eavesdropping",
+            "box": {
+              "title": "The Security Threats",
+              "list": [
+                {
+                  "emoji": "🕶️",
+                  "text": "<strong>Surreptitious Scanning:</strong> Malicious actors can read passports or credit cards from a distance using high-power readers."
+                },
+                {
+                  "emoji": "📡",
+                  "text": "<strong>Cloning:</strong> Replicating standard badge tags to bypass building entry security."
+                },
+                {
+                  "emoji": "📍",
+                  "text": "<strong>Tracking:</strong> Tracking specific individual movement by matching unique tag serial numbers across cities."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🔑",
+            "title": "RFID Security Countermeasures",
+            "box": {
+              "title": "Hardening RFID Hardware",
+              "list": [
+                {
+                  "emoji": "🔒",
+                  "text": "<strong>Cryptographic Tags:</strong> Modern chips (e.g. NXP DNA) support AES-128 cryptographic handshakes, preventing cloning."
+                },
+                {
+                  "emoji": "💀",
+                  "text": "<strong>EPC Gen 2 Kill Command:</strong> Disables the tag permanently by destroying the charge pump on the chip."
+                },
+                {
+                  "emoji": "🛡️",
+                  "text": "<strong>Shielding:</strong> Faraday wallets and sleeve inserts block external radio frequencies from hitting tags."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "⚖️",
+            "title": "Collision Resolution Algorithms",
+            "box": {
+              "title": "Managing Tag Density",
+              "list": [
+                {
+                  "emoji": "🚦",
+                  "text": "<strong>Tag Collision:</strong> Occurs when multiple tags reflect backscatter signals simultaneously, scrambling the reader's receiver."
+                },
+                {
+                  "emoji": "🔄",
+                  "text": "<strong>Slotted ALOHA:</strong> Tags wait a random number of slots before responding. Used in EPC Gen 2 protocol."
+                },
+                {
+                  "emoji": "🌳",
+                  "text": "<strong>Binary Tree Walk:</strong> Reader splits the tag population into subsets by traversing their binary EPC strings."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "♻️",
+            "title": "Printed & Eco-Friendly RFID",
+            "box": {
+              "title": "Green Hardware",
+              "list": [
+                {
+                  "emoji": "📄",
+                  "text": "<strong>Paper Substrates:</strong> Replacing plastic PET backing with biodegradable paper substrates."
+                },
+                {
+                  "emoji": "🖋️",
+                  "text": "<strong>Conductive Ink:</strong> Printing antennas using graphene or silver nanoparticle inks instead of chemical metal etching."
+                },
+                {
+                  "emoji": "♻️",
+                  "text": "<strong>Recyclability:</strong> Allows smart labels on cardboard boxes to go directly into standard paper recycling bins."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "emoji": "🌡️",
+            "title": "Sensor-Integrated RFID Tags",
+            "box": {
+              "title": "Beyond Simple Identification",
+              "list": [
+                {
+                  "emoji": "❄️",
+                  "text": "<strong>Cold Chain:</strong> Semi-passive RFID tags logging temperature histories for vaccines and seafood during flight transit."
+                },
+                {
+                  "emoji": "💧",
+                  "text": "<strong>Soil Moisture:</strong> Embedded tags measuring moisture levels in agricultural soil without external batteries."
+                },
+                {
+                  "emoji": "🛠️",
+                  "text": "<strong>Structural Health:</strong> Tags embedded inside bridge concrete monitoring humidity and stress over 50 years."
+                }
+              ]
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What does RFID stand for?",
+            "options": [
+              "Radio Frequency Identification",
+              "Radio Frequency Interrogation Device",
+              "Resonant Frequency Identifier",
+              "Remote Frequency Information Database"
+            ],
+            "correctAnswer": 0,
+            "explanation": "RFID stands for Radio Frequency Identification. It uses radio waves to capture and identify data stored on tags attached to objects."
+          },
+          {
+            "type": "quiz",
+            "question": "Which frequency band is used by Near Field Communication (NFC) in modern smartphones?",
+            "options": [
+              "125 kHz (Low Frequency)",
+              "13.56 MHz (High Frequency)",
+              "915 MHz (Ultra High Frequency)",
+              "2.45 GHz (Microwave)"
+            ],
+            "correctAnswer": 1,
+            "explanation": "NFC operates at 13.56 MHz High Frequency. It is a subset of HF RFID standards designed for secure, short-range (under 10cm) data transfers."
+          },
+          {
+            "type": "quiz",
+            "question": "What is the primary advantage of active RFID tags over passive RFID tags?",
+            "options": [
+              "They are much cheaper to buy.",
+              "They do not require a reader to function.",
+              "They have an internal battery and transmit over much longer distances.",
+              "They have infinite lifespan because they have no battery."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Active tags contain an internal battery that powers their radio transmitter, allowing them to broadcast signals over long distances (100m+ vs 10m for passive)."
+          },
+          {
+            "type": "quiz",
+            "question": "Why is RFID middleware critical in enterprise software architectures?",
+            "options": [
+              "It converts passive tags into active tags.",
+              "It filters raw read streams, removes duplicate reads, and aggregates tag events.",
+              "It generates the radio waves transmitted by the reader antennas.",
+              "It prints the conductive silver ink onto packaging."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Middleware filters, deduplicates, and aggregates raw, high-volume reader outputs before sending consolidated events (like inventory scans) to business systems."
+          },
+          {
+            "type": "quiz",
+            "question": "Which RFID frequency band performs best in environments containing high amounts of metal and water?",
+            "options": [
+              "Low Frequency (LF)",
+              "High Frequency (HF)",
+              "Ultra High Frequency (UHF)",
+              "Microwave (2.45 GHz)"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Low Frequency (LF) RFID (125-134 kHz) propagates primarily via inductive magnetic coupling. Unlike higher frequencies, it is relatively immune to interference from metal and water."
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Topic 8: Q&A & Wrap-Up",
+        "slides": [
+          {
+            "type": "qa",
+            "title": "Questions? 💬",
+            "content": "Let's discuss RFID frequencies, middleware, software APIs, or IoT hardware configurations.<br><span class=\"gradient-accent\">All questions are welcome!</span>"
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank You! 🎉",
+            "box": {
+              "content": "<span class=\"emoji\">📡</span> Ready to integrate RFID into your stack?<br><span class=\"gradient-accent\">Start building something today!</span>",
+              "note": "Connect hardware • Set up middleware • Automate processes"
+            },
+            "footer": {
+              "org": "Bude Global Enterprise - India",
+              "tagline": "Connecting the physical world to software"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

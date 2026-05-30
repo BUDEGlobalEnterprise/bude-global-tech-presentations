@@ -2,6 +2,7 @@ import type { Slide } from "@/types/presentation";
 
 import { ComparisonSlide } from "./slides/ComparisonSlide";
 import { ContentSlide } from "./slides/ContentSlide";
+import { ChartSlide } from "./slides/ChartSlide";
 import { DiagramSlide } from "./slides/DiagramSlide";
 import { GenericSlide } from "./slides/GenericSlide";
 import { ImageTextSlide } from "./slides/ImageTextSlide";
@@ -14,9 +15,10 @@ import { TopicTitleSlide } from "./slides/TopicTitleSlide";
 
 interface Props {
   slide: Slide;
+  isQuizRevealed?: boolean;
 }
 
-export function SlideRenderer({ slide }: Props) {
+export function SlideRenderer({ slide, isQuizRevealed }: Props) {
   switch (slide.type) {
     case "title":
       return <TitleSlide slide={slide} />;
@@ -32,8 +34,10 @@ export function SlideRenderer({ slide }: Props) {
       return <ImageTextSlide slide={slide} />;
     case "diagram":
       return <DiagramSlide slide={slide} />;
+    case "chart":
+      return <ChartSlide slide={slide} />;
     case "quiz":
-      return <QuizSlide slide={slide} />;
+      return <QuizSlide slide={slide} isQuizRevealed={isQuizRevealed} />;
     case "qa":
       return <QASlide slide={slide} />;
     case "thank-you":

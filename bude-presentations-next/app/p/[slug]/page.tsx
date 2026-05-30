@@ -148,7 +148,7 @@ export default async function PresentationPage({
             </Link>
             <DownloadMenu deck={exportDeck} />
             <span className="self-center text-xs text-muted-foreground">
-              ←/→ navigate · F fullscreen · Esc exit
+              ←/→ navigate · F fullscreen · A autoplay · Esc exit
             </span>
           </div>
         </header>
