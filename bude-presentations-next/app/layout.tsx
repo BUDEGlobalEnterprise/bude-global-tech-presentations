@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 
 import { Footer } from "@/components/chrome/Footer";
 import { GlobalHeader } from "@/components/chrome/GlobalHeader";
@@ -70,6 +71,21 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans min-h-screen flex flex-col`}
       >
+        {/* Legacy Google Analytics Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W3CFPLC20M"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-W3CFPLC20M', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <ThemeProvider>
           <GlobalHeader />
           <main className="flex-1">{children}</main>
