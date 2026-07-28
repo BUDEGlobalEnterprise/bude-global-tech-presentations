@@ -1,5 +1,9 @@
 {
   "name": "bude-global-tech-presentations",
   "pages_build_output_dir": "bude-presentations-next/out",
-  "compatibility_date": "2026-01-25"
+  "compatibility_date": "2026-01-25",
+  "assets": {
+    "directory": "bude-presentations-next/out"
+  }
 }
+
