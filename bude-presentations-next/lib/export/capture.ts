@@ -2,7 +2,7 @@ import { createElement } from "react";
 import { createRoot } from "react-dom/client";
 
 import { SlideRenderer } from "@/components/presenter/SlideRenderer";
-import type { FlatSlide } from "@/types/presentation";
+import type { Slide } from "@/types/presentation";
 
 export const SLIDE_W = 1280;
 export const SLIDE_H = 720;
@@ -20,7 +20,7 @@ export interface CapturedDeck {
  * exactly as the browser shows them). Sequential by necessity (single stage).
  */
 export async function captureSlides(
-  slides: FlatSlide[],
+  slides: Slide[],
   onProgress?: (done: number, total: number) => void,
 ): Promise<CapturedDeck> {
   const { domToPng } = await import("modern-screenshot");
@@ -59,6 +59,7 @@ export async function captureSlides(
     for (let i = 0; i < slides.length; i++) {
       await renderOne(root, slides[i]);
       await nextPaint();
+      await settleImages(frame);
       try {
         const png = await domToPng(frame, {
           width: SLIDE_W,
@@ -81,7 +82,7 @@ export async function captureSlides(
   return { images, width: SLIDE_W, height: SLIDE_H };
 }
 
-function renderOne(root: ReturnType<typeof createRoot>, flat: FlatSlide) {
+function renderOne(root: ReturnType<typeof createRoot>, slide: Slide) {
   return new Promise<void>((resolve) => {
     root.render(
       createElement(
@@ -90,12 +91,31 @@ function renderOne(root: ReturnType<typeof createRoot>, flat: FlatSlide) {
           className:
             "absolute inset-0 flex items-center justify-center overflow-hidden",
         },
-        createElement(SlideRenderer, { slide: flat.slide }),
+        createElement(SlideRenderer, { slide }),
       ),
     );
     // Give React a tick to commit before we wait for paint.
     setTimeout(resolve, 40);
   });
+}
+
+/** Wait for any <img> in the frame to finish loading (best effort, capped). */
+async function settleImages(frame: HTMLElement) {
+  const imgs = Array.from(frame.querySelectorAll("img"));
+  if (!imgs.length) return;
+  await Promise.race([
+    Promise.all(
+      imgs.map((img) =>
+        img.complete && img.naturalWidth
+          ? Promise.resolve()
+          : new Promise<void>((r) => {
+              img.addEventListener("load", () => r(), { once: true });
+              img.addEventListener("error", () => r(), { once: true });
+            }),
+      ),
+    ),
+    new Promise<void>((r) => setTimeout(r, 2500)),
+  ]);
 }
 
 function nextPaint() {

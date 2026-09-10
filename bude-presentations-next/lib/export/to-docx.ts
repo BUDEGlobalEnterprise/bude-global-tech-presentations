@@ -1,48 +1,56 @@
 import { downloadBlob } from "./download";
 import type { ExportDeck } from "./extract";
 
-export async function exportDocx(deck: ExportDeck) {
-  const { Document, Packer, Paragraph, HeadingLevel, TextRun } = await import("docx");
+/**
+ * A landscape Word document, one full-width slide image per page — a
+ * printable handout of the real deck rather than a text outline.
+ */
+export async function exportDocx(deck: ExportDeck, images: string[]) {
+  const { Document, Packer, Paragraph, ImageRun, PageOrientation, TextRun } =
+    await import("docx");
 
-  const children: InstanceType<typeof Paragraph>[] = [
-    new Paragraph({ text: deck.title, heading: HeadingLevel.TITLE }),
-    new Paragraph({
-      children: [new TextRun({ text: deck.description, italics: true, color: "666666" })],
-    }),
-    new Paragraph({ text: "" }),
-  ];
+  // Usable width on an 11in landscape page with 1in margins ≈ 9in @ 96dpi.
+  const IMG_W = 864;
+  const IMG_H = Math.round((IMG_W * 9) / 16);
 
-  for (const s of deck.slides) {
-    if (s.heading) {
-      children.push(new Paragraph({ text: s.heading, heading: HeadingLevel.HEADING_1 }));
-    }
-    if (s.subheading) {
-      children.push(
-        new Paragraph({ children: [new TextRun({ text: s.subheading, italics: true })] }),
-      );
-    }
-    for (const b of s.body) {
-      // Split multi-line bodies into separate paragraphs.
-      for (const line of b.split("\n")) {
-        children.push(new Paragraph({ text: line }));
-      }
-    }
-    for (const bullet of s.bullets) {
-      children.push(new Paragraph({ text: bullet, bullet: { level: 0 } }));
-    }
-    if (s.code) {
-      for (const line of s.code.split("\n")) {
-        children.push(
-          new Paragraph({
-            children: [new TextRun({ text: line, font: "Consolas", size: 18 })],
-          }),
-        );
-      }
-    }
-    children.push(new Paragraph({ text: "" }));
+  const children: InstanceType<typeof Paragraph>[] = [];
+
+  if (!images.length) {
+    children.push(
+      new Paragraph({
+        children: [new TextRun({ text: "No slides could be rendered.", bold: true })],
+      }),
+    );
   }
 
-  const doc = new Document({ sections: [{ children }] });
+  images.forEach((png, i) => {
+    const base64 = png.slice(png.indexOf(",") + 1);
+    const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+    children.push(
+      new Paragraph({
+        pageBreakBefore: i > 0,
+        children: [
+          new ImageRun({
+            type: "png",
+            data: bytes,
+            transformation: { width: IMG_W, height: IMG_H },
+          }),
+        ],
+      }),
+    );
+  });
+
+  const doc = new Document({
+    sections: [
+      {
+        properties: {
+          page: { size: { orientation: PageOrientation.LANDSCAPE } },
+        },
+        children,
+      },
+    ],
+  });
+
   const blob = await Packer.toBlob(doc);
   downloadBlob(blob, `${deck.slug}.docx`);
 }

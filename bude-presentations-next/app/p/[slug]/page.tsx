@@ -7,6 +7,7 @@ import { DownloadMenu } from "@/components/presentation/DownloadMenu";
 import { categoryMeta } from "@/lib/category-meta";
 import { CATALOG } from "@/lib/catalog";
 import { extractDeck } from "@/lib/export/extract";
+import { flattenSlides } from "@/lib/presentation-flow";
 import { getAllSlugs, getPresentationBySlug } from "@/lib/presentations";
 import { cn } from "@/lib/utils";
 import type { Difficulty } from "@/types/presentation";
@@ -64,6 +65,7 @@ export default async function PresentationPage({
 
   // Pre-extract a plain-text deck model server-side for the download menu.
   const exportDeck = extractDeck(presentation);
+  const exportSlides = flattenSlides(presentation).map((f) => f.slide);
 
   return (
     <>
@@ -146,7 +148,7 @@ export default async function PresentationPage({
               <PlayCircle className="h-4 w-4" />
               Start presentation
             </Link>
-            <DownloadMenu deck={exportDeck} />
+            <DownloadMenu deck={exportDeck} slides={exportSlides} />
             <span className="self-center text-xs text-muted-foreground">
               ←/→ navigate · F fullscreen · A autoplay · Esc exit
             </span>
