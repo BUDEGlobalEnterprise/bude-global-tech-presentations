@@ -49,7 +49,7 @@
             "icon": "chat",
             "image": "/assets/images/ai-webinar-funny/good-boy.jpg",
             "imageLayout": "right-image",
-            "caption": "Unrelated. This is a good boy. We will need him again in Chapter 3.",
+            "caption": "Unrelated. A good boy in a DEV DOG hoodie who commits with \"woof\". That is the whole joke. Moving on.",
             "box": {
               "content": "<p>I have deployed code on a Friday afternoon. I have also spent that weekend undoing it while a client called every two hours.</p><p>I say this so we start honest: I am not here to sell you a future where software writes itself. I am here because the tools got genuinely useful, and nobody sat me down in a classroom and explained how to actually work with them. So here is that class.</p><blockquote>The goal is not to type less. The goal is to spend your thinking on the parts that need a human.</blockquote>"
             }
@@ -89,7 +89,7 @@
             "icon": "idea",
             "image": "/assets/images/ai-webinar-funny/presenter.jpg",
             "imageLayout": "left-image",
-            "caption": "Yes, the photo is old. No, I am not taking a new one for this.",
+            "caption": "Dramatisation. The cape is aspirational. The 500 errors are documentary.",
             "box": {
               "content": "<p>MCA, then a B.Sc. in Computer Science, both in Coimbatore. No dramatic origin story. I liked making things that talked to hardware, so I chased jobs that let me do that.</p>",
               "list": [
@@ -121,7 +121,7 @@
             "icon": "wrench",
             "image": "/assets/images/ai-webinar-funny/hardware-repair.jpg",
             "imageLayout": "right-image",
-            "caption": "Not the actual reader. Close enough emotionally.",
+            "caption": "The illustrator guessed Day 14. My actual log said sixteen.",
             "box": {
               "content": "<p>A self-checkout kiosk kept marking books as \"not returned\" for one specific library, and only after 6 PM. Two weeks of logs. The reader was fine. The database was fine. The network was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM their staff switched to a spare handheld from the other vendor. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes &mdash; and it is exactly the part AI is worst at.</blockquote>"
             }
@@ -145,8 +145,8 @@
             "title": "Circuit Digest Cloud &mdash; what I build now",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
-            "imageAlt": "Isometric illustration of a cloud IoT dashboard with ESP32 devices and databases",
-            "caption": "The platform that takes a device from breadboard to production",
+            "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
+            "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
             "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles the unglamorous parts of an IoT product:</p><ul><li><strong>Device provisioning</strong> and fleet management for ESP32-class hardware.</li><li><strong>MQTT telemetry</strong> ingestion with live dashboards.</li><li><strong>Alerts</strong> over email, SMS, and WhatsApp when a reading crosses a line.</li></ul>"
           },
           {
@@ -221,8 +221,8 @@
             "title": "The colleague who never sleeps and never brings snacks",
             "layout": "left-image",
             "image": "/assets/images/ai-webinar-funny/robot.jpg",
-            "imageAlt": "A humanoid robot sitting on a bench looking at a tablet",
-            "caption": "Nobody's AI looks like this. We all keep using this photo anyway.",
+            "imageAlt": "A frazzled four-armed robot coding at 2:47 AM surrounded by coffee cups",
+            "caption": "2:47 AM. Fourth coffee. \"Project: almost done.\" It is not almost done.",
             "content": "<h4>The word that matters is agency</h4><p>A chatbot can explain a bug to you. An agent can open the file, reproduce the bug, patch it, run the suite, and hand you a diff.</p><p>Same underlying model. Completely different thing to work with.</p>"
           },
           {
@@ -271,9 +271,9 @@
             "icon": "gauge",
             "image": "/assets/images/ai-webinar-funny/analytics.jpg",
             "imageLayout": "right-image",
-            "caption": "A real dashboard. Not a made-up graph with a line going up.",
+            "caption": "Every AI keynote has this exact chart. Here is ours, for compliance.",
             "box": {
-              "content": "<p>I am not going to show you an invented chart. You have seen enough of those.</p><p>Directionally: in 2022, using AI at work was a party trick. In 2026, <em>not</em> using it is the thing that gets a comment in code review. Treat that as the trend and move on.</p>"
+              "content": "<p>I could show you a real adoption number. You would forget it by the next slide, so here is the honest version instead.</p><p>In 2022, using AI at work was a party trick. In 2026, <em>not</em> using it is the thing that gets a comment in code review. That is the whole trend.</p>"
             }
           },
           {
@@ -309,7 +309,7 @@
             "icon": "book",
             "image": "/assets/images/ai-webinar-funny/books.jpg",
             "imageLayout": "left-image",
-            "caption": "The fundamentals in here did not stop mattering. They started mattering more.",
+            "caption": "\"Algorithms and Suffering\" is not a real book. It should be. Fundamentals still win.",
             "box": {
               "list": [
                 { "icon": "target", "text": "<strong>Prompting</strong> &mdash; giving enough context and clear constraints." },
@@ -428,7 +428,7 @@
             "icon": "chat",
             "image": "/assets/images/ai-webinar-funny/planning-wall.jpg",
             "imageLayout": "right-image",
-            "caption": "Planning a change before touching code. Still the right order.",
+            "caption": "A codebase you have never seen, on day one. This is the feeling. Ask for the map first.",
             "box": {
               "content": "<p>You have just cloned a large, unfamiliar repo. What is the very first thing you ask an agent to do?</p>"
             },
@@ -466,8 +466,8 @@
             "title": "The human stays in the loop",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/team-meeting.jpg",
-            "imageAlt": "Five people working together around a table full of laptops",
-            "caption": "A force multiplier, not an autopilot",
+            "imageAlt": "A team meeting where the whiteboard reads AI DO NOT TOUCH MAIN BRANCH and a cheerful robot says I CAN DO THAT",
+            "caption": "The whiteboard says do not touch main. The robot says \"I can do that.\" Your job is to stay between them.",
             "content": "<h4>Every workflow here has a human checkpoint</h4><p>That is not overcaution. It is the line between using AI as a tool and quietly outsourcing your judgement to it.</p>"
           }
         ]
@@ -517,8 +517,8 @@
             "title": "Why an embedded framework is in an AI talk",
             "layout": "left-image",
             "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
-            "imageAlt": "Macro photograph of a circuit board",
-            "caption": "The project starts here, not in the editor",
+            "imageAlt": "Isometric cartoon of a circuit board drawn as a small town called Microville",
+            "caption": "Welcome to Microville, population 1024. Every IoT project starts in a town like this.",
             "content": "<h4>Because Circuit Digest projects need firmware</h4><p>Nearly every ESP32 build eventually needs custom code. An agent in your editor can scaffold a FreeRTOS task or wire up a sensor driver while you keep your attention on the actual circuit and the actual timing.</p>"
           },
           {
@@ -582,8 +582,8 @@
             "title": "Full disclosure",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/code-editor.jpg",
-            "imageAlt": "A code editor showing syntax-highlighted source",
-            "caption": "Built in this project's own repo",
+            "imageAlt": "A developer calmly drinking coffee while the room is on fire",
+            "caption": "Artist's impression of the render pipeline for this deck. It shipped anyway.",
             "content": "<h4>This deck was assembled with Claude Code</h4><p>Working directly in the codebase of the site it runs on. If a slide is ugly, that one is on me, not the model.</p>"
           },
           {
@@ -606,7 +606,7 @@
             "icon": "rocket",
             "image": "/assets/images/ai-webinar-funny/workspace.jpg",
             "imageLayout": "left-image",
-            "caption": "One small repo, one task you already know the answer to",
+            "caption": "The sticky-note phase is optional. Start on one small repo instead.",
             "box": {
               "list": [
                 { "icon": "terminal", "text": "Install the CLI or extension, sign in with your provider account." },
@@ -669,7 +669,7 @@
             "icon": "check",
             "image": "/assets/images/ai-webinar-funny/notebook-plan.jpg",
             "imageLayout": "right-image",
-            "caption": "Worth writing down",
+            "caption": "Do these four and the line goes up. Results may vary. Line not to scale.",
             "box": {
               "list": [
                 { "icon": "circuit-board", "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real infrastructure." },
