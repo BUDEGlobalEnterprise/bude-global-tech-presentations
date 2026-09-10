@@ -683,8 +683,8 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
 
   {
     file: "ai-powered-development-2026.json",
-    title: "AI-Powered Development in 2026",
-    description: "From Circuit Digest to autonomous coding agents — a webinar on the AI landscape, AI-augmented dev workflows, ESP-IDF, GitHub, Antigravity, Codex, and Claude Code.",
+    title: "Circuit Digest & The Age of AI-Assisted Development",
+    description: "A PSGCAS webinar — real war stories from IoT/RFID work, the shift from autocomplete to coding agents, and hands-on notes on ESP-IDF, GitHub, Antigravity, Codex, and Claude Code.",
     keywords: ["ai", "circuit digest", "webinar", "coding agents", "antigravity", "codex", "claude code", "esp-idf", "github", "iot", "developer tools", "agentic ai"],
     category: ["ai-data", "tools"],
     difficulty: "intermediate",

@@ -7,659 +7,700 @@
         "slides": [
           {
             "type": "title",
-            "title": "AI-Powered Development in 2026",
-            "subtitle": "From Circuit Digest to Autonomous Coding Agents — A Webinar for PSGCAS Computer Science Postgraduates",
-            "emoji": "🚀"
+            "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
+            "subtitle": "A webinar for PSGCAS Computer Science postgraduates &middot; Aravind Govindhasamy &middot; 18 September 2026",
+            "image": "/assets/images/ai-webinar/schematic.jpg"
           },
           {
             "type": "presenter",
             "name": "Aravind Govindhasamy",
-            "title": "Full Stack Developer, Semicon Media (Circuit Digest) · PhD Scholar, PSGCAS",
-            "experience": "4+ years building backend services, IoT/RFID integrations, and enterprise systems — Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
-            "oss_experience": "Previously: 2CQR Automation (RFID library systems, 20+ university sites) and PSGR Krishnammal College (campus RFID & GLPI asset systems).",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
             "github": "https://github.com/aravind-govindhasamy",
             "website": "https://aravind-govindhasamy.github.io",
             "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
           },
           {
             "type": "topic-title",
-            "title": "Today's Roadmap",
-            "subtitle": "Four chapters, live polls, quizzes, and plenty of room for your questions",
-            "emoji": "🗺️"
+            "title": "Where this is going",
+            "subtitle": "Four chapters, a few live polls, and one slide about a dog",
+            "eyebrow": "Roadmap",
+            "icon": "map",
+            "image": "/assets/images/ai-webinar/markus-code.jpg"
           },
           {
             "type": "content",
-            "title": "What We'll Cover",
-            "emoji": "📋",
+            "title": "The plan for the next 90 minutes",
+            "icon": "workflow",
             "box": {
-              "title": "Four chapters, ~90 minutes, fully interactive",
               "list": [
-                { "emoji": "1️⃣", "text": "<strong>Me & Circuit Digest</strong> — who I am, and what Circuit Digest actually builds." },
-                { "emoji": "2️⃣", "text": "<strong>The AI Landscape</strong> — how we got from autocomplete to autonomous agents." },
-                { "emoji": "3️⃣", "text": "<strong>AI in the Dev Workflow</strong> — where it helps, where it doesn't, and how to prompt well." },
-                { "emoji": "4️⃣", "text": "<strong>The Toolbelt</strong> — ESP-IDF, GitHub, Antigravity, Codex, and Claude Code, compared." },
-                { "emoji": "🙋", "text": "Live polls, pop quizzes, and open Q&A woven throughout — this is a conversation, not a lecture." }
+                { "icon": "circuit-board", "title": "Chapter 1 &mdash; Me &amp; Circuit Digest", "text": "How a PSGCAS-shaped person ended up building a cloud IoT platform." },
+                { "icon": "brain", "title": "Chapter 2 &mdash; The AI landscape", "text": "How we got from autocomplete to tools that run your terminal." },
+                { "icon": "workflow", "title": "Chapter 3 &mdash; Using it without making a mess", "text": "Where AI earns its keep, and where it will lie to your face." },
+                { "icon": "hammer", "title": "Chapter 4 &mdash; The actual tools", "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; what each is for." }
               ]
+            },
+            "note": { "text": "Interrupt me. A webinar where nobody talks back is just a podcast with extra steps." }
+          },
+          {
+            "type": "content",
+            "title": "First, a confession",
+            "icon": "chat",
+            "image": "/assets/images/ai-webinar/good-boy.jpg",
+            "imageLayout": "right-image",
+            "caption": "Unrelated. This is a good boy. We will need him again in Chapter 3.",
+            "box": {
+              "content": "<p>I have deployed code on a Friday afternoon. I have also spent that weekend undoing it while a client called every two hours.</p><p>I say this so we start honest: I am not here to sell you a future where software writes itself. I am here because the tools got genuinely useful, and nobody sat me down in a classroom and explained how to actually work with them. So here is that class.</p><blockquote>The goal is not to type less. The goal is to spend your thinking on the parts that need a human.</blockquote>"
             }
           },
           {
             "type": "content",
-            "title": "Quick Show of Hands",
-            "emoji": "🙋",
+            "title": "Quick show of hands",
+            "icon": "users",
             "box": {
-              "title": "Before we start, let's see where the room stands",
+              "title": "Where does the room stand?",
               "list": [
-                { "emoji": "💬", "text": "Who has used <strong>ChatGPT</strong> for anything — coding or not?" },
-                { "emoji": "🧑‍💻", "text": "Who has used an <strong>AI coding assistant</strong> inside an IDE (Copilot, Claude, Cursor)?" },
-                { "emoji": "🤖", "text": "Who has heard of an <strong>agentic</strong> AI tool that can run commands and edit files on its own?" },
-                { "emoji": "🔌", "text": "Who has built something with an <strong>ESP32 or Arduino</strong>?" }
+                { "icon": "chat", "text": "Used <strong>ChatGPT</strong> for anything, coding or not." },
+                { "icon": "code", "text": "Used an AI assistant <strong>inside an editor</strong> (Copilot, Claude, Cursor)." },
+                { "icon": "terminal", "text": "Heard of an <strong>agent</strong> that edits files and runs commands on its own." },
+                { "icon": "cpu", "text": "Built something with an <strong>ESP32 or Arduino</strong>." }
               ]
             },
-            "note": { "text": "Raise your hand or drop a number in the chat — I'll call out a couple of you before we move on." }
+            "note": { "text": "Hands up, or a number in the chat. I will read them out." }
           }
         ]
       },
       {
-        "id": "about-me-circuit-digest",
-        "title": "Chapter 1 — Me & Circuit Digest",
+        "id": "me-and-circuit-digest",
+        "title": "Chapter 1",
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 1: Who Am I & What is Circuit Digest",
-            "subtitle": "A quick look at the road from student to PhD scholar",
-            "emoji": "👋"
-          },
-          {
-            "type": "imageText",
-            "title": "From MCA Student to PhD Scholar",
-            "layout": "left-image",
-            "image": "https://aravind-govindhasamy.github.io/me.jpg",
-            "imageAlt": "Aravind Govindhasamy",
-            "caption": "Aravind Govindhasamy — Full Stack Developer & PhD Scholar, PSGCAS",
-            "content": "<h4>I sat exactly where you're sitting</h4><p>MCA and B.Sc. Computer Science from Sri Ramakrishna Mission Vidyalaya College of Arts &amp; Science, Coimbatore. Then:</p><ul><li>🏢 <strong>2CQR Automation</strong> — 2.5 years building RFID library systems across 20+ university campuses.</li><li>🎓 <strong>PSGR Krishnammal College</strong> — campus RFID gate systems and IT asset management for 1,800+ endpoints.</li><li>📡 <strong>Semicon Media (Circuit Digest)</strong> — where I work today, building cloud IoT infrastructure.</li><li>🎓 <strong>PSGCAS</strong> — now a PhD scholar here, researching AI-driven RFID inventory optimization.</li></ul>"
+            "title": "Chapter 1 &mdash; Me, and a website about circuits",
+            "subtitle": "The unglamorous version of the journey",
+            "eyebrow": "Background",
+            "icon": "circuit-board",
+            "image": "/assets/images/ai-webinar/circuit-board.jpg"
           },
           {
             "type": "content",
-            "title": "Why I'm Here Today",
-            "emoji": "🎯",
+            "title": "I was a PSGCAS-shaped person too",
+            "icon": "idea",
+            "image": "/assets/images/ai-webinar/presenter.jpg",
+            "imageLayout": "left-image",
+            "caption": "Yes, the photo is old. No, I am not taking a new one for this.",
             "box": {
-              "content": "<p>I'm not here as an outside speaker — I'm a scholar at this exact institution, working in industry while doing research here. This talk is the bridge I wish someone had shown me: how the tools you'll use in a job <em>right now</em> connect to the AI shift happening in research and industry <em>right now</em>.</p>"
+              "content": "<p>MCA, then a B.Sc. in Computer Science, both in Coimbatore. No dramatic origin story. I liked making things that talked to hardware, so I chased jobs that let me do that.</p>",
+              "list": [
+                { "icon": "radio", "text": "<strong>2CQR Automation</strong> &mdash; 2.5 years wiring RFID readers and kiosks into library systems across 20+ campuses." },
+                { "icon": "server", "text": "<strong>PSGR Krishnammal College</strong> &mdash; campus RFID gates and IT asset tracking for 1,800+ machines." },
+                { "icon": "cloud", "text": "<strong>Semicon Media / Circuit Digest</strong> &mdash; where I am now, building cloud infrastructure for devices." },
+                { "icon": "book", "text": "<strong>PSGCAS</strong> &mdash; PhD scholar, researching AI-driven RFID inventory optimisation." }
+              ]
             }
           },
           {
             "type": "content",
-            "title": "What is Circuit Digest?",
-            "emoji": "📡",
+            "title": "What I actually did for 2.5 years",
+            "icon": "bug",
             "box": {
-              "title": "circuitdigest.com — run by Semicon Media Pvt Ltd, Coimbatore",
+              "content": "<p>The CV says \"integrated RFID systems.\" The reality was closer to this:</p>",
               "list": [
-                { "emoji": "📰", "text": "One of the most-read <strong>electronics &amp; embedded systems</strong> publications online." },
-                { "emoji": "🔧", "text": "Tutorials and project builds for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong>, and more." },
-                { "emoji": "📐", "text": "Circuit diagrams, component datasheets, and plain-English explainers for hobbyists and engineers." },
-                { "emoji": "🌍", "text": "Read by students, hobbyists, and embedded developers <strong>worldwide</strong>." },
-                { "emoji": "⭐", "text": "Also runs product reviews and covers the latest in electronics and IoT hardware." }
+                { "icon": "warning", "text": "<strong>150+ production issues</strong> diagnosed and closed, mostly at hours I would rather forget." },
+                { "icon": "cpu", "text": "Byte-level <strong>UID and CSN conversion</strong> &mdash; because two readers from two vendors never agree on endianness." },
+                { "icon": "zap", "text": "<strong>RS-232 timeouts</strong> that behaved perfectly in the lab and failed only on site, only on Fridays." },
+                { "icon": "database", "text": "<strong>SQL deadlocks</strong> under load, offline sync that lost transactions, thermal printers with opinions." }
+              ]
+            },
+            "note": { "text": "None of this was in a tutorial. All of it is what the job actually is." }
+          },
+          {
+            "type": "content",
+            "title": "The bug that taught me the most",
+            "icon": "wrench",
+            "image": "/assets/images/ai-webinar/hardware-repair.jpg",
+            "imageLayout": "right-image",
+            "caption": "Not the actual reader. Close enough emotionally.",
+            "box": {
+              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\" for one specific library, and only after 6 PM. Two weeks of logs. The reader was fine. The database was fine. The network was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM their staff switched to a spare handheld from the other vendor. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes &mdash; and it is exactly the part AI is worst at.</blockquote>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "What is Circuit Digest, really?",
+            "icon": "radio",
+            "box": {
+              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
+              "list": [
+                { "icon": "book", "text": "One of the most-read <strong>electronics and embedded systems</strong> publications online." },
+                { "icon": "cpu", "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code, real photos." },
+                { "icon": "search", "text": "Component explainers, datasheets in plain language, and honest hardware reviews." },
+                { "icon": "users", "text": "Read by students, hobbyists, and working engineers in more countries than I can list." }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "Circuit Digest Cloud — Our IoT Platform",
+            "title": "Circuit Digest Cloud &mdash; what I build now",
             "layout": "right-image",
-            "image": "https://aravind-govindhasamy.github.io/projects/circuit-digest-cloud.png",
-            "imageAlt": "Circuit Digest Cloud IoT dashboard",
-            "caption": "Device provisioning, real-time telemetry, and alerting — the platform I build day to day",
-            "content": "<h4>Beyond tutorials — real infrastructure</h4><p>Circuit Digest also builds <strong>Circuit Digest Cloud</strong>, an IoT platform that takes devices from a breadboard to production:</p><ul><li>📶 <strong>Device provisioning</strong> and fleet management for ESP32-class hardware.</li><li>📊 <strong>MQTT telemetry</strong> ingestion with live dashboards.</li><li>🔔 <strong>Event-based alerts</strong> over email, SMS, and WhatsApp.</li></ul>"
+            "image": "/assets/images/ai-webinar/circuit-digest-cloud.jpg",
+            "imageAlt": "Isometric illustration of a cloud IoT dashboard with ESP32 devices and databases",
+            "caption": "The platform that takes a device from breadboard to production",
+            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles the unglamorous parts of an IoT product:</p><ul><li><strong>Device provisioning</strong> and fleet management for ESP32-class hardware.</li><li><strong>MQTT telemetry</strong> ingestion with live dashboards.</li><li><strong>Alerts</strong> over email, SMS, and WhatsApp when a reading crosses a line.</li></ul>"
           },
           {
             "type": "content",
-            "title": "Under the Hood",
-            "emoji": "🧰",
+            "title": "The stack, minus the buzzwords",
+            "icon": "server",
             "box": {
-              "title": "The tech stack that ships this platform",
               "list": [
-                { "emoji": "⚡", "text": "<strong>FastAPI + PostgreSQL (Supabase) + MQTT</strong> for sensor ingestion and device APIs." },
-                { "emoji": "🗺️", "text": "<strong>GeoLinker</strong> — GPS tracking with polygon geofencing and live React maps." },
-                { "emoji": "👁️", "text": "<strong>Computer vision APIs</strong> for ANPR, helmet, object, and face detection, plus WebRTC video." },
-                { "emoji": "💳", "text": "<strong>Razorpay</strong> billing and <strong>Airtel M2M SIM</strong> lifecycle workflows." },
-                { "emoji": "🏠", "text": "<strong>Google Home OAuth</strong> integration for smart-home connected devices." },
-                { "emoji": "🚀", "text": "Deployed on <strong>DigitalOcean</strong> with <strong>GitHub Actions</strong> CI/CD and <strong>Sentry</strong> monitoring." }
+                { "icon": "zap", "text": "<strong>FastAPI + PostgreSQL + MQTT</strong> for ingestion and device-facing APIs." },
+                { "icon": "map", "text": "<strong>GPS tracking</strong> with polygon geofencing and live maps." },
+                { "icon": "eye", "text": "<strong>Computer vision</strong> for number-plate, helmet, and object detection, plus live video." },
+                { "icon": "git-branch", "text": "Shipped on <strong>DigitalOcean</strong> with <strong>GitHub Actions</strong> and <strong>Sentry</strong> watching for the 2 AM surprises." }
               ]
             }
           },
           {
             "type": "diagram",
-            "title": "Circuit Digest Cloud — High-Level Architecture",
-            "content": "┌──────────────┐     MQTT      ┌──────────────────┐\n│  ESP32 / IoT │ ───────────▶ │   MQTT Broker    │\n│    Device    │               └────────┬─────────┘\n└──────────────┘                        ▼\n                               ┌──────────────────┐\n                               │  FastAPI Ingest   │\n                               │  (async services) │\n                               └────────┬─────────┘\n                                        ▼\n                     ┌──────────────────────────────────┐\n                     │  PostgreSQL (Supabase)  +  Redis  │\n                     └────────┬─────────────────┬───────┘\n                              ▼                 ▼\n                    ┌──────────────┐   ┌──────────────────┐\n                    │ React Cloud  │   │  Alerts: Email /  │\n                    │  Dashboard   │   │  SMS / WhatsApp   │\n                    └──────────────┘   └──────────────────┘",
-            "note": { "text": "Every box here is something you could build a final-year project around." }
+            "title": "How a sensor reading becomes a dashboard",
+            "content": "  ESP32 / device                                        \n       |   publishes JSON over MQTT                      \n       v                                                \n  +-----------+     +----------------+     +-----------+ \n  |  Broker   | --> |  FastAPI ingest| --> | PostgreSQL| \n  +-----------+     +--------+-------+     +-----+-----+ \n                             |                  |       \n                             v                  v       \n                    +-----------------+  +--------------+\n                    | Alerts: mail /  |  | React cloud  |\n                    | SMS / WhatsApp  |  | dashboard    |\n                    +-----------------+  +--------------+",
+            "note": { "text": "Every box on this diagram is a final-year project someone in this room could ship." }
           },
           {
             "type": "content",
-            "title": "Let's Discuss",
-            "emoji": "💬",
+            "title": "Let's talk",
+            "icon": "chat",
             "box": {
-              "title": "Which of your own projects could use a setup like this?",
-              "list": [
-                { "emoji": "🏷️", "text": "RFID attendance or library systems?" },
-                { "emoji": "🌡️", "text": "Environmental or agricultural sensor networks?" },
-                { "emoji": "🚗", "text": "Vehicle or asset tracking?" },
-                { "emoji": "🏠", "text": "Smart-home or smart-campus automation?" }
-              ]
+              "content": "<p>Which of your projects is secretly an IoT platform waiting to happen? Attendance systems, lab equipment, hostel water tanks, your bike.</p>"
             },
-            "note": { "text": "Drop your idea in the chat — I'll pick a couple to riff on live." }
+            "note": { "text": "Say one out loud. I will tell you the three hard parts you have not thought about yet." }
           },
           {
             "type": "quiz",
-            "question": "In the Circuit Digest Cloud architecture, what is MQTT primarily used for?",
+            "question": "In that architecture, what is MQTT actually doing?",
             "options": [
-              "Storing the final data permanently",
-              "Lightweight publish/subscribe messaging between IoT devices and the backend",
-              "Rendering the React dashboard",
-              "Sending WhatsApp alerts directly"
+              "Storing the readings permanently",
+              "Lightweight publish/subscribe messaging between devices and the backend",
+              "Rendering the dashboard",
+              "Sending the WhatsApp alerts itself"
             ],
             "correctAnswer": 1,
-            "explanation": "MQTT is a lightweight pub/sub protocol built for constrained devices and unreliable networks — ideal for a device to publish telemetry that a backend service subscribes to."
+            "explanation": "MQTT is a lightweight pub/sub protocol built for flaky networks and tiny devices. The device publishes; a backend service subscribes. Storage and alerting happen downstream."
           }
         ]
       },
       {
         "id": "ai-landscape",
-        "title": "Chapter 2 — The AI Landscape",
+        "title": "Chapter 2",
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 2: The AI Landscape in 2026",
-            "subtitle": "From autocomplete to autonomous agents",
-            "emoji": "🧠"
+            "title": "Chapter 2 &mdash; From autocomplete to whatever this is",
+            "subtitle": "A short, opinionated history",
+            "eyebrow": "The landscape",
+            "icon": "brain",
+            "image": "/assets/images/ai-webinar/matrix.jpg"
           },
           {
             "type": "content",
-            "title": "A Short History of AI in Software",
-            "emoji": "📜",
+            "title": "A very short history",
+            "icon": "clock",
             "box": {
-              "content": "<p>The shift didn't happen overnight — it moved in clear stages:</p>",
               "list": [
-                { "emoji": "⌨️", "text": "<strong>Autocomplete era:</strong> line-by-line suggestions as you type." },
-                { "emoji": "💬", "text": "<strong>Chat era (2022+):</strong> ChatGPT makes conversational AI mainstream — ask, get an answer, copy-paste." },
-                { "emoji": "🧩", "text": "<strong>IDE copilot era:</strong> AI moves into the editor, aware of your open file and project." },
-                { "emoji": "🤖", "text": "<strong>Agentic era (now):</strong> AI reads files, runs your terminal, browses docs, and iterates until a task is done." }
+                { "icon": "code", "text": "<strong>Autocomplete era:</strong> it finished your line. Sometimes correctly." },
+                { "icon": "chat", "text": "<strong>Chat era (2022):</strong> you asked, it answered, you copied and pasted and prayed." },
+                { "icon": "puzzle", "text": "<strong>Editor copilots:</strong> it moved into the IDE and could see your open file." },
+                { "icon": "terminal", "text": "<strong>Agent era (now):</strong> it reads the repo, runs the tests, reads the errors, and tries again." }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "Meet the New Colleague",
+            "title": "The colleague who never sleeps and never brings snacks",
             "layout": "left-image",
-            "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "imageAlt": "A humanoid robot sitting and reading a tablet",
-            "caption": "AI has moved from answering questions to doing work",
-            "content": "<h4>Agency is the key word</h4><p>A conversational AI can explain code to you. An <strong>agentic</strong> AI can open the file, make the change, run the tests, and tell you what happened — all without you leaving the terminal.</p>"
+            "image": "/assets/images/ai-webinar/robot.jpg",
+            "imageAlt": "A humanoid robot sitting on a bench looking at a tablet",
+            "caption": "Nobody's AI looks like this. We all keep using this photo anyway.",
+            "content": "<h4>The word that matters is agency</h4><p>A chatbot can explain a bug to you. An agent can open the file, reproduce the bug, patch it, run the suite, and hand you a diff.</p><p>Same underlying model. Completely different thing to work with.</p>"
           },
           {
             "type": "comparison",
-            "title": "Conversational AI vs Agentic AI",
-            "leftTitle": "Conversational AI",
+            "title": "A chatbot vs an agent",
+            "leftTitle": "A chatbot",
             "leftPoints": [
-              "💬 Answers questions and explains code",
-              "📋 You copy, paste, and verify manually",
-              "🧠 Great for learning and explanation",
-              "🔁 One turn at a time, driven by you"
+              "Explains code and answers questions",
+              "You copy, paste, wire it up, and verify",
+              "Great for learning and getting unstuck",
+              "One turn at a time, you drive every step"
             ],
-            "rightTitle": "Agentic AI",
+            "rightTitle": "An agent",
             "rightPoints": [
-              "🛠️ Reads files, runs commands, edits code directly",
-              "🔄 Plans, acts, checks the result, and iterates",
-              "🌐 Can browse docs and verify its own work",
-              "🎯 Works toward a goal across many steps"
+              "Reads files, runs commands, edits code directly",
+              "Plans, acts, checks the result, corrects itself",
+              "Can read docs and confirm its own work",
+              "Chases a goal across many steps"
             ],
-            "note": { "text": "Most modern coding tools (Claude Code, Antigravity, Codex) are agentic — that's the shift this whole talk is about." }
+            "note": { "text": "Claude Code, Antigravity, and Codex are all in the right-hand column. That is the shift." }
           },
           {
             "type": "content",
-            "title": "The Big Players Building These Models",
-            "emoji": "🏗️",
+            "title": "Who is building these things",
+            "icon": "boxes",
             "box": {
               "list": [
-                { "emoji": "🟢", "text": "<strong>OpenAI</strong> — GPT models, ChatGPT, and the Codex coding agent." },
-                { "emoji": "🟠", "text": "<strong>Anthropic</strong> — the Claude model family and the Claude Code CLI." },
-                { "emoji": "🔵", "text": "<strong>Google DeepMind</strong> — Gemini models and the Antigravity agentic IDE." },
-                { "emoji": "🟣", "text": "<strong>Meta</strong> — the Llama family of open-weight models." }
-              ]
-            },
-            "note": { "text": "You'll meet several of these tools hands-on in Chapter 4." }
-          },
-          {
-            "type": "content",
-            "title": "Why This Matters for You, Right Now",
-            "emoji": "📈",
-            "box": {
-              "list": [
-                { "emoji": "💼", "text": "Employers now <strong>expect</strong> familiarity with AI-assisted development, not just tolerate it." },
-                { "emoji": "⚡", "text": "It's a genuine <strong>productivity multiplier</strong> for boilerplate, debugging, and learning new stacks fast." },
-                { "emoji": "🧭", "text": "The new core skill isn't just syntax — it's <strong>directing and verifying</strong> an AI collaborator." },
-                { "emoji": "🔬", "text": "For research (like mine), it's already changing how we prototype and analyze." }
+                { "icon": "bot", "text": "<strong>OpenAI</strong> &mdash; GPT models, ChatGPT, and the Codex coding agent." },
+                { "icon": "sparkles", "text": "<strong>Anthropic</strong> &mdash; the Claude models and the Claude Code CLI." },
+                { "icon": "brain", "text": "<strong>Google DeepMind</strong> &mdash; Gemini models and the Antigravity agentic IDE." },
+                { "icon": "boxes", "text": "<strong>Meta</strong> &mdash; the Llama family, which you can download and run yourself." }
               ]
             }
           },
           {
-            "type": "chart",
-            "title": "Illustrative: Developer AI-Tool Adoption Trend",
-            "chartType": "line",
-            "labels": ["2022", "2023", "2024", "2025", "2026"],
-            "data": [10, 25, 45, 70, 90],
-            "note": { "text": "Illustrative relative trend, not a specific published statistic — the direction is what matters here." }
+            "type": "content",
+            "title": "Hot take",
+            "icon": "warning",
+            "box": {
+              "content": "<blockquote>Most \"AI will replace developers\" posts are written by people who have never been paged at 3 AM to fix a data migration.</blockquote><p>The job was never typing. It is deciding what to build, noticing when the requirements are wrong, and being the person who understands the system when it breaks. AI moves the typing. It does not move the responsibility.</p>"
+            }
           },
           {
             "type": "content",
-            "title": "Quick Poll",
-            "emoji": "🗳️",
+            "title": "Adoption, roughly",
+            "icon": "gauge",
+            "image": "/assets/images/ai-webinar/analytics.jpg",
+            "imageLayout": "right-image",
+            "caption": "A real dashboard. Not a made-up graph with a line going up.",
             "box": {
-              "title": "Which of these have you personally tried?",
+              "content": "<p>I am not going to show you an invented chart. You have seen enough of those.</p><p>Directionally: in 2022, using AI at work was a party trick. In 2026, <em>not</em> using it is the thing that gets a comment in code review. Treat that as the trend and move on.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Quick poll",
+            "icon": "users",
+            "box": {
+              "title": "Which have you actually tried?",
               "list": [
-                { "emoji": "A", "text": "ChatGPT" },
-                { "emoji": "B", "text": "GitHub Copilot" },
-                { "emoji": "C", "text": "Claude" },
-                { "emoji": "D", "text": "None of the above — yet!" }
+                { "icon": "chat", "text": "ChatGPT" },
+                { "icon": "git-branch", "text": "GitHub Copilot" },
+                { "icon": "sparkles", "text": "Claude" },
+                { "icon": "check", "text": "None yet, and that is a completely fine place to start" }
               ]
             },
-            "note": { "text": "Show of hands, or drop a letter in the chat." }
+            "note": { "text": "A letter in the chat is enough." }
           },
           {
             "type": "quiz",
-            "question": "What is the single biggest differentiator between a conversational AI and an agentic AI coding tool?",
+            "question": "What is the single biggest difference between a conversational AI and an agentic one?",
             "options": [
-              "Agentic AI is always a bigger model",
-              "Agentic AI can take autonomous actions in your environment, not just answer questions",
-              "Conversational AI is only available for free",
-              "There is no real difference"
+              "The agent uses a larger model",
+              "The agent can take actions in your environment, not just answer",
+              "The chatbot is always free",
+              "There is no real difference, it is marketing"
             ],
             "correctAnswer": 1,
-            "explanation": "Agency — the ability to read, act, and verify in your actual environment — is what separates a chatbot from an agentic coding tool."
+            "explanation": "Agency (reading, acting, and checking inside your actual environment) is what separates a chat window from a coding agent."
           },
           {
             "type": "content",
-            "title": "AI Literacy: The New CS Fundamental",
-            "emoji": "🎓",
+            "title": "The skill that matters now",
+            "icon": "book",
+            "image": "/assets/images/ai-webinar/books.jpg",
+            "imageLayout": "left-image",
+            "caption": "The fundamentals in here did not stop mattering. They started mattering more.",
             "box": {
               "list": [
-                { "emoji": "✍️", "text": "<strong>Prompting well</strong> — giving clear context and constraints." },
-                { "emoji": "🔍", "text": "<strong>Verifying output</strong> — never trusting generated code blindly." },
-                { "emoji": "🧱", "text": "<strong>Knowing the limits</strong> — where models hallucinate or get stale." },
-                { "emoji": "🔒", "text": "<strong>Security awareness</strong> — not leaking secrets or credentials into prompts." }
+                { "icon": "target", "text": "<strong>Prompting</strong> &mdash; giving enough context and clear constraints." },
+                { "icon": "eye", "text": "<strong>Verifying</strong> &mdash; reading output like you would review a stranger's PR." },
+                { "icon": "brain", "text": "<strong>Knowing the limits</strong> &mdash; where it hallucinates, where its knowledge is stale." },
+                { "icon": "lock", "text": "<strong>Security sense</strong> &mdash; not pasting secrets, not trusting generated auth code blindly." }
               ]
             }
           },
           {
             "type": "content",
-            "title": "A Word on Academic Integrity",
-            "emoji": "⚖️",
+            "title": "A word on academic integrity",
+            "icon": "shield",
             "box": {
-              "content": "<p>Since we're at a university, this needs saying plainly:</p>",
+              "content": "<p>We are literally at a university, so, plainly:</p>",
               "list": [
-                { "emoji": "✅", "text": "AI is a fantastic tool for <strong>learning</strong>, prototyping, and exploring unfamiliar topics." },
-                { "emoji": "📏", "text": "Always follow <strong>your institution's specific policy</strong> on AI use in coursework and research." },
-                { "emoji": "🧠", "text": "If you can't explain what your code does in a viva, you haven't actually learned it — AI or not." }
+                { "icon": "check", "text": "AI is excellent for <strong>learning</strong>, prototyping, and getting past a stuck point." },
+                { "icon": "book", "text": "Follow <strong>your department's actual policy</strong> on AI in coursework and research. Ask if it is unclear." },
+                { "icon": "warning", "text": "If you cannot explain it in a viva, you do not own it yet. The examiner finds that out in about 40 seconds." }
               ]
             }
           }
         ]
       },
       {
-        "id": "ai-dev-workflow",
-        "title": "Chapter 3 — AI in the Dev Workflow",
+        "id": "ai-workflow",
+        "title": "Chapter 3",
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 3: Weaving AI into Your Dev Workflow",
-            "subtitle": "Where it helps, where it doesn't, and how to prompt well",
-            "emoji": "⚙️"
+            "title": "Chapter 3 &mdash; Using it without making a mess",
+            "subtitle": "Where it helps, where it lies, and how to ask",
+            "eyebrow": "The workflow",
+            "icon": "workflow",
+            "image": "/assets/images/ai-webinar/dev-window.jpg"
           },
           {
             "type": "content",
-            "title": "Traditional vs AI-Augmented Workflow",
-            "emoji": "🔄",
+            "title": "Old loop vs new loop",
+            "icon": "workflow",
             "box": {
               "list": [
-                { "emoji": "📝", "text": "<strong>Traditional:</strong> plan → write code → test → review → deploy, all by hand." },
-                { "emoji": "🤝", "text": "<strong>AI-augmented:</strong> the same stages, but an agent helps draft, explain, test, and review at each step — with you still deciding what's correct." }
+                { "icon": "file", "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand." },
+                { "icon": "handshake", "text": "<strong>New:</strong> same steps, but an agent drafts, explains, and tests alongside you, while you stay the one who decides what \"correct\" means." }
               ]
             }
           },
           {
             "type": "diagram",
-            "title": "A Practical AI-Augmented Workflow",
-            "content": "┌─────────────┐   ┌────────────────────┐   ┌───────────────┐\n│  Idea /     │──▶│  AI-assisted plan  │──▶│  You review   │\n│  Issue      │   │  (steps, files)    │   │  the plan     │\n└─────────────┘   └────────────────────┘   └───────┬───────┘\n                                                     ▼\n┌─────────────┐   ┌────────────────────┐   ┌───────────────┐\n│  Deploy     │◀──│  Tests (AI-assisted│◀──│  AI writes     │\n│             │   │  + you verify)     │   │  the code      │\n└─────────────┘   └────────────────────┘   └───────┬───────┘\n                                                     ▼\n                                            ┌───────────────┐\n                                            │ You + AI review│\n                                            └───────────────┘",
-            "note": { "text": "Notice: a human reviews before AND after the AI acts. That's the whole discipline in one diagram." }
+            "title": "A loop that does not end in regret",
+            "content": "  idea / ticket                                          \n       |                                                 \n       v                                                 \n  [ AI drafts a plan ] --> [ YOU review the plan ]       \n                                     |                   \n                                     v                   \n                          [ AI writes the code ]         \n                                     |                   \n                                     v                   \n            [ YOU + AI review the diff ] --> [ tests ]   \n                                     |                   \n                                     v                   \n                               [ deploy ]                ",
+            "note": { "text": "A human checkpoint before the agent acts, and after. That is the entire discipline." }
           },
           {
             "type": "content",
-            "title": "Where AI Genuinely Helps",
-            "emoji": "✅",
+            "title": "Where it genuinely pulls its weight",
+            "icon": "check",
             "box": {
               "list": [
-                { "emoji": "🏗️", "text": "Boilerplate and scaffolding — new components, config, project structure." },
-                { "emoji": "📖", "text": "Explaining unfamiliar code you've just inherited." },
-                { "emoji": "🧪", "text": "Writing first-draft tests for existing logic." },
-                { "emoji": "🐞", "text": "Debugging with a real error message and stack trace." },
-                { "emoji": "📚", "text": "Learning a new framework by building something small with it." }
+                { "icon": "layers", "text": "Boilerplate and scaffolding &mdash; a new component, config, a project skeleton." },
+                { "icon": "search", "text": "Explaining a codebase you were handed an hour ago." },
+                { "icon": "check", "text": "First-draft tests for code that already works." },
+                { "icon": "bug", "text": "Debugging when you have a real stack trace to hand it." },
+                { "icon": "book", "text": "Learning a new framework by building something small in it." }
               ]
             }
           },
           {
             "type": "content",
-            "title": "Where You Still Do the Thinking",
-            "emoji": "🧠",
+            "title": "Where it will confidently lie to you",
+            "icon": "brain",
             "box": {
+              "content": "<p>It is never unsure. That is the dangerous part.</p>",
               "list": [
-                { "emoji": "🏛️", "text": "Architecture and trade-off decisions." },
-                { "emoji": "🔐", "text": "Security review — AI can miss subtle vulnerabilities." },
-                { "emoji": "🎯", "text": "Business and domain judgment calls." },
-                { "emoji": "✔️", "text": "Verifying correctness — AI is confident even when wrong." },
-                { "emoji": "❓", "text": "Understanding <em>why</em>, not just accepting <em>what</em>." }
+                { "icon": "layers", "text": "Architecture and trade-offs &mdash; it will pick one and defend it either way." },
+                { "icon": "lock", "text": "Security review &mdash; it misses the subtle holes, cheerfully." },
+                { "icon": "target", "text": "Domain judgement &mdash; it does not know your users or your rules." },
+                { "icon": "eye", "text": "\"Is this actually correct\" &mdash; only you and the tests can answer that." }
               ]
             }
           },
           {
             "type": "content",
-            "title": "Prompt Engineering, Practically",
-            "emoji": "✍️",
+            "title": "A real conversation, lightly edited",
+            "icon": "chat",
             "box": {
-              "list": [
-                { "emoji": "📎", "text": "<strong>Give context:</strong> paste the actual error, the actual file, not a paraphrase." },
-                { "emoji": "🎯", "text": "<strong>Be specific about constraints:</strong> language, framework, style, what NOT to touch." },
-                { "emoji": "🔁", "text": "<strong>Iterate</strong> instead of writing one giant prompt — small steps are easier to verify." },
-                { "emoji": "💡", "text": "<strong>Ask it to explain its reasoning</strong> before applying a change you don't fully understand." }
-              ]
-            }
-          },
-          {
-            "type": "content",
-            "title": "Bad Prompt vs Good Prompt",
-            "emoji": "📝",
-            "box": {
-              "title": "Same request, very different results",
-              "code": "// ❌ Vague — invites guessing\n\"fix my code\"\n\n// ✅ Specific — grounded in reality\n\"In src/api/users.py, GET /users/:id returns\n500 when id is not numeric. Here's the\ntraceback: <paste>. Add input validation\nthat returns a 400 with a clear message,\nmatching the style of validate_order_id()\nin src/api/orders.py.\""
-            }
-          },
-          {
-            "type": "content",
-            "title": "Try It Yourself",
-            "emoji": "🙋",
-            "box": {
-              "title": "If you opened a brand-new, unfamiliar codebase right now...",
-              "content": "<p>...what's the <strong>first</strong> thing you'd ask an AI agent to do?</p>"
+              "content": "<p><strong>Me:</strong> add pagination to the users endpoint</p><blockquote>Done. Added limit and offset params, a total count, and updated the docs.</blockquote><p><strong>Me:</strong> that file you edited is not the users endpoint</p><blockquote>You are absolutely right, and I apologise for the confusion. Correcting it now.</blockquote><p><strong>Me:</strong> also this is FastAPI, not Flask</p><blockquote>Of course. My mistake. Here is the version using FastAPI Query parameters.</blockquote><p><strong>Me:</strong> ok that one actually works</p><blockquote>Glad I could help. Would you like me to add tests?</blockquote><p><strong>Me:</strong> ...yes</p>"
             },
-            "note": { "text": "Let's hear 2-3 answers before I show you what I'd actually do." }
+            "note": { "text": "This is the normal experience. It is still faster than doing it alone. You just have to stay in the room." }
+          },
+          {
+            "type": "content",
+            "title": "Prompting, minus the mysticism",
+            "icon": "target",
+            "box": {
+              "list": [
+                { "icon": "file", "text": "<strong>Give context:</strong> paste the real error and the real file, not a summary of them." },
+                { "icon": "target", "text": "<strong>Set constraints:</strong> language, framework, style, and what it must not touch." },
+                { "icon": "workflow", "text": "<strong>Iterate:</strong> small steps you can check beat one giant prompt you cannot." },
+                { "icon": "eye", "text": "<strong>Ask for reasoning</strong> before you accept a change you do not fully follow." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Bad prompt / good prompt",
+            "icon": "file",
+            "box": {
+              "title": "Same request, very different afternoon",
+              "code": "// Vague - invites guessing\n\"fix my code\"\n\n// Specific - grounded in reality\n\"In src/api/users.py, GET /users/{id} returns 500\nwhen id is not numeric. Traceback below. Add\nvalidation that returns 400 with a clear message,\nmatching validate_order_id() in src/api/orders.py.\n<paste traceback>\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Try it: what is your first move?",
+            "icon": "chat",
+            "image": "/assets/images/ai-webinar/planning-wall.jpg",
+            "imageLayout": "right-image",
+            "caption": "Planning a change before touching code. Still the right order.",
+            "box": {
+              "content": "<p>You have just cloned a large, unfamiliar repo. What is the very first thing you ask an agent to do?</p>"
+            },
+            "note": { "text": "Two or three answers, then I will show you what I actually do." }
           },
           {
             "type": "quiz",
-            "question": "Which of these is the strongest prompt for asking an AI to fix a bug?",
+            "question": "Which is the strongest way to ask an AI to fix a bug?",
             "options": [
               "\"fix my code\"",
               "\"why doesn't this work\"",
-              "The exact file, the exact error/traceback, and the expected behavior",
-              "\"make it better\""
+              "The exact file, the exact traceback, and the expected behaviour",
+              "\"make it better please\""
             ],
             "correctAnswer": 2,
-            "explanation": "Specific, grounded context — file, error, expected behavior — turns a guess into a targeted fix. Vague prompts get vague (and often wrong) answers."
+            "explanation": "Grounded, specific context turns a guess into a targeted fix. Vague prompts get vague, confident, wrong answers."
           },
           {
             "type": "content",
-            "title": "Ground Rules Before You Ship AI-Written Code",
-            "emoji": "🛡️",
+            "title": "Before you let it near main",
+            "icon": "shield",
             "box": {
               "list": [
-                { "emoji": "👀", "text": "Read <strong>every line</strong> — don't merge what you haven't reviewed." },
-                { "emoji": "▶️", "text": "Actually <strong>run it</strong>, don't just eyeball it." },
-                { "emoji": "🔑", "text": "Check for hardcoded secrets, keys, or credentials." },
-                { "emoji": "🧪", "text": "Test the edge cases the AI didn't think to mention." },
-                { "emoji": "🗣️", "text": "Be able to <strong>explain it</strong> — in a code review, a viva, or an interview." }
+                { "icon": "eye", "text": "Read every line. Do not merge what you have not read." },
+                { "icon": "terminal", "text": "Actually run it. Do not just nod at it." },
+                { "icon": "lock", "text": "Grep for keys, tokens, and hardcoded credentials." },
+                { "icon": "bug", "text": "Test the edge cases it did not mention." },
+                { "icon": "chat", "text": "Be able to explain it &mdash; in review, in a viva, in an interview." }
               ]
-            }
+            },
+            "note": { "text": "Rule of thumb: if you would be embarrassed to have written it, do not ship it under your name." }
           },
           {
             "type": "imageText",
-            "title": "The Human Stays in the Loop",
+            "title": "The human stays in the loop",
             "layout": "right-image",
-            "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "imageAlt": "A developer reviewing code on a laptop screen",
-            "caption": "Augmentation, not replacement",
-            "content": "<h4>The goal is a force multiplier, not autopilot</h4><p>Every workflow in this chapter puts a human checkpoint before anything ships. That's not overcaution — it's the difference between using AI as a tool and outsourcing your judgment.</p>"
+            "image": "/assets/images/ai-webinar/team-meeting.jpg",
+            "imageAlt": "Five people working together around a table full of laptops",
+            "caption": "A force multiplier, not an autopilot",
+            "content": "<h4>Every workflow here has a human checkpoint</h4><p>That is not overcaution. It is the line between using AI as a tool and quietly outsourcing your judgement to it.</p>"
           }
         ]
       },
       {
-        "id": "tools-deep-dive",
-        "title": "Chapter 4 — IDE Tools & AI Coding Agents",
+        "id": "the-tools",
+        "title": "Chapter 4",
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 4: The Toolbelt — IDEs & AI Coding Agents",
-            "subtitle": "ESP-IDF, GitHub, Antigravity, Codex, and Claude Code",
-            "emoji": "🛠️"
+            "title": "Chapter 4 &mdash; The actual tools",
+            "subtitle": "What each one is, and when to reach for it",
+            "eyebrow": "The toolbelt",
+            "icon": "hammer",
+            "image": "/assets/images/ai-webinar/schematic.jpg"
           },
           {
             "type": "content",
-            "title": "Today's Toolbelt at a Glance",
-            "emoji": "🧰",
+            "title": "What we will actually look at",
+            "icon": "boxes",
             "box": {
               "list": [
-                { "emoji": "🔌", "text": "<strong>ESP-IDF</strong> — the official framework for building ESP32 firmware." },
-                { "emoji": "🐙", "text": "<strong>GitHub</strong> — repos, CI/CD, and where most AI tools plug in." },
-                { "emoji": "🌌", "text": "<strong>Google Antigravity</strong> — Google DeepMind's agentic IDE." },
-                { "emoji": "🤖", "text": "<strong>OpenAI Codex</strong> — OpenAI's cloud + CLI coding agent." },
-                { "emoji": "💻", "text": "<strong>Claude Code</strong> — Anthropic's terminal-first agentic CLI." }
+                { "icon": "cpu", "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in." },
+                { "icon": "git-branch", "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in." },
+                { "icon": "sparkles", "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE." },
+                { "icon": "bot", "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud and CLI coding agent." },
+                { "icon": "terminal", "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent." }
               ]
             }
           },
           {
             "type": "content",
-            "title": "ESP-IDF — The Embedded Foundation",
-            "emoji": "🔌",
+            "title": "ESP-IDF &mdash; where the firmware lives",
+            "icon": "cpu",
             "box": {
               "title": "Espressif's official SDK for ESP32-class chips",
               "list": [
-                { "emoji": "🧵", "text": "Built on <strong>FreeRTOS</strong> — real multitasking on a microcontroller." },
-                { "emoji": "📦", "text": "A <strong>component-based</strong> architecture for reusable drivers and libraries." },
-                { "emoji": "⌨️", "text": "The <code>idf.py</code> CLI and <strong>menuconfig</strong> for build configuration." },
-                { "emoji": "🧩", "text": "Official <strong>VS Code</strong> and CLion extensions for a full IDE experience." },
-                { "emoji": "🐛", "text": "JTAG / OpenOCD support for real hardware debugging, not just print statements." }
+                { "icon": "layers", "text": "Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a microcontroller." },
+                { "icon": "boxes", "text": "A <strong>component</strong> system for reusable drivers and libraries." },
+                { "icon": "terminal", "text": "<code>idf.py</code> to build and flash, <strong>menuconfig</strong> for build options." },
+                { "icon": "bug", "text": "JTAG and OpenOCD for real debugging, not just serial-print archaeology." }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "Why ESP-IDF Matters for Circuit Digest-Style Projects",
+            "title": "Why an embedded framework is in an AI talk",
             "layout": "left-image",
-            "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "imageAlt": "Close-up of an electronic circuit board",
-            "caption": "Every tutorial project starts here",
-            "content": "<h4>Firmware is where hardware meets AI dev tools</h4><p>Almost every ESP32 tutorial you'll see on Circuit Digest eventually needs custom firmware. An AI agent inside VS Code can scaffold a FreeRTOS task, wire up a sensor driver, or explain a cryptic linker error — while you stay focused on the actual circuit and logic.</p>"
+            "image": "/assets/images/ai-webinar/circuit-board.jpg",
+            "imageAlt": "Macro photograph of a circuit board",
+            "caption": "The project starts here, not in the editor",
+            "content": "<h4>Because Circuit Digest projects need firmware</h4><p>Nearly every ESP32 build eventually needs custom code. An agent in your editor can scaffold a FreeRTOS task or wire up a sensor driver while you keep your attention on the actual circuit and the actual timing.</p>"
           },
           {
             "type": "content",
-            "title": "GitHub — The Backbone of Modern Dev",
-            "emoji": "🐙",
+            "title": "GitHub &mdash; the boring backbone that runs everything",
+            "icon": "git-branch",
             "box": {
               "list": [
-                { "emoji": "📁", "text": "<strong>Repositories &amp; Pull Requests</strong> — where code review actually happens." },
-                { "emoji": "⚙️", "text": "<strong>GitHub Actions</strong> — the exact CI/CD pipeline that deploys Circuit Digest Cloud." },
-                { "emoji": "✨", "text": "<strong>GitHub Copilot</strong> — inline, autocomplete-style AI suggestions in your editor." },
-                { "emoji": "☁️", "text": "<strong>Codespaces</strong> — a full dev environment in the browser." },
-                { "emoji": "📄", "text": "<strong>GitHub Pages</strong> — free static hosting, like the site this deck lives on." }
+                { "icon": "git-branch", "text": "<strong>Repos and pull requests</strong> &mdash; where review actually happens." },
+                { "icon": "workflow", "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud." },
+                { "icon": "sparkles", "text": "<strong>Copilot</strong> &mdash; inline, autocomplete-style suggestions." },
+                { "icon": "cloud", "text": "<strong>Codespaces</strong> &mdash; a full dev environment in the browser." },
+                { "icon": "file", "text": "<strong>Pages</strong> &mdash; free static hosting, like the site this deck runs on." }
               ]
             }
           },
           {
             "type": "content",
             "title": "OpenAI Codex",
-            "emoji": "🤖",
+            "icon": "bot",
             "box": {
-              "title": "OpenAI's coding agent, CLI and cloud",
+              "title": "A coding agent, cloud and CLI",
               "list": [
-                { "emoji": "☁️", "text": "Runs tasks in a <strong>sandboxed environment</strong>, autonomously." },
-                { "emoji": "🔀", "text": "Delivers work as a <strong>reviewable pull request</strong>, not a silent overwrite." },
-                { "emoji": "🎯", "text": "Shines on <strong>well-scoped issues</strong>: \"add this endpoint,\" \"fix this failing test.\"" },
-                { "emoji": "🖥️", "text": "Also available as a <strong>CLI</strong> for local, terminal-driven workflows." }
+                { "icon": "cloud", "text": "Runs tasks in a <strong>sandbox</strong>, on its own." },
+                { "icon": "git-branch", "text": "Hands work back as a <strong>reviewable pull request</strong>, not a silent overwrite." },
+                { "icon": "target", "text": "Best on <strong>well-scoped</strong> jobs: \"add this endpoint,\" \"fix this failing test.\"" },
+                { "icon": "terminal", "text": "Also a local <strong>CLI</strong> for terminal-driven work." }
               ]
             }
           },
           {
             "type": "content",
             "title": "Google Antigravity",
-            "emoji": "🌌",
+            "icon": "sparkles",
             "box": {
-              "title": "Google DeepMind's agentic IDE",
+              "title": "An agentic IDE from Google DeepMind",
               "list": [
-                { "emoji": "🌐", "text": "<strong>Browser sub-agents</strong> that can verify UI changes visually." },
-                { "emoji": "📝", "text": "Produces <strong>task and walkthrough artifacts</strong> so you can follow what it did and why." },
-                { "emoji": "📁", "text": "Deep, <strong>whole-codebase context</strong> — not just the open file." },
-                { "emoji": "🔎", "text": "We did a full deep-dive session on Antigravity — check that deck for the complete picture." }
+                { "icon": "eye", "text": "<strong>Browser sub-agents</strong> that verify UI changes visually." },
+                { "icon": "file", "text": "Produces <strong>task and walkthrough artifacts</strong> so you can follow what it did." },
+                { "icon": "layers", "text": "Deep, <strong>whole-codebase</strong> context, not just the open file." },
+                { "icon": "book", "text": "There is a full deep-dive deck on Antigravity in this same catalog." }
               ]
             }
           },
           {
             "type": "content",
             "title": "Claude Code",
-            "emoji": "💻",
+            "icon": "terminal",
             "box": {
-              "title": "Anthropic's terminal-first agentic CLI",
+              "title": "Anthropic's terminal-first agent",
               "list": [
-                { "emoji": "⌨️", "text": "Reads and edits files, and <strong>runs your terminal commands</strong> directly." },
-                { "emoji": "🔌", "text": "Supports <strong>MCP (Model Context Protocol)</strong> to connect external tools and data sources." },
-                { "emoji": "🧩", "text": "<strong>Subagents and hooks</strong> for composing larger, multi-step workflows." },
-                { "emoji": "📋", "text": "A <strong>plan mode</strong> that proposes a plan for you to review before it touches anything." }
+                { "icon": "terminal", "text": "Reads and edits files, and <strong>runs your commands</strong> directly." },
+                { "icon": "puzzle", "text": "<strong>MCP</strong> lets it connect to external tools and data sources." },
+                { "icon": "workflow", "text": "<strong>Subagents and hooks</strong> for larger, multi-step jobs." },
+                { "icon": "check", "text": "<strong>Plan mode</strong> proposes a plan for you to approve before it touches anything." }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "Built With the Tools It Teaches",
+            "title": "Full disclosure",
             "layout": "right-image",
-            "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "imageAlt": "A code editor showing syntax-highlighted source code",
-            "caption": "A live example, not just theory",
-            "content": "<h4>A fun bit of meta</h4><p>This very slide deck — the platform it's running on — was assembled with the help of Claude Code, working directly in this project's codebase. It's a small, honest example of agentic coding actually being used, not just described.</p>"
+            "image": "/assets/images/ai-webinar/code-editor.jpg",
+            "imageAlt": "A code editor showing syntax-highlighted source",
+            "caption": "Built in this project's own repo",
+            "content": "<h4>This deck was assembled with Claude Code</h4><p>Working directly in the codebase of the site it runs on. If a slide is ugly, that one is on me, not the model.</p>"
           },
           {
             "type": "content",
-            "title": "Choosing Between Them",
-            "emoji": "🧭",
+            "title": "Which one, when",
+            "icon": "map",
             "box": {
               "list": [
-                { "emoji": "💻", "text": "<strong>Claude Code:</strong> best when you live in the terminal and want MCP integrations plus a review-before-execute workflow." },
-                { "emoji": "🌌", "text": "<strong>Antigravity:</strong> best for UI-heavy work that needs visual, browser-based verification." },
-                { "emoji": "🤖", "text": "<strong>Codex:</strong> best for well-scoped, PR-sized tasks you can hand off and review later." },
-                { "emoji": "✨", "text": "<strong>GitHub Copilot:</strong> best as a lightweight, always-on autocomplete layer alongside any of the above." }
+                { "icon": "terminal", "text": "<strong>Claude Code</strong> &mdash; you live in the terminal, want MCP integrations and a review-first flow." },
+                { "icon": "eye", "text": "<strong>Antigravity</strong> &mdash; UI-heavy work that needs visual, browser-based checking." },
+                { "icon": "bot", "text": "<strong>Codex</strong> &mdash; scoped, PR-sized tasks you can hand off and review later." },
+                { "icon": "sparkles", "text": "<strong>Copilot</strong> &mdash; a light, always-on autocomplete layer next to any of the above." }
               ]
             },
-            "note": { "text": "Most teams end up using more than one — they're not mutually exclusive." }
+            "note": { "text": "You will probably end up with two of them open at once. That is normal." }
           },
           {
             "type": "content",
-            "title": "Getting Started Today",
-            "emoji": "🚀",
+            "title": "Starting tonight, for real",
+            "icon": "rocket",
+            "image": "/assets/images/ai-webinar/workspace.jpg",
+            "imageLayout": "left-image",
+            "caption": "One small repo, one task you already know the answer to",
             "box": {
               "list": [
-                { "emoji": "1️⃣", "text": "Each tool installs via its own CLI or editor extension — sign in with your provider account." },
-                { "emoji": "2️⃣", "text": "Don't start on a critical project. Try it on a <strong>small personal repo</strong> first." },
-                { "emoji": "3️⃣", "text": "Give it a task you already know the answer to, so you can judge the quality of its work." },
-                { "emoji": "4️⃣", "text": "Read its plan before letting it execute — every one of these tools supports that." }
+                { "icon": "terminal", "text": "Install the CLI or extension, sign in with your provider account." },
+                { "icon": "shield", "text": "Do not start on something critical. Use a <strong>small personal repo</strong>." },
+                { "icon": "check", "text": "Give it a task you already know the answer to, so you can judge its work." },
+                { "icon": "eye", "text": "Read its plan before you let it run. Every one of these tools supports that." }
               ]
             }
           },
           {
             "type": "quiz",
-            "question": "Which tool is best suited for a task that needs visual verification of a UI change in a browser?",
+            "question": "Which tool fits a task that needs a UI change verified visually in a browser?",
             "options": [
               "ESP-IDF",
               "GitHub Actions",
-              "Antigravity, via its browser sub-agents",
+              "Antigravity, using its browser sub-agents",
               "menuconfig"
             ],
             "correctAnswer": 2,
-            "explanation": "Antigravity's browser sub-agents can take screenshots and interact with a live page — exactly what's needed to confirm a UI change actually looks right."
+            "explanation": "Antigravity's browser sub-agents can screenshot and interact with a live page, which is exactly what confirming a UI change needs."
           },
           {
             "type": "content",
-            "title": "A 30-Minute Starter Exercise",
-            "emoji": "⏱️",
+            "title": "A 30-minute exercise for this week",
+            "icon": "clock",
             "box": {
-              "title": "Try this after the webinar",
               "list": [
-                { "emoji": "1️⃣", "text": "Pick a small open-source repo you're curious about." },
-                { "emoji": "2️⃣", "text": "Ask an AI agent to explain one function you don't understand." },
-                { "emoji": "3️⃣", "text": "Ask it to write one unit test for that function." },
-                { "emoji": "4️⃣", "text": "Read the test. Run it. Decide if it's actually correct." }
+                { "icon": "search", "text": "Pick a small open-source repo you are curious about." },
+                { "icon": "chat", "text": "Ask an agent to explain one function you do not understand." },
+                { "icon": "check", "text": "Ask it to write one unit test for that function." },
+                { "icon": "eye", "text": "Read the test. Run it. Decide for yourself if it is correct." }
               ]
             },
-            "note": { "text": "Small, low-stakes, and it teaches you the whole review discipline in one sitting." }
+            "note": { "text": "Low stakes, and it teaches the whole review discipline in one sitting." }
           },
           {
             "type": "content",
-            "title": "Which Tool Will You Try First?",
-            "emoji": "💬",
+            "title": "Last poll: which one first?",
+            "icon": "users",
             "box": {
-              "title": "Quick poll",
               "list": [
-                { "emoji": "A", "text": "Claude Code" },
-                { "emoji": "B", "text": "Antigravity" },
-                { "emoji": "C", "text": "Codex" },
-                { "emoji": "D", "text": "GitHub Copilot" },
-                { "emoji": "E", "text": "ESP-IDF + AI, for a hardware project" }
+                { "icon": "terminal", "text": "Claude Code" },
+                { "icon": "sparkles", "text": "Antigravity" },
+                { "icon": "bot", "text": "Codex" },
+                { "icon": "git-branch", "text": "GitHub Copilot" },
+                { "icon": "cpu", "text": "ESP-IDF with an agent, for a hardware project" }
               ]
             },
-            "note": { "text": "Chat your pick — let's tally it live before we close out." }
+            "note": { "text": "Chat your pick. Let's see what the room reaches for." }
           }
         ]
       },
       {
         "id": "closing",
-        "title": "Wrap-Up",
+        "title": "Wrap-up",
         "slides": [
           {
             "type": "content",
-            "title": "Key Takeaways",
-            "emoji": "🔑",
+            "title": "If you remember four things",
+            "icon": "check",
+            "image": "/assets/images/ai-webinar/notebook-plan.jpg",
+            "imageLayout": "right-image",
+            "caption": "Worth writing down",
             "box": {
               "list": [
-                { "emoji": "1️⃣", "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real cloud infrastructure." },
-                { "emoji": "2️⃣", "text": "AI moved from answering questions to taking actions — that's the agentic shift." },
-                { "emoji": "3️⃣", "text": "AI fits into your workflow best with a human checkpoint before and after it acts." },
-                { "emoji": "4️⃣", "text": "ESP-IDF, GitHub, Antigravity, Codex, and Claude Code each solve a different slice of the problem." }
+                { "icon": "circuit-board", "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real infrastructure." },
+                { "icon": "brain", "text": "AI moved from answering to acting. That is the whole story of the last two years." },
+                { "icon": "shield", "text": "Keep a human checkpoint before and after the agent acts." },
+                { "icon": "hammer", "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice." }
               ]
             }
           },
           {
             "type": "content",
-            "title": "Resources & Links",
-            "emoji": "🔗",
+            "title": "Where to go next",
+            "icon": "book",
             "box": {
               "list": [
-                { "emoji": "📡", "text": "Circuit Digest — <a href=\"https://circuitdigest.com\">circuitdigest.com</a>" },
-                { "emoji": "🐙", "text": "My GitHub — <a href=\"https://github.com/aravind-govindhasamy\">github.com/aravind-govindhasamy</a>" },
-                { "emoji": "🌐", "text": "My portfolio — <a href=\"https://aravind-govindhasamy.github.io\">aravind-govindhasamy.github.io</a>" },
-                { "emoji": "💼", "text": "LinkedIn — <a href=\"https://www.linkedin.com/in/aravind-govindhasamy\">linkedin.com/in/aravind-govindhasamy</a>" },
-                { "emoji": "🔌", "text": "ESP-IDF docs — <a href=\"https://developer.espressif.com/esp-idf\">developer.espressif.com/esp-idf</a>" }
+                { "icon": "radio", "text": "Circuit Digest &mdash; <a href=\"https://circuitdigest.com\">circuitdigest.com</a>" },
+                { "icon": "github", "text": "My GitHub &mdash; <a href=\"https://github.com/aravind-govindhasamy\">github.com/aravind-govindhasamy</a>" },
+                { "icon": "file", "text": "My portfolio &mdash; <a href=\"https://aravind-govindhasamy.github.io\">aravind-govindhasamy.github.io</a>" },
+                { "icon": "handshake", "text": "LinkedIn &mdash; <a href=\"https://www.linkedin.com/in/aravind-govindhasamy\">linkedin.com/in/aravind-govindhasamy</a>" },
+                { "icon": "cpu", "text": "ESP-IDF docs &mdash; <a href=\"https://developer.espressif.com/esp-idf\">developer.espressif.com/esp-idf</a>" }
               ]
             }
           },
           {
             "type": "qa",
-            "title": "Questions?"
-          },
-          {
-            "type": "content",
-            "title": "Let's Keep the Conversation Going",
-            "emoji": "💬",
-            "box": {
-              "content": "<p>One question or one idea — drop it in the chat right now.</p>"
-            },
-            "note": { "text": "I'll stay on after we wrap the slides for open Q&A." }
+            "title": "Questions? The real ones, please."
           },
           {
             "type": "thank-you",
-            "title": "Thank You, PSGCAS!",
-            "message": "Thanks for having me — let's build the future of embedded and AI-assisted development together. aravind-govindhasamy.github.io · github.com/aravind-govindhasamy"
+            "title": "Thank you, PSGCAS",
+            "message": "Come find me after. I would rather talk about your project than my slides. aravind-govindhasamy.github.io"
           }
         ]
       }
