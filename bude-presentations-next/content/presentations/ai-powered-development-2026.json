@@ -9,7 +9,7 @@
             "type": "title",
             "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
             "subtitle": "A webinar for PSGCAS Computer Science postgraduates &middot; Aravind Govindhasamy &middot; 18 September 2026",
-            "image": "/assets/images/ai-webinar/schematic.jpg"
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
           },
           {
             "type": "presenter",
@@ -27,7 +27,7 @@
             "subtitle": "Four chapters, a few live polls, and one slide about a dog",
             "eyebrow": "Roadmap",
             "icon": "map",
-            "image": "/assets/images/ai-webinar/markus-code.jpg"
+            "image": "/assets/images/ai-webinar-funny/markus-code.jpg"
           },
           {
             "type": "content",
@@ -47,7 +47,7 @@
             "type": "content",
             "title": "First, a confession",
             "icon": "chat",
-            "image": "/assets/images/ai-webinar/good-boy.jpg",
+            "image": "/assets/images/ai-webinar-funny/good-boy.jpg",
             "imageLayout": "right-image",
             "caption": "Unrelated. This is a good boy. We will need him again in Chapter 3.",
             "box": {
@@ -81,13 +81,13 @@
             "subtitle": "The unglamorous version of the journey",
             "eyebrow": "Background",
             "icon": "circuit-board",
-            "image": "/assets/images/ai-webinar/circuit-board.jpg"
+            "image": "/assets/images/ai-webinar-funny/circuit-board.jpg"
           },
           {
             "type": "content",
             "title": "I was a PSGCAS-shaped person too",
             "icon": "idea",
-            "image": "/assets/images/ai-webinar/presenter.jpg",
+            "image": "/assets/images/ai-webinar-funny/presenter.jpg",
             "imageLayout": "left-image",
             "caption": "Yes, the photo is old. No, I am not taking a new one for this.",
             "box": {
@@ -119,7 +119,7 @@
             "type": "content",
             "title": "The bug that taught me the most",
             "icon": "wrench",
-            "image": "/assets/images/ai-webinar/hardware-repair.jpg",
+            "image": "/assets/images/ai-webinar-funny/hardware-repair.jpg",
             "imageLayout": "right-image",
             "caption": "Not the actual reader. Close enough emotionally.",
             "box": {
@@ -144,7 +144,7 @@
             "type": "imageText",
             "title": "Circuit Digest Cloud &mdash; what I build now",
             "layout": "right-image",
-            "image": "/assets/images/ai-webinar/circuit-digest-cloud.jpg",
+            "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Isometric illustration of a cloud IoT dashboard with ESP32 devices and databases",
             "caption": "The platform that takes a device from breadboard to production",
             "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles the unglamorous parts of an IoT product:</p><ul><li><strong>Device provisioning</strong> and fleet management for ESP32-class hardware.</li><li><strong>MQTT telemetry</strong> ingestion with live dashboards.</li><li><strong>Alerts</strong> over email, SMS, and WhatsApp when a reading crosses a line.</li></ul>"
@@ -201,7 +201,7 @@
             "subtitle": "A short, opinionated history",
             "eyebrow": "The landscape",
             "icon": "brain",
-            "image": "/assets/images/ai-webinar/matrix.jpg"
+            "image": "/assets/images/ai-webinar-funny/matrix.jpg"
           },
           {
             "type": "content",
@@ -220,7 +220,7 @@
             "type": "imageText",
             "title": "The colleague who never sleeps and never brings snacks",
             "layout": "left-image",
-            "image": "/assets/images/ai-webinar/robot.jpg",
+            "image": "/assets/images/ai-webinar-funny/robot.jpg",
             "imageAlt": "A humanoid robot sitting on a bench looking at a tablet",
             "caption": "Nobody's AI looks like this. We all keep using this photo anyway.",
             "content": "<h4>The word that matters is agency</h4><p>A chatbot can explain a bug to you. An agent can open the file, reproduce the bug, patch it, run the suite, and hand you a diff.</p><p>Same underlying model. Completely different thing to work with.</p>"
@@ -269,7 +269,7 @@
             "type": "content",
             "title": "Adoption, roughly",
             "icon": "gauge",
-            "image": "/assets/images/ai-webinar/analytics.jpg",
+            "image": "/assets/images/ai-webinar-funny/analytics.jpg",
             "imageLayout": "right-image",
             "caption": "A real dashboard. Not a made-up graph with a line going up.",
             "box": {
@@ -307,7 +307,7 @@
             "type": "content",
             "title": "The skill that matters now",
             "icon": "book",
-            "image": "/assets/images/ai-webinar/books.jpg",
+            "image": "/assets/images/ai-webinar-funny/books.jpg",
             "imageLayout": "left-image",
             "caption": "The fundamentals in here did not stop mattering. They started mattering more.",
             "box": {
@@ -344,7 +344,7 @@
             "subtitle": "Where it helps, where it lies, and how to ask",
             "eyebrow": "The workflow",
             "icon": "workflow",
-            "image": "/assets/images/ai-webinar/dev-window.jpg"
+            "image": "/assets/images/ai-webinar-funny/dev-window.jpg"
           },
           {
             "type": "content",
@@ -426,7 +426,7 @@
             "type": "content",
             "title": "Try it: what is your first move?",
             "icon": "chat",
-            "image": "/assets/images/ai-webinar/planning-wall.jpg",
+            "image": "/assets/images/ai-webinar-funny/planning-wall.jpg",
             "imageLayout": "right-image",
             "caption": "Planning a change before touching code. Still the right order.",
             "box": {
@@ -465,7 +465,7 @@
             "type": "imageText",
             "title": "The human stays in the loop",
             "layout": "right-image",
-            "image": "/assets/images/ai-webinar/team-meeting.jpg",
+            "image": "/assets/images/ai-webinar-funny/team-meeting.jpg",
             "imageAlt": "Five people working together around a table full of laptops",
             "caption": "A force multiplier, not an autopilot",
             "content": "<h4>Every workflow here has a human checkpoint</h4><p>That is not overcaution. It is the line between using AI as a tool and quietly outsourcing your judgement to it.</p>"
@@ -482,7 +482,7 @@
             "subtitle": "What each one is, and when to reach for it",
             "eyebrow": "The toolbelt",
             "icon": "hammer",
-            "image": "/assets/images/ai-webinar/schematic.jpg"
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
           },
           {
             "type": "content",
@@ -516,7 +516,7 @@
             "type": "imageText",
             "title": "Why an embedded framework is in an AI talk",
             "layout": "left-image",
-            "image": "/assets/images/ai-webinar/circuit-board.jpg",
+            "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
             "imageAlt": "Macro photograph of a circuit board",
             "caption": "The project starts here, not in the editor",
             "content": "<h4>Because Circuit Digest projects need firmware</h4><p>Nearly every ESP32 build eventually needs custom code. An agent in your editor can scaffold a FreeRTOS task or wire up a sensor driver while you keep your attention on the actual circuit and the actual timing.</p>"
@@ -581,7 +581,7 @@
             "type": "imageText",
             "title": "Full disclosure",
             "layout": "right-image",
-            "image": "/assets/images/ai-webinar/code-editor.jpg",
+            "image": "/assets/images/ai-webinar-funny/code-editor.jpg",
             "imageAlt": "A code editor showing syntax-highlighted source",
             "caption": "Built in this project's own repo",
             "content": "<h4>This deck was assembled with Claude Code</h4><p>Working directly in the codebase of the site it runs on. If a slide is ugly, that one is on me, not the model.</p>"
@@ -604,7 +604,7 @@
             "type": "content",
             "title": "Starting tonight, for real",
             "icon": "rocket",
-            "image": "/assets/images/ai-webinar/workspace.jpg",
+            "image": "/assets/images/ai-webinar-funny/workspace.jpg",
             "imageLayout": "left-image",
             "caption": "One small repo, one task you already know the answer to",
             "box": {
@@ -667,7 +667,7 @@
             "type": "content",
             "title": "If you remember four things",
             "icon": "check",
-            "image": "/assets/images/ai-webinar/notebook-plan.jpg",
+            "image": "/assets/images/ai-webinar-funny/notebook-plan.jpg",
             "imageLayout": "right-image",
             "caption": "Worth writing down",
             "box": {
