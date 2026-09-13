@@ -1,6 +1,7 @@
 import { SafeHTML } from "@/lib/safe-html";
 import type { Slide } from "@/types/presentation";
 import { cn } from "@/lib/utils";
+import { ZoomableImage } from "@/components/presenter/ZoomableImage";
 
 interface ImageTextSlideData extends Slide {
   image?: string;
@@ -55,8 +56,7 @@ export function ImageTextSlide({ slide }: Props) {
         <div className={cn("flex flex-col gap-2 w-full", isLeft ? "md:order-1" : "md:order-2")}>
           {imageUrl && (
             <div className="overflow-hidden rounded-2xl border border-border/55 shadow-lg bg-muted/30">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <ZoomableImage
                 src={imageUrl}
                 alt={imageAlt}
                 className="w-full h-full object-cover max-h-[300px] md:max-h-[420px] transition-transform duration-300 hover:scale-[1.02]"

@@ -1,6 +1,7 @@
 import { ContentIcon, hasContentIcon } from "@/lib/content-icons";
 import { SafeHTML } from "@/lib/safe-html";
 import { cn } from "@/lib/utils";
+import { ZoomableImage } from "@/components/presenter/ZoomableImage";
 import type { ListItem, Slide } from "@/types/presentation";
 
 interface ContentSlideData extends Slide {
@@ -135,8 +136,7 @@ export function ContentSlide({ slide }: Props) {
           </div>
           <figure className={cn("flex flex-col gap-2", imageOnLeft && "md:order-1")}>
             <div className="overflow-hidden rounded-2xl border border-border/55 bg-muted/30 shadow-lg">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <ZoomableImage
                 src={image}
                 alt={s.imageAlt ?? slide.title ?? "Slide image"}
                 className="h-full w-full object-cover max-h-[260px] md:max-h-[380px]"
