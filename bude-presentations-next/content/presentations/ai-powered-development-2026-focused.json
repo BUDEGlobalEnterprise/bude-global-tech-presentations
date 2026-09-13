@@ -1,0 +1,378 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "opening",
+        "title": "Welcome",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
+            "subtitle": "The 30-minute cut &middot; Aravind Govindhasamy &middot; PSGCAS",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
+          },
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
+          },
+          {
+            "type": "content",
+            "title": "First, a confession",
+            "icon": "chat",
+            "image": "/assets/images/ai-webinar-funny/good-boy.jpg",
+            "imageLayout": "right-image",
+            "caption": "Unrelated. A good boy in a DEV DOG hoodie who commits with \"woof\". That is the whole joke. Moving on.",
+            "box": {
+              "content": "<p>I have deployed code on a Friday afternoon. I have also spent that weekend undoing it while a client called every two hours.</p><p>I am not here to sell you a future where software writes itself. I am here because the tools got genuinely useful, and nobody sat me down and explained how to actually work with them. So here is that class, condensed.</p><blockquote>The goal is not to type less. The goal is to spend your thinking on the parts that need a human.</blockquote>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "me-and-circuit-digest",
+        "title": "Chapter 1",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Chapter 1 &mdash; Me, and a website about circuits",
+            "subtitle": "The unglamorous version of the journey",
+            "eyebrow": "Background",
+            "icon": "circuit-board",
+            "image": "/assets/images/ai-webinar-funny/circuit-board.jpg"
+          },
+          {
+            "type": "content",
+            "title": "I was a PSGCAS-shaped person too",
+            "icon": "idea",
+            "image": "/assets/images/ai-webinar-funny/presenter.jpg",
+            "imageLayout": "left-image",
+            "caption": "Dramatisation. The cape is aspirational. The 500 errors are documentary.",
+            "box": {
+              "content": "<p>MCA, then a B.Sc. in Computer Science, both in Coimbatore. I liked making things that talked to hardware, so I chased jobs that let me do that.</p>",
+              "list": [
+                { "icon": "radio", "text": "<strong>2CQR Automation</strong> &mdash; 2.5 years wiring RFID readers into library systems across 20+ campuses." },
+                { "icon": "cloud", "text": "<strong>Semicon Media / Circuit Digest</strong> &mdash; where I am now, building cloud infrastructure for devices." },
+                { "icon": "book", "text": "<strong>PSGCAS</strong> &mdash; PhD scholar, researching AI-driven RFID inventory optimisation." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "What is Circuit Digest, really?",
+            "icon": "radio",
+            "box": {
+              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
+              "list": [
+                { "icon": "book", "text": "One of the most-read <strong>electronics and embedded systems</strong> publications online." },
+                { "icon": "cpu", "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code." },
+                { "icon": "users", "text": "Read by students, hobbyists, and working engineers worldwide." }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Circuit Digest Cloud &mdash; what I build now",
+            "layout": "right-image",
+            "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
+            "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
+            "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
+            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp.</p>"
+          },
+          {
+            "type": "content",
+            "title": "The bug that taught me the most",
+            "icon": "wrench",
+            "image": "/assets/images/ai-webinar-funny/hardware-repair.jpg",
+            "imageLayout": "right-image",
+            "caption": "The illustrator guessed Day 14. My actual log said sixteen.",
+            "box": {
+              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\", only after 6 PM. Two weeks of logs. The reader was fine. The database was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM staff switched handhelds. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes &mdash; and it is exactly the part AI is worst at.</blockquote>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ai-landscape",
+        "title": "Chapter 2",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Chapter 2 &mdash; From autocomplete to whatever this is",
+            "subtitle": "A short, opinionated history",
+            "eyebrow": "The landscape",
+            "icon": "brain",
+            "image": "/assets/images/ai-webinar-funny/matrix.jpg"
+          },
+          {
+            "type": "content",
+            "title": "A very short history",
+            "icon": "clock",
+            "box": {
+              "list": [
+                { "icon": "code", "text": "<strong>Autocomplete era:</strong> it finished your line. Sometimes correctly." },
+                { "icon": "chat", "text": "<strong>Chat era (2022):</strong> you asked, it answered, you copied and pasted and prayed." },
+                { "icon": "puzzle", "text": "<strong>Editor copilots:</strong> it moved into the IDE and could see your open file." },
+                { "icon": "terminal", "text": "<strong>Agent era (now):</strong> it reads the repo, runs the tests, reads the errors, and tries again." }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "A chatbot vs an agent",
+            "leftTitle": "A chatbot",
+            "leftPoints": [
+              "Explains code and answers questions",
+              "You copy, paste, wire it up, and verify",
+              "Great for learning and getting unstuck",
+              "One turn at a time, you drive every step"
+            ],
+            "rightTitle": "An agent",
+            "rightPoints": [
+              "Reads files, runs commands, edits code directly",
+              "Plans, acts, checks the result, corrects itself",
+              "Can read docs and confirm its own work",
+              "Chases a goal across many steps"
+            ],
+            "note": { "text": "Claude Code, Antigravity, and Codex are all in the right-hand column. That is the shift." }
+          },
+          {
+            "type": "imageText",
+            "title": "The colleague who never sleeps and never brings snacks",
+            "layout": "left-image",
+            "image": "/assets/images/ai-webinar-funny/robot.jpg",
+            "imageAlt": "A frazzled four-armed robot coding at 2:47 AM surrounded by coffee cups",
+            "caption": "2:47 AM. Fourth coffee. \"Project: almost done.\" It is not almost done.",
+            "content": "<h4>The word that matters is agency</h4><p>A chatbot can explain a bug to you. An agent can open the file, reproduce the bug, patch it, run the suite, and hand you a diff. Same underlying model. Completely different thing to work with.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Hot take",
+            "icon": "warning",
+            "box": {
+              "content": "<blockquote>Most \"AI will replace developers\" posts are written by people who have never been paged at 3 AM to fix a data migration.</blockquote><p>The job was never typing. It is deciding what to build, and being the person who understands the system when it breaks. AI moves the typing. It does not move the responsibility.</p>"
+            }
+          },
+          {
+            "type": "quiz",
+            "question": "What is the single biggest difference between a conversational AI and an agentic one?",
+            "options": [
+              "The agent uses a larger model",
+              "The agent can take actions in your environment, not just answer",
+              "The chatbot is always free",
+              "There is no real difference, it is marketing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Agency (reading, acting, and checking inside your actual environment) is what separates a chat window from a coding agent."
+          },
+          {
+            "type": "content",
+            "title": "The skill that matters now",
+            "icon": "book",
+            "image": "/assets/images/ai-webinar-funny/books.jpg",
+            "imageLayout": "left-image",
+            "caption": "\"Algorithms and Suffering\" is not a real book. It should be. Fundamentals still win.",
+            "box": {
+              "list": [
+                { "icon": "target", "text": "<strong>Prompting</strong> &mdash; giving enough context and clear constraints." },
+                { "icon": "eye", "text": "<strong>Verifying</strong> &mdash; reading output like you would review a stranger's PR." },
+                { "icon": "lock", "text": "<strong>Security sense</strong> &mdash; not pasting secrets, not trusting generated auth code blindly." }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ai-workflow",
+        "title": "Chapter 3",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Chapter 3 &mdash; Using it without making a mess",
+            "subtitle": "Where it helps, where it lies, and how to ask",
+            "eyebrow": "The workflow",
+            "icon": "workflow",
+            "image": "/assets/images/ai-webinar-funny/dev-window.jpg"
+          },
+          {
+            "type": "content",
+            "title": "Old loop vs new loop",
+            "icon": "workflow",
+            "box": {
+              "list": [
+                { "icon": "file", "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand." },
+                { "icon": "handshake", "text": "<strong>New:</strong> same steps, but an agent drafts, explains, and tests alongside you, while you decide what \"correct\" means." }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Where it pulls its weight vs where it lies",
+            "leftTitle": "Genuinely helps",
+            "leftPoints": [
+              "Boilerplate and scaffolding",
+              "Explaining a codebase you were just handed",
+              "First-draft tests for code that already works",
+              "Debugging with a real stack trace in hand"
+            ],
+            "rightTitle": "Confidently lies",
+            "rightPoints": [
+              "Architecture and trade-offs &mdash; it will pick one and defend it",
+              "Security review &mdash; it misses the subtle holes, cheerfully",
+              "Domain judgement &mdash; it does not know your users or your rules",
+              "\"Is this actually correct\" &mdash; only you and the tests can answer that"
+            ],
+            "note": { "text": "It is never unsure. That is the dangerous part." }
+          },
+          {
+            "type": "content",
+            "title": "A real conversation, lightly edited",
+            "icon": "chat",
+            "box": {
+              "content": "<p><strong>Me:</strong> add pagination to the users endpoint</p><blockquote>Done. Added limit and offset params, a total count, and updated the docs.</blockquote><p><strong>Me:</strong> that file you edited is not the users endpoint</p><blockquote>You are absolutely right, and I apologise for the confusion. Correcting it now.</blockquote><p><strong>Me:</strong> also this is FastAPI, not Flask</p><blockquote>Of course. My mistake. Here is the version using FastAPI Query parameters.</blockquote><p><strong>Me:</strong> ok that one actually works</p><blockquote>Glad I could help. Would you like me to add tests?</blockquote><p><strong>Me:</strong> ...yes</p>"
+            },
+            "note": { "text": "This is the normal experience. It is still faster than doing it alone. You just have to stay in the room." }
+          },
+          {
+            "type": "content",
+            "title": "Bad prompt / good prompt",
+            "icon": "file",
+            "box": {
+              "title": "Same request, very different afternoon",
+              "code": "// Vague - invites guessing\n\"fix my code\"\n\n// Specific - grounded in reality\n\"In src/api/users.py, GET /users/{id} returns 500\nwhen id is not numeric. Traceback below. Add\nvalidation that returns 400 with a clear message,\nmatching validate_order_id() in src/api/orders.py.\n<paste traceback>\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Before you let it near main",
+            "icon": "shield",
+            "box": {
+              "list": [
+                { "icon": "eye", "text": "Read every line. Do not merge what you have not read." },
+                { "icon": "terminal", "text": "Actually run it. Do not just nod at it." },
+                { "icon": "lock", "text": "Grep for keys, tokens, and hardcoded credentials." },
+                { "icon": "chat", "text": "Be able to explain it &mdash; in review, in a viva, in an interview." }
+              ]
+            },
+            "note": { "text": "Rule of thumb: if you would be embarrassed to have written it, do not ship it under your name." }
+          },
+          {
+            "type": "imageText",
+            "title": "The human stays in the loop",
+            "layout": "right-image",
+            "image": "/assets/images/ai-webinar-funny/team-meeting.jpg",
+            "imageAlt": "A team meeting where the whiteboard reads AI DO NOT TOUCH MAIN BRANCH and a cheerful robot says I CAN DO THAT",
+            "caption": "The whiteboard says do not touch main. The robot says \"I can do that.\" Your job is to stay between them.",
+            "content": "<h4>Every workflow here has a human checkpoint</h4><p>That is not overcaution. It is the line between using AI as a tool and quietly outsourcing your judgement to it.</p>"
+          }
+        ]
+      },
+      {
+        "id": "the-tools",
+        "title": "Chapter 4",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Chapter 4 &mdash; The actual tools",
+            "subtitle": "What each one is, and when to reach for it",
+            "eyebrow": "The toolbelt",
+            "icon": "hammer",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
+          },
+          {
+            "type": "content",
+            "title": "What we will actually look at",
+            "icon": "boxes",
+            "box": {
+              "list": [
+                { "icon": "cpu", "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in." },
+                { "icon": "git-branch", "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in." },
+                { "icon": "sparkles", "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE." },
+                { "icon": "bot", "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud and CLI coding agent." },
+                { "icon": "terminal", "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent." }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "ESP-IDF &mdash; where the firmware lives",
+            "layout": "left-image",
+            "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
+            "imageAlt": "Isometric cartoon of a circuit board drawn as a small town called Microville",
+            "caption": "Welcome to Microville, population 1024. Every IoT project starts in a town like this.",
+            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a microcontroller.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for build options.</li><li>JTAG and OpenOCD for real debugging, not just serial-print archaeology.</li></ul>"
+          },
+          {
+            "type": "content",
+            "title": "GitHub &mdash; the boring backbone that runs everything",
+            "icon": "git-branch",
+            "box": {
+              "list": [
+                { "icon": "git-branch", "text": "<strong>Repos and pull requests</strong> &mdash; where review actually happens." },
+                { "icon": "workflow", "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud." },
+                { "icon": "sparkles", "text": "<strong>Copilot</strong> &mdash; inline, autocomplete-style suggestions." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Codex &amp; Antigravity, in 60 seconds",
+            "icon": "sparkles",
+            "box": {
+              "list": [
+                { "icon": "bot", "title": "OpenAI Codex", "text": "Cloud + CLI agent. Runs in a sandbox and hands work back as a reviewable pull request. Best on well-scoped jobs." },
+                { "icon": "sparkles", "title": "Google Antigravity", "text": "Agentic IDE with browser sub-agents that verify UI changes visually, and deep whole-codebase context." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Claude Code",
+            "icon": "terminal",
+            "box": {
+              "title": "Anthropic's terminal-first agent",
+              "list": [
+                { "icon": "terminal", "text": "Reads and edits files, and <strong>runs your commands</strong> directly." },
+                { "icon": "puzzle", "text": "<strong>MCP</strong> lets it connect to external tools and data sources." },
+                { "icon": "check", "text": "<strong>Plan mode</strong> proposes a plan for you to approve before it touches anything." }
+              ]
+            },
+            "note": { "text": "This deck was assembled with Claude Code, in this project's own repo." }
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Wrap-up",
+        "slides": [
+          {
+            "type": "content",
+            "title": "If you remember four things",
+            "icon": "check",
+            "image": "/assets/images/ai-webinar-funny/notebook-plan.jpg",
+            "imageLayout": "right-image",
+            "caption": "Do these four and the line goes up. Results may vary. Line not to scale.",
+            "box": {
+              "list": [
+                { "icon": "circuit-board", "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real infrastructure." },
+                { "icon": "brain", "text": "AI moved from answering to acting. That is the whole story of the last two years." },
+                { "icon": "shield", "text": "Keep a human checkpoint before and after the agent acts." },
+                { "icon": "hammer", "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice." }
+              ]
+            }
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank you, PSGCAS",
+            "message": "That was the 30-minute cut. The full 55-slide version has more war stories and more tool depth, same link: aravind-govindhasamy.github.io"
+          }
+        ]
+      }
+    ]
+  }
+}

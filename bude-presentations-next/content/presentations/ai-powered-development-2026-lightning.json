@@ -1,0 +1,125 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "lightning",
+        "title": "Lightning Talk",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
+            "subtitle": "The 10-minute cut &middot; Aravind Govindhasamy &middot; PSGCAS",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
+          },
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
+          },
+          {
+            "type": "imageText",
+            "title": "What Circuit Digest actually is",
+            "layout": "right-image",
+            "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
+            "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
+            "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
+            "content": "<h4>circuitdigest.com &mdash; published by Semicon Media, Coimbatore</h4><p>One of the most-read electronics and embedded publications online: build guides for Arduino, ESP32, Raspberry Pi, and STM32.</p><p>It also runs <strong>Circuit Digest Cloud</strong> &mdash; the infrastructure half: device provisioning, MQTT telemetry, live dashboards, and alerts. That is what I build day to day.</p>"
+          },
+          {
+            "type": "comparison",
+            "title": "A chatbot vs an agent",
+            "leftTitle": "A chatbot",
+            "leftPoints": [
+              "Explains code and answers questions",
+              "You copy, paste, wire it up, and verify",
+              "One turn at a time, you drive every step"
+            ],
+            "rightTitle": "An agent",
+            "rightPoints": [
+              "Reads files, runs commands, edits code directly",
+              "Plans, acts, checks the result, corrects itself",
+              "Chases a goal across many steps"
+            ],
+            "note": { "text": "Claude Code, Antigravity, and Codex are all in the right-hand column. That is the shift." }
+          },
+          {
+            "type": "imageText",
+            "title": "The colleague who never sleeps and never brings snacks",
+            "layout": "left-image",
+            "image": "/assets/images/ai-webinar-funny/robot.jpg",
+            "imageAlt": "A frazzled four-armed robot coding at 2:47 AM surrounded by coffee cups",
+            "caption": "2:47 AM. Fourth coffee. \"Project: almost done.\" It is not almost done.",
+            "content": "<h4>The word that matters is agency</h4><p>A chatbot can explain a bug to you. An agent can open the file, reproduce the bug, patch it, run the suite, and hand you a diff. Same underlying model. Completely different thing to work with.</p>"
+          },
+          {
+            "type": "comparison",
+            "title": "Where it pulls its weight vs where it lies",
+            "leftTitle": "Genuinely helps",
+            "leftPoints": [
+              "Boilerplate and scaffolding",
+              "Debugging with a real stack trace in hand",
+              "First-draft tests for code that already works"
+            ],
+            "rightTitle": "Confidently lies",
+            "rightPoints": [
+              "Architecture and trade-offs &mdash; it will pick one and defend it",
+              "Security review &mdash; it misses the subtle holes, cheerfully",
+              "\"Is this actually correct\" &mdash; only you and the tests know"
+            ],
+            "note": { "text": "It is never unsure. That is the dangerous part." }
+          },
+          {
+            "type": "content",
+            "title": "The toolbelt in 60 seconds",
+            "icon": "hammer",
+            "box": {
+              "list": [
+                { "icon": "cpu", "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in." },
+                { "icon": "git-branch", "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in." },
+                { "icon": "sparkles", "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE, browser sub-agents for UI checks." },
+                { "icon": "bot", "text": "<strong>OpenAI Codex</strong> &mdash; cloud/CLI agent, delivers work as a reviewable pull request." },
+                { "icon": "terminal", "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent with MCP and plan mode." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Before you let it near main",
+            "icon": "shield",
+            "box": {
+              "list": [
+                { "icon": "eye", "text": "Read every line. Do not merge what you have not read." },
+                { "icon": "terminal", "text": "Actually run it. Do not just nod at it." },
+                { "icon": "lock", "text": "Grep for keys, tokens, and hardcoded credentials." },
+                { "icon": "chat", "text": "Be able to explain it &mdash; in review, in a viva, in an interview." }
+              ]
+            },
+            "note": { "text": "Rule of thumb: if you would be embarrassed to have written it, do not ship it under your name." }
+          },
+          {
+            "type": "quiz",
+            "question": "What is the single biggest difference between a conversational AI and an agentic one?",
+            "options": [
+              "The agent uses a larger model",
+              "The agent can take actions in your environment, not just answer",
+              "The chatbot is always free",
+              "There is no real difference, it is marketing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Agency (reading, acting, and checking inside your actual environment) is what separates a chat window from a coding agent."
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank you, PSGCAS",
+            "message": "That was the 10-minute cut. The full 55-slide version has the war stories, the tool deep-dives, and more polls. Same link: aravind-govindhasamy.github.io"
+          }
+        ]
+      }
+    ]
+  }
+}

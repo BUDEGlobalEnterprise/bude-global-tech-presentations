@@ -690,6 +690,22 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     difficulty: "intermediate",
   },
   {
+    file: "ai-powered-development-2026-lightning.json",
+    title: "Circuit Digest & AI-Assisted Development (Lightning)",
+    description: "The 10-slide lightning cut of the PSGCAS webinar — chatbot vs agent, where AI helps vs lies, and the toolbelt in 60 seconds.",
+    keywords: ["ai", "circuit digest", "lightning talk", "coding agents", "claude code", "quick overview", "agentic ai"],
+    category: ["ai-data", "tools"],
+    difficulty: "intermediate",
+  },
+  {
+    file: "ai-powered-development-2026-focused.json",
+    title: "Circuit Digest & AI-Assisted Development (Focused Talk)",
+    description: "The 30-slide focused cut of the PSGCAS webinar — the war stories and tool deep-dives, trimmed for a half-hour slot.",
+    keywords: ["ai", "circuit digest", "webinar", "coding agents", "antigravity", "codex", "claude code", "esp-idf", "github", "agentic ai"],
+    category: ["ai-data", "tools"],
+    difficulty: "intermediate",
+  },
+  {
     file: "intro-mcp.json",
     title: "Introduction to Model Context Protocol (MCP)",
     description: "Anthropic's open standard for AI tool integrations — architecture, primitives, transports, building servers, and the ecosystem.",
