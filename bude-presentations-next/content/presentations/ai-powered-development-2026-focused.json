@@ -9,7 +9,7 @@
             "type": "title",
             "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
             "subtitle": "The 30-minute cut &middot; Aravind Govindhasamy &middot; PSGCAS",
-            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
+            "image": "/assets/images/ai-webinar-funny/matrix.jpg"
           },
           {
             "type": "presenter",
@@ -107,7 +107,7 @@
             "subtitle": "A short, opinionated history",
             "eyebrow": "The landscape",
             "icon": "brain",
-            "image": "/assets/images/ai-webinar-funny/matrix.jpg"
+            "image": "/assets/images/ai-webinar-funny/dev-window.jpg"
           },
           {
             "type": "content",
@@ -154,6 +154,9 @@
             "type": "content",
             "title": "Hot take",
             "icon": "warning",
+            "image": "/assets/images/ai-webinar-funny/workspace.jpg",
+            "imageLayout": "right-image",
+            "caption": "\"Sleep is optional.\" \"Deploy on Friday?\" This wall is the argument for AI, not against it.",
             "box": {
               "content": "<blockquote>Most \"AI will replace developers\" posts are written by people who have never been paged at 3 AM to fix a data migration.</blockquote><p>The job was never typing. It is deciding what to build, and being the person who understands the system when it breaks. AI moves the typing. It does not move the responsibility.</p>"
             }
@@ -197,12 +200,15 @@
             "subtitle": "Where it helps, where it lies, and how to ask",
             "eyebrow": "The workflow",
             "icon": "workflow",
-            "image": "/assets/images/ai-webinar-funny/dev-window.jpg"
+            "image": "/assets/images/ai-webinar-funny/hardware-repair.jpg"
           },
           {
             "type": "content",
             "title": "Old loop vs new loop",
             "icon": "workflow",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg",
+            "imageLayout": "right-image",
+            "caption": "\"PROJECT CHAOS (DOOMED).\" This is the old loop, unfiltered.",
             "box": {
               "list": [
                 { "icon": "file", "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand." },
@@ -282,7 +288,7 @@
             "subtitle": "What each one is, and when to reach for it",
             "eyebrow": "The toolbelt",
             "icon": "hammer",
-            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
+            "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg"
           },
           {
             "type": "content",
