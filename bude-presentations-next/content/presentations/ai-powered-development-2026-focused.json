@@ -40,7 +40,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 1 &mdash; Me, and a website about circuits",
+            "title": "Chapter 1 & Me, and a website about circuits",
             "subtitle": "The unglamorous version of the journey",
             "eyebrow": "Background",
             "icon": "circuit-board",
@@ -56,9 +56,18 @@
             "box": {
               "content": "<p>MCA, then a B.Sc. in Computer Science, both in Coimbatore. I liked making things that talked to hardware, so I chased jobs that let me do that.</p>",
               "list": [
-                { "icon": "radio", "text": "<strong>2CQR Automation</strong> &mdash; 2.5 years wiring RFID readers into library systems across 20+ campuses." },
-                { "icon": "cloud", "text": "<strong>Semicon Media / Circuit Digest</strong> &mdash; where I am now, building cloud infrastructure for devices." },
-                { "icon": "book", "text": "<strong>PSGCAS</strong> &mdash; PhD scholar, researching AI-driven RFID inventory optimisation." }
+                {
+                  "icon": "radio",
+                  "text": "<strong>2CQR Automation</strong> & 2.5 years wiring RFID readers into library systems across 20+ campuses."
+                },
+                {
+                  "icon": "cloud",
+                  "text": "<strong>Semicon Media / Circuit Digest</strong> & where I am now, building cloud infrastructure for devices."
+                },
+                {
+                  "icon": "book",
+                  "text": "<strong>PSGCAS</strong> & PhD scholar, researching AI-driven RFID inventory optimisation."
+                }
               ]
             }
           },
@@ -67,17 +76,26 @@
             "title": "What is Circuit Digest, really?",
             "icon": "radio",
             "box": {
-              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
+              "title": "circuitdigest.com & published by Semicon Media, Coimbatore",
               "list": [
-                { "icon": "book", "text": "One of the most-read <strong>electronics and embedded systems</strong> publications online." },
-                { "icon": "cpu", "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code." },
-                { "icon": "users", "text": "Read by students, hobbyists, and working engineers worldwide." }
+                {
+                  "icon": "book",
+                  "text": "One of the most-read <strong>electronics and embedded systems</strong> publications online."
+                },
+                {
+                  "icon": "cpu",
+                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> & real circuits, real code."
+                },
+                {
+                  "icon": "users",
+                  "text": "Read by students, hobbyists, and working engineers worldwide."
+                }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "Circuit Digest Cloud &mdash; what I build now",
+            "title": "Circuit Digest Cloud & what I build now",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
@@ -92,7 +110,7 @@
             "imageLayout": "right-image",
             "caption": "The illustrator guessed Day 14. My actual log said sixteen.",
             "box": {
-              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\", only after 6 PM. Two weeks of logs. The reader was fine. The database was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM staff switched handhelds. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes &mdash; and it is exactly the part AI is worst at.</blockquote>"
+              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\", only after 6 PM. Two weeks of logs. The reader was fine. The database was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM staff switched handhelds. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes & and it is exactly the part AI is worst at.</blockquote>"
             }
           }
         ]
@@ -103,7 +121,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 2 &mdash; From autocomplete to whatever this is",
+            "title": "Chapter 2 & From autocomplete to whatever this is",
             "subtitle": "A short, opinionated history",
             "eyebrow": "The landscape",
             "icon": "brain",
@@ -115,10 +133,22 @@
             "icon": "clock",
             "box": {
               "list": [
-                { "icon": "code", "text": "<strong>Autocomplete era:</strong> it finished your line. Sometimes correctly." },
-                { "icon": "chat", "text": "<strong>Chat era (2022):</strong> you asked, it answered, you copied and pasted and prayed." },
-                { "icon": "puzzle", "text": "<strong>Editor copilots:</strong> it moved into the IDE and could see your open file." },
-                { "icon": "terminal", "text": "<strong>Agent era (now):</strong> it reads the repo, runs the tests, reads the errors, and tries again." }
+                {
+                  "icon": "code",
+                  "text": "<strong>Autocomplete era:</strong> it finished your line. Sometimes correctly."
+                },
+                {
+                  "icon": "chat",
+                  "text": "<strong>Chat era (2022):</strong> you asked, it answered, you copied and pasted and prayed."
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>Editor copilots:</strong> it moved into the IDE and could see your open file."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "<strong>Agent era (now):</strong> it reads the repo, runs the tests, reads the errors, and tries again."
+                }
               ]
             }
           },
@@ -139,7 +169,9 @@
               "Can read docs and confirm its own work",
               "Chases a goal across many steps"
             ],
-            "note": { "text": "Claude Code, Antigravity, and Codex are all in the right-hand column. That is the shift." }
+            "note": {
+              "text": "Claude Code, Antigravity, and Codex are all in the right-hand column. That is the shift."
+            }
           },
           {
             "type": "imageText",
@@ -182,9 +214,18 @@
             "caption": "\"Algorithms and Suffering\" is not a real book. It should be. Fundamentals still win.",
             "box": {
               "list": [
-                { "icon": "target", "text": "<strong>Prompting</strong> &mdash; giving enough context and clear constraints." },
-                { "icon": "eye", "text": "<strong>Verifying</strong> &mdash; reading output like you would review a stranger's PR." },
-                { "icon": "lock", "text": "<strong>Security sense</strong> &mdash; not pasting secrets, not trusting generated auth code blindly." }
+                {
+                  "icon": "target",
+                  "text": "<strong>Prompting</strong> & giving enough context and clear constraints."
+                },
+                {
+                  "icon": "eye",
+                  "text": "<strong>Verifying</strong> & reading output like you would review a stranger's PR."
+                },
+                {
+                  "icon": "lock",
+                  "text": "<strong>Security sense</strong> & not pasting secrets, not trusting generated auth code blindly."
+                }
               ]
             }
           }
@@ -196,7 +237,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 3 &mdash; Using it without making a mess",
+            "title": "Chapter 3 & Using it without making a mess",
             "subtitle": "Where it helps, where it lies, and how to ask",
             "eyebrow": "The workflow",
             "icon": "workflow",
@@ -211,8 +252,14 @@
             "caption": "\"PROJECT CHAOS (DOOMED).\" This is the old loop, unfiltered.",
             "box": {
               "list": [
-                { "icon": "file", "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand." },
-                { "icon": "handshake", "text": "<strong>New:</strong> same steps, but an agent drafts, explains, and tests alongside you, while you decide what \"correct\" means." }
+                {
+                  "icon": "file",
+                  "text": "<strong>Old:</strong> plan, write, test, review, deploy & every step by hand."
+                },
+                {
+                  "icon": "handshake",
+                  "text": "<strong>New:</strong> same steps, but an agent drafts, explains, and tests alongside you, while you decide what \"correct\" means."
+                }
               ]
             }
           },
@@ -228,12 +275,14 @@
             ],
             "rightTitle": "Confidently lies",
             "rightPoints": [
-              "Architecture and trade-offs &mdash; it will pick one and defend it",
-              "Security review &mdash; it misses the subtle holes, cheerfully",
-              "Domain judgement &mdash; it does not know your users or your rules",
-              "\"Is this actually correct\" &mdash; only you and the tests can answer that"
+              "Architecture and trade-offs & it will pick one and defend it",
+              "Security review & it misses the subtle holes, cheerfully",
+              "Domain judgement & it does not know your users or your rules",
+              "\"Is this actually correct\" & only you and the tests can answer that"
             ],
-            "note": { "text": "It is never unsure. That is the dangerous part." }
+            "note": {
+              "text": "It is never unsure. That is the dangerous part."
+            }
           },
           {
             "type": "content",
@@ -242,7 +291,9 @@
             "box": {
               "content": "<p><strong>Me:</strong> add pagination to the users endpoint</p><blockquote>Done. Added limit and offset params, a total count, and updated the docs.</blockquote><p><strong>Me:</strong> that file you edited is not the users endpoint</p><blockquote>You are absolutely right, and I apologise for the confusion. Correcting it now.</blockquote><p><strong>Me:</strong> also this is FastAPI, not Flask</p><blockquote>Of course. My mistake. Here is the version using FastAPI Query parameters.</blockquote><p><strong>Me:</strong> ok that one actually works</p><blockquote>Glad I could help. Would you like me to add tests?</blockquote><p><strong>Me:</strong> ...yes</p>"
             },
-            "note": { "text": "This is the normal experience. It is still faster than doing it alone. You just have to stay in the room." }
+            "note": {
+              "text": "This is the normal experience. It is still faster than doing it alone. You just have to stay in the room."
+            }
           },
           {
             "type": "content",
@@ -259,13 +310,27 @@
             "icon": "shield",
             "box": {
               "list": [
-                { "icon": "eye", "text": "Read every line. Do not merge what you have not read." },
-                { "icon": "terminal", "text": "Actually run it. Do not just nod at it." },
-                { "icon": "lock", "text": "Grep for keys, tokens, and hardcoded credentials." },
-                { "icon": "chat", "text": "Be able to explain it &mdash; in review, in a viva, in an interview." }
+                {
+                  "icon": "eye",
+                  "text": "Read every line. Do not merge what you have not read."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "Actually run it. Do not just nod at it."
+                },
+                {
+                  "icon": "lock",
+                  "text": "Grep for keys, tokens, and hardcoded credentials."
+                },
+                {
+                  "icon": "chat",
+                  "text": "Be able to explain it & in review, in a viva, in an interview."
+                }
               ]
             },
-            "note": { "text": "Rule of thumb: if you would be embarrassed to have written it, do not ship it under your name." }
+            "note": {
+              "text": "Rule of thumb: if you would be embarrassed to have written it, do not ship it under your name."
+            }
           },
           {
             "type": "imageText",
@@ -284,7 +349,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 4 &mdash; The actual tools",
+            "title": "Chapter 4 & The actual tools",
             "subtitle": "What each one is, and when to reach for it",
             "eyebrow": "The toolbelt",
             "icon": "hammer",
@@ -296,32 +361,56 @@
             "icon": "boxes",
             "box": {
               "list": [
-                { "icon": "cpu", "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in." },
-                { "icon": "git-branch", "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in." },
-                { "icon": "sparkles", "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE." },
-                { "icon": "bot", "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud and CLI coding agent." },
-                { "icon": "terminal", "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent." }
+                {
+                  "icon": "cpu",
+                  "text": "<strong>ESP-IDF</strong> & the framework ESP32 firmware is built in."
+                },
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>GitHub</strong> & repos, CI/CD, and where most AI tools plug in."
+                },
+                {
+                  "icon": "sparkles",
+                  "text": "<strong>Google Antigravity</strong> & Google DeepMind's agentic IDE."
+                },
+                {
+                  "icon": "bot",
+                  "text": "<strong>OpenAI Codex</strong> & OpenAI's cloud and CLI coding agent."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "<strong>Claude Code</strong> & Anthropic's terminal-first agent."
+                }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "ESP-IDF &mdash; where the firmware lives",
+            "title": "ESP-IDF & where the firmware lives",
             "layout": "left-image",
             "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
             "imageAlt": "Isometric cartoon of a circuit board drawn as a small town called Microville",
             "caption": "Welcome to Microville, population 1024. Every IoT project starts in a town like this.",
-            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a microcontroller.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for build options.</li><li>JTAG and OpenOCD for real debugging, not just serial-print archaeology.</li></ul>"
+            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> & real multitasking on a microcontroller.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for build options.</li><li>JTAG and OpenOCD for real debugging, not just serial-print archaeology.</li></ul>"
           },
           {
             "type": "content",
-            "title": "GitHub &mdash; the boring backbone that runs everything",
+            "title": "GitHub & the boring backbone that runs everything",
             "icon": "git-branch",
             "box": {
               "list": [
-                { "icon": "git-branch", "text": "<strong>Repos and pull requests</strong> &mdash; where review actually happens." },
-                { "icon": "workflow", "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud." },
-                { "icon": "sparkles", "text": "<strong>Copilot</strong> &mdash; inline, autocomplete-style suggestions." }
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>Repos and pull requests</strong> & where review actually happens."
+                },
+                {
+                  "icon": "workflow",
+                  "text": "<strong>Actions</strong> & the pipeline that deploys Circuit Digest Cloud."
+                },
+                {
+                  "icon": "sparkles",
+                  "text": "<strong>Copilot</strong> & inline, autocomplete-style suggestions."
+                }
               ]
             }
           },
@@ -329,22 +418,57 @@
             "type": "content",
             "title": "Before you start vibe coding",
             "icon": "file",
+            "image": "/assets/images/ai-webinar/vibe-coding-docs.jpg",
+            "imageAlt": "Holographic software blueprints including PRD, User Flow, Architecture, and AI Rules on a modern development workspace",
+            "caption": "Specs and blueprints anchor the agent before code generation begins.",
             "box": {
               "title": "Ten documents, realistically four",
               "list": [
-                { "icon": "file", "text": "<strong>PRD</strong> &mdash; what to build" },
-                { "icon": "map", "text": "<strong>User Flow</strong> &mdash; how people move through it" },
-                { "icon": "layers", "text": "<strong>UI/UX</strong> &mdash; how it looks" },
-                { "icon": "code", "text": "<strong>Tech Spec</strong> &mdash; how it is built" },
-                { "icon": "database", "text": "<strong>Database Schema</strong> &mdash; what data is stored" },
-                { "icon": "puzzle", "text": "<strong>API Spec</strong> &mdash; how systems talk to each other" },
-                { "icon": "shield", "text": "<strong>Security Rules</strong> &mdash; what must be protected" },
-                { "icon": "bot", "text": "<strong>AI Coding Rules</strong> &mdash; how the agent should behave in your repo" },
-                { "icon": "check", "text": "<strong>Testing Plan</strong> &mdash; how you will know it works" },
-                { "icon": "rocket", "text": "<strong>Deployment Plan</strong> &mdash; how it actually ships" }
+                {
+                  "icon": "file",
+                  "text": "<strong>PRD</strong> & what to build"
+                },
+                {
+                  "icon": "map",
+                  "text": "<strong>User Flow</strong> & how people move through it"
+                },
+                {
+                  "icon": "layers",
+                  "text": "<strong>UI/UX</strong> & how it looks"
+                },
+                {
+                  "icon": "code",
+                  "text": "<strong>Tech Spec</strong> & how it is built"
+                },
+                {
+                  "icon": "database",
+                  "text": "<strong>Database Schema</strong> & what data is stored"
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>API Spec</strong> & how systems talk to each other"
+                },
+                {
+                  "icon": "shield",
+                  "text": "<strong>Security Rules</strong> & what must be protected"
+                },
+                {
+                  "icon": "bot",
+                  "text": "<strong>AI Coding Rules</strong> & how the agent should behave in your repo"
+                },
+                {
+                  "icon": "check",
+                  "text": "<strong>Testing Plan</strong> & how you will know it works"
+                },
+                {
+                  "icon": "rocket",
+                  "text": "<strong>Deployment Plan</strong> & how it actually ships"
+                }
               ]
             },
-            "note": { "text": "Minimum viable set: PRD, User Flow, Tech Spec, and AI Coding Rules. The other six can wait." }
+            "note": {
+              "text": "Minimum viable set: PRD, User Flow, Tech Spec, and AI Coding Rules. The other six can wait."
+            }
           },
           {
             "type": "content",
@@ -352,8 +476,16 @@
             "icon": "sparkles",
             "box": {
               "list": [
-                { "icon": "bot", "title": "OpenAI Codex", "text": "Cloud + CLI agent. Runs in a sandbox and hands work back as a reviewable pull request. Best on well-scoped jobs." },
-                { "icon": "sparkles", "title": "Google Antigravity", "text": "Agentic IDE with browser sub-agents that verify UI changes visually, and deep whole-codebase context." }
+                {
+                  "icon": "bot",
+                  "title": "OpenAI Codex",
+                  "text": "Cloud + CLI agent. Runs in a sandbox and hands work back as a reviewable pull request. Best on well-scoped jobs."
+                },
+                {
+                  "icon": "sparkles",
+                  "title": "Google Antigravity",
+                  "text": "Agentic IDE with browser sub-agents that verify UI changes visually, and deep whole-codebase context."
+                }
               ]
             }
           },
@@ -364,12 +496,23 @@
             "box": {
               "title": "Anthropic's terminal-first agent",
               "list": [
-                { "icon": "terminal", "text": "Reads and edits files, and <strong>runs your commands</strong> directly." },
-                { "icon": "puzzle", "text": "<strong>MCP</strong> lets it connect to external tools and data sources." },
-                { "icon": "check", "text": "<strong>Plan mode</strong> proposes a plan for you to approve before it touches anything." }
+                {
+                  "icon": "terminal",
+                  "text": "Reads and edits files, and <strong>runs your commands</strong> directly."
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>MCP</strong> lets it connect to external tools and data sources."
+                },
+                {
+                  "icon": "check",
+                  "text": "<strong>Plan mode</strong> proposes a plan for you to approve before it touches anything."
+                }
               ]
             },
-            "note": { "text": "This deck was assembled with Claude Code, in this project's own repo." }
+            "note": {
+              "text": "This deck was assembled with Claude Code, in this project's own repo."
+            }
           },
           {
             "type": "content",
@@ -378,13 +521,27 @@
             "box": {
               "title": "The shortcuts nobody tells you about",
               "list": [
-                { "icon": "github", "text": "<strong>GitHub Student Developer Pack</strong> &mdash; free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com." },
-                { "icon": "git-branch", "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub, or wait for Hacktoberfest every October." },
-                { "icon": "users", "text": "<strong>Hackathons</strong> &mdash; MLH and Devfolio for the weekend circuit, Smart India Hackathon for the real thing." },
-                { "icon": "target", "text": "<strong>Competitions</strong> &mdash; Google Summer of Code if you want to get paid for open source, Kaggle if data is your thing." }
+                {
+                  "icon": "github",
+                  "text": "<strong>GitHub Student Developer Pack</strong> & free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com."
+                },
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>Open source</strong> & search \"good first issue\" on GitHub, or wait for Hacktoberfest every October."
+                },
+                {
+                  "icon": "users",
+                  "text": "<strong>Hackathons</strong> & MLH and Devfolio for the weekend circuit, Smart India Hackathon for the real thing."
+                },
+                {
+                  "icon": "target",
+                  "text": "<strong>Competitions</strong> & Google Summer of Code if you want to get paid for open source, Kaggle if data is your thing."
+                }
               ]
             },
-            "note": { "text": "Pick one of these to actually do this month. Bookmarking is not participation." }
+            "note": {
+              "text": "Pick one of these to actually do this month. Bookmarking is not participation."
+            }
           }
         ]
       },
@@ -401,10 +558,22 @@
             "caption": "Do these four and the line goes up. Results may vary. Line not to scale.",
             "box": {
               "list": [
-                { "icon": "circuit-board", "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real infrastructure." },
-                { "icon": "brain", "text": "AI moved from answering to acting. That is the whole story of the last two years." },
-                { "icon": "shield", "text": "Keep a human checkpoint before and after the agent acts." },
-                { "icon": "hammer", "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice." }
+                {
+                  "icon": "circuit-board",
+                  "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real infrastructure."
+                },
+                {
+                  "icon": "brain",
+                  "text": "AI moved from answering to acting. That is the whole story of the last two years."
+                },
+                {
+                  "icon": "shield",
+                  "text": "Keep a human checkpoint before and after the agent acts."
+                },
+                {
+                  "icon": "hammer",
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code & each solves a different slice."
+                }
               ]
             }
           },
