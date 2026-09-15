@@ -37,23 +37,23 @@
               "list": [
                 {
                   "icon": "circuit-board",
-                  "title": "Chapter 1 & Me &amp; Circuit Digest",
+                  "title": "Chapter 1 &mdash; Me &amp; Circuit Digest",
                   "text": "How a PSGCAS-shaped person ended up building a cloud IoT platform."
                 },
                 {
                   "icon": "brain",
-                  "title": "Chapter 2 & The AI landscape",
+                  "title": "Chapter 2 &mdash; The AI landscape",
                   "text": "How we got from autocomplete to tools that run your terminal."
                 },
                 {
                   "icon": "workflow",
-                  "title": "Chapter 3 & Using it without making a mess",
+                  "title": "Chapter 3 &mdash; Using it without making a mess",
                   "text": "Where AI earns its keep, and where it will lie to your face."
                 },
                 {
                   "icon": "hammer",
-                  "title": "Chapter 4 & The actual tools",
-                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code & what each is for."
+                  "title": "Chapter 4 &mdash; The actual tools",
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; what each is for."
                 }
               ]
             },
@@ -109,7 +109,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 1 & Me, and a website about circuits",
+            "title": "Chapter 1 &mdash; Me, and a website about circuits",
             "subtitle": "The unglamorous version of the journey",
             "eyebrow": "Background",
             "icon": "circuit-board",
@@ -127,19 +127,19 @@
               "list": [
                 {
                   "icon": "radio",
-                  "text": "<strong>2CQR Automation</strong> & 2.5 years wiring RFID readers and kiosks into library systems across 20+ campuses."
+                  "text": "<strong>2CQR Automation</strong> &mdash; 2.5 years wiring RFID readers and kiosks into library systems across 20+ campuses."
                 },
                 {
                   "icon": "server",
-                  "text": "<strong>PSGR Krishnammal College</strong> & campus RFID gates and IT asset tracking for 1,800+ machines."
+                  "text": "<strong>PSGR Krishnammal College</strong> &mdash; campus RFID gates and IT asset tracking for 1,800+ machines."
                 },
                 {
                   "icon": "cloud",
-                  "text": "<strong>Semicon Media / Circuit Digest</strong> & where I am now, building cloud infrastructure for devices."
+                  "text": "<strong>Semicon Media / Circuit Digest</strong> &mdash; where I am now, building cloud infrastructure for devices."
                 },
                 {
                   "icon": "book",
-                  "text": "<strong>PSGCAS</strong> & PhD scholar, researching AI-driven RFID inventory optimisation."
+                  "text": "<strong>PSGCAS</strong> &mdash; PhD scholar, researching AI-driven RFID inventory optimisation."
                 }
               ]
             }
@@ -160,7 +160,7 @@
                 },
                 {
                   "icon": "cpu",
-                  "text": "Byte-level <strong>UID and CSN conversion</strong> & because two readers from two vendors never agree on endianness."
+                  "text": "Byte-level <strong>UID and CSN conversion</strong> &mdash; because two readers from two vendors never agree on endianness."
                 },
                 {
                   "icon": "zap",
@@ -195,7 +195,7 @@
             "imageLayout": "right-image",
             "caption": "The illustrator guessed Day 14. My actual log said sixteen.",
             "box": {
-              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\" for one specific library, and only after 6 PM. Two weeks of logs. The reader was fine. The database was fine. The network was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM their staff switched to a spare handheld from the other vendor. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes & and it is exactly the part AI is worst at.</blockquote>"
+              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\" for one specific library, and only after 6 PM. Two weeks of logs. The reader was fine. The database was fine. The network was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM their staff switched to a spare handheld from the other vendor. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes &mdash; and it is exactly the part AI is worst at.</blockquote>"
             }
           },
           {
@@ -206,7 +206,7 @@
             "imageLayout": "right-image",
             "caption": "The actual feature graphic. SMS, plate reads, barcode scans, GPS pins.",
             "box": {
-              "title": "circuitdigest.com & published by Semicon Media, Coimbatore",
+              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
               "list": [
                 {
                   "icon": "book",
@@ -214,7 +214,7 @@
                 },
                 {
                   "icon": "cpu",
-                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> & real circuits, real code, real photos."
+                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code, real photos."
                 },
                 {
                   "icon": "search",
@@ -229,7 +229,7 @@
           },
           {
             "type": "imageText",
-            "title": "Circuit Digest Cloud & what I build now",
+            "title": "Circuit Digest Cloud &mdash; what I build now",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
@@ -244,7 +244,7 @@
             "imageLayout": "right-image",
             "caption": "No cartoon this time. This is circuitdigest.cloud, live, right now.",
             "box": {
-              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building with it.</p><p>One platform to analyse, control, and connect & that is the actual tagline, not something I made up for this slide.</p>"
+              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building with it.</p><p>One platform to analyse, control, and connect &mdash; that is the actual tagline, not something I made up for this slide.</p>"
             }
           },
           {
@@ -324,7 +324,7 @@
             "imageLayout": "left-image",
             "caption": "\"Which of my devices are offline?\" It just answers. In IST, unprompted.",
             "box": {
-              "content": "<p>This is not a hypothetical for Chapter 2. Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English & over WhatsApp, no less.</p><p>Which is a convenient place to stop talking about Circuit Digest and start talking about how this became possible at all.</p>"
+              "content": "<p>This is not a hypothetical for Chapter 2. Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less.</p><p>Which is a convenient place to stop talking about Circuit Digest and start talking about how this became possible at all.</p>"
             }
           },
           {
@@ -358,7 +358,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 2 & From autocomplete to whatever this is",
+            "title": "Chapter 2 &mdash; From autocomplete to whatever this is",
             "subtitle": "A short, opinionated history",
             "eyebrow": "The landscape",
             "icon": "brain",
@@ -430,19 +430,19 @@
               "list": [
                 {
                   "icon": "bot",
-                  "text": "<strong>OpenAI</strong> & GPT models, ChatGPT, and the Codex coding agent."
+                  "text": "<strong>OpenAI</strong> &mdash; GPT models, ChatGPT, and the Codex coding agent."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Anthropic</strong> & the Claude models and the Claude Code CLI."
+                  "text": "<strong>Anthropic</strong> &mdash; the Claude models and the Claude Code CLI."
                 },
                 {
                   "icon": "brain",
-                  "text": "<strong>Google DeepMind</strong> & Gemini models and the Antigravity agentic IDE."
+                  "text": "<strong>Google DeepMind</strong> &mdash; Gemini models and the Antigravity agentic IDE."
                 },
                 {
                   "icon": "boxes",
-                  "text": "<strong>Meta</strong> & the Llama family, which you can download and run yourself."
+                  "text": "<strong>Meta</strong> &mdash; the Llama family, which you can download and run yourself."
                 }
               ]
             }
@@ -513,19 +513,19 @@
               "list": [
                 {
                   "icon": "target",
-                  "text": "<strong>Prompting</strong> & giving enough context and clear constraints."
+                  "text": "<strong>Prompting</strong> &mdash; giving enough context and clear constraints."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Verifying</strong> & reading output like you would review a stranger's PR."
+                  "text": "<strong>Verifying</strong> &mdash; reading output like you would review a stranger's PR."
                 },
                 {
                   "icon": "brain",
-                  "text": "<strong>Knowing the limits</strong> & where it hallucinates, where its knowledge is stale."
+                  "text": "<strong>Knowing the limits</strong> &mdash; where it hallucinates, where its knowledge is stale."
                 },
                 {
                   "icon": "lock",
-                  "text": "<strong>Security sense</strong> & not pasting secrets, not trusting generated auth code blindly."
+                  "text": "<strong>Security sense</strong> &mdash; not pasting secrets, not trusting generated auth code blindly."
                 }
               ]
             }
@@ -560,7 +560,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 3 & Using it without making a mess",
+            "title": "Chapter 3 &mdash; Using it without making a mess",
             "subtitle": "Where it helps, where it lies, and how to ask",
             "eyebrow": "The workflow",
             "icon": "workflow",
@@ -574,7 +574,7 @@
               "list": [
                 {
                   "icon": "file",
-                  "text": "<strong>Old:</strong> plan, write, test, review, deploy & every step by hand."
+                  "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand."
                 },
                 {
                   "icon": "handshake",
@@ -599,7 +599,7 @@
               "list": [
                 {
                   "icon": "layers",
-                  "text": "Boilerplate and scaffolding & a new component, config, a project skeleton."
+                  "text": "Boilerplate and scaffolding &mdash; a new component, config, a project skeleton."
                 },
                 {
                   "icon": "search",
@@ -632,19 +632,19 @@
               "list": [
                 {
                   "icon": "layers",
-                  "text": "Architecture and trade-offs & it will pick one and defend it either way."
+                  "text": "Architecture and trade-offs &mdash; it will pick one and defend it either way."
                 },
                 {
                   "icon": "lock",
-                  "text": "Security review & it misses the subtle holes, cheerfully."
+                  "text": "Security review &mdash; it misses the subtle holes, cheerfully."
                 },
                 {
                   "icon": "target",
-                  "text": "Domain judgement & it does not know your users or your rules."
+                  "text": "Domain judgement &mdash; it does not know your users or your rules."
                 },
                 {
                   "icon": "eye",
-                  "text": "\"Is this actually correct\" & only you and the tests can answer that."
+                  "text": "\"Is this actually correct\" &mdash; only you and the tests can answer that."
                 }
               ]
             }
@@ -750,7 +750,7 @@
                 },
                 {
                   "icon": "chat",
-                  "text": "Be able to explain it & in review, in a viva, in an interview."
+                  "text": "Be able to explain it &mdash; in review, in a viva, in an interview."
                 }
               ]
             },
@@ -775,7 +775,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 4 & The actual tools",
+            "title": "Chapter 4 &mdash; The actual tools",
             "subtitle": "What each one is, and when to reach for it",
             "eyebrow": "The toolbelt",
             "icon": "hammer",
@@ -792,30 +792,30 @@
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>ESP-IDF</strong> & the framework ESP32 firmware is built in."
+                  "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>GitHub</strong> & repos, CI/CD, and where most AI tools plug in."
+                  "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Google Antigravity</strong> & Google DeepMind's agentic IDE."
+                  "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>OpenAI Codex</strong> & OpenAI's cloud and CLI coding agent."
+                  "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud and CLI coding agent."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>Claude Code</strong> & Anthropic's terminal-first agent."
+                  "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent."
                 }
               ]
             }
           },
           {
             "type": "content",
-            "title": "ESP-IDF & where the firmware lives",
+            "title": "ESP-IDF &mdash; where the firmware lives",
             "icon": "cpu",
             "image": "/assets/images/ai-webinar-funny/meme-circuit.jpg",
             "imageLayout": "right-image",
@@ -825,7 +825,7 @@
               "list": [
                 {
                   "icon": "layers",
-                  "text": "Built on <strong>FreeRTOS</strong> & real multitasking on a microcontroller."
+                  "text": "Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a microcontroller."
                 },
                 {
                   "icon": "boxes",
@@ -853,7 +853,7 @@
           },
           {
             "type": "content",
-            "title": "GitHub & the boring backbone that runs everything",
+            "title": "GitHub &mdash; the boring backbone that runs everything",
             "icon": "git-branch",
             "image": "/assets/images/ai-webinar-funny/meme-two-buttons.jpg",
             "imageLayout": "right-image",
@@ -862,23 +862,23 @@
               "list": [
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Repos and pull requests</strong> & where review actually happens."
+                  "text": "<strong>Repos and pull requests</strong> &mdash; where review actually happens."
                 },
                 {
                   "icon": "workflow",
-                  "text": "<strong>Actions</strong> & the pipeline that deploys Circuit Digest Cloud."
+                  "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Copilot</strong> & inline, autocomplete-style suggestions."
+                  "text": "<strong>Copilot</strong> &mdash; inline, autocomplete-style suggestions."
                 },
                 {
                   "icon": "cloud",
-                  "text": "<strong>Codespaces</strong> & a full dev environment in the browser."
+                  "text": "<strong>Codespaces</strong> &mdash; a full dev environment in the browser."
                 },
                 {
                   "icon": "file",
-                  "text": "<strong>Pages</strong> & free static hosting, like the site this deck runs on."
+                  "text": "<strong>Pages</strong> &mdash; free static hosting, like the site this deck runs on."
                 }
               ]
             }
@@ -984,19 +984,19 @@
               "list": [
                 {
                   "icon": "terminal",
-                  "text": "<strong>Claude Code</strong> & you live in the terminal, want MCP integrations and a review-first flow."
+                  "text": "<strong>Claude Code</strong> &mdash; you live in the terminal, want MCP integrations and a review-first flow."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Antigravity</strong> & UI-heavy work that needs visual, browser-based checking."
+                  "text": "<strong>Antigravity</strong> &mdash; UI-heavy work that needs visual, browser-based checking."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>Codex</strong> & scoped, PR-sized tasks you can hand off and review later."
+                  "text": "<strong>Codex</strong> &mdash; scoped, PR-sized tasks you can hand off and review later."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Copilot</strong> & a light, always-on autocomplete layer next to any of the above."
+                  "text": "<strong>Copilot</strong> &mdash; a light, always-on autocomplete layer next to any of the above."
                 }
               ]
             },
@@ -1037,19 +1037,19 @@
             "title": "One more thing: most of this is free for you",
             "icon": "github",
             "box": {
-              "title": "The GitHub Student Developer Pack & the one to start with",
+              "title": "The GitHub Student Developer Pack &mdash; the one to start with",
               "list": [
                 {
                   "icon": "github",
-                  "text": "<strong>GitHub Copilot</strong> and <strong>Codespaces</strong> & free for verified students, not a trial."
+                  "text": "<strong>GitHub Copilot</strong> and <strong>Codespaces</strong> &mdash; free for verified students, not a trial."
                 },
                 {
                   "icon": "cloud",
-                  "text": "<strong>Azure for Students</strong> & $100 in credit, no card required."
+                  "text": "<strong>Azure for Students</strong> &mdash; $100 in credit, no card required."
                 },
                 {
                   "icon": "code",
-                  "text": "<strong>JetBrains</strong> & every IDE they make, free. CLion is genuinely good for ESP-IDF work."
+                  "text": "<strong>JetBrains</strong> &mdash; every IDE they make, free. CLion is genuinely good for ESP-IDF work."
                 },
                 {
                   "icon": "database",
@@ -1074,27 +1074,27 @@
               "list": [
                 {
                   "icon": "layers",
-                  "text": "<strong>Figma Education</strong> & the full professional plan, not the free tier everyone else gets."
+                  "text": "<strong>Figma Education</strong> &mdash; the full professional plan, not the free tier everyone else gets."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Adobe Creative Cloud</strong> & steep student pricing on Photoshop, Premiere, the rest."
+                  "text": "<strong>Adobe Creative Cloud</strong> &mdash; steep student pricing on Photoshop, Premiere, the rest."
                 },
                 {
                   "icon": "cloud",
-                  "text": "<strong>AWS Educate</strong> & hands-on cloud credits and guided labs."
+                  "text": "<strong>AWS Educate</strong> &mdash; hands-on cloud credits and guided labs."
                 },
                 {
                   "icon": "file",
-                  "text": "<strong>Notion Education</strong> & the paid plan, free, for notes and project docs."
+                  "text": "<strong>Notion Education</strong> &mdash; the paid plan, free, for notes and project docs."
                 },
                 {
                   "icon": "check",
-                  "text": "<strong>Microsoft 365 Education</strong> & Word, Excel, PowerPoint, if your college is enrolled."
+                  "text": "<strong>Microsoft 365 Education</strong> &mdash; Word, Excel, PowerPoint, if your college is enrolled."
                 },
                 {
                   "icon": "boxes",
-                  "text": "<strong>Autodesk Education</strong> & AutoCAD and Fusion, if you drift toward hardware."
+                  "text": "<strong>Autodesk Education</strong> &mdash; AutoCAD and Fusion, if you drift toward hardware."
                 }
               ]
             }
@@ -1108,27 +1108,27 @@
               "list": [
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Blender</strong> & the full 3D suite, free forever, not a demo."
+                  "text": "<strong>Blender</strong> &mdash; the full 3D suite, free forever, not a demo."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>DaVinci Resolve</strong> & professional video editing, genuinely free tier."
+                  "text": "<strong>DaVinci Resolve</strong> &mdash; professional video editing, genuinely free tier."
                 },
                 {
                   "icon": "cloud",
-                  "text": "<strong>Cloudflare</strong> & hosting, DNS, and Workers with a generous free tier."
+                  "text": "<strong>Cloudflare</strong> &mdash; hosting, DNS, and Workers with a generous free tier."
                 },
                 {
                   "icon": "database",
-                  "text": "<strong>Supabase</strong> or <strong>Firebase</strong> & a free backend for your final-year project."
+                  "text": "<strong>Supabase</strong> or <strong>Firebase</strong> &mdash; a free backend for your final-year project."
                 },
                 {
                   "icon": "rocket",
-                  "text": "<strong>Vercel</strong> or <strong>Netlify</strong> & free hosting for whatever you build with it."
+                  "text": "<strong>Vercel</strong> or <strong>Netlify</strong> &mdash; free hosting for whatever you build with it."
                 },
                 {
                   "icon": "book",
-                  "text": "<strong>freeCodeCamp</strong> and <strong>Kaggle Learn</strong> & free courses, free certificates."
+                  "text": "<strong>freeCodeCamp</strong> and <strong>Kaggle Learn</strong> &mdash; free courses, free certificates."
                 }
               ]
             },
@@ -1145,11 +1145,11 @@
               "list": [
                 {
                   "icon": "search",
-                  "text": "Search GitHub for <strong>\"good first issue\"</strong> & most active repos label beginner-friendly work exactly like that."
+                  "text": "Search GitHub for <strong>\"good first issue\"</strong> &mdash; most active repos label beginner-friendly work exactly like that."
                 },
                 {
                   "icon": "clock",
-                  "text": "<strong>Hacktoberfest</strong>, every October & a low-pressure reason to make your first pull requests count."
+                  "text": "<strong>Hacktoberfest</strong>, every October &mdash; a low-pressure reason to make your first pull requests count."
                 },
                 {
                   "icon": "wrench",
@@ -1174,19 +1174,19 @@
               "list": [
                 {
                   "icon": "users",
-                  "text": "<strong>MLH</strong> (Major League Hacking) & the official global student hackathon circuit, mostly free to attend."
+                  "text": "<strong>MLH</strong> (Major League Hacking) &mdash; the official global student hackathon circuit, mostly free to attend."
                 },
                 {
                   "icon": "map",
-                  "text": "<strong>Devfolio</strong> & where most Indian college hackathons are actually hosted and listed."
+                  "text": "<strong>Devfolio</strong> &mdash; where most Indian college hackathons are actually hosted and listed."
                 },
                 {
                   "icon": "radio",
-                  "text": "<strong>Devpost</strong> & the other major listing site, more company-run and international."
+                  "text": "<strong>Devpost</strong> &mdash; the other major listing site, more company-run and international."
                 },
                 {
                   "icon": "shield",
-                  "text": "<strong>Smart India Hackathon</strong> & the Government of India's own hackathon, real problem statements from real ministries."
+                  "text": "<strong>Smart India Hackathon</strong> &mdash; the Government of India's own hackathon, real problem statements from real ministries."
                 }
               ]
             },
@@ -1203,19 +1203,19 @@
               "list": [
                 {
                   "icon": "code",
-                  "text": "<strong>Google Summer of Code</strong> & a paid summer working on a real open-source project. Applications open every year."
+                  "text": "<strong>Google Summer of Code</strong> &mdash; a paid summer working on a real open-source project. Applications open every year."
                 },
                 {
                   "icon": "brain",
-                  "text": "<strong>ACM-ICPC</strong> & the classic competitive-programming contest, if algorithms are your thing."
+                  "text": "<strong>ACM-ICPC</strong> &mdash; the classic competitive-programming contest, if algorithms are your thing."
                 },
                 {
                   "icon": "database",
-                  "text": "<strong>Kaggle competitions</strong> & real datasets, real leaderboards, genuinely useful if you liked Chapter 2."
+                  "text": "<strong>Kaggle competitions</strong> &mdash; real datasets, real leaderboards, genuinely useful if you liked Chapter 2."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>LeetCode</strong> and <strong>Codeforces</strong> contests & smaller stakes, but they build the muscle memory the big ones need."
+                  "text": "<strong>LeetCode</strong> and <strong>Codeforces</strong> contests &mdash; smaller stakes, but they build the muscle memory the big ones need."
                 }
               ]
             },
@@ -1312,7 +1312,7 @@
                 },
                 {
                   "icon": "hammer",
-                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code & each solves a different slice."
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice."
                 }
               ]
             }
@@ -1325,23 +1325,23 @@
               "list": [
                 {
                   "icon": "radio",
-                  "text": "Circuit Digest & <a href=\"https://circuitdigest.com\">circuitdigest.com</a>"
+                  "text": "Circuit Digest &mdash; <a href=\"https://circuitdigest.com\">circuitdigest.com</a>"
                 },
                 {
                   "icon": "github",
-                  "text": "My GitHub & <a href=\"https://github.com/aravind-govindhasamy\">github.com/aravind-govindhasamy</a>"
+                  "text": "My GitHub &mdash; <a href=\"https://github.com/aravind-govindhasamy\">github.com/aravind-govindhasamy</a>"
                 },
                 {
                   "icon": "file",
-                  "text": "My portfolio & <a href=\"https://aravind-govindhasamy.github.io\">aravind-govindhasamy.github.io</a>"
+                  "text": "My portfolio &mdash; <a href=\"https://aravind-govindhasamy.github.io\">aravind-govindhasamy.github.io</a>"
                 },
                 {
                   "icon": "handshake",
-                  "text": "LinkedIn & <a href=\"https://www.linkedin.com/in/aravind-govindhasamy\">linkedin.com/in/aravind-govindhasamy</a>"
+                  "text": "LinkedIn &mdash; <a href=\"https://www.linkedin.com/in/aravind-govindhasamy\">linkedin.com/in/aravind-govindhasamy</a>"
                 },
                 {
                   "icon": "cpu",
-                  "text": "ESP-IDF docs & <a href=\"https://developer.espressif.com/esp-idf\">developer.espressif.com/esp-idf</a>"
+                  "text": "ESP-IDF docs &mdash; <a href=\"https://developer.espressif.com/esp-idf\">developer.espressif.com/esp-idf</a>"
                 }
               ]
             }

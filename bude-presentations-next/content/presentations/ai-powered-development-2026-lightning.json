@@ -28,7 +28,7 @@
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
             "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
-            "content": "<h4>circuitdigest.com & published by Semicon Media, Coimbatore</h4><p>One of the most-read electronics and embedded publications online: build guides for Arduino, ESP32, Raspberry Pi, and STM32.</p><p>It also runs <strong>Circuit Digest Cloud</strong> & the infrastructure half: device provisioning, MQTT telemetry, live dashboards, and alerts. That is what I build day to day.</p>"
+            "content": "<h4>circuitdigest.com &mdash; published by Semicon Media, Coimbatore</h4><p>One of the most-read electronics and embedded publications online: build guides for Arduino, ESP32, Raspberry Pi, and STM32.</p><p>It also runs <strong>Circuit Digest Cloud</strong> &mdash; the infrastructure half: device provisioning, MQTT telemetry, live dashboards, and alerts. That is what I build day to day.</p>"
           },
           {
             "type": "comparison",
@@ -69,9 +69,9 @@
             ],
             "rightTitle": "Confidently lies",
             "rightPoints": [
-              "Architecture and trade-offs & it will pick one and defend it",
-              "Security review & it misses the subtle holes, cheerfully",
-              "\"Is this actually correct\" & only you and the tests know"
+              "Architecture and trade-offs &mdash; it will pick one and defend it",
+              "Security review &mdash; it misses the subtle holes, cheerfully",
+              "\"Is this actually correct\" &mdash; only you and the tests know"
             ],
             "note": {
               "text": "It is never unsure. That is the dangerous part."
@@ -85,23 +85,23 @@
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>ESP-IDF</strong> & the framework ESP32 firmware is built in."
+                  "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>GitHub</strong> & repos, CI/CD, and where most AI tools plug in."
+                  "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Google Antigravity</strong> & Google DeepMind's agentic IDE, browser sub-agents for UI checks."
+                  "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE, browser sub-agents for UI checks."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>OpenAI Codex</strong> & cloud/CLI agent, delivers work as a reviewable pull request."
+                  "text": "<strong>OpenAI Codex</strong> &mdash; cloud/CLI agent, delivers work as a reviewable pull request."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>Claude Code</strong> & Anthropic's terminal-first agent with MCP and plan mode."
+                  "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent with MCP and plan mode."
                 }
               ]
             }
@@ -126,7 +126,7 @@
                 },
                 {
                   "icon": "chat",
-                  "text": "Be able to explain it & in review, in a viva, in an interview."
+                  "text": "Be able to explain it &mdash; in review, in a viva, in an interview."
                 }
               ]
             },

@@ -20,17 +20,6 @@
             "github": "https://github.com/aravind-govindhasamy",
             "website": "https://aravind-govindhasamy.github.io",
             "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
-          },
-          {
-            "type": "content",
-            "title": "First, a confession",
-            "icon": "chat",
-            "image": "/assets/images/ai-webinar-funny/good-boy.jpg",
-            "imageLayout": "right-image",
-            "caption": "Unrelated. A good boy in a DEV DOG hoodie who commits with \"woof\". That is the whole joke. Moving on.",
-            "box": {
-              "content": "<p>I have deployed code on a Friday afternoon. I have also spent that weekend undoing it while a client called every two hours.</p><p>I am not here to sell you a future where software writes itself. I am here because the tools got genuinely useful, and nobody sat me down and explained how to actually work with them. So here is that class, condensed.</p><blockquote>The goal is not to type less. The goal is to spend your thinking on the parts that need a human.</blockquote>"
-            }
           }
         ]
       },
@@ -40,7 +29,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 1 & Me, and a website about circuits",
+            "title": "Chapter 1 &mdash; Me, and a website about circuits",
             "subtitle": "The unglamorous version of the journey",
             "eyebrow": "Background",
             "icon": "circuit-board",
@@ -48,35 +37,45 @@
           },
           {
             "type": "content",
-            "title": "I was a PSGCAS-shaped person too",
-            "icon": "idea",
-            "image": "/assets/images/ai-webinar-funny/presenter.jpg",
-            "imageLayout": "left-image",
-            "caption": "Dramatisation. The cape is aspirational. The 500 errors are documentary.",
+            "title": "What I actually did for 2.5 years",
+            "icon": "bug",
+            "image": "/assets/images/ai-webinar-funny/meme-surprised-pikachu.jpg",
+            "imageLayout": "right-image",
+            "caption": "Pushed on Friday at 5 PM. Shocked, shocked, when it broke over the weekend.",
             "box": {
-              "content": "<p>MCA, then a B.Sc. in Computer Science, both in Coimbatore. I liked making things that talked to hardware, so I chased jobs that let me do that.</p>",
+              "content": "<p>The CV says \"integrated RFID systems.\" The reality was closer to this:</p>",
               "list": [
                 {
-                  "icon": "radio",
-                  "text": "<strong>2CQR Automation</strong> & 2.5 years wiring RFID readers into library systems across 20+ campuses."
+                  "icon": "warning",
+                  "text": "<strong>150+ production issues</strong> diagnosed and closed, mostly at hours I would rather forget."
                 },
                 {
-                  "icon": "cloud",
-                  "text": "<strong>Semicon Media / Circuit Digest</strong> & where I am now, building cloud infrastructure for devices."
+                  "icon": "cpu",
+                  "text": "Byte-level <strong>UID and CSN conversion</strong> &mdash; because two readers from two vendors never agree on endianness."
                 },
                 {
-                  "icon": "book",
-                  "text": "<strong>PSGCAS</strong> & PhD scholar, researching AI-driven RFID inventory optimisation."
+                  "icon": "zap",
+                  "text": "<strong>RS-232 timeouts</strong> that behaved perfectly in the lab and failed only on site, only on Fridays."
+                },
+                {
+                  "icon": "database",
+                  "text": "<strong>SQL deadlocks</strong> under load, offline sync that lost transactions, thermal printers with opinions."
                 }
               ]
+            },
+            "note": {
+              "text": "None of this was in a tutorial. All of it is what the job actually is."
             }
           },
           {
             "type": "content",
             "title": "What is Circuit Digest, really?",
             "icon": "radio",
+            "image": "/assets/images/ai-webinar-funny/cdc-features.webp",
+            "imageLayout": "right-image",
+            "caption": "The actual feature graphic. SMS, plate reads, barcode scans, GPS pins.",
             "box": {
-              "title": "circuitdigest.com & published by Semicon Media, Coimbatore",
+              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
               "list": [
                 {
                   "icon": "book",
@@ -84,18 +83,22 @@
                 },
                 {
                   "icon": "cpu",
-                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> & real circuits, real code."
+                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code, real photos."
+                },
+                {
+                  "icon": "search",
+                  "text": "Component explainers, datasheets in plain language, and honest hardware reviews."
                 },
                 {
                   "icon": "users",
-                  "text": "Read by students, hobbyists, and working engineers worldwide."
+                  "text": "Read by students, hobbyists, and working engineers in more countries than I can list."
                 }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "Circuit Digest Cloud & what I build now",
+            "title": "Circuit Digest Cloud &mdash; what I build now",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
@@ -104,13 +107,85 @@
           },
           {
             "type": "content",
-            "title": "The bug that taught me the most",
-            "icon": "wrench",
-            "image": "/assets/images/ai-webinar-funny/hardware-repair.jpg",
+            "title": "What that actually looks like",
+            "icon": "check",
+            "image": "/assets/images/ai-webinar-funny/cdc-landing.png",
             "imageLayout": "right-image",
-            "caption": "The illustrator guessed Day 14. My actual log said sixteen.",
+            "caption": "No cartoon this time. This is circuitdigest.cloud, live, right now.",
             "box": {
-              "content": "<p>A self-checkout kiosk kept marking books as \"not returned\", only after 6 PM. Two weeks of logs. The reader was fine. The database was fine.</p><p>It was the tag UID. One vendor sent it most-significant byte first, the other least-significant. After 6 PM staff switched handhelds. The bytes were being compared in opposite order.</p><blockquote>The fix was four lines. Finding it was fourteen days. That ratio never really changes & and it is exactly the part AI is worst at.</blockquote>"
+              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building with it.</p><p>One platform to analyse, control, and connect &mdash; that is the actual tagline, not something I made up for this slide.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The stack, minus the buzzwords",
+            "icon": "server",
+            "image": "/assets/images/ai-webinar-funny/cdc-apis.png",
+            "imageLayout": "left-image",
+            "caption": "The real API catalog. Messaging, vision, tracking, pick one, it is live in minutes.",
+            "box": {
+              "list": [
+                {
+                  "icon": "zap",
+                  "text": "<strong>FastAPI + PostgreSQL + MQTT</strong> for ingestion and device-facing APIs."
+                },
+                {
+                  "icon": "map",
+                  "text": "<strong>GPS tracking</strong> with polygon geofencing and live maps."
+                },
+                {
+                  "icon": "eye",
+                  "text": "<strong>Computer vision</strong> for number-plate, helmet, and object detection, plus live video."
+                },
+                {
+                  "icon": "git-branch",
+                  "text": "Shipped on <strong>DigitalOcean</strong> with <strong>GitHub Actions</strong> and <strong>Sentry</strong> watching for the 2 AM surprises."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "GeoLinker, for real",
+            "icon": "map",
+            "image": "/assets/images/ai-webinar-funny/cdc-geolinker-map.webp",
+            "imageLayout": "right-image",
+            "caption": "A real tracker on a real walk around Coimbatore. 7.18 km, 26 minutes.",
+            "box": {
+              "content": "<p>GeoLinker is the GPS tracking piece of Circuit Digest Cloud: live position, route history, and polygon geofencing, plotted on an actual map.</p><p>This is not a mockup. It is one of our own trackers, walking the streets near the office.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "From breadboard to dashboard",
+            "icon": "cpu",
+            "image": "/assets/images/ai-webinar-funny/cdc-breadboard-gps.gif",
+            "imageLayout": "left-image",
+            "caption": "ESP32, a SIM800L module, a fistful of jumper wires, and a phone showing it worked.",
+            "box": {
+              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on it on the other.</p><p>Everything in Chapter 4 exists to make the wiring side faster, not to replace it.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "What that dashboard actually looks like",
+            "icon": "eye",
+            "image": "/assets/images/ai-webinar-funny/cdc-dashboard.png",
+            "imageLayout": "right-image",
+            "caption": "Live camera, live chart, live controls. The boxes in that diagram are real.",
+            "box": {
+              "content": "<p>Colour pickers for the lights, a slider and a gauge for room temperature, a WebRTC camera feed, and a 24-hour chart, all updating from actual MQTT messages.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "We already put an agent in it",
+            "icon": "bot",
+            "image": "/assets/images/ai-webinar-funny/cdc-ai-assistant.png",
+            "imageLayout": "left-image",
+            "caption": "\"Which of my devices are offline?\" It just answers. In IST, unprompted.",
+            "box": {
+              "content": "<p>This is not a hypothetical for Chapter 2. Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less.</p><p>Which is a convenient place to stop talking about Circuit Digest and start talking about how this became possible at all.</p>"
             }
           }
         ]
@@ -121,7 +196,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 2 & From autocomplete to whatever this is",
+            "title": "Chapter 2 &mdash; From autocomplete to whatever this is",
             "subtitle": "A short, opinionated history",
             "eyebrow": "The landscape",
             "icon": "brain",
@@ -131,6 +206,9 @@
             "type": "content",
             "title": "A very short history",
             "icon": "clock",
+            "image": "/assets/images/ai-webinar-funny/meme-expanding-brain.jpg",
+            "imageLayout": "right-image",
+            "caption": "The last panel is not a joke. Someone in this room will do this by Friday.",
             "box": {
               "list": [
                 {
@@ -194,16 +272,15 @@
             }
           },
           {
-            "type": "quiz",
-            "question": "What is the single biggest difference between a conversational AI and an agentic one?",
-            "options": [
-              "The agent uses a larger model",
-              "The agent can take actions in your environment, not just answer",
-              "The chatbot is always free",
-              "There is no real difference, it is marketing"
-            ],
-            "correctAnswer": 1,
-            "explanation": "Agency (reading, acting, and checking inside your actual environment) is what separates a chat window from a coding agent."
+            "type": "content",
+            "title": "Adoption, roughly",
+            "icon": "gauge",
+            "image": "/assets/images/ai-webinar-funny/analytics.jpg",
+            "imageLayout": "right-image",
+            "caption": "Every AI keynote has this exact chart. Here is ours, for compliance.",
+            "box": {
+              "content": "<p>I could show you a real adoption number. You would forget it by the next slide, so here is the honest version instead.</p><p>In 2022, using AI at work was a party trick. In 2026, <em>not</em> using it is the thing that gets a comment in code review. That is the whole trend.</p>"
+            }
           },
           {
             "type": "content",
@@ -216,15 +293,15 @@
               "list": [
                 {
                   "icon": "target",
-                  "text": "<strong>Prompting</strong> & giving enough context and clear constraints."
+                  "text": "<strong>Prompting</strong> &mdash; giving enough context and clear constraints."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Verifying</strong> & reading output like you would review a stranger's PR."
+                  "text": "<strong>Verifying</strong> &mdash; reading output like you would review a stranger's PR."
                 },
                 {
                   "icon": "lock",
-                  "text": "<strong>Security sense</strong> & not pasting secrets, not trusting generated auth code blindly."
+                  "text": "<strong>Security sense</strong> &mdash; not pasting secrets, not trusting generated auth code blindly."
                 }
               ]
             }
@@ -237,7 +314,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 3 & Using it without making a mess",
+            "title": "Chapter 3 &mdash; Using it without making a mess",
             "subtitle": "Where it helps, where it lies, and how to ask",
             "eyebrow": "The workflow",
             "icon": "workflow",
@@ -254,7 +331,7 @@
               "list": [
                 {
                   "icon": "file",
-                  "text": "<strong>Old:</strong> plan, write, test, review, deploy & every step by hand."
+                  "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand."
                 },
                 {
                   "icon": "handshake",
@@ -275,24 +352,13 @@
             ],
             "rightTitle": "Confidently lies",
             "rightPoints": [
-              "Architecture and trade-offs & it will pick one and defend it",
-              "Security review & it misses the subtle holes, cheerfully",
-              "Domain judgement & it does not know your users or your rules",
-              "\"Is this actually correct\" & only you and the tests can answer that"
+              "Architecture and trade-offs &mdash; it will pick one and defend it",
+              "Security review &mdash; it misses the subtle holes, cheerfully",
+              "Domain judgement &mdash; it does not know your users or your rules",
+              "\"Is this actually correct\" &mdash; only you and the tests can answer that"
             ],
             "note": {
               "text": "It is never unsure. That is the dangerous part."
-            }
-          },
-          {
-            "type": "content",
-            "title": "A real conversation, lightly edited",
-            "icon": "chat",
-            "box": {
-              "content": "<p><strong>Me:</strong> add pagination to the users endpoint</p><blockquote>Done. Added limit and offset params, a total count, and updated the docs.</blockquote><p><strong>Me:</strong> that file you edited is not the users endpoint</p><blockquote>You are absolutely right, and I apologise for the confusion. Correcting it now.</blockquote><p><strong>Me:</strong> also this is FastAPI, not Flask</p><blockquote>Of course. My mistake. Here is the version using FastAPI Query parameters.</blockquote><p><strong>Me:</strong> ok that one actually works</p><blockquote>Glad I could help. Would you like me to add tests?</blockquote><p><strong>Me:</strong> ...yes</p>"
-            },
-            "note": {
-              "text": "This is the normal experience. It is still faster than doing it alone. You just have to stay in the room."
             }
           },
           {
@@ -308,6 +374,9 @@
             "type": "content",
             "title": "Before you let it near main",
             "icon": "shield",
+            "image": "/assets/images/ai-webinar-funny/meme-drake.jpg",
+            "imageLayout": "right-image",
+            "caption": "This is not a workflow. It is a confession with extra steps.",
             "box": {
               "list": [
                 {
@@ -324,7 +393,7 @@
                 },
                 {
                   "icon": "chat",
-                  "text": "Be able to explain it & in review, in a viva, in an interview."
+                  "text": "Be able to explain it &mdash; in review, in a viva, in an interview."
                 }
               ]
             },
@@ -349,7 +418,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 4 & The actual tools",
+            "title": "Chapter 4 &mdash; The actual tools",
             "subtitle": "What each one is, and when to reach for it",
             "eyebrow": "The toolbelt",
             "icon": "hammer",
@@ -359,57 +428,60 @@
             "type": "content",
             "title": "What we will actually look at",
             "icon": "boxes",
+            "image": "/assets/images/ai-webinar-funny/meme-distracted.jpg",
+            "imageLayout": "right-image",
+            "caption": "The temptation is real. Finish the current project first.",
             "box": {
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>ESP-IDF</strong> & the framework ESP32 firmware is built in."
+                  "text": "<strong>ESP-IDF</strong> &mdash; the framework ESP32 firmware is built in."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>GitHub</strong> & repos, CI/CD, and where most AI tools plug in."
+                  "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where most AI tools plug in."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Google Antigravity</strong> & Google DeepMind's agentic IDE."
+                  "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>OpenAI Codex</strong> & OpenAI's cloud and CLI coding agent."
+                  "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud and CLI coding agent."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>Claude Code</strong> & Anthropic's terminal-first agent."
+                  "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal-first agent."
                 }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "ESP-IDF & where the firmware lives",
+            "title": "ESP-IDF &mdash; where the firmware lives",
             "layout": "left-image",
             "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
             "imageAlt": "Isometric cartoon of a circuit board drawn as a small town called Microville",
             "caption": "Welcome to Microville, population 1024. Every IoT project starts in a town like this.",
-            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> & real multitasking on a microcontroller.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for build options.</li><li>JTAG and OpenOCD for real debugging, not just serial-print archaeology.</li></ul>"
+            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a microcontroller.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for build options.</li><li>JTAG and OpenOCD for real debugging, not just serial-print archaeology.</li></ul>"
           },
           {
             "type": "content",
-            "title": "GitHub & the boring backbone that runs everything",
+            "title": "GitHub &mdash; the boring backbone that runs everything",
             "icon": "git-branch",
             "box": {
               "list": [
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Repos and pull requests</strong> & where review actually happens."
+                  "text": "<strong>Repos and pull requests</strong> &mdash; where review actually happens."
                 },
                 {
                   "icon": "workflow",
-                  "text": "<strong>Actions</strong> & the pipeline that deploys Circuit Digest Cloud."
+                  "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Copilot</strong> & inline, autocomplete-style suggestions."
+                  "text": "<strong>Copilot</strong> &mdash; inline, autocomplete-style suggestions."
                 }
               ]
             }
@@ -426,43 +498,43 @@
               "list": [
                 {
                   "icon": "file",
-                  "text": "<strong>PRD</strong> & what to build"
+                  "text": "<strong>PRD</strong> &mdash; what to build"
                 },
                 {
                   "icon": "map",
-                  "text": "<strong>User Flow</strong> & how people move through it"
+                  "text": "<strong>User Flow</strong> &mdash; how people move through it"
                 },
                 {
                   "icon": "layers",
-                  "text": "<strong>UI/UX</strong> & how it looks"
+                  "text": "<strong>UI/UX</strong> &mdash; how it looks"
                 },
                 {
                   "icon": "code",
-                  "text": "<strong>Tech Spec</strong> & how it is built"
+                  "text": "<strong>Tech Spec</strong> &mdash; how it is built"
                 },
                 {
                   "icon": "database",
-                  "text": "<strong>Database Schema</strong> & what data is stored"
+                  "text": "<strong>Database Schema</strong> &mdash; what data is stored"
                 },
                 {
                   "icon": "puzzle",
-                  "text": "<strong>API Spec</strong> & how systems talk to each other"
+                  "text": "<strong>API Spec</strong> &mdash; how systems talk to each other"
                 },
                 {
                   "icon": "shield",
-                  "text": "<strong>Security Rules</strong> & what must be protected"
+                  "text": "<strong>Security Rules</strong> &mdash; what must be protected"
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>AI Coding Rules</strong> & how the agent should behave in your repo"
+                  "text": "<strong>AI Coding Rules</strong> &mdash; how the agent should behave in your repo"
                 },
                 {
                   "icon": "check",
-                  "text": "<strong>Testing Plan</strong> & how you will know it works"
+                  "text": "<strong>Testing Plan</strong> &mdash; how you will know it works"
                 },
                 {
                   "icon": "rocket",
-                  "text": "<strong>Deployment Plan</strong> & how it actually ships"
+                  "text": "<strong>Deployment Plan</strong> &mdash; how it actually ships"
                 }
               ]
             },
@@ -523,19 +595,19 @@
               "list": [
                 {
                   "icon": "github",
-                  "text": "<strong>GitHub Student Developer Pack</strong> & free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com."
+                  "text": "<strong>GitHub Student Developer Pack</strong> &mdash; free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Open source</strong> & search \"good first issue\" on GitHub, or wait for Hacktoberfest every October."
+                  "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub, or wait for Hacktoberfest every October."
                 },
                 {
                   "icon": "users",
-                  "text": "<strong>Hackathons</strong> & MLH and Devfolio for the weekend circuit, Smart India Hackathon for the real thing."
+                  "text": "<strong>Hackathons</strong> &mdash; MLH and Devfolio for the weekend circuit, Smart India Hackathon for the real thing."
                 },
                 {
                   "icon": "target",
-                  "text": "<strong>Competitions</strong> & Google Summer of Code if you want to get paid for open source, Kaggle if data is your thing."
+                  "text": "<strong>Competitions</strong> &mdash; Google Summer of Code if you want to get paid for open source, Kaggle if data is your thing."
                 }
               ]
             },
@@ -572,10 +644,14 @@
                 },
                 {
                   "icon": "hammer",
-                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code & each solves a different slice."
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice."
                 }
               ]
             }
+          },
+          {
+            "type": "qa",
+            "title": "Questions? The real ones, please."
           },
           {
             "type": "thank-you",
