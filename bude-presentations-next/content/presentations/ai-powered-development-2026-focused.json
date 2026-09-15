@@ -327,6 +327,27 @@
           },
           {
             "type": "content",
+            "title": "Before you start vibe coding",
+            "icon": "file",
+            "box": {
+              "title": "Ten documents, realistically four",
+              "list": [
+                { "icon": "file", "text": "<strong>PRD</strong> &mdash; what to build" },
+                { "icon": "map", "text": "<strong>User Flow</strong> &mdash; how people move through it" },
+                { "icon": "layers", "text": "<strong>UI/UX</strong> &mdash; how it looks" },
+                { "icon": "code", "text": "<strong>Tech Spec</strong> &mdash; how it is built" },
+                { "icon": "database", "text": "<strong>Database Schema</strong> &mdash; what data is stored" },
+                { "icon": "puzzle", "text": "<strong>API Spec</strong> &mdash; how systems talk to each other" },
+                { "icon": "shield", "text": "<strong>Security Rules</strong> &mdash; what must be protected" },
+                { "icon": "bot", "text": "<strong>AI Coding Rules</strong> &mdash; how the agent should behave in your repo" },
+                { "icon": "check", "text": "<strong>Testing Plan</strong> &mdash; how you will know it works" },
+                { "icon": "rocket", "text": "<strong>Deployment Plan</strong> &mdash; how it actually ships" }
+              ]
+            },
+            "note": { "text": "Minimum viable set: PRD, User Flow, Tech Spec, and AI Coding Rules. The other six can wait." }
+          },
+          {
+            "type": "content",
             "title": "Codex &amp; Antigravity, in 60 seconds",
             "icon": "sparkles",
             "box": {
