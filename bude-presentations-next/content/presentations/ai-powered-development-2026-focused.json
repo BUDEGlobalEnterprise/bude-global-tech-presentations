@@ -349,6 +349,21 @@
               ]
             },
             "note": { "text": "This deck was assembled with Claude Code, in this project's own repo." }
+          },
+          {
+            "type": "content",
+            "title": "Free tools, hackathons, and where to compete",
+            "icon": "rocket",
+            "box": {
+              "title": "The shortcuts nobody tells you about",
+              "list": [
+                { "icon": "github", "text": "<strong>GitHub Student Developer Pack</strong> &mdash; free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com." },
+                { "icon": "git-branch", "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub, or wait for Hacktoberfest every October." },
+                { "icon": "users", "text": "<strong>Hackathons</strong> &mdash; MLH and Devfolio for the weekend circuit, Smart India Hackathon for the real thing." },
+                { "icon": "target", "text": "<strong>Competitions</strong> &mdash; Google Summer of Code if you want to get paid for open source, Kaggle if data is your thing." }
+              ]
+            },
+            "note": { "text": "Pick one of these to actually do this month. Bookmarking is not participation." }
           }
         ]
       },
