@@ -774,6 +774,51 @@
             "note": { "text": "This is where GitHub Pages comes back in. The site this deck runs on cost nothing." }
           },
           {
+            "type": "content",
+            "title": "Open source: how to actually start",
+            "icon": "git-branch",
+            "box": {
+              "title": "Not by reading. By finding one small thing to fix.",
+              "list": [
+                { "icon": "search", "text": "Search GitHub for <strong>\"good first issue\"</strong> &mdash; most active repos label beginner-friendly work exactly like that." },
+                { "icon": "clock", "text": "<strong>Hacktoberfest</strong>, every October &mdash; a low-pressure reason to make your first pull requests count." },
+                { "icon": "wrench", "text": "Start on tools you <strong>already use</strong>. A typo fix in a library's docs is a real, mergeable contribution." },
+                { "icon": "book", "text": "Read the repo's <strong>CONTRIBUTING.md</strong> before writing a line. Almost everyone skips this. Don't." }
+              ]
+            },
+            "note": { "text": "Your first pull request does not have to be clever. It has to exist." }
+          },
+          {
+            "type": "content",
+            "title": "Hackathons worth your weekend",
+            "icon": "rocket",
+            "box": {
+              "title": "Where a weekend turns into a portfolio project",
+              "list": [
+                { "icon": "users", "text": "<strong>MLH</strong> (Major League Hacking) &mdash; the official global student hackathon circuit, mostly free to attend." },
+                { "icon": "map", "text": "<strong>Devfolio</strong> &mdash; where most Indian college hackathons are actually hosted and listed." },
+                { "icon": "radio", "text": "<strong>Devpost</strong> &mdash; the other major listing site, more company-run and international." },
+                { "icon": "shield", "text": "<strong>Smart India Hackathon</strong> &mdash; the Government of India's own hackathon, real problem statements from real ministries." }
+              ]
+            },
+            "note": { "text": "Bring a team, not a lone genius plan. A hackathon is a sprint, not a solo climb." }
+          },
+          {
+            "type": "content",
+            "title": "Competitions that actually help",
+            "icon": "target",
+            "box": {
+              "title": "The ones worth putting on a resume",
+              "list": [
+                { "icon": "code", "text": "<strong>Google Summer of Code</strong> &mdash; a paid summer working on a real open-source project. Applications open every year." },
+                { "icon": "brain", "text": "<strong>ACM-ICPC</strong> &mdash; the classic competitive-programming contest, if algorithms are your thing." },
+                { "icon": "database", "text": "<strong>Kaggle competitions</strong> &mdash; real datasets, real leaderboards, genuinely useful if you liked Chapter 2." },
+                { "icon": "terminal", "text": "<strong>LeetCode</strong> and <strong>Codeforces</strong> contests &mdash; smaller stakes, but they build the muscle memory the big ones need." }
+              ]
+            },
+            "note": { "text": "Pick one track seriously, GSoC or competitive programming. Trying to do both half-heartedly beats neither." }
+          },
+          {
             "type": "quiz",
             "question": "Which tool fits a task that needs a UI change verified visually in a browser?",
             "options": [
