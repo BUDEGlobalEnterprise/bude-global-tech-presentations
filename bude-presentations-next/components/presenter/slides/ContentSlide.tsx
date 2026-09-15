@@ -56,7 +56,13 @@ export function ContentSlide({ slide }: Props) {
             />
           )}
           {box.list && box.list.length > 0 && (
-            <ul className="space-y-3 md:space-y-4">
+            <ul
+              className={cn(
+                box.list.length > 5
+                  ? "grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4"
+                  : "space-y-3 md:space-y-4",
+              )}
+            >
               {box.list.map((item, i) => {
                 const emoji = isObj(item) ? item.emoji : undefined;
                 const iconName = isObj(item)
