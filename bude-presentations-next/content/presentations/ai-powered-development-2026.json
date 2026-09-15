@@ -725,6 +725,55 @@
             }
           },
           {
+            "type": "content",
+            "title": "One more thing: most of this is free for you",
+            "icon": "github",
+            "box": {
+              "title": "The GitHub Student Developer Pack &mdash; the one to start with",
+              "list": [
+                { "icon": "github", "text": "<strong>GitHub Copilot</strong> and <strong>Codespaces</strong> &mdash; free for verified students, not a trial." },
+                { "icon": "cloud", "text": "<strong>Azure for Students</strong> &mdash; $100 in credit, no card required." },
+                { "icon": "code", "text": "<strong>JetBrains</strong> &mdash; every IDE they make, free. CLion is genuinely good for ESP-IDF work." },
+                { "icon": "database", "text": "<strong>MongoDB Atlas</strong> credits, for whichever project needs a real database." },
+                { "icon": "sparkles", "text": "Plus a free domain for a year, and dozens of other partner offers you will actually use maybe three of." }
+              ]
+            },
+            "note": { "text": "Verify once at education.github.com with your student ID or enrollment proof. Everything above unlocks from there." }
+          },
+          {
+            "type": "content",
+            "title": "More free tools worth grabbing",
+            "icon": "sparkles",
+            "box": {
+              "title": "Also gated behind student verification, usually your own",
+              "list": [
+                { "icon": "layers", "text": "<strong>Figma Education</strong> &mdash; the full professional plan, not the free tier everyone else gets." },
+                { "icon": "eye", "text": "<strong>Adobe Creative Cloud</strong> &mdash; steep student pricing on Photoshop, Premiere, the rest." },
+                { "icon": "cloud", "text": "<strong>AWS Educate</strong> &mdash; hands-on cloud credits and guided labs." },
+                { "icon": "file", "text": "<strong>Notion Education</strong> &mdash; the paid plan, free, for notes and project docs." },
+                { "icon": "check", "text": "<strong>Microsoft 365 Education</strong> &mdash; Word, Excel, PowerPoint, if your college is enrolled." },
+                { "icon": "boxes", "text": "<strong>Autodesk Education</strong> &mdash; AutoCAD and Fusion, if you drift toward hardware." }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "And these don't even need a student ID",
+            "icon": "check",
+            "box": {
+              "title": "Free for anyone, no verification, no excuses",
+              "list": [
+                { "icon": "sparkles", "text": "<strong>Blender</strong> &mdash; the full 3D suite, free forever, not a demo." },
+                { "icon": "eye", "text": "<strong>DaVinci Resolve</strong> &mdash; professional video editing, genuinely free tier." },
+                { "icon": "cloud", "text": "<strong>Cloudflare</strong> &mdash; hosting, DNS, and Workers with a generous free tier." },
+                { "icon": "database", "text": "<strong>Supabase</strong> or <strong>Firebase</strong> &mdash; a free backend for your final-year project." },
+                { "icon": "rocket", "text": "<strong>Vercel</strong> or <strong>Netlify</strong> &mdash; free hosting for whatever you build with it." },
+                { "icon": "book", "text": "<strong>freeCodeCamp</strong> and <strong>Kaggle Learn</strong> &mdash; free courses, free certificates." }
+              ]
+            },
+            "note": { "text": "This is where GitHub Pages comes back in. The site this deck runs on cost nothing." }
+          },
+          {
             "type": "quiz",
             "question": "Which tool fits a task that needs a UI change verified visually in a browser?",
             "options": [
