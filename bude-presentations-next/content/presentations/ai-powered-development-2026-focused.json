@@ -8,18 +8,58 @@
           {
             "type": "title",
             "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
-            "subtitle": "The 30-minute cut &middot; Aravind Govindhasamy &middot; PSGCAS",
-            "image": "/assets/images/ai-webinar-funny/matrix.jpg"
+            "subtitle": "A webinar for PSGCAS Computer Science postgraduates &middot; Aravind Govindhasamy &middot; 18 September 2026<br/><span class=\"mt-3 block text-zinc-400 italic text-lg md:text-xl\">&ldquo;AI won&rsquo;t replace developers, but developers using AI will replace those who don&rsquo;t.&rdquo;</span>",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
           },
           {
             "type": "presenter",
             "name": "Aravind Govindhasamy",
             "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
-            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
             "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
             "github": "https://github.com/aravind-govindhasamy",
             "website": "https://aravind-govindhasamy.github.io",
             "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
+          },
+          {
+            "type": "topic-title",
+            "title": "Where this is going",
+            "subtitle": "A few live polls, and one slide about a dog",
+            "eyebrow": "Roadmap",
+            "icon": "map",
+            "image": "/assets/images/ai-webinar-funny/markus-code.jpg"
+          },
+          {
+            "type": "content",
+            "title": "The plan for today",
+            "icon": "workflow",
+            "box": {
+              "list": [
+                {
+                  "icon": "circuit-board",
+                  "title": "Me &amp; Circuit Digest",
+                  "text": "How a PSGCAS-shaped person ended up building a cloud IoT platform."
+                },
+                {
+                  "icon": "brain",
+                  "title": "The AI landscape",
+                  "text": "How we got from autocomplete to tools that run your terminal."
+                },
+                {
+                  "icon": "workflow",
+                  "title": "Using it without making a mess",
+                  "text": "Where AI earns its keep, and where it will lie to your face."
+                },
+                {
+                  "icon": "hammer",
+                  "title": "The actual tools",
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; what each is for."
+                }
+              ]
+            },
+            "note": {
+              "text": "Interrupt me. A webinar where nobody talks back is just a podcast with extra steps."
+            }
           }
         ]
       },
@@ -29,7 +69,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 1 &mdash; Me, and a website about circuits",
+            "title": "Me, and a website about circuits",
             "subtitle": "The unglamorous version of the journey",
             "eyebrow": "Background",
             "icon": "circuit-board",
@@ -163,7 +203,7 @@
             "imageLayout": "left-image",
             "caption": "ESP32, a SIM800L module, a fistful of jumper wires, and a phone showing it worked.",
             "box": {
-              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on it on the other.</p><p>Everything in Chapter 4 exists to make the wiring side faster, not to replace it.</p>"
+              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on it on the other.</p><p>Everything in the tools section exists to make the wiring side faster, not to replace it.</p>"
             }
           },
           {
@@ -185,7 +225,7 @@
             "imageLayout": "left-image",
             "caption": "\"Which of my devices are offline?\" It just answers. In IST, unprompted.",
             "box": {
-              "content": "<p>This is not a hypothetical for Chapter 2. Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less.</p><p>Which is a convenient place to stop talking about Circuit Digest and start talking about how this became possible at all.</p>"
+              "content": "<p>This is not a hypothetical. Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less.</p><p>Which is a convenient place to stop talking about Circuit Digest and start talking about how this became possible at all.</p>"
             }
           }
         ]
@@ -196,7 +236,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 2 &mdash; From autocomplete to whatever this is",
+            "title": "From autocomplete to whatever this is",
             "subtitle": "A short, opinionated history",
             "eyebrow": "The landscape",
             "icon": "brain",
@@ -314,7 +354,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 3 &mdash; Using it without making a mess",
+            "title": "Using it without making a mess",
             "subtitle": "Where it helps, where it lies, and how to ask",
             "eyebrow": "The workflow",
             "icon": "workflow",
@@ -418,7 +458,7 @@
         "slides": [
           {
             "type": "topic-title",
-            "title": "Chapter 4 &mdash; The actual tools",
+            "title": "The actual tools",
             "subtitle": "What each one is, and when to reach for it",
             "eyebrow": "The toolbelt",
             "icon": "hammer",
@@ -656,7 +696,21 @@
           {
             "type": "thank-you",
             "title": "Thank you, PSGCAS",
-            "message": "That was the 30-minute cut. The full 55-slide version has more war stories and more tool depth, same link: aravind-govindhasamy.github.io"
+            "message": "That was the 30-minute cut. The full 55-slide version has more war stories and more tool depth, same link: aravind-govindhasamy.github.io",
+            "recommendations": [
+              {
+                "title": "The Thinking Game",
+                "subtitle": "Full documentary &middot; The quest for AGI at DeepMind",
+                "tag": "Documentary",
+                "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F31ku2jttaxit6k2q4h7o.png"
+              },
+              {
+                "title": "The Imitation Game",
+                "subtitle": "Alan Turing &middot; The origin story of computing",
+                "tag": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_.jpg"
+              }
+            ]
           }
         ]
       }
