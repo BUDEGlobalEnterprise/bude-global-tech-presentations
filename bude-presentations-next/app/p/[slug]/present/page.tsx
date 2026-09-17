@@ -19,7 +19,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const presentation = await getPresentationBySlug(slug);
   return {
-    title: presentation ? `${presentation.meta.title} — Present` : "Present",
+    title: presentation ? `${presentation.meta.title} - Present` : "Present",
   };
 }
 

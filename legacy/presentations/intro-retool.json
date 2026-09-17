@@ -38,7 +38,14 @@
               "2022": "Series C - $45M",
               "2024": "Retool AI & Workflows Launch"
             },
-            "enterprise_adoption": ["Amazon", "DoorDash", "Brex", "Peloton", "Mercedes-Benz", "Planned Parenthood"],
+            "enterprise_adoption": [
+              "Amazon",
+              "DoorDash",
+              "Brex",
+              "Peloton",
+              "Mercedes-Benz",
+              "Planned Parenthood"
+            ],
             "script": [
               "Welcome to the most comprehensive Retool training ever created.",
               "We're not here to learn how to drag and drop widgets. That's the easy part.",
@@ -55,21 +62,61 @@
             "deployment_models": [
               {
                 "model": "Retool Cloud",
-                "characteristics": ["Fully managed by Retool", "Automatic scaling", "Zero maintenance", "99.9% SLA"],
-                "pricing": ["Free tier: 5 users", "Team: $10/user/month", "Business: $50/user/month", "Enterprise: Custom"],
-                "best_for": ["Startups", "Teams < 50 users", "Quick prototyping"]
+                "characteristics": [
+                  "Fully managed by Retool",
+                  "Automatic scaling",
+                  "Zero maintenance",
+                  "99.9% SLA"
+                ],
+                "pricing": [
+                  "Free tier: 5 users",
+                  "Team: $10/user/month",
+                  "Business: $50/user/month",
+                  "Enterprise: Custom"
+                ],
+                "best_for": [
+                  "Startups",
+                  "Teams < 50 users",
+                  "Quick prototyping"
+                ]
               },
               {
                 "model": "Retool Self-Hosted",
-                "characteristics": ["Deploy in your infrastructure", "Full data control", "Network isolation", "Custom authentication"],
-                "pricing": ["Free: Unlimited apps", "Enterprise: $10/user/month", "Unlimited: $50/user/month"],
-                "best_for": ["Enterprise", "Regulated industries", "High-security environments"]
+                "characteristics": [
+                  "Deploy in your infrastructure",
+                  "Full data control",
+                  "Network isolation",
+                  "Custom authentication"
+                ],
+                "pricing": [
+                  "Free: Unlimited apps",
+                  "Enterprise: $10/user/month",
+                  "Unlimited: $50/user/month"
+                ],
+                "best_for": [
+                  "Enterprise",
+                  "Regulated industries",
+                  "High-security environments"
+                ]
               },
               {
                 "model": "Retool Airgapped",
-                "characteristics": ["No internet connectivity", "Complete isolation", "Manual updates", "Highest security"],
-                "pricing": ["Enterprise+ only", "Custom pricing", "Professional services"],
-                "best_for": ["Defense contractors", "Financial trading desks", "Healthcare PHI data"]
+                "characteristics": [
+                  "No internet connectivity",
+                  "Complete isolation",
+                  "Manual updates",
+                  "Highest security"
+                ],
+                "pricing": [
+                  "Enterprise+ only",
+                  "Custom pricing",
+                  "Professional services"
+                ],
+                "best_for": [
+                  "Defense contractors",
+                  "Financial trading desks",
+                  "Healthcare PHI data"
+                ]
               }
             ],
             "component_architecture": {
@@ -82,7 +129,7 @@
             },
             "script": [
               "Understanding Retool's architecture is critical for enterprise deployment.",
-              "Retool Cloud is magical—just sign up and build. But your data flows through Retool's infrastructure.",
+              "Retool Cloud is magical-just sign up and build. But your data flows through Retool's infrastructure.",
               "Retool Self-Hosted runs entirely in YOUR infrastructure. Your VPC, your database, your security perimeter.",
               "The architecture is modern: React frontend, Node.js backend, PostgreSQL for metadata, Redis for caching.",
               "The execution engine runs queries in isolated Docker containers. Your database credentials never touch the frontend."
@@ -95,26 +142,59 @@
             "competitors": [
               {
                 "platform": "Retool",
-                "strengths": ["Enterprise features", "Self-hosting", "Advanced reactivity", "Mobile native"],
-                "weaknesses": ["Pricing at scale", "Learning curve", "Vendor lock-in"],
+                "strengths": [
+                  "Enterprise features",
+                  "Self-hosting",
+                  "Advanced reactivity",
+                  "Mobile native"
+                ],
+                "weaknesses": [
+                  "Pricing at scale",
+                  "Learning curve",
+                  "Vendor lock-in"
+                ],
                 "ideal_for": "Mission-critical internal tools with complex logic"
               },
               {
                 "platform": "Appsmith",
-                "strengths": ["Open source", "Flexible JavaScript", "Free self-hosting"],
-                "weaknesses": ["Less polish", "Fewer enterprise features", "No mobile"],
+                "strengths": [
+                  "Open source",
+                  "Flexible JavaScript",
+                  "Free self-hosting"
+                ],
+                "weaknesses": [
+                  "Less polish",
+                  "Fewer enterprise features",
+                  "No mobile"
+                ],
                 "ideal_for": "Budget-conscious teams, open-source advocates"
               },
               {
                 "platform": "ToolJet",
-                "strengths": ["Python support", "Multi-tenant", "Plugin architecture"],
-                "weaknesses": ["Less mature", "Smaller ecosystem", "Performance at scale"],
+                "strengths": [
+                  "Python support",
+                  "Multi-tenant",
+                  "Plugin architecture"
+                ],
+                "weaknesses": [
+                  "Less mature",
+                  "Smaller ecosystem",
+                  "Performance at scale"
+                ],
                 "ideal_for": "Data science teams, Python-heavy workflows"
               },
               {
                 "platform": "Custom React",
-                "strengths": ["Complete control", "No limits", "No vendor lock-in"],
-                "weaknesses": ["Slow development", "High maintenance", "Security burden"],
+                "strengths": [
+                  "Complete control",
+                  "No limits",
+                  "No vendor lock-in"
+                ],
+                "weaknesses": [
+                  "Slow development",
+                  "High maintenance",
+                  "Security burden"
+                ],
                 "ideal_for": "Public-facing apps, unique requirements"
               }
             ],
@@ -191,7 +271,12 @@
             "questions": [
               {
                 "question": "Which deployment model offers the highest security isolation?",
-                "options": ["Retool Cloud", "Retool Self-Hosted", "Retool Airgapped", "All are equal"],
+                "options": [
+                  "Retool Cloud",
+                  "Retool Self-Hosted",
+                  "Retool Airgapped",
+                  "All are equal"
+                ],
                 "answer": "Retool Airgapped",
                 "explanation": "Airgapped deployments have no internet connectivity, providing complete isolation."
               },
@@ -240,7 +325,11 @@
               {
                 "concept": "Directed Acyclic Graph (DAG)",
                 "description": "Retool builds a graph of all dependencies",
-                "properties": ["No circular dependencies", "Topological execution order", "Memoization of results"],
+                "properties": [
+                  "No circular dependencies",
+                  "Topological execution order",
+                  "Memoization of results"
+                ],
                 "visualization": "A → B → C (A changes trigger B, which triggers C)"
               },
               {
@@ -301,9 +390,9 @@
             ],
             "script": [
               "The {{ }} syntax is deceptively simple. It's actually a full JavaScript expression evaluator.",
-              "You can write conditionals, array methods, template literals—almost any JavaScript expression.",
+              "You can write conditionals, array methods, template literals-almost any JavaScript expression.",
               "But with great power comes great responsibility.",
-              "Never put heavy computations in bindings—they re-run on every dependency change.",
+              "Never put heavy computations in bindings-they re-run on every dependency change.",
               "Watch for circular dependencies. Retool will warn you, but it's easy to create accidentally."
             ]
           },
@@ -396,7 +485,7 @@ return {
             "script": [
               "Let's build a real dashboard.",
               "We'll implement proper reactivity patterns: debouncing, manual triggers, transformers.",
-              "This is how production Retool apps should be built—thoughtfully, not just dragging widgets."
+              "This is how production Retool apps should be built-thoughtfully, not just dragging widgets."
             ]
           }
         ],
@@ -419,23 +508,53 @@ return {
             "integration_patterns": [
               {
                 "pattern": "Direct Database",
-                "services": ["PostgreSQL", "MySQL", "Snowflake", "BigQuery", "MongoDB"],
-                "pros": ["Maximum performance", "Full SQL power", "Real-time data"],
-                "cons": ["Security concerns", "Production load", "No business logic"],
+                "services": [
+                  "PostgreSQL",
+                  "MySQL",
+                  "Snowflake",
+                  "BigQuery",
+                  "MongoDB"
+                ],
+                "pros": [
+                  "Maximum performance",
+                  "Full SQL power",
+                  "Real-time data"
+                ],
+                "cons": [
+                  "Security concerns",
+                  "Production load",
+                  "No business logic"
+                ],
                 "use_when": "Read-only analytics, internal reporting"
               },
               {
                 "pattern": "API Gateway",
                 "services": ["REST APIs", "GraphQL", "gRPC (via REST proxy)"],
-                "pros": ["Business logic enforcement", "Security controls", "Rate limiting"],
-                "cons": ["Additional latency", "API limitations", "Development overhead"],
+                "pros": [
+                  "Business logic enforcement",
+                  "Security controls",
+                  "Rate limiting"
+                ],
+                "cons": [
+                  "Additional latency",
+                  "API limitations",
+                  "Development overhead"
+                ],
                 "use_when": "Customer data, sensitive operations"
               },
               {
                 "pattern": "Event-Driven",
                 "services": ["Kafka", "SQS", "EventBridge", "Webhooks"],
-                "pros": ["Decoupled architecture", "Real-time updates", "Scalability"],
-                "cons": ["Complex setup", "Eventual consistency", "Debugging difficulty"],
+                "pros": [
+                  "Decoupled architecture",
+                  "Real-time updates",
+                  "Scalability"
+                ],
+                "cons": [
+                  "Complex setup",
+                  "Eventual consistency",
+                  "Debugging difficulty"
+                ],
                 "use_when": "Async operations, notifications, audit logs"
               }
             ],
@@ -512,7 +631,7 @@ WHERE id = ANY({{selectedRows.map(r => r.id)}});`,
             "script": [
               "SQL in Retool is more powerful than you think.",
               "You can write dynamic queries, implement pagination, enforce security, and batch operations.",
-              "The key is using {{ }} bindings properly—they become parameterized queries, preventing SQL injection.",
+              "The key is using {{ }} bindings properly-they become parameterized queries, preventing SQL injection.",
               "Never do this: `WHERE id = ' + input.value + '` (SQL injection vulnerability!)",
               "Always do this: `WHERE id = {{input.value}}` (parameterized, safe)"
             ]
@@ -525,25 +644,45 @@ WHERE id = ANY({{selectedRows.map(r => r.id)}});`,
               {
                 "category": "Communication",
                 "services": ["Slack", "Microsoft Teams", "Twilio", "SendGrid"],
-                "patterns": ["Send notifications", "Create channels", "Send SMS/email", "Interactive messages"],
+                "patterns": [
+                  "Send notifications",
+                  "Create channels",
+                  "Send SMS/email",
+                  "Interactive messages"
+                ],
                 "use_case": "Alerting, notifications, approvals"
               },
               {
                 "category": "Productivity",
                 "services": ["Google Sheets", "Airtable", "Notion", "Jira"],
-                "patterns": ["Import/export data", "Sync records", "Create tickets", "Update status"],
+                "patterns": [
+                  "Import/export data",
+                  "Sync records",
+                  "Create tickets",
+                  "Update status"
+                ],
                 "use_case": "Data sync, ticketing, documentation"
               },
               {
                 "category": "Payments",
                 "services": ["Stripe", "PayPal", "Plaid", "QuickBooks"],
-                "patterns": ["Process refunds", "View transactions", "Verify identity", "Sync accounting"],
+                "patterns": [
+                  "Process refunds",
+                  "View transactions",
+                  "Verify identity",
+                  "Sync accounting"
+                ],
                 "use_case": "Finance ops, customer support, accounting"
               },
               {
                 "category": "CRM",
                 "services": ["Salesforce", "HubSpot", "Zendesk", "Intercom"],
-                "patterns": ["Update contacts", "Create cases", "Track interactions", "Sync data"],
+                "patterns": [
+                  "Update contacts",
+                  "Create cases",
+                  "Track interactions",
+                  "Sync data"
+                ],
                 "use_case": "Sales ops, customer support, marketing"
               }
             ],
@@ -644,7 +783,7 @@ try {
               "This is Retool at its most powerful.",
               "We're building a complete ETL pipeline without any external tools.",
               "The JavaScript query orchestrates everything: extraction, transformation, loading, notifications.",
-              "Error handling is critical—this runs unattended.",
+              "Error handling is critical-this runs unattended.",
               "This would take weeks to build traditionally. In Retool? A day."
             ]
           }

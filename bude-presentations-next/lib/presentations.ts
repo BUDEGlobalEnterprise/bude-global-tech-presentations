@@ -37,7 +37,7 @@ const isProd = process.env.NODE_ENV === "production";
 async function buildCache() {
   const cache = new Map<string, LoadedPresentation>();
   for (const meta of CATALOG) {
-    // Slug collisions would silently overwrite a deck — never allow it.
+    // Slug collisions would silently overwrite a deck - never allow it.
     if (cache.has(meta.slug)) {
       throw new Error(
         `[presentations] Duplicate slug "${meta.slug}" (from ${meta.file}). ` +

@@ -44,7 +44,7 @@
             "title": "The first real conversation",
             "emoji": "💬",
             "box": {
-              "content": "<p>You said something that made me laugh harder than I had in months. And then — even better — you said something <em>thoughtful</em>, the kind of sentence that stays with you for days.</p><p>I went home and did the worst thing a person can do at the start of something good: I overthought it. I drafted texts I didn't send. I refreshed my chat at unholy hours.</p><p>And then I sent the only one that mattered.</p>"
+              "content": "<p>You said something that made me laugh harder than I had in months. And then - even better - you said something <em>thoughtful</em>, the kind of sentence that stays with you for days.</p><p>I went home and did the worst thing a person can do at the start of something good: I overthought it. I drafted texts I didn't send. I refreshed my chat at unholy hours.</p><p>And then I sent the only one that mattered.</p>"
             }
           },
           {
@@ -72,7 +72,7 @@
                 },
                 {
                   "emoji": "🌧️",
-                  "text": "That you don't mind silence — you make it feel like company"
+                  "text": "That you don't mind silence - you make it feel like company"
                 },
                 {
                   "emoji": "📱",
@@ -80,7 +80,7 @@
                 },
                 {
                   "emoji": "💪",
-                  "text": "How you tell me when I'm being a fool — gently, but you tell me"
+                  "text": "How you tell me when I'm being a fool - gently, but you tell me"
                 }
               ]
             }
@@ -100,7 +100,7 @@
           {
             "type": "comparison",
             "title": "The data is in",
-            "leftTitle": "Aravind — before Erumaaa",
+            "leftTitle": "Aravind - before Erumaaa",
             "leftPoints": [
               "🍜 Dinner was \"whatever's in the fridge\"",
               "🛌 Slept five hours and called it productivity",
@@ -110,7 +110,7 @@
               "🛒 Bought groceries for one, sadly",
               "🧦 Owned exactly two pairs of matching socks"
             ],
-            "rightTitle": "Aravind — after Erumaaa",
+            "rightTitle": "Aravind - after Erumaaa",
             "rightPoints": [
               "🍳 Suddenly a passable cook (you raised the bar)",
               "🌅 Sleeping properly, because you insist on it",
@@ -141,7 +141,7 @@
             "title": "Your mind",
             "emoji": "🧠",
             "box": {
-              "content": "<p>You ask the questions other people are too tired or too cool to ask.</p><p>You change your mind when the evidence changes — which is a kind of bravery most people pretend they don't need. You notice things. Small details. Throwaway lines. And you remember them weeks later, often when I've forgotten I said them.</p><p>Being smart is common. Being <strong>curious</strong> in the way you are — that's rare.</p>"
+              "content": "<p>You ask the questions other people are too tired or too cool to ask.</p><p>You change your mind when the evidence changes - which is a kind of bravery most people pretend they don't need. You notice things. Small details. Throwaway lines. And you remember them weeks later, often when I've forgotten I said them.</p><p>Being smart is common. Being <strong>curious</strong> in the way you are - that's rare.</p>"
             }
           },
           {
@@ -186,11 +186,11 @@
             "options": [
               "Because life is more interesting when you're in the room",
               "Because every plan I make now starts with the word \"we\"",
-              "Because you make me a better me — without ever asking me to be different",
+              "Because you make me a better me - without ever asking me to be different",
               "All of these. Plus forty-seven other reasons saved for slide 29."
             ],
             "correctAnswer": 3,
-            "explanation": "Trick question. The real answer is the entire rest of this deck. But if you want it in one line: because a life with you is the one I keep choosing — every day, in every weather."
+            "explanation": "Trick question. The real answer is the entire rest of this deck. But if you want it in one line: because a life with you is the one I keep choosing - every day, in every weather."
           },
           {
             "type": "quiz",
@@ -202,7 +202,7 @@
               "All of the above. Repeat as needed for the next sixty years."
             ],
             "correctAnswer": 3,
-            "explanation": "The \"driving each other crazy\" part isn't a bug — it's part of the deal. Every long marriage I've ever watched has two people who occasionally want to throttle each other — gently — and keep choosing each other anyway."
+            "explanation": "The \"driving each other crazy\" part isn't a bug - it's part of the deal. Every long marriage I've ever watched has two people who occasionally want to throttle each other - gently - and keep choosing each other anyway."
           },
           {
             "type": "quiz",
@@ -210,7 +210,7 @@
             "options": [
               "We're better at being us than at being apart",
               "We make each other laugh in places we really shouldn't",
-              "We tell each other the truth — even the inconvenient parts",
+              "We tell each other the truth - even the inconvenient parts",
               "Honestly? All three. That's the whole shortlist."
             ],
             "correctAnswer": 3,
@@ -238,7 +238,7 @@
               "All three. Plus a hundred more I'm collecting like trading cards."
             ],
             "correctAnswer": 3,
-            "explanation": "I have an entire mental file. I take notes I don't write down. I notice things — especially you."
+            "explanation": "I have an entire mental file. I take notes I don't write down. I notice things - especially you."
           },
           {
             "type": "quiz",
@@ -256,9 +256,9 @@
             "type": "quiz",
             "question": "What do I love about your family?",
             "options": [
-              "They made you. So immediately — all of that.",
+              "They made you. So immediately - all of that.",
               "The way they argue about food like it's high diplomacy",
-              "How loud the love is — no one whispers about how they feel",
+              "How loud the love is - no one whispers about how they feel",
               "All of the above. They feel like home before I even step inside."
             ],
             "correctAnswer": 3,
@@ -271,7 +271,7 @@
               "Whose turn it is to text the parents",
               "The exact correct way to fold towels",
               "Pineapple on pizza (an ongoing diplomatic crisis)",
-              "Doesn't matter — we'll forget the original reason within an hour anyway."
+              "Doesn't matter - we'll forget the original reason within an hour anyway."
             ],
             "correctAnswer": 3,
             "explanation": "Healthy couples fight about laundry and pizza toppings. We are squarely in the laundry-and-pizza tier. Long may it last."
@@ -295,7 +295,7 @@
               "Loud, with the right people in it",
               "Quiet, when the world outside is too loud",
               "Like the safest place either of us has ever been",
-              "All three — depending on the day."
+              "All three - depending on the day."
             ],
             "correctAnswer": 2,
             "explanation": "If I had to pick one, it's the third. Home should be the place you exhale. Everything else is decoration."
@@ -305,7 +305,7 @@
             "question": "What's the first promise I'm making?",
             "options": [
               "To say sorry first when I'm wrong",
-              "To say sorry first sometimes even when I'm not — because being right is overrated",
+              "To say sorry first sometimes even when I'm not - because being right is overrated",
               "To never stop being curious about you",
               "All three. They come as a package."
             ],
@@ -314,11 +314,11 @@
           },
           {
             "type": "quiz",
-            "question": "What's something I'd never tell anyone — but I'll tell you?",
+            "question": "What's something I'd never tell anyone - but I'll tell you?",
             "options": [
               "Most days, I'm just winging it",
               "I get unreasonably proud when I make you laugh",
-              "I'm a little scared of the future — and a lot less scared because of you",
+              "I'm a little scared of the future - and a lot less scared because of you",
               "All of them. The whole vault. No locks for you."
             ],
             "correctAnswer": 3,
@@ -334,7 +334,7 @@
               "All three. They're the same thing wearing different costumes."
             ],
             "correctAnswer": 3,
-            "explanation": "Most things I can work through with you. Those three I can't. I don't think we'll ever come close. But the line deserves to be named — out loud, on the record."
+            "explanation": "Most things I can work through with you. Those three I can't. I don't think we'll ever come close. But the line deserves to be named - out loud, on the record."
           },
           {
             "type": "quiz",
@@ -342,7 +342,7 @@
             "options": [
               "We become those slightly annoying old people who finish each other's sentences",
               "We accidentally adopt too many cats",
-              "We become the cool grandparents — with stories the kids are slightly afraid of",
+              "We become the cool grandparents - with stories the kids are slightly afraid of",
               "All of them. Plus matching cardigans. I'm choosing them now."
             ],
             "correctAnswer": 3,
@@ -355,7 +355,7 @@
               "Pretty sure",
               "Very sure",
               "Embarrassingly, indecently, completely sure",
-              "All of the above — but mostly the third one"
+              "All of the above - but mostly the third one"
             ],
             "correctAnswer": 3,
             "explanation": "I have considered this from every angle, including the angles you've made fun of me for considering. The answer keeps coming back the same."
@@ -377,7 +377,7 @@
             "title": "Quiet mornings",
             "emoji": "☕",
             "box": {
-              "content": "<p>Sunlight on the kitchen counter. The kettle hissing. You — hair still doing whatever it does in the morning. No phones for the first ten minutes. The world can wait.</p><p>I want a thousand of these. I want a few thousand more.</p>"
+              "content": "<p>Sunlight on the kitchen counter. The kettle hissing. You - hair still doing whatever it does in the morning. No phones for the first ten minutes. The world can wait.</p><p>I want a thousand of these. I want a few thousand more.</p>"
             }
           },
           {
@@ -418,7 +418,7 @@
             "title": "The hard parts",
             "emoji": "🛡️",
             "box": {
-              "content": "<p>I'm not promising sunshine. I'm promising that whatever rain comes — and there <em>will</em> be rain — I'd rather get drenched standing next to you than be dry, alone.</p><p>You should know I mean this. I've thought about it on bad days, not only the good ones.</p>"
+              "content": "<p>I'm not promising sunshine. I'm promising that whatever rain comes - and there <em>will</em> be rain - I'd rather get drenched standing next to you than be dry, alone.</p><p>You should know I mean this. I've thought about it on bad days, not only the good ones.</p>"
             }
           },
           {
@@ -462,7 +462,7 @@
             "title": "Because I want to start.",
             "emoji": "🚀",
             "box": {
-              "content": "<p>Marriage isn't the end of a love story. It's a beginning that gets to call itself by a different name.</p><p>I want to begin. I want everything that comes after this — to come after this <em>with you</em>.</p>"
+              "content": "<p>Marriage isn't the end of a love story. It's a beginning that gets to call itself by a different name.</p><p>I want to begin. I want everything that comes after this - to come after this <em>with you</em>.</p>"
             }
           }
         ]
@@ -479,12 +479,12 @@
           {
             "type": "title",
             "title": "Will you marry me?",
-            "subtitle": "I love you. I am yours. — A."
+            "subtitle": "I love you. I am yours. - A."
           },
           {
             "type": "thank-you",
             "title": "Whatever you say",
-            "message": "I love you. Now. Tomorrow. Always. — Aravind"
+            "message": "I love you. Now. Tomorrow. Always. - Aravind"
           }
         ]
       }

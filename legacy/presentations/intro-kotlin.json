@@ -205,7 +205,7 @@
             "title": "The 'object' Keyword: Singletons",
             "box": {
               "code": "object DatabaseConfig {\n    val url = \"jdbc:mysql://localhost/test\"\n    fun connect() { /* ... */ }\n}\n\n// Usage\nDatabaseConfig.connect()",
-              "title": "Kotlin has no 'static' keyword. Instead, it uses the <code>object</code> keyword to define a **Singleton**—a class that has only one instance, created lazily when first accessed."
+              "title": "Kotlin has no 'static' keyword. Instead, it uses the <code>object</code> keyword to define a **Singleton**-a class that has only one instance, created lazily when first accessed."
             }
           },
           {

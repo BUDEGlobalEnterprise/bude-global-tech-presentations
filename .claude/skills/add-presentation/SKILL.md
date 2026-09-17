@@ -10,11 +10,11 @@ This skill walks you through adding new content to the Next.js presentation plat
 - **New presentation** (most common): create a new JSON file + catalog entry.
 - **Add topic(s) to existing presentation**: edit one JSON file under `content/presentations/`.
 
-Reference example for the JSON shape: [bude-presentations-next/content/presentations/advanced-slides.json](../../../bude-presentations-next/content/presentations/advanced-slides.json) — it uses every supported slide type.
+Reference example for the JSON shape: [bude-presentations-next/content/presentations/advanced-slides.json](../../../bude-presentations-next/content/presentations/advanced-slides.json) - it uses every supported slide type.
 
 ---
 
-## Flow A — New presentation (default)
+## Flow A - New presentation (default)
 
 ### 1. Gather requirements with AskUserQuestion
 
@@ -23,7 +23,7 @@ Ask for whatever the user hasn't already given. Don't ask if it's obvious from c
 | Field | Required | Notes |
 |---|---|---|
 | Topic / title | yes | e.g. "Introduction to Kubernetes" |
-| Slug | no — derive from title | kebab-case, e.g. `intro-kubernetes` |
+| Slug | no - derive from title | kebab-case, e.g. `intro-kubernetes` |
 | Description | yes | one sentence |
 | Difficulty | yes | `beginner` \| `intermediate` \| `advanced` |
 | Primary category | yes | see list below |
@@ -38,16 +38,16 @@ If a brand-new category is genuinely needed, add an entry to [bude-presentations
 
 ### 2. Build the slide list
 
-A polished deck follows this rough sequence — riff on it, don't follow it slavishly:
+A polished deck follows this rough sequence - riff on it, don't follow it slavishly:
 
-1. `title` — big title + subtitle
-2. `presenter` — author card (default: Aravind Govindhasamy, see other files for fields)
-3. `content` agenda — list of what we'll cover
+1. `title` - big title + subtitle
+2. `presenter` - author card (default: Aravind Govindhasamy, see other files for fields)
+3. `content` agenda - list of what we'll cover
 4. For each major section:
-   - `topic-title` — section divider
+   - `topic-title` - section divider
    - 3–8 `content` / `comparison` / `code` / `quiz` slides
-5. `qa` — questions slide
-6. `thank-you` — closing
+5. `qa` - questions slide
+6. `thank-you` - closing
 
 Aim for 40–80 slides total for a "complete" deck, 15–30 for a focused talk.
 
@@ -74,7 +74,7 @@ Skeleton:
 }
 ```
 
-**Slide-type quick reference** — full examples below if needed.
+**Slide-type quick reference** - full examples below if needed.
 
 | Type | Required fields | Notes |
 |---|---|---|
@@ -88,8 +88,8 @@ Skeleton:
 | `chart` | `title`, `chartType`, `data[]` | `chartType`: `bar` \| `line` \| `pie` |
 | `video` | `title`, `videoUrl` | + `caption`, `note.text` |
 | `diagram` | `title`, `content` | ASCII art is fine (multi-line strings allowed) |
-| `qa` | — | optional `title` (default "Questions?") |
-| `thank-you` | — | optional `title`, `message` |
+| `qa` | - | optional `title` (default "Questions?") |
+| `thank-you` | - | optional `title`, `message` |
 
 **Lists inside `box.list`** can be either strings or `{ emoji, text }` objects. The `text` field supports inline HTML: `<strong>`, `<em>`, `<code>`, `<a>`, `<br>`. Block tags get stripped by DOMPurify.
 
@@ -102,7 +102,7 @@ Open [bude-presentations-next/lib/catalog.ts](../../../bude-presentations-next/l
 ```ts
 {
   file: "<slug>.json",
-  title: "Same as the slide title — this is what shows on the home card",
+  title: "Same as the slide title - this is what shows on the home card",
   description: "One-line description shown on the card",
   keywords: ["...", "..."],
   category: ["primary-category", "optional-secondary"],
@@ -110,7 +110,7 @@ Open [bude-presentations-next/lib/catalog.ts](../../../bude-presentations-next/l
 },
 ```
 
-The `slug` field is auto-derived from `file` — don't set it manually.
+The `slug` field is auto-derived from `file` - don't set it manually.
 
 ### 5. Validate
 
@@ -134,13 +134,13 @@ Then open `http://localhost:3000/p/<slug>/` (overview) and click "Start presenta
 
 ---
 
-## Flow B — Add topic(s) to an existing presentation
+## Flow B - Add topic(s) to an existing presentation
 
 1. Confirm with the user **which file**: `bude-presentations-next/content/presentations/<slug>.json`
 2. Read the file to see the current `topics[]` shape and house style.
 3. Insert the new topic object(s) into the `topics` array at the position the user wants. Default: append before the trailing `qa` / `thank-you` topics.
 4. Run `npm run validate-content` and report.
-5. No catalog change is needed — the file is already registered.
+5. No catalog change is needed - the file is already registered.
 
 ---
 
@@ -186,7 +186,7 @@ Then open `http://localhost:3000/p/<slug>/` (overview) and click "Start presenta
   "box": {
     "title": "Why developers reach for it",
     "list": [
-      { "emoji": "🧩", "text": "<strong>Component model</strong> — reusable UI pieces" },
+      { "emoji": "🧩", "text": "<strong>Component model</strong> - reusable UI pieces" },
       { "emoji": "⚡", "text": "Virtual DOM diffing is fast" },
       { "emoji": "🌐", "text": "Massive ecosystem & job market" }
     ]
@@ -239,7 +239,7 @@ Then open `http://localhost:3000/p/<slug>/` (overview) and click "Start presenta
     "Cluster IP Domain Resolver"
   ],
   "correctAnswer": 0,
-  "explanation": "Classless Inter-Domain Routing — the modern replacement for the rigid Class A/B/C system."
+  "explanation": "Classless Inter-Domain Routing - the modern replacement for the rigid Class A/B/C system."
 }
 ```
 
@@ -263,7 +263,7 @@ Then open `http://localhost:3000/p/<slug>/` (overview) and click "Start presenta
 
 ---
 
-## Renderer status — what looks polished today
+## Renderer status - what looks polished today
 
 The site is mid-build. Here's what renders with a dedicated React component today vs falls back to a generic card:
 
@@ -271,15 +271,15 @@ The site is mid-build. Here's what renders with a dedicated React component toda
 
 **Generic fallback** (Phase 6 will give them dedicated components): `quiz`, `chart`, `comparison`, `imageText`, `video`, `diagram`, `code`, `matrix`, `timeline`, plus ~20 other long-tail types
 
-The generic fallback works — it pulls out title, subtitle, lists, content, code blocks, and any array fields. It's not as pretty as a bespoke component but the content is fully readable. If the user is adding heavy `comparison` / `quiz` / `chart` content right now, mention this so they're not surprised.
+The generic fallback works - it pulls out title, subtitle, lists, content, code blocks, and any array fields. It's not as pretty as a bespoke component but the content is fully readable. If the user is adding heavy `comparison` / `quiz` / `chart` content right now, mention this so they're not surprised.
 
 ---
 
 ## Common gotchas
 
 - **Don't put block HTML in `content` strings** (no `<div>`, `<table>`, `<section>`). Only inline tags survive sanitization.
-- **Backticks in inline string content** (markdown-style ``code``) are fine — the parser anchors only on `"key":` value positions.
+- **Backticks in inline string content** (markdown-style ``code``) are fine - the parser anchors only on `"key":` value positions.
 - **Multi-line strings**: JSON requires `\n`, but our parser also accepts JS template literals (backticks) in value position. Either works.
 - **The `slides` array must have at least one entry per topic** (Zod enforces `.min(1)`).
-- **Slide type is free-form** — anything beyond the documented list falls through to the generic renderer. Prefer documented types unless you really need something new.
+- **Slide type is free-form** - anything beyond the documented list falls through to the generic renderer. Prefer documented types unless you really need something new.
 - **Catalog order** doesn't affect display order (cards group by category), but keep the thematic blocks tidy for diffs.

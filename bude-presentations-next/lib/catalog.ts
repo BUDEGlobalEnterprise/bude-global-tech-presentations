@@ -1,7 +1,7 @@
 import type { CatalogEntry } from "@/types/presentation";
 
 /**
- * The slug is derived from the JSON filename — it's also the URL segment
+ * The slug is derived from the JSON filename - it's also the URL segment
  * used in /p/[slug]. Generated at build time and verified by the loader.
  */
 function slugFromFile(file: string) {
@@ -103,7 +103,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "intro-dart.json",
     title: "Dart – Modern Programming Language for Apps",
-    description: "Google's modern, object-oriented programming language optimized for UI, fast compilation, and cross-platform development — powering Flutter and beyond.",
+    description: "Google's modern, object-oriented programming language optimized for UI, fast compilation, and cross-platform development - powering Flutter and beyond.",
     keywords: ["dart", "flutter", "programming", "oop", "async", "frontend", "backend", "mobile-development"],
     category: ["programming", "app-development"],
     difficulty: "intermediate",
@@ -167,7 +167,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "intro-rust.json",
     title: "Rust – Systems Programming Language",
-    description: "A memory-safe, high-performance systems programming language focused on safety, concurrency, and speed — ideal for backend services, embedded systems, and performance-critical software.",
+    description: "A memory-safe, high-performance systems programming language focused on safety, concurrency, and speed - ideal for backend services, embedded systems, and performance-critical software.",
     keywords: ["rust", "systems-programming", "memory-safety", "performance", "concurrency", "wasm", "cli", "backend", "safe-code"],
     category: ["programming", "backend"],
     difficulty: "advanced",
@@ -684,7 +684,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "ai-powered-development-2026.json",
     title: "Circuit Digest & The Age of AI-Assisted Development",
-    description: "A PSGCAS webinar — real war stories from IoT/RFID work, the shift from autocomplete to coding agents, and hands-on notes on ESP-IDF, GitHub, Antigravity, Codex, and Claude Code.",
+    description: "A PSGCAS webinar - real war stories from IoT/RFID work, the shift from autocomplete to coding agents, and hands-on notes on ESP-IDF, GitHub, Antigravity, Codex, and Claude Code.",
     keywords: ["ai", "circuit digest", "webinar", "coding agents", "antigravity", "codex", "claude code", "esp-idf", "github", "iot", "developer tools", "agentic ai"],
     category: ["ai-data", "tools"],
     difficulty: "intermediate",
@@ -692,7 +692,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "ai-powered-development-2026-lightning.json",
     title: "Circuit Digest & AI-Assisted Development (Lightning)",
-    description: "The 10-slide lightning cut of the PSGCAS webinar — chatbot vs agent, where AI helps vs lies, and the toolbelt in 60 seconds.",
+    description: "The 10-slide lightning cut of the PSGCAS webinar - chatbot vs agent, where AI helps vs lies, and the toolbelt in 60 seconds.",
     keywords: ["ai", "circuit digest", "lightning talk", "coding agents", "claude code", "quick overview", "agentic ai"],
     category: ["ai-data", "tools"],
     difficulty: "intermediate",
@@ -700,7 +700,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "ai-powered-development-2026-focused.json",
     title: "Circuit Digest & AI-Assisted Development (Focused Talk)",
-    description: "The 30-slide focused cut of the PSGCAS webinar — the war stories and tool deep-dives, trimmed for a half-hour slot.",
+    description: "The 30-slide focused cut of the PSGCAS webinar - the war stories and tool deep-dives, trimmed for a half-hour slot.",
     keywords: ["ai", "circuit digest", "webinar", "coding agents", "antigravity", "codex", "claude code", "esp-idf", "github", "agentic ai"],
     category: ["ai-data", "tools"],
     difficulty: "intermediate",
@@ -708,7 +708,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "ai-powered-development-2026-humanized.json",
     title: "Circuit Digest & AI-Assisted Development (Humanized)",
-    description: "The 30-slide focused talk rewritten with bold, funny, conversational copy — same slides and images, zero corporate robot voice.",
+    description: "The 30-slide focused talk rewritten with bold, funny, conversational copy - same slides and images, zero corporate robot voice.",
     keywords: ["ai", "circuit digest", "webinar", "coding agents", "antigravity", "codex", "claude code", "esp-idf", "github", "agentic ai", "humanized"],
     category: ["ai-data", "tools"],
     difficulty: "intermediate",
@@ -716,7 +716,7 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
   {
     file: "intro-mcp.json",
     title: "Introduction to Model Context Protocol (MCP)",
-    description: "Anthropic's open standard for AI tool integrations — architecture, primitives, transports, building servers, and the ecosystem.",
+    description: "Anthropic's open standard for AI tool integrations - architecture, primitives, transports, building servers, and the ecosystem.",
     keywords: ["mcp", "model-context-protocol", "anthropic", "llm", "ai", "tools", "agents", "json-rpc", "claude", "integration"],
     category: ["ai-data", "tools", "programming"],
     difficulty: "advanced",

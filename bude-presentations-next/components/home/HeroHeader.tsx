@@ -3,7 +3,7 @@ import Image from "next/image";
 export function HeroHeader() {
   return (
     <section className="relative overflow-hidden">
-      {/* Ambient background gradient — subtle */}
+      {/* Ambient background gradient - subtle */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(111,66,193,0.12),_transparent_55%)]"

@@ -1,11 +1,11 @@
-# Legacy — original vanilla JS app
+# Legacy - original vanilla JS app
 
 This folder is the **archived original** Bude Global Tech Presentations app: plain
 HTML / CSS / JavaScript with Reveal.js, no build step. It was the project up to the
 Next.js migration in May 2026.
 
 It's kept here for reference and history. **Active development happens in
-[`../bude-presentations-next/`](../bude-presentations-next/)** — the React / Next.js
+[`../bude-presentations-next/`](../bude-presentations-next/)** - the React / Next.js
 rewrite.
 
 ## What's in here
@@ -27,7 +27,7 @@ rewrite.
 
 ## Running it
 
-No build needed — open `index.html` in a browser, or serve the folder statically:
+No build needed - open `index.html` in a browser, or serve the folder statically:
 
 ```bash
 python -m http.server 8000   # then visit http://localhost:8000
@@ -38,4 +38,4 @@ python -m http.server 8000   # then visit http://localhost:8000
 The vanilla app worked, but `presenter.js` had grown past 2,200 lines, there were no
 tests, and adding slide types meant editing one giant file. The Next.js rewrite gives
 us typed schemas, per-slide React components, static export, and a real component model.
-The deck JSON format is unchanged — every deck here renders in the new app.
+The deck JSON format is unchanged - every deck here renders in the new app.

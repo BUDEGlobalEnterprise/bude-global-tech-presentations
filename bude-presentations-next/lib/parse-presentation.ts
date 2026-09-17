@@ -6,7 +6,7 @@ import JSON5 from "json5";
  * helper rewrites those blocks into well-formed double-quoted strings,
  * preserving existing escape sequences, before JSON5 parses the result.
  *
- * Only `"key": \`...\`` positions are touched — bare backticks elsewhere
+ * Only `"key": \`...\`` positions are touched - bare backticks elsewhere
  * (e.g. inside markdown content) are left alone.
  */
 
@@ -25,7 +25,7 @@ function backtickContentToJsonString(content: string): string {
         out += "$";
         i++;
       } else {
-        // Keep the escape (\n, \t, \", \\, \uXXXX, ...) — all valid in JSON
+        // Keep the escape (\n, \t, \", \\, \uXXXX, ...) - all valid in JSON
         out += c + next;
         i++;
       }

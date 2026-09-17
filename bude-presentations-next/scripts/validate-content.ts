@@ -60,7 +60,7 @@ async function main() {
       }
     } catch (err) {
       failed++;
-      console.error(`✗ ${entry.slug} — ${(err as Error).message}`);
+      console.error(`✗ ${entry.slug} - ${(err as Error).message}`);
     }
   }
 

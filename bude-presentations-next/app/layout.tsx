@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Bude Global Tech Presentations",
   },
   description:
-    "Open-source platform for technical presentations — dynamic content, beautiful slides, built for the enterprise.",
+    "Open-source platform for technical presentations - dynamic content, beautiful slides, built for the enterprise.",
   keywords: [
     "Bude Global",
     "technical presentations",

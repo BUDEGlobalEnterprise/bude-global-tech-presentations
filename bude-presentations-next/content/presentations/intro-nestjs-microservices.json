@@ -25,7 +25,7 @@
             "title": "The 2026 Microservices Landscape",
             "box": {
               "title": "🚀 Why Microservices Now?",
-              "content": "<h4>🏗️ Beyond Simple Decomposition</h4><p>In 2026, microservices are no longer just about splitting a monolith. It is about <strong>Organizational Scalability</strong>, <strong>Technological Diversity</strong>, and <strong>Fault Isolation</strong>. As businesses demand faster time-to-market, the ability to deploy individual capabilities independently becomes the ultimate competitive advantage.</p><p>However, with great power comes great complexity—distributed transactions, network reliability, and data consistency are the new challenges every  Architect must master.</p>"
+              "content": "<h4>🏗️ Beyond Simple Decomposition</h4><p>In 2026, microservices are no longer just about splitting a monolith. It is about <strong>Organizational Scalability</strong>, <strong>Technological Diversity</strong>, and <strong>Fault Isolation</strong>. As businesses demand faster time-to-market, the ability to deploy individual capabilities independently becomes the ultimate competitive advantage.</p><p>However, with great power comes great complexity-distributed transactions, network reliability, and data consistency are the new challenges every  Architect must master.</p>"
             },
             "note": {
               "text": "Start by setting the stage for why we moved from Monoliths to Microservices and what the current challenges are."
@@ -53,7 +53,7 @@
               "🏗️ Best for: Enterprise scale, complex domains."
             ],
             "note": {
-              "text": "Use this slide to emphasize that Microservices are not always the answer—it's a trade-off."
+              "text": "Use this slide to emphasize that Microservices are not always the answer-it's a trade-off."
             }
           },
           {
@@ -111,7 +111,12 @@
           {
             "type": "quiz",
             "question": "Which DI Scope creates a new instance of a provider for every incoming request?",
-            "options": ["Scope.DEFAULT", "Scope.TRANSIENT", "Scope.REQUEST", "Scope.GLOBAL"],
+            "options": [
+              "Scope.DEFAULT",
+              "Scope.TRANSIENT",
+              "Scope.REQUEST",
+              "Scope.GLOBAL"
+            ],
             "correctAnswer": 2,
             "explanation": "Scope.REQUEST ensures that the provider is instantiated once per request lifecycle, allowing it to store request-specific data like auth tokens or logging IDs."
           },
@@ -348,7 +353,7 @@
             "title": "Queries & Read Optimization",
             "box": {
               "title": "Reading with Performance",
-              "content": "<h4>📊 Read Side Excellence</h4><p>On the query side, you don't need business logic—you need <strong>SPEED</strong>. You can bypass your ORM, use raw SQL, or even read from a denormalized database like MongoDB or Elasticsearch. The Query Bus facilitates this separation perfectly.</p>"
+              "content": "<h4>📊 Read Side Excellence</h4><p>On the query side, you don't need business logic-you need <strong>SPEED</strong>. You can bypass your ORM, use raw SQL, or even read from a denormalized database like MongoDB or Elasticsearch. The Query Bus facilitates this separation perfectly.</p>"
             }
           },
           {
@@ -387,7 +392,7 @@
             "title": "The Circuit Breaker Pattern",
             "box": {
               "title": "Preventing Cascading Failures",
-              "content": "<h4>🔌 Stop the Bleeding</h4><p>When a downstream service is down, don't keep hammering it—you'll exhaust your own resources. Use a <strong>Circuit Breaker</strong>. If failure threshold is reached, the circuit <strong>OPENS</strong>, and all requests fail immediately (or use a fallback). After some time, it goes to <strong>HALF-OPEN</strong> to test the waters.</p>"
+              "content": "<h4>🔌 Stop the Bleeding</h4><p>When a downstream service is down, don't keep hammering it-you'll exhaust your own resources. Use a <strong>Circuit Breaker</strong>. If failure threshold is reached, the circuit <strong>OPENS</strong>, and all requests fail immediately (or use a fallback). After some time, it goes to <strong>HALF-OPEN</strong> to test the waters.</p>"
             }
           },
           {

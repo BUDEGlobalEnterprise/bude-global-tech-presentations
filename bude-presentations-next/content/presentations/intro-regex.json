@@ -204,7 +204,7 @@
             "title": "Greedy vs Lazy (Reluctant)",
             "box": {
               "code": "/* Text: \"<div>Hello</div>\" */\n/<.*>/  # Greedy: Matches \"<div>Hello</div>\"\n/<.*?>/ # Lazy: Matches \"<div>\"",
-              "title": "By default, quantifiers are **Greedy**—they match as much as possible. Adding a <code>?</code> after a quantifier makes it **Lazy**, matching as little as possible."
+              "title": "By default, quantifiers are **Greedy**-they match as much as possible. Adding a <code>?</code> after a quantifier makes it **Lazy**, matching as little as possible."
             }
           },
           {

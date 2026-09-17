@@ -8,7 +8,11 @@
       "description": "Comprehensive 400+ slide guide covering Vue 3's reactivity system, Composition API, Nuxt 3's full-stack capabilities, and enterprise-scale patterns",
       "duration": "10 hours",
       "audience": "Full-stack Developers, Framework Enthusiasts, Enterprise Architects",
-      "prerequisites": ["JavaScript ES6+", "HTML/CSS fundamentals", "Basic Vue.js exposure"],
+      "prerequisites": [
+        "JavaScript ES6+",
+        "HTML/CSS fundamentals",
+        "Basic Vue.js exposure"
+      ],
       "generated_at": "2025-12-31",
       "total_slides": 424,
       "modules": 22
@@ -35,22 +39,40 @@
               "github_stars": "210,000+ (3rd most popular JS framework)",
               "npm_downloads": "5M+/week",
               "job_market": "40% YoY growth",
-              "enterprise_users": ["Alibaba", "Baidu", "GitLab", "Louis Vuitton", "NASA"]
+              "enterprise_users": [
+                "Alibaba",
+                "Baidu",
+                "GitLab",
+                "Louis Vuitton",
+                "NASA"
+              ]
             },
             "framework_comparison": {
               "react": {
                 "philosophy": "Learn once, write anywhere",
-                "strengths": ["Ecosystem size", "React Native", "Corporate backing"],
+                "strengths": [
+                  "Ecosystem size",
+                  "React Native",
+                  "Corporate backing"
+                ],
                 "complexity": "High (hooks, context, memoization)"
               },
               "vue": {
                 "philosophy": "Progressive framework",
-                "strengths": ["Developer experience", "Documentation", "Official ecosystem"],
+                "strengths": [
+                  "Developer experience",
+                  "Documentation",
+                  "Official ecosystem"
+                ],
                 "complexity": "Medium (gradual learning curve)"
               },
               "svelte": {
                 "philosophy": "Compiler as framework",
-                "strengths": ["Bundle size", "Runtime performance", "Simplicity"],
+                "strengths": [
+                  "Bundle size",
+                  "Runtime performance",
+                  "Simplicity"
+                ],
                 "complexity": "Low (but different mental model)"
               }
             },
@@ -90,14 +112,23 @@
                 "use_case": "Single Page Applications",
                 "implementation": "Vite + Vue Router + Pinia",
                 "tooling": "npm create vue@latest",
-                "features": ["Client-side routing", "State management", "Build optimization"]
+                "features": [
+                  "Client-side routing",
+                  "State management",
+                  "Build optimization"
+                ]
               },
               {
                 "level": "Level 3: Full-Stack",
                 "use_case": "Production applications with SEO/performance",
                 "implementation": "Nuxt 3 with SSR/SSG",
                 "tooling": "npx nuxi@latest init",
-                "features": ["Server-side rendering", "API routes", "Middleware", "Deployment adapters"]
+                "features": [
+                  "Server-side rendering",
+                  "API routes",
+                  "Middleware",
+                  "Deployment adapters"
+                ]
               }
             ],
             "migration_story": {
@@ -111,7 +142,7 @@
               "Vue's 'progressive' nature isn't just marketing. It's an architectural decision.",
               "Level 1: Need to add a dynamic component to your Django/Rails/PHP app? Drop in a Vue script tag. No Webpack, no npm, no build step.",
               "Level 2: Ready for a full SPA? Use the official CLI. Get Vue Router for navigation, Pinia for state management, Vite for blazing builds.",
-              "Level 3: Need SEO, performance, full-stack capabilities? Use Nuxt 3. Server-side rendering, API routes, middleware—all batteries included.",
+              "Level 3: Need SEO, performance, full-stack capabilities? Use Nuxt 3. Server-side rendering, API routes, middleware-all batteries included.",
               "This progression mirrors how real companies evolve. GitLab didn't rewrite their massive Rails app overnight. They migrated component by component over years.",
               "Vue supports this journey at every step."
             ]
@@ -202,7 +233,11 @@
             "characteristics": {
               "organization": "By option type (data, methods, computed, lifecycle)",
               "learning_curve": "Gentle for beginners familiar with object literals",
-              "limitations": ["Logic fragmentation", "TypeScript support", "Code reuse complexity"]
+              "limitations": [
+                "Logic fragmentation",
+                "TypeScript support",
+                "Code reuse complexity"
+              ]
             },
             "example": {
               "component": "UserProfile with search and filtering",
@@ -418,7 +453,11 @@ export default {
             "scenario": "E-commerce product listing with search, filters, sorting, and pagination",
             "before_options_api": {
               "lines": "150+ lines scattered across options",
-              "pain_points": ["Filter logic split across 4 places", "Sorting logic in computed and methods", "Pagination state mixed with product data"]
+              "pain_points": [
+                "Filter logic split across 4 places",
+                "Sorting logic in computed and methods",
+                "Pagination state mixed with product data"
+              ]
             },
             "after_composition_api": {
               "structure": [
@@ -428,7 +467,11 @@ export default {
                 "usePagination() - Pagination state and logic",
                 "Component - Thin template that composes features"
               ],
-              "benefits": ["Each feature is testable independently", "Logic can be reused across components", "TypeScript types flow naturally"]
+              "benefits": [
+                "Each feature is testable independently",
+                "Logic can be reused across components",
+                "TypeScript types flow naturally"
+              ]
             },
             "extracted_composable": `// useProductFilters.js
 import { ref, computed } from 'vue';
@@ -582,14 +625,22 @@ export function useProductFilters(products) {
                 "syntax": "const count = ref(0);",
                 "access": "count.value (in JS), {{ count }} (in template)",
                 "internals": "Wraps value in { value: ... } object with Proxy",
-                "best_for": ["Primitives (string, number, boolean)", "When you need to replace entire object", "Explicit reactivity signaling"]
+                "best_for": [
+                  "Primitives (string, number, boolean)",
+                  "When you need to replace entire object",
+                  "Explicit reactivity signaling"
+                ]
               },
               "reactive": {
                 "purpose": "Creates reactive proxy of object",
                 "syntax": "const state = reactive({ count: 0 });",
                 "access": "state.count (no .value)",
                 "internals": "Direct Proxy on object",
-                "best_for": ["Complex objects with nested properties", "When you want 'normal' object syntax", "State objects that won't be replaced"]
+                "best_for": [
+                  "Complex objects with nested properties",
+                  "When you want 'normal' object syntax",
+                  "State objects that won't be replaced"
+                ]
               },
               "toRefs": {
                 "purpose": "Converts reactive object to refs",

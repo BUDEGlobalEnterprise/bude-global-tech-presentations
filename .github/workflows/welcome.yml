@@ -17,10 +17,10 @@ jobs:
           # Customize messages
           issue-message: |
             Hi @{author}! 👋
-            
-            Thanks for opening this issue — we appreciate the contribution.
+
+            Thanks for opening this issue - we appreciate the contribution.
             If you'd like to work on this, comment below to claim it and we'll assign you.
-            
+
             Please follow the contribution guide: `CONTRIBUTING.md` and use the templates.
           pr-message: |
             Hi @{author}! Thanks for your PR. The maintainers will review shortly.

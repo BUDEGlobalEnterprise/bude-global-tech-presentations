@@ -39,7 +39,7 @@ Since we do not collect personal data, there is no personal data to retain. Anon
 
 ## 5. Transfer of Data
 
-Your information, including Usage Data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those from your jurisdiction.
+Your information, including Usage Data, may be transferred to - and maintained on - computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those from your jurisdiction.
 
 Bude Global Enterprise will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
 

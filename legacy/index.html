@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,13 +9,18 @@
     </title>
 
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3CFPLC20M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W3CFPLC20M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W3CFPLC20M', {
-        'send_page_view': true
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W3CFPLC20M", {
+        send_page_view: true,
       });
     </script>
 
@@ -28,10 +33,7 @@
       content="Bude Global, technical presentations, open source, reveal.js, vanilla javascript, knowledge sharing, json data, dynamic content, aravind govindhasamy"
     />
 
-    <link
-      rel="canonical"
-      href="https://ppt.budeglobal.in"
-    />
+    <link rel="canonical" href="https://ppt.budeglobal.in" />
 
     <meta
       property="og:title"
@@ -42,10 +44,7 @@
       content="We built an open-source, dynamic presentation platform with pure JS for effortless knowledge sharing."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://ppt.budeglobal.in"
-    />
+    <meta property="og:url" content="https://ppt.budeglobal.in" />
     <meta property="og:image" content="assets/images/budeglobal_logo.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -59,21 +58,31 @@
     />
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self'; 
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; 
                    script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com 'unsafe-inline'; 
                    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
                    img-src 'self' https: data:; 
                    font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net data:; 
-                   connect-src 'self' https://api.github.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com;" />
+                   connect-src 'self' https://api.github.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com;"
+    />
 
     <!-- Performance: Preconnect to CDNs for faster resource loading -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://api.github.com" crossorigin />
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    
+    <link
+      rel="preconnect"
+      href="https://www.google-analytics.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+
     <!-- Performance: DNS prefetch for faster resolution -->
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
@@ -82,7 +91,7 @@
 
     <!-- Critical CSS first -->
     <link rel="stylesheet" href="style.css" />
-    
+
     <!-- External stylesheets with media hints -->
     <link
       rel="stylesheet"
@@ -107,7 +116,7 @@
   <body>
     <!-- Skip link for accessibility -->
     <a href="#main-selector-ui" class="skip-link">Skip to main content</a>
-    
+
     <header class="global-header enhanced">
       <div class="gh-left">
         <a href="./" class="gh-brand">
@@ -154,7 +163,7 @@
             href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations"
           >
             <i class="ri-github-fill"></i
-            ><span class="stat-value" id="star-count">—</span>
+            ><span class="stat-value" id="star-count">-</span>
           </a>
 
           <a
@@ -165,7 +174,7 @@
             href="https://github.com/BUDEGlobalEnterprise/bude-global-tech-presentations/network/members"
           >
             <i class="ri-restart-line"></i
-            ><span class="stat-value" id="fork-count">—</span>
+            ><span class="stat-value" id="fork-count">-</span>
           </a>
 
           <!-- Analytics Stats (inline) -->
@@ -215,11 +224,11 @@
     <div id="main-selector-ui">
       <div class="header">
         <img
-            src="assets/images/budeglobal_logo.png"
-            alt="Bude Global Logo"
-            class="logo"
-            loading="lazy"
-          />
+          src="assets/images/budeglobal_logo.png"
+          alt="Bude Global Logo"
+          class="logo"
+          loading="lazy"
+        />
         <h1>Presentations</h1>
         <p>Expert Technical Knowledge for the Enterprise</p>
       </div>
@@ -250,7 +259,6 @@
           <div class="stat-label">Active Categories</div>
         </div>
       </div>
-
 
       <div class="categories-container" id="categories-container">
         <div class="loading">🔍 Loading presentations...</div>
@@ -323,15 +331,17 @@
         ></a>
       </div>
       <p>
-        © 2025 Bude Global Enterprise — Built with ❤️ for Open Collaboration
+        © 2025 Bude Global Enterprise - Built with ❤️ for Open Collaboration
       </p>
     </footer>
 
     <!-- Reveal.js must load before other scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"
-            integrity="sha512-TC5IA+BA/5YPBb/MJyk97ypzvXYUIlAksfuxlUXlhD7cM7y/stM4JuytDeYJlsiKxmRDV5krDyuugOoMOHwyJg=="
-            crossorigin="anonymous"></script>
-    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"
+      integrity="sha512-TC5IA+BA/5YPBb/MJyk97ypzvXYUIlAksfuxlUXlhD7cM7y/stM4JuytDeYJlsiKxmRDV5krDyuugOoMOHwyJg=="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Defer non-critical scripts for faster initial paint -->
     <script src="theme-switcher.js" defer></script>
     <script src="analytics.js" defer></script>
@@ -340,7 +350,7 @@
     <script src="presenter.js" defer></script>
     <script src="loader.js" defer></script>
     <script src="orientation-handler.js" defer></script>
-    
+
     <!-- 
     MODULAR FILES (for future use with build tools like Vite/Webpack):
     The following modular scripts are extracted from presenter.js
@@ -363,4 +373,3 @@
     -->
   </body>
 </html>
-

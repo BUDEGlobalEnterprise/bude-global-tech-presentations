@@ -8,7 +8,11 @@
       "description": "Comprehensive AWS guide covering fundamentals to advanced topics across 22 modules with 150+ detailed slides",
       "duration": "8 hours",
       "audience": "Cloud Architects, DevOps Engineers, Solutions Architects, Senior Developers",
-      "prerequisites": ["Basic networking knowledge", "Linux/Windows fundamentals", "Programming experience"],
+      "prerequisites": [
+        "Basic networking knowledge",
+        "Linux/Windows fundamentals",
+        "Programming experience"
+      ],
       "generated_at": "2025-12-31",
       "total_slides": 156,
       "modules": 22
@@ -25,11 +29,31 @@
             "title": "The Cloud Computing Revolution: AWS's Dominance",
             "subtitle": "How AWS Became the $80B Operating System of the Internet",
             "timeline": [
-              {"year": "2006", "event": "S3 & EC2 Launch - Birth of Modern Cloud", "impact": "Pay-as-you-go compute"},
-              {"year": "2009", "event": "RDS Launch - Managed Databases", "impact": "Death of self-managed DB servers"},
-              {"year": "2014", "event": "Lambda Launch - Serverless Computing", "impact": "No server management paradigm"},
-              {"year": "2018", "event": "Outposts Launch - Hybrid Cloud", "impact": "Cloud on-premises"},
-              {"year": "2022", "event": "Graviton3 Launch - ARM in Cloud", "impact": "40% better price-performance"}
+              {
+                "year": "2006",
+                "event": "S3 & EC2 Launch - Birth of Modern Cloud",
+                "impact": "Pay-as-you-go compute"
+              },
+              {
+                "year": "2009",
+                "event": "RDS Launch - Managed Databases",
+                "impact": "Death of self-managed DB servers"
+              },
+              {
+                "year": "2014",
+                "event": "Lambda Launch - Serverless Computing",
+                "impact": "No server management paradigm"
+              },
+              {
+                "year": "2018",
+                "event": "Outposts Launch - Hybrid Cloud",
+                "impact": "Cloud on-premises"
+              },
+              {
+                "year": "2022",
+                "event": "Graviton3 Launch - ARM in Cloud",
+                "impact": "40% better price-performance"
+              }
             ],
             "market_share": {
               "aws": "34%",
@@ -53,7 +77,12 @@
               "regions": {
                 "count": 32,
                 "expansion": "Announcing 3-5 new regions annually",
-                "criteria": ["Geologically stable", "Power grid redundancy", "Multiple fiber paths", "Local regulations"]
+                "criteria": [
+                  "Geologically stable",
+                  "Power grid redundancy",
+                  "Multiple fiber paths",
+                  "Local regulations"
+                ]
               },
               "availability_zones": {
                 "count": 102,
@@ -67,9 +96,26 @@
               }
             },
             "geographic_strategy": {
-              "americas": ["US-East-1 (Virginia)", "US-West-2 (Oregon)", "Canada-Central", "São Paulo"],
-              "europe": ["Ireland", "Frankfurt", "London", "Paris", "Stockholm"],
-              "asia_pacific": ["Tokyo", "Singapore", "Sydney", "Mumbai", "Seoul"],
+              "americas": [
+                "US-East-1 (Virginia)",
+                "US-West-2 (Oregon)",
+                "Canada-Central",
+                "São Paulo"
+              ],
+              "europe": [
+                "Ireland",
+                "Frankfurt",
+                "London",
+                "Paris",
+                "Stockholm"
+              ],
+              "asia_pacific": [
+                "Tokyo",
+                "Singapore",
+                "Sydney",
+                "Mumbai",
+                "Seoul"
+              ],
               "middle_east": ["Bahrain", "UAE"],
               "africa": ["Cape Town"]
             },
@@ -199,7 +245,7 @@
             ],
             "script": [
               "Let's test your cloud fundamentals.",
-              "These questions aren't trivia—they're foundational concepts that inform architectural decisions."
+              "These questions aren't trivia-they're foundational concepts that inform architectural decisions."
             ]
           }
         ],
@@ -221,25 +267,53 @@
             "title": "IAM Fundamentals: Users, Groups, Roles, Policies",
             "hierarchy": {
               "root_user": {
-                "characteristics": ["Created with account", "Unlimited permissions", "Can close account", "Should be locked away"],
-                "best_practices": ["Enable MFA", "Use only for account-level tasks", "Store credentials securely"]
+                "characteristics": [
+                  "Created with account",
+                  "Unlimited permissions",
+                  "Can close account",
+                  "Should be locked away"
+                ],
+                "best_practices": [
+                  "Enable MFA",
+                  "Use only for account-level tasks",
+                  "Store credentials securely"
+                ]
               },
               "iam_users": {
-                "characteristics": ["Human identities", "Long-term credentials", "Password + Access Keys", "Permission inheritance"],
+                "characteristics": [
+                  "Human identities",
+                  "Long-term credentials",
+                  "Password + Access Keys",
+                  "Permission inheritance"
+                ],
                 "modern_approach": "Use IAM Identity Center (SSO) instead"
               },
               "iam_roles": {
-                "characteristics": ["Temporary credentials", "Assumed by services/users", "No password/keys", "Session duration (1-12 hours)"],
-                "use_cases": ["EC2 instance roles", "Lambda execution roles", "Cross-account access"]
+                "characteristics": [
+                  "Temporary credentials",
+                  "Assumed by services/users",
+                  "No password/keys",
+                  "Session duration (1-12 hours)"
+                ],
+                "use_cases": [
+                  "EC2 instance roles",
+                  "Lambda execution roles",
+                  "Cross-account access"
+                ]
               },
               "iam_groups": {
-                "characteristics": ["Collection of users", "Permission management", "No credentials", "Users can be in multiple groups"],
+                "characteristics": [
+                  "Collection of users",
+                  "Permission management",
+                  "No credentials",
+                  "Users can be in multiple groups"
+                ],
                 "best_practice": "Assign permissions to groups, not individual users"
               }
             },
             "script": [
               "IAM is the foundation of AWS security.",
-              "If you get IAM wrong, nothing else matters—your security is compromised.",
+              "If you get IAM wrong, nothing else matters-your security is compromised.",
               "The golden rule: Never use the root user for daily operations. Lock it away with MFA.",
               "Modern best practice: Don't even create IAM users. Use IAM Identity Center to federate your corporate directory."
             ]
@@ -307,7 +381,11 @@
                   "Regularly review and remove unused permissions",
                   "Implement permission boundaries for sensitive roles"
                 ],
-                "tools": ["IAM Access Analyzer", "IAM Credentials Report", "AWS Config"]
+                "tools": [
+                  "IAM Access Analyzer",
+                  "IAM Credentials Report",
+                  "AWS Config"
+                ]
               },
               {
                 "category": "Credential Management",
@@ -462,7 +540,7 @@
               "Let's build a real-world IAM policy.",
               "Notice what we're NOT granting: s3:* or ecs:*.",
               "We're being surgical: only the exact permissions needed.",
-              "The MFA condition is critical—it prevents compromise even if credentials leak."
+              "The MFA condition is critical-it prevents compromise even if credentials leak."
             ]
           }
         ],
@@ -486,12 +564,20 @@
               {
                 "component": "VPC",
                 "description": "Virtual network isolated from other AWS customers",
-                "characteristics": ["Regional resource", "CIDR range 10.0.0.0/16 typical", "Cannot be changed after creation"]
+                "characteristics": [
+                  "Regional resource",
+                  "CIDR range 10.0.0.0/16 typical",
+                  "Cannot be changed after creation"
+                ]
               },
               {
                 "component": "Subnets",
                 "description": "Segments of VPC IP range, mapped to Availability Zones",
-                "types": ["Public (route to IGW)", "Private (route to NAT)", "Isolated (no internet)"]
+                "types": [
+                  "Public (route to IGW)",
+                  "Private (route to NAT)",
+                  "Isolated (no internet)"
+                ]
               },
               {
                 "component": "Route Tables",
@@ -501,7 +587,11 @@
               {
                 "component": "Internet Gateway",
                 "description": "Horizontally scaled gateway for VPC internet access",
-                "characteristics": ["One per VPC", "Managed by AWS", "No bandwidth constraints"]
+                "characteristics": [
+                  "One per VPC",
+                  "Managed by AWS",
+                  "No bandwidth constraints"
+                ]
               }
             ],
             "cidr_planning": {
@@ -512,7 +602,7 @@
             },
             "script": [
               "VPC is AWS's answer to 'How do I create a private network in the cloud?'",
-              "It's not just virtual—it's YOUR virtual network, completely isolated.",
+              "It's not just virtual-it's YOUR virtual network, completely isolated.",
               "The CIDR range is crucial. Choose wisely: too small and you'll run out of IPs; too large and you waste addresses.",
               "Standard pattern: /16 VPC with /24 subnets across AZs."
             ]
@@ -544,13 +634,19 @@
             "security_groups": [
               {
                 "layer": "ALB Security Group",
-                "inbound": ["HTTP/80 from 0.0.0.0/0", "HTTPS/443 from 0.0.0.0/0"],
+                "inbound": [
+                  "HTTP/80 from 0.0.0.0/0",
+                  "HTTPS/443 from 0.0.0.0/0"
+                ],
                 "outbound": ["HTTP/8080 to App Tier SG"]
               },
               {
                 "layer": "App Tier Security Group",
                 "inbound": ["HTTP/8080 from ALB SG", "SSH/22 from Bastion SG"],
-                "outbound": ["PostgreSQL/5432 to DB Tier SG", "HTTP/443 to internet via NAT"]
+                "outbound": [
+                  "PostgreSQL/5432 to DB Tier SG",
+                  "HTTP/443 to internet via NAT"
+                ]
               },
               {
                 "layer": "DB Tier Security Group",
@@ -561,9 +657,9 @@
             "script": [
               "This is the blueprint for 80% of web applications on AWS.",
               "Notice the defense-in-depth:",
-              "1. Public tier only has ALB—no compute exposed.",
+              "1. Public tier only has ALB-no compute exposed.",
               "2. App tier can't be reached from internet, only from ALB.",
-              "3. Data tier can't even reach internet—complete isolation.",
+              "3. Data tier can't even reach internet-complete isolation.",
               "Security Groups provide microsegmentation at instance level."
             ]
           },
@@ -576,21 +672,40 @@
                 "pattern": "VPC Peering",
                 "description": "Direct connection between two VPCs",
                 "pros": ["No bandwidth charges", "Low latency", "Simple setup"],
-                "cons": ["Non-transitive", "Scaling issues (n² connections)", "CIDR cannot overlap"],
+                "cons": [
+                  "Non-transitive",
+                  "Scaling issues (n² connections)",
+                  "CIDR cannot overlap"
+                ],
                 "use_case": "Connecting 2-3 VPCs"
               },
               {
                 "pattern": "Transit Gateway",
                 "description": "Hub-and-spoke routing for multiple VPCs",
-                "pros": ["Transitive routing", "Centralized management", "Scales to thousands of VPCs"],
-                "cons": ["Per-hour charge", "Data transfer costs", "Complex routing tables"],
+                "pros": [
+                  "Transitive routing",
+                  "Centralized management",
+                  "Scales to thousands of VPCs"
+                ],
+                "cons": [
+                  "Per-hour charge",
+                  "Data transfer costs",
+                  "Complex routing tables"
+                ],
                 "use_case": "Enterprise networks, multiple accounts"
               },
               {
                 "pattern": "VPC Endpoints",
                 "description": "Private connection to AWS services",
-                "types": ["Interface Endpoint (ENI)", "Gateway Endpoint (S3, DynamoDB)"],
-                "benefits": ["No internet traffic", "Improved security", "Lower latency"],
+                "types": [
+                  "Interface Endpoint (ENI)",
+                  "Gateway Endpoint (S3, DynamoDB)"
+                ],
+                "benefits": [
+                  "No internet traffic",
+                  "Improved security",
+                  "Lower latency"
+                ],
                 "use_case": "Access S3 from private instances"
               }
             ],
@@ -613,20 +728,38 @@
               {
                 "tool": "VPC Flow Logs",
                 "description": "Capture IP traffic metadata",
-                "data": ["Source/destination IP", "Ports", "Protocol", "Bytes", "Action (ACCEPT/REJECT)"],
-                "destinations": ["CloudWatch Logs", "S3", "Kinesis Data Firehose"],
+                "data": [
+                  "Source/destination IP",
+                  "Ports",
+                  "Protocol",
+                  "Bytes",
+                  "Action (ACCEPT/REJECT)"
+                ],
+                "destinations": [
+                  "CloudWatch Logs",
+                  "S3",
+                  "Kinesis Data Firehose"
+                ],
                 "use_case": "Security analysis, troubleshooting"
               },
               {
                 "tool": "Traffic Mirroring",
                 "description": "Copy network traffic for inspection",
-                "targets": ["Network appliances", "Security tools", "Monitoring systems"],
+                "targets": [
+                  "Network appliances",
+                  "Security tools",
+                  "Monitoring systems"
+                ],
                 "use_case": "Intrusion detection, compliance monitoring"
               },
               {
                 "tool": "Network Manager",
                 "description": "Global network management",
-                "features": ["Topology visualization", "Change automation", "Performance monitoring"],
+                "features": [
+                  "Topology visualization",
+                  "Change automation",
+                  "Performance monitoring"
+                ],
                 "use_case": "Multi-region network management"
               }
             ],
@@ -654,18 +787,34 @@
             "cost_drivers": [
               {
                 "driver": "Data Transfer",
-                "patterns": ["Cross-AZ ($0.01/GB)", "Cross-Region ($0.02/GB)", "Internet egress ($0.09/GB)"],
-                "optimization": ["Use same AZ for chatty services", "Use CloudFront for static content", "Implement caching"]
+                "patterns": [
+                  "Cross-AZ ($0.01/GB)",
+                  "Cross-Region ($0.02/GB)",
+                  "Internet egress ($0.09/GB)"
+                ],
+                "optimization": [
+                  "Use same AZ for chatty services",
+                  "Use CloudFront for static content",
+                  "Implement caching"
+                ]
               },
               {
                 "driver": "NAT Gateways",
                 "cost": "$0.045/hour + $0.045/GB processed",
-                "optimization": ["Use NAT instances for small workloads", "Implement VPC endpoints", "Use private subnets only when needed"]
+                "optimization": [
+                  "Use NAT instances for small workloads",
+                  "Implement VPC endpoints",
+                  "Use private subnets only when needed"
+                ]
               },
               {
                 "driver": "Transit Gateway",
                 "cost": "$0.05/hour per attachment + data processing",
-                "optimization": ["Consolidate VPCs", "Use RAM sharing", "Monitor attachment utilization"]
+                "optimization": [
+                  "Consolidate VPCs",
+                  "Use RAM sharing",
+                  "Monitor attachment utilization"
+                ]
               }
             ],
             "savings_strategies": [
@@ -701,32 +850,79 @@
             "families": [
               {
                 "family": "General Purpose (M7g, M6i, T4g)",
-                "characteristics": ["Balanced CPU/Memory", "Burstable (T) or steady (M)", "Graviton (g) or Intel (i)"],
-                "use_cases": ["Web servers", "Small databases", "Development environments"],
+                "characteristics": [
+                  "Balanced CPU/Memory",
+                  "Burstable (T) or steady (M)",
+                  "Graviton (g) or Intel (i)"
+                ],
+                "use_cases": [
+                  "Web servers",
+                  "Small databases",
+                  "Development environments"
+                ],
                 "graviton_advantage": "20% cheaper, 40% better performance for supported workloads"
               },
               {
                 "family": "Compute Optimized (C7g, C6i)",
-                "characteristics": ["High CPU to memory ratio", "Best for compute-intensive", "High clock speeds"],
-                "use_cases": ["Batch processing", "Gaming servers", "Scientific modeling", "Ad serving"],
+                "characteristics": [
+                  "High CPU to memory ratio",
+                  "Best for compute-intensive",
+                  "High clock speeds"
+                ],
+                "use_cases": [
+                  "Batch processing",
+                  "Gaming servers",
+                  "Scientific modeling",
+                  "Ad serving"
+                ],
                 "performance": "Up to 15% better price-performance than M6i"
               },
               {
                 "family": "Memory Optimized (R7g, X2gd, X2iezn)",
-                "characteristics": ["High memory to CPU ratio", "Large memory footprint", "Some with persistent memory"],
-                "use_cases": ["In-memory databases", "Real-time analytics", "SAP HANA", "Redis/Memcached"],
-                "memory_types": ["DRAM (R7g)", "DRAM + Intel Optane (X2iezn)", "DRAM only (X2gd)"]
+                "characteristics": [
+                  "High memory to CPU ratio",
+                  "Large memory footprint",
+                  "Some with persistent memory"
+                ],
+                "use_cases": [
+                  "In-memory databases",
+                  "Real-time analytics",
+                  "SAP HANA",
+                  "Redis/Memcached"
+                ],
+                "memory_types": [
+                  "DRAM (R7g)",
+                  "DRAM + Intel Optane (X2iezn)",
+                  "DRAM only (X2gd)"
+                ]
               },
               {
                 "family": "Storage Optimized (I4i, D3, D3en)",
-                "characteristics": ["High sequential I/O", "Local NVMe storage", "High disk throughput"],
-                "use_cases": ["NoSQL databases", "Data warehousing", "Distributed file systems", "Log processing"],
+                "characteristics": [
+                  "High sequential I/O",
+                  "Local NVMe storage",
+                  "High disk throughput"
+                ],
+                "use_cases": [
+                  "NoSQL databases",
+                  "Data warehousing",
+                  "Distributed file systems",
+                  "Log processing"
+                ],
                 "storage": ["Up to 60TB NVMe (I4i)", "HDD optimized (D3en)"]
               },
               {
                 "family": "Accelerated Computing (P4, Inf1, Trn1)",
-                "characteristics": ["GPUs, FPGAs, Trainium/Inferentia", "Specialized hardware"],
-                "use_cases": ["ML training (P4)", "ML inference (Inf1)", "HPC", "Video encoding"],
+                "characteristics": [
+                  "GPUs, FPGAs, Trainium/Inferentia",
+                  "Specialized hardware"
+                ],
+                "use_cases": [
+                  "ML training (P4)",
+                  "ML inference (Inf1)",
+                  "HPC",
+                  "Video encoding"
+                ],
                 "cost_savings": "Up to 70% cheaper ML inference vs GPUs"
               }
             ],
@@ -764,14 +960,22 @@
                 "performance": "Millions of IOPS (NVMe)",
                 "durability": "Ephemeral - lost on stop/terminate",
                 "persistence": "Tied to instance lifecycle",
-                "best_for": ["Cache/temp data", "Hadoop/Spark", "High-performance DBs"]
+                "best_for": [
+                  "Cache/temp data",
+                  "Hadoop/Spark",
+                  "High-performance DBs"
+                ]
               },
               "efs": {
                 "type": "Network file system (NFS)",
                 "performance": "Scalable throughput/IOPS",
                 "durability": "11 nines (99.999999999%)",
                 "persistence": "Fully managed, scales automatically",
-                "best_for": ["Shared file systems", "Content management", "Home directories"]
+                "best_for": [
+                  "Shared file systems",
+                  "Content management",
+                  "Home directories"
+                ]
               }
             },
             "ebs_types": [
@@ -803,8 +1007,8 @@
             "script": [
               "Storage is not one-size-fits-all.",
               "EBS is your go-to for persistent storage. It's like an external USB drive for your instance.",
-              "Instance Store is RAM for your disk—blazing fast but temporary. Great for Spark scratch space.",
-              "EFS is the network drive—multiple instances can mount it simultaneously. Perfect for shared configs."
+              "Instance Store is RAM for your disk-blazing fast but temporary. Great for Spark scratch space.",
+              "EFS is the network drive-multiple instances can mount it simultaneously. Perfect for shared configs."
             ]
           },
           {
@@ -815,7 +1019,11 @@
               {
                 "pattern": "Target Tracking",
                 "description": "Maintain metric at target value",
-                "metrics": ["CPU Utilization (70%)", "Request Count Per Target", "Network In/Out"],
+                "metrics": [
+                  "CPU Utilization (70%)",
+                  "Request Count Per Target",
+                  "Network In/Out"
+                ],
                 "use_case": "Steady-state workloads with clear metrics"
               },
               {
@@ -827,7 +1035,11 @@
               {
                 "pattern": "Scheduled Scaling",
                 "description": "Scale at predetermined times",
-                "examples": ["Scale up before business hours", "Scale down overnight", "Weekend vs weekday schedules"],
+                "examples": [
+                  "Scale up before business hours",
+                  "Scale down overnight",
+                  "Weekend vs weekday schedules"
+                ],
                 "use_case": "Predictable traffic patterns"
               },
               {
@@ -908,8 +1120,17 @@
             ],
             "spot_interruption_handling": {
               "notification": "2-minute warning before termination",
-              "actions": ["Drain connections", "Save state", "Launch replacement", "Checkpoint progress"],
-              "tools": ["Spot Interruption Handler", "EC2 Auto Scaling lifecycle hooks", "EventBridge rules"]
+              "actions": [
+                "Drain connections",
+                "Save state",
+                "Launch replacement",
+                "Checkpoint progress"
+              ],
+              "tools": [
+                "Spot Interruption Handler",
+                "EC2 Auto Scaling lifecycle hooks",
+                "EventBridge rules"
+              ]
             },
             "script": [
               "Spot instances are the secret weapon of cost optimization.",

@@ -16,7 +16,7 @@ export interface CapturedDeck {
 /**
  * Renders each slide off-screen at 1280×720 (16:9) using the real slide
  * components, then snapshots it to a PNG with modern-screenshot (SVG
- * foreignObject — so Tailwind v4 oklch colors, gradients and fonts render
+ * foreignObject - so Tailwind v4 oklch colors, gradients and fonts render
  * exactly as the browser shows them). Sequential by necessity (single stage).
  */
 export async function captureSlides(

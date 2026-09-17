@@ -77,7 +77,7 @@
               "title": "🛡️ The 5 Pillars of Successful DevOps",
               "list": [
                 "<strong>Culture:</strong> Shared responsibility, trust, and open collaboration across all engineering roles.",
-                "<strong>Automation:</strong> Automate everything possible—builds, testing, infrastructure, and releases.",
+                "<strong>Automation:</strong> Automate everything possible-builds, testing, infrastructure, and releases.",
                 "<strong>Lean:</strong> Eliminate waste, work in small batches, and optimize the value stream map.",
                 "<strong>Measurement:</strong> Collect data on metrics like deployment frequency and mean time to recovery (MTTR).",
                 "<strong>Sharing:</strong> Share knowledge, lessons learned, and tools openly across the organization."

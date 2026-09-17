@@ -44,7 +44,7 @@ import {
 /**
  * Named line icons authors can reference from slide JSON via an `icon`
  * field (on a slide header or a `box.list` item), instead of an emoji.
- * Keep the names short and stable — they're a content API.
+ * Keep the names short and stable - they're a content API.
  */
 const ICONS: Record<string, LucideIcon> = {
   bot: Bot,

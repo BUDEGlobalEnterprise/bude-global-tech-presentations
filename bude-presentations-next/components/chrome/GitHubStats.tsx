@@ -29,7 +29,7 @@ function readCache(): Cached | null {
 }
 
 function fmt(n: number | null) {
-  if (n == null) return "—";
+  if (n == null) return "-";
   if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
   return String(n);
 }
@@ -64,10 +64,10 @@ export function GitHubStats() {
             JSON.stringify({ ...next, ts: Date.now() } satisfies Cached),
           );
         } catch {
-          // localStorage unavailable (private mode) — ignore.
+          // localStorage unavailable (private mode) - ignore.
         }
       } catch {
-        // Network/rate-limit error — leave placeholders.
+        // Network/rate-limit error - leave placeholders.
       }
     })();
     return () => {

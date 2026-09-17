@@ -180,7 +180,7 @@ const PRESENTATIONS_CONFIG = [
     file: "presentations/intro-dart.json",
     title: "Dart – Modern Programming Language for Apps",
     description:
-      "Google's modern, object-oriented programming language optimized for UI, fast compilation, and cross-platform development — powering Flutter and beyond.",
+      "Google's modern, object-oriented programming language optimized for UI, fast compilation, and cross-platform development - powering Flutter and beyond.",
     keywords: [
       "dart",
       "flutter",
@@ -309,7 +309,7 @@ const PRESENTATIONS_CONFIG = [
     file: "presentations/intro-rust.json",
     title: "Rust – Systems Programming Language",
     description:
-      "A memory-safe, high-performance systems programming language focused on safety, concurrency, and speed — ideal for backend services, embedded systems, and performance-critical software.",
+      "A memory-safe, high-performance systems programming language focused on safety, concurrency, and speed - ideal for backend services, embedded systems, and performance-critical software.",
     keywords: [
       "rust",
       "systems-programming",

@@ -13,7 +13,7 @@ import { z } from "zod";
  * to have a `type` string and is allowed to carry anything else.
  *
  * The renderer dispatches on `slide.type` and falls back to a generic
- * card for unknown types — so adding a new type later is purely additive.
+ * card for unknown types - so adding a new type later is purely additive.
  */
 
 export const KNOWN_SLIDE_TYPES = [

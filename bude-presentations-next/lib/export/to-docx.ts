@@ -2,7 +2,7 @@ import { downloadBlob } from "./download";
 import type { ExportDeck } from "./extract";
 
 /**
- * A landscape Word document, one full-width slide image per page — a
+ * A landscape Word document, one full-width slide image per page - a
  * printable handout of the real deck rather than a text outline.
  */
 export async function exportDocx(deck: ExportDeck, images: string[]) {

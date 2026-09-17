@@ -30,7 +30,7 @@ Become a sponsor and get your logo on our README on GitHub with a link to your s
 
 ## 🌟 Overview
 
-Welcome to the official repository for **Bude Global Tech Presentations** — a cutting-edge platform designed to democratize technical knowledge through engaging, interactive presentations. Built by developers, for developers, this platform serves as a centralized hub where the Bude Global community can discover, share, and learn from expertly crafted technical content.
+Welcome to the official repository for **Bude Global Tech Presentations** - a cutting-edge platform designed to democratize technical knowledge through engaging, interactive presentations. Built by developers, for developers, this platform serves as a centralized hub where the Bude Global community can discover, share, and learn from expertly crafted technical content.
 
 **Important**: By using this service, you agree to our [Terms and Conditions](Terms%20and%20Conditions.md) and [Privacy Policy](PRIVACY_POLICY.md).
 
@@ -89,7 +89,7 @@ Our mission is to foster a culture of continuous learning and knowledge sharing 
 - **🎨 Customizable Themes**: Easy to customize colors, fonts, and styles
 - **🔌 Extensible**: Built on Reveal.js with support for plugins
 - **📋 Template System**: Pre-built templates for quick presentation creation
-- **🚀 No Build Process**: Pure HTML/CSS/JS — no compilation required
+- **🚀 No Build Process**: Pure HTML/CSS/JS - no compilation required
 
 ---
 
@@ -126,7 +126,7 @@ This project leverages modern web technologies for optimal performance and devel
 
 - ✅ **No dependencies**: Zero npm packages, runs directly in browser
 - ✅ **Fast loading**: Minimal external resources with CDN optimization
-- ✅ **Easy deployment**: Static files — host anywhere
+- ✅ **Easy deployment**: Static files - host anywhere
 - ✅ **Cross-browser**: Compatible with all modern browsers
 
 ### ⚡ Performance Optimizations
