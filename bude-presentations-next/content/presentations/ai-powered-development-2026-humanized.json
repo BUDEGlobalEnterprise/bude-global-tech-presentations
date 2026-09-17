@@ -1,0 +1,769 @@
+{
+  "presentation": {
+    "topics": [
+      {
+        "id": "opening",
+        "title": "Welcome",
+        "slides": [
+          {
+            "type": "title",
+            "title": "Circuit Digest &amp; The Age of AI-Assisted Development",
+            "subtitle": "Aravind Govindhasamy<br/><span class=\"text-sm md:text-base text-zinc-400\">18 September 2026</span><br/><span class=\"mt-4 inline-block text-zinc-400 italic text-base md:text-xl\">&ldquo;AI won&rsquo;t replace developers, but developers using AI will replace those who don&rsquo;t.&rdquo;</span>",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg"
+          },
+          {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
+          },
+          {
+            "type": "topic-title",
+            "title": "Where this is going",
+            "subtitle": "A few live polls, and one slide about a dog",
+            "eyebrow": "Roadmap",
+            "icon": "map",
+            "image": "/assets/images/ai-webinar-funny/markus-code.jpg"
+          },
+          {
+            "type": "content",
+            "title": "What we're doing for the next 30 minutes",
+            "icon": "workflow",
+            "box": {
+              "list": [
+                {
+                  "icon": "circuit-board",
+                  "title": "Me &amp; Circuit Digest",
+                  "text": "How a PSGCAS guy ended up debugging RFID readers at 2 AM for a living."
+                },
+                {
+                  "icon": "brain",
+                  "title": "The AI landscape",
+                  "text": "How we went from autocomplete to robots that yell at your terminal."
+                },
+                {
+                  "icon": "workflow",
+                  "title": "Using it without making a mess",
+                  "text": "Where AI actually helps, and where it'll smile and lie to your face."
+                },
+                {
+                  "icon": "hammer",
+                  "title": "The actual tools",
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; which one, when, and why."
+                }
+              ]
+            },
+            "note": {
+              "text": "Please interrupt me. A webinar where nobody talks back is just a podcast with worse audio."
+            }
+          }
+        ]
+      },
+      {
+        "id": "me-and-circuit-digest",
+        "title": "Me, and a website about circuits",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Me, and a website about circuits",
+            "subtitle": "The version they don't put on the LinkedIn banner",
+            "eyebrow": "Background",
+            "icon": "circuit-board",
+            "image": "/assets/images/ai-webinar-funny/circuit-board.jpg"
+          },
+          {
+            "type": "content",
+            "title": "My actual job for 2.5 years (no glamour)",
+            "icon": "bug",
+            "image": "/assets/images/ai-webinar-funny/meme-surprised-pikachu.jpg",
+            "imageLayout": "right-image",
+            "caption": "Pushed on Friday at 5 PM. Shocked when it broke. Every single time.",
+            "box": {
+              "content": "<p>The CV says \"integrated RFID systems.\" The reality was more like:</p>",
+              "list": [
+                {
+                  "icon": "warning",
+                  "text": "<strong>150+ production fires</strong> put out, mostly at hours that shouldn't exist."
+                },
+                {
+                  "icon": "cpu",
+                  "text": "Byte-level <strong>UID and CSN wrestling</strong> &mdash; because two readers from two vendors will never, ever agree on endianness."
+                },
+                {
+                  "icon": "zap",
+                  "text": "<strong>RS-232 timeouts</strong> that worked perfectly in the lab and only failed on-site, only on Fridays, only when I had plans."
+                },
+                {
+                  "icon": "database",
+                  "text": "<strong>SQL deadlocks</strong> under load, sync that ate transactions, and a thermal printer that had opinions about paper width."
+                }
+              ]
+            },
+            "note": {
+              "text": "None of this was in any tutorial. All of it is what the actual job looks like."
+            }
+          },
+          {
+            "type": "content",
+            "title": "So what even is Circuit Digest?",
+            "icon": "radio",
+            "image": "/assets/images/ai-webinar-funny/cdc-features.webp",
+            "imageLayout": "right-image",
+            "caption": "The actual feature graphic. SMS alerts, plate reads, barcode scans, GPS pins. All real.",
+            "box": {
+              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
+              "list": [
+                {
+                  "icon": "book",
+                  "text": "One of the most-read <strong>electronics and embedded</strong> publications on the internet. Seriously."
+                },
+                {
+                  "icon": "cpu",
+                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code, actual photos of messy breadboards."
+                },
+                {
+                  "icon": "search",
+                  "text": "Datasheets translated into human language, and hardware reviews that aren't just \"it's great!\" five times."
+                },
+                {
+                  "icon": "users",
+                  "text": "Read by students, hobbyists, and engineers who Google things at midnight in more countries than I can count."
+                }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "Circuit Digest Cloud &mdash; what I actually build now",
+            "layout": "right-image",
+            "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
+            "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
+            "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
+            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp. You know, the fun stuff that breaks at 3 AM.</p>"
+          },
+          {
+            "type": "content",
+            "title": "This is the actual product, not a mockup",
+            "icon": "check",
+            "image": "/assets/images/ai-webinar-funny/cdc-landing.png",
+            "imageLayout": "right-image",
+            "caption": "No Figma screenshot. This is circuitdigest.cloud, live, as of yesterday.",
+            "box": {
+              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building stuff with it.</p><p>\"One platform to analyse, control, and connect\" &mdash; that's the real tagline. I didn't make it up for this slide, I promise.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The stack (minus the buzzwords)",
+            "icon": "server",
+            "image": "/assets/images/ai-webinar-funny/cdc-apis.png",
+            "imageLayout": "left-image",
+            "caption": "The real API catalog. Pick one, it's live in minutes. No, really.",
+            "box": {
+              "list": [
+                {
+                  "icon": "zap",
+                  "text": "<strong>FastAPI + PostgreSQL + MQTT</strong> doing the heavy lifting for ingestion and device APIs."
+                },
+                {
+                  "icon": "map",
+                  "text": "<strong>GPS tracking</strong> with polygon geofencing and maps that actually update in real time."
+                },
+                {
+                  "icon": "eye",
+                  "text": "<strong>Computer vision</strong> for number plates, helmets, objects, plus live video. Yes, on an ESP32."
+                },
+                {
+                  "icon": "git-branch",
+                  "text": "Deployed on <strong>DigitalOcean</strong> with <strong>GitHub Actions</strong> and <strong>Sentry</strong> catching the 2 AM surprises before I do."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "GeoLinker &mdash; this is real GPS, not a screenshot",
+            "icon": "map",
+            "image": "/assets/images/ai-webinar-funny/cdc-geolinker-map.webp",
+            "imageLayout": "right-image",
+            "caption": "A real tracker on a real walk around Coimbatore. 7.18 km, 26 minutes. My feet hurt.",
+            "box": {
+              "content": "<p>GeoLinker is the GPS tracking piece of Circuit Digest Cloud: live position, route history, and polygon geofencing, plotted on an actual map.</p><p>This is not a mockup. One of our trackers, walking the streets near our office. I was the one walking.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "From jumper wires to a working dashboard",
+            "icon": "cpu",
+            "image": "/assets/images/ai-webinar-funny/cdc-breadboard-gps.gif",
+            "imageLayout": "left-image",
+            "caption": "ESP32, a SIM800L, a fistful of jumper wires, and a phone proving it actually works.",
+            "box": {
+              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on the other.</p><p>Everything in the tools section exists to make the wiring side faster. Not to replace it. You still need to know which wire goes where.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The dashboard nobody believes is real",
+            "icon": "eye",
+            "image": "/assets/images/ai-webinar-funny/cdc-dashboard.png",
+            "imageLayout": "right-image",
+            "caption": "Live camera, live chart, live controls. This is not a template. It's our product.",
+            "box": {
+              "content": "<p>Colour pickers for the lights, a slider and gauge for room temperature, a WebRTC camera feed, and a 24-hour chart &mdash; all updating from actual MQTT messages sent by actual hardware sitting on someone's desk.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "We already put an AI in it (yes, on WhatsApp)",
+            "icon": "bot",
+            "image": "/assets/images/ai-webinar-funny/cdc-ai-assistant.png",
+            "imageLayout": "left-image",
+            "caption": "\"Which of my devices are offline?\" It just answers. At 3 AM. Without complaining.",
+            "box": {
+              "content": "<p>Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less. It even adjusts to IST without being asked.</p><p>Which is a convenient place to stop talking about our product and start talking about how this magic became possible at all.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ai-landscape",
+        "title": "From autocomplete to whatever this is",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "From autocomplete to whatever this is",
+            "subtitle": "A short, very opinionated history",
+            "eyebrow": "The landscape",
+            "icon": "brain",
+            "image": "/assets/images/ai-webinar-funny/dev-window.jpg"
+          },
+          {
+            "type": "content",
+            "title": "Four years, four entirely different vibes",
+            "icon": "clock",
+            "image": "/assets/images/ai-webinar-funny/meme-expanding-brain.jpg",
+            "imageLayout": "right-image",
+            "caption": "The last panel is not a joke. Someone in this room will do this by Friday.",
+            "box": {
+              "list": [
+                {
+                  "icon": "code",
+                  "text": "<strong>Autocomplete era:</strong> it finished your line. Sometimes even the right one."
+                },
+                {
+                  "icon": "chat",
+                  "text": "<strong>Chat era (2022):</strong> you asked, it answered, you copy-pasted and hoped for the best."
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>Editor copilots:</strong> it moved into the IDE. Could see your file. Still couldn't see your pain."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "<strong>Agent era (now):</strong> it reads the repo, runs the tests, reads the errors, sulks, and tries again."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "A chatbot vs an agent (finally, a clear answer)",
+            "leftTitle": "Chatbot",
+            "leftPoints": [
+              "Explains code and answers questions",
+              "You copy, paste, wire it up yourself",
+              "Great for learning and getting unstuck",
+              "One turn at a time &mdash; you drive everything"
+            ],
+            "rightTitle": "Agent",
+            "rightPoints": [
+              "Reads files, runs commands, edits code directly",
+              "Plans, acts, checks its own work, fixes its own mess",
+              "Can read docs and confirm what it did actually works",
+              "Chases a goal across many steps without you babysitting"
+            ],
+            "note": {
+              "text": "Claude Code, Antigravity, and Codex are all in the right column. That's the whole shift."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "The colleague who never sleeps and never brings snacks",
+            "layout": "left-image",
+            "image": "/assets/images/ai-webinar-funny/robot.jpg",
+            "imageAlt": "A frazzled four-armed robot coding at 2:47 AM surrounded by coffee cups",
+            "caption": "2:47 AM. Fourth coffee. \"Project: almost done.\" It is absolutely not almost done.",
+            "content": "<h4>The word that matters is <em>agency</em></h4><p>A chatbot can explain a bug. An agent opens the file, reproduces the bug, patches it, runs the suite, and hands you a diff. Same brain underneath. Completely different thing to work with.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Hot take (I will die on this hill)",
+            "icon": "warning",
+            "image": "/assets/images/ai-webinar-funny/workspace.jpg",
+            "imageLayout": "right-image",
+            "caption": "\"Sleep is optional.\" \"Deploy on Friday.\" This wall is the argument FOR AI, not against it.",
+            "box": {
+              "content": "<blockquote>Most \"AI will replace developers\" posts are written by people who have never been paged at 3 AM to fix a data migration.</blockquote><p>The job was never typing. It's deciding what to build, and being the person who understands the system when everything is on fire. AI moves the typing. It does not move the responsibility.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "Adoption, roughly (no fake chart, I promise)",
+            "icon": "gauge",
+            "image": "/assets/images/ai-webinar-funny/analytics.jpg",
+            "imageLayout": "right-image",
+            "caption": "Every AI keynote has this exact chart. Here's ours. For compliance.",
+            "box": {
+              "content": "<p>I could show you a real adoption number. You'd forget it by the next slide. So here's the honest version:</p><p>In 2022, using AI at work was a party trick. In 2026, <em>not</em> using it is the thing that gets a raised eyebrow in code review. That's the whole trend. You're welcome.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "The skill that actually matters now",
+            "icon": "book",
+            "image": "/assets/images/ai-webinar-funny/books.jpg",
+            "imageLayout": "left-image",
+            "caption": "\"Algorithms and Suffering\" is not a real book. But it should be. Fundamentals still win.",
+            "box": {
+              "list": [
+                {
+                  "icon": "target",
+                  "text": "<strong>Prompting</strong> &mdash; giving enough context so it doesn't hallucinate your database schema."
+                },
+                {
+                  "icon": "eye",
+                  "text": "<strong>Verifying</strong> &mdash; reading AI output like you'd review a pull request from that one intern."
+                },
+                {
+                  "icon": "lock",
+                  "text": "<strong>Security sense</strong> &mdash; not pasting your .env file into the chat. You'd be surprised how many people do."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ai-workflow",
+        "title": "Using it without making a mess",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "Using it without making a mess",
+            "subtitle": "Where it helps, where it lies, and how to ask nicely",
+            "eyebrow": "The workflow",
+            "icon": "workflow",
+            "image": "/assets/images/ai-webinar-funny/hardware-repair.jpg"
+          },
+          {
+            "type": "content",
+            "title": "The old loop vs the new loop",
+            "icon": "workflow",
+            "image": "/assets/images/ai-webinar-funny/schematic.jpg",
+            "imageLayout": "right-image",
+            "caption": "\"PROJECT CHAOS (DOOMED).\" This is the old loop. Unfiltered. Undefeated.",
+            "box": {
+              "list": [
+                {
+                  "icon": "file",
+                  "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand, every bug by hand, every coffee by hand."
+                },
+                {
+                  "icon": "handshake",
+                  "text": "<strong>New:</strong> same steps, but an agent drafts, explains, and tests alongside you. You still decide what \"correct\" means. That part doesn't automate."
+                }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "title": "Where it's genuinely useful vs where it's a confident liar",
+            "leftTitle": "Actually helps",
+            "leftPoints": [
+              "Boilerplate and scaffolding (finally, someone else writes the Dockerfile)",
+              "Explaining a codebase you were just handed 20 minutes ago",
+              "First-draft tests for code that already works",
+              "Debugging with a real stack trace in hand"
+            ],
+            "rightTitle": "Will lie to your face",
+            "rightPoints": [
+              "Architecture &mdash; it'll pick one and defend it with zero shame",
+              "Security review &mdash; misses the subtle holes, cheerfully",
+              "Domain judgement &mdash; it doesn't know your users or your weird edge cases",
+              "\"Is this actually correct?\" &mdash; only you and the tests can answer that"
+            ],
+            "note": {
+              "text": "It is never unsure. That's the dangerous part. It will be wrong with perfect grammar."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Bad prompt vs good prompt (same request, very different afternoon)",
+            "icon": "file",
+            "box": {
+              "title": "One of these ruins your day. The other saves it.",
+              "code": "// Vague - invites guessing and sadness\n\"fix my code\"\n\n// Specific - grounded in reality\n\"In src/api/users.py, GET /users/{id} returns 500\nwhen id is not numeric. Traceback below. Add\nvalidation that returns 400 with a clear message,\nmatching validate_order_id() in src/api/orders.py.\n<paste traceback>\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Before you let it anywhere near the main branch",
+            "icon": "shield",
+            "image": "/assets/images/ai-webinar-funny/meme-drake.jpg",
+            "imageLayout": "right-image",
+            "caption": "This is not a workflow diagram. It's a confession with rounded corners.",
+            "box": {
+              "list": [
+                {
+                  "icon": "eye",
+                  "text": "Read every single line. Don't merge what you haven't actually read. Yes, all of it."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "Actually run it. Don't just nod at it like you're reviewing a wedding invitation."
+                },
+                {
+                  "icon": "lock",
+                  "text": "Grep for keys, tokens, and hardcoded credentials. The AI loves to help with those too."
+                },
+                {
+                  "icon": "chat",
+                  "text": "Be able to explain it &mdash; in a code review, in a viva, in a job interview. If you can't, it's not yours."
+                }
+              ]
+            },
+            "note": {
+              "text": "Rule of thumb: if you'd be embarrassed to have written it, don't ship it under your name."
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "The human stays in the loop (this is not optional)",
+            "layout": "right-image",
+            "image": "/assets/images/ai-webinar-funny/team-meeting.jpg",
+            "imageAlt": "A team meeting where the whiteboard reads AI DO NOT TOUCH MAIN BRANCH and a cheerful robot says I CAN DO THAT",
+            "caption": "The whiteboard says don't touch main. The robot says \"I can do that.\" Your job is to stand between them.",
+            "content": "<h4>Every workflow in this talk has a human checkpoint</h4><p>That's not overcaution. It's the line between using AI as a power tool and quietly outsourcing your judgement to a thing that can't feel embarrassment.</p>"
+          }
+        ]
+      },
+      {
+        "id": "the-tools",
+        "title": "The actual tools",
+        "slides": [
+          {
+            "type": "topic-title",
+            "title": "The actual tools",
+            "subtitle": "What each one does, and when you should actually reach for it",
+            "eyebrow": "The toolbelt",
+            "icon": "hammer",
+            "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg"
+          },
+          {
+            "type": "content",
+            "title": "Five tools, five different jobs",
+            "icon": "boxes",
+            "image": "/assets/images/ai-webinar-funny/meme-distracted.jpg",
+            "imageLayout": "right-image",
+            "caption": "The temptation is real. Finish the current project FIRST.",
+            "box": {
+              "list": [
+                {
+                  "icon": "cpu",
+                  "text": "<strong>ESP-IDF</strong> &mdash; the framework your ESP32 firmware actually runs on."
+                },
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where all these AI tools plug in."
+                },
+                {
+                  "icon": "sparkles",
+                  "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE. It's as wild as it sounds."
+                },
+                {
+                  "icon": "bot",
+                  "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud agent. Does the work, hands you a PR."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal agent. Lives in your shell. Judges your code."
+                }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "title": "ESP-IDF &mdash; where the firmware actually lives",
+            "layout": "left-image",
+            "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
+            "imageAlt": "Isometric cartoon of a circuit board drawn as a small town called Microville",
+            "caption": "Welcome to Microville. Population: 1024 bytes. Every IoT project starts in a town like this.",
+            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a chip smaller than your thumbnail.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for when you want to feel like a Linux kernel dev.</li><li>JTAG and OpenOCD for real debugging, not serial-print archaeology.</li></ul>"
+          },
+          {
+            "type": "content",
+            "title": "GitHub &mdash; boring, essential, and it runs everything",
+            "icon": "git-branch",
+            "box": {
+              "list": [
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>Repos and pull requests</strong> &mdash; where code review actually happens (or doesn't, and then things break)."
+                },
+                {
+                  "icon": "workflow",
+                  "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud. Every push. Automatically. While I sleep."
+                },
+                {
+                  "icon": "sparkles",
+                  "text": "<strong>Copilot</strong> &mdash; inline autocomplete that sometimes reads your mind, and sometimes suggests importing a library you uninstalled three commits ago."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Before you start vibe coding (please read this first)",
+            "icon": "file",
+            "image": "/assets/images/ai-webinar/vibe-coding-docs.jpg",
+            "imageAlt": "Holographic software blueprints including PRD, User Flow, Architecture, and AI Rules on a modern development workspace",
+            "caption": "Specs and blueprints anchor the agent before it starts generating code and opinions.",
+            "box": {
+              "title": "Ten documents exist. You need maybe four.",
+              "list": [
+                {
+                  "icon": "file",
+                  "text": "<strong>PRD</strong> &mdash; what to build (write this or everything else is guessing)"
+                },
+                {
+                  "icon": "map",
+                  "text": "<strong>User Flow</strong> &mdash; how humans actually move through your thing"
+                },
+                {
+                  "icon": "layers",
+                  "text": "<strong>UI/UX</strong> &mdash; how it looks (even a napkin sketch helps)"
+                },
+                {
+                  "icon": "code",
+                  "text": "<strong>Tech Spec</strong> &mdash; how it's built under the hood"
+                },
+                {
+                  "icon": "database",
+                  "text": "<strong>Database Schema</strong> &mdash; what data lives where"
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>API Spec</strong> &mdash; how your systems talk to each other"
+                },
+                {
+                  "icon": "shield",
+                  "text": "<strong>Security Rules</strong> &mdash; what must not be exposed, ever"
+                },
+                {
+                  "icon": "bot",
+                  "text": "<strong>AI Coding Rules</strong> &mdash; how the agent should behave in your repo (boundaries matter)"
+                },
+                {
+                  "icon": "check",
+                  "text": "<strong>Testing Plan</strong> &mdash; how you'll know it actually works"
+                },
+                {
+                  "icon": "rocket",
+                  "text": "<strong>Deployment Plan</strong> &mdash; how it ships to real users"
+                }
+              ]
+            },
+            "note": {
+              "text": "Minimum viable set: PRD, User Flow, Tech Spec, and AI Coding Rules. The other six can wait until you have more coffee."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Codex &amp; Antigravity in 60 seconds (timer starts now)",
+            "icon": "sparkles",
+            "box": {
+              "list": [
+                {
+                  "icon": "bot",
+                  "title": "OpenAI Codex",
+                  "text": "Cloud + CLI agent. Runs in a sandbox, does the work, hands it back as a PR you can review. Best when the task is well-scoped and you don't want to babysit."
+                },
+                {
+                  "icon": "sparkles",
+                  "title": "Google Antigravity",
+                  "text": "Agentic IDE with browser sub-agents that can actually look at your UI and tell you it's ugly. Deep codebase context. It's like pair programming with someone who read every file."
+                }
+              ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Claude Code &mdash; the one that lives in your terminal",
+            "icon": "terminal",
+            "box": {
+              "title": "Anthropic's terminal-first agent",
+              "list": [
+                {
+                  "icon": "terminal",
+                  "text": "Reads your files, edits them, and <strong>runs your commands</strong> directly. No copy-paste. It just does it."
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>MCP</strong> lets it plug into external tools and data sources. Databases, APIs, whatever you connect."
+                },
+                {
+                  "icon": "check",
+                  "text": "<strong>Plan mode</strong> proposes a plan for you to approve before it touches a single line. Trust but verify, etc."
+                }
+              ]
+            },
+            "note": {
+              "text": "Full disclosure: this deck was built with Claude Code. In this repo. It's eating its own dog food."
+            }
+          },
+          {
+            "type": "content",
+            "eyebrow": "Claude Code · Best Practices",
+            "title": "6 ways to shoot yourself in the foot with Claude Code",
+            "subtitle": "Learn from our mistakes so you don't have to make your own",
+            "icon": "warning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1",
+                  "accent": "red",
+                  "title": "Don't dump the entire spec in one go.",
+                  "text": "It overwhelms the session and buries what matters. Break it into phases. Feed one at a time. Like eating &mdash; don't shove the whole pizza in."
+                },
+                {
+                  "emoji": "2",
+                  "accent": "red",
+                  "title": "Don't lose your prompts. Write them down.",
+                  "text": "If the session dies or you switch machines, you should never have to reconstruct instructions from memory. That's not a workflow, that's amnesia."
+                },
+                {
+                  "emoji": "3",
+                  "accent": "red",
+                  "title": "Don't waste context on small talk.",
+                  "text": "Every tangent, repeated explanation, and random debugging thread eats the memory it needs for your actual project. Keep sessions focused."
+                },
+                {
+                  "emoji": "4",
+                  "accent": "red",
+                  "title": "Don't build everything before testing anything.",
+                  "text": "Test each phase before starting the next. Small bugs left alone quietly evolve into large, angry bugs that are much harder to find."
+                },
+                {
+                  "emoji": "5",
+                  "accent": "red",
+                  "title": "Don't let the AI play architect.",
+                  "text": "Database design, security approach, tech stack &mdash; those decisions are yours. Claude Code should implement your calls, not make them."
+                },
+                {
+                  "emoji": "6",
+                  "accent": "red",
+                  "title": "Don't skip git commits. Ever.",
+                  "text": "Commit after every working milestone. One bad change without history can undo hours of progress. Git is your undo button. Use it."
+                }
+              ]
+            },
+            "note": {
+              "text": "Six habits, one outcome: <strong>you stay in control of the build</strong>, not the other way around."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Free stuff nobody told you about (you're welcome)",
+            "icon": "rocket",
+            "box": {
+              "title": "The shortcuts that actually work",
+              "list": [
+                {
+                  "icon": "github",
+                  "text": "<strong>GitHub Student Developer Pack</strong> &mdash; free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com. Do it today."
+                },
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub, or wait for Hacktoberfest every October. Either way, you ship real code."
+                },
+                {
+                  "icon": "users",
+                  "text": "<strong>Hackathons</strong> &mdash; MLH and Devfolio for weekends, Smart India Hackathon for the real deal. Build something in 36 hours. Sleep is overrated."
+                },
+                {
+                  "icon": "target",
+                  "text": "<strong>Competitions</strong> &mdash; Google Summer of Code if you want to get paid for open source, Kaggle if data makes you happy."
+                }
+              ]
+            },
+            "note": {
+              "text": "Pick one. Actually do it this month. Bookmarking is not participation."
+            }
+          }
+        ]
+      },
+      {
+        "id": "closing",
+        "title": "Wrap-up",
+        "slides": [
+          {
+            "type": "content",
+            "title": "If you remember exactly four things from today",
+            "icon": "check",
+            "image": "/assets/images/ai-webinar-funny/notebook-plan.jpg",
+            "imageLayout": "right-image",
+            "caption": "Do these four and the line goes up. Results may vary. Line not to scale.",
+            "box": {
+              "list": [
+                {
+                  "icon": "circuit-board",
+                  "text": "Circuit Digest turns electronics knowledge into tutorials <em>and</em> real infrastructure that people actually use."
+                },
+                {
+                  "icon": "brain",
+                  "text": "AI moved from answering questions to doing things. That's the entire story of the last two years."
+                },
+                {
+                  "icon": "shield",
+                  "text": "Keep a human checkpoint before and after the agent acts. Every time. No exceptions."
+                },
+                {
+                  "icon": "hammer",
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice of the problem."
+                }
+              ]
+            }
+          },
+          {
+            "type": "qa",
+            "title": "Questions? The real ones. Don't be polite."
+          },
+          {
+            "type": "thank-you",
+            "title": "Thank you, PSGCAS",
+            "message": "That was the 30-minute cut. The full 55-slide version has more war stories and more tool depth &mdash; same link: aravind-govindhasamy.github.io",
+            "recommendations": [
+              {
+                "title": "The Thinking Game",
+                "subtitle": "Full documentary · The quest for AGI at DeepMind",
+                "tag": "Documentary",
+                "image": "/assets/images/ai-webinar-funny/the-thinking-game.jpg"
+              },
+              {
+                "title": "The Imitation Game",
+                "subtitle": "Alan Turing · The origin story of computing",
+                "tag": "Movie",
+                "image": "/assets/images/ai-webinar-funny/the-imitation-game.jpg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
