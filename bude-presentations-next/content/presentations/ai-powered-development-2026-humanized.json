@@ -210,7 +210,7 @@
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
             "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
-            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp. You know, the fun stuff that breaks at 3 AM.</p>"
+            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp. You know, the fun stuff that breaks at 3 AM.</p><p>And it isn't a black box &mdash; the client libraries (GeoLinker, the WhatsApp API examples for half a dozen boards) are open source on GitHub. You can read exactly what gets sent over the wire.</p>"
           },
           {
             "type": "content",
@@ -220,7 +220,7 @@
             "imageLayout": "right-image",
             "caption": "No Figma screenshot. This is circuitdigest.cloud, live, as of yesterday.",
             "box": {
-              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building stuff with it.</p><p>\"One platform to analyse, control, and connect\" &mdash; that's the real tagline. I didn't make it up for this slide, I promise.</p>"
+              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building stuff with it.</p><p>\"One platform to analyse, control, and connect\" &mdash; that's the real tagline. I didn't make it up for this slide, I promise.</p><p>Every feature here is a documented HTTPS endpoint under <code>circuitdigest.cloud/api/v1/</code> &mdash; the same API a hobbyist hits from an Arduino Uno is the one running this dashboard. No separate \"enterprise\" backend hiding behind it.</p>"
             }
           },
           {
@@ -259,7 +259,21 @@
             "imageLayout": "right-image",
             "caption": "A real tracker on a real walk around Coimbatore. 7.18 km, 26 minutes. My feet hurt.",
             "box": {
-              "content": "<p>GeoLinker is the GPS tracking piece of Circuit Digest Cloud: live position, route history, and polygon geofencing, plotted on an actual map.</p><p>This is not a mockup. One of our trackers, walking the streets near our office. I was the one walking.</p>"
+              "content": "<p>GeoLinker is the GPS tracking piece of Circuit Digest Cloud: live position, route history, and polygon geofencing, plotted on an actual map.</p><p>This is not a mockup. One of our trackers, walking the streets near our office. I was the one walking.</p>",
+              "list": [
+                {
+                  "icon": "code",
+                  "text": "<strong>Open-source Arduino library</strong> &mdash; five method calls (<code>setApiKey</code>, <code>setDeviceID</code>, <code>setUpdateInterval_seconds</code>, <code>setPayloads</code>, <code>loop</code>) and a JSON POST to <code>/api/v1/geolinker</code> is the whole integration."
+                },
+                {
+                  "icon": "wifi",
+                  "text": "Works over <strong>Wi-Fi or SIM800L cellular</strong>, and buffers up to <strong>100 GPS points</strong> locally when the connection drops &mdash; syncs the moment it's back."
+                },
+                {
+                  "icon": "server",
+                  "text": "Runs on <strong>ESP32, ESP8266, Arduino Uno R4 WiFi, or a Raspberry Pi Pico W</strong> &mdash; the same lineup from the boards slide, doing actual work."
+                }
+              ]
             }
           },
           {
@@ -334,7 +348,7 @@
             "imageLayout": "left-image",
             "caption": "ESP32, a SIM800L, a fistful of jumper wires, and a phone proving it actually works.",
             "box": {
-              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on the other.</p><p>Everything in the tools section exists to make the wiring side faster. Not to replace it. You still need to know which wire goes where.</p>"
+              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on the other.</p><p>Everything in the tools section exists to make the wiring side faster. Not to replace it. You still need to know which wire goes where.</p><p>None of this is locked away, either &mdash; the public example repos on GitHub wire up the exact same thing: an ultrasonic sensor triggering a WhatsApp alert on an Arduino Uno R4, a Raspberry Pi Pico W doing the same over Wi-Fi. Clone one, swap the sensor, ship your own.</p>"
             }
           },
           {
@@ -345,7 +359,7 @@
             "imageLayout": "right-image",
             "caption": "Live camera, live chart, live controls. This is not a template. It's our product.",
             "box": {
-              "content": "<p>Colour pickers for the lights, a slider and gauge for room temperature, a WebRTC camera feed, and a 24-hour chart &mdash; all updating from actual MQTT messages sent by actual hardware sitting on someone's desk.</p>"
+              "content": "<p>Colour pickers for the lights, a slider and gauge for room temperature, a WebRTC camera feed, and a 24-hour chart &mdash; all updating from actual MQTT messages sent by actual hardware sitting on someone's desk.</p><p>Each widget subscribes to its own MQTT topic and repaints the instant a message lands. No polling, no refresh button, no \"last updated 5 minutes ago\" lie.</p>"
             }
           },
           {
@@ -356,7 +370,7 @@
             "imageLayout": "left-image",
             "caption": "\"Which of my devices are offline?\" It just answers. At 3 AM. Without complaining.",
             "box": {
-              "content": "<p>Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less. It even adjusts to IST without being asked.</p>"
+              "content": "<p>Circuit Digest Cloud ships this in <strong>v0.1.1</strong>: an MCP server that lets Claude or ChatGPT connect straight to your account, plus a WhatsApp bot that checks device status, reads telemetry, sends commands, and manages automations &mdash; all in plain English. It even adjusts to IST without being asked.</p>"
             }
           },
           {
@@ -416,19 +430,19 @@
               "list": [
                 {
                   "icon": "code",
-                  "text": "<strong>Autocomplete era:</strong> it finished your line. Sometimes even the right one."
+                  "text": "<strong>Autocomplete era (2021):</strong> TabNine, early GitHub Copilot. It finished your line. Sometimes even the right one."
                 },
                 {
                   "icon": "chat",
-                  "text": "<strong>Chat era (2022):</strong> you asked, it answered, you copy-pasted and hoped for the best."
+                  "text": "<strong>Chat era (2022):</strong> ChatGPT shows up in November. You asked, it answered, you copy-pasted and hoped for the best."
                 },
                 {
                   "icon": "puzzle",
-                  "text": "<strong>Editor copilots:</strong> it moved into the IDE. Could see your file. Still couldn't see your pain."
+                  "text": "<strong>Editor copilots (2023):</strong> Copilot Chat, Cursor. It moved into the IDE. Could see your file. Still couldn't see your pain."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>Agent era (now):</strong> it reads the repo, runs the tests, reads the errors, sulks, and tries again."
+                  "text": "<strong>Agent era (2024&ndash;now):</strong> Claude Code, Codex, Antigravity. It reads the repo, runs the tests, reads the errors, sulks, and tries again."
                 }
               ]
             }
@@ -451,7 +465,7 @@
               "Chases a goal across many steps without you babysitting"
             ],
             "note": {
-              "text": "Claude Code, Antigravity, and Codex are all in the right column. That's the whole shift."
+              "text": "Claude Code, Antigravity, and Codex are all in the right column. So are the new open-weight agentic models out of China &mdash; DeepSeek, Kimi, Qwen. This isn't a closed-lab thing anymore."
             }
           },
           {
@@ -461,7 +475,7 @@
             "image": "/assets/images/ai-webinar-funny/robot.jpg",
             "imageAlt": "A frazzled four-armed robot coding at 2:47 AM surrounded by coffee cups",
             "caption": "2:47 AM. Fourth coffee. \"Project: almost done.\" It is absolutely not almost done.",
-            "content": "<h4>The word that matters is <em>agency</em></h4><p>A chatbot can explain a bug. An agent opens the file, reproduces the bug, patches it, runs the suite, and hands you a diff. Same brain underneath. Completely different thing to work with.</p>"
+            "content": "<h4>The word that matters is <em>agency</em></h4><p>A chatbot can explain a bug. An agent opens the file, reproduces the bug, patches it, runs the suite, and hands you a diff. Same brain underneath. Completely different thing to work with.</p><p>The newest ones don't even stay inside the editor &mdash; they can open a browser, click through a real UI, and operate a computer the way you would. \"Never brings snacks\" is doing less exaggerating than it used to.</p>"
           },
           {
             "type": "content",
@@ -471,7 +485,7 @@
             "imageLayout": "right-image",
             "caption": "\"Sleep is optional.\" \"Deploy on Friday.\" This wall is the argument FOR AI, not against it.",
             "box": {
-              "content": "<blockquote>Most \"AI will replace developers\" posts are written by people who have never been paged at 3 AM to fix a data migration.</blockquote><p>The job was never typing. It's deciding what to build, and being the person who understands the system when everything is on fire. AI moves the typing. It does not move the responsibility.</p>"
+              "content": "<blockquote>Most \"AI will replace developers\" posts are written by people who have never been paged at 3 AM to fix a data migration.</blockquote><p>The job was never typing. It's deciding what to build, and being the person who understands the system when everything is on fire. AI moves the typing. It does not move the responsibility.</p><p>The same week GPT-6 Astra became the first model rated \"Critical\" for cybersecurity capability, someone still had to decide whether to let it anywhere near production. That decision doesn't automate. It never will.</p>"
             }
           },
           {
@@ -496,15 +510,19 @@
               "list": [
                 {
                   "icon": "target",
-                  "text": "<strong>Prompting</strong> &mdash; giving enough context so it doesn't hallucinate your database schema."
+                  "text": "<strong>Prompting</strong> &mdash; giving enough context so it doesn't hallucinate your database schema. Paste the actual schema. It isn't psychic."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Verifying</strong> &mdash; reading AI output like you'd review a pull request from that one intern."
+                  "text": "<strong>Verifying</strong> &mdash; reading AI output like you'd review a pull request from a confident new hire. Run it, don't just skim it."
                 },
                 {
                   "icon": "lock",
                   "text": "<strong>Security sense</strong> &mdash; not pasting your .env file into the chat. You'd be surprised how many people do."
+                },
+                {
+                  "icon": "terminal",
+                  "text": "<strong>Knowing when to stop it</strong> &mdash; three failed attempts at the same bug means the approach is wrong, not the fourth prompt. Close the session, start fresh."
                 }
               ]
             }
@@ -534,11 +552,11 @@
               "list": [
                 {
                   "icon": "file",
-                  "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand, every bug by hand, every coffee by hand."
+                  "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand. Writing an ESP32 driver from a 40-page datasheet used to eat an entire afternoon."
                 },
                 {
                   "icon": "handshake",
-                  "text": "<strong>New:</strong> same steps, but an agent drafts, explains, and tests alongside you. You still decide what \"correct\" means. That part doesn't automate."
+                  "text": "<strong>New:</strong> same steps, but an agent drafts that driver from the datasheet PDF in minutes. You still verify every register address against the actual chip. That part doesn't automate."
                 }
               ]
             }
@@ -643,7 +661,7 @@
             "image": "/assets/images/ai-webinar-funny/team-meeting.jpg",
             "imageAlt": "A team meeting where the whiteboard reads AI DO NOT TOUCH MAIN BRANCH and a cheerful robot says I CAN DO THAT",
             "caption": "The whiteboard says don't touch main. The robot says \"I can do that.\" Your job is to stand between them.",
-            "content": "<h4>Every workflow in this talk has a human checkpoint</h4><p>That's not overcaution. It's the line between using AI as a power tool and quietly outsourcing your judgement to a thing that can't feel embarrassment.</p>"
+            "content": "<h4>Every workflow in this talk has a human checkpoint</h4><p>That's not overcaution. It's the line between using AI as a power tool and quietly outsourcing your judgement to a thing that can't feel embarrassment.</p><p>Even the tools agree, technically: Claude Code's own recent updates added managed MCP servers and stricter headless permission controls specifically so a human stays the one approving what an agent is allowed to touch.</p>"
           }
         ]
       },
@@ -661,7 +679,7 @@
           },
           {
             "type": "content",
-            "title": "Five tools, five different jobs",
+            "title": "Six tools, six different jobs",
             "icon": "boxes",
             "image": "/assets/images/ai-webinar-funny/meme-distracted.jpg",
             "imageLayout": "right-image",
@@ -687,6 +705,10 @@
                 {
                   "icon": "terminal",
                   "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal agent. Lives in your shell. Judges your code."
+                },
+                {
+                  "icon": "boxes",
+                  "text": "<strong>Open-weight models</strong> &mdash; DeepSeek, Kimi, Qwen, GLM. Chinese labs closed the coding gap fast: Kimi K3 leads the frontend-code benchmarks, DeepSeek V4 is MIT-licensed and self-hostable on your own GPU."
                 }
               ]
             }
@@ -717,6 +739,10 @@
                 {
                   "icon": "sparkles",
                   "text": "<strong>Copilot</strong> &mdash; inline autocomplete that sometimes reads your mind, and sometimes suggests importing a library you uninstalled three commits ago."
+                },
+                {
+                  "icon": "bot",
+                  "text": "<strong>Copilot coding agent</strong> &mdash; assign it an issue like you would a teammate, and it opens its own PR. GitHub isn't just where the AI tools plug in anymore; it's becoming one."
                 }
               ]
             }
@@ -729,52 +755,32 @@
             "imageAlt": "Holographic software blueprints including PRD, User Flow, Architecture, and AI Rules on a modern development workspace",
             "caption": "Specs and blueprints anchor the agent before it starts generating code and opinions.",
             "box": {
-              "title": "Ten documents exist. You need maybe four.",
+              "title": "Four documents, with real examples from GeoLinker",
               "list": [
                 {
                   "icon": "file",
-                  "text": "<strong>PRD</strong> &mdash; what to build (write this or everything else is guessing)"
+                  "title": "PRD",
+                  "text": "What to build, and why, in one unambiguous sentence. GeoLinker's: \"alert the owner within 30 seconds of a tracker leaving its saved polygon.\""
                 },
                 {
                   "icon": "map",
-                  "text": "<strong>User Flow</strong> &mdash; how humans actually move through your thing"
-                },
-                {
-                  "icon": "layers",
-                  "text": "<strong>UI/UX</strong> &mdash; how it looks (even a napkin sketch helps)"
+                  "title": "User Flow",
+                  "text": "How a human actually gets there: open dashboard &rarr; draw polygon &rarr; save &rarr; get a WhatsApp alert on exit. If you can't draw it in five boxes, you don't understand the feature yet."
                 },
                 {
                   "icon": "code",
-                  "text": "<strong>Tech Spec</strong> &mdash; how it's built under the hood"
-                },
-                {
-                  "icon": "database",
-                  "text": "<strong>Database Schema</strong> &mdash; what data lives where"
-                },
-                {
-                  "icon": "puzzle",
-                  "text": "<strong>API Spec</strong> &mdash; how your systems talk to each other"
-                },
-                {
-                  "icon": "shield",
-                  "text": "<strong>Security Rules</strong> &mdash; what must not be exposed, ever"
+                  "title": "Tech Spec",
+                  "text": "The boring part that saves you later: geofence checks run server-side on every MQTT ping, not on the ESP32. Battery life mattered more than shaving off milliseconds."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>AI Coding Rules</strong> &mdash; how the agent should behave in your repo (boundaries matter)"
-                },
-                {
-                  "icon": "check",
-                  "text": "<strong>Testing Plan</strong> &mdash; how you'll know it actually works"
-                },
-                {
-                  "icon": "rocket",
-                  "text": "<strong>Deployment Plan</strong> &mdash; how it ships to real users"
+                  "title": "AI Coding Rules",
+                  "text": "The boundaries: never touch the alerts pipeline without a human review, never invent a new table without asking first. Claude Code reads this file every session."
                 }
               ]
             },
             "note": {
-              "text": "Minimum viable set: PRD, User Flow, Tech Spec, and AI Coding Rules. The other six can wait until you have more coffee."
+              "text": "The other six &mdash; detailed User Flow diagrams, UI/UX, DB Schema, API Spec, Security Rules, Testing Plan &mdash; still matter. They just don't fit on one slide."
             }
           },
           {
@@ -786,14 +792,17 @@
                 {
                   "icon": "bot",
                   "title": "OpenAI Codex",
-                  "text": "Cloud + CLI agent. Runs in a sandbox, does the work, hands it back as a PR you can review. Best when the task is well-scoped and you don't want to babysit."
+                  "text": "Cloud + CLI agent. Runs in an isolated sandbox with its own copy of the repo, does the work, hands it back as a PR. Point it at \"add rate limiting to the telemetry ingestion endpoint,\" walk away, come back to a diff and a test file."
                 },
                 {
                   "icon": "sparkles",
                   "title": "Google Antigravity",
-                  "text": "Agentic IDE with browser sub-agents that can actually look at your UI and tell you it's ugly. Deep codebase context. It's like pair programming with someone who read every file."
+                  "text": "Agentic IDE with browser sub-agents that open your actual running UI, click around it, and screenshot the result &mdash; not just guess from the CSS. Ask it to fix a broken dashboard layout and it verifies the fix visually before handing it back."
                 }
               ]
+            },
+            "note": {
+              "text": "Codex just got sharper teeth: OpenAI's new flagship, GPT-6 Astra, is state-of-the-art on coding and computer use &mdash; and the first model OpenAI itself rates \"Critical\" for cybersecurity capability. Reviewing the diff matters more than ever, not less."
             }
           },
           {
@@ -814,6 +823,10 @@
                 {
                   "icon": "check",
                   "text": "<strong>Plan mode</strong> proposes a plan for you to approve before it touches a single line. Trust but verify, etc."
+                },
+                {
+                  "icon": "rocket",
+                  "text": "<strong>Shipping fast</strong> &mdash; managed MCP servers, a plugin eval framework, and desktop panes you can pop out and dock back all landed within weeks of each other. Current release as of mid-September: v2.1.270."
                 }
               ]
             },
@@ -910,19 +923,19 @@
               "list": [
                 {
                   "icon": "github",
-                  "text": "<strong>GitHub Student Developer Pack</strong> &mdash; free Copilot, Codespaces, Azure credit, and every JetBrains IDE. Verify once at education.github.com. Do it today."
+                  "text": "<strong>GitHub Student Developer Pack</strong> &mdash; a genuinely large bundle of free tools (Copilot, Codespaces, Azure and DigitalOcean credit, every JetBrains IDE) for anyone with a valid student email. Verify once at education.github.com."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub, or wait for Hacktoberfest every October. Either way, you ship real code."
+                  "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub any day of the year, or wait for Hacktoberfest every October: four valid pull requests to opt-in repos gets you a shirt and, more usefully, a merged PR with your name on it."
                 },
                 {
                   "icon": "users",
-                  "text": "<strong>Hackathons</strong> &mdash; MLH and Devfolio for weekends, Smart India Hackathon for the real deal. Build something in 36 hours. Sleep is overrated."
+                  "text": "<strong>Hackathons</strong> &mdash; MLH runs 150+ events a year and often covers travel for shortlisted teams. Smart India Hackathon is the government-run one, with real prize money for the national finalists."
                 },
                 {
                   "icon": "target",
-                  "text": "<strong>Competitions</strong> &mdash; Google Summer of Code if you want to get paid for open source, Kaggle if data makes you happy."
+                  "text": "<strong>Competitions</strong> &mdash; Google Summer of Code pays a real stipend to work on open source over a summer. Kaggle prize pools on the bigger competitions run into the tens of thousands of dollars."
                 }
               ]
             },
