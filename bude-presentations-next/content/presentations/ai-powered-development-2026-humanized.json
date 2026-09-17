@@ -227,9 +227,9 @@
             "icon": "check",
             "image": "/assets/images/ai-webinar-funny/cdc-landing.png",
             "imageLayout": "right-image",
-            "caption": "No Figma screenshot. This is circuitdigest.cloud, live, as of yesterday.",
+            "caption": "Screenshotted the morning of this talk. By the time you're reading this, the numbers on screen have already moved.",
             "box": {
-              "content": "<p>135 projects active in the last 24 hours. 249 weekly active users. 6,331 community members building stuff with it.</p><p>\"One platform to analyse, control, and connect\" &mdash; that's the real tagline. I didn't make it up for this slide, I promise.</p><p>Every feature here is a documented HTTPS endpoint under <code>circuitdigest.cloud/api/v1/</code> &mdash; the same API a hobbyist hits from an Arduino Uno is the one running this dashboard. No separate \"enterprise\" backend hiding behind it.</p>"
+              "content": "<p>No Figma file, no seeded demo data &mdash; this is circuitdigest.cloud, captured live. \"One platform to analyse, control, and connect\" is the real tagline; I didn't make it up for this slide, I promise.</p><p>Those three numbers on screen will already be wrong by the time you're reading this. That's not a flaw in the deck &mdash; that's what an actual product looks like: it moves without me touching it. Go check circuitdigest.cloud right now if you don't believe me.</p><p>Every feature here is a documented HTTPS endpoint under <code>circuitdigest.cloud/api/v1/</code> &mdash; the same API a hobbyist hits from an Arduino Uno is the one running this dashboard. No separate \"enterprise\" backend hiding behind it.</p>"
             }
           },
           {
