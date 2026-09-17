@@ -15,8 +15,17 @@
             "type": "presenter",
             "name": "Aravind Govindhasamy",
             "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
-            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems.",
             "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "stack": [
+              { "name": "Python", "icon": "/assets/tech-icons/python.svg" },
+              { "name": "FastAPI", "icon": "/assets/tech-icons/fastapi.svg" },
+              { "name": "C#/.NET", "icon": "/assets/tech-icons/dotnet.svg" },
+              { "name": "React", "icon": "/assets/tech-icons/react.svg" },
+              { "name": "MQTT", "icon": "/assets/tech-icons/mqtt.svg" },
+              { "name": "RFID" },
+              { "name": "Frappe/ERPNext", "icon": "/assets/tech-icons/frappe.svg" }
+            ],
             "github": "https://github.com/aravind-govindhasamy",
             "website": "https://aravind-govindhasamy.github.io",
             "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
@@ -227,9 +236,9 @@
             "type": "content",
             "title": "The stack (minus the buzzwords)",
             "icon": "server",
-            "image": "/assets/images/ai-webinar-funny/cdc-apis.png",
+            "image": "/assets/images/ai-webinar-funny/meme-distracted.jpg",
             "imageLayout": "left-image",
-            "caption": "The real API catalog. Pick one, it's live in minutes. No, really.",
+            "caption": "Not pictured: Circuit Digest Cloud, which stayed with FastAPI and didn't even look twice.",
             "box": {
               "list": [
                 {
@@ -249,6 +258,37 @@
                   "text": "Deployed on <strong>DigitalOcean</strong> with <strong>GitHub Actions</strong> and <strong>Sentry</strong> catching the 2 AM surprises before I do."
                 }
               ]
+            }
+          },
+          {
+            "type": "content",
+            "title": "Every API in the catalog, for real",
+            "icon": "layers",
+            "image": "/assets/images/ai-webinar-funny/cdc-apis.png",
+            "imageLayout": "right-image",
+            "caption": "The actual catalog page. Nine computer-vision models, three messaging channels, one GPS tracker. Scroll, don't imagine.",
+            "box": {
+              "list": [
+                {
+                  "icon": "chat",
+                  "text": "<strong>SMS, Email, WhatsApp</strong> &mdash; three notification APIs, each a single HTTPS POST with a template ID and a phone number or address."
+                },
+                {
+                  "icon": "eye",
+                  "text": "<strong>Nine computer-vision endpoints</strong> &mdash; number plates, helmets, faces, parking spaces, waste sorting, currency, even 35-class hand gestures. Point a camera, get JSON back."
+                },
+                {
+                  "icon": "bot",
+                  "text": "<strong>AI Vision Analyst</strong> &mdash; describes a scene or extracts text from a photo, built for ESP32-CAM and Raspberry Pi camera modules."
+                },
+                {
+                  "icon": "map",
+                  "text": "<strong>GeoLinker</strong> &mdash; the GPS tracking API from the next slide, same catalog, same auth."
+                }
+              ]
+            },
+            "note": {
+              "text": "Every one of these is free to call, no credit card at sign-up. That's not a typo."
             }
           },
           {

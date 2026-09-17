@@ -2,11 +2,21 @@ import { Github, Globe, Linkedin, Twitter, User } from "lucide-react";
 
 import type { Slide } from "@/types/presentation";
 
+interface StackItem {
+  name: string;
+  icon?: string;
+}
+
+interface PresenterSlideData extends Slide {
+  stack?: StackItem[];
+}
+
 interface Props {
   slide: Slide;
 }
 
 export function PresenterSlide({ slide }: Props) {
+  const s = slide as PresenterSlideData;
   const links = [
     slide.github && { href: slide.github, icon: Github, label: "GitHub" },
     slide.website && { href: slide.website, icon: Globe, label: "Website" },
@@ -40,6 +50,22 @@ export function PresenterSlide({ slide }: Props) {
             <p className="mt-2 text-sm text-muted-foreground md:text-base">
               {slide.oss_experience}
             </p>
+          )}
+          {s.stack && s.stack.length > 0 && (
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+              {s.stack.map(({ name, icon }) => (
+                <span
+                  key={name}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/50 px-3 py-1.5 text-xs font-medium text-foreground/80 md:text-sm"
+                >
+                  {icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={icon} alt="" aria-hidden className="h-4 w-4" />
+                  )}
+                  {name}
+                </span>
+              ))}
+            </div>
           )}
           {links.length > 0 && (
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
