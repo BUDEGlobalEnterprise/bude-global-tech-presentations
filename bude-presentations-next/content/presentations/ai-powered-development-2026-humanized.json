@@ -118,41 +118,6 @@
           },
           {
             "type": "content",
-            "title": "Four boards, four very different jobs",
-            "icon": "boxes",
-            "image": "/assets/images/ai-webinar-funny/board-hierarchy-flex.jpg",
-            "imageLayout": "left-image",
-            "caption": "The flex check, ranked. Yes, someone put gold chains on a Jetson Nano.",
-            "box": {
-              "list": [
-                {
-                  "icon": "zap",
-                  "title": "ESP32",
-                  "text": "Wi-Fi and Bluetooth built in, dirt cheap, dual-core. Default pick for anything that needs to talk to the internet."
-                },
-                {
-                  "icon": "cpu",
-                  "title": "Arduino",
-                  "text": "The one that just works. No OS, no surprises &mdash; perfect for a sensor that reads a value and does one thing well."
-                },
-                {
-                  "icon": "server",
-                  "title": "Raspberry Pi",
-                  "text": "A real Linux box small enough to hide in a project box. Ran the mining rig above; runs actual servers now."
-                },
-                {
-                  "icon": "sparkles",
-                  "title": "Jetson Nano",
-                  "text": "GPU on a board &mdash; the one you reach for when \"AI\" has to run on the device itself, not in the cloud."
-                }
-              ]
-            },
-            "note": {
-              "text": "Circuit Digest's tutorials cover all four. Pick the board that matches the job, not the one that's trending."
-            }
-          },
-          {
-            "type": "content",
             "title": "My actual job for 2.5 years (no glamour)",
             "icon": "bug",
             "image": "/assets/images/ai-webinar-funny/meme-surprised-pikachu.jpg",
@@ -220,6 +185,41 @@
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
             "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
             "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp. You know, the fun stuff that breaks at 3 AM.</p><p>And it isn't a black box &mdash; the client libraries (GeoLinker, the WhatsApp API examples for half a dozen boards) are open source on GitHub. You can read exactly what gets sent over the wire.</p>"
+          },
+          {
+            "type": "content",
+            "title": "Four boards, four very different jobs",
+            "icon": "boxes",
+            "image": "/assets/images/ai-webinar-funny/board-hierarchy-flex.jpg",
+            "imageLayout": "left-image",
+            "caption": "The flex check, ranked. Yes, someone put gold chains on a Jetson Nano.",
+            "box": {
+              "list": [
+                {
+                  "icon": "zap",
+                  "title": "ESP32",
+                  "text": "Wi-Fi and Bluetooth built in, dirt cheap, dual-core. Default pick for anything that needs to talk to the internet."
+                },
+                {
+                  "icon": "cpu",
+                  "title": "Arduino",
+                  "text": "The one that just works. No OS, no surprises &mdash; perfect for a sensor that reads a value and does one thing well."
+                },
+                {
+                  "icon": "server",
+                  "title": "Raspberry Pi",
+                  "text": "A real Linux box small enough to hide in a project box. Runs actual servers now."
+                },
+                {
+                  "icon": "sparkles",
+                  "title": "Jetson Nano",
+                  "text": "GPU on a board &mdash; the one you reach for when \"AI\" has to run on the device itself, not in the cloud."
+                }
+              ]
+            },
+            "note": {
+              "text": "Circuit Digest's tutorials cover all four. Pick the board that matches the job, not the one that's trending."
+            }
           },
           {
             "type": "content",
