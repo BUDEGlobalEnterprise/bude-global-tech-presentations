@@ -100,12 +100,14 @@ export function ThankYouSlide({ slide }: Props) {
                     </span>
                   )}
                   <h4 className="font-bold text-white text-sm md:text-base leading-snug group-hover:text-bude-blue transition-colors line-clamp-2">
-                    {rec.title}
+                    <SafeHTML html={rec.title} />
                   </h4>
                   {rec.subtitle && (
-                    <p className="mt-1 text-xs text-zinc-400 line-clamp-2 leading-relaxed">
-                      {rec.subtitle}
-                    </p>
+                    <SafeHTML
+                      as="p"
+                      html={rec.subtitle}
+                      className="mt-1 text-xs text-zinc-400 line-clamp-2 leading-relaxed"
+                    />
                   )}
                 </div>
               </div>

@@ -1357,15 +1357,15 @@
             "recommendations": [
               {
                 "title": "The Thinking Game",
-                "subtitle": "Full documentary &middot; The quest for AGI at DeepMind",
+                "subtitle": "Full documentary · The quest for AGI at DeepMind",
                 "tag": "Documentary",
-                "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F31ku2jttaxit6k2q4h7o.png"
+                "image": "/assets/images/ai-webinar-funny/the-thinking-game.jpg"
               },
               {
                 "title": "The Imitation Game",
-                "subtitle": "Alan Turing &middot; The origin story of computing",
+                "subtitle": "Alan Turing · The origin story of computing",
                 "tag": "Movie",
-                "image": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_.jpg"
+                "image": "/assets/images/ai-webinar-funny/the-imitation-game.jpg"
               }
             ]
           }
