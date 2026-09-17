@@ -706,6 +706,14 @@ const ENTRIES: Omit<CatalogEntry, "slug">[] = [
     difficulty: "intermediate",
   },
   {
+    file: "ai-powered-development-2026-humanized.json",
+    title: "Circuit Digest & AI-Assisted Development (Humanized)",
+    description: "The 30-slide focused talk rewritten with bold, funny, conversational copy — same slides and images, zero corporate robot voice.",
+    keywords: ["ai", "circuit digest", "webinar", "coding agents", "antigravity", "codex", "claude code", "esp-idf", "github", "agentic ai", "humanized"],
+    category: ["ai-data", "tools"],
+    difficulty: "intermediate",
+  },
+  {
     file: "intro-mcp.json",
     title: "Introduction to Model Context Protocol (MCP)",
     description: "Anthropic's open standard for AI tool integrations — architecture, primitives, transports, building servers, and the ecosystem.",
