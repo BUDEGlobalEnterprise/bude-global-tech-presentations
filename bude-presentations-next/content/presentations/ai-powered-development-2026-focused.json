@@ -628,6 +628,56 @@
           },
           {
             "type": "content",
+            "eyebrow": "Claude Code &middot; Best Practices",
+            "title": "Top 6 Red Flags While Building Apps with Claude Code",
+            "subtitle": "Avoid these mistakes to keep your project fast, safe, and under control",
+            "icon": "warning",
+            "box": {
+              "list": [
+                {
+                  "emoji": "1",
+                  "accent": "red",
+                  "title": "Don't give the entire PRD/FRD document at once.",
+                  "text": "Dumping the whole spec into one prompt overwhelms the session and buries what matters. Break it into phases and feed it one phase at a time, like the build plan you already have."
+                },
+                {
+                  "emoji": "2",
+                  "accent": "red",
+                  "title": "Don't lose your prompt instructions &mdash; save them for later.",
+                  "text": "Keep every phase prompt written down somewhere outside the chat. If a session ends or you need to resume on a new machine, you should never have to reconstruct instructions from memory."
+                },
+                {
+                  "emoji": "3",
+                  "accent": "red",
+                  "title": "Don't waste your context window on unnecessary conversations.",
+                  "text": "Off-topic chatter, repeated explanations, and long unrelated debugging threads all eat into the context Claude Code needs to keep track of your actual project. Keep sessions focused."
+                },
+                {
+                  "emoji": "4",
+                  "accent": "red",
+                  "title": "Don't build everything before testing each phase.",
+                  "text": "Verify each phase against its own checklist before starting the next one. Skipping this lets small, easy-to-fix bugs quietly stack into large, hard-to-trace ones."
+                },
+                {
+                  "emoji": "5",
+                  "accent": "red",
+                  "title": "Don't let AI make all the architectural decisions.",
+                  "text": "Review and approve the important calls yourself &mdash; database design, security approach, tech stack, third-party services. Claude Code should implement your decisions, not just default to its own."
+                },
+                {
+                  "emoji": "6",
+                  "accent": "red",
+                  "title": "Don't skip Git commits after every working milestone.",
+                  "text": "Commit as soon as a phase works. Without that history, one bad change can undo hours of progress with no way back to a known-good state."
+                }
+              ]
+            },
+            "note": {
+              "text": "Six habits, one outcome: <strong>you stay in control of the build</strong>, not the other way around."
+            }
+          },
+          {
+            "type": "content",
             "title": "Free tools, hackathons, and where to compete",
             "icon": "rocket",
             "box": {
