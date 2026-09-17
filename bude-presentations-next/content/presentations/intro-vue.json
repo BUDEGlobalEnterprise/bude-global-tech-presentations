@@ -86,6 +86,20 @@
             ]
           },
           {
+            "type": "presenter",
+            "name": "Aravind Govindhasamy",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "stack": [
+              { "name": "Vue.js", "icon": "/assets/tech-icons/vuedotjs.svg" },
+              { "name": "React", "icon": "/assets/tech-icons/react.svg" }
+            ],
+            "github": "https://github.com/aravind-govindhasamy",
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
+          },
+          {
             "id": "1.2",
             "type": "architecture",
             "title": "Vue's Progressive Adoption Curve",

@@ -47,7 +47,7 @@
                 {
                   "icon": "circuit-board",
                   "title": "Me &amp; Circuit Digest",
-                  "text": "How a PSGCAS guy ended up debugging RFID readers at 2 AM for a living."
+                  "text": "Three days into this job, and already sitting on years of RFID war stories."
                 },
                 {
                   "icon": "brain",
@@ -62,7 +62,7 @@
                 {
                   "icon": "hammer",
                   "title": "The actual tools",
-                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; which one, when, and why."
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code, and the open-weight models out of China &mdash; which one, when, and why."
                 }
               ]
             },

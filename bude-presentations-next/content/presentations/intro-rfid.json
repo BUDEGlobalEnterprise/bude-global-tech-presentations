@@ -21,11 +21,17 @@
           {
             "type": "presenter",
             "name": "Aravind Govindhasamy",
-            "title": "Software Developer & IoT Integrator",
-            "experience": "3 years in .NET, Python, IoT & RFID Architectures",
-            "oss_experience": "Enterprise Automation & Middleware Engineering",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "stack": [
+              { "name": "RFID" },
+              { "name": "C#/.NET", "icon": "/assets/tech-icons/dotnet.svg" },
+              { "name": "MQTT", "icon": "/assets/tech-icons/mqtt.svg" }
+            ],
             "github": "https://github.com/aravind-govindhasamy",
-            "website": "https://aravind-govindhasamy.github.io"
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
           }
         ]
       },
@@ -556,9 +562,9 @@
             ],
             "data": [
               0.1,
-              1.0,
-              12.0,
-              100.0
+              1,
+              12,
+              100
             ],
             "note": {
               "text": "Approximate maximum read range in meters (logarithmic scale representation)"

@@ -19,11 +19,16 @@
           {
             "type": "presenter",
             "name": "Aravind Govindhasamy",
-            "title": "Software Developer",
-            "experience": "3 years in .NET, Python, IoT & RFID",
-            "oss_experience": "Backend Development & Automation Specialist",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "stack": [
+              { "name": "Python", "icon": "/assets/tech-icons/python.svg" },
+              { "name": "FastAPI", "icon": "/assets/tech-icons/fastapi.svg" }
+            ],
             "github": "https://github.com/aravind-govindhasamy",
-            "website": "https://aravind-govindhasamy.github.io"
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
           }
         ]
       },

@@ -13,11 +13,17 @@
           {
             "type": "presenter",
             "name": "Aravind Govindhasamy",
-            "title": "Software Developer",
-            "experience": "Several years across .NET, Python, IoT, RFID, and modern JavaScript.",
-            "oss_experience": "Building MCP servers since the spec dropped in late 2024.",
+            "title": "Full Stack Developer at Semicon Media (Circuit Digest). PhD Scholar at PSGCAS.",
+            "experience": "Four years of shipping backend services, IoT and RFID integrations, and enterprise systems. Python, FastAPI, Node.js, C#/.NET, React, MQTT, RFID, Frappe/ERPNext.",
+            "oss_experience": "Before this: RFID library systems at 2CQR Automation (20+ campuses) and campus systems at PSGR Krishnammal College.",
+            "stack": [
+              { "name": "MCP" },
+              { "name": "Python", "icon": "/assets/tech-icons/python.svg" },
+              { "name": "FastAPI", "icon": "/assets/tech-icons/fastapi.svg" }
+            ],
             "github": "https://github.com/aravind-govindhasamy",
-            "website": "https://aravind-govindhasamy.github.io"
+            "website": "https://aravind-govindhasamy.github.io",
+            "linkedin": "https://www.linkedin.com/in/aravind-govindhasamy"
           },
           {
             "type": "topic-title",
@@ -501,14 +507,24 @@
           {
             "type": "quiz",
             "question": "Which MCP primitive is read-only and user-attached, not model-invoked?",
-            "options": ["Tools", "Prompts", "Resources", "Sampling"],
+            "options": [
+              "Tools",
+              "Prompts",
+              "Resources",
+              "Sampling"
+            ],
             "correctAnswer": 2,
             "explanation": "Resources are read-only context. The user (via the host) decides what to attach. Tools are model-invoked, prompts are user-triggered templates, sampling is server → host LLM calls."
           },
           {
             "type": "quiz",
             "question": "Which transport is best for a server that runs locally on the user's machine?",
-            "options": ["HTTP + SSE", "stdio", "WebSocket", "gRPC"],
+            "options": [
+              "HTTP + SSE",
+              "stdio",
+              "WebSocket",
+              "gRPC"
+            ],
             "correctAnswer": 1,
             "explanation": "stdio is the standard local transport - the host launches the server as a child process. HTTP+SSE is for hosted/remote servers. WebSocket and gRPC are not first-class MCP transports."
           },
@@ -686,7 +702,10 @@
                   "emoji": "☁️",
                   "text": "AWS, GCP, Azure read-only inspectors"
                 },
-                { "emoji": "📨", "text": "Gmail, Outlook, Discord, Telegram" },
+                {
+                  "emoji": "📨",
+                  "text": "Gmail, Outlook, Discord, Telegram"
+                },
                 {
                   "emoji": "🧰",
                   "text": "Docker, Kubernetes, Stripe, Cloudflare"
@@ -705,9 +724,18 @@
                   "emoji": "💸",
                   "text": "Block (Square) - internal coding assistants"
                 },
-                { "emoji": "✈️", "text": "Apollo - research workflows" },
-                { "emoji": "📐", "text": "Replit - agent infrastructure" },
-                { "emoji": "🧑‍💻", "text": "Sourcegraph - Cody integrations" },
+                {
+                  "emoji": "✈️",
+                  "text": "Apollo - research workflows"
+                },
+                {
+                  "emoji": "📐",
+                  "text": "Replit - agent infrastructure"
+                },
+                {
+                  "emoji": "🧑‍💻",
+                  "text": "Sourcegraph - Cody integrations"
+                },
                 {
                   "emoji": "🛠️",
                   "text": "Codeium, Zed, Cursor - IDE tool integration"
