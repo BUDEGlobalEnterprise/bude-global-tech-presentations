@@ -77,6 +77,73 @@
           },
           {
             "type": "content",
+            "title": "The UG project: mining Bitcoin on a Raspberry Pi",
+            "icon": "cpu",
+            "image": "/assets/images/ai-webinar-funny/bitcoin-mining.jpg",
+            "imageLayout": "right-image",
+            "caption": "Jan&ndash;Apr 2022. Hash rate: modest. Enthusiasm: not modest at all.",
+            "box": {
+              "content": "<p>Before RFID readers, there was this: a final-year project asking whether a Raspberry Pi could mine cryptocurrency without bankrupting a student.</p>",
+              "list": [
+                {
+                  "icon": "cpu",
+                  "text": "<strong>Raspberry Pi</strong> as the controller, running open-source mining software &mdash; no ASIC, no budget for one."
+                },
+                {
+                  "icon": "zap",
+                  "text": "<strong>Power vs. payout</strong>, tuned by hand &mdash; that trade-off was the actual research question, not the mining itself."
+                },
+                {
+                  "icon": "warning",
+                  "text": "<strong>Verdict:</strong> technically works, economically hilarious. The electricity bill won."
+                },
+                {
+                  "icon": "idea",
+                  "text": "First real lesson in low-cost hardware experimentation &mdash; the instinct that led to everything after."
+                }
+              ]
+            },
+            "note": {
+              "text": "This is also the honest origin story of \"guy who writes hardware tutorials for a living.\""
+            }
+          },
+          {
+            "type": "content",
+            "title": "Four boards, four very different jobs",
+            "icon": "boxes",
+            "image": "/assets/images/ai-webinar-funny/board-hierarchy-flex.jpg",
+            "imageLayout": "left-image",
+            "caption": "The flex check, ranked. Yes, someone put gold chains on a Jetson Nano.",
+            "box": {
+              "list": [
+                {
+                  "icon": "zap",
+                  "title": "ESP32",
+                  "text": "Wi-Fi and Bluetooth built in, dirt cheap, dual-core. Default pick for anything that needs to talk to the internet."
+                },
+                {
+                  "icon": "cpu",
+                  "title": "Arduino",
+                  "text": "The one that just works. No OS, no surprises &mdash; perfect for a sensor that reads a value and does one thing well."
+                },
+                {
+                  "icon": "server",
+                  "title": "Raspberry Pi",
+                  "text": "A real Linux box small enough to hide in a project box. Ran the mining rig above; runs actual servers now."
+                },
+                {
+                  "icon": "sparkles",
+                  "title": "Jetson Nano",
+                  "text": "GPU on a board &mdash; the one you reach for when \"AI\" has to run on the device itself, not in the cloud."
+                }
+              ]
+            },
+            "note": {
+              "text": "Circuit Digest's tutorials cover all four. Pick the board that matches the job, not the one that's trending."
+            }
+          },
+          {
+            "type": "content",
             "title": "My actual job for 2.5 years (no glamour)",
             "icon": "bug",
             "image": "/assets/images/ai-webinar-funny/meme-surprised-pikachu.jpg",
@@ -197,6 +264,70 @@
           },
           {
             "type": "content",
+            "title": "The board GeoLinker actually runs on",
+            "icon": "cpu",
+            "image": "/assets/images/ai-webinar-funny/geolinker-board.gif",
+            "imageLayout": "left-image",
+            "caption": "Yes, that's a Pac-Man animation etched into the antenna trace. Someone had fun with this one.",
+            "box": {
+              "content": "<p>Not a rendering &mdash; a real product on the Circuit Digest wiki. ESP32 and cellular GPS on one board, small enough to hide inside anything that moves.</p>",
+              "list": [
+                {
+                  "icon": "cpu",
+                  "text": "<strong>ESP32-S3-MINI-1 + SIM868</strong> &mdash; dual-core 240 MHz, paired with a quad-band GSM/GPRS modem for when Wi-Fi isn't an option."
+                },
+                {
+                  "icon": "map",
+                  "text": "<strong>GPS + GLONASS + BeiDou</strong> baked in, so it gets a fix almost anywhere, not just where GPS satellites feel generous."
+                },
+                {
+                  "icon": "zap",
+                  "text": "<strong>~10&nbsp;&micro;A deep sleep</strong> with motion-triggered wake &mdash; it can sit dormant on a parked vehicle for weeks."
+                },
+                {
+                  "icon": "server",
+                  "text": "33 &times; 85&nbsp;mm, LiPo charging, accelerometer, RGB status LED &mdash; everything an asset tracker needs, nothing it doesn't."
+                }
+              ]
+            },
+            "note": {
+              "text": "This is the board behind the Coimbatore walk from two slides ago. Full pinout and build guide live on the Circuit Digest wiki."
+            }
+          },
+          {
+            "type": "content",
+            "title": "And yes, we also built a drone",
+            "icon": "rocket",
+            "image": "/assets/images/ai-webinar-funny/litewing-hero.gif",
+            "imageLayout": "right-image",
+            "caption": "45 grams, four motors, one ESP32. Flies better than most of my side projects.",
+            "box": {
+              "content": "<p>LiteWing: an open-hardware, Wi-Fi-controlled quadcopter, because at some point \"IoT device\" stopped being enough of a challenge.</p>",
+              "list": [
+                {
+                  "icon": "cpu",
+                  "text": "<strong>ESP32-S3</strong> flight controller talking <strong>CRTP over Wi-Fi</strong> &mdash; the same protocol Crazyflie drones use."
+                },
+                {
+                  "icon": "gauge",
+                  "text": "<strong>~45&nbsp;g</strong>, 100 &times; 100&nbsp;mm, four coreless motors. Light enough that a crash is a shrug, not a funeral."
+                },
+                {
+                  "icon": "code",
+                  "text": "Flown from a phone app, a Python SDK, or the Arduino IDE &mdash; pick your level of \"how much do I want to debug today.\""
+                },
+                {
+                  "icon": "wifi",
+                  "text": "Optional barometer, ToF, and optical-flow modules add altitude hold and position hold &mdash; on a drone marketed as one of the cheapest DIY kits out there."
+                }
+              ]
+            },
+            "note": {
+              "text": "Marketed as one of the most affordable DIY drones around. It is also, unfortunately, extremely fun to crash."
+            }
+          },
+          {
+            "type": "content",
             "title": "From jumper wires to a working dashboard",
             "icon": "cpu",
             "image": "/assets/images/ai-webinar-funny/cdc-breadboard-gps.gif",
@@ -225,7 +356,39 @@
             "imageLayout": "left-image",
             "caption": "\"Which of my devices are offline?\" It just answers. At 3 AM. Without complaining.",
             "box": {
-              "content": "<p>Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less. It even adjusts to IST without being asked.</p><p>Which is a convenient place to stop talking about our product and start talking about how this magic became possible at all.</p>"
+              "content": "<p>Circuit Digest Cloud already ships an AI assistant you can ask about your devices in plain English &mdash; over WhatsApp, no less. It even adjusts to IST without being asked.</p>"
+            }
+          },
+          {
+            "type": "content",
+            "title": "How it's actually wired together (no magic)",
+            "icon": "puzzle",
+            "image": "/assets/images/ai-webinar-funny/cdc-apis.png",
+            "imageLayout": "right-image",
+            "caption": "The same API catalog from three slides ago. Turns out the AI uses the front door too.",
+            "box": {
+              "content": "<p>No, it doesn't have a password to the database. That would be a security slide, not a feature slide.</p>",
+              "list": [
+                {
+                  "icon": "bot",
+                  "text": "<strong>Claude</strong> is the reasoning layer &mdash; it reads your WhatsApp message and decides what to check."
+                },
+                {
+                  "icon": "puzzle",
+                  "text": "<strong>MCP tools</strong> stand in for raw database access &mdash; get device status, pull telemetry, list what's offline. The model calls a tool, never a table."
+                },
+                {
+                  "icon": "database",
+                  "text": "<strong>MQTT &rarr; ingestion &rarr; Postgres</strong> keeps those tools honest. Ask \"is it online,\" get an answer from seconds ago, not a stale cache."
+                },
+                {
+                  "icon": "chat",
+                  "text": "<strong>WhatsApp</strong> is just the transport. The model has no idea it's WhatsApp &mdash; it just answers with whatever tools it's handed."
+                }
+              ]
+            },
+            "note": {
+              "text": "Which is a convenient place to stop talking about our product and start talking about how this magic became possible at all."
             }
           }
         ]
@@ -399,6 +562,38 @@
             ],
             "note": {
               "text": "It is never unsure. That's the dangerous part. It will be wrong with perfect grammar."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Time saved, honestly (no fake percentage, I promise)",
+            "icon": "gauge",
+            "image": "/assets/images/ai-webinar-funny/meme-galaxy-brain.jpg",
+            "imageLayout": "right-image",
+            "caption": "The bottom-right panel is not hypothetical. It happens. Budget time for it.",
+            "box": {
+              "content": "<p>I could give you a made-up \"40% faster\" number. Here's the honest breakdown instead:</p>",
+              "list": [
+                {
+                  "icon": "check",
+                  "text": "<strong>Genuinely faster:</strong> boilerplate, scaffolding, first-draft tests. Minutes instead of a copy-paste archaeology dig."
+                },
+                {
+                  "icon": "clock",
+                  "text": "<strong>About the same:</strong> debugging with a real stack trace. You get to a fix faster, but reading it critically still takes the time it always took."
+                },
+                {
+                  "icon": "warning",
+                  "text": "<strong>Not faster at all:</strong> architecture and judgement calls. You still think. You just argue with something first."
+                },
+                {
+                  "icon": "database",
+                  "text": "<strong>New cost that didn't exist before:</strong> reviewing plausible-but-wrong code you didn't write. Nobody puts that in the pitch deck."
+                }
+              ]
+            },
+            "note": {
+              "text": "A session costs cents to a few dollars in tokens. That was never the real price. The discipline to review everything is."
             }
           },
           {
@@ -628,6 +823,36 @@
           },
           {
             "type": "content",
+            "title": "Making it actually yours: CLAUDE.md and Skills",
+            "icon": "sparkles",
+            "image": "/assets/images/ai-webinar-funny/matrix.jpg",
+            "imageLayout": "left-image",
+            "caption": "How deep does this rabbit hole go? Deeper than you'd guess.",
+            "box": {
+              "list": [
+                {
+                  "icon": "file",
+                  "title": "CLAUDE.md",
+                  "text": "A plain file at the repo root: conventions, commands, things it should never touch. Read every session, so you stop repeating yourself."
+                },
+                {
+                  "icon": "puzzle",
+                  "title": "Skills",
+                  "text": "Packaged instructions for a specific job, like a slash command. This deck's slides were built by one &mdash; /add-presentation."
+                },
+                {
+                  "icon": "bot",
+                  "title": "Personas",
+                  "text": "Goes further still: this deck was written under a plugin called \"Ponytail\" (laziest working solution, question every abstraction) paired with \"Caveman\" (short, blunt sentences, no fluff). Both real. Both installed."
+                }
+              ]
+            },
+            "note": {
+              "text": "If you were wondering why this talk has zero corporate padding, now you know why."
+            }
+          },
+          {
+            "type": "content",
             "eyebrow": "Claude Code · Best Practices",
             "title": "6 ways to shoot yourself in the foot with Claude Code",
             "subtitle": "Learn from our mistakes so you don't have to make your own",
@@ -703,6 +928,35 @@
             },
             "note": {
               "text": "Pick one. Actually do it this month. Bookmarking is not participation."
+            }
+          },
+          {
+            "type": "content",
+            "title": "Two more things, and then I'm done nagging",
+            "icon": "github",
+            "box": {
+              "title": "The unglamorous stuff that actually moves the needle",
+              "list": [
+                {
+                  "icon": "git-branch",
+                  "text": "<strong>Contribute to one open-source project.</strong> Not a drive-by PR &mdash; pick something you actually use, stick around, learn how a real codebase reviews code."
+                },
+                {
+                  "icon": "users",
+                  "text": "<strong>Find a FOSS org, not just a repo.</strong> CNCF projects, Frappe, Home Assistant, whatever's in your stack. The community teaches you more than the code does."
+                },
+                {
+                  "icon": "rocket",
+                  "text": "<strong>Build a portfolio site.</strong> Doesn't need to be fancy &mdash; mine is a static GitHub Pages site, aravind-govindhasamy.github.io. A few real projects, real links, done."
+                },
+                {
+                  "icon": "check",
+                  "text": "<strong>Put the link everywhere.</strong> LinkedIn, resume, email signature. Nobody's impressed by a CV line. Everyone clicks a link."
+                }
+              ]
+            },
+            "note": {
+              "text": "A GitHub profile with real commits beats a resume PDF every single time. Recruiters actually click through."
             }
           }
         ]

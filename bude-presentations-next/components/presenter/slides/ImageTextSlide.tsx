@@ -39,13 +39,17 @@ export function ImageTextSlide({ slide }: Props) {
             </span>
           )}
           <div>
-            <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl">
-              {slide.title}
-            </h2>
+            <SafeHTML
+              as="h2"
+              html={slide.title ?? ""}
+              className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl"
+            />
             {slide.subtitle && (
-              <p className="mt-1 text-sm text-muted-foreground md:text-base">
-                {slide.subtitle}
-              </p>
+              <SafeHTML
+                as="p"
+                html={slide.subtitle}
+                className="mt-1 text-sm text-muted-foreground md:text-base"
+              />
             )}
           </div>
         </header>
