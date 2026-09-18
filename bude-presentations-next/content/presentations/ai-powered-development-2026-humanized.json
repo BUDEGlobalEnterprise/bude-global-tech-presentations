@@ -86,6 +86,38 @@
           },
           {
             "type": "content",
+            "title": "The habit that started all this: a library, every morning",
+            "icon": "book",
+            "image": "/assets/images/ai-webinar-funny/elon-musk-royal-society.jpg",
+            "imageLayout": "right-image",
+            "caption": "Elon Musk at the Royal Society, 2018. Photo: Debbie Rowe, CC BY-SA 4.0 via Wikimedia Commons.",
+            "box": {
+              "content": "<p>Before Circuit Digest, before RFID readers, before any of it, there was this: B.Sc. Computer Science, then MCA, both at Sri Ramakrishna Mission Vidyalaya, Coimbatore. And a habit that started in first year and never really stopped.</p><blockquote>\"When I was in college, I wanted to be involved in things that would change the world.\" - Elon Musk, taped right next to that week's Thirukkural. Read out loud every morning whether anyone was listening or not.</blockquote>",
+              "list": [
+                {
+                  "icon": "book",
+                  "text": "<strong>Every single morning</strong>, straight to the library - to pull the latest tech news, trending stories, and quotes from around the world."
+                },
+                {
+                  "icon": "users",
+                  "text": "Collected it, wrote it up, handed it to the class in-charge, <strong>Dr. S. Kumaravel</strong> - M.Sc., M.Phil., PGDCA., CSM., PGDFM., MBA., M.A. (Yoga)., Dip.ACU., M.Phil.(Mgt.), Ph.D.(CS). Yes, that's the whole title. No, I'm not shortening it."
+                },
+                {
+                  "icon": "chat",
+                  "text": "Every list went up on the class noticeboard next to a Thirukkural couplet - tech news and 2,000-year-old Tamil poetry, same board, same pin."
+                },
+                {
+                  "icon": "shield",
+                  "text": "Also spent those years in <strong>NCC</strong>, because apparently one commitment before 9 AM wasn't enough."
+                }
+              ]
+            },
+            "note": {
+              "text": "Nobody called it \"staying current with the industry\" back then. It was just the morning newspaper run. Same instinct, different decade."
+            }
+          },
+          {
+            "type": "content",
             "title": "The UG project: mining Bitcoin on a Raspberry Pi",
             "icon": "cpu",
             "image": "/assets/images/ai-webinar-funny/bitcoin-mining.jpg",
