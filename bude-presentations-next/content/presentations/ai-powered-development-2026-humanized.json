@@ -515,6 +515,86 @@
             "note": {
               "text": "Which is a convenient place to stop talking about our product and start talking about how this magic became possible at all."
             }
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/fastapi.svg",
+            "question": "Quick detour. Name this framework.",
+            "options": ["FastAPI", "Flask", "Django", "Express"],
+            "correctAnswer": 0,
+            "explanation": "FastAPI - the one actually running Circuit Digest Cloud's APIs, as seen a few slides ago."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/git.svg",
+            "question": "And this one?",
+            "options": ["Git", "GitHub", "GitLab", "Bitbucket"],
+            "correctAnswer": 0,
+            "explanation": "Git is the tool. GitHub is just one place to host it - a distinction that trips people up more than it should."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/kubernetes.svg",
+            "question": "Keep going.",
+            "options": ["Docker", "Terraform", "Kubernetes", "Ansible"],
+            "correctAnswer": 2,
+            "explanation": "Kubernetes - the wheel logo. Circuit Digest Cloud doesn't run on it yet, but you'll meet it eventually."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/nvidia.svg",
+            "question": "Whose chip is inside a Jetson Nano?",
+            "options": ["AMD", "Intel", "Qualcomm", "NVIDIA"],
+            "correctAnswer": 3,
+            "explanation": "NVIDIA. Same company, wildly different price tag between a Jetson Nano and whatever's training the next frontier model."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/anthropic.svg",
+            "question": "Which AI lab made the tool that built this deck?",
+            "options": ["OpenAI", "Google DeepMind", "Anthropic", "Meta AI"],
+            "correctAnswer": 2,
+            "explanation": "Anthropic - makers of Claude Code. You already knew this if you were listening ten minutes ago."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/deepseek.svg",
+            "question": "Which open-weight AI lab is this?",
+            "options": ["Qwen (Alibaba)", "GLM (Zhipu)", "Kimi (Moonshot)", "DeepSeek"],
+            "correctAnswer": 3,
+            "explanation": "DeepSeek - one of the four Chinese labs closing the coding gap. More on that coming up in the tools section."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/docker.svg",
+            "question": "Open source round. What's this?",
+            "options": ["Docker", "Kubernetes", "Vagrant", "Podman"],
+            "correctAnswer": 0,
+            "explanation": "Docker. The whale is carrying containers - literally the whole metaphor, right there in the logo."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/linux.svg",
+            "question": "Everyone knows this one.",
+            "options": ["Unix", "BSD", "Linux", "macOS"],
+            "correctAnswer": 2,
+            "explanation": "Linux. Tux the penguin, unbothered, since 1991."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/postgresql.svg",
+            "question": "Which database is this elephant?",
+            "options": ["MySQL", "MongoDB", "SQLite", "PostgreSQL"],
+            "correctAnswer": 3,
+            "explanation": "PostgreSQL - the other half of \"FastAPI + PostgreSQL + MQTT\" from the stack slide. It was hiding in plain sight."
+          },
+          {
+            "type": "quiz",
+            "image": "/assets/tech-icons/opensourceinitiative.svg",
+            "question": "Last one. Meta question: whose logo is this?",
+            "options": ["Free Software Foundation", "Apache Software Foundation", "Linux Foundation", "Open Source Initiative"],
+            "correctAnswer": 3,
+            "explanation": "The Open Source Initiative - the people who literally define what \"open source\" is allowed to mean. Fitting way to end the round."
           }
         ]
       },

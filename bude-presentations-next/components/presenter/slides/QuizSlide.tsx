@@ -7,6 +7,10 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import type { Slide } from "@/types/presentation";
 
+interface QuizSlideData extends Slide {
+  image?: string;
+}
+
 interface Props {
   slide: Slide;
   isQuizRevealed?: boolean;
@@ -37,6 +41,7 @@ export function QuizSlide({ slide, isQuizRevealed = false }: Props) {
   const question = slide.question ?? slide.title ?? "Question";
   const explanation = slide.explanation;
   const revealed = picked !== null || isQuizRevealed;
+  const image = (slide as QuizSlideData).image;
 
   return (
     <div className="mx-auto flex h-full w-full max-w-4xl flex-col px-6 py-8 md:px-10 md:py-12">
@@ -44,7 +49,20 @@ export function QuizSlide({ slide, isQuizRevealed = false }: Props) {
         <span className="inline-flex h-2 w-2 rounded-full bg-bude-purple animate-pulse" />
         {slide.topic ? `Topic: ${slide.topic}` : "Pop quiz"}
       </div>
-      <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl">
+      {image && (
+        <div className="mb-5 flex justify-center">
+          <div className="flex h-28 w-28 items-center justify-center rounded-2xl bg-white p-5 shadow-lg md:h-36 md:w-36">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={image} alt="" className="h-full w-full object-contain" />
+          </div>
+        </div>
+      )}
+      <h2
+        className={cn(
+          "text-balance text-2xl font-bold leading-tight tracking-tight md:text-4xl",
+          image && "text-center",
+        )}
+      >
         {question}
       </h2>
 
