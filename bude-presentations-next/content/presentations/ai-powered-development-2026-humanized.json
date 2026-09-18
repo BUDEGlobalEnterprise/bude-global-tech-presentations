@@ -62,7 +62,7 @@
                 {
                   "icon": "hammer",
                   "title": "The actual tools",
-                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code, and the open-weight models out of China &mdash; which one, when, and why."
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code, and the open-weight models out of China - which one, when, and why."
                 }
               ]
             },
@@ -96,11 +96,11 @@
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>Raspberry Pi</strong> as the controller, running open-source mining software &mdash; no ASIC, no budget for one."
+                  "text": "<strong>Raspberry Pi</strong> as the controller, running open-source mining software - no ASIC, no budget for one."
                 },
                 {
                   "icon": "zap",
-                  "text": "<strong>Power vs. payout</strong>, tuned by hand &mdash; that trade-off was the actual research question, not the mining itself."
+                  "text": "<strong>Power vs. payout</strong>, tuned by hand - that trade-off was the actual research question, not the mining itself."
                 },
                 {
                   "icon": "warning",
@@ -108,7 +108,7 @@
                 },
                 {
                   "icon": "idea",
-                  "text": "First real lesson in low-cost hardware experimentation &mdash; the instinct that led to everything after."
+                  "text": "First real lesson in low-cost hardware experimentation - the instinct that led to everything after."
                 }
               ]
             },
@@ -132,7 +132,7 @@
                 },
                 {
                   "icon": "cpu",
-                  "text": "Byte-level <strong>UID and CSN wrestling</strong> &mdash; because two readers from two vendors will never, ever agree on endianness."
+                  "text": "Byte-level <strong>UID and CSN wrestling</strong> - because two readers from two vendors will never, ever agree on endianness."
                 },
                 {
                   "icon": "zap",
@@ -150,13 +150,49 @@
           },
           {
             "type": "content",
+            "title": "ERP Assistant Programmer, or: whatever the campus needed that week",
+            "icon": "layers",
+            "image": "/assets/images/ai-webinar-funny/campus-erp-operations.jpg",
+            "imageLayout": "left-image",
+            "caption": "RFID smart gates, synchronized camera snapshots, GLPI endpoints, and daily SQL telemetry.",
+            "box": {
+              "content": "<p>The title says ERP Assistant Programmer. The CV says \"campus systems.\" In practice, it was whatever broke that week:</p>",
+              "list": [
+                {
+                  "icon": "shield",
+                  "text": "<strong>RFID smart gate system</strong> - built and deployed campus entry gates with synchronized camera snapshots on every tap."
+                },
+                {
+                  "icon": "radio",
+                  "text": "<strong>Shared ID-card tagging module</strong> spanning HF, UHF, and QR credentials - one card problem solved three different ways."
+                },
+                {
+                  "icon": "server",
+                  "text": "<strong>GLPI + FusionInventory</strong> - expanded IT asset tracking to 1,800+ physical endpoints. Every laptop, projector, and switch, accounted for."
+                },
+                {
+                  "icon": "book",
+                  "text": "Administered the college's <strong>Open Journal Systems</strong> publishing portal, because someone has to keep the research papers online too."
+                },
+                {
+                  "icon": "search",
+                  "text": "<strong>SQL reports</strong> for daily movement and asset data, built by hand, read every morning."
+                }
+              ]
+            },
+            "note": {
+              "text": "This is also where \"full stack\" stopped meaning React and started meaning \"whatever system is on fire today.\""
+            }
+          },
+          {
+            "type": "content",
             "title": "So what even is Circuit Digest?",
             "icon": "radio",
             "image": "/assets/images/ai-webinar-funny/cdc-features.webp",
             "imageLayout": "right-image",
             "caption": "The actual feature graphic. SMS alerts, plate reads, barcode scans, GPS pins. All real.",
             "box": {
-              "title": "circuitdigest.com &mdash; published by Semicon Media, Coimbatore",
+              "title": "circuitdigest.com - published by Semicon Media, Coimbatore",
               "list": [
                 {
                   "icon": "book",
@@ -164,7 +200,7 @@
                 },
                 {
                   "icon": "cpu",
-                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> &mdash; real circuits, real code, actual photos of messy breadboards."
+                  "text": "Build guides for <strong>Arduino, ESP32, Raspberry Pi, STM32</strong> - real circuits, real code, actual photos of messy breadboards."
                 },
                 {
                   "icon": "search",
@@ -179,12 +215,12 @@
           },
           {
             "type": "imageText",
-            "title": "Circuit Digest Cloud &mdash; what I actually build now",
+            "title": "Circuit Digest Cloud - what I actually build now",
             "layout": "right-image",
             "image": "/assets/images/ai-webinar-funny/circuit-digest-cloud.jpg",
             "imageAlt": "Cartoon of a tiny ESP32 chip lifting a barbell of data up to a smiling cloud",
             "caption": "An ESP32 has about 320 KB of RAM. This is roughly how the upload feels.",
-            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp. You know, the fun stuff that breaks at 3 AM.</p><p>And it isn't a black box &mdash; the client libraries (GeoLinker, the WhatsApp API examples for half a dozen boards) are open source on GitHub. You can read exactly what gets sent over the wire.</p>"
+            "content": "<h4>Tutorials are one half. Infrastructure is the other.</h4><p>Circuit Digest Cloud handles: <strong>device provisioning</strong> and fleet management, <strong>MQTT telemetry</strong> with live dashboards, and <strong>alerts</strong> over email, SMS, and WhatsApp. You know, the fun stuff that breaks at 3 AM.</p><p>And it isn't a black box - the client libraries (GeoLinker, the WhatsApp API examples for half a dozen boards) are open source on GitHub. You can read exactly what gets sent over the wire.</p>"
           },
           {
             "type": "content",
@@ -203,7 +239,7 @@
                 {
                   "icon": "cpu",
                   "title": "Arduino",
-                  "text": "The one that just works. No OS, no surprises &mdash; perfect for a sensor that reads a value and does one thing well."
+                  "text": "The one that just works. No OS, no surprises - perfect for a sensor that reads a value and does one thing well."
                 },
                 {
                   "icon": "server",
@@ -213,7 +249,7 @@
                 {
                   "icon": "sparkles",
                   "title": "Jetson Nano",
-                  "text": "GPU on a board &mdash; the one you reach for when \"AI\" has to run on the device itself, not in the cloud."
+                  "text": "GPU on a board - the one you reach for when \"AI\" has to run on the device itself, not in the cloud."
                 }
               ]
             },
@@ -229,7 +265,7 @@
             "imageLayout": "right-image",
             "caption": "Screenshotted the morning of this talk. By the time you're reading this, the numbers on screen have already moved.",
             "box": {
-              "content": "<p>No Figma file, no seeded demo data &mdash; this is circuitdigest.cloud, captured live. \"One platform to analyse, control, and connect\" is the real tagline; I didn't make it up for this slide, I promise.</p><p>Those three numbers on screen will already be wrong by the time you're reading this. That's not a flaw in the deck &mdash; that's what an actual product looks like: it moves without me touching it. Go check circuitdigest.cloud right now if you don't believe me.</p><p>Every feature here is a documented HTTPS endpoint under <code>circuitdigest.cloud/api/v1/</code> &mdash; the same API a hobbyist hits from an Arduino Uno is the one running this dashboard. No separate \"enterprise\" backend hiding behind it.</p>"
+              "content": "<p>No Figma file, no seeded demo data - this is circuitdigest.cloud, captured live. \"One platform to analyse, control, and connect\" is the real tagline; I didn't make it up for this slide, I promise.</p><p>Those three numbers on screen will already be wrong by the time you're reading this. That's not a flaw in the deck - that's what an actual product looks like: it moves without me touching it. Go check circuitdigest.cloud right now if you don't believe me.</p><p>Every feature here is a documented HTTPS endpoint under <code>circuitdigest.cloud/api/v1/</code> - the same API a hobbyist hits from an Arduino Uno is the one running this dashboard. No separate \"enterprise\" backend hiding behind it.</p>"
             }
           },
           {
@@ -271,19 +307,19 @@
               "list": [
                 {
                   "icon": "chat",
-                  "text": "<strong>SMS, Email, WhatsApp</strong> &mdash; three notification APIs, each a single HTTPS POST with a template ID and a phone number or address."
+                  "text": "<strong>SMS, Email, WhatsApp</strong> - three notification APIs, each a single HTTPS POST with a template ID and a phone number or address."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Nine computer-vision endpoints</strong> &mdash; number plates, helmets, faces, parking spaces, waste sorting, currency, even 35-class hand gestures. Point a camera, get JSON back."
+                  "text": "<strong>Nine computer-vision endpoints</strong> - number plates, helmets, faces, parking spaces, waste sorting, currency, even 35-class hand gestures. Point a camera, get JSON back."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>AI Vision Analyst</strong> &mdash; describes a scene or extracts text from a photo, built for ESP32-CAM and Raspberry Pi camera modules."
+                  "text": "<strong>AI Vision Analyst</strong> - describes a scene or extracts text from a photo, built for ESP32-CAM and Raspberry Pi camera modules."
                 },
                 {
                   "icon": "map",
-                  "text": "<strong>GeoLinker</strong> &mdash; the GPS tracking API from the next slide, same catalog, same auth."
+                  "text": "<strong>GeoLinker</strong> - the GPS tracking API from the next slide, same catalog, same auth."
                 }
               ]
             },
@@ -293,7 +329,7 @@
           },
           {
             "type": "content",
-            "title": "GeoLinker &mdash; this is real GPS, not a screenshot",
+            "title": "GeoLinker - this is real GPS, not a screenshot",
             "icon": "map",
             "image": "/assets/images/ai-webinar-funny/cdc-geolinker-map.webp",
             "imageLayout": "right-image",
@@ -303,15 +339,15 @@
               "list": [
                 {
                   "icon": "code",
-                  "text": "<strong>Open-source Arduino library</strong> &mdash; five method calls (<code>setApiKey</code>, <code>setDeviceID</code>, <code>setUpdateInterval_seconds</code>, <code>setPayloads</code>, <code>loop</code>) and a JSON POST to <code>/api/v1/geolinker</code> is the whole integration."
+                  "text": "<strong>Open-source Arduino library</strong> - five method calls (<code>setApiKey</code>, <code>setDeviceID</code>, <code>setUpdateInterval_seconds</code>, <code>setPayloads</code>, <code>loop</code>) and a JSON POST to <code>/api/v1/geolinker</code> is the whole integration."
                 },
                 {
                   "icon": "wifi",
-                  "text": "Works over <strong>Wi-Fi or SIM800L cellular</strong>, and buffers up to <strong>100 GPS points</strong> locally when the connection drops &mdash; syncs the moment it's back."
+                  "text": "Works over <strong>Wi-Fi or SIM800L cellular</strong>, and buffers up to <strong>100 GPS points</strong> locally when the connection drops - syncs the moment it's back."
                 },
                 {
                   "icon": "server",
-                  "text": "Runs on <strong>ESP32, ESP8266, Arduino Uno R4 WiFi, or a Raspberry Pi Pico W</strong> &mdash; the same lineup from the boards slide, doing actual work."
+                  "text": "Runs on <strong>ESP32, ESP8266, Arduino Uno R4 WiFi, or a Raspberry Pi Pico W</strong> - the same lineup from the boards slide, doing actual work."
                 }
               ]
             }
@@ -324,11 +360,11 @@
             "imageLayout": "left-image",
             "caption": "Yes, that's a Pac-Man animation etched into the antenna trace. Someone had fun with this one.",
             "box": {
-              "content": "<p>Not a rendering &mdash; a real product on the Circuit Digest wiki. ESP32 and cellular GPS on one board, small enough to hide inside anything that moves.</p>",
+              "content": "<p>Not a rendering - a real product on the Circuit Digest wiki. ESP32 and cellular GPS on one board, small enough to hide inside anything that moves.</p>",
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>ESP32-S3-MINI-1 + SIM868</strong> &mdash; dual-core 240 MHz, paired with a quad-band GSM/GPRS modem for when Wi-Fi isn't an option."
+                  "text": "<strong>ESP32-S3-MINI-1 + SIM868</strong> - dual-core 240 MHz, paired with a quad-band GSM/GPRS modem for when Wi-Fi isn't an option."
                 },
                 {
                   "icon": "map",
@@ -336,11 +372,11 @@
                 },
                 {
                   "icon": "zap",
-                  "text": "<strong>~10&nbsp;&micro;A deep sleep</strong> with motion-triggered wake &mdash; it can sit dormant on a parked vehicle for weeks."
+                  "text": "<strong>~10&nbsp;&micro;A deep sleep</strong> with motion-triggered wake - it can sit dormant on a parked vehicle for weeks."
                 },
                 {
                   "icon": "server",
-                  "text": "33 &times; 85&nbsp;mm, LiPo charging, accelerometer, RGB status LED &mdash; everything an asset tracker needs, nothing it doesn't."
+                  "text": "33 &times; 85&nbsp;mm, LiPo charging, accelerometer, RGB status LED - everything an asset tracker needs, nothing it doesn't."
                 }
               ]
             },
@@ -360,7 +396,7 @@
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>ESP32-S3</strong> flight controller talking <strong>CRTP over Wi-Fi</strong> &mdash; the same protocol Crazyflie drones use."
+                  "text": "<strong>ESP32-S3</strong> flight controller talking <strong>CRTP over Wi-Fi</strong> - the same protocol Crazyflie drones use."
                 },
                 {
                   "icon": "gauge",
@@ -368,11 +404,11 @@
                 },
                 {
                   "icon": "code",
-                  "text": "Flown from a phone app, a Python SDK, or the Arduino IDE &mdash; pick your level of \"how much do I want to debug today.\""
+                  "text": "Flown from a phone app, a Python SDK, or the Arduino IDE - pick your level of \"how much do I want to debug today.\""
                 },
                 {
                   "icon": "wifi",
-                  "text": "Optional barometer, ToF, and optical-flow modules add altitude hold and position hold &mdash; on a drone marketed as one of the cheapest DIY kits out there."
+                  "text": "Optional barometer, ToF, and optical-flow modules add altitude hold and position hold - on a drone marketed as one of the cheapest DIY kits out there."
                 }
               ]
             },
@@ -388,7 +424,7 @@
             "imageLayout": "left-image",
             "caption": "ESP32, a SIM800L, a fistful of jumper wires, and a phone proving it actually works.",
             "box": {
-              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on the other.</p><p>Everything in the tools section exists to make the wiring side faster. Not to replace it. You still need to know which wire goes where.</p><p>None of this is locked away, either &mdash; the public example repos on GitHub wire up the exact same thing: an ultrasonic sensor triggering a WhatsApp alert on an Arduino Uno R4, a Raspberry Pi Pico W doing the same over Wi-Fi. Clone one, swap the sensor, ship your own.</p>"
+              "content": "<p>This is the whole job, honestly. A breadboard held together with hope and rubber bands on one side, a live map with your data on the other.</p><p>Everything in the tools section exists to make the wiring side faster. Not to replace it. You still need to know which wire goes where.</p><p>None of this is locked away, either - the public example repos on GitHub wire up the exact same thing: an ultrasonic sensor triggering a WhatsApp alert on an Arduino Uno R4, a Raspberry Pi Pico W doing the same over Wi-Fi. Clone one, swap the sensor, ship your own.</p>"
             }
           },
           {
@@ -399,7 +435,7 @@
             "imageLayout": "right-image",
             "caption": "Live camera, live chart, live controls. This is not a template. It's our product.",
             "box": {
-              "content": "<p>Colour pickers for the lights, a slider and gauge for room temperature, a WebRTC camera feed, and a 24-hour chart &mdash; all updating from actual MQTT messages sent by actual hardware sitting on someone's desk.</p><p>Each widget subscribes to its own MQTT topic and repaints the instant a message lands. No polling, no refresh button, no \"last updated 5 minutes ago\" lie.</p>"
+              "content": "<p>Colour pickers for the lights, a slider and gauge for room temperature, a WebRTC camera feed, and a 24-hour chart - all updating from actual MQTT messages sent by actual hardware sitting on someone's desk.</p><p>Each widget subscribes to its own MQTT topic and repaints the instant a message lands. No polling, no refresh button, no \"last updated 5 minutes ago\" lie.</p>"
             }
           },
           {
@@ -410,7 +446,7 @@
             "imageLayout": "left-image",
             "caption": "\"Which of my devices are offline?\" It just answers. At 3 AM. Without complaining.",
             "box": {
-              "content": "<p>Circuit Digest Cloud ships this in <strong>v0.1.1</strong>: an MCP server that lets Claude or ChatGPT connect straight to your account, plus a WhatsApp bot that checks device status, reads telemetry, sends commands, and manages automations &mdash; all in plain English. It even adjusts to IST without being asked.</p>"
+              "content": "<p>Circuit Digest Cloud ships this in <strong>v0.1.1</strong>: an MCP server that lets Claude or ChatGPT connect straight to your account, plus a WhatsApp bot that checks device status, reads telemetry, sends commands, and manages automations - all in plain English. It even adjusts to IST without being asked.</p>"
             }
           },
           {
@@ -425,11 +461,11 @@
               "list": [
                 {
                   "icon": "bot",
-                  "text": "<strong>Claude</strong> is the reasoning layer &mdash; it reads your WhatsApp message and decides what to check."
+                  "text": "<strong>Claude</strong> is the reasoning layer - it reads your WhatsApp message and decides what to check."
                 },
                 {
                   "icon": "puzzle",
-                  "text": "<strong>MCP tools</strong> stand in for raw database access &mdash; get device status, pull telemetry, list what's offline. The model calls a tool, never a table."
+                  "text": "<strong>MCP tools</strong> stand in for raw database access - get device status, pull telemetry, list what's offline. The model calls a tool, never a table."
                 },
                 {
                   "icon": "database",
@@ -437,7 +473,7 @@
                 },
                 {
                   "icon": "chat",
-                  "text": "<strong>WhatsApp</strong> is just the transport. The model has no idea it's WhatsApp &mdash; it just answers with whatever tools it's handed."
+                  "text": "<strong>WhatsApp</strong> is just the transport. The model has no idea it's WhatsApp - it just answers with whatever tools it's handed."
                 }
               ]
             },
@@ -495,7 +531,7 @@
               "Explains code and answers questions",
               "You copy, paste, wire it up yourself",
               "Great for learning and getting unstuck",
-              "One turn at a time &mdash; you drive everything"
+              "One turn at a time - you drive everything"
             ],
             "rightTitle": "Agent",
             "rightPoints": [
@@ -505,7 +541,7 @@
               "Chases a goal across many steps without you babysitting"
             ],
             "note": {
-              "text": "Claude Code, Antigravity, and Codex are all in the right column. So are the new open-weight agentic models out of China &mdash; DeepSeek, Kimi, Qwen. This isn't a closed-lab thing anymore."
+              "text": "Claude Code, Antigravity, and Codex are all in the right column. So are the new open-weight agentic models out of China - DeepSeek, Kimi, Qwen. This isn't a closed-lab thing anymore."
             }
           },
           {
@@ -515,7 +551,7 @@
             "image": "/assets/images/ai-webinar-funny/robot.jpg",
             "imageAlt": "A frazzled four-armed robot coding at 2:47 AM surrounded by coffee cups",
             "caption": "2:47 AM. Fourth coffee. \"Project: almost done.\" It is absolutely not almost done.",
-            "content": "<h4>The word that matters is <em>agency</em></h4><p>A chatbot can explain a bug. An agent opens the file, reproduces the bug, patches it, runs the suite, and hands you a diff. Same brain underneath. Completely different thing to work with.</p><p>The newest ones don't even stay inside the editor &mdash; they can open a browser, click through a real UI, and operate a computer the way you would. \"Never brings snacks\" is doing less exaggerating than it used to.</p>"
+            "content": "<h4>The word that matters is <em>agency</em></h4><p>A chatbot can explain a bug. An agent opens the file, reproduces the bug, patches it, runs the suite, and hands you a diff. Same brain underneath. Completely different thing to work with.</p><p>The newest ones don't even stay inside the editor - they can open a browser, click through a real UI, and operate a computer the way you would. \"Never brings snacks\" is doing less exaggerating than it used to.</p>"
           },
           {
             "type": "content",
@@ -550,19 +586,19 @@
               "list": [
                 {
                   "icon": "target",
-                  "text": "<strong>Prompting</strong> &mdash; giving enough context so it doesn't hallucinate your database schema. Paste the actual schema. It isn't psychic."
+                  "text": "<strong>Prompting</strong> - giving enough context so it doesn't hallucinate your database schema. Paste the actual schema. It isn't psychic."
                 },
                 {
                   "icon": "eye",
-                  "text": "<strong>Verifying</strong> &mdash; reading AI output like you'd review a pull request from a confident new hire. Run it, don't just skim it."
+                  "text": "<strong>Verifying</strong> - reading AI output like you'd review a pull request from a confident new hire. Run it, don't just skim it."
                 },
                 {
                   "icon": "lock",
-                  "text": "<strong>Security sense</strong> &mdash; not pasting your .env file into the chat. You'd be surprised how many people do."
+                  "text": "<strong>Security sense</strong> - not pasting your .env file into the chat. You'd be surprised how many people do."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>Knowing when to stop it</strong> &mdash; three failed attempts at the same bug means the approach is wrong, not the fourth prompt. Close the session, start fresh."
+                  "text": "<strong>Knowing when to stop it</strong> - three failed attempts at the same bug means the approach is wrong, not the fourth prompt. Close the session, start fresh."
                 }
               ]
             }
@@ -592,7 +628,7 @@
               "list": [
                 {
                   "icon": "file",
-                  "text": "<strong>Old:</strong> plan, write, test, review, deploy &mdash; every step by hand. Writing an ESP32 driver from a 40-page datasheet used to eat an entire afternoon."
+                  "text": "<strong>Old:</strong> plan, write, test, review, deploy - every step by hand. Writing an ESP32 driver from a 40-page datasheet used to eat an entire afternoon."
                 },
                 {
                   "icon": "handshake",
@@ -613,10 +649,10 @@
             ],
             "rightTitle": "Will lie to your face",
             "rightPoints": [
-              "Architecture &mdash; it'll pick one and defend it with zero shame",
-              "Security review &mdash; misses the subtle holes, cheerfully",
-              "Domain judgement &mdash; it doesn't know your users or your weird edge cases",
-              "\"Is this actually correct?\" &mdash; only you and the tests can answer that"
+              "Architecture - it'll pick one and defend it with zero shame",
+              "Security review - misses the subtle holes, cheerfully",
+              "Domain judgement - it doesn't know your users or your weird edge cases",
+              "\"Is this actually correct?\" - only you and the tests can answer that"
             ],
             "note": {
               "text": "It is never unsure. That's the dangerous part. It will be wrong with perfect grammar."
@@ -686,7 +722,7 @@
                 },
                 {
                   "icon": "chat",
-                  "text": "Be able to explain it &mdash; in a code review, in a viva, in a job interview. If you can't, it's not yours."
+                  "text": "Be able to explain it - in a code review, in a viva, in a job interview. If you can't, it's not yours."
                 }
               ]
             },
@@ -728,61 +764,61 @@
               "list": [
                 {
                   "icon": "cpu",
-                  "text": "<strong>ESP-IDF</strong> &mdash; the framework your ESP32 firmware actually runs on."
+                  "text": "<strong>ESP-IDF</strong> - the framework your ESP32 firmware actually runs on."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>GitHub</strong> &mdash; repos, CI/CD, and where all these AI tools plug in."
+                  "text": "<strong>GitHub</strong> - repos, CI/CD, and where all these AI tools plug in."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Google Antigravity</strong> &mdash; Google DeepMind's agentic IDE. It's as wild as it sounds."
+                  "text": "<strong>Google Antigravity</strong> - Google DeepMind's agentic IDE. It's as wild as it sounds."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>OpenAI Codex</strong> &mdash; OpenAI's cloud agent. Does the work, hands you a PR."
+                  "text": "<strong>OpenAI Codex</strong> - OpenAI's cloud agent. Does the work, hands you a PR."
                 },
                 {
                   "icon": "terminal",
-                  "text": "<strong>Claude Code</strong> &mdash; Anthropic's terminal agent. Lives in your shell. Judges your code."
+                  "text": "<strong>Claude Code</strong> - Anthropic's terminal agent. Lives in your shell. Judges your code."
                 },
                 {
                   "icon": "boxes",
-                  "text": "<strong>Open-weight models</strong> &mdash; DeepSeek, Kimi, Qwen, GLM. Chinese labs closed the coding gap fast: Kimi K3 leads the frontend-code benchmarks, DeepSeek V4 is MIT-licensed and self-hostable on your own GPU."
+                  "text": "<strong>Open-weight models</strong> - DeepSeek, Kimi, Qwen, GLM. Chinese labs closed the coding gap fast: Kimi K3 leads the frontend-code benchmarks, DeepSeek V4 is MIT-licensed and self-hostable on your own GPU."
                 }
               ]
             }
           },
           {
             "type": "imageText",
-            "title": "ESP-IDF &mdash; where the firmware actually lives",
+            "title": "ESP-IDF - where the firmware actually lives",
             "layout": "left-image",
             "image": "/assets/images/ai-webinar-funny/circuit-board.jpg",
             "imageAlt": "Isometric cartoon of a circuit board drawn as a small town called Microville",
             "caption": "Welcome to Microville. Population: 1024 bytes. Every IoT project starts in a town like this.",
-            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> &mdash; real multitasking on a chip smaller than your thumbnail.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for when you want to feel like a Linux kernel dev.</li><li>JTAG and OpenOCD for real debugging, not serial-print archaeology.</li></ul>"
+            "content": "<h4>Espressif's official SDK for ESP32-class chips</h4><ul><li>Built on <strong>FreeRTOS</strong> - real multitasking on a chip smaller than your thumbnail.</li><li><code>idf.py</code> to build and flash, <strong>menuconfig</strong> for when you want to feel like a Linux kernel dev.</li><li>JTAG and OpenOCD for real debugging, not serial-print archaeology.</li></ul>"
           },
           {
             "type": "content",
-            "title": "GitHub &mdash; boring, essential, and it runs everything",
+            "title": "GitHub - boring, essential, and it runs everything",
             "icon": "git-branch",
             "box": {
               "list": [
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Repos and pull requests</strong> &mdash; where code review actually happens (or doesn't, and then things break)."
+                  "text": "<strong>Repos and pull requests</strong> - where code review actually happens (or doesn't, and then things break)."
                 },
                 {
                   "icon": "workflow",
-                  "text": "<strong>Actions</strong> &mdash; the pipeline that deploys Circuit Digest Cloud. Every push. Automatically. While I sleep."
+                  "text": "<strong>Actions</strong> - the pipeline that deploys Circuit Digest Cloud. Every push. Automatically. While I sleep."
                 },
                 {
                   "icon": "sparkles",
-                  "text": "<strong>Copilot</strong> &mdash; inline autocomplete that sometimes reads your mind, and sometimes suggests importing a library you uninstalled three commits ago."
+                  "text": "<strong>Copilot</strong> - inline autocomplete that sometimes reads your mind, and sometimes suggests importing a library you uninstalled three commits ago."
                 },
                 {
                   "icon": "bot",
-                  "text": "<strong>Copilot coding agent</strong> &mdash; assign it an issue like you would a teammate, and it opens its own PR. GitHub isn't just where the AI tools plug in anymore; it's becoming one."
+                  "text": "<strong>Copilot coding agent</strong> - assign it an issue like you would a teammate, and it opens its own PR. GitHub isn't just where the AI tools plug in anymore; it's becoming one."
                 }
               ]
             }
@@ -820,7 +856,7 @@
               ]
             },
             "note": {
-              "text": "The other six &mdash; detailed User Flow diagrams, UI/UX, DB Schema, API Spec, Security Rules, Testing Plan &mdash; still matter. They just don't fit on one slide."
+              "text": "The other six - detailed User Flow diagrams, UI/UX, DB Schema, API Spec, Security Rules, Testing Plan - still matter. They just don't fit on one slide."
             }
           },
           {
@@ -837,17 +873,17 @@
                 {
                   "icon": "sparkles",
                   "title": "Google Antigravity",
-                  "text": "Agentic IDE with browser sub-agents that open your actual running UI, click around it, and screenshot the result &mdash; not just guess from the CSS. Ask it to fix a broken dashboard layout and it verifies the fix visually before handing it back."
+                  "text": "Agentic IDE with browser sub-agents that open your actual running UI, click around it, and screenshot the result - not just guess from the CSS. Ask it to fix a broken dashboard layout and it verifies the fix visually before handing it back."
                 }
               ]
             },
             "note": {
-              "text": "Codex just got sharper teeth: OpenAI's new flagship, GPT-6 Astra, is state-of-the-art on coding and computer use &mdash; and the first model OpenAI itself rates \"Critical\" for cybersecurity capability. Reviewing the diff matters more than ever, not less."
+              "text": "Codex just got sharper teeth: OpenAI's new flagship, GPT-6 Astra, is state-of-the-art on coding and computer use - and the first model OpenAI itself rates \"Critical\" for cybersecurity capability. Reviewing the diff matters more than ever, not less."
             }
           },
           {
             "type": "content",
-            "title": "Claude Code &mdash; the one that lives in your terminal",
+            "title": "Claude Code - the one that lives in your terminal",
             "icon": "terminal",
             "box": {
               "title": "Anthropic's terminal-first agent",
@@ -866,7 +902,7 @@
                 },
                 {
                   "icon": "rocket",
-                  "text": "<strong>Shipping fast</strong> &mdash; managed MCP servers, a plugin eval framework, and desktop panes you can pop out and dock back all landed within weeks of each other. Current release as of mid-September: v2.1.270."
+                  "text": "<strong>Shipping fast</strong> - managed MCP servers, a plugin eval framework, and desktop panes you can pop out and dock back all landed within weeks of each other. Current release as of mid-September: v2.1.270."
                 }
               ]
             },
@@ -891,7 +927,7 @@
                 {
                   "icon": "puzzle",
                   "title": "Skills",
-                  "text": "Packaged instructions for a specific job, like a slash command. This deck's slides were built by one &mdash; /add-presentation."
+                  "text": "Packaged instructions for a specific job, like a slash command. This deck's slides were built by one - /add-presentation."
                 },
                 {
                   "icon": "bot",
@@ -916,7 +952,7 @@
                   "emoji": "1",
                   "accent": "red",
                   "title": "Don't dump the entire spec in one go.",
-                  "text": "It overwhelms the session and buries what matters. Break it into phases. Feed one at a time. Like eating &mdash; don't shove the whole pizza in."
+                  "text": "It overwhelms the session and buries what matters. Break it into phases. Feed one at a time. Like eating - don't shove the whole pizza in."
                 },
                 {
                   "emoji": "2",
@@ -940,7 +976,7 @@
                   "emoji": "5",
                   "accent": "red",
                   "title": "Don't let the AI play architect.",
-                  "text": "Database design, security approach, tech stack &mdash; those decisions are yours. Claude Code should implement your calls, not make them."
+                  "text": "Database design, security approach, tech stack - those decisions are yours. Claude Code should implement your calls, not make them."
                 },
                 {
                   "emoji": "6",
@@ -963,19 +999,19 @@
               "list": [
                 {
                   "icon": "github",
-                  "text": "<strong>GitHub Student Developer Pack</strong> &mdash; a genuinely large bundle of free tools (Copilot, Codespaces, Azure and DigitalOcean credit, every JetBrains IDE) for anyone with a valid student email. Verify once at education.github.com."
+                  "text": "<strong>GitHub Student Developer Pack</strong> - a genuinely large bundle of free tools (Copilot, Codespaces, Azure and DigitalOcean credit, every JetBrains IDE) for anyone with a valid student email. Verify once at education.github.com."
                 },
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Open source</strong> &mdash; search \"good first issue\" on GitHub any day of the year, or wait for Hacktoberfest every October: four valid pull requests to opt-in repos gets you a shirt and, more usefully, a merged PR with your name on it."
+                  "text": "<strong>Open source</strong> - search \"good first issue\" on GitHub any day of the year, or wait for Hacktoberfest every October: four valid pull requests to opt-in repos gets you a shirt and, more usefully, a merged PR with your name on it."
                 },
                 {
                   "icon": "users",
-                  "text": "<strong>Hackathons</strong> &mdash; MLH runs 150+ events a year and often covers travel for shortlisted teams. Smart India Hackathon is the government-run one, with real prize money for the national finalists."
+                  "text": "<strong>Hackathons</strong> - MLH runs 150+ events a year and often covers travel for shortlisted teams. Smart India Hackathon is the government-run one, with real prize money for the national finalists."
                 },
                 {
                   "icon": "target",
-                  "text": "<strong>Competitions</strong> &mdash; Google Summer of Code pays a real stipend to work on open source over a summer. Kaggle prize pools on the bigger competitions run into the tens of thousands of dollars."
+                  "text": "<strong>Competitions</strong> - Google Summer of Code pays a real stipend to work on open source over a summer. Kaggle prize pools on the bigger competitions run into the tens of thousands of dollars."
                 }
               ]
             },
@@ -992,7 +1028,7 @@
               "list": [
                 {
                   "icon": "git-branch",
-                  "text": "<strong>Contribute to one open-source project.</strong> Not a drive-by PR &mdash; pick something you actually use, stick around, learn how a real codebase reviews code."
+                  "text": "<strong>Contribute to one open-source project.</strong> Not a drive-by PR - pick something you actually use, stick around, learn how a real codebase reviews code."
                 },
                 {
                   "icon": "users",
@@ -1000,7 +1036,7 @@
                 },
                 {
                   "icon": "rocket",
-                  "text": "<strong>Build a portfolio site.</strong> Doesn't need to be fancy &mdash; mine is a static GitHub Pages site, aravind-govindhasamy.github.io. A few real projects, real links, done."
+                  "text": "<strong>Build a portfolio site.</strong> Doesn't need to be fancy - mine is a static GitHub Pages site, aravind-govindhasamy.github.io. A few real projects, real links, done."
                 },
                 {
                   "icon": "check",
@@ -1041,7 +1077,7 @@
                 },
                 {
                   "icon": "hammer",
-                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code &mdash; each solves a different slice of the problem."
+                  "text": "ESP-IDF, GitHub, Antigravity, Codex, Claude Code - each solves a different slice of the problem."
                 }
               ]
             }
@@ -1053,7 +1089,7 @@
           {
             "type": "thank-you",
             "title": "Thank you, PSGCAS",
-            "message": "That was the 30-minute cut. The full 55-slide version has more war stories and more tool depth &mdash; same link: aravind-govindhasamy.github.io",
+            "message": "That was the 30-minute cut. The full 55-slide version has more war stories and more tool depth - same link: aravind-govindhasamy.github.io",
             "recommendations": [
               {
                 "title": "The Thinking Game",

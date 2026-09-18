@@ -184,6 +184,42 @@
           },
           {
             "type": "content",
+            "title": "ERP Assistant Programmer, or: whatever the campus needed that week",
+            "icon": "layers",
+            "image": "/assets/images/ai-webinar-funny/campus-erp-operations.jpg",
+            "imageLayout": "left-image",
+            "caption": "RFID smart gates, synchronized camera snapshots, GLPI endpoints, and daily SQL telemetry.",
+            "box": {
+              "content": "<p>The title says ERP Assistant Programmer. The CV says \"campus systems.\" In practice, it was whatever broke that week:</p>",
+              "list": [
+                {
+                  "icon": "shield",
+                  "text": "<strong>RFID smart gate system</strong> - built and deployed campus entry gates with synchronized camera snapshots on every tap."
+                },
+                {
+                  "icon": "radio",
+                  "text": "<strong>Shared ID-card tagging module</strong> spanning HF, UHF, and QR credentials - one card problem solved three different ways."
+                },
+                {
+                  "icon": "server",
+                  "text": "<strong>GLPI + FusionInventory</strong> - expanded IT asset tracking to 1,800+ physical endpoints. Every laptop, projector, and switch, accounted for."
+                },
+                {
+                  "icon": "book",
+                  "text": "Administered the college's <strong>Open Journal Systems</strong> publishing portal, because someone has to keep the research papers online too."
+                },
+                {
+                  "icon": "search",
+                  "text": "<strong>SQL reports</strong> for daily movement and asset data, built by hand, read every morning."
+                }
+              ]
+            },
+            "note": {
+              "text": "This is also where \"full stack\" stopped meaning React and started meaning \"whatever system is on fire today.\""
+            }
+          },
+          {
+            "type": "content",
             "title": "Works in dev. Fails in prod.",
             "icon": "warning",
             "image": "/assets/images/ai-webinar-funny/meme-fine-office.jpg",
