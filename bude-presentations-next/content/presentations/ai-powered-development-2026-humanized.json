@@ -24,7 +24,10 @@
               { "name": "React", "icon": "/assets/tech-icons/react.svg" },
               { "name": "MQTT", "icon": "/assets/tech-icons/mqtt.svg" },
               { "name": "RFID" },
-              { "name": "Frappe/ERPNext", "icon": "/assets/tech-icons/frappe.svg" }
+              {
+                "name": "Frappe/ERPNext",
+                "icon": "/assets/tech-icons/frappe.svg"
+              }
             ],
             "github": "https://github.com/aravind-govindhasamy",
             "website": "https://aravind-govindhasamy.github.io",
@@ -88,9 +91,9 @@
             "type": "content",
             "title": "The habit that started all this: a library, every morning",
             "icon": "book",
-            "image": "/assets/images/ai-webinar-funny/elon-musk-royal-society.jpg",
+            "image": "/assets/images/ai-webinar-funny/meme-elon-library.jpg",
             "imageLayout": "right-image",
-            "caption": "Photo: Debbie Rowe / Wikimedia Commons, CC BY-SA 4.0.",
+            "caption": "Vision vs. 6:00 AM Coimbatore reality. Same ambition, different noticeboard.",
             "box": {
               "content": "<p>Before Circuit Digest, before RFID readers, before any of it, there was this: B.Sc. Computer Science, then MCA, both at Sri Ramakrishna Mission Vidyalaya, Coimbatore. And a habit that started in first year and never really stopped.</p><blockquote>\"When I was in college, I wanted to be involved in things that would change the world.\" - Elon Musk, taped right next to that week's Thirukkural. Read out loud every morning whether anyone was listening or not.</blockquote>",
               "list": [
